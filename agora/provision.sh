@@ -3,10 +3,8 @@
 wwwdir=/vagrant_git/html
 pass=agora
 
-sudo apt-get update
-
-/vagrant/provision/apache2.sh $wwwdir
-/vagrant/provision/php5.sh
+/vagrant/provision/base.sh
+/vagrant/provision/php5.sh $wwwdir
 /vagrant/provision/memcache.sh
 /vagrant/provision/mysql.sh $pass
 /vagrant/provision/oracle-xe.sh

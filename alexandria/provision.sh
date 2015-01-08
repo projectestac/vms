@@ -5,14 +5,12 @@ pass=agora
 dbname=alexandria
 datadir=/moodledata
 
-sudo apt-get update
-
-/vagrant/provision/apache2.sh $wwwdir
-/vagrant/provision/php5.sh
+/vagrant/provision/base.sh
+/vagrant/provision/php5.sh $wwwdir
 /vagrant/provision/memcache.sh
 /vagrant/provision/mysql.sh $pass
 
-#DB Provisioning
+echo 'Data Provisioning'
 sudo mysql -uroot -p$pass -e "CREATE DATABASE IF NOT EXISTS $dbname"
 zcat /vagrant_git/alexandria.sql.gz | mysql -uroot -p$pass $dbname
 
