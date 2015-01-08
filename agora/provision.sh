@@ -29,13 +29,18 @@ cat /vagrant_git/sql/usu4.sql | mysql -uroot -p$pass usu4
 
 #Data docs
 sudo cp -R /vagrant_git/docs "/var/www/docs"
-sudo chown -R www-data:www-data /docs
-sudo chmod -R 777 /docs
+sudo chown -R www-data:www-data /var/www/docs
+sudo chmod -R 777 /var/www/docs
 
 sudo cp -R /vagrant_git/zkdata "/var/www/zkdata"
-sudo chown -R www-data:www-data /zkdata
-sudo chmod -R 777 /zkdata
+sudo chown -R www-data:www-data /var/www/zkdata
+sudo chmod -R 777 /var/www/zkdata
 
 sudo cp -R /vagrant_git/syncdata "/var/www/syncdata"
-sudo chown -R www-data:www-data /syncdata
-sudo chmod -R 777 /syncdata
+sudo chown -R www-data:www-data /var/www/syncdata
+sudo chmod -R 777 /var/www/syncdata
+
+cp /var/www/html/config/config-dist.php /var/www/html/config/config.php
+cp /var/www/html/config/env-config-dist.php /var/www/html/config/env-config.php
+cp /var/www/html/config/config-restricted-dist.php /var/www/html/config/config-restricted.php
+cp /var/www/html/config/sync-config-dist.sh /var/www/html/config/sync-config.sh
