@@ -10,9 +10,10 @@ sudo apt-get update
 /vagrant/provision/apache2.sh $wwwdir
 /vagrant/provision/php5.sh
 /vagrant/provision/memcache.sh
-/vagrant/provision/mysql.sh $pass $dbname
+/vagrant/provision/mysql.sh $pass
 
 #DB Provisioning
+sudo mysql -uroot -p$pass -e "CREATE DATABASE IF NOT EXISTS $dbname"
 zcat /vagrant_git/alexandria.sql.gz | mysql -uroot -p$pass $dbname
 
 sudo cp -R /vagrant_git/moodledata-dist "${datadir}"

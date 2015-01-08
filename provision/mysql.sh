@@ -7,7 +7,6 @@ sudo debconf-set-selections <<< "mysql-server mysql-server/root_password passwor
 sudo debconf-set-selections <<< "mysql-server mysql-server/root_password_again password $pass"
 
 sudo apt-get install -y mysql-server-5.5
-sudo mysql -uroot -p$pass -e "CREATE DATABASE IF NOT EXISTS $dbname"
 sudo sed -i 's/127.0.0.1/0.0.0.0/g' /etc/mysql/my.cnf
 sudo service mysql restart
 
