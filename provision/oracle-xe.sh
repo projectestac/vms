@@ -7,6 +7,7 @@ fi
 
 # http://www.len.ro/work/oracle-11g-release-2-xe-on-ubuntu-12-04/
 sudo apt-get install -y alien bc libaio1 unzip
+sudo apt-get install -y php5-dev
 
 sudo unzip /vagrant/provision/oracle/oracle-xe-11.2.0-1.0.x86_64.rpm.zip -d /tmp
 
@@ -26,3 +27,5 @@ sudo cp /vagrant/provision/oracle/60-oracle.conf /etc/sysctl.d/60-oracle.conf
 sudo cp /vagrant/provision/oracle/oracle-xe /etc/init.d/oracle-xe
 
 sudo service oracle-xe configure responseFile=/vagrant/provision/oracle/oracle.conf >> /tmp/xe-install.log
+
+#sudo pecl install oci8

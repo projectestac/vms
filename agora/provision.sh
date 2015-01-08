@@ -44,3 +44,4 @@ cp /var/www/html/config/config-dist.php /var/www/html/config/config.php
 cp /var/www/html/config/env-config-dist.php /var/www/html/config/env-config.php
 cp /var/www/html/config/config-restricted-dist.php /var/www/html/config/config-restricted.php
 cp /var/www/html/config/sync-config-dist.sh /var/www/html/config/sync-config.sh
+cp /var/www/html/.htaccess-dist /var/www/html/.htaccess
