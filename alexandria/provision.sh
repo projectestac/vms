@@ -18,7 +18,9 @@ sudo cp -R /vagrant_git/moodledata-dist "${datadir}"
 sudo chown -R www-data:www-data "${datadir}"
 sudo chmod -R 777 "${datadir}"
 
-cd /var/www/html/web
+cd /var/www/web
 cp /vagrant/alexandria/config.php config.php
+
+chmod -R 777 local/agora/muc
 
 #cd /vagrant_git
