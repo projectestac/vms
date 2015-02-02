@@ -16,9 +16,9 @@
 
 * Download the selected project from  https://github.com/projectestac/
 
-* For agora project, Download [Oracle Database 11g Express Edition] for Linux x64. Place the file
-  `oracle-xe-11.2.0-1.0.x86_64.rpm.zip` in the directory `provision/oracle` of this
-  project.
+* For agora project, Download [Oracle Database 11g Express Edition] and [Oracle Instant Client] for Linux x64.
+  Place both downloaded files (`oracle-xe-11.2.0-1.0.x86_64.rpm.zip` and `oracle-instantclient12.1-devel-12.1.0.2.0-1.x86_64.rpm`)
+  in the directory `provision/oracle` of this project.
 
 * Enter to the folder of the selected project and run `vagrant up`. This should take a few minutes. Please
   note that building the VM involves downloading an Ubuntu
@@ -42,6 +42,8 @@ Oracle installation based in [vagrant-oracle-xe]
 [Vagrant]: http://www.vagrantup.com/
 
 [Oracle Database 11g Express Edition]: http://www.oracle.com/technetwork/database/database-technologies/express-edition/downloads/index.html
+
+[Oracle Instant Client]: http://www.oracle.com/technetwork/topics/linuxx86-64soft-092277.html
 
 [Oracle Database 11g EE Documentation]: http://docs.oracle.com/cd/E17781_01/index.htm
 

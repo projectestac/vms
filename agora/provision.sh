@@ -38,8 +38,8 @@ sudo cp -R /vagrant_git/syncdata "/var/www/syncdata"
 sudo chown -R www-data:www-data /var/www/syncdata
 sudo chmod -R 777 /var/www/syncdata
 
-cp /var/www/html/config/config-dist.php /var/www/html/config/config.php
-cp /var/www/html/config/env-config-dist.php /var/www/html/config/env-config.php
-cp /var/www/html/config/config-restricted-dist.php /var/www/html/config/config-restricted.php
-cp /var/www/html/config/sync-config-dist.sh /var/www/html/config/sync-config.sh
-cp /var/www/html/.htaccess-dist /var/www/html/.htaccess
+cp /var/www/config/config-dist.php /var/www/config/config.php
+cp /var/www/config/env-config-dist.php /var/www/config/env-config.php
+cp /var/www/config/config-restricted-dist.php /var/www/config/config-restricted.php
+cp /var/www/config/sync-config-dist.sh /var/www/config/sync-config.sh
+cp /var/www/.htaccess-dist /var/www/.htaccess
