@@ -14,7 +14,7 @@ Vagrant.configure(2) do |config|
   # boxes at https://atlas.hashicorp.com/search.
   config.vm.box = "ubuntu/precise64"
 
-  config.vm.hostname = "agora"
+  config.vm.hostname = "agora-vm"
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
@@ -39,7 +39,7 @@ Vagrant.configure(2) do |config|
   # the path on the host to the actual folder. The second argument is
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
-  config.vm.synced_folder "../../agora/html", "/web/www"
+  config.vm.synced_folder "../../agora/html", "/vagrant_www"
   config.vm.synced_folder "../../agora", "/vagrant_git"
   config.vm.synced_folder "..", "/vagrant"
 
@@ -54,7 +54,7 @@ Vagrant.configure(2) do |config|
   #   # Customize the amount of memory on the VM:
   #   vb.memory = "1024"
     vb.customize ["modifyvm", :id,
-                  "--name", "agora",
+                  "--name", "agora-vm",
                   # Oracle claims to need 512MB of memory available minimum
                   "--memory", "800",
                   # Enable DNS behind NAT

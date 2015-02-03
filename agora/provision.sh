@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-wwwdir=/web/www
+wwwdir=/vagrant_www
 pass=agora
 
 /vagrant/provision/base.sh
