@@ -1,4 +1,4 @@
 .vagrant
 oracle-xe-*.rpm.zip
-oracle-*.rpm
-oracle-*.deb
+*.rpm
+*.deb
