@@ -1,9 +1,10 @@
 #!/bin/bash
 
-wwwdir=/vagrant_git/html
+wwwdir=/dades/alexandria/html/web
 pass=agora
 dbname=alexandria
-datadir=/moodledata
+datadir=/dades/alexandria/docs
+git=/vagrant_git
 
 /vagrant/provision/base.sh
 /vagrant/provision/php5.sh $wwwdir
@@ -12,15 +13,12 @@ datadir=/moodledata
 
 echo 'Data Provisioning'
 sudo mysql -uroot -p$pass -e "CREATE DATABASE IF NOT EXISTS $dbname"
-zcat /vagrant_git/alexandria.sql.gz | mysql -uroot -p$pass $dbname
+zcat $git/alexandria.sql.gz | mysql -uroot -p$pass $dbname
 
-sudo cp -R /vagrant_git/moodledata-dist "${datadir}"
-sudo chown -R www-data:www-data "${datadir}"
-sudo chmod -R 777 "${datadir}"
+sudo mkdir $datadir
+sudo cp -R $git/moodledata-dist/* $datadir
+sudo chown -R www-data:www-data $datadir
+sudo chmod -R 777 $datadir
 
-cd /var/www/web
-cp /vagrant/alexandria/config.php config.php
-
-chmod -R 777 local/agora/muc
-
-#cd /vagrant_git
+sudo cp /vagrant/alexandria/config.php $wwwdir/config.php
+sudo chmod -R 777 $wwwdir/local/agora/muc

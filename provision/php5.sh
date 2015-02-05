@@ -8,11 +8,13 @@ sudo apt-get update
 
 sudo apt-get install -y --force-yes apache2 php5 php5-curl php5-gd php5-xmlrpc php5-intl php5-mcrypt php5-cli
 
-#Apache Configuration
-if ! [ -L /var/www ]; then
-  sudo rm -rf /var/www
-  sudo ln -s $wwwdir /var/www
-fi
+sudo sed -i "s#DocumentRoot .*#DocumentRoot "$wwwdir"#" /etc/apache2/sites-available/default
+sudo sed -i "s#<Directory /var/www/>#<Directory "$wwwdir">#" /etc/apache2/sites-available/default
+sudo sed -i "s/AllowOverride .*/AllowOverride All/" /etc/apache2/sites-available/default
+
+sudo sed -i "s#DocumentRoot .*#DocumentRoot "$wwwdir"#" /etc/apache2/sites-available/default-ssl
+sudo sed -i "s#<Directory /var/www/>#<Directory "$wwwdir">#" /etc/apache2/sites-available/default-ssl
+sudo sed -i "s/AllowOverride .*/AllowOverride All/" /etc/apache2/sites-available/default-ssl
 
 sudo a2enmod ssl
 sudo a2enmod rewrite

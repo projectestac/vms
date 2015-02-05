@@ -14,8 +14,8 @@ $CFG->dboptions = array (
   'dbpersist' => 0,
   'dbsocket' => '',
 );
-$CFG->wwwroot   = 'http://192.168.33.5/web';
-$CFG->dataroot  = '/moodledata';
+$CFG->wwwroot   = 'http://192.168.33.5';
+$CFG->dataroot  = '/dades/alexandria/docs';
 $CFG->admin     = 'admin';
 
 $CFG->directorypermissions = 0777;

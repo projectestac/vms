@@ -1,7 +1,13 @@
 #!/usr/bin/env bash
 
-wwwdir=/vagrant_www
+rootdir=/dades/agora
+wwwdir=$rootdir/html
 pass=agora
+dbname=agora
+datadir=$rootdir/docs
+git=/vagrant_git
+
+#wwwdir=/vagrant_www
 
 /vagrant/provision/base.sh
 /vagrant/provision/php5.sh $wwwdir
@@ -13,33 +19,42 @@ pass=agora
 echo 'Data Provisioning'
 #  Portal
 sudo mysql -uroot -p$pass -e "CREATE DATABASE IF NOT EXISTS adminagora"
-cat /vagrant_git/sql/adminagora.sql | mysql -uroot -p$pass adminagora
+cat $git/sql/adminagora.sql | mysql -uroot -p$pass adminagora
 
 #  Intranets
 sudo mysql -uroot -p$pass -e "CREATE DATABASE IF NOT EXISTS usu1"
-cat /vagrant_git/sql/usu1.sql | mysql -uroot -p$pass usu1
+cat $git/sql/usu1.sql | mysql -uroot -p$pass usu1
 sudo mysql -uroot -p$pass -e "CREATE DATABASE IF NOT EXISTS usu2"
-cat /vagrant_git/sql/usu2.sql | mysql -uroot -p$pass usu2
+cat $git/sql/usu2.sql | mysql -uroot -p$pass usu2
 sudo mysql -uroot -p$pass -e "CREATE DATABASE IF NOT EXISTS usu3"
-cat /vagrant_git/sql/usu3.sql | mysql -uroot -p$pass usu3
+cat $git/sql/usu3.sql | mysql -uroot -p$pass usu3
 sudo mysql -uroot -p$pass -e "CREATE DATABASE IF NOT EXISTS usu4"
-cat /vagrant_git/sql/usu4.sql | mysql -uroot -p$pass usu4
+cat $git/sql/usu4.sql | mysql -uroot -p$pass usu4
 
 #Data docs
-sudo cp -R /vagrant_git/docs "/var/www/docs"
-sudo chown -R www-data:www-data /var/www/docs
-sudo chmod -R 777 /var/www/docs
+sudo mkdir $rootdir/docs
+sudo cp -R $git/docs/* $rootdir/docs
+sudo chown -R www-data:www-data $rootdir/docs
+sudo chmod -R 777 $rootdir/docs
 
-sudo cp -R /vagrant_git/zkdata "/var/www/zkdata"
-sudo chown -R www-data:www-data /var/www/zkdata
-sudo chmod -R 777 /var/www/zkdata
+sudo mkdir $rootdir/zkdata
+sudo cp -R $git/zkdata/* $rootdir/zkdata
+sudo chown -R www-data:www-data $rootdir/zkdata
+sudo chmod -R 777 $rootdir/zkdata
 
-sudo cp -R /vagrant_git/syncdata "/var/www/syncdata"
-sudo chown -R www-data:www-data /var/www/syncdata
-sudo chmod -R 777 /var/www/syncdata
+sudo mkdir $rootdir/syncdata
+sudo cp -R $git/syncdata/* $rootdir/syncdata
+sudo chown -R www-data:www-data $rootdir/syncdata
+sudo chmod -R 777 $rootdir/syncdata
 
-cp /var/www/config/config-dist.php /var/www/config/config.php
-cp /var/www/config/env-config-dist.php /var/www/config/env-config.php
-cp /var/www/config/config-restricted-dist.php /var/www/config/config-restricted.php
-cp /var/www/config/sync-config-dist.sh /var/www/config/sync-config.sh
-cp /var/www/.htaccess-dist /var/www/.htaccess
+cp $wwwdir/config/config-dist.php $wwwdir/config/config.php
+cp $wwwdir/config/env-config-dist.php $wwwdir/config/env-config.php
+cp $wwwdir/config/config-restricted-dist.php $wwwdir/config/config-restricted.php
+cp $wwwdir/config/sync-config-dist.sh $wwwdir/config/sync-config.sh
+cp $wwwdir/.htaccess-dist $wwwdir/.htaccess
+
+chmod -R 777 $wwwdir/moodle2/local/agora/muc
+
+sudo sed -i "s#RewriteBase .*#RewriteBase /#" $wwwdir/.htaccess
+sudo sed -i "s#\$agora\['server'\]\['server'\] .*#\$agora\['server'\]\['server'\] = 'http://agora-vm';#" $wwwdir/config/env-config.php
+sudo sed -i "s#\$agora\['server'\]\['base'\] .*#\$agora\['server'\]\['base'\] = '/';#" $wwwdir/config/env-config.php
