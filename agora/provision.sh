@@ -47,13 +47,18 @@ sudo cp -R $git/syncdata/* $rootdir/syncdata
 sudo chown -R www-data:www-data $rootdir/syncdata
 sudo chmod -R 777 $rootdir/syncdata
 
-cp $wwwdir/config/config-dist.php $wwwdir/config/config.php
-cp $wwwdir/config/env-config-dist.php $wwwdir/config/env-config.php
-cp $wwwdir/config/config-restricted-dist.php $wwwdir/config/config-restricted.php
-cp $wwwdir/config/sync-config-dist.sh $wwwdir/config/sync-config.sh
-cp $wwwdir/.htaccess-dist $wwwdir/.htaccess
+sudo cp $wwwdir/config/config-dist.php $wwwdir/config/config.php
+sudo cp $wwwdir/config/env-config-dist.php $wwwdir/config/env-config.php
+sudo cp $wwwdir/config/config-restricted-dist.php $wwwdir/config/config-restricted.php
+sudo cp $wwwdir/config/sync-config-dist.sh $wwwdir/config/sync-config.sh
+sudo cp $wwwdir/.htaccess-dist $wwwdir/.htaccess
 
-chmod -R 777 $wwwdir/moodle2/local/agora/muc
+sudo chmod -R 777 $wwwdir/moodle2/local/agora/muc
+
+sudo mkdir $rootdir/cache_ins
+sudo chmod -R 777 $rootdir/cache_ins
+sudo mkdir $rootdir/cache_ins/usu1
+sudo chmod -R 777 $rootdir/cache_ins/usu1
 
 sudo sed -i "s#RewriteBase .*#RewriteBase /#" $wwwdir/.htaccess
 sudo sed -i "s#\$agora\['server'\]\['server'\] .*#\$agora\['server'\]\['server'\] = 'http://agora-vm';#" $wwwdir/config/env-config.php

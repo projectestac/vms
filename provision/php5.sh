@@ -31,4 +31,9 @@ sudo sed -i '$ a\date.timezone = "Europe/Madrid"' /etc/php5/cli/php.ini
 sudo sed -i "s/error_reporting = .*/error_reporting = E_ALL/" /etc/php5/cli/php.ini
 sudo sed -i "s/disable_functions = .*/disable_functions = /" /etc/php5/cli/php.ini
 
+# Make Vagrant execute apache
+sudo sed -i "s/export APACHE_RUN_USER=.*/export APACHE_RUN_USER=vagrant/" /etc/apache2/envvars
+sudo chown -R vagrant /var/lock/apache2
+sudo adduser vagrant www-data
+
 sudo service apache2 restart

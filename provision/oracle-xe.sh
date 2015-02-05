@@ -5,7 +5,9 @@
 sudo apt-get install -y --force-yes alien bc libaio1 unzip php5-dev
 
 sudo cp /vagrant/provision/oracle/S01shm_load /etc/rc2.d/S01shm_load
+sudo chmod 777 /etc/rc2.d/S01shm_load
 sudo /etc/rc2.d/S01shm_load start
+
 
 echo 'Instalacio del servidor oracle'
 pushd /vagrant/provision/oracle/
