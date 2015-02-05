@@ -42,6 +42,9 @@ export ORACLE_BASE=/u01/app/oracle
 export PATH=$ORACLE_HOME/bin:$PATH
 export LD_LIBRARY_PATH=$ORACLE_HOME/lib/:$LD_LIBRARY_PATH
 export TNS_ADMIN=$ORACLE_HOME/network/admin
+export NLS_CHARACTERSET=AL32UTF8
+export NLS_NUMERIC_CHARACTERS='.,'
+
 LSNR=$ORACLE_HOME/bin/lsnrctl
 SQLPLUS=$ORACLE_HOME/bin/sqlplus
 ORACLE_OWNER=oracle

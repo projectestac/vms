@@ -23,13 +23,13 @@ cat $git/sql/adminagora.sql | mysql -uroot -p$pass adminagora
 
 #  Intranets
 sudo mysql -uroot -p$pass -e "CREATE DATABASE IF NOT EXISTS usu1"
-cat $git/sql/usu1.sql | mysql -uroot -p$pass usu1
+cat $git/sql/intranet_mostra_zk13.sql | mysql -uroot -p$pass usu1
 sudo mysql -uroot -p$pass -e "CREATE DATABASE IF NOT EXISTS usu2"
-cat $git/sql/usu2.sql | mysql -uroot -p$pass usu2
+cat $git/sql/intranet_mostra_zk13.sql | mysql -uroot -p$pass usu2
 sudo mysql -uroot -p$pass -e "CREATE DATABASE IF NOT EXISTS usu3"
-cat $git/sql/usu3.sql | mysql -uroot -p$pass usu3
+cat $git/sql/intranet_mostra_zk13.sql | mysql -uroot -p$pass usu3
 sudo mysql -uroot -p$pass -e "CREATE DATABASE IF NOT EXISTS usu4"
-cat $git/sql/usu4.sql | mysql -uroot -p$pass usu4
+cat $git/sql/intranet_mostra_zk13.sql | mysql -uroot -p$pass usu4
 
 #Data docs
 sudo mkdir $rootdir/docs
@@ -54,6 +54,12 @@ sudo cp $wwwdir/config/sync-config-dist.sh $wwwdir/config/sync-config.sh
 sudo cp $wwwdir/.htaccess-dist $wwwdir/.htaccess
 
 sudo chmod -R 777 $wwwdir/moodle2/local/agora/muc
+
+
+sudo su - oracle --command "sqlplus / as sysdba << EOF
+@/vagrant/agora/agora.sql
+exit;
+EOF"
 
 sudo mkdir $rootdir/cache_ins
 sudo chmod -R 777 $rootdir/cache_ins

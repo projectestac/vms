@@ -40,6 +40,8 @@ export NLS_LANG=`$ORACLE_HOME/bin/nls_lang.sh`
 export ORACLE_BASE=/u01/app/oracle
 export PATH=$ORACLE_HOME/bin:$PATH
 export LD_LIBRARY_PATH=$ORACLE_HOME/lib/:$LD_LIBRARY_PATH
+export NLS_CHARACTERSET=AL32UTF8
+export NLS_NUMERIC_CHARACTERS='.,'
 export TNS_ADMIN=$ORACLE_HOME/network/admin
 
 # http://www.len.ro/work/oracle-11g-release-2-xe-on-ubuntu-12-04/
@@ -104,7 +106,6 @@ sudo ln -s /usr/include/oracle/12.1/client64 $ORACLE_HOME/include
 # fi
 # sudo dpkg -i oracle-instantclient12.1-sqlplus_12.1.0.2.0-2_amd64.deb
 # popd
-
 
 echo 'Instalacio PHP'
 sudo apt-get install -y --force-yes php-pear
