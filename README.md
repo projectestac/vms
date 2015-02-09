@@ -16,8 +16,8 @@
 
 * Download the selected project from  https://github.com/projectestac/
 
-* For agora project, Download [Oracle Database 11g Express Edition] and [Oracle Instant Client] (Basic and Devel) for Linux x64.
-  Place both downloaded files (`oracle-xe-11.2.0-1.0.x86_64.rpm.zip` and `oracle-instantclient12.1-devel-12.1.0.2.0-1.x86_64.rpm`)
+* For agora project, Download [Oracle Database 11g Express Edition] and [Oracle Instant Client] - Basic and Devel - for Linux x64.
+  Place all downloaded files (`oracle-xe-11.2.0-1.0.x86_64.rpm.zip`, `oracle-instantclient12.1-basic-12.1.0.2.0-1.x86_64.rpm` and `oracle-instantclient12.1-devel-12.1.0.2.0-1.x86_64.rpm`)
   in the directory `provision/oracle` of this project.
 
 * Enter to the folder of the selected project and run `vagrant up`. This should take a few minutes. Please
