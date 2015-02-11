@@ -3,11 +3,8 @@
 rootdir=/dades/agora
 wwwdir=$rootdir/html
 pass=agora
-dbname=agora
 datadir=$rootdir/docs
 git=/vagrant_git
-
-#wwwdir=/vagrant_www
 
 /vagrant/provision/base.sh
 /vagrant/provision/php5.sh $wwwdir
@@ -20,16 +17,6 @@ echo 'Data Provisioning'
 #  Portal
 sudo mysql -uroot -p$pass -e "CREATE DATABASE IF NOT EXISTS adminagora"
 cat $git/sql/adminagora.sql | mysql -uroot -p$pass adminagora
-
-#  Intranets
-sudo mysql -uroot -p$pass -e "CREATE DATABASE IF NOT EXISTS usu1"
-cat $git/sql/intranet_mostra_zk13.sql | mysql -uroot -p$pass usu1
-sudo mysql -uroot -p$pass -e "CREATE DATABASE IF NOT EXISTS usu2"
-cat $git/sql/intranet_mostra_zk13.sql | mysql -uroot -p$pass usu2
-sudo mysql -uroot -p$pass -e "CREATE DATABASE IF NOT EXISTS usu3"
-cat $git/sql/intranet_mostra_zk13.sql | mysql -uroot -p$pass usu3
-sudo mysql -uroot -p$pass -e "CREATE DATABASE IF NOT EXISTS usu4"
-cat $git/sql/intranet_mostra_zk13.sql | mysql -uroot -p$pass usu4
 
 #Data docs
 sudo mkdir $rootdir/docs
@@ -55,22 +42,16 @@ sudo cp $wwwdir/.htaccess-dist $wwwdir/.htaccess
 
 sudo chmod -R 777 $wwwdir/moodle2/local/agora/muc
 
-
 sudo mkdir $rootdir/cache_ins
 sudo chmod -R 777 $rootdir/cache_ins
 
 sudo su - oracle --command "sqlplus / as sysdba << EOF
-@/vagrant/agora/agora.sql
 @/dades/agora/html/moodle2/lib/dml/oci_native_moodle_package.sql
 exit;
 EOF"
 
-#sqlplus usu1/agora@XE
-
-sudo mkdir $rootdir/cache_ins/usu1
-sudo chmod -R 777 $rootdir/cache_ins/usu1
-sudo mkdir $datadir/usu1
-sudo chmod -R 777 $datadir/usu1
+create_moodle.sh usu1 $pass $rootdir
+create_intranet.sh usu1 $pass $rootdir $git
 
 sudo sed -i "s#RewriteBase .*#RewriteBase /#" $wwwdir/.htaccess
 sudo sed -i "s#\$agora\['server'\]\['server'\] .*#\$agora\['server'\]\['server'\] = 'http://agora-vm';#" $wwwdir/config/env-config.php

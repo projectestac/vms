@@ -114,3 +114,15 @@ echo "extension=oci8.so" | sudo tee -a /etc/php5/mods-available/oci8.ini
 sudo ln -s /etc/php5/mods-available/oci8.ini /etc/php5/apache2/conf.d/30-oci8.ini
 
 sudo service apache2 restart
+
+
+sudo su - oracle --command "sqlplus / as sysdba << EOF
+ALTER USER APEX_PUBLIC_USER ACCOUNT UNLOCK;
+
+ALTER USER APEX_PUBLIC_USER IDENTIFIED BY agora;
+ALTER USER APEX_PUBLIC_USER IDENTIFIED BY agora;
+
+SELECT DBMS_XDB.GETHTTPPORT FROM DUAL;
+EXEC DBMS_XDB.SETLISTENERLOCALACCESS(FALSE);
+exit;
+EOF"
