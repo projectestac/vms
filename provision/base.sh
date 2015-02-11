@@ -6,10 +6,15 @@ sudo apt-get install -y --force-yes  ia32-libs texlive ghostscript imagemagick
 
 sudo chmod -R 777 /var/log
 
+#Install locales
 sudo locale-gen ca_ES
 sudo locale-gen ca_ES.UTF-8
 sudo locale-gen es_ES
 sudo locale-gen es_ES.UTF-8
+
+#Set Timezone
+sudo echo "Europe/Madrid" | sudo tee /etc/timezone
+sudo dpkg-reconfigure -f noninteractive tzdata
 
 #Increase swapsize
 
