@@ -30,9 +30,8 @@ popd
 
 sudo cp /vagrant/provision/oracle/oracle-env.sh /etc/profile.d/
 sudo chmod 777 /etc/profile.d/oracle-env.sh
-echo "" >> /etc/bash.bashrc
-echo "/etc/profile.d/oracle-env.sh" >> /etc/bash.bashrc
-echo "" >> /etc/bash.bashrc
+cat /etc/profile.d/oracle-env.sh | sudo tee -a /etc/bash.bashrc
+cat /etc/profile.d/oracle-env.sh | sudo tee -a /etc/apache2/envvars
 
 export ORACLE_HOME=/u01/app/oracle/product/11.2.0/xe
 export ORACLE_SID=XE
@@ -108,12 +107,10 @@ sudo ln -s /usr/include/oracle/12.1/client64 $ORACLE_HOME/include
 # popd
 
 echo 'Instalacio PHP'
-sudo apt-get install -y --force-yes php-pear
 echo instantclient,/usr/lib/oracle/12.1/client64/lib | sudo pecl install oci8
 
 echo "extension=oci8.so" | sudo tee -a /etc/php5/mods-available/oci8.ini
 
 sudo ln -s /etc/php5/mods-available/oci8.ini /etc/php5/apache2/conf.d/30-oci8.ini
-#sudo ln -s /etc/php5/mods-available/oci8.ini /etc/php5/cli/conf.d/30-oci8.ini
 
 sudo service apache2 restart

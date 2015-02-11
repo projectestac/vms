@@ -56,15 +56,21 @@ sudo cp $wwwdir/.htaccess-dist $wwwdir/.htaccess
 sudo chmod -R 777 $wwwdir/moodle2/local/agora/muc
 
 
+sudo mkdir $rootdir/cache_ins
+sudo chmod -R 777 $rootdir/cache_ins
+
 sudo su - oracle --command "sqlplus / as sysdba << EOF
+@/dades/agora/html/moodle2//lib/dml/oci_native_moodle_package.sql
 @/vagrant/agora/agora.sql
 exit;
 EOF"
 
-sudo mkdir $rootdir/cache_ins
-sudo chmod -R 777 $rootdir/cache_ins
+#sqlplus usu1/agora@XE
+
 sudo mkdir $rootdir/cache_ins/usu1
 sudo chmod -R 777 $rootdir/cache_ins/usu1
+sudo mkdir $datadir/usu1
+sudo chmod -R 777 $datadir/usu1
 
 sudo sed -i "s#RewriteBase .*#RewriteBase /#" $wwwdir/.htaccess
 sudo sed -i "s#\$agora\['server'\]\['server'\] .*#\$agora\['server'\]\['server'\] = 'http://agora-vm';#" $wwwdir/config/env-config.php
