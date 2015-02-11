@@ -37,6 +37,10 @@ sudo sed -i "s/display_errors = .*/display_errors = On/" /etc/php5/cli/php.ini
 sudo sed -i "s/display_startup_errors = .*/display_startup_errors = On/" /etc/php5/cli/php.ini
 #sudo sed -i "s/disable_functions = .*/disable_functions = /" /etc/php5/cli/php.ini
 
+#Log
+sudo sed -i "s/create 640.*/create 777 vagrant vagrant/" /etc/logrotate.d/apache2
+sudo chmod -R 777 /var/log/apache2/
+sudo chown -R vagrant:vagrant /var/log/apache2/
 
 
 # Make Vagrant execute apache
@@ -50,6 +54,6 @@ echo "extension=apc.so" | sudo tee -a /etc/php5/mods-available/apc.ini
 
 sudo ln -s /etc/php5/mods-available/apc.ini /etc/php5/apache2/conf.d/31-apc.ini
 
-sudo chown -R 777 /var/log/apache2/
+
 
 sudo service apache2 restart
