@@ -60,8 +60,8 @@ sudo mkdir $rootdir/cache_ins
 sudo chmod -R 777 $rootdir/cache_ins
 
 sudo su - oracle --command "sqlplus / as sysdba << EOF
-@/dades/agora/html/moodle2//lib/dml/oci_native_moodle_package.sql
 @/vagrant/agora/agora.sql
+@/dades/agora/html/moodle2/lib/dml/oci_native_moodle_package.sql
 exit;
 EOF"
 

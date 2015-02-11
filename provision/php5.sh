@@ -26,12 +26,18 @@ sudo a2ensite default-ssl
 sudo sed -i '$ a\date.timezone = "Europe/Madrid"' /etc/php5/apache2/php.ini
 sudo sed -i "s/error_reporting = .*/error_reporting = E_ALL/" /etc/php5/apache2/php.ini
 sudo sed -i "s/display_errors = .*/display_errors = On/" /etc/php5/apache2/php.ini
+sudo sed -i "s/display_startup_errors = .*/display_startup_errors = On/" /etc/php5/apache2/php.ini
 sudo sed -i "s/post_max_size = .*/post_max_size = 100M/" /etc/php5/apache2/php.ini
 sudo sed -i "s/upload_max_filesize = .*/upload_max_filesize = 100M/" /etc/php5/apache2/php.ini
 
+
 sudo sed -i '$ a\date.timezone = "Europe/Madrid"' /etc/php5/cli/php.ini
 sudo sed -i "s/error_reporting = .*/error_reporting = E_ALL/" /etc/php5/cli/php.ini
-sudo sed -i "s/disable_functions = .*/disable_functions = /" /etc/php5/cli/php.ini
+sudo sed -i "s/display_errors = .*/display_errors = On/" /etc/php5/cli/php.ini
+sudo sed -i "s/display_startup_errors = .*/display_startup_errors = On/" /etc/php5/cli/php.ini
+#sudo sed -i "s/disable_functions = .*/disable_functions = /" /etc/php5/cli/php.ini
+
+
 
 # Make Vagrant execute apache
 sudo sed -i "s/export APACHE_RUN_USER=.*/export APACHE_RUN_USER=vagrant/" /etc/apache2/envvars
@@ -43,5 +49,7 @@ yes '' | sudo pecl install apc
 echo "extension=apc.so" | sudo tee -a /etc/php5/mods-available/apc.ini
 
 sudo ln -s /etc/php5/mods-available/apc.ini /etc/php5/apache2/conf.d/31-apc.ini
+
+sudo chown -R 777 /var/log/apache2/
 
 sudo service apache2 restart
