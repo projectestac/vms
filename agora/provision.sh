@@ -54,5 +54,5 @@ sudo su - oracle --command "sqlplus / as sysdba << EOF
 exit;
 EOF"
 
-./create_moodle.sh usu1 $pass $rootdir
-./create_intranet.sh usu1 $pass $rootdir $git
+/vagrant/agora/create_moodle.sh usu1 $pass $rootdir
+/vagrant/agora/create_intranet.sh usu1 $pass $rootdir $git
