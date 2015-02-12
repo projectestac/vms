@@ -44,7 +44,7 @@ export NLS_NUMERIC_CHARACTERS='.,'
 export TNS_ADMIN=$ORACLE_HOME/network/admin
 
 # http://www.len.ro/work/oracle-11g-release-2-xe-on-ubuntu-12-04/
-sudo rm /dev/shm
+sudo rm -rf /dev/shm
 sudo mkdir /dev/shm
 sudo mount -t tmpfs shmfs -o size=2048m /dev/shm
 sudo sysctl kernel.shmmax=1073741824 #also edit /etc/sysctl.conf and set the same value to persist the change

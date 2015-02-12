@@ -16,7 +16,7 @@ git=/vagrant_git
 echo 'Data Provisioning'
 #  Portal
 sudo mysql -uroot -p$pass -e "CREATE DATABASE IF NOT EXISTS adminagora"
-cat $git/sql/adminagora.sql | mysql -uroot -p$pass adminagora
+cat $git/sql/adminagora.sql | sudo mysql -uroot -p$pass adminagora
 
 #Data docs
 sudo mkdir $rootdir/docs
@@ -56,3 +56,6 @@ EOF"
 
 /vagrant/agora/create_moodle.sh usu1 $pass $rootdir
 /vagrant/agora/create_intranet.sh usu1 $pass $rootdir $git
+
+
+sudo service oracle-xe restart
