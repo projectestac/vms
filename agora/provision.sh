@@ -59,8 +59,15 @@ EOF"
 /vagrant/agora/create_moodle.sh usu3 $pass $rootdir
 /vagrant/agora/create_moodle.sh usu4 $pass $rootdir
 
-/vagrant/agora/create_intranet.sh usu1 $pass $rootdir $git
-/vagrant/agora/create_intranet.sh usu2 $pass $rootdir $git
-/vagrant/agora/create_intranet.sh usu3 $pass $rootdir $git
+/vagrant/agora/create_intranet.sh usu1 $pass $rootdir
+/vagrant/agora/create_intranet.sh usu2 $pass $rootdir
+/vagrant/agora/create_intranet.sh usu3 $pass $rootdir
+/vagrant/agora/create_intranet.sh usu4 $pass $rootdir
+
+/vagrant/agora/create_nodes.sh usu1 $pass $rootdir pri
+/vagrant/agora/create_nodes.sh usu2 $pass $rootdir sec
+/vagrant/agora/create_nodes.sh usu3 $pass $rootdir cfa
+#/vagrant/agora/create_nodes.sh usu4 $pass $rootdir zer
+#/vagrant/agora/create_nodes.sh usu5 $pass $rootdir eoi
 
 sudo service oracle-xe restart
