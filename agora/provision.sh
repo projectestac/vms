@@ -55,7 +55,12 @@ exit;
 EOF"
 
 /vagrant/agora/create_moodle.sh usu1 $pass $rootdir
-/vagrant/agora/create_intranet.sh usu1 $pass $rootdir $git
+/vagrant/agora/create_moodle.sh usu2 $pass $rootdir
+/vagrant/agora/create_moodle.sh usu3 $pass $rootdir
+/vagrant/agora/create_moodle.sh usu4 $pass $rootdir
 
+/vagrant/agora/create_intranet.sh usu1 $pass $rootdir $git
+/vagrant/agora/create_intranet.sh usu2 $pass $rootdir $git
+/vagrant/agora/create_intranet.sh usu3 $pass $rootdir $git
 
 sudo service oracle-xe restart
