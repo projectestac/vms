@@ -1,0 +1,94 @@
+#!/bin/bash
+
+#Exemple invocació: ./vm agora start
+
+function start_vm {
+    project=$1
+    homedir=$2
+    clone_project $project $homedir
+    vagrant up
+    vagrant ssh -c "/vagrant/provision/upgrade.sh $project"
+}
+
+
+function clone_project {
+    project=$1
+    homedir=$2
+    if [ ! -d "$homedir/../$project" ]; then
+        echo 'Clonant el projecte per poder treballar...'
+        git clone git@github.com:projectestac/$project.git $homedir/../$project
+        pushd $homedir/../$project
+        git submodule update --recursive --init
+        popd
+    fi
+}
+
+function upgrade_vm {
+    project=$1
+    vagrant ssh -c /vagrant/upgrade.sh $project
+}
+
+
+if [ "$#" -lt 1 ] ; then
+    echo "Gestió Màquines virtuals"
+    echo "Forma d'ús: vm <projecte> [<action>]"
+    echo "Projectes acceptats: agora, alexandria, all [totes]"
+    echo "Accions:"
+    echo "start: inicia la màquina virtual [acció per defecte]"
+    echo "ssh: entra per ssh a la màquina virtual (l'arrenca si cal)"
+    echo "stop: para la màquina virtual"
+    echo "reboot: reinicia la màquina virtual"
+    echo "destroy: destrueix totalment la màquina virtual. Demana confirmació."
+    exit 0
+fi
+
+project=`echo $1 | tr '[:upper:]' '[:lower:]'`
+action=`echo $2 | tr '[:upper:]' '[:lower:]'`
+homedir=`pwd`
+
+if [ ! -d "$project" ]; then
+    echo "El projecte $project no existeix"
+    exit 0
+fi
+
+if [[ $project == "provision" ]]; then
+    echo "Provision no és un projecte vàlid"
+    exit 0
+fi
+
+if [[ $action == "" ]]; then
+    action='start'
+fi
+
+pushd $project
+
+case "$action" in
+"start")
+    echo "Iniciant MV $project..."
+    start_vm $project $homedir
+    ;;
+"stop")
+    echo "Parant MV $project..."
+    vagrant halt
+    ;;
+"ssh")
+    echo "Entrant a $project..."
+    start_vm $project $homedir
+    vagrant ssh
+    ;;
+"reboot")
+    echo "Reiniciant MV  $project..."
+    vagrant halt
+    start_vm $project $homedir
+    ;;
+"destroy")
+    echo "Destruint MV $project!!!"
+    vagrant destroy
+    ;;
+*)
+    echo "Action $action not recognized"
+    ;;
+esac
+
+popd
+
