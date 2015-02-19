@@ -42,6 +42,16 @@ In the root directory there is an script called vm. You may use this script to m
 
 All commands must be executed from the main folder.
 
+## Hostnames and IP
+
+You must change your /etc/hosts to access successfully to all the VM's:
+
+ * 192.168.33.4 agora-vm
+
+ * 192.168.33.5 alexandria-vm
+
+ * 192.168.33.6 xtecblocs-vm
+
 
 Oracle installation based in [vagrant-oracle-xe]
 
