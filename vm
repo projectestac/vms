@@ -30,7 +30,6 @@ function upgrade_vm {
     vagrant ssh -c /vagrant/upgrade.sh $project
 }
 
-
 if [ "$#" -lt 1 ] ; then
     echo "Virtual Machines Manager"
     echo "Usage: vm <project> [<action>]"
@@ -61,6 +60,8 @@ fi
 if [[ $action == "" ]]; then
     action='start'
 fi
+
+git pull
 
 pushd $project
 
