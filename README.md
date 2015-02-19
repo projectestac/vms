@@ -20,21 +20,27 @@
   Place all downloaded files (`oracle-xe-11.2.0-1.0.x86_64.rpm.zip`, `oracle-instantclient12.1-basic-12.1.0.2.0-1.x86_64.rpm` and `oracle-instantclient12.1-devel-12.1.0.2.0-1.x86_64.rpm`)
   in the directory `provision/oracle` of this project.
 
-* Enter to the folder of the selected project and run `vagrant up`. This should take a few minutes. Please
-  note that building the VM involves downloading an Ubuntu
+* Please note that building the VM involves downloading an Ubuntu
   [base box](http://docs.vagrantup.com/v2/boxes.html) which is ~400MB in size.
 
-## Vagrant instructions
+## Vm Manages usage
 
-* You can enter into the VM using: `vagrant ssh`
+In the root directory there is an script called vm. You may use this script to manage the VM's in order to get updates.
+ * Usage: vm <project> [<action>]
 
-* To stop the VM: `vagrant halt`
+ * Actions:
 
-* To restart the VM: `vagrant reload`
+ * start: Starts the VM [default action]. This should take a few minutes.
 
-* To completely delete the VM: `vagrant destroy`
+ * ssh: Enters to the VM through ssh (starting if needed)
 
-All commands must be executed from the project folder.
+ * stop: Stops the VM
+
+ * reboot: Reboots the VM
+
+ * destroy: Completely destroys the VM. Asks for confirmation.
+
+All commands must be executed from the main folder.
 
 
 Oracle installation based in [vagrant-oracle-xe]

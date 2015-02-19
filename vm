@@ -6,7 +6,9 @@ function start_vm {
     project=$1
     homedir=$2
     clone_project $project $homedir
+    echo "Starting VM $project..."
     vagrant up
+    echo "Running upgrade if needed"
     vagrant ssh -c "/vagrant/provision/upgrade.sh $project"
 }
 
@@ -15,7 +17,7 @@ function clone_project {
     project=$1
     homedir=$2
     if [ ! -d "$homedir/../$project" ]; then
-        echo 'Clonant el projecte per poder treballar...'
+        echo 'Project not found, cloning...'
         git clone git@github.com:projectestac/$project.git $homedir/../$project
         pushd $homedir/../$project
         git submodule update --recursive --init
@@ -30,15 +32,15 @@ function upgrade_vm {
 
 
 if [ "$#" -lt 1 ] ; then
-    echo "Gestió Màquines virtuals"
-    echo "Forma d'ús: vm <projecte> [<action>]"
-    echo "Projectes acceptats: agora, alexandria, all [totes]"
-    echo "Accions:"
-    echo "start: inicia la màquina virtual [acció per defecte]"
-    echo "ssh: entra per ssh a la màquina virtual (l'arrenca si cal)"
-    echo "stop: para la màquina virtual"
-    echo "reboot: reinicia la màquina virtual"
-    echo "destroy: destrueix totalment la màquina virtual. Demana confirmació."
+    echo "Virtual Machines Manager"
+    echo "Usage: vm <project> [<action>]"
+    echo "Accepted projects: agora, alexandria, all [totes]"
+    echo "Actions:"
+    echo "start: Starts the VM [default action]"
+    echo "ssh: Enters to the VM through ssh (starting if needed)"
+    echo "stop: Stops the VM"
+    echo "reboot: Reboots the VM"
+    echo "destroy: Completely destroys the VM. Asks for confirmation."
     exit 0
 fi
 
@@ -47,12 +49,12 @@ action=`echo $2 | tr '[:upper:]' '[:lower:]'`
 homedir=`pwd`
 
 if [ ! -d "$project" ]; then
-    echo "El projecte $project no existeix"
+    echo "Project $project does not exists"
     exit 0
 fi
 
 if [[ $project == "provision" ]]; then
-    echo "Provision no és un projecte vàlid"
+    echo "Provision is not a valid project"
     exit 0
 fi
 
@@ -64,25 +66,24 @@ pushd $project
 
 case "$action" in
 "start")
-    echo "Iniciant MV $project..."
     start_vm $project $homedir
     ;;
 "stop")
-    echo "Parant MV $project..."
+    echo "Stopping VM $project..."
     vagrant halt
     ;;
 "ssh")
-    echo "Entrant a $project..."
     start_vm $project $homedir
+    echo "Entering into VM $project..."
     vagrant ssh
     ;;
 "reboot")
-    echo "Reiniciant MV  $project..."
+    echo "Restarting VM $project..."
     vagrant halt
     start_vm $project $homedir
     ;;
 "destroy")
-    echo "Destruint MV $project!!!"
+    echo "Destroying VM $project!!!"
     vagrant destroy
     ;;
 *)
