@@ -26,7 +26,7 @@
 ## Vm Manages usage
 
 In the root directory there is an script called vm. You may use this script to manage the VM's in order to get updates.
- * Usage: vm \<project\> [\<action\>]
+ * Usage: ./vm \<project\> [\<action\>]
 
  * Actions:
 
