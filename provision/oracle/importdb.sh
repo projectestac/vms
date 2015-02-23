@@ -10,5 +10,6 @@ sudo su - oracle --command "sqlplus / as sysdba << EOF
 exit;
 EOF"
 
+sudo chmod 666 $file
 
 sudo su - oracle --command "imp system/$password@XE fromuser=$from touser=$dbname file=$file"
