@@ -16,6 +16,8 @@ EOF"
 
 /vagrant/provision/oracle/importdb.sh usu1 /vagrant/agora/usu1.dmp $usu $password
 
+php /dades/agora/html/moodle2/local/agora/scripts/cli.php -s=script_enable_service --ccentre=$usu --password=6142bfd56a583d891f0b1dcdbb2a9ef8 --clientName="$usu VM dev" --clientCode=$usu --clientAddress=Test clientCity=ciutat --clientDNS=$usu --clientId=1
+
 sudo mkdir $rootdir/cache_ins/$usu
 sudo chown -R www-data:www-data $rootdir/cache_ins/$usu
 sudo chmod -R 777 $rootdir/cache_ins/$usu
