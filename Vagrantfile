@@ -14,7 +14,11 @@ Vagrant.configure(2) do |config|
   # boxes at https://atlas.hashicorp.com/search.
   config.vm.box = "ubuntu/precise64"
 
-  config.vm.hostname = "agora-vm"
+  config.vm.hostname = "agora"
+
+  config.vm.provision :hosts do |provisioner|
+    provisioner.add_host '127.0.0.1', ["agora-virtual.xtec.cat", "agora-virtual.educat1x1.cat"]
+  end
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
@@ -28,7 +32,7 @@ Vagrant.configure(2) do |config|
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
-  config.vm.network "private_network", ip: "192.168.33.4"
+  config.vm.network "private_network", ip: "192.168.33.2"
 
   # Create a public network, which generally matched to bridged network.
   # Bridged networks make the machine appear as another physical device on
@@ -39,9 +43,20 @@ Vagrant.configure(2) do |config|
   # the path on the host to the actual folder. The second argument is
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
-  config.vm.synced_folder "../../agora", "/vagrant_git"
-  config.vm.synced_folder "../../agora/html", "/dades/agora/html"
-  config.vm.synced_folder "..", "/vagrant"
+  config.vm.synced_folder "../agora", "/vagrant_git/agora"
+  config.vm.synced_folder "../agora/html", "/dades/agora/html"
+
+  config.vm.synced_folder "../alexandria", "/vagrant_git/alexandria"
+  config.vm.synced_folder "../alexandria/html/web", "/dades/alexandria/html"
+
+  config.vm.synced_folder "../prestatgeria", "/vagrant_git/prestatgeria"
+  config.vm.synced_folder "../prestatgeria/html", "/dades/prestatgeria/html"
+
+  config.vm.synced_folder "../xtecblocs/src", "/dades/blocs/src"
+
+  config.vm.synced_folder "../odissea/html", "/dades/odissea/html"
+
+  config.vm.synced_folder ".", "/vagrant"
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
@@ -54,7 +69,7 @@ Vagrant.configure(2) do |config|
   #   # Customize the amount of memory on the VM:
   #   vb.memory = "1024"
     vb.customize ["modifyvm", :id,
-                  "--name", "agora-vm",
+                  "--name", "agora",
                   # Oracle claims to need 512MB of memory available minimum
                   "--memory", "1024",
                   # Enable DNS behind NAT

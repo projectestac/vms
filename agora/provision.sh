@@ -1,53 +1,41 @@
 #!/usr/bin/env bash
 
+source "/vagrant/provision/functions.sh"
+
 rootdir=/dades/agora
 wwwdir=$rootdir/html
-pass=agora
 datadir=$rootdir/docs
-git=/vagrant_git
-
-/vagrant/provision/base.sh
-/vagrant/provision/php5.sh $wwwdir
-/vagrant/provision/memcache.sh
-/vagrant/provision/mysql.sh $pass
-/vagrant/provision/oracle-xe.sh
-
+git=/vagrant_git/agora
+pass=agora
 
 echo 'Data Provisioning'
 #  Portal
 sudo mysql -uroot -p$pass -e "CREATE DATABASE IF NOT EXISTS adminagora"
 cat $git/sql/adminagora.sql | sudo mysql -uroot -p$pass adminagora
 
+chmod 444 $wwwdir/portal/config/config.php
+
 #Data docs
-sudo mkdir $rootdir/docs
+mkdir_777 $rootdir/docs
 sudo cp -R $git/docs/* $rootdir/docs
-sudo chown -R www-data:www-data $rootdir/docs
-sudo chmod -R 777 $rootdir/docs
+chown_777 $rootdir/docs
 
-sudo mkdir $rootdir/zkdata
+mkdir_777 $rootdir/zkdata
 sudo cp -R $git/zkdata/* $rootdir/zkdata
-sudo chown -R www-data:www-data $rootdir/zkdata
-sudo chmod -R 777 $rootdir/zkdata
+chown_777 $rootdir/zkdata
 
-sudo mkdir $rootdir/syncdata
+mkdir_777 $rootdir/syncdata
 sudo cp -R $git/syncdata/* $rootdir/syncdata
-sudo chown -R www-data:www-data $rootdir/syncdata
-sudo chmod -R 777 $rootdir/syncdata
+chown_777 $rootdir/syncdata
 
-sudo mkdir $rootdir/cache_ins
-sudo chmod -R 777 $rootdir/cache_ins
-
-sudo chmod -R 777 $wwwdir/moodle2/local/agora/muc
+mkdir_777 $rootdir/cache_ins
+chown_777 $wwwdir/moodle2/local/agora/muc
 
 sudo cp $wwwdir/config/config-dist.php $wwwdir/config/config.php
 sudo cp $wwwdir/config/env-config-dist.php $wwwdir/config/env-config.php
 sudo cp $wwwdir/config/config-restricted-dist.php $wwwdir/config/config-restricted.php
 sudo cp $wwwdir/config/sync-config-dist.sh $wwwdir/config/sync-config.sh
 sudo cp $wwwdir/.htaccess-dist $wwwdir/.htaccess
-
-sudo sed -i "s#RewriteBase .*#RewriteBase /#" $wwwdir/.htaccess
-sudo sed -i "s#\$agora\['server'\]\['server'\] .*#\$agora\['server'\]\['server'\] = 'http://agora-vm';#" $wwwdir/config/env-config.php
-sudo sed -i "s#\$agora\['server'\]\['base'\] .*#\$agora\['server'\]\['base'\] = '/';#" $wwwdir/config/env-config.php
 
 sudo su - oracle --command "sqlplus / as sysdba << EOF
 @/dades/agora/html/moodle2/lib/dml/oci_native_moodle_package.sql
@@ -70,4 +58,16 @@ EOF"
 #/vagrant/agora/create_nodes.sh usu4 $pass $rootdir zer
 #/vagrant/agora/create_nodes.sh usu5 $pass $rootdir eoi
 
-sudo service oracle-xe restart
+#Finish instaling portal
+mkdir_777 $datadir/portaldata
+mkdir_777 $datadir/portaldata/pnTemp
+mkdir_777 $datadir/portaldata/pnTemp/purifierCache
+mkdir_777 $datadir/portaldata/pnTemp/view_cache
+mkdir_777 $datadir/portaldata/pnTemp/Theme_cache
+mkdir_777 $datadir/portaldata/data
+mkdir_777 $datadir/portaldata/data/nodes
+mkdir_777 $datadir/portaldata/data/moodle2
+sudo cp -R /vagrant_git/agora/sql/master*.sql $datadir/portaldata/data/nodes
+mkdir_777 $datadir/moodle2/usu1/repository
+mkdir_777 $datadir/moodle2/usu1/repository/files
+sudo cp -R /vagrant_git/agora/sql/master*.zip $datadir/moodle2/usu1/repository/files

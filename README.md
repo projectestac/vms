@@ -3,6 +3,9 @@
 ## Requirements
 
 * You need to have [Vagrant] installed.
+* [vagrant-hosts] vagrant plugin. It will be installed the first time you run vm script.
+
+    `vagrant plugin install vagrant-hosts`
 * The host machine probably needs at least 4 GB of RAM.
 * As Oracle 11g XE is only available for 64-bit machines at the moment, the host machine needs to
   have a 64-bit architecture.
@@ -26,31 +29,28 @@
 ## Vm Manages usage
 
 In the root directory there is an script called vm. You may use this script to manage the VM's in order to get updates.
- * Usage: ./vm \<project\> [\<action\>]
 
- * Actions:
+`./vm`
 
- * start: Starts the VM [default action]. This should take a few minutes.
+This will start the VM getting and executing the latest updates. This should take a few minutes.
 
- * ssh: Enters to the VM through ssh (starting if needed)
+You may also want to use vagrant standard commands:
 
- * stop: Stops the VM
+* **vagrant up** to start the VM.
 
- * reboot: Reboots the VM
+* **vagrant ssh** to enter into the VM via ssh.
 
- * destroy: Completely destroys the VM. Asks for confirmation.
+* **vagrant halt** to stop the VM.
 
-All commands must be executed from the main folder.
+* **vagrant reload** to restart the VM.
+
+* **vagrant destroy** to completely delete the VM. Asks for confirmation.
 
 ## Hostnames and IP
 
 You must change your /etc/hosts to access successfully to all the VM's:
 
- * 192.168.33.4 agora-vm
-
- * 192.168.33.5 alexandria-vm
-
- * 192.168.33.6 xtecblocs-vm
+ * 192.168.33.2 agora agora-virtual.xtec.cat agora-virtual.educat1x1.cat
 
 
 Oracle installation based in [vagrant-oracle-xe]
@@ -68,3 +68,5 @@ Oracle installation based in [vagrant-oracle-xe]
 [vbguest]: https://github.com/dotless-de/vagrant-vbguest
 
 [enable virtualization]: http://www.sysprobs.com/disable-enable-virtualization-technology-bios
+
+[vagrant-hosts]: https://github.com/adrienthebo/vagrant-hosts

@@ -3,19 +3,19 @@ unset($CFG);
 global $CFG;
 
 $CFG = new stdClass();
-$CFG->dbtype    = 'mysqli';
+$CFG->dbtype    = 'oci8';
 $CFG->dblibrary = 'native';
 $CFG->dbhost    = 'localhost';
-$CFG->dbname    = 'alexandria';
+$CFG->dbname    = 'odissea';
 $CFG->dbuser    = 'root';
 $CFG->dbpass    = 'agora';
-$CFG->prefix    = 'mdl_';
+$CFG->prefix    = 'm2';
 $CFG->dboptions = array (
   'dbpersist' => 0,
   'dbsocket' => '',
 );
-$CFG->wwwroot   = 'http://agora/alexandria';
-$CFG->dataroot  = '/dades/alexandria/docs';
+$CFG->wwwroot   = 'http://odissea/web';
+$CFG->dataroot  = '/dades/odissea/docs';
 $CFG->admin     = 'admin';
 
 $CFG->directorypermissions = 0777;

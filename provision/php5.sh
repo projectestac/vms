@@ -1,12 +1,16 @@
 #!/bin/bash
 
-wwwdir=$1
+wwwdir=/vagrant/web
 
 sudo add-apt-repository -y ppa:ondrej/php5-oldstable
 
 sudo apt-get update
 
-sudo apt-get install -y --force-yes apache2 php5 php5-curl php5-gd php5-xmlrpc php5-intl php5-mcrypt php5-cli php-pear
+sudo apt-get install -y --force-yes apache2 php5 php5-curl php5-gd php5-xmlrpc php5-intl php5-mcrypt php5-cli php-pear php5-dev
+
+sudo cp -R /vagrant/provision/php /etc/apache2/sites-agora
+
+echo "Include sites-agora/" | sudo tee -a /etc/apache2/apache2.conf
 
 sudo sed -i "s#DocumentRoot .*#DocumentRoot "$wwwdir"#" /etc/apache2/sites-available/default
 sudo sed -i "s#<Directory /var/www/>#<Directory "$wwwdir">#" /etc/apache2/sites-available/default
@@ -51,12 +55,10 @@ sudo sed -i "s/export APACHE_RUN_USER=.*/export APACHE_RUN_USER=vagrant/" /etc/a
 sudo chown -R vagrant /var/lock/apache2
 sudo adduser vagrant www-data
 
-yes '' | sudo pecl install apc
+yes "" | sudo pecl install apc
 
 echo "extension=apc.so" | sudo tee -a /etc/php5/mods-available/apc.ini
 
 sudo ln -s /etc/php5/mods-available/apc.ini /etc/php5/apache2/conf.d/31-apc.ini
-
-
 
 sudo service apache2 restart
