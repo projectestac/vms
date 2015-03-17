@@ -2,9 +2,10 @@
 
 source "/vagrant/provision/functions.sh"
 
+echo 'Provision XTECBlocs'
+
 rootdir=/dades/blocs
 wwwdir=$rootdir/src
-pass=agora
 
 mkdir_777 $rootdir/blogs.dir
 mkdir_777 $rootdir/cache
@@ -19,7 +20,7 @@ sudo cp $wwwdir/.htaccess-dist $wwwdir/.htaccess
 sudo cp $wwwdir/wp-config.dist.php $wwwdir/wp-config.php
 #sudo cp $wwwdir/wp-content/wp-cache-config.php $wwwdir/wp-content/wp-cache-config.php
 
-sudo mysql -uroot -p$pass -e "CREATE DATABASE IF NOT EXISTS xtec_blocs_global"
+mysql_import_db "xtec_blocs_global" /vagrant/xtecblocs/xtec_blocs_global.sql
 
-/vagrant/xtecblocs/create_bloc.sh 1 $pass
+/vagrant/xtecblocs/create_bloc.sh 1
 

@@ -1,24 +1,30 @@
 #!/bin/bash
 
-sudo apt-get update
+export DEBIAN_FRONTEND=noninteractive #http://serverfault.com/questions/500764/dpkg-reconfigure-unable-to-re-open-stdin-no-file-or-directory
 
-sudo apt-get install -y --force-yes  ia32-libs texlive ghostscript imagemagick
+echo 'Update packages'
 
-sudo apt-get autoremove -y
+sudo apt-get update  > /dev/null
+sudo apt-get autoremove -y  > /dev/null
 
+echo 'Install base packages'
+sudo apt-get install -y --force-yes  ia32-libs texlive ghostscript imagemagick > /dev/null
+
+echo 'Log permissions'
 sudo chmod -R 777 /var/log
 
-#Install locales
-sudo locale-gen ca_ES
-sudo locale-gen ca_ES.UTF-8
-sudo locale-gen es_ES
-sudo locale-gen es_ES.UTF-8
+echo 'Install locales'
+sudo locale-gen ca_ES  > /dev/null
+sudo locale-gen ca_ES.UTF-8  > /dev/null
+sudo locale-gen es_ES  > /dev/null
+sudo locale-gen es_ES.UTF-8  > /dev/null
+sudo dpkg-reconfigure locales > /dev/null
 
-#Set Timezone
-sudo echo "Europe/Madrid" | sudo tee /etc/timezone
-sudo dpkg-reconfigure -f noninteractive tzdata
+echo 'Set Timezone'
+sudo echo "Europe/Madrid" | sudo tee /etc/timezone  > /dev/null
+sudo dpkg-reconfigure -f noninteractive tzdata > /dev/null
 
-#Increase swapsize
+echo 'Increase swapsize'
 
 # size of swapfile in megabytes
 swapsize=2000
@@ -39,6 +45,6 @@ else
 fi
 
 # output results to terminal
-df -h
-cat /proc/swaps
-cat /proc/meminfo | grep Swap
+#df -h
+#cat /proc/swaps
+#cat /proc/meminfo | grep Swap

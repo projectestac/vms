@@ -1,3 +1,4 @@
 #!/bin/bash
 
-sudo apt-get install -y php5-memcache memcached
+echo 'Install memcache'
+sudo apt-get install -y php5-memcache memcached > /dev/null

@@ -2,11 +2,13 @@
 
 wwwdir=/vagrant/web
 
-sudo add-apt-repository -y ppa:ondrej/php5-oldstable
+echo 'Install PHP 5.4'
 
-sudo apt-get update
+sudo add-apt-repository -y ppa:ondrej/php5-oldstable > /dev/null
 
-sudo apt-get install -y --force-yes apache2 php5 php5-curl php5-gd php5-xmlrpc php5-intl php5-mcrypt php5-cli php-pear php5-dev
+sudo apt-get update > /dev/null
+
+sudo apt-get install -y --force-yes apache2 php5 php5-curl php5-gd php5-xmlrpc php5-intl php5-mcrypt php5-cli php-pear php5-dev > /dev/null
 
 sudo cp -R /vagrant/provision/php /etc/apache2/sites-agora
 
@@ -55,10 +57,12 @@ sudo sed -i "s/export APACHE_RUN_USER=.*/export APACHE_RUN_USER=vagrant/" /etc/a
 sudo chown -R vagrant /var/lock/apache2
 sudo adduser vagrant www-data
 
-yes "" | sudo pecl install apc
+echo 'Install APC'
+
+yes "" | sudo pecl install apc > /dev/null
 
 echo "extension=apc.so" | sudo tee -a /etc/php5/mods-available/apc.ini
 
 sudo ln -s /etc/php5/mods-available/apc.ini /etc/php5/apache2/conf.d/31-apc.ini
 
-sudo service apache2 restart
+sudo service apache2 restart > /dev/null

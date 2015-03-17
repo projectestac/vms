@@ -2,14 +2,14 @@
 
 source "/vagrant/provision/functions.sh"
 
+echo 'Provision Alexandria'
+
 wwwdir=/dades/alexandria/html
 dbname=alexandria
 datadir=/dades/alexandria/docs
 git=/vagrant_git/alexandria
-pass=agora
 
-echo 'Data Provisioning'
-sudo mysql -uroot -p$pass -e "CREATE DATABASE IF NOT EXISTS $dbname"
+create_mysql_db $dbname
 zcat $git/alexandria.sql.gz | mysql -uroot -p$pass $dbname
 
 

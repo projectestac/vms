@@ -3,6 +3,5 @@
 source "/vagrant/provision/functions.sh"
 
 dbnum=$1
-password=$2
 
-sudo mysql -uroot -p$password -e "CREATE DATABASE IF NOT EXISTS xtec_blocs_$dbnum"
+mysql_import_db "xtec_blocs_$dbnum" /vagrant/xtecblocs/xtec_blocs_0.sql

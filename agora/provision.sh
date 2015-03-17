@@ -1,16 +1,16 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 source "/vagrant/provision/functions.sh"
+
+echo 'Provision Àgora'
 
 rootdir=/dades/agora
 wwwdir=$rootdir/html
 datadir=$rootdir/docs
 git=/vagrant_git/agora
-pass=agora
 
-echo 'Data Provisioning'
 #  Portal
-sudo mysql -uroot -p$pass -e "CREATE DATABASE IF NOT EXISTS adminagora"
+create_mysql_db "adminagora"
 cat $git/sql/adminagora.sql | sudo mysql -uroot -p$pass adminagora
 
 chmod 444 $wwwdir/portal/config/config.php
@@ -37,26 +37,23 @@ sudo cp $wwwdir/config/config-restricted-dist.php $wwwdir/config/config-restrict
 sudo cp $wwwdir/config/sync-config-dist.sh $wwwdir/config/sync-config.sh
 sudo cp $wwwdir/.htaccess-dist $wwwdir/.htaccess
 
-sudo su - oracle --command "sqlplus / as sysdba << EOF
-@/dades/agora/html/moodle2/lib/dml/oci_native_moodle_package.sql
-exit;
-EOF"
+execute_in_oracle "@/dades/agora/html/moodle2/lib/dml/oci_native_moodle_package.sql"
 
-/vagrant/agora/create_moodle.sh usu1 $pass $rootdir
-/vagrant/agora/create_moodle.sh usu2 $pass $rootdir
-/vagrant/agora/create_moodle.sh usu3 $pass $rootdir
-/vagrant/agora/create_moodle.sh usu4 $pass $rootdir
+/vagrant/agora/create_moodle.sh usu1 $rootdir
+/vagrant/agora/create_moodle.sh usu2 $rootdir
+/vagrant/agora/create_moodle.sh usu3 $rootdir
+/vagrant/agora/create_moodle.sh usu4 $rootdir
 
-/vagrant/agora/create_intranet.sh usu1 $pass $rootdir
-/vagrant/agora/create_intranet.sh usu2 $pass $rootdir
-/vagrant/agora/create_intranet.sh usu3 $pass $rootdir
-/vagrant/agora/create_intranet.sh usu4 $pass $rootdir
+/vagrant/agora/create_intranet.sh usu1 $rootdir
+/vagrant/agora/create_intranet.sh usu2 $rootdir
+/vagrant/agora/create_intranet.sh usu3 $rootdir
+/vagrant/agora/create_intranet.sh usu4 $rootdir
 
-/vagrant/agora/create_nodes.sh usu1 $pass $rootdir pri
-/vagrant/agora/create_nodes.sh usu2 $pass $rootdir sec
-/vagrant/agora/create_nodes.sh usu3 $pass $rootdir cfa
-#/vagrant/agora/create_nodes.sh usu4 $pass $rootdir zer
-#/vagrant/agora/create_nodes.sh usu5 $pass $rootdir eoi
+/vagrant/agora/create_nodes.sh usu1 $rootdir pri
+/vagrant/agora/create_nodes.sh usu2 $rootdir sec
+/vagrant/agora/create_nodes.sh usu3 $rootdir cfa
+#/vagrant/agora/create_nodes.sh usu4 $rootdir zer
+#/vagrant/agora/create_nodes.sh usu5 $rootdir eoi
 
 #Finish instaling portal
 mkdir_777 $datadir/portaldata

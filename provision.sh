@@ -1,6 +1,6 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
-pass=agora
+source "/vagrant/provision/functions.sh"
 
 /vagrant/provision/base.sh
 /vagrant/provision/php5.sh
