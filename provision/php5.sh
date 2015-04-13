@@ -67,7 +67,8 @@ echo "zend_extension=$place" | sudo tee -a /etc/php5/mods-available/opcache.ini
 echo "opcache.enable=1" | sudo tee -a /etc/php5/mods-available/opcache.ini
 echo "opcache.memory_consumption=128" | sudo tee -a /etc/php5/mods-available/opcache.ini
 echo "opcache.max_accelerated_files=4000" | sudo tee -a /etc/php5/mods-available/opcache.ini
-echo "opcache.revalidate_freq=60" | sudo tee -a /etc/php5/mods-available/opcache.ini
+#0 for development, 60 for production
+echo "opcache.revalidate_freq=0" | sudo tee -a /etc/php5/mods-available/opcache.ini
 echo "opcache.interned_strings_buffer=8" | sudo tee -a /etc/php5/mods-available/opcache.ini
 echo "opcache.fast_shutdown=1" | sudo tee -a /etc/php5/mods-available/opcache.ini
 echo "opcache.enable_cli=1" | sudo tee -a /etc/php5/mods-available/opcache.ini
