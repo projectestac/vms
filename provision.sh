@@ -4,7 +4,6 @@ source "/vagrant/provision/functions.sh"
 
 /vagrant/provision/base.sh
 /vagrant/provision/php5.sh
-/vagrant/provision/memcache.sh
 /vagrant/provision/mysql.sh $pass
 /vagrant/provision/oracle-xe.sh
 
