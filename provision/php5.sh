@@ -57,12 +57,29 @@ sudo sed -i "s/export APACHE_RUN_USER=.*/export APACHE_RUN_USER=vagrant/" /etc/a
 sudo chown -R vagrant /var/lock/apache2
 sudo adduser vagrant www-data
 
-echo 'Install APC'
+echo 'Install ZendOpache'
 
-yes "" | sudo pecl install apc > /dev/null
+yes "" | sudo pecl install Zendopcache > /dev/null
 
-echo "extension=apc.so" | sudo tee -a /etc/php5/mods-available/apc.ini
+place=`sudo find / -name 'opcache.so'`
 
-sudo ln -s /etc/php5/mods-available/apc.ini /etc/php5/apache2/conf.d/31-apc.ini
+echo "zend_extension=$place" | sudo tee -a /etc/php5/mods-available/opcache.ini
+echo "opcache.enable=1" | sudo tee -a /etc/php5/mods-available/opcache.ini
+echo "opcache.memory_consumption=128" | sudo tee -a /etc/php5/mods-available/opcache.ini
+echo "opcache.max_accelerated_files=4000" | sudo tee -a /etc/php5/mods-available/opcache.ini
+echo "opcache.revalidate_freq=60" | sudo tee -a /etc/php5/mods-available/opcache.ini
+echo "opcache.interned_strings_buffer=8" | sudo tee -a /etc/php5/mods-available/opcache.ini
+echo "opcache.fast_shutdown=1" | sudo tee -a /etc/php5/mods-available/opcache.ini
+echo "opcache.enable_cli=1" | sudo tee -a /etc/php5/mods-available/opcache.ini
+echo "; Required for Moodle" | sudo tee -a /etc/php5/mods-available/opcache.ini
+echo "opcache.use_cwd = 1" | sudo tee -a /etc/php5/mods-available/opcache.ini
+echo "opcache.validate_timestamps = 1" | sudo tee -a /etc/php5/mods-available/opcache.ini
+echo "opcache.save_comments = 1" | sudo tee -a /etc/php5/mods-available/opcache.ini
+echo "opcache.enable_file_override = 0" | sudo tee -a /etc/php5/mods-available/opcache.ini
+
+sudo ln -s /etc/php5/mods-available/opcache.ini /etc/php5/apache2/conf.d/20-opcache.ini
+
+echo 'Install memcache'
+sudo apt-get install -y php5-memcache memcached > /dev/null
 
 sudo service apache2 restart > /dev/null

@@ -47,18 +47,12 @@
 		<a href="/agora/config/sync_to_file.php?debug=on&print&force=true">[Actualitza allSchools]</a>
 		<a href="/agora/config/statistics.php">[Recull estadístiques]</a>
 		<br />
-
-		<a href="/agora/apc.php">[APC]</a>
-		<a href="/agora/config/phpsysinfo/">[phpSysInfo]</a>
-		<br />
 	</fieldset>
-
 
 	<fieldset>
 		<legend><img src="img/odissea.png" alt="Odissea"/></legend>
 		<a href="/odissea/">[Moodle 2]</a>
 	</fieldset>
-
 
 	<fieldset>
 		<legend><img src="img/blocs.png" alt="Blocs"/></legend>
@@ -72,23 +66,26 @@
 		<a href="/prestatgeria/">[Prestatgeria]</a>
 	</fieldset>
 
-
 	<fieldset>
 		<legend><img src="img/alexandria.png" alt="Alexandria"/></legend>
 		<a href="/alexandria/">[Alexandria]</a>
 	</fieldset>
-
 
 	<fieldset>
 		<legend> MPS: </legend>
 		<a href="/mps/">[Simulador d'editorial Marsupial]</a>
 	</fieldset>
 
-
 	<fieldset>
-		<legend> Gestors de bases de dades: </legend>
+		<legend> Gestió </legend>
 		<a href="<?php print "http://".$_SERVER["SERVER_NAME"].":8080/apex"?>">[Oracle admin]</a>
 		<a href="/phpmyadmin/">[MySQL admin]</a>
+		<br/>
+		<a href="/agora/config/phpsysinfo/">[phpSysInfo]</a>
+		<a href="/agora/config/phpmemcache/">[phpMemCache]</a>
+		<br/>
+		<a href="/opcache.php">[OpCache]</a>
+		<a href="/phpinfo.php">[PHPInfo]</a>
 	</fieldset>
 
 	<div style="clear:both;">&nbsp;</div>
@@ -112,11 +109,5 @@
 		<a href="http://agora-virtual.xtec.cat:8081/e13_colex_admin/index.jsp">[Col·lex admin]</a>
 		<a href="http://agora-virtual.xtec.cat:8081/e13_colex_ws/index.jsp">[Comprovació de serveis]</a>
 	</fieldset>
-
-	<div style="clear:both;">&nbsp;</div>
-
-	<h2><a href="phpinfo.php">Sortida phpinfo()</a></h2>
-
-
 </body>
 </html>
