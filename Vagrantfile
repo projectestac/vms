@@ -52,6 +52,7 @@ Vagrant.configure(2) do |config|
   config.vm.synced_folder "../prestatgeria", "/vagrant_git/prestatgeria"
   config.vm.synced_folder "../prestatgeria/html", "/dades/prestatgeria/html"
 
+  config.vm.synced_folder "../xtecblocs", "/vagrant_git/xtecblocs"  
   config.vm.synced_folder "../xtecblocs/src", "/dades/blocs/src"
 
   config.vm.synced_folder "../odissea/html", "/dades/odissea/html"
