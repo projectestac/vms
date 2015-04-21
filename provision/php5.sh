@@ -8,7 +8,7 @@ sudo add-apt-repository -y ppa:ondrej/php5-oldstable > /dev/null
 
 sudo apt-get update > /dev/null
 
-sudo apt-get install -y --force-yes apache2 php5 php5-curl php5-gd php5-xmlrpc php5-intl php5-mcrypt php5-cli php-pear php5-dev > /dev/null
+sudo apt-get install -y --force-yes apache2 php5 php5-curl php5-gd php5-xmlrpc php5-intl php5-mcrypt php5-cli php-pear php5-dev php5-ldap libapache2-mod-php5 > /dev/null
 
 sudo cp -R /vagrant/provision/php /etc/apache2/sites-agora
 
