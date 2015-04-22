@@ -21,6 +21,7 @@ $CFG->admin     = 'admin';
 $CFG->directorypermissions = 0777;
 
 $CFG->passwordsaltmain = '/PN~dd>bLwqEOKaMa3j9cn*vcb';
+$CFG->memcache_servers = '127.0.0.1';
 
 require_once(dirname(__FILE__) . '/settings.php');
 
