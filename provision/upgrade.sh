@@ -24,6 +24,16 @@ if [ "$version" -lt 2015042204 ]; then
     save_version 2015042204
 fi
 
+if [ "$version" -lt 2015042205 ]; then
+    wget http://agora/agora/usu1/intranet/upgradeModules.php -O /dev/null -o /dev/null
+    wget http://agora/agora/usu2/intranet/upgradeModules.php -O /dev/null -o /dev/null
+    wget http://agora/agora/usu3/intranet/upgradeModules.php -O /dev/null -o /dev/null
+    wget http://agora/agora/usu4/intranet/upgradeModules.php -O /dev/null -o /dev/null
+
+    save_version 2015042205
+fi
+
+
 
 
 #Don't forget to write the latest version on provision.sh
