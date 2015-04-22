@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source "/vagrant/provision/functions.sh"
+source "/vms/provision/functions.sh"
 
 echo 'Provision Odissea'
 
@@ -12,15 +12,15 @@ dbname=odissea
 #Data docs
 mkdir_777 $datadir
 
-sudo cp /vagrant/odissea/config.php $wwwdir/config.php
+sudo cp /vms/odissea/config.php $wwwdir/config.php
 chown_777 $wwwdir/local/agora/muc
 mkdir_777 $rootdir/cache_ins
 
 #execute_in_oracle "@/dades/odissea/html/moodle2/lib/dml/oci_native_moodle_package.sql"
 
-oracle_import_db odissea /vagrant/odissea/odissea.dmp $dbname
+oracle_import_db odissea /vms/odissea/odissea.dmp $dbname
 
 pushd $datadir
-sudo tar xfzp /vagrant/odissea/data.tgz
+sudo tar xfzp /vms/odissea/data.tgz
 popd
 

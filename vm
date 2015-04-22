@@ -29,4 +29,4 @@ clone_project prestatgeria
 echo "Starting the VM"
 vagrant up
 echo "Running upgrade if needed"
-vagrant ssh -c "/vagrant/provision/upgrade.sh"
+vagrant ssh -c "/vms/provision/upgrade.sh"

@@ -1,19 +1,19 @@
 #!/bin/bash
 
-source "/vagrant/provision/functions.sh"
+source "/vms/provision/functions.sh"
 
 echo 'Install Oracle'
 #http://www.oracle.com/technetwork/articles/technote-php-instant-084410.html
 
 sudo apt-get install -y --force-yes alien bc libaio1 unzip php5-dev > /dev/null
 
-sudo cp /vagrant/provision/oracle/S01shm_load /etc/rc2.d/S01shm_load
+sudo cp /vms/provision/oracle/S01shm_load /etc/rc2.d/S01shm_load
 sudo chmod 777 /etc/rc2.d/S01shm_load
 sudo /etc/rc2.d/S01shm_load start
 
 
 echo 'Install Oracle Server'
-pushd /vagrant/provision/oracle/
+pushd /vms/provision/oracle/
 if [ ! -f oracle-xe_11.2.0-2_amd64.deb ]; then
     if [ ! -f oracle-xe-11.2.0-1.0.x86_64.rpm ]; then
         if [ ! -f oracle-xe-11.2.0-1.0.x86_64.rpm.zip ]; then
@@ -25,13 +25,13 @@ if [ ! -f oracle-xe_11.2.0-2_amd64.deb ]; then
     pushd /tmp/Disk1
     sudo alien --scripts oracle-xe-11.2.0-1.0.x86_64.rpm > /dev/null
     popd
-    cp /tmp/Disk1/oracle-xe_11.2.0-2_amd64.deb /vagrant/provision/oracle/
+    cp /tmp/Disk1/oracle-xe_11.2.0-2_amd64.deb /vms/provision/oracle/
     rm -Rf /tmp/Disk1
 fi
 sudo dpkg -i oracle-xe_11.2.0-2_amd64.deb > /dev/null
 popd
 
-sudo cp /vagrant/provision/oracle/oracle-env.sh /etc/profile.d/
+sudo cp /vms/provision/oracle/oracle-env.sh /etc/profile.d/
 sudo chmod 777 /etc/profile.d/oracle-env.sh
 cat /etc/profile.d/oracle-env.sh | sudo tee -a /etc/bash.bashrc
 cat /etc/profile.d/oracle-env.sh | sudo tee -a /etc/apache2/envvars
@@ -51,24 +51,24 @@ export TNS_ADMIN=$ORACLE_HOME/network/admin
 #sudo mkdir /dev/shm
 #sudo mount -t tmpfs shmfs -o size=2048m /dev/shm
 sudo sysctl kernel.shmmax=1073741824 #also edit /etc/sysctl.conf and set the same value to persist the change
-sudo cp /vagrant/provision/oracle/60-oracle.conf /etc/sysctl.d/60-oracle.conf
+sudo cp /vms/provision/oracle/60-oracle.conf /etc/sysctl.d/60-oracle.conf
 
-sudo cp /vagrant/provision/oracle/oracle-xe /etc/init.d/oracle-xe
+sudo cp /vms/provision/oracle/oracle-xe /etc/init.d/oracle-xe
 
-sudo cp /vagrant/provision/oracle/tnsnames.ora $TNS_ADMIN
+sudo cp /vms/provision/oracle/tnsnames.ora $TNS_ADMIN
 chmod 777 $TNS_ADMIN/tnsnames.ora
-sudo cp /vagrant/provision/oracle/listener.ora $TNS_ADMIN
+sudo cp /vms/provision/oracle/listener.ora $TNS_ADMIN
 chmod 777 $TNS_ADMIN/listener.ora
 
 echo 'Configure Oracle server'
-sudo service oracle-xe configure responseFile=/vagrant/provision/oracle/oracle.conf >> /tmp/xe-install.log
+sudo service oracle-xe configure responseFile=/vms/provision/oracle/oracle.conf >> /tmp/xe-install.log
 
 sudo update-rc.d oracle-xe defaults 80 01
 
 sudo service oracle-xe restart > /dev/null
 
 echo  'Install Oracle basic client'
-pushd /vagrant/provision/oracle/
+pushd /vms/provision/oracle/
 if [ ! -f oracle-instantclient12.1-basic_12.1.0.2.0-2_amd64.deb ]; then
     if [ ! -f oracle-instantclient12.1-basic-12.1.0.2.0-1.x86_64.rpm ]; then
         echo 'Download oracle-instantclient12.1-basic-12.1.0.2.0-1.x86_64 and save it on provision folder'
@@ -85,7 +85,7 @@ popd
 sudo ldconfig
 
 echo 'Install Oracle Client with SDK'
-pushd /vagrant/provision/oracle/
+pushd /vms/provision/oracle/
 if [ ! -f oracle-instantclient12.1-devel_12.1.0.2.0-2_amd64.deb ]; then
     if [ ! -f oracle-instantclient12.1-devel-12.1.0.2.0-1.x86_64.rpm ]; then
         echo 'Download oracle-instantclient12.1-devel-12.1.0.2.0-1.x86_64 and save it on provision folder'
@@ -99,7 +99,7 @@ echo $ORACLE_HOME
 sudo ln -s /usr/include/oracle/12.1/client64 $ORACLE_HOME/include
 
 # echo 'Instalacio de SQL*Plus'
-# pushd /vagrant/provision/oracle/
+# pushd /vms/provision/oracle/
 # if [ ! -f oracle-instantclient12.1-sqlplus_12.1.0.2.0-2_amd64.deb ]; then
 #     if [ ! -f oracle-instantclient12.1-sqlplus-12.1.0.2.0-1.x86_64.rpm ]; then
 #         echo 'Download  oracle-instantclient12.1-sqlplus-12.1.0.2.0-1.x86_64 and save it on provision folder'

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source "/vagrant/provision/functions.sh"
+source "/vms/provision/functions.sh"
 
 echo 'Provision XTECBlocs'
 
@@ -21,13 +21,14 @@ sudo chmod -R 777 $wwwdir/wp-content/cache
 sudo cp $wwwdir/.htaccess-dist $wwwdir/.htaccess
 sudo chmod 664 $wwwdir/.htaccess
 
-sudo cp /vagrant/xtecblocs/wp-config-vagrant.php $wwwdir/wp-config.php
+sudo cp /vms/xtecblocs/wp-config-vagrant.php $wwwdir/wp-config.php
 sudo chmod 664 $wwwdir/wp-config.php
 
-sudo cp /vagrant/xtecblocs/wp-cache-config.php $wwwdir/wp-content/wp-cache-config.php
+sudo cp /vms/xtecblocs/wp-cache-config.php $wwwdir/wp-content/wp-cache-config.php
 sudo chmod 777 $wwwdir/wp-content/wp-cache-config.php
 
-mysql_import_db "xtec_blocs_global" /vagrant_git/xtecblocs/sql/xtec_blocs_global.sql
-
-/vagrant/xtecblocs/create_bloc.sh 3
+/vms/xtecblocs/create_bloc.sh global
+/vms/xtecblocs/create_bloc.sh 0
+/vms/xtecblocs/create_bloc.sh 1
+/vms/xtecblocs/create_bloc.sh 2
 

@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-source "/vagrant/provision/functions.sh"
+source "/vms/provision/functions.sh"
 
-oracle_export_db odissea /vagrant/odissea/
+oracle_export_db odissea /vms/odissea/
 
 pushd /dades/odissea/docs
-tar czfp /vagrant/odissea/data.tgz *
+tar czfp /vms/odissea/data.tgz *
 popd
 
