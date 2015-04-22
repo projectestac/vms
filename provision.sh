@@ -15,3 +15,5 @@ source "/vms/provision/functions.sh"
 #/vms/mps/provision.sh
 
 sudo service oracle-xe restart
+
+save_version 2015042201

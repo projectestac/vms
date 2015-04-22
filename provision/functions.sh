@@ -72,8 +72,25 @@ function create_oracle_db {
 EOM" > /dev/null
 }
 
-
 function create_mysql_db {
     dbname=$1
     execute_in_mysql "CREATE DATABASE IF NOT EXISTS $dbname"
 }
+
+function load_version {
+    if [ ! -f /vm_version ]; then
+        #First version ever
+        version=2015040100
+        save_version $version
+    else
+        version=`cat /vm_version`
+    fi
+}
+
+
+function save_version {
+    echo 'Upgraded to '$1
+    echo $1 | sudo tee /vm_version > /dev/null
+}
+
+
