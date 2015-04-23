@@ -24,6 +24,7 @@ function oracle_export_db {
     dbname=$1
     destination=$2
 
+    echo "Exporting DB  $dbname..."
     execute_in_oracle "@/u01/app/oracle/product/11.2.0/xe/rdbms/admin/catexp.sql"
 
     sudo su - oracle --command "exp system/$pass@XE owner=$dbname file=/tmp/$dbname.dmp log=/tmp/logfile.log"
@@ -35,8 +36,10 @@ function mysql_import_db {
     dbname=$1
     sql=$2
 
+    echo "Importing DB  $dbname..."
     create_mysql_db $dbname
     cat $sql | sudo mysql -uroot -p$pass $dbname
+    echo 'Done'
 }
 
 function mkdir_777 {
@@ -49,7 +52,7 @@ function mkdir_777 {
 function chown_777 {
     folder=$1
 
-    sudo chown -R www-data:www-data $folder
+    sudo chown -R vagrant:www-data $folder
     sudo chmod -R 777 $folder
 }
 
