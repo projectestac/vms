@@ -13,7 +13,8 @@ git=/git/agora
 create_mysql_db "adminagora"
 cat $git/sql/adminagora.sql | sudo mysql -uroot -p$pass adminagora
 
-chmod 444 $wwwdir/portal/config/config.php
+chmod 644 $wwwdir/portal/config/config.php
+chown 644 $wwwdir/zikula2/config/config.php
 
 #Data docs
 mkdir_777 $rootdir/docs
