@@ -88,26 +88,5 @@
 		<a href="/phpinfo.php">[PHPInfo]</a>
 	</fieldset>
 
-	<div style="clear:both;">&nbsp;</div>
-
-	<h2>Aplicacions que no mantenim</h2>
-
-	<fieldset>
-		<legend> EOICampus: </legend>
-		<a href="http://agora:8081/eoicampus/">[EOICampus]</a>
-		<a href="http://agora:8081/eoicampus_ws/index.jsp">[Comprovació de serveis]</a>
-	</fieldset>
-
-	<fieldset>
-		<legend> Petites històries: </legend>
-		<a href="/petites_histories/">[Petites històries]</a>
-	</fieldset>
-
-	<fieldset>
-		<legend> Col·lex: </legend>
-		<a href="http://agora-virtual.xtec.cat:8081/e13_colex/index.jsp">[Col·lex]</a>
-		<a href="http://agora-virtual.xtec.cat:8081/e13_colex_admin/index.jsp">[Col·lex admin]</a>
-		<a href="http://agora-virtual.xtec.cat:8081/e13_colex_ws/index.jsp">[Comprovació de serveis]</a>
-	</fieldset>
 </body>
 </html>
