@@ -25,6 +25,9 @@ clone_project odissea
 clone_project alexandria
 clone_project xtecblocs
 clone_project prestatgeria
+clone_project marsupial-mps
+
+vagrant box update
 
 echo "Starting the VM"
 vagrant up
