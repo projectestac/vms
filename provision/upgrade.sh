@@ -33,7 +33,14 @@ if [ "$version" -lt 2015042205 ]; then
     save_version 2015042205
 fi
 
+if [ "$version" -lt 2015042301 ]; then
+    chmod +x /vms/mps/provision.sh
+    sudo cp -R /vms/provision/php/mps.conf /etc/apache2/sites-agora/mps.conf
+    sudo /vms/mps/provision.sh
+    sudo service apache2 restart > /dev/null
 
+    save_version 2015042301
+fi
 
 
 #Don't forget to write the latest version on provision.sh

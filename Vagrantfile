@@ -55,7 +55,11 @@ Vagrant.configure(2) do |config|
   config.vm.synced_folder "../xtecblocs", "/git/xtecblocs"
   config.vm.synced_folder "../xtecblocs/src", "/dades/blocs/src"
 
+  config.vm.synced_folder "../odissea", "/git/odissea"
   config.vm.synced_folder "../odissea/html", "/dades/odissea/html"
+
+  config.vm.synced_folder "../marsupial-mps", "/git/mps"
+  config.vm.synced_folder "../marsupial-mps/src", "/dades/mps/src"
 
   config.vm.synced_folder ".", "/vms"
 

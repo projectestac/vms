@@ -12,9 +12,9 @@ source "/vms/provision/functions.sh"
 /vms/odissea/provision.sh
 /vms/xtecblocs/provision.sh
 /vms/prestatgeria/provision.sh
-#/vms/mps/provision.sh
+/vms/mps/provision.sh
 
 sudo service oracle-xe restart
 
 #Here we must write the latest version number
-save_version 2015042205
+save_version 2015042301
