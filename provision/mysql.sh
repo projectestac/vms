@@ -20,3 +20,4 @@ sudo debconf-set-selections <<< "phpmyadmin phpmyadmin/reconfigure-webserver mul
 sudo apt-get install -y phpmyadmin > /dev/null
 
 sudo sed -i "s/.*\['auth_type'\].*/\$cfg['Servers'][\$i]['auth_type'] = 'config';\n\$cfg['Servers'][\$i]['user'] = 'root';\n\$cfg['Servers'][\$i]['password'] = 'agora';/" /etc/phpmyadmin/config.inc.php
+sudo sed -i '/^[ ]*/ s/$/:\/tmp\//' /etc/apache2/conf.d/phpmyadmin.conf

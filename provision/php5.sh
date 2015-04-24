@@ -10,7 +10,7 @@ sudo apt-get update > /dev/null
 
 sudo apt-get install -y --force-yes apache2 php5 php5-curl php5-gd php5-xmlrpc php5-intl php5-mcrypt php5-cli php-pear php5-dev php5-ldap libapache2-mod-php5 > /dev/null
 
-sudo cp -R /vms/provision/php /etc/apache2/sites-agora
+sudo cp -R /vms/provision/php/* /etc/apache2/sites-agora
 
 echo "Include sites-agora/" | sudo tee -a /etc/apache2/apache2.conf
 

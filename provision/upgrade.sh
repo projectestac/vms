@@ -42,6 +42,12 @@ if [ "$version" -lt 2015042301 ]; then
     save_version 2015042301
 fi
 
+if [ "$version" -lt 2015042400 ]; then
+    sudo sed -i '/^[ ]*/ s/$/:\/tmp\//' /etc/apache2/conf.d/phpmyadmin.conf
+
+    save_version 2015042400
+fi
+
 
 #Don't forget to write the latest version on provision.sh
 
