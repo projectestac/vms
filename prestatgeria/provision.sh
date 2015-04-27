@@ -9,7 +9,8 @@ git=/git/prestatgeria
 
 echo 'Provision Prestatgeria'
 
-mysql_import_db "presta" /vms/prestatgeria/presta.sql
+mysql_import_db "presta" /git/prestatgeria/sql/presta.sql
+mysql_import_db "presta1" /git/prestatgeria/sql/presta1.sql
 
 sudo cp $wwwdir/config/env-config-dist.php $wwwdir/config/env-config.php
 sudo cp $wwwdir/config/config-restricted-dist.php $wwwdir/config/config-restricted.php
@@ -35,4 +36,4 @@ mkdir_777 $rootdir/ztemp
 sudo cp -R $git/ztemp/* $rootdir/ztemp
 chown_777 $rootdir/ztemp
 
-chown 644 $wwwdir/prestatgeria/config/config.php
+chown 444 $wwwdir/prestatgeria/config/config.php
