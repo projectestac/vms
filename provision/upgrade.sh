@@ -43,7 +43,7 @@ if [ "$version" -lt 2015042301 ]; then
 fi
 
 if [ "$version" -lt 2015042400 ]; then
-    sudo sed -i '/^[ ]*/ s/$/:\/tmp\//' /etc/apache2/conf.d/phpmyadmin.conf
+    sudo sed -i '/^.*open_basedir/ s/$/:\/tmp\//' /etc/apache2/conf.d/phpmyadmin.conf
 
     save_version 2015042400
 fi
