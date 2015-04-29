@@ -56,6 +56,14 @@ if [ "$version" -lt 2015042900 ]; then
     save_version 2015042900
 fi
 
+if [ "$version" -lt 2015042901 ]; then
+    sudo sed -i "s/max_execution_time = .*/max_execution_time = 300/" /etc/php5/apache2/php.ini
+    sudo sed -i "s/max_execution_time = .*/max_execution_time = 300/" /etc/php5/cli/php.ini
+    sudo service apache2 restart > /dev/null
+
+    save_version 2015042901
+fi
+
 
 #Don't forget to write the latest version on provision.sh
 

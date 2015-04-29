@@ -38,6 +38,7 @@ sudo sed -i "s/post_max_size = .*/post_max_size = 100M/" /etc/php5/apache2/php.i
 sudo sed -i "s/upload_max_filesize = .*/upload_max_filesize = 100M/" /etc/php5/apache2/php.ini
 sudo sed -i "s/allow_url_fopen = .*/allow_url_fopen = Off/" /etc/php5/apache2/php.ini
 sudo sed -i "s/;error_log = php_errors.log/error_log = \/var\/log\/apache2\/php_errors.log/" /etc/php5/apache2/php.ini
+sudo sed -i "s/max_execution_time = .*/max_execution_time = 300/" /etc/php5/apache2/php.ini
 
 sudo sed -i '$ a\date.timezone = "Europe/Madrid"' /etc/php5/cli/php.ini
 sudo sed -i "s/error_reporting = .*/error_reporting = E_ALL/" /etc/php5/cli/php.ini
@@ -45,6 +46,7 @@ sudo sed -i "s/display_errors = .*/display_errors = On/" /etc/php5/cli/php.ini
 sudo sed -i "s/display_startup_errors = .*/display_startup_errors = On/" /etc/php5/cli/php.ini
 sudo sed -i "s/allow_url_fopen = .*/allow_url_fopen = Off/" /etc/php5/cli/php.ini
 sudo sed -i "s/;error_log = php_errors.log/error_log = \/var\/log\/apache2\/php_errors.log/" /etc/php5/cli/php.ini
+sudo sed -i "s/max_execution_time = .*/max_execution_time = 300/" /etc/php5/cli/php.ini
 #sudo sed -i "s/disable_functions = .*/disable_functions = /" /etc/php5/cli/php.ini
 
 #Log

@@ -17,4 +17,4 @@ source "/vms/provision/functions.sh"
 sudo service oracle-xe restart
 
 #Here we must write the latest version number
-save_version 2015042900
+save_version 2015042901
