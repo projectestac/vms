@@ -49,6 +49,14 @@ if [ "$version" -lt 2015042400 ]; then
 fi
 
 
+if [ "$version" -lt 2015042900 ]; then
+    sudo sed -i "s#opcache.memory_consumption=.*#opcache.memory_consumption=256#" /etc/php5/mods-available/opcache.ini
+    sudo service apache2 restart > /dev/null
+
+    save_version 2015042900
+fi
+
+
 #Don't forget to write the latest version on provision.sh
 
 echo 'All updated!'

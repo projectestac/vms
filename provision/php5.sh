@@ -66,7 +66,7 @@ place=`sudo find / -name 'opcache.so'`
 
 echo "zend_extension=$place" | sudo tee -a /etc/php5/mods-available/opcache.ini
 echo "opcache.enable=1" | sudo tee -a /etc/php5/mods-available/opcache.ini
-echo "opcache.memory_consumption=128" | sudo tee -a /etc/php5/mods-available/opcache.ini
+echo "opcache.memory_consumption=256" | sudo tee -a /etc/php5/mods-available/opcache.ini
 echo "opcache.max_accelerated_files=4000" | sudo tee -a /etc/php5/mods-available/opcache.ini
 #0 for development, 60 for production
 echo "opcache.revalidate_freq=0" | sudo tee -a /etc/php5/mods-available/opcache.ini
