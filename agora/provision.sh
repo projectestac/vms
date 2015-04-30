@@ -32,11 +32,20 @@ chown_777 $rootdir/syncdata
 mkdir_777 $rootdir/cache_ins
 chown_777 $wwwdir/moodle2/local/agora/muc
 
+mkdir_777 $datadir/ubr_uploads/
+mkdir_777 $datadir/ubr_uploads/tmp/
+
 sudo cp $wwwdir/config/config-dist.php $wwwdir/config/config.php
 sudo cp $wwwdir/config/env-config-dist.php $wwwdir/config/env-config.php
 sudo cp $wwwdir/config/config-restricted-dist.php $wwwdir/config/config-restricted.php
 sudo cp $wwwdir/config/sync-config-dist.sh $wwwdir/config/sync-config.sh
 sudo cp $wwwdir/.htaccess-dist $wwwdir/.htaccess
+
+echo "Configure CGI"
+sudo sed -i "s#ScriptAlias /cgi-bin/ .*#ScriptAlias /cgi-bin/ $rootdir/cgi/#" /etc/apache2/sites-available/default
+sudo sed -i "s#<Directory \"/usr/lib/cgi-bin\">#<Directory \"$rootdir/cgi\">#" /etc/apache2/sites-available/default
+sudo sed -i "s#ScriptAlias /cgi-bin/ .*#ScriptAlias /cgi-bin/ $rootdir/cgi/#" /etc/apache2/sites-available/default-ssl
+sudo sed -i "s#<Directory \"/usr/lib/cgi-bin\">#<Directory \"$rootdir/cgi\">#" /etc/apache2/sites-available/default-ssl
 
 execute_in_oracle "@/dades/agora/html/moodle2/lib/dml/oci_native_moodle_package.sql"
 

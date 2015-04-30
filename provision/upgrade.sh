@@ -65,6 +65,23 @@ if [ "$version" -lt 2015042901 ]; then
 fi
 
 
+if [ "$version" -lt 2015043000 ]; then
+    mkdir_777 /dades/agora/docs/ubr_uploads/
+    mkdir_777 /dades/agora/docs/ubr_uploads/tmp/
+
+
+    echo "Configure CGI"
+    sudo sed -i "s#ScriptAlias /cgi-bin/ .*#ScriptAlias /cgi-bin/ /dades/agora/cgi/#" /etc/apache2/sites-available/default
+    sudo sed -i "s#<Directory \"/usr/lib/cgi-bin\">#<Directory \"/dades/agora/cgi\">#" /etc/apache2/sites-available/default
+    sudo sed -i "s#ScriptAlias /cgi-bin/ .*#ScriptAlias /cgi-bin/ /dades/agora/cgi/#" /etc/apache2/sites-available/default-ssl
+    sudo sed -i "s#<Directory \"/usr/lib/cgi-bin\">#<Directory \"/dades/agora/cgi\">#" /etc/apache2/sites-available/default-ssl
+
+    sudo service apache2 restart
+
+    save_version 2015043000
+fi
+
+
 #Don't forget to write the latest version on provision.sh
 
 echo 'All updated!'

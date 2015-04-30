@@ -14,7 +14,8 @@ source "/vms/provision/functions.sh"
 /vms/prestatgeria/provision.sh
 /vms/mps/provision.sh
 
+sudo service apache2 restart
 sudo service oracle-xe restart
 
 #Here we must write the latest version number
-save_version 2015042901
+save_version 2015043000
