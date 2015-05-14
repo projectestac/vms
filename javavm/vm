@@ -1,0 +1,26 @@
+#!/bin/bash
+
+#Exemple invocació: ./vm
+
+function clone_project {
+    project=$1
+    homedir=`pwd`
+    if [ ! -d "$homedir/../$project" ]; then
+        echo "Project $project not found, cloning..."
+        git clone git@github.com:projectestac/$project.git $homedir/../../$project
+        pushd $homedir/../$project
+        git submodule update --recursive --init
+        popd
+    fi
+}
+
+git pull
+
+clone_project zonaclic
+
+vagrant box update
+
+echo "Starting the VM"
+vagrant up
+echo "Running upgrade if needed"
+vagrant ssh -c "/vms/javavm/upgrade.sh"

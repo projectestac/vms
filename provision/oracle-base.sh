@@ -5,7 +5,7 @@ source "/vms/provision/functions.sh"
 echo 'Install Oracle'
 #http://www.oracle.com/technetwork/articles/technote-php-instant-084410.html
 
-sudo apt-get install -y --force-yes alien bc libaio1 unzip php5-dev > /dev/null
+sudo apt-get install -y --force-yes alien bc libaio1 unzip > /dev/null
 
 sudo cp /vms/provision/oracle/S01shm_load /etc/rc2.d/S01shm_load
 sudo chmod 777 /etc/rc2.d/S01shm_load
@@ -110,22 +110,5 @@ sudo ln -s /usr/include/oracle/12.1/client64 $ORACLE_HOME/include
 # sudo dpkg -i oracle-instantclient12.1-sqlplus_12.1.0.2.0-2_amd64.deb
 # popd
 
-echo 'Install OCI8'
-echo instantclient,/usr/lib/oracle/12.1/client64/lib | sudo pecl install oci8  > /dev/null
-
-echo "extension=oci8.so" | sudo tee -a /etc/php5/mods-available/oci8.ini
-
-sudo ln -s /etc/php5/mods-available/oci8.ini /etc/php5/apache2/conf.d/30-oci8.ini
-
-sudo service apache2 restart > /dev/null
-
-sudo su - oracle --command "sqlplus -S / as sysdba << EOM
-ALTER USER APEX_PUBLIC_USER ACCOUNT UNLOCK;
-ALTER USER APEX_PUBLIC_USER IDENTIFIED BY agora;
-ALTER USER APEX_PUBLIC_USER IDENTIFIED BY agora;
-SELECT DBMS_XDB.GETHTTPPORT FROM DUAL;
-EXEC DBMS_XDB.SETLISTENERLOCALACCESS(FALSE);
-exit;
-EOM" > /dev/null
 
 sudo service oracle-xe restart > /dev/null

@@ -5,7 +5,7 @@ source "/vms/provision/functions.sh"
 /vms/provision/base.sh
 /vms/provision/php5.sh
 /vms/provision/mysql.sh $pass
-/vms/provision/oracle-xe.sh
+/vms/provision/oracle-extended.sh
 
 /vms/agora/provision.sh
 /vms/alexandria/provision.sh
