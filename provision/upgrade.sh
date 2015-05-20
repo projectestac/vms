@@ -81,6 +81,13 @@ if [ "$version" -lt 2015043000 ]; then
     save_version 2015043000
 fi
 
+if [ "$version" -lt 2015052000 ]; then
+    sudo apt-get install -y --force-yes php5-tidy > /dev/null
+
+    save_version 2015052000
+fi
+
+
 
 #Don't forget to write the latest version on provision.sh
 
