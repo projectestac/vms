@@ -82,11 +82,26 @@ if [ "$version" -lt 2015043000 ]; then
 fi
 
 if [ "$version" -lt 2015052000 ]; then
+    echo 'Install Tidy PHP'
     sudo apt-get install -y --force-yes php5-tidy > /dev/null
 
     save_version 2015052000
 fi
 
+
+if [ "$version" -lt 2015052001 ]; then
+    echo 'Install Xdebug for PHP'
+    sudo apt-get install -y php5-xdebug > /dev/null
+    echo "xdebug.default_enable=1" | sudo tee -a /etc/php5/conf.d/20-xdebug.ini
+    echo "xdebug.idekey=\"vagrant\"" | sudo tee -a /etc/php5/conf.d/20-xdebug.ini
+    echo "xdebug.remote_enable=1" | sudo tee -a /etc/php5/conf.d/20-xdebug.ini
+    echo "xdebug.remote_autostart=0" | sudo tee -a /etc/php5/conf.d/20-xdebug.ini
+    echo "xdebug.remote_port=9000" | sudo tee -a /etc/php5/conf.d/20-xdebug.ini
+    echo "xdebug.remote_handler=dbgp" | sudo tee -a /etc/php5/conf.d/20-xdebug.ini
+    echo "xdebug.remote_host=10.0.2.2 " | sudo tee -a /etc/php5/conf.d/20-xdebug.ini
+
+    save_version 2015052001
+fi
 
 
 #Don't forget to write the latest version on provision.sh

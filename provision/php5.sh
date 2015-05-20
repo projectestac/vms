@@ -87,3 +87,15 @@ echo 'Install memcache'
 sudo apt-get install -y php5-memcache memcached > /dev/null
 
 sudo service apache2 restart > /dev/null
+
+echo 'Install XDebug'
+
+sudo apt-get install -y php5-xdebug > /dev/null
+
+echo "xdebug.default_enable=1" | sudo tee -a /etc/php5/conf.d/20-xdebug.ini
+echo "xdebug.idekey=\"vagrant\"" | sudo tee -a /etc/php5/conf.d/20-xdebug.ini
+echo "xdebug.remote_enable=1" | sudo tee -a /etc/php5/conf.d/20-xdebug.ini
+echo "xdebug.remote_autostart=0" | sudo tee -a /etc/php5/conf.d/20-xdebug.ini
+echo "xdebug.remote_port=9000" | sudo tee -a /etc/php5/conf.d/20-xdebug.ini
+echo "xdebug.remote_handler=dbgp" | sudo tee -a /etc/php5/conf.d/20-xdebug.ini
+echo "xdebug.remote_host=10.0.2.2 " | sudo tee -a /etc/php5/conf.d/20-xdebug.ini
