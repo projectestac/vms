@@ -6,5 +6,8 @@ source "/vms/provision/functions.sh"
 /vms/provision/java.sh
 /vms/provision/oracle-base.sh
 
+
+/vms/zonaclic/provision.sh
+
 #Here we must write the latest version number
 save_version 2015043000

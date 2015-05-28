@@ -5,10 +5,10 @@
 function clone_project {
     project=$1
     homedir=`pwd`
-    if [ ! -d "$homedir/../$project" ]; then
+    if [ ! -d "$homedir/../../$project" ]; then
         echo "Project $project not found, cloning..."
         git clone git@github.com:projectestac/$project.git $homedir/../../$project
-        pushd $homedir/../$project
+        pushd $homedir/../../$project
         git submodule update --recursive --init
         popd
     fi
