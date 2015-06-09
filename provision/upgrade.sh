@@ -103,6 +103,14 @@ if [ "$version" -lt 2015052001 ]; then
     save_version 2015052001
 fi
 
+if [ "$version" -lt 2015061000 ]; then
+    chmod +x /dades/agora/html/config/sync.sh /dades/agora/html/config/sync-config.sh
+
+    save_version 2015061000
+fi
+
+
+
 
 #Don't forget to write the latest version on provision.sh
 

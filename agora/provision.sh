@@ -39,6 +39,7 @@ sudo cp $wwwdir/config/config-dist.php $wwwdir/config/config.php
 sudo cp $wwwdir/config/env-config-dist.php $wwwdir/config/env-config.php
 sudo cp $wwwdir/config/config-restricted-dist.php $wwwdir/config/config-restricted.php
 sudo cp $wwwdir/config/sync-config-dist.sh $wwwdir/config/sync-config.sh
+chmod +x $wwwdir/config/sync.sh $wwwdir/config/sync-config.sh
 sudo cp $wwwdir/.htaccess-dist $wwwdir/.htaccess
 
 echo "Configure CGI"
