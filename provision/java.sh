@@ -2,7 +2,15 @@
 
 echo 'Install Java'
 
-sudo apt-get install -y tomcat7 tomcat7-admin ant default-jdk > /dev/null
+
+sudo add-apt-repository -y ppa:webupd8team/java > /dev/null
+sudo apt-get update > /dev/null
+echo debconf shared/accepted-oracle-license-v1-1 select true | sudo debconf-set-selections
+echo debconf shared/accepted-oracle-license-v1-1 seen true | sudo debconf-set-selections
+sudo apt-get install -y oracle-java7-installer > /dev/null
+
+sudo apt-get install -y tomcat7 tomcat7-admin ant > /dev/null
+
 sudo update-rc.d tomcat7 defaults 80 01
 
 sudo sed -i "s#<Connector port=\"8080\" protocol=\"HTTP/1.1\"#<Connector port=\"80\" protocol=\"HTTP/1.1\"#" /etc/tomcat7/server.xml
