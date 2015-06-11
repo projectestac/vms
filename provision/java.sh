@@ -14,7 +14,7 @@ sudo sed -i "/<tomcat-users>/a \
 
 sudo cp -R /vms/javavm/tomcat/* /etc/tomcat7/Catalina/localhost
 
-sudo chmod -R 777 /var/log/tomca7/
-sudo chown -R vagrant:vagrant /var/log/tomca7/
+sudo chmod -R 777 /var/log/tomcat7/
+sudo chown -R vagrant:vagrant /var/log/tomcat7/
 
 sudo service tomcat7 restart > /dev/null
