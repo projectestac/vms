@@ -8,6 +8,8 @@ sudo apt-get update > /dev/null
 echo debconf shared/accepted-oracle-license-v1-1 select true | sudo debconf-set-selections
 echo debconf shared/accepted-oracle-license-v1-1 seen true | sudo debconf-set-selections
 sudo apt-get install -y oracle-java7-installer > /dev/null
+sudo update-java-alternatives -s java-7-oracle
+sudo apt-get install -y oracle-java7-set-default
 
 sudo apt-get install -y tomcat7 tomcat7-admin ant > /dev/null
 
@@ -15,6 +17,8 @@ sudo update-rc.d tomcat7 defaults 80 01
 
 sudo sed -i "s#<Connector port=\"8080\" protocol=\"HTTP/1.1\"#<Connector port=\"80\" protocol=\"HTTP/1.1\"#" /etc/tomcat7/server.xml
 sudo sed -i "s/#AUTHBIND=no/AUTHBIND=yes/" /etc/default/tomcat7
+sudo sed -i "s/#JAVA_HOME=\/usr\/lib\/jvm\/openjdk-6-jdk/JAVA_HOME=\/usr\/lib\/jvm\/java-7-oracle/" /etc/default/tomcat7
+
 
 sudo sed -i "/<tomcat-users>/a \
     <user username=\"admin\" password=\"agora\" roles=\"manager-gui,admin-gui\"\/>" /etc/tomcat7/tomcat-users.xml
