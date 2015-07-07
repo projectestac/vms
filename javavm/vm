@@ -17,6 +17,7 @@ function clone_project {
 git pull
 
 clone_project zonaclic
+clone_project qv
 
 vagrant box update
 
