@@ -1,0 +1,5 @@
+<Context
+	path="/qv_editor"
+	reloadable="true"
+	docBase="/dades/qv/qv_editor/web"
+	workDir="/dades/qv/qv_editor/work" />

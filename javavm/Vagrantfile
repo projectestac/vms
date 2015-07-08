@@ -43,7 +43,11 @@ Vagrant.configure(2) do |config|
 
   config.vm.synced_folder "../../zonaclic", "/dades/zonaclic"
 
-  config.vm.synced_folder "../../qv", "/dades/qv"
+  config.vm.synced_folder "../../qv/qv_web", "/dades/qv/qv_web"
+  config.vm.synced_folder "../../qv/qv_biblio/web", "/dades/qv/qv_biblio/web"
+  config.vm.synced_folder "../../qv/qv_editor/web", "/dades/qv/qv_editor/web"
+  config.vm.synced_folder "../../qv/qv_viewer/web", "/dades/qv/qv_viewer/web"
+  # config.vm.synced_folder "../../qv/qv_admin/web", "/dades/qv/qv_admin/web"
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
