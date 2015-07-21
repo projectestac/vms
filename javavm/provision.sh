@@ -4,7 +4,7 @@ source "/vms/provision/functions.sh"
 
 /vms/provision/base.sh
 /vms/provision/java.sh
-/vms/provision/oracle-base.sh
+/vms/provision/oracle-base.sh javatac
 
 
 /vms/zonaclic/provision.sh

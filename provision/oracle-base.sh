@@ -2,6 +2,8 @@
 
 source "/vms/provision/functions.sh"
 
+host=$1
+
 echo 'Install Oracle'
 #http://www.oracle.com/technetwork/articles/technote-php-instant-084410.html
 
@@ -34,7 +36,6 @@ popd
 sudo cp /vms/provision/oracle/oracle-env.sh /etc/profile.d/
 sudo chmod 777 /etc/profile.d/oracle-env.sh
 cat /etc/profile.d/oracle-env.sh | sudo tee -a /etc/bash.bashrc
-cat /etc/profile.d/oracle-env.sh | sudo tee -a /etc/apache2/envvars
 
 export ORACLE_HOME=/u01/app/oracle/product/11.2.0/xe
 export ORACLE_SID=XE
@@ -56,9 +57,11 @@ sudo cp /vms/provision/oracle/60-oracle.conf /etc/sysctl.d/60-oracle.conf
 sudo cp /vms/provision/oracle/oracle-xe /etc/init.d/oracle-xe
 
 sudo cp /vms/provision/oracle/tnsnames.ora $TNS_ADMIN
-chmod 777 $TNS_ADMIN/tnsnames.ora
+sudo chmod 777 $TNS_ADMIN/tnsnames.ora
 sudo cp /vms/provision/oracle/listener.ora $TNS_ADMIN
-chmod 777 $TNS_ADMIN/listener.ora
+sudo chmod 777 $TNS_ADMIN/listener.ora
+sudo sed -i "s:nom_maquina:$host:g"  $TNS_ADMIN/listener.ora
+
 
 echo 'Configure Oracle server'
 sudo service oracle-xe configure responseFile=/vms/provision/oracle/oracle.conf >> /tmp/xe-install.log
@@ -110,5 +113,12 @@ sudo ln -s /usr/include/oracle/12.1/client64 $ORACLE_HOME/include
 # sudo dpkg -i oracle-instantclient12.1-sqlplus_12.1.0.2.0-2_amd64.deb
 # popd
 
+sudo su - oracle --command "sqlplus -S / as sysdba << EOM
+ALTER USER APEX_PUBLIC_USER ACCOUNT UNLOCK;
+ALTER USER APEX_PUBLIC_USER IDENTIFIED BY agora;
+SELECT DBMS_XDB.GETHTTPPORT FROM DUAL;
+EXEC DBMS_XDB.SETLISTENERLOCALACCESS(FALSE);
+exit;
+EOM" > /dev/null
 
 sudo service oracle-xe restart > /dev/null
