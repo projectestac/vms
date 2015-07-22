@@ -62,7 +62,7 @@ Vagrant.configure(2) do |config|
   config.vm.synced_folder "../marsupial-mps", "/git/mps"
   config.vm.synced_folder "../marsupial-mps/src", "/dades/mps/src"
 
-  config.vm.synced_folder ".", "/vms"
+  config.vm.synced_folder ".", "/vms", mount_options: ["dmode=775,fmode=775"]
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
