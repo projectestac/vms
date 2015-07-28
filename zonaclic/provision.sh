@@ -6,7 +6,9 @@ echo 'Provision Zona Clic'
 
 rootdir=/dades/zonaclic
 
+oracle_impdp clic /vms/zonaclic ts_clic
 
 pushd $rootdir
 ant
 popd
+

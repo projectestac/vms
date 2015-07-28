@@ -4,7 +4,7 @@ pass=agora
 
 function oracle_import_db {
     from=$1 #Nom de la db original
-    file=$2 #Path i nom dle fitxer
+    file=$2 #Path i nom del fitxer
     dbname=$3 #Nom de la nova BD
 
     echo "Creating DB  $dbname..."
@@ -30,6 +30,43 @@ function oracle_export_db {
     sudo su - oracle --command "exp system/$pass@XE owner=$dbname file=/tmp/$dbname.dmp log=/tmp/logfile.log"
     sudo cp /tmp/$dbname.dmp $destination/$dbname.dmp
     sudo chmod 666 $destination/$dbname.dmp
+}
+
+function oracle_impdp {
+    dbname=$1 #Nom de la nova BD
+    path=$2 #Path on es troba el fitxer $dbname.dmp.gz
+    ts=$3;
+    file=$path/$dbname.dmp
+
+    echo "Creating DB  $dbname..."
+    create_oracle_db $dbname
+    execute_in_oracle "@/u01/app/oracle/product/11.2.0/xe/rdbms/admin/catexp.sql"
+
+    echo "Unzipping $dbname.dmp.gz file..."
+    pushd $path
+    sudo chmod 666 $dbname.dmp.gz
+    gunzip -c $dbname.dmp.gz > $dbname.dmp
+    popd
+
+    sudo chmod 666 $file
+    echo "Creating directory $dbname.dir..."
+    echo "CREATE OR REPLACE DIRECTORY ${dbname}dir AS '$path';" | sqlplus sys/$pass@XE AS sysdba
+    echo "GRANT READ, WRITE ON DIRECTORY ${dbname}dir TO $dbname;" | sqlplus sys/$pass@XE AS sysdba
+
+    echo "Creating log file..."
+    touch ${dbname}_db.log
+    sudo chmod 777 ${dbname}_db.log
+    echo "Importing DB $dbname..."
+    sudo su - oracle --command "impdp system/$pass@XE DIRECTORY=${dbname}dir DUMPFILE=${dbname}.dmp LOGFILE=${dbname}_db.log REMAP_TABLESPACE=$ts:users REMAP_SCHEMA=e13_qv:qv"
+    echo 'Done'
+
+    echo "Removing $dbname.dmp file and moving log file to /tmp..."
+    pushd $path
+    mv ${dbname}_db.log /tmp
+    rm $dbname.dmp
+    popd
+
+    sudo service oracle-xe restart > /dev/null
 }
 
 function mysql_import_db {
