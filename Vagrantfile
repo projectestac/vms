@@ -17,7 +17,7 @@ Vagrant.configure(2) do |config|
   config.vm.hostname = "agora"
 
   config.vm.provision :hosts do |provisioner|
-    provisioner.add_host '127.0.0.1', ["agora-virtual.xtec.cat", "agora-virtual.educat1x1.cat"]
+    provisioner.add_host '127.0.0.1', ["agora-virtual.xtec.cat"]
   end
 
   # Disable automatic box update checking. If you disable this, then
