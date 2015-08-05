@@ -62,6 +62,8 @@ Vagrant.configure(2) do |config|
   config.vm.synced_folder "../marsupial-mps", "/git/mps"
   config.vm.synced_folder "../marsupial-mps/src", "/dades/mps/src"
 
+  config.vm.synced_folder "../moodlemobile2", "/dades/moodlemobile2"
+
   config.vm.synced_folder ".", "/vms", mount_options: ["dmode=775,fmode=775"]
 
   # Provider-specific configuration so you can fine-tune various
