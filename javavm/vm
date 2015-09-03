@@ -16,6 +16,10 @@ function clone_project {
 
 git pull
 
+if [ -z "$(vagrant plugin list | grep vagrant-hosts)" ]; then
+    vagrant plugin install vagrant-hosts
+fi
+
 clone_project zonaclic
 clone_project qv
 
