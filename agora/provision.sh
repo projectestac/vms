@@ -35,6 +35,7 @@ chown_777 $wwwdir/moodle2/local/agora/muc
 mkdir_777 $datadir/ubr_uploads/
 mkdir_777 $datadir/ubr_uploads/tmp/
 
+sudo cp $wwwdir/config/.htaccess-dist $wwwdir/config/.htaccess
 sudo cp $wwwdir/config/config-dist.php $wwwdir/config/config.php
 sudo cp $wwwdir/config/env-config-dist.php $wwwdir/config/env-config.php
 sudo cp $wwwdir/config/config-restricted-dist.php $wwwdir/config/config-restricted.php
