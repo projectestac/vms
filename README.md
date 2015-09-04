@@ -2,10 +2,12 @@
 
 ## Requirements
 
-* You need to have [Vagrant] installed.
+
+* You need to have [Vagrant] and the official [VirtualBox] installed.
 * [vagrant-hosts] vagrant plugin. It will be installed the first time you run vm script.
 
     `vagrant plugin install vagrant-hosts`
+    
 * The host machine probably needs at least 4 GB of RAM.
 * As Oracle 11g XE is only available for 64-bit machines at the moment, the host machine needs to
   have a 64-bit architecture.
@@ -17,9 +19,7 @@
 
         git clone https://github.com/projectestac/vms.git
 
-* Download the selected project from  https://github.com/projectestac/
-
-* For agora project, Download [Oracle Database 11g Express Edition] and [Oracle Instant Client] - Basic and Devel - for Linux x64.
+* In order to use agora and odissea projects, you will need to download [Oracle Database 11g Express Edition] and [Oracle Instant Client] - Basic and Devel - for Linux x64.
   Place all downloaded files (`oracle-xe-11.2.0-1.0.x86_64.rpm.zip`, `oracle-instantclient12.1-basic-12.1.0.2.0-1.x86_64.rpm` and `oracle-instantclient12.1-devel-12.1.0.2.0-1.x86_64.rpm`)
   in the directory `provision/oracle` of this project.
 
@@ -50,12 +50,14 @@ You may also want to use vagrant standard commands:
 
 You must change your /etc/hosts to access successfully to all the VM's:
 
- * 192.168.33.2 agora agora-virtual.xtec.cat agora-virtual.educat1x1.cat
+ * 192.168.33.2 agora agora-virtual.xtec.cat
 
 
 Oracle installation based in [vagrant-oracle-xe]
 
 [Vagrant]: http://www.vagrantup.com/
+
+[VirtualBox]: https://www.virtualbox.org/
 
 [Oracle Database 11g Express Edition]: http://www.oracle.com/technetwork/database/database-technologies/express-edition/downloads/index.html
 
