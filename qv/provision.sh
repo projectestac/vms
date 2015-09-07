@@ -5,9 +5,9 @@ source "/vms/provision/functions.sh"
 echo 'Provision QV'
 
 rootdir=/dades/qv
-gitdir=/dades/qv
+gitdir=/git/qv
 
-oracle_impdp qv /vms/qv ts_e13_qv
+oracle_impdp qv /vms/qv ts_e13_qv e13_qv
 
 mkdir_777 $rootdir/qv_biblio/work
 cd $gitdir/qv_biblio/

@@ -35,7 +35,8 @@ function oracle_export_db {
 function oracle_impdp {
     dbname=$1 #Nom de la nova BD
     path=$2 #Path on es troba el fitxer $dbname.dmp.gz
-    ts=$3;
+    ts=$3
+    schema=$4
     file=$path/$dbname.dmp
 
     echo "Creating DB  $dbname..."
@@ -50,14 +51,14 @@ function oracle_impdp {
 
     sudo chmod 666 $file
     echo "Creating directory $dbname.dir..."
-    echo "CREATE OR REPLACE DIRECTORY ${dbname}dir AS '$path';" | sqlplus sys/$pass@XE AS sysdba
-    echo "GRANT READ, WRITE ON DIRECTORY ${dbname}dir TO $dbname;" | sqlplus sys/$pass@XE AS sysdba
+    execute_in_oracle "CREATE OR REPLACE DIRECTORY ${dbname}dir AS '$path';"
+    execute_in_oracle "GRANT READ, WRITE ON DIRECTORY ${dbname}dir TO $dbname;"
 
     echo "Creating log file..."
     touch ${dbname}_db.log
     sudo chmod 777 ${dbname}_db.log
     echo "Importing DB $dbname..."
-    sudo su - oracle --command "impdp system/$pass@XE DIRECTORY=${dbname}dir DUMPFILE=${dbname}.dmp LOGFILE=${dbname}_db.log REMAP_TABLESPACE=$ts:users REMAP_SCHEMA=e13_qv:qv"
+    sudo su - oracle --command "impdp system/$pass@XE DIRECTORY=${dbname}dir DUMPFILE=${dbname}.dmp LOGFILE=${dbname}_db.log REMAP_TABLESPACE=$ts:users REMAP_SCHEMA=${schema}:${dbname}"
     echo 'Done'
 
     echo "Removing $dbname.dmp file and moving log file to /tmp..."

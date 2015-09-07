@@ -10,6 +10,7 @@ source "/vms/provision/functions.sh"
 /vms/zonaclic/provision.sh
 /vms/qv/provision.sh
 
+sudo service tomcat7 restart
 
 #Here we must write the latest version number
 save_version 2015043000
