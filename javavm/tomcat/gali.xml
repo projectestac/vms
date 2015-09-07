@@ -5,8 +5,8 @@
 <Resource
     name="jdbc/pool/ClicConnectionPoolDS"
     type="javax.sql.DataSource"
-    driverClassName="oracle.jdbc.driver.OracleDriver"
-    password="clic"
+    driverClassName="oracle.jdbc.OracleDriver"
+    password="agora"
     maxIdle="2"
     maxWait="5000"
     username="clic"

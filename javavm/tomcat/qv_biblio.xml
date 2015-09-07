@@ -7,7 +7,7 @@
 <Resource
     name="jdbc/pool/QVConnectionPoolDS"
     type="javax.sql.DataSource"
-    driverClassName="oracle.jdbc.driver.OracleDriver"
+    driverClassName="oracle.jdbc.OracleDriver"
     password="agora"
     maxIdle="2"
     maxWait="5000"
