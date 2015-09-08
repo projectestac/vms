@@ -24,6 +24,6 @@ mkdir_777 $rootdir/qv_viewer/work
 cd $gitdir/qv_viewer/
 ant dev
 
-#mkdir_777 $rootdir/qv_admin/work
-
-
+mkdir_777 $rootdir/qv_admin/work
+cd $gitdir/qv_admin/
+ant dev
