@@ -24,7 +24,19 @@ sudo sed -i "/<tomcat-users>/a \
     <user username=\"admin\" password=\"agora\" roles=\"manager-gui,admin-gui\"\/>" /etc/tomcat7/tomcat-users.xml
 
 
+echo 'Install Oracle Server'
+pushd /vms/provision/oracle/
+if [ ! -f ojdbc7.jar ]; then
+    echo 'Download ojdbc7.jar and save it on provision folder'
+    exit -1
+fi
+popd
+sudo cp /vms/provision/oracle/ojdbc7.jar /usr/share/tomcat7/lib/
+sudo chmod 777 /usr/share/tomcat7/lib/ojdbc7.jar
+
 sudo cp -R /vms/javavm/tomcat/* /etc/tomcat7/Catalina/localhost
+
+sudo rm -Rf /var/lib/tomcat7/webapps/ROOT/
 
 sudo chmod -R 777 /var/log/tomcat7/
 sudo chown -R vagrant:vagrant /var/log/tomcat7/

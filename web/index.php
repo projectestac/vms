@@ -12,6 +12,8 @@
 		h2 { text-align:center; color:#888; }
 		img {vertical-align: middle;}
 	</style>
+	<link rel="icon" href="favicon.ico" type="image/x-icon" />
+
 </head>
 
 <body>
