@@ -2,3 +2,4 @@
 oracle-xe-*.rpm.zip
 *.rpm
 *.deb
+provision/oracle/*.jar

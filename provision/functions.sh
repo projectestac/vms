@@ -37,34 +37,36 @@ function oracle_impdp {
     path=$2 #Path on es troba el fitxer $dbname.dmp.gz
     ts=$3
     schema=$4
-    file=$path/$dbname.dmp
+    dumpfile=${dbname}.dmp
+    filepath=$path/$dumpfile
+    logfile=${dbname}_db.log
+    directory=${dbname}_dir
 
+    pushd $path
     echo "Creating DB  $dbname..."
     create_oracle_db $dbname
     execute_in_oracle "@/u01/app/oracle/product/11.2.0/xe/rdbms/admin/catexp.sql"
 
-    echo "Unzipping $dbname.dmp.gz file..."
-    pushd $path
-    sudo chmod 666 $dbname.dmp.gz
-    gunzip -c $dbname.dmp.gz > $dbname.dmp
-    popd
+    echo "Unzipping $dumpfile.gz file..."
+    sudo chmod 666 $dumpfile.gz
+    gunzip -c $dumpfile.gz > $dumpfile
 
-    sudo chmod 666 $file
-    echo "Creating directory $dbname.dir..."
-    execute_in_oracle "CREATE OR REPLACE DIRECTORY ${dbname}dir AS '$path';"
-    execute_in_oracle "GRANT READ, WRITE ON DIRECTORY ${dbname}dir TO $dbname;"
+    sudo chmod 666 $filepath
+    echo "Creating directory ${directory}..."
+    execute_in_oracle "CREATE OR REPLACE DIRECTORY ${directory} AS '$path';"
+    execute_in_oracle "GRANT READ, WRITE ON DIRECTORY ${directory} TO $dbname;"
 
     echo "Creating log file..."
-    touch ${dbname}_db.log
-    sudo chmod 777 ${dbname}_db.log
+    touch ${logfile}
+    sudo chmod 777 ${logfile}
+
     echo "Importing DB $dbname..."
-    sudo su - oracle --command "impdp system/$pass@XE DIRECTORY=${dbname}dir DUMPFILE=${dbname}.dmp LOGFILE=${dbname}_db.log REMAP_TABLESPACE=$ts:users REMAP_SCHEMA=${schema}:${dbname}"
+    sudo su - oracle --command "impdp system/$pass@XE DIRECTORY=${directory} DUMPFILE=${dumpfile} LOGFILE=${logfile} REMAP_TABLESPACE=${ts}:users REMAP_SCHEMA=${schema}:${dbname}"
     echo 'Done'
 
-    echo "Removing $dbname.dmp file and moving log file to /tmp..."
-    pushd $path
-    mv ${dbname}_db.log /tmp
-    rm $dbname.dmp
+    echo "Removing $dumpfile file ..."
+    mv ${logfile} /tmp/${logfile}
+    rm $filepath
     popd
 
     sudo service oracle-xe restart > /dev/null
@@ -112,6 +114,27 @@ function create_oracle_db {
     exit;
 EOM" > /dev/null
 }
+
+function create_oracle_role {
+    rolename=$1
+
+    sudo su - oracle --command "sqlplus -S / as sysdba << EOM
+    CREATE ROLE $rolename IDENTIFIED BY $pass;
+    GRANT ALL PRIVILEGES TO $dbname;
+    GRANT execute ON DBMS_LOCK to $dbname;
+    exit;
+EOM" > /dev/null
+}
+
+function drop_oracle_db {
+    dbname=$1
+
+    sudo su - oracle --command "sqlplus -S / as sysdba << EOM
+    DROP USER $dbname;
+    exit;
+EOM" > /dev/null
+}
+
 
 function create_mysql_db {
     dbname=$1

@@ -7,6 +7,9 @@ echo 'Provision QV'
 rootdir=/dades/qv
 gitdir=/git/qv
 
+echo "Creating role R_QUADERNS_VIRTUALS_LECTURA..."
+create_oracle_role R_QUADERNS_VIRTUALS_LECTURA
+
 oracle_impdp qv /vms/qv ts_e13_qv e13_qv
 
 mkdir_777 $rootdir/qv_biblio/work
