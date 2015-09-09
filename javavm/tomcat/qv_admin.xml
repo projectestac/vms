@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Context
-	path="/qv_admin"
-	reloadable="true"
-	docBase="/dades/qv/qv_admin/web"
-	workDir="/dades/qv/qv_admin/work" >
+<Context path="/qv_admin"
+    reloadable="true"
+    docBase="/dades/qv/qv_admin/web"
+    workDir="/dades/qv/qv_admin/work" >
 <Resource
     name="jdbc/pool/QVConnectionPoolDS"
     type="javax.sql.DataSource"

@@ -1,2 +1,4 @@
-<?xml version='1.0' encoding='utf-8'?>
-<Context path="" reloadable="true" docBase="/vms/javavm/web" antiResourceLocking="false" privileged="true" />
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path=""
+        docBase="/dades/zonaclic/web"
+        antiResourceLocking="false" privileged="true" />
