@@ -34,8 +34,6 @@ popd
 sudo cp /vms/provision/oracle/ojdbc7.jar /usr/share/tomcat7/lib/
 sudo chmod 777 /usr/share/tomcat7/lib/ojdbc7.jar
 
-sudo cp -R /vms/javavm/tomcat/* /etc/tomcat7/Catalina/localhost
-
 sudo rm -Rf /var/lib/tomcat7/webapps/ROOT/
 
 sudo chmod -R 777 /var/log/tomcat7/
