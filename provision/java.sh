@@ -8,8 +8,8 @@ sudo apt-get update > /dev/null
 echo debconf shared/accepted-oracle-license-v1-1 select true | sudo debconf-set-selections
 echo debconf shared/accepted-oracle-license-v1-1 seen true | sudo debconf-set-selections
 sudo apt-get install -y oracle-java7-installer > /dev/null
-sudo update-java-alternatives -s java-7-oracle
-sudo apt-get install -y oracle-java7-set-default
+sudo update-java-alternatives -s java-7-oracle > /dev/null
+sudo apt-get install -y oracle-java7-set-default > /dev/null
 
 sudo apt-get install -y tomcat7 tomcat7-admin ant > /dev/null
 
