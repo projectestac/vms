@@ -27,3 +27,6 @@ ant dev
 mkdir_777 $rootdir/qv_admin/work
 cd $gitdir/qv_admin/
 ant dev
+
+
+sudo cp $gitdir/qv_editor/src/editor/edu/xtec/resources/properties/*.properties /usr/share/tomcat7
