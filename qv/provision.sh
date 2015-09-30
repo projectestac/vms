@@ -12,6 +12,8 @@ create_oracle_role R_QUADERNS_VIRTUALS_LECTURA
 
 oracle_impdp qv /vms/qv ts_e13_qv e13_qv
 
+mkdir_777 $rootdir/logs
+
 mkdir_777 $rootdir/qv_biblio/work
 cd $gitdir/qv_biblio/
 ant dev
