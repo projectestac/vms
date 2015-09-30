@@ -80,7 +80,7 @@
 
 	<fieldset>
 		<legend> Gestió </legend>
-		<a href="<?php print "http://".$_SERVER["SERVER_NAME"].":8080/apex"?>">[Oracle admin]</a>
+		<a href="<?php print "http://".$_SERVER["SERVER_NAME"].":8080/apex/f?p=4950"?>">[Oracle admin]</a>
 		<a href="/phpmyadmin/">[MySQL admin]</a>
 		<br/>
 		<a href="/agora/config/phpsysinfo/">[phpSysInfo]</a>
