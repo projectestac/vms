@@ -15,7 +15,3 @@ oracle_impdp clic /vms/zonaclic ts_clic clic
 pushd $rootdir
 ant dev
 popd
-
-
-sudo cp $gitdir/home/*.properties /usr/share/tomcat7
-
