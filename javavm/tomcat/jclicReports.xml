@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Context path="/reportsWebApp"
+<Context path="/jclicReports"
         docBase="/dades/zonaclic/app/reportsWebApp/web"
         antiResourceLocking="false" privileged="true" >
 <Resource
