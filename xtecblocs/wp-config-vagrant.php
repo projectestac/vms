@@ -48,6 +48,12 @@ define('DB_CHARSET', 'utf8');
 /** The Database Collate type. Don't change this if in doubt. */
 define('DB_COLLATE', '');
 
+/**
+ * Proxy configuration.
+ */
+//define('WP_PROXY_HOST', '');
+//define('WP_PROXY_PORT', '');
+
 /**#@+
  * Authentication Unique Keys and Salts.
  *
@@ -76,16 +82,6 @@ define('NONCE_SALT',       'put your unique phrase here');
  */
 $table_prefix  = 'wp_';
 
-/**
- * WordPress Localized Language, defaults to English.
- *
- * Change this to localize WordPress. A corresponding MO file for the chosen
- * language must be installed to wp-content/languages. For example, install
- * de_DE.mo to wp-content/languages and set WPLANG to 'de_DE' to enable German
- * language support.
- */
-define('WPLANG', 'ca');
-
 /** HyperDB settings */
 // HyperDB databases prefix
 define('DB_PREFIX','xtec_blocs_');
@@ -100,9 +96,12 @@ define('DB_NUMS',3); /** HyperDB additional databases */
  */
 define('WP_DEBUG', false);
 
+define('AUTOMATIC_UPDATER_DISABLED', true);
+
 define('WP_ALLOW_MULTISITE', true);
 
-define('MULTISITE', true);
+define('MULTISITE', true);  // If tables wp_1_xxxx are NOT present
+// define('MULTISITE', false);  // If tables wp_1_xxxx ARE present
 define('SUBDOMAIN_INSTALL', false);
 define('DOMAIN_CURRENT_SITE','agora');
 define('PATH_CURRENT_SITE', '/blocs/');
@@ -112,7 +111,7 @@ define('BLOG_ID_CURRENT_SITE', 1);
 /**
  * Default blog creation theme.
  */
-define('WP_DEFAULT_THEME', 'twentythirteen');
+define('WP_DEFAULT_THEME', 'twentyfourteen');
 
 /**
  * HTTPS config.
@@ -130,6 +129,3 @@ if ( !defined('ABSPATH') )
 
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
-
-
-

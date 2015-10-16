@@ -109,8 +109,17 @@ if [ "$version" -lt 2015061000 ]; then
     save_version 2015061000
 fi
 
+if [ "$version" -lt 2015061000 ]; then
+    chmod +x /dades/agora/html/config/sync.sh /dades/agora/html/config/sync-config.sh
 
+    save_version 2015061000
+fi
 
+if [ "$version" -lt 2015101600 ]; then
+    sudo cp /vms/xtecblocs/wp-cache-config.php /dades/blocs/src/wp-content/wp-cache-config.php
+
+    save_version 2015101600
+fi
 
 #Don't forget to write the latest version on provision.sh
 
