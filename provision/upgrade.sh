@@ -121,6 +121,22 @@ if [ "$version" -lt 2015101600 ]; then
     save_version 2015101600
 fi
 
+if [ "$version" -lt 2015110202 ]; then
+    sudo su - oracle --command "sqlplus -S / as sysdba << EOM
+ALTER PROFILE default LIMIT PASSWORD_LIFE_TIME UNLIMITED;
+exit;
+EOM"
+
+    sudo su - oracle --command "sqlplus -S / as sysdba << EOM
+ALTER PROFILE MONITORING_PROFILE LIMIT PASSWORD_LIFE_TIME UNLIMITED;
+exit;
+EOM"
+
+    save_version 2015110202
+fi
+
+
+
 #Don't forget to write the latest version on provision.sh
 
 echo 'All updated!'
