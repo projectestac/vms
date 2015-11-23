@@ -135,7 +135,11 @@ EOM"
     save_version 2015110202
 fi
 
+if [ "$version" -lt 2015112300 ]; then
+    sudo sed -i 's/\[mysqld\]/\[mysqld\]\nwait_timeout = 100\nmax_connections=500/g' /etc/mysql/my.cnf
 
+    save_version 2015112300
+fi
 
 #Don't forget to write the latest version on provision.sh
 

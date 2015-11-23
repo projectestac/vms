@@ -10,6 +10,9 @@ sudo debconf-set-selections <<< "mysql-server mysql-server/root_password_again p
 
 sudo apt-get install -y mysql-server-5.5 > /dev/null
 sudo sed -i 's/127.0.0.1/0.0.0.0/g' /etc/mysql/my.cnf
+sudo sed -i 's/\[mysqld\]/\[mysqld\]\nwait_timeout = 100\nmax_connections=500/g' /etc/mysql/my.cnf
+
+
 sudo service mysql restart
 
 sudo debconf-set-selections <<< "phpmyadmin phpmyadmin/dbconfig-install boolean true"
