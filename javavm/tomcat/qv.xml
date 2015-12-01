@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/qv"
+    reloadable="true"
+    docBase="/dades/qv/qv_main/web"
+    workDir="/dades/qv/qv_main/work" >
+<Resource
+    name="jdbc/pool/QVConnectionPoolDS"
+    type="javax.sql.DataSource"
+    driverClassName="oracle.jdbc.OracleDriver"
+    password="agora"
+    maxIdle="2"
+    maxWait="5000"
+    username="qv"
+    url="jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=javatac)(PORT=1521)))(CONNECT_DATA=(SERVICE_NAME=XE)))"
+    maxActive="4"/>
+</Context>
