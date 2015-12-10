@@ -122,11 +122,13 @@ exit;
 EOM" > /dev/null
 
 sudo su - oracle --command "sqlplus -S / as sysdba << EOM
-ALTER PROFILE default LIMIT PASSWORD_LIFE_TIME UNLIMITED;
+ALTER PROFILE DEFAULT LIMIT PASSWORD_LIFE_TIME UNLIMITED;
+ALTER PROFILE MONITORING_PROFILE LIMIT PASSWORD_LIFE_TIME UNLIMITED;
 exit;
 EOM" > /dev/null
 
-sudo su - oracle --command "sqlplus -S / as sysdba << EOM
+sudo su - oracle --command "sqlplus -S sys/agora as sysdba << EOM
+ALTER PROFILE DEFAULT LIMIT PASSWORD_LIFE_TIME UNLIMITED;
 ALTER PROFILE MONITORING_PROFILE LIMIT PASSWORD_LIFE_TIME UNLIMITED;
 exit;
 EOM" > /dev/null

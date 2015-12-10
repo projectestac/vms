@@ -141,6 +141,26 @@ if [ "$version" -lt 2015112300 ]; then
     save_version 2015112300
 fi
 
-#Don't forget to write the latest version on provision.sh
+
+if [ "$version" -lt 2015121000 ]; then
+    sudo su - oracle --command "sqlplus -S sys/agora as sysdba << EOM
+ALTER PROFILE DEFAULT LIMIT PASSWORD_LIFE_TIME UNLIMITED;
+ALTER USER usu1 IDENTIFIED BY agora;
+ALTER USER usu1 ACCOUNT UNLOCK;
+ALTER USER usu2 IDENTIFIED BY agora;
+ALTER USER usu2 ACCOUNT UNLOCK;
+ALTER USER usu3 IDENTIFIED BY agora;
+ALTER USER usu3 ACCOUNT UNLOCK;
+ALTER USER usu4 IDENTIFIED BY agora;
+ALTER USER usu4 ACCOUNT UNLOCK;
+ALTER USER odissea IDENTIFIED BY agora;
+ALTER USER odissea ACCOUNT UNLOCK;
+exit;
+EOM"
+
+    save_version 2015121000
+fi
+
+
 
 echo 'All updated!'
