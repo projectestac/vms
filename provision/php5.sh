@@ -2,13 +2,14 @@
 
 wwwdir=/vms/web
 
-echo 'Install PHP 5.4'
+echo 'Install PHP 5.6'
 
-sudo add-apt-repository -y ppa:ondrej/php5-oldstable > /dev/null
+sudo apt-get install -y language-pack-en-base
+sudo LC_ALL=en_US.UTF-8 add-apt-repository ppa:ondrej/php > /dev/null
 
 sudo apt-get update > /dev/null
 
-sudo apt-get install -y --force-yes apache2 php5 php5-curl php5-tidy php5-gd php5-xmlrpc php5-intl php5-mcrypt php5-cli php-pear php5-dev php5-ldap libapache2-mod-php5 php-codesniffer > /dev/null
+sudo apt-get install -y --force-yes apache2 php5.6 php5.6-curl php5.6-tidy php5.6-gd php5.6-xmlrpc php5.6-intl php5.6-mcrypt php5.6-cli php-pear php5.6-dev php5.6-ldap libapache2-mod-php5.6 php-codesniffer > /dev/null
 
 sudo mkdir /etc/apache2/sites-agora
 sudo cp -R /vms/provision/php/* /etc/apache2/sites-agora
@@ -30,24 +31,24 @@ sudo a2enmod rewrite
 sudo a2ensite default-ssl
 
 #PHP Configuration
-sudo sed -i '$ a\date.timezone = "Europe/Madrid"' /etc/php5/apache2/php.ini
-sudo sed -i "s/error_reporting = .*/error_reporting = E_ALL/" /etc/php5/apache2/php.ini
-sudo sed -i "s/display_errors = .*/display_errors = On/" /etc/php5/apache2/php.ini
-sudo sed -i "s/display_startup_errors = .*/display_startup_errors = On/" /etc/php5/apache2/php.ini
-sudo sed -i "s/post_max_size = .*/post_max_size = 100M/" /etc/php5/apache2/php.ini
-sudo sed -i "s/upload_max_filesize = .*/upload_max_filesize = 100M/" /etc/php5/apache2/php.ini
-sudo sed -i "s/allow_url_fopen = .*/allow_url_fopen = Off/" /etc/php5/apache2/php.ini
-sudo sed -i "s/;error_log = php_errors.log/error_log = \/var\/log\/apache2\/php_errors.log/" /etc/php5/apache2/php.ini
-sudo sed -i "s/max_execution_time = .*/max_execution_time = 300/" /etc/php5/apache2/php.ini
+sudo sed -i '$ a\date.timezone = "Europe/Madrid"' /etc/php/5.6/apache2/php.ini
+sudo sed -i "s/error_reporting = .*/error_reporting = E_ALL/" /etc/php/5.6/apache2/php.ini
+sudo sed -i "s/display_errors = .*/display_errors = On/" /etc/php/5.6/apache2/php.ini
+sudo sed -i "s/display_startup_errors = .*/display_startup_errors = On/" /etc/php/5.6/apache2/php.ini
+sudo sed -i "s/post_max_size = .*/post_max_size = 100M/" /etc/php/5.6/apache2/php.ini
+sudo sed -i "s/upload_max_filesize = .*/upload_max_filesize = 100M/" /etc/php/5.6/apache2/php.ini
+sudo sed -i "s/allow_url_fopen = .*/allow_url_fopen = Off/" /etc/php/5.6/apache2/php.ini
+sudo sed -i "s/;error_log = php_errors.log/error_log = \/var\/log\/apache2\/php_errors.log/" /etc/php/5.6/apache2/php.ini
+sudo sed -i "s/max_execution_time = .*/max_execution_time = 300/" /etc/php/5.6/apache2/php.ini
 
-sudo sed -i '$ a\date.timezone = "Europe/Madrid"' /etc/php5/cli/php.ini
-sudo sed -i "s/error_reporting = .*/error_reporting = E_ALL/" /etc/php5/cli/php.ini
-sudo sed -i "s/display_errors = .*/display_errors = On/" /etc/php5/cli/php.ini
-sudo sed -i "s/display_startup_errors = .*/display_startup_errors = On/" /etc/php5/cli/php.ini
-sudo sed -i "s/allow_url_fopen = .*/allow_url_fopen = Off/" /etc/php5/cli/php.ini
-sudo sed -i "s/;error_log = php_errors.log/error_log = \/var\/log\/apache2\/php_errors.log/" /etc/php5/cli/php.ini
-sudo sed -i "s/max_execution_time = .*/max_execution_time = 300/" /etc/php5/cli/php.ini
-#sudo sed -i "s/disable_functions = .*/disable_functions = /" /etc/php5/cli/php.ini
+sudo sed -i '$ a\date.timezone = "Europe/Madrid"' /etc/php/5.6/cli/php.ini
+sudo sed -i "s/error_reporting = .*/error_reporting = E_ALL/" /etc/php/5.6/cli/php.ini
+sudo sed -i "s/display_errors = .*/display_errors = On/" /etc/php/5.6/cli/php.ini
+sudo sed -i "s/display_startup_errors = .*/display_startup_errors = On/" /etc/php/5.6/cli/php.ini
+sudo sed -i "s/allow_url_fopen = .*/allow_url_fopen = Off/" /etc/php/5.6/cli/php.ini
+sudo sed -i "s/;error_log = php_errors.log/error_log = \/var\/log\/apache2\/php_errors.log/" /etc/php/5.6/cli/php.ini
+sudo sed -i "s/max_execution_time = .*/max_execution_time = 300/" /etc/php/5.6/cli/php.ini
+#sudo sed -i "s/disable_functions = .*/disable_functions = /" /etc/php/5.6/cli/php.ini
 
 #Log
 sudo sed -i "s/create 640.*/create 777 vagrant vagrant/" /etc/logrotate.d/apache2
@@ -66,22 +67,22 @@ yes "" | sudo pecl install Zendopcache > /dev/null
 
 place=`sudo find / -name 'opcache.so'`
 
-echo "zend_extension=$place" | sudo tee -a /etc/php5/mods-available/opcache.ini
-echo "opcache.enable=1" | sudo tee -a /etc/php5/mods-available/opcache.ini
-echo "opcache.memory_consumption=256" | sudo tee -a /etc/php5/mods-available/opcache.ini
-echo "opcache.max_accelerated_files=4000" | sudo tee -a /etc/php5/mods-available/opcache.ini
+echo "zend_extension=$place" | sudo tee -a /etc/php/5.6/mods-available/opcache.ini
+echo "opcache.enable=1" | sudo tee -a /etc/php/5.6/mods-available/opcache.ini
+echo "opcache.memory_consumption=256" | sudo tee -a /etc/php/5.6/mods-available/opcache.ini
+echo "opcache.max_accelerated_files=4000" | sudo tee -a /etc/php/5.6/mods-available/opcache.ini
 #0 for development, 60 for production
-echo "opcache.revalidate_freq=0" | sudo tee -a /etc/php5/mods-available/opcache.ini
-echo "opcache.interned_strings_buffer=8" | sudo tee -a /etc/php5/mods-available/opcache.ini
-echo "opcache.fast_shutdown=1" | sudo tee -a /etc/php5/mods-available/opcache.ini
-echo "opcache.enable_cli=1" | sudo tee -a /etc/php5/mods-available/opcache.ini
-echo "; Required for Moodle" | sudo tee -a /etc/php5/mods-available/opcache.ini
-echo "opcache.use_cwd = 1" | sudo tee -a /etc/php5/mods-available/opcache.ini
-echo "opcache.validate_timestamps = 1" | sudo tee -a /etc/php5/mods-available/opcache.ini
-echo "opcache.save_comments = 1" | sudo tee -a /etc/php5/mods-available/opcache.ini
-echo "opcache.enable_file_override = 0" | sudo tee -a /etc/php5/mods-available/opcache.ini
+echo "opcache.revalidate_freq=0" | sudo tee -a /etc/php/5.6/mods-available/opcache.ini
+echo "opcache.interned_strings_buffer=8" | sudo tee -a /etc/php/5.6/mods-available/opcache.ini
+echo "opcache.fast_shutdown=1" | sudo tee -a /etc/php/5.6/mods-available/opcache.ini
+echo "opcache.enable_cli=1" | sudo tee -a /etc/php/5.6/mods-available/opcache.ini
+echo "; Required for Moodle" | sudo tee -a /etc/php/5.6/mods-available/opcache.ini
+echo "opcache.use_cwd = 1" | sudo tee -a /etc/php/5.6/mods-available/opcache.ini
+echo "opcache.validate_timestamps = 1" | sudo tee -a /etc/php/5.6/mods-available/opcache.ini
+echo "opcache.save_comments = 1" | sudo tee -a /etc/php/5.6/mods-available/opcache.ini
+echo "opcache.enable_file_override = 0" | sudo tee -a /etc/php/5.6/mods-available/opcache.ini
 
-sudo ln -s /etc/php5/mods-available/opcache.ini /etc/php5/apache2/conf.d/20-opcache.ini
+sudo ln -s /etc/php/5.6/mods-available/opcache.ini /etc/php/5.6/apache2/conf.d/20-opcache.ini
 
 echo 'Install memcache'
 sudo apt-get install -y php5-memcache memcached > /dev/null

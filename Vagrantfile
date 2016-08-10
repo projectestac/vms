@@ -12,9 +12,10 @@ Vagrant.configure(2) do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
-  config.vm.box = "ubuntu/precise64"
+  config.vm.box = "ubuntu/trusty64"
 
-  config.vm.hostname = "agora"
+  #config.vm.hostname = "agora"
+  config.vm.provision :shell, inline: "hostnamectl set-hostname agora"
 
   config.vm.provision :hosts do |provisioner|
     provisioner.add_host '127.0.0.1', ["agora-virtual.xtec.cat"]
@@ -77,7 +78,7 @@ Vagrant.configure(2) do |config|
   #   # Customize the amount of memory on the VM:
   #   vb.memory = "1024"
     vb.customize ["modifyvm", :id,
-                  "--name", "agora",
+                  "--name", "agora-php56",
                   # Oracle claims to need 512MB of memory available minimum
                   "--memory", "1024",
                   # Enable DNS behind NAT
