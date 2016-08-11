@@ -17,7 +17,7 @@ function oracle_import_db {
     sudo su - oracle --command "imp system/$pass@XE fromuser=$from touser=$dbname file=$file log=/tmp/logfile.log" &> /tmp/logfile_$dbname.log
     echo 'Done'
 
-    sudo service oracle-xe restart > /dev/null
+    sudo service oracle-xe restart &> /dev/null
 }
 
 function oracle_export_db {
@@ -69,7 +69,7 @@ function oracle_impdp {
     rm $filepath
     popd
 
-    sudo service oracle-xe restart > /dev/null
+    sudo service oracle-xe restart &> /dev/null
 }
 
 function mysql_import_db {
@@ -97,7 +97,7 @@ function chown_777 {
 }
 
 function execute_in_oracle {
-    echo $1 | sudo su - oracle -c "sqlplus -S / as sysdba" > /dev/null
+    echo $1 | sudo su - oracle -c "sqlplus -S / as sysdba" &> /dev/null
 }
 
 function execute_in_mysql {
@@ -112,7 +112,7 @@ function create_oracle_db {
     GRANT ALL PRIVILEGES TO $dbname;
     GRANT execute ON DBMS_LOCK to $dbname;
     exit;
-EOM" > /dev/null
+EOM" &> /dev/null
 }
 
 function create_oracle_role {
@@ -123,7 +123,7 @@ function create_oracle_role {
     GRANT ALL PRIVILEGES TO $dbname;
     GRANT execute ON DBMS_LOCK to $dbname;
     exit;
-EOM" > /dev/null
+EOM" &> /dev/null
 }
 
 function drop_oracle_db {
@@ -132,7 +132,7 @@ function drop_oracle_db {
     sudo su - oracle --command "sqlplus -S / as sysdba << EOM
     DROP USER $dbname;
     exit;
-EOM" > /dev/null
+EOM" &> /dev/null
 }
 
 
@@ -154,7 +154,7 @@ function load_version {
 
 function save_version {
     echo 'Upgraded to '$1
-    echo $1 | sudo tee /vm_version > /dev/null
+    echo $1 | sudo tee /vm_version &> /dev/null
 }
 
 

@@ -5,7 +5,7 @@ source "/vms/provision/functions.sh"
 /vms/provision/base.sh
 /vms/provision/php5.sh
 /vms/provision/mysql.sh $pass
-/vms/provision/oracle-extended.sh agora
+/vms/provision/oracle-extended.sh default
 #/vms/provision/moodlemobile.sh
 
 /vms/agora/provision.sh

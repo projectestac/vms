@@ -3,15 +3,15 @@
 echo 'Install Java'
 
 
-sudo add-apt-repository -y ppa:webupd8team/java > /dev/null
-sudo apt-get update > /dev/null
+sudo add-apt-repository -y ppa:webupd8team/java &> /dev/null
+sudo apt-get update &> /dev/null
 echo debconf shared/accepted-oracle-license-v1-1 select true | sudo debconf-set-selections
 echo debconf shared/accepted-oracle-license-v1-1 seen true | sudo debconf-set-selections
-sudo apt-get install -y oracle-java7-installer > /dev/null
-sudo update-java-alternatives -s java-7-oracle > /dev/null
-sudo apt-get install -y oracle-java7-set-default > /dev/null
+sudo apt-get install -y oracle-java7-installer &> /dev/null
+sudo update-java-alternatives -s java-7-oracle &> /dev/null
+sudo apt-get install -y oracle-java7-set-default &> /dev/null
 
-sudo apt-get install -y tomcat7 tomcat7-admin ant > /dev/null
+sudo apt-get install -y tomcat7 tomcat7-admin ant &> /dev/null
 
 sudo update-rc.d tomcat7 defaults 80 01
 
@@ -39,4 +39,4 @@ sudo rm -Rf /var/lib/tomcat7/webapps/ROOT/
 sudo chmod -R 777 /var/log/tomcat7/
 sudo chown -R vagrant:vagrant /var/log/tomcat7/
 
-sudo service tomcat7 restart > /dev/null
+sudo service tomcat7 restart &> /dev/null

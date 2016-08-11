@@ -1,10 +1,10 @@
 #!/bin/bash
 
 echo 'Install Node.js'
-sudo apt-get install -y --force-yes npm > /dev/null
-sudo apt-get install -y --force-yes python-software-properties python g++ make > /dev/null
-sudo apt-get update > /dev/null
-sudo apt-get install -y --force-yes nodejs > /dev/null
+sudo apt-get install -y --force-yes npm &> /dev/null
+sudo apt-get install -y --force-yes python-software-properties python g++ make &> /dev/null
+sudo apt-get update &> /dev/null
+sudo apt-get install -y --force-yes nodejs &> /dev/null
 
 sudo ln -s /usr/bin/nodejs /usr/local/bin/node
 sudo npm config set strict-ssl false

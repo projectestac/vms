@@ -50,7 +50,10 @@ You may also want to use vagrant standard commands:
 
 You must change your /etc/hosts to access successfully to all the VM's:
 
- * 192.168.33.2 agora agora-virtual.xtec.cat
+ * For PHP 5.4:
+ 192.168.33.2 agora agora-virtual.xtec.cat agora-virtual.educat1x1.cat
+ * For PHP 5.6 (with WIP-php56 branch):
+ 192.168.33.4 agora agora-virtual.xtec.cat agora-virtual.educat1x1.cat
 
 
 Oracle installation based in [vagrant-oracle-xe]

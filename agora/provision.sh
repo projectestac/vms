@@ -44,10 +44,10 @@ chmod +x $wwwdir/config/sync.sh $wwwdir/config/sync-config.sh
 sudo cp $wwwdir/.htaccess-dist $wwwdir/.htaccess
 
 echo "Configure CGI"
-sudo sed -i "s#ScriptAlias /cgi-bin/ .*#ScriptAlias /cgi-bin/ $rootdir/cgi/#" /etc/apache2/sites-available/default
-sudo sed -i "s#<Directory \"/usr/lib/cgi-bin\">#<Directory \"$rootdir/cgi\">#" /etc/apache2/sites-available/default
-sudo sed -i "s#ScriptAlias /cgi-bin/ .*#ScriptAlias /cgi-bin/ $rootdir/cgi/#" /etc/apache2/sites-available/default-ssl
-sudo sed -i "s#<Directory \"/usr/lib/cgi-bin\">#<Directory \"$rootdir/cgi\">#" /etc/apache2/sites-available/default-ssl
+sudo sed -i "s#ScriptAlias /cgi-bin/ .*#ScriptAlias /cgi-bin/ $rootdir/cgi/#" /etc/apache2/sites-available/000-default.conf
+sudo sed -i "s#<Directory \"/usr/lib/cgi-bin\">#<Directory \"$rootdir/cgi\">#" /etc/apache2/sites-available/000-default.conf
+sudo sed -i "s#ScriptAlias /cgi-bin/ .*#ScriptAlias /cgi-bin/ $rootdir/cgi/#" /etc/apache2/sites-available/default-ssl.conf
+sudo sed -i "s#<Directory \"/usr/lib/cgi-bin\">#<Directory \"$rootdir/cgi\">#" /etc/apache2/sites-available/default-ssl.conf
 
 execute_in_oracle "@/dades/agora/html/moodle2/lib/dml/oci_native_moodle_package.sql"
 

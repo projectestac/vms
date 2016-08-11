@@ -15,11 +15,11 @@ fi
 
 if [ "$version" -lt 2015042204 ]; then
     wwwdir=/vms/web
-    sudo sed -i "s#DocumentRoot .*#DocumentRoot "$wwwdir"#" /etc/apache2/sites-available/default
-    sudo sed -i "s#<Directory /var/www/>#<Directory "$wwwdir">#" /etc/apache2/sites-available/default
-    sudo sed -i "s#DocumentRoot .*#DocumentRoot "$wwwdir"#" /etc/apache2/sites-available/default-ssl
-    sudo sed -i "s#<Directory /var/www/>#<Directory "$wwwdir">#" /etc/apache2/sites-available/default-ssl
-    sudo service apache2 restart > /dev/null
+    sudo sed -i "s#DocumentRoot .*#DocumentRoot "$wwwdir"#" /etc/apache2/sites-available/000-default.conf
+    sudo sed -i "s#<Directory /var/www/>#<Directory "$wwwdir">#" /etc/apache2/sites-available/000-default.conf
+    sudo sed -i "s#DocumentRoot .*#DocumentRoot "$wwwdir"#" /etc/apache2/sites-available/default-ssl.conf
+    sudo sed -i "s#<Directory /var/www/>#<Directory "$wwwdir">#" /etc/apache2/sites-available/default-ssl.conf
+    sudo service apache2 restart &> /dev/null
 
     save_version 2015042204
 fi
@@ -37,29 +37,29 @@ if [ "$version" -lt 2015042301 ]; then
     chmod +x /vms/mps/provision.sh
     sudo cp -R /vms/provision/php/mps.conf /etc/apache2/sites-agora/mps.conf
     sudo /vms/mps/provision.sh
-    sudo service apache2 restart > /dev/null
+    sudo service apache2 restart &> /dev/null
 
     save_version 2015042301
 fi
 
 if [ "$version" -lt 2015042400 ]; then
-    sudo sed -i '/^.*open_basedir/ s/$/:\/tmp\//' /etc/apache2/conf.d/phpmyadmin.conf
+    sudo sed -i '/^.*open_basedir/ s/$/:\/tmp\//' /etc/apache2/conf-available/phpmyadmin.conf
 
     save_version 2015042400
 fi
 
 
 if [ "$version" -lt 2015042900 ]; then
-    sudo sed -i "s#opcache.memory_consumption=.*#opcache.memory_consumption=256#" /etc/php5/mods-available/opcache.ini
-    sudo service apache2 restart > /dev/null
+    sudo sed -i "s#opcache.memory_consumption=.*#opcache.memory_consumption=256#" /etc/php/5.6/mods-available/opcache.ini
+    sudo service apache2 restart &> /dev/null
 
     save_version 2015042900
 fi
 
 if [ "$version" -lt 2015042901 ]; then
-    sudo sed -i "s/max_execution_time = .*/max_execution_time = 300/" /etc/php5/apache2/php.ini
-    sudo sed -i "s/max_execution_time = .*/max_execution_time = 300/" /etc/php5/cli/php.ini
-    sudo service apache2 restart > /dev/null
+    sudo sed -i "s/max_execution_time = .*/max_execution_time = 300/" /etc/php/5.6/apache2/php.ini
+    sudo sed -i "s/max_execution_time = .*/max_execution_time = 300/" /etc/php/5.6/cli/php.ini
+    sudo service apache2 restart &> /dev/null
 
     save_version 2015042901
 fi
@@ -71,10 +71,10 @@ if [ "$version" -lt 2015043000 ]; then
 
 
     echo "Configure CGI"
-    sudo sed -i "s#ScriptAlias /cgi-bin/ .*#ScriptAlias /cgi-bin/ /dades/agora/cgi/#" /etc/apache2/sites-available/default
-    sudo sed -i "s#<Directory \"/usr/lib/cgi-bin\">#<Directory \"/dades/agora/cgi\">#" /etc/apache2/sites-available/default
-    sudo sed -i "s#ScriptAlias /cgi-bin/ .*#ScriptAlias /cgi-bin/ /dades/agora/cgi/#" /etc/apache2/sites-available/default-ssl
-    sudo sed -i "s#<Directory \"/usr/lib/cgi-bin\">#<Directory \"/dades/agora/cgi\">#" /etc/apache2/sites-available/default-ssl
+    sudo sed -i "s#ScriptAlias /cgi-bin/ .*#ScriptAlias /cgi-bin/ /dades/agora/cgi/#" /etc/apache2/sites-available/000-default.conf
+    sudo sed -i "s#<Directory \"/usr/lib/cgi-bin\">#<Directory \"/dades/agora/cgi\">#" /etc/apache2/sites-available/000-default.conf
+    sudo sed -i "s#ScriptAlias /cgi-bin/ .*#ScriptAlias /cgi-bin/ /dades/agora/cgi/#" /etc/apache2/sites-available/default-ssl.conf
+    sudo sed -i "s#<Directory \"/usr/lib/cgi-bin\">#<Directory \"/dades/agora/cgi\">#" /etc/apache2/sites-available/default-ssl.conf
 
     sudo service apache2 restart
 
@@ -83,7 +83,7 @@ fi
 
 if [ "$version" -lt 2015052000 ]; then
     echo 'Install Tidy PHP'
-    sudo apt-get install -y --force-yes php5-tidy > /dev/null
+    sudo apt-get install -y --force-yes php5.6-tidy &> /dev/null
 
     save_version 2015052000
 fi
@@ -91,14 +91,14 @@ fi
 
 if [ "$version" -lt 2015052001 ]; then
     echo 'Install Xdebug for PHP'
-    sudo apt-get install -y php5-xdebug > /dev/null
-    echo "xdebug.default_enable=1" | sudo tee -a /etc/php5/conf.d/20-xdebug.ini
-    echo "xdebug.idekey=\"vagrant\"" | sudo tee -a /etc/php5/conf.d/20-xdebug.ini
-    echo "xdebug.remote_enable=1" | sudo tee -a /etc/php5/conf.d/20-xdebug.ini
-    echo "xdebug.remote_autostart=0" | sudo tee -a /etc/php5/conf.d/20-xdebug.ini
-    echo "xdebug.remote_port=9000" | sudo tee -a /etc/php5/conf.d/20-xdebug.ini
-    echo "xdebug.remote_handler=dbgp" | sudo tee -a /etc/php5/conf.d/20-xdebug.ini
-    echo "xdebug.remote_host=10.0.2.2 " | sudo tee -a /etc/php5/conf.d/20-xdebug.ini
+    sudo apt-get install -y php5.6-xdebug &> /dev/null
+    echo "xdebug.default_enable=1" | sudo tee -a /etc/php/5.6/apache2/conf.d/20-xdebug.ini
+    echo "xdebug.idekey=\"vagrant\"" | sudo tee -a /etc/php/5.6/apache2/conf.d/20-xdebug.ini
+    echo "xdebug.remote_enable=1" | sudo tee -a /etc/php/5.6/apache2/conf.d/20-xdebug.ini
+    echo "xdebug.remote_autostart=0" | sudo tee -a /etc/php/5.6/apache2/conf.d/20-xdebug.ini
+    echo "xdebug.remote_port=9000" | sudo tee -a /etc/php/5.6/apache2/conf.d/20-xdebug.ini
+    echo "xdebug.remote_handler=dbgp" | sudo tee -a /etc/php/5.6/apache2/conf.d/20-xdebug.ini
+    echo "xdebug.remote_host=10.0.2.2 " | sudo tee -a /etc/php/5.6/apache2/conf.d/20-xdebug.ini
 
     save_version 2015052001
 fi

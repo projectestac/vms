@@ -4,27 +4,27 @@ wwwdir=/vms/web
 
 echo 'Install PHP 5.6'
 
-sudo apt-get install -y language-pack-en-base
-sudo LC_ALL=en_US.UTF-8 add-apt-repository ppa:ondrej/php > /dev/null
+sudo add-apt-repository -y ppa:ondrej/php &> /dev/null
 
-sudo apt-get update > /dev/null
+sudo apt-get update &> /dev/null
 
-sudo apt-get install -y --force-yes apache2 php5.6 php5.6-curl php5.6-tidy php5.6-gd php5.6-xmlrpc php5.6-intl php5.6-mcrypt php5.6-cli php-pear php5.6-dev php5.6-ldap libapache2-mod-php5.6 php-codesniffer > /dev/null
+sudo apt-get install -y --force-yes apache2 php5.6 php5.6-curl php5.6-tidy php5.6-gd php5.6-xml php5.6-xmlrpc php5.6-intl php5.6-mcrypt php5.6-cli php-pear php5.6-dev php5.6-ldap libapache2-mod-php5.6 php-codesniffer php5.6-mbstring php5.6-mysql php-gettext php5.6-zip php5.6-soap
 
 sudo mkdir /etc/apache2/sites-agora
 sudo cp -R /vms/provision/php/* /etc/apache2/sites-agora
 
 echo "Include sites-agora/" | sudo tee -a /etc/apache2/apache2.conf
 
-sudo sed -i "s#DocumentRoot .*#DocumentRoot "$wwwdir"#" /etc/apache2/sites-available/default
-sudo sed -i "s#<Directory /var/www/>#<Directory "$wwwdir">#" /etc/apache2/sites-available/default
-sudo sed -i "s/AllowOverride .*/AllowOverride All/" /etc/apache2/sites-available/default
+sudo sed -i "s#DocumentRoot .*#DocumentRoot "$wwwdir"#" /etc/apache2/sites-available/000-default.conf
+sudo sed -i "s#<Directory /var/www/>#<Directory "$wwwdir">#" /etc/apache2/sites-available/000-default.conf
+sudo sed -i "s/AllowOverride .*/AllowOverride All/" /etc/apache2/sites-available/000-default.conf
 
-sudo sed -i "s#DocumentRoot .*#DocumentRoot "$wwwdir"#" /etc/apache2/sites-available/default-ssl
-sudo sed -i "s#<Directory /var/www/>#<Directory "$wwwdir">#" /etc/apache2/sites-available/default-ssl
-sudo sed -i "s/AllowOverride .*/AllowOverride All/" /etc/apache2/sites-available/default-ssl
+sudo sed -i "s#DocumentRoot .*#DocumentRoot "$wwwdir"#" /etc/apache2/sites-available/default-ssl.conf
+sudo sed -i "s#<Directory /var/www/>#<Directory "$wwwdir">#" /etc/apache2/sites-available/default-ssl.conf
+sudo sed -i "s/AllowOverride .*/AllowOverride All/" /etc/apache2/sites-available/default-ssl.conf
 
-echo "ServerName localhost" | sudo tee /etc/apache2/conf.d/fqdn
+echo "ServerName localhost" | sudo tee /etc/apache2/conf-available/fqdn.conf
+sudo a2enconf fqdn
 
 sudo a2enmod ssl
 sudo a2enmod rewrite
@@ -61,13 +61,14 @@ sudo sed -i "s/export APACHE_RUN_USER=.*/export APACHE_RUN_USER=vagrant/" /etc/a
 sudo chown -R vagrant /var/lock/apache2
 sudo adduser vagrant www-data
 
-echo 'Install ZendOpache'
+#echo 'Install ZendOpache'
 
-yes "" | sudo pecl install Zendopcache > /dev/null
+#sudo pecl channel-update pecl.php.net
+#yes "" | sudo pecl install Zendopcache
 
-place=`sudo find / -name 'opcache.so'`
+#place=`sudo find / -name 'opcache.so'`
+#echo "zend_extension=$place" | sudo tee -a /etc/php/5.6/mods-available/opcache.ini
 
-echo "zend_extension=$place" | sudo tee -a /etc/php/5.6/mods-available/opcache.ini
 echo "opcache.enable=1" | sudo tee -a /etc/php/5.6/mods-available/opcache.ini
 echo "opcache.memory_consumption=256" | sudo tee -a /etc/php/5.6/mods-available/opcache.ini
 echo "opcache.max_accelerated_files=4000" | sudo tee -a /etc/php/5.6/mods-available/opcache.ini
@@ -82,21 +83,21 @@ echo "opcache.validate_timestamps = 1" | sudo tee -a /etc/php/5.6/mods-available
 echo "opcache.save_comments = 1" | sudo tee -a /etc/php/5.6/mods-available/opcache.ini
 echo "opcache.enable_file_override = 0" | sudo tee -a /etc/php/5.6/mods-available/opcache.ini
 
-sudo ln -s /etc/php/5.6/mods-available/opcache.ini /etc/php/5.6/apache2/conf.d/20-opcache.ini
+#sudo ln -s /etc/php/5.6/mods-available/opcache.ini /etc/php/5.6/apache2/conf.d/20-opcache.ini
 
 echo 'Install memcache'
-sudo apt-get install -y php5-memcache memcached > /dev/null
+sudo apt-get install -y php5.6-memcache memcached
 
-sudo service apache2 restart > /dev/null
+sudo service apache2 restart
 
 echo 'Install XDebug'
 
-sudo apt-get install -y php5-xdebug > /dev/null
+sudo apt-get install -y php5.6-xdebug  &> /dev/null
 
-echo "xdebug.default_enable=1" | sudo tee -a /etc/php5/conf.d/20-xdebug.ini
-echo "xdebug.idekey=\"vagrant\"" | sudo tee -a /etc/php5/conf.d/20-xdebug.ini
-echo "xdebug.remote_enable=1" | sudo tee -a /etc/php5/conf.d/20-xdebug.ini
-echo "xdebug.remote_autostart=0" | sudo tee -a /etc/php5/conf.d/20-xdebug.ini
-echo "xdebug.remote_port=9000" | sudo tee -a /etc/php5/conf.d/20-xdebug.ini
-echo "xdebug.remote_handler=dbgp" | sudo tee -a /etc/php5/conf.d/20-xdebug.ini
-echo "xdebug.remote_host=10.0.2.2 " | sudo tee -a /etc/php5/conf.d/20-xdebug.ini
+echo "xdebug.default_enable=1" | sudo tee -a /etc/php/5.6/apache2/conf.d/20-xdebug.ini
+echo "xdebug.idekey=\"vagrant\"" | sudo tee -a /etc/php/5.6/apache2/conf.d/20-xdebug.ini
+echo "xdebug.remote_enable=1" | sudo tee -a /etc/php/5.6/apache2/conf.d/20-xdebug.ini
+echo "xdebug.remote_autostart=0" | sudo tee -a /etc/php/5.6/apache2/conf.d/20-xdebug.ini
+echo "xdebug.remote_port=9000" | sudo tee -a /etc/php/5.6/apache2/conf.d/20-xdebug.ini
+echo "xdebug.remote_handler=dbgp" | sudo tee -a /etc/php/5.6/apache2/conf.d/20-xdebug.ini
+echo "xdebug.remote_host=10.0.2.2 " | sudo tee -a /etc/php/5.6/apache2/conf.d/20-xdebug.ini

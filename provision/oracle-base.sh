@@ -7,7 +7,7 @@ host=$1
 echo 'Install Oracle'
 #http://www.oracle.com/technetwork/articles/technote-php-instant-084410.html
 
-sudo apt-get install -y --force-yes alien bc libaio1 unzip > /dev/null
+sudo apt-get install -y --force-yes alien bc libaio1 unzip &> /dev/null
 
 sudo cp /vms/provision/oracle/S01shm_load /etc/rc2.d/S01shm_load
 sudo chmod 777 /etc/rc2.d/S01shm_load
@@ -22,15 +22,15 @@ if [ ! -f oracle-xe_11.2.0-2_amd64.deb ]; then
             echo 'Download oracle-xe-11.2.0-1.0.x86_64 and save it on provision folder'
             exit -1
         fi
-        sudo unzip -q oracle-xe-11.2.0-1.0.x86_64.rpm.zip -d /tmp > /dev/null
+        sudo unzip -q oracle-xe-11.2.0-1.0.x86_64.rpm.zip -d /tmp &> /dev/null
     fi
     pushd /tmp/Disk1
-    sudo alien --scripts oracle-xe-11.2.0-1.0.x86_64.rpm > /dev/null
+    sudo alien --scripts oracle-xe-11.2.0-1.0.x86_64.rpm &> /dev/null
     popd
     cp /tmp/Disk1/oracle-xe_11.2.0-2_amd64.deb /vms/provision/oracle/
     rm -Rf /tmp/Disk1
 fi
-sudo dpkg -i oracle-xe_11.2.0-2_amd64.deb > /dev/null
+sudo dpkg -i oracle-xe_11.2.0-2_amd64.deb &> /dev/null
 popd
 
 sudo cp /vms/provision/oracle/oracle-env.sh /etc/profile.d/
@@ -68,7 +68,7 @@ sudo service oracle-xe configure responseFile=/vms/provision/oracle/oracle.conf 
 
 sudo update-rc.d oracle-xe defaults 80 01
 
-sudo service oracle-xe restart > /dev/null
+sudo service oracle-xe restart &> /dev/null
 
 echo  'Install Oracle basic client'
 pushd /vms/provision/oracle/
@@ -77,9 +77,9 @@ if [ ! -f oracle-instantclient12.1-basic_12.1.0.2.0-2_amd64.deb ]; then
         echo 'Download oracle-instantclient12.1-basic-12.1.0.2.0-1.x86_64 and save it on provision folder'
         exit -1
     fi
-    sudo alien --scripts oracle-instantclient12.1-basic-12.1.0.2.0-1.x86_64.rpm > /dev/null
+    sudo alien --scripts oracle-instantclient12.1-basic-12.1.0.2.0-1.x86_64.rpm &> /dev/null
 fi
-sudo dpkg -i oracle-instantclient12.1-basic_12.1.0.2.0-2_amd64.deb > /dev/null
+sudo dpkg -i oracle-instantclient12.1-basic_12.1.0.2.0-2_amd64.deb &> /dev/null
 popd
 
 #export LD_LIBRARY_PATH=/usr/lib/oracle/12.1/client64/lib/:$LD_LIBRARY_PATH
@@ -94,9 +94,9 @@ if [ ! -f oracle-instantclient12.1-devel_12.1.0.2.0-2_amd64.deb ]; then
         echo 'Download oracle-instantclient12.1-devel-12.1.0.2.0-1.x86_64 and save it on provision folder'
         exit -1
     fi
-    sudo alien --scripts oracle-instantclient12.1-devel-12.1.0.2.0-1.x86_64.rpm > /dev/null
+    sudo alien --scripts oracle-instantclient12.1-devel-12.1.0.2.0-1.x86_64.rpm &> /dev/null
 fi
-sudo dpkg -i oracle-instantclient12.1-devel_12.1.0.2.0-2_amd64.deb > /dev/null
+sudo dpkg -i oracle-instantclient12.1-devel_12.1.0.2.0-2_amd64.deb &> /dev/null
 popd
 echo $ORACLE_HOME
 sudo ln -s /usr/include/oracle/12.1/client64 $ORACLE_HOME/include
@@ -119,18 +119,18 @@ ALTER USER APEX_PUBLIC_USER IDENTIFIED BY agora;
 SELECT DBMS_XDB.GETHTTPPORT FROM DUAL;
 EXEC DBMS_XDB.SETLISTENERLOCALACCESS(FALSE);
 exit;
-EOM" > /dev/null
+EOM" &> /dev/null
 
 sudo su - oracle --command "sqlplus -S / as sysdba << EOM
 ALTER PROFILE DEFAULT LIMIT PASSWORD_LIFE_TIME UNLIMITED;
 ALTER PROFILE MONITORING_PROFILE LIMIT PASSWORD_LIFE_TIME UNLIMITED;
 exit;
-EOM" > /dev/null
+EOM" &> /dev/null
 
 sudo su - oracle --command "sqlplus -S sys/agora as sysdba << EOM
 ALTER PROFILE DEFAULT LIMIT PASSWORD_LIFE_TIME UNLIMITED;
 ALTER PROFILE MONITORING_PROFILE LIMIT PASSWORD_LIFE_TIME UNLIMITED;
 exit;
-EOM" > /dev/null
+EOM" &> /dev/null
 
-sudo service oracle-xe restart > /dev/null
+sudo service oracle-xe restart &> /dev/null
