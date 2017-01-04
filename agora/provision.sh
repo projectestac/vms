@@ -58,14 +58,15 @@ execute_in_oracle "@/dades/agora/html/moodle2/lib/dml/oci_native_moodle_package.
 
 /vms/agora/create_intranet.sh usu1 $rootdir
 /vms/agora/create_intranet.sh usu2 $rootdir
-/vms/agora/create_intranet.sh usu3 $rootdir
-/vms/agora/create_intranet.sh usu4 $rootdir
 
-/vms/agora/create_nodes.sh usu1 $rootdir pri
-/vms/agora/create_nodes.sh usu2 $rootdir sec
-/vms/agora/create_nodes.sh usu3 $rootdir cfa
-/vms/agora/create_nodes.sh usu4 $rootdir zer
-/vms/agora/create_nodes.sh usu5 $rootdir ssee
+/vms/agora/create_nodes.sh usu1 $rootdir pri usu6
+/vms/agora/create_nodes.sh usu2 $rootdir sec usu7
+/vms/agora/create_nodes.sh usu3 $rootdir cfa usu8
+/vms/agora/create_nodes.sh usu4 $rootdir eoi usu9
+/vms/agora/create_nodes.sh usu5 $rootdir zer usu10
+/vms/agora/create_nodes.sh usu6 $rootdir creda usu11
+/vms/agora/create_nodes.sh usu7 $rootdir cda usu4
+/vms/agora/create_nodes.sh usu8 $rootdir ssee usu5
 
 #Finish instaling portal
 mkdir_777 $datadir/portaldata
