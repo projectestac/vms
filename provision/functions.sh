@@ -24,7 +24,7 @@ function oracle_export_db {
     dbname=$1
     destination=$2
 
-    echo "Exporting DB  $dbname..."
+    echo "Exporting DB $dbname..."
     execute_in_oracle "@/u01/app/oracle/product/11.2.0/xe/rdbms/admin/catexp.sql"
 
     sudo su - oracle --command "exp system/$pass@XE owner=$dbname file=/tmp/$dbname.dmp log=/tmp/logfile.log"

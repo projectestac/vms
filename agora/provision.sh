@@ -42,6 +42,7 @@ sudo cp $wwwdir/config/config-restricted-dist.php $wwwdir/config/config-restrict
 sudo cp $wwwdir/config/sync-config-dist.sh $wwwdir/config/sync-config.sh
 chmod +x $wwwdir/config/sync.sh $wwwdir/config/sync-config.sh
 sudo cp $wwwdir/.htaccess-dist $wwwdir/.htaccess
+sudo cp $wwwdir/wordpress/.htaccess-dist $wwwdir/wordpress/.htaccess
 
 echo "Configure CGI"
 sudo sed -i "s#ScriptAlias /cgi-bin/ .*#ScriptAlias /cgi-bin/ $rootdir/cgi/#" /etc/apache2/sites-available/000-default.conf
@@ -50,6 +51,8 @@ sudo sed -i "s#ScriptAlias /cgi-bin/ .*#ScriptAlias /cgi-bin/ $rootdir/cgi/#" /e
 sudo sed -i "s#<Directory \"/usr/lib/cgi-bin\">#<Directory \"$rootdir/cgi\">#" /etc/apache2/sites-available/default-ssl.conf
 
 execute_in_oracle "@/dades/agora/html/moodle2/lib/dml/oci_native_moodle_package.sql"
+
+source /etc/profile.d/oracle-env.sh
 
 /vms/agora/create_moodle.sh usu1 $rootdir
 /vms/agora/create_moodle.sh usu2 $rootdir

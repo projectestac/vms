@@ -17,4 +17,4 @@ pushd $datadir/moodle2/$usu
 sudo tar xfzp /vms/agora/usu1.tgz
 popd
 
-sudo -E php /dades/agora/html/moodle2/local/agora/scripts/cli.php -s=script_enable_service --ccentre=$usu --password=6142bfd56a583d891f0b1dcdbb2a9ef8 --clientName="$usu VM dev" --clientCode=$usu --clientAddress=Test clientCity=ciutat --clientDNS=$usu --clientId=$usu
+sudo -E php /dades/agora/html/moodle2/local/agora/scripts/cli.php -s=script_enable_service --ccentre=$usu --password=6142bfd56a583d891f0b1dcdbb2a9ef8 --clientName="$usu VM dev" --clientCode=$usu --clientAddress=Test --clientCity=ciutat --clientDNS=$usu

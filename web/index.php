@@ -34,13 +34,15 @@
 		<a href="/agora/usu2/">[usu2]</a>
 		<a href="/agora/usu3/">[usu3]</a>
 		<a href="/agora/usu4/">[usu4]</a>
+		<a href="/agora/usu5/">[usu5]</a>
+		<a href="/agora/usu6/">[usu6]</a>
+		<a href="/agora/usu7/">[usu7]</a>
+		<a href="/agora/usu8/">[usu8]</a>
 		<br />
 
 		<img src="img/intraweb.gif" alt="Intranet"/>
 		<a href="/agora/usu1/intranet/">[usu1]</a>
 		<a href="/agora/usu2/intranet/">[usu2]</a>
-		<a href="/agora/usu3/intranet/">[usu3]</a>
-		<a href="/agora/usu4/intranet/">[usu4]</a>
 		<br />
 
 		<a href="/agora/portal/">[Portal]</a>
