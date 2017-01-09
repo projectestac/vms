@@ -48,7 +48,7 @@
 		<a href="/agora/portal/">[Portal]</a>
 		<br />
 
-		<a href="/agora/config/sync_to_file.php?debug=on&print&force=true">[Actualitza allSchools]</a>
+		<a href="/agora/config/sync_to_file.php?debug=on&print=on&force=true">[Actualitza allSchools]</a>
 		<a href="/agora/config/statistics.php">[Recull estadístiques]</a>
 		<br />
 	</fieldset>
