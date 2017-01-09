@@ -62,14 +62,14 @@ source /etc/profile.d/oracle-env.sh
 /vms/agora/create_intranet.sh usu1 $rootdir
 /vms/agora/create_intranet.sh usu2 $rootdir
 
-/vms/agora/create_nodes.sh usu1 $rootdir pri usu6
-/vms/agora/create_nodes.sh usu2 $rootdir sec usu7
-/vms/agora/create_nodes.sh usu3 $rootdir cfa usu8
-/vms/agora/create_nodes.sh usu4 $rootdir eoi usu9
-/vms/agora/create_nodes.sh usu5 $rootdir zer usu10
-/vms/agora/create_nodes.sh usu6 $rootdir creda usu11
-/vms/agora/create_nodes.sh usu7 $rootdir cda usu4
-/vms/agora/create_nodes.sh usu8 $rootdir ssee usu5
+/vms/agora/create_nodes.sh usu1 usu1 $rootdir pri usu6
+/vms/agora/create_nodes.sh usu2 usu2 $rootdir sec usu7
+/vms/agora/create_nodes.sh usu3 usu3 $rootdir cfa usu8
+/vms/agora/create_nodes.sh usu4 usu4 $rootdir eoi usu9
+/vms/agora/create_nodes.sh usu5 centre-5 $rootdir zer usu10
+/vms/agora/create_nodes.sh usu6 centre-6 $rootdir creda usu11
+/vms/agora/create_nodes.sh usu7 centre-7 $rootdir cda usu4
+/vms/agora/create_nodes.sh usu8 centre-8 $rootdir ssee usu5
 
 #Finish instaling portal
 mkdir_777 $datadir/portaldata
