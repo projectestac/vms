@@ -77,7 +77,7 @@ Vagrant.configure(2) do |config|
   #   # Customize the amount of memory on the VM:
   #   vb.memory = "1024"
     vb.customize ["modifyvm", :id,
-                  "--name", "agora",
+                  "--name", "agora-php54",
                   # Oracle claims to need 512MB of memory available minimum
                   "--memory", "1024",
                   # Enable DNS behind NAT
