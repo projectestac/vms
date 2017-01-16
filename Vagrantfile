@@ -48,11 +48,11 @@ Vagrant.configure(2) do |config|
   config.vm.synced_folder "../agora/html", "/dades/agora/html"
   config.vm.synced_folder "../agora/cgi", "/dades/agora/cgi"
 
-  config.vm.synced_folder "../alexandria", "/git/alexandria"
-  config.vm.synced_folder "../alexandria/html/web", "/dades/alexandria/html"
+  #config.vm.synced_folder "../alexandria", "/git/alexandria"
+  #config.vm.synced_folder "../alexandria/html/web", "/dades/alexandria/html"
 
-  config.vm.synced_folder "../prestatgeria", "/git/prestatgeria"
-  config.vm.synced_folder "../prestatgeria/html", "/dades/prestatgeria/html"
+  #config.vm.synced_folder "../prestatgeria", "/git/prestatgeria"
+  #config.vm.synced_folder "../prestatgeria/html", "/dades/prestatgeria/html"
 
   config.vm.synced_folder "../xtecblocs", "/git/xtecblocs"
   config.vm.synced_folder "../xtecblocs/src", "/dades/blocs/src"
@@ -63,9 +63,12 @@ Vagrant.configure(2) do |config|
   config.vm.synced_folder "../marsupial-mps", "/git/mps"
   config.vm.synced_folder "../marsupial-mps/src", "/dades/mps/src"
 
-  config.vm.synced_folder "../moodlemobile2", "/dades/moodlemobile2"
+  #config.vm.synced_folder "../moodlemobile2", "/dades/moodlemobile2"
 
   config.vm.synced_folder ".", "/vms", mount_options: ["dmode=775,fmode=775"]
+
+  config.vm.synced_folder "../dossier", "/git/dossier"
+  config.vm.synced_folder "../dossier/html", "/dades/dossier/html"
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
