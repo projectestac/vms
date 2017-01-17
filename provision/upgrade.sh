@@ -159,6 +159,11 @@ EOM"
     save_version 2015121000
 fi
 
+if [ "$version" -lt 2017011700 ]; then
+    mkdir_777 /git/dossier/
+    mkdir_777 /dades/dossier/html/
 
+    save_version 2017011700
+fi
 
 echo 'All updated!'
