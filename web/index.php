@@ -5,15 +5,13 @@
 	<title>Menú de la Màquina Virtual</title>
 	<style type="text/css">
 		body {  font-family: sans-serif;}
-		fieldset { border:1px solid #ddd; width:45%; float:left; margin:10px;
-                   border-radius: 4px; }
+		fieldset { border:1px solid #ddd; width:46%; float:left; margin:10px; border-radius:4px; }
 		legend { color:#888; font-weight:bold; padding-left:5px; padding-right:5px; }
 		a { text-decoration:none; }
 		h2 { text-align:center; color:#888; }
 		img {vertical-align: middle;}
 	</style>
 	<link rel="icon" href="favicon.ico" type="image/x-icon" />
-
 </head>
 
 <body>
@@ -38,6 +36,7 @@
 		<a href="/agora/usu6/">[usu6]</a>
 		<a href="/agora/usu7/">[usu7]</a>
 		<a href="/agora/usu8/">[usu8]</a>
+		<a href="/agora/usu9/">[usu9]</a>
 		<br />
 
 		<img src="img/intraweb.gif" alt="Intranet"/>
