@@ -46,7 +46,6 @@ Vagrant.configure(2) do |config|
   # argument is a set of non-required options.
   config.vm.synced_folder "../agora", "/git/agora"
   config.vm.synced_folder "../agora/html", "/dades/agora/html"
-  config.vm.synced_folder "../agora/cgi", "/dades/agora/cgi"
 
   #config.vm.synced_folder "../alexandria", "/git/alexandria"
   #config.vm.synced_folder "../alexandria/html/web", "/dades/alexandria/html"

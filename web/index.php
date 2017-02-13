@@ -38,10 +38,6 @@
 		<a href="/agora/usu8/">[usu8]</a>
 		<a href="/agora/usu9/">[usu9]</a>
 		<br />
-
-		<img src="img/intraweb.gif" alt="Intranet"/>
-		<a href="/agora/usu1/intranet/">[usu1]</a>
-		<a href="/agora/usu2/intranet/">[usu2]</a>
 		<br />
 
 		<a href="/agora/portal/">[Portal]</a>
@@ -49,6 +45,7 @@
 
 		<a href="/agora/config/sync_to_file.php?debug=on&print=on&force=true">[Actualitza allSchools]</a>
 		<a href="/agora/config/statistics.php">[Recull estadístiques]</a>
+		<a href="/agora/config/createSchoolsListsFiles.php">[Llista URL crons]</a>
 		<br />
 	</fieldset>
 
