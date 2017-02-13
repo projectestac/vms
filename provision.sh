@@ -9,14 +9,14 @@ source "/vms/provision/functions.sh"
 #/vms/provision/moodlemobile.sh
 
 /vms/agora/provision.sh
-/vms/alexandria/provision.sh
+#/vms/alexandria/provision.sh
 /vms/odissea/provision.sh
 /vms/xtecblocs/provision.sh
-/vms/prestatgeria/provision.sh
+#/vms/prestatgeria/provision.sh
 /vms/mps/provision.sh
 
 sudo service apache2 restart
 sudo service oracle-xe restart
 
-#Here we must write the latest version number
-save_version 2017011700
+# Here we must write the latest version number
+save_version 2017021300
