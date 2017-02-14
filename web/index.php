@@ -62,6 +62,11 @@
 	<div style="clear:both;"></div>
 
 	<fieldset>
+		<legend> Dossier: </legend>
+		<a href="http://dossier-virtual.xtec.cat">[Dossier]</a>
+	</fieldset>
+
+	<fieldset>
 		<legend><img src="img/prestatgeria.png" alt="Prestatgeria"/></legend>
 		<a href="/prestatgeria/">[Prestatgeria]</a>
 	</fieldset>
