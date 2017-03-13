@@ -7,6 +7,8 @@ echo 'Provision Dossier'
 rootdir=/dades/dossier
 wwwdir=$rootdir/html
 
+sudo chmod -R 664 $wwwdir
+
 mkdir_777 $rootdir/uploads
 mkdir_777 $rootdir/cache
 
