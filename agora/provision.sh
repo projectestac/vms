@@ -36,6 +36,7 @@ sudo cp $wwwdir/config/sync-config-dist.sh $wwwdir/config/sync-config.sh
 chmod +x $wwwdir/config/sync.sh $wwwdir/config/sync-config.sh
 sudo cp $wwwdir/.htaccess-dist $wwwdir/.htaccess
 sudo cp $wwwdir/wordpress/.htaccess-dist $wwwdir/wordpress/.htaccess
+chmod -x-w $wwwdir/wordpress/.htaccess
 
 execute_in_oracle "@/dades/agora/html/moodle2/lib/dml/oci_native_moodle_package.sql"
 
