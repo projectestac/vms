@@ -35,6 +35,7 @@ clone_project xtecblocs
 clone_project marsupial-mps
 #clone_project_git moodlemobile2 https://github.com/moodlehq/moodlemobile2.git
 clone_project dossier
+clone_project sinapsi
 
 vagrant box update
 
