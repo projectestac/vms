@@ -12,5 +12,5 @@ sudo chmod -R 664 $wwwdir
 sudo cp $rootdir/.env-dist $rootdir/.env
 sudo cp $rootdir/config/services-dist.php $rootdir/config/services.php
 
-/vms/dossier/import_db.sh sinapsi
+/vms/sinapsi/import_db.sh sinapsi
 
