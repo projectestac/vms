@@ -33,6 +33,7 @@ sudo a2ensite default-ssl
 #PHP Configuration
 sudo sed -i '$ a\date.timezone = "Europe/Madrid"' /etc/php/5.6/apache2/php.ini
 sudo sed -i "s/error_reporting = .*/error_reporting = E_ALL/" /etc/php/5.6/apache2/php.ini
+sudo sed -i "s/memory_limit = .*/memory_limit = 256M/" /etc/php/5.6/apache2/php.ini
 sudo sed -i "s/display_errors = .*/display_errors = On/" /etc/php/5.6/apache2/php.ini
 sudo sed -i "s/display_startup_errors = .*/display_startup_errors = On/" /etc/php/5.6/apache2/php.ini
 sudo sed -i "s/post_max_size = .*/post_max_size = 100M/" /etc/php/5.6/apache2/php.ini
@@ -43,6 +44,7 @@ sudo sed -i "s/max_execution_time = .*/max_execution_time = 300/" /etc/php/5.6/a
 
 sudo sed -i '$ a\date.timezone = "Europe/Madrid"' /etc/php/5.6/cli/php.ini
 sudo sed -i "s/error_reporting = .*/error_reporting = E_ALL/" /etc/php/5.6/cli/php.ini
+sudo sed -i "s/memory_limit = .*/memory_limit = 256M/" /etc/php/5.6/cli/php.ini
 sudo sed -i "s/display_errors = .*/display_errors = On/" /etc/php/5.6/cli/php.ini
 sudo sed -i "s/display_startup_errors = .*/display_startup_errors = On/" /etc/php/5.6/cli/php.ini
 sudo sed -i "s/allow_url_fopen = .*/allow_url_fopen = Off/" /etc/php/5.6/cli/php.ini
