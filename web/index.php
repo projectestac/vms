@@ -62,6 +62,11 @@
 	<div style="clear:both;"></div>
 
 	<fieldset>
+		<legend> Sinapsi: </legend>
+		<a href="http://sinapsi-virtual.xtec.cat">[Sinapsi]</a>
+	</fieldset>
+
+	<fieldset>
 		<legend> Dossier: </legend>
 		<a href="http://dossier-virtual.xtec.cat">[Dossier]</a>
 	</fieldset>
