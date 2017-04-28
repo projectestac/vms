@@ -2,7 +2,7 @@
 
 source "/vms/provision/functions.sh"
 
-echo 'Provision Dossier'
+echo 'Provision Sinapsi'
 
 rootdir=/dades/sinapsi
 wwwdir=$rootdir/public
