@@ -8,19 +8,18 @@ host=$1
 
 #http://www.oracle.com/technetwork/articles/technote-php-instant-084410.html
 
-sudo apt-get install -y --force-yes php5.6-dev &> /dev/null
+sudo apt-get install -y --force-yes php7.0-dev &> /dev/null
 
 cat /etc/profile.d/oracle-env.sh | sudo tee -a /etc/apache2/envvars
 
 echo 'Install OCI8'
-# Forced older version for compatibility with PHP 5.6
-echo instantclient,/usr/lib/oracle/12.1/client64/lib | sudo pecl install -f oci8-2.0.11  &> /dev/null
+echo instantclient,/usr/lib/oracle/12.1/client64/lib | sudo pecl install oci8  &> /dev/null
 
-echo "extension=oci8.so" | sudo tee -a /etc/php/5.6/mods-available/oci8.ini
+echo "extension=oci8.so" | sudo tee -a /etc/php/7.0/mods-available/oci8.ini
 
-sudo ln -s /etc/php/5.6/mods-available/oci8.ini /etc/php/5.6/apache2/conf.d/30-oci8.ini
-sudo mv /etc/php/5.6/cli/conf.d/ /etc/php/5.6/cli/conf.d_old
-sudo ln -s /etc/php/5.6/apache2/conf.d /etc/php/5.6/cli/conf.d
+sudo ln -s /etc/php/7.0/mods-available/oci8.ini /etc/php/7.0/apache2/conf.d/30-oci8.ini
+sudo mv /etc/php/7.0/cli/conf.d/ /etc/php/7.0/cli/conf.d_old
+sudo ln -s /etc/php/7.0/apache2/conf.d /etc/php/7.0/cli/conf.d
 
 sudo service apache2 restart &> /dev/null
 sudo service oracle-xe restart &> /dev/null

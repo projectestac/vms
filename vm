@@ -29,9 +29,9 @@ fi
 
 clone_project agora
 clone_project odissea
-#clone_project alexandria
+clone_project alexandria
 clone_project xtecblocs
-#clone_project prestatgeria
+clone_project prestatgeria
 clone_project marsupial-mps
 #clone_project_git moodlemobile2 https://github.com/moodlehq/moodlemobile2.git
 clone_project dossier
@@ -40,7 +40,7 @@ clone_project sinapsi
 vagrant box update
 
 echo "Starting the VM"
-vagrant up
+vagrant up --provider virtualbox
 
 echo "Running upgrade if needed"
 vagrant ssh -c "/vms/provision/upgrade.sh"

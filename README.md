@@ -52,7 +52,9 @@ You must change your /etc/hosts to access successfully to all the VM's:
 
  * For PHP 5.4 (with WIP-php54 branch):
  192.168.33.2 agora agora-virtual.xtec.cat agora-virtual-se.xtec.cat agora-virtual-projectes.xtec.cat dossier-virtual.xtec.cat sinapsi-virtual.xtec.cat
- * For PHP 5.6 (with master branch):
+ * For PHP 5.6 (with mphp56 branch):
+ 192.168.33.4 agora agora-virtual.xtec.cat agora-virtual-se.xtec.cat agora-virtual-projectes.xtec.cat dossier-virtual.xtec.cat sinapsi-virtual.xtec.cat
+* For PHP 7.0 (with master branch):
  192.168.33.4 agora agora-virtual.xtec.cat agora-virtual-se.xtec.cat agora-virtual-projectes.xtec.cat dossier-virtual.xtec.cat sinapsi-virtual.xtec.cat
 
 
