@@ -21,7 +21,7 @@ $CFG->dboptions = array (
 );
 
 
-$CFG->wwwroot   = 'http://agora/odissea';
+$CFG->wwwroot   = 'https://agora-virtual.xtec.cat/odissea';
 $CFG->dataroot  = '/dades/odissea/docs';
 $CFG->admin     = 'admin';
 
