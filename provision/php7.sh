@@ -88,8 +88,8 @@ echo "opcache.enable_file_override = 0" | sudo tee -a /etc/php/7.0/mods-availabl
 
 #sudo ln -s /etc/php/7.0/mods-available/opcache.ini /etc/php/7.0/apache2/conf.d/20-opcache.ini
 
-echo 'Install memcache'
-sudo apt-get install -y php7.0-memcache memcached
+echo 'Install memcached'
+sudo apt-get install -y php7.0-memcached memcached
 
 sudo service apache2 restart
 
