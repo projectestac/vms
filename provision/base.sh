@@ -8,7 +8,7 @@ sudo apt-get update &> /dev/null
 sudo apt-get autoremove -y  &> /dev/null
 
 echo 'Install base packages'
-sudo apt-get install -y --force-yes  ia32-libs texlive ghostscript imagemagick vsftpd &> /dev/null
+sudo apt-get install -y --force-yes gcc-multilib texlive ghostscript imagemagick vsftpd &> /dev/null
 
 echo 'Log permissions'
 sudo chmod -R 777 /var/log
