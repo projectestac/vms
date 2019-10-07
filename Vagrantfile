@@ -69,8 +69,8 @@ Vagrant.configure(2) do |config|
   config.vm.synced_folder "../dossier", "/git/dossier"
   config.vm.synced_folder "../dossier/html", "/dades/dossier/html"
 
-  config.vm.synced_folder "../sinapsi", "/git/sinapsi"
-  config.vm.synced_folder "../sinapsi", "/dades/sinapsi"
+  #config.vm.synced_folder "../sinapsi", "/git/sinapsi"
+  #config.vm.synced_folder "../sinapsi", "/dades/sinapsi"
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.

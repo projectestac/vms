@@ -4,11 +4,10 @@ wwwdir=/vms/web
 
 echo 'Install PHP 7.3'
 
-sudo add-apt-repository -y ppa:ondrej/php &> /dev/null
-
+sudo add-apt-repository ppa:ondrej/php &> /dev/null
 sudo apt-get update &> /dev/null
 
-sudo apt-get install -y --force-yes apache2 php7.3 php7.3-curl php7.3-tidy php7.3-gd php7.3-xml php7.3-xmlrpc php7.3-intl php7.3-cli php-pear php7.3-dev php7.3-ldap libapache2-mod-php7.3 php-codesniffer php7.3-mbstring php7.3-mysql php-gettext php7.3-zip php7.3-soap
+sudo apt-get install -qq apache2 php7.3 php7.3-curl php7.3-tidy php7.3-gd php7.3-xml php7.3-xmlrpc php7.3-intl php7.3-cli php-pear php7.3-dev php7.3-ldap libapache2-mod-php7.3 php-codesniffer php7.3-mbstring php7.3-mysql php-gettext php7.3-zip php7.3-soap &> /dev/null
 
 sudo mkdir /etc/apache2/sites-agora
 sudo cp -R /vms/provision/php/* /etc/apache2/sites-agora
@@ -24,11 +23,13 @@ sudo sed -i "s#DocumentRoot .*#DocumentRoot "$wwwdir"#" /etc/apache2/sites-avail
 #sudo sed -i "s/AllowOverride .*/AllowOverride All/" /etc/apache2/sites-available/default-ssl.conf
 
 echo "ServerName localhost" | sudo tee /etc/apache2/conf-available/fqdn.conf
-sudo a2enconf fqdn
 
+sudo a2enconf fqdn
 sudo a2enmod ssl
 sudo a2enmod rewrite
 sudo a2ensite default-ssl
+
+sudo service apache2 restart
 
 #PHP Configuration
 sudo sed -i '$ a\date.timezone = "Europe/Madrid"' /etc/php/7.3/apache2/php.ini
@@ -53,29 +54,21 @@ sudo sed -i "s/;error_log = php_errors.log/error_log = \/var\/log\/apache2\/php_
 sudo sed -i "s/max_execution_time = .*/max_execution_time = 300/" /etc/php/7.3/cli/php.ini
 #sudo sed -i "s/disable_functions = .*/disable_functions = /" /etc/php/7.3/cli/php.ini
 
-#Log
+# Log
 sudo sed -i "s/create 640.*/create 777 vagrant vagrant/" /etc/logrotate.d/apache2
 sudo chmod -R 777 /var/log/apache2/
 sudo chown -R vagrant:vagrant /var/log/apache2/
-
 
 # Make Vagrant execute apache
 sudo sed -i "s/export APACHE_RUN_USER=.*/export APACHE_RUN_USER=vagrant/" /etc/apache2/envvars
 sudo chown -R vagrant /var/lock/apache2
 sudo adduser vagrant www-data
 
-#echo 'Install ZendOpache'
-
-#sudo pecl channel-update pecl.php.net
-#yes "" | sudo pecl install Zendopcache
-
-#place=`sudo find / -name 'opcache.so'`
-#echo "zend_extension=$place" | sudo tee -a /etc/php/7.3/mods-available/opcache.ini
-
+# Configure opcache
 echo "opcache.enable=1" | sudo tee -a /etc/php/7.3/mods-available/opcache.ini
 echo "opcache.memory_consumption=256" | sudo tee -a /etc/php/7.3/mods-available/opcache.ini
 echo "opcache.max_accelerated_files=4000" | sudo tee -a /etc/php/7.3/mods-available/opcache.ini
-#0 for development, 60 for production
+# 0 for development, 60 for production
 echo "opcache.revalidate_freq=0" | sudo tee -a /etc/php/7.3/mods-available/opcache.ini
 echo "opcache.interned_strings_buffer=8" | sudo tee -a /etc/php/7.3/mods-available/opcache.ini
 echo "opcache.fast_shutdown=1" | sudo tee -a /etc/php/7.3/mods-available/opcache.ini
@@ -86,16 +79,14 @@ echo "opcache.validate_timestamps = 1" | sudo tee -a /etc/php/7.3/mods-available
 echo "opcache.save_comments = 1" | sudo tee -a /etc/php/7.3/mods-available/opcache.ini
 echo "opcache.enable_file_override = 0" | sudo tee -a /etc/php/7.3/mods-available/opcache.ini
 
-#sudo ln -s /etc/php/7.3/mods-available/opcache.ini /etc/php/7.3/apache2/conf.d/20-opcache.ini
-
 echo 'Install memcached'
-sudo apt-get install -y php7.3-memcached memcached
+sudo apt-get install -qq php7.3-memcached memcached
 
 sudo service apache2 restart
 
 echo 'Install XDebug'
 
-sudo apt-get install -y php7.3-xdebug  &> /dev/null
+sudo apt-get install -qq php7.3-xdebug &> /dev/null
 
 echo "xdebug.default_enable=1" | sudo tee -a /etc/php/7.3/apache2/conf.d/20-xdebug.ini
 echo "xdebug.idekey=\"vagrant\"" | sudo tee -a /etc/php/7.3/apache2/conf.d/20-xdebug.ini
@@ -104,3 +95,4 @@ echo "xdebug.remote_autostart=0" | sudo tee -a /etc/php/7.3/apache2/conf.d/20-xd
 echo "xdebug.remote_port=9000" | sudo tee -a /etc/php/7.3/apache2/conf.d/20-xdebug.ini
 echo "xdebug.remote_handler=dbgp" | sudo tee -a /etc/php/7.3/apache2/conf.d/20-xdebug.ini
 echo "xdebug.remote_host=10.0.2.2 " | sudo tee -a /etc/php/7.3/apache2/conf.d/20-xdebug.ini
+

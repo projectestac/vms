@@ -1,23 +1,22 @@
 #!/bin/bash
 
-export DEBIAN_FRONTEND=noninteractive #http://serverfault.com/questions/500764/dpkg-reconfigure-unable-to-re-open-stdin-no-file-or-directory
-
+#http://serverfault.com/questions/500764/dpkg-reconfigure-unable-to-re-open-stdin-no-file-or-directory
 echo 'Update packages'
 
 sudo apt-get update &> /dev/null
-sudo apt-get autoremove -y  &> /dev/null
+sudo apt-get autoremove -qq  &> /dev/null
 
 echo 'Install base packages'
-sudo apt-get install -y --force-yes gcc-multilib texlive ghostscript imagemagick vsftpd &> /dev/null
+sudo apt-get install -qq gcc-multilib texlive ghostscript imagemagick vsftpd &> /dev/null
 
 echo 'Log permissions'
 sudo chmod -R 777 /var/log
 
 echo 'Install locales'
-sudo locale-gen ca_ES  &> /dev/null
-sudo locale-gen ca_ES.UTF-8  &> /dev/null
-sudo locale-gen es_ES  &> /dev/null
-sudo locale-gen es_ES.UTF-8  &> /dev/null
+sudo locale-gen ca_ES &> /dev/null
+sudo locale-gen ca_ES.UTF-8 &> /dev/null
+sudo locale-gen es_ES &> /dev/null
+sudo locale-gen es_ES.UTF-8 &> /dev/null
 sudo dpkg-reconfigure locales &> /dev/null
 
 echo 'Set Timezone'

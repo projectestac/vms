@@ -7,7 +7,7 @@ host=$1
 echo 'Install Oracle'
 #http://www.oracle.com/technetwork/articles/technote-php-instant-084410.html
 
-sudo apt-get install -y --force-yes alien bc libaio1 unzip &> /dev/null
+sudo apt-get install -qq alien bc libaio1 unzip &> /dev/null
 
 sudo cp /vms/provision/oracle/S01shm_load /etc/rc2.d/S01shm_load
 sudo chmod 777 /etc/rc2.d/S01shm_load

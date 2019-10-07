@@ -8,12 +8,12 @@ host=$1
 
 #http://www.oracle.com/technetwork/articles/technote-php-instant-084410.html
 
-sudo apt-get install -y --force-yes php7.3-dev &> /dev/null
+sudo apt-get install -qq php7.3-dev &> /dev/null
 
 cat /etc/profile.d/oracle-env.sh | sudo tee -a /etc/apache2/envvars
 
 echo 'Install OCI8'
-echo instantclient,/usr/lib/oracle/12.1/client64/lib | sudo pecl install oci8  &> /dev/null
+echo instantclient,/usr/lib/oracle/12.1/client64/lib | sudo pecl install oci8 &> /dev/null
 
 echo "extension=oci8.so" | sudo tee -a /etc/php/7.3/mods-available/oci8.ini
 
