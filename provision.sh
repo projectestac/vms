@@ -16,7 +16,7 @@ source "/vms/provision/functions.sh"
 #/vms/prestatgeria/provision.sh
 /vms/mps/provision.sh
 /vms/dossier/provision.sh
-/vms/sinapsi/provision.sh
+#/vms/sinapsi/provision.sh
 
 sudo service apache2 restart
 sudo service oracle-xe restart
