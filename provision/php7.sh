@@ -79,8 +79,8 @@ echo "opcache.validate_timestamps = 1" | sudo tee -a /etc/php/7.3/mods-available
 echo "opcache.save_comments = 1" | sudo tee -a /etc/php/7.3/mods-available/opcache.ini
 echo "opcache.enable_file_override = 0" | sudo tee -a /etc/php/7.3/mods-available/opcache.ini
 
-echo 'Install memcached'
-sudo apt-get install -qq php7.3-memcached memcached
+echo 'Install memcached and redis'
+sudo apt-get install -qq php7.3-memcached php-redis memcached redis-server &> /dev/null
 
 sudo service apache2 restart
 
