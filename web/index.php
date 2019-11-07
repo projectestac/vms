@@ -47,6 +47,11 @@
 		<a href="/agora/config/statistics.php">[Recull estadístiques]</a>
 		<a href="/agora/config/createSchoolsListsFiles.php">[Llista URL crons]</a>
 		<br />
+
+		<a href="/agora/config/checkFiles.php">[Check files]</a>
+		<a href="/agora/config/checkCrons.php">[Check crons]</a>
+		<a href="/agora/config/checkCookies.php">[Check cookies]</a>
+		<br />
 	</fieldset>
 
 	<fieldset>
@@ -92,7 +97,7 @@
 		<a href="/phpmyadmin/">[MySQL admin]</a>
 		<br/>
 		<a href="/agora/config/phpsysinfo/">[phpSysInfo]</a>
-		<a href="/agora/config/phpmemcache/">[phpMemCache]</a>
+		<a href="/agora/config/phpmemcached/">[phpMemCached]</a>
 		<br/>
 		<a href="/opcache.php">[OpCache]</a>
 		<a href="/phpinfo.php">[PHPInfo]</a>
