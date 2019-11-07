@@ -11,9 +11,9 @@ datadir=$rootdir/data
 oracle_import_db usu1 /vms/agora/usu1.dmp $usu
 
 mkdir_777 $rootdir/cache_ins/$usu
-mkdir_777 $datadir/moodle2/$usu
+mkdir_777 $datadir/moodledata/$usu
 
-pushd $datadir/moodle2/$usu
+pushd $datadir/moodledata/$usu
 sudo tar xfzp /vms/agora/usu1.tgz
 popd
 
