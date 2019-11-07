@@ -6,7 +6,7 @@ echo 'Provision Àgora'
 
 rootdir=/dades/agora
 wwwdir=$rootdir/html
-datadir=$rootdir/docs
+datadir=$rootdir/data
 git=/git/agora
 
 #  Portal
@@ -16,9 +16,9 @@ cat $git/sql/adminagora.sql | sudo mysql -uroot -p$pass adminagora
 chmod 444 $wwwdir/portal/config/config.php
 
 #Data docs
-mkdir_777 $rootdir/docs
-sudo cp -R $git/docs/* $rootdir/docs
-chown_777 $rootdir/docs
+mkdir_777 $datadir
+sudo cp -R $git/data/* $datadir
+chown_777 $datadir
 
 mkdir_777 $rootdir/syncdata
 mkdir_777 $rootdir/syncdata/temp

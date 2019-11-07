@@ -6,7 +6,7 @@ usu=$1
 nompropi=$2
 rootdir=$3
 template=master$4
-datadir=$rootdir/docs/wpdata
+datadir=$rootdir/data/wpdata
 
 mysql_import_db $usu /git/agora/sql/$template.sql
 
