@@ -4,7 +4,7 @@ source "/vms/provision/functions.sh"
 
 usu=$1
 rootdir=$2
-datadir=$rootdir/docs
+datadir=$rootdir/data
 
 #php $rootdir/html/moodle2/admin/cli/install_database.php --ccentre=$usu --agree-license --shortname=$usu --fullname="Àgora $usu" --adminuser=xtecadmin --adminpass=$password
 
