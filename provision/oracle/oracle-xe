@@ -1,6 +1,15 @@
 #!/bin/bash
 #
-#
+#### BEGIN INIT INFO
+# Provides:          oracle-xe
+# Required-Start:
+# Required-Stop:
+# Default-Start:     2 3 4 5
+# Default-Stop:      1 0 6
+# Short-Description: Oracle manager script
+# Description: This is a program that is responsible for taking care of configuring the Oracle Database 11g Express Edition and its associated services.
+### END INIT INFO
+
 # chkconfig: 2345 80 05
 # description: This is a program that is responsible for taking care of
 # configuring the Oracle Database 11g Express Edition and its associated
