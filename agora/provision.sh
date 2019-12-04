@@ -12,7 +12,7 @@ passmd5=$(printf '%s' "$pass" | md5sum | cut -d ' ' -f 1)
 
 # Portal
 create_mysql_db "adminagora"
-cat $git/sql/adminagora.sql | sudo mysql -uroot -p$pass adminagora
+cat $git/sql/adminagora.sql | sudo mysql -uroot -p$pass adminagora &> /dev/null
 
 chmod 444 $wwwdir/portal/config/config.php
 
@@ -33,6 +33,8 @@ sudo cp $wwwdir/config/sync-config-dist.sh $wwwdir/config/sync-config.sh
 chmod +x $wwwdir/config/sync.sh $wwwdir/config/sync-config.sh
 htpasswd -nbB xtecadmin $pass > $wwwdir/config/.htpasswd
 sudo cp $wwwdir/.htaccess-dist $wwwdir/.htaccess
+# Update wordpress/.htaccess if it exists (vagrant up using existing code)
+if [ -f "$wwwdir/wordpress/.htaccess" ]; then sudo chmod 666 $wwwdir/wordpress/.htaccess; fi
 sudo cp $wwwdir/wordpress/.htaccess-dist $wwwdir/wordpress/.htaccess
 chmod -x-w $wwwdir/wordpress/.htaccess
 
@@ -45,10 +47,10 @@ execute_in_oracle "@/dades/agora/html/moodle2/lib/dml/oci_native_moodle_package.
 
 source /etc/profile.d/oracle-env.sh
 
-/vms/agora/create_moodle.sh usu1 $rootdir
-/vms/agora/create_moodle.sh usu2 $rootdir
-/vms/agora/create_moodle.sh usu3 $rootdir
-/vms/agora/create_moodle.sh usu4 $rootdir
+/vms/agora/create_moodle_postgres.sh usu1 $rootdir
+/vms/agora/create_moodle_postgres.sh usu2 $rootdir
+/vms/agora/create_moodle_postgres.sh usu3 $rootdir
+/vms/agora/create_moodle_postgres.sh usu4 $rootdir
 
 /vms/agora/create_nodes.sh usu1 usu1 $rootdir pri usu6
 /vms/agora/create_nodes.sh usu2 usu2 $rootdir sec usu7

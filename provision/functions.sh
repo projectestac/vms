@@ -78,7 +78,7 @@ function mysql_import_db {
 
     echo "Importing DB  $dbname..."
     create_mysql_db $dbname
-    cat $sql | sudo mysql -uroot -p$pass $dbname
+    cat $sql | sudo mysql -uroot -p$pass $dbname &> /dev/null
     echo 'Done'
 }
 
@@ -101,7 +101,7 @@ function execute_in_oracle {
 }
 
 function execute_in_mysql {
-    sudo mysql -uroot -p$pass -e "$1"
+    sudo mysql -uroot -p$pass -e "$1" &> /dev/null
 }
 
 function create_oracle_db {
@@ -135,7 +135,6 @@ function drop_oracle_db {
 EOM" &> /dev/null
 }
 
-
 function create_mysql_db {
     dbname=$1
     execute_in_mysql "CREATE DATABASE IF NOT EXISTS $dbname"
@@ -151,10 +150,7 @@ function load_version {
     fi
 }
 
-
 function save_version {
     echo 'Upgraded to '$1
     echo $1 | sudo tee /vm_version &> /dev/null
 }
-
-
