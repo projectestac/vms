@@ -17,7 +17,8 @@ sudo locale-gen ca_ES &> /dev/null
 sudo locale-gen ca_ES.UTF-8 &> /dev/null
 sudo locale-gen es_ES &> /dev/null
 sudo locale-gen es_ES.UTF-8 &> /dev/null
-sudo dpkg-reconfigure locales &> /dev/null
+#sudo dpkg-reconfigure locales &> /dev/null
+sudo update-locale LANG=ca_ES.utf8
 
 echo 'Set Timezone'
 sudo echo "Europe/Madrid" | sudo tee /etc/timezone  &> /dev/null
