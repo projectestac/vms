@@ -4,7 +4,7 @@ source "/vms/provision/functions.sh"
 
 echo 'Provision Àgora'
 
-rootdir=/dades/agora
+rootdir=/dades
 wwwdir=$rootdir/html
 datadir=$rootdir/data
 git=/git/agora
@@ -21,12 +21,10 @@ mkdir_777 $datadir
 sudo cp -R $git/data/* $datadir
 chown_777 $datadir
 
-mkdir_777 $rootdir/syncdata
-mkdir_777 $rootdir/adminInfo
-mkdir_777 $rootdir/cache_ins
+mkdir_777 $datadir/syncdata
+mkdir_777 $datadir/localmuc
 
 sudo cp $wwwdir/config/.htaccess-dist $wwwdir/config/.htaccess
-sudo cp $wwwdir/config/config-dist.php $wwwdir/config/config.php
 sudo cp $wwwdir/config/env-config-dist.php $wwwdir/config/env-config.php
 sudo cp $wwwdir/config/config-restricted-dist.php $wwwdir/config/config-restricted.php
 sudo cp $wwwdir/config/sync-config-dist.sh $wwwdir/config/sync-config.sh
@@ -38,19 +36,10 @@ if [ -f "$wwwdir/wordpress/.htaccess" ]; then sudo chmod 666 $wwwdir/wordpress/.
 sudo cp $wwwdir/wordpress/.htaccess-dist $wwwdir/wordpress/.htaccess
 chmod -x-w $wwwdir/wordpress/.htaccess
 
-# Set passwords
-sudo sed -i "s/\['userpwd'\] * = ''/\['userpwd'\] = '$pass'/" $wwwdir/config/env-config.php
-sudo sed -i "s/\['opcache'\]\['password'\] * = ''/\['opcache'\]\['password'\] = '$pass'/" $wwwdir/config/config-restricted.php
-sudo sed -i "s/\['xtecadmin'\]\['password'\] * = ''/\['xtecadmin'\]\['password'\] = '$passmd5'/" $wwwdir/config/config-restricted.php
-
-execute_in_oracle "@/dades/agora/html/moodle2/lib/dml/oci_native_moodle_package.sql"
-
-source /etc/profile.d/oracle-env.sh
-
-/vms/agora/create_moodle_postgres.sh usu1 $rootdir
-/vms/agora/create_moodle_postgres.sh usu2 $rootdir
-/vms/agora/create_moodle_postgres.sh usu3 $rootdir
-/vms/agora/create_moodle_postgres.sh usu4 $rootdir
+/vms/agora/create_moodle.sh usu1 $rootdir
+/vms/agora/create_moodle.sh usu2 $rootdir
+/vms/agora/create_moodle.sh usu3 $rootdir
+/vms/agora/create_moodle.sh usu4 $rootdir
 
 /vms/agora/create_nodes.sh usu1 usu1 $rootdir pri usu6
 /vms/agora/create_nodes.sh usu2 usu2 $rootdir sec usu7
@@ -61,6 +50,9 @@ source /etc/profile.d/oracle-env.sh
 /vms/agora/create_nodes.sh usu7 centre-7 $rootdir cda usu4
 /vms/agora/create_nodes.sh usu8 centre-8 $rootdir ssee usu5
 /vms/agora/create_nodes.sh usu9 centre-9 $rootdir pro usu3
+
+# Copy index file
+cp /vms/web/index.php /$wwwdir
 
 # Finish installing portal
 mkdir_777 $datadir/portaldata

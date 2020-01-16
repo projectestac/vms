@@ -21,84 +21,47 @@
 		<legend><img alt="Àgora" src="img/agora.gif"/></legend>
 
 		<img src="img/moodle.png" alt="Moodle"/>
-		<a href="/agora/usu1/moodle/">[usu1]</a>
-		<a href="/agora/usu2/moodle/">[usu2]</a>
-		<a href="/agora/usu3/moodle/">[usu3]</a>
-		<a href="/agora/usu4/moodle/">[usu4]</a>
+		<a href="/usu1/moodle/">[usu1]</a>
+		<a href="/usu2/moodle/">[usu2]</a>
+		<a href="/usu3/moodle/">[usu3]</a>
+		<a href="/usu4/moodle/">[usu4]</a>
 		<br />
 
 		<img src="img/nodes.png" alt="Nodes"/>
-		<a href="/agora/usu1/">[usu1]</a>
-		<a href="/agora/usu2/">[usu2]</a>
-		<a href="/agora/usu3/">[usu3]</a>
-		<a href="/agora/usu4/">[usu4]</a>
-		<a href="/agora/usu5/">[usu5]</a>
-		<a href="/agora/usu6/">[usu6]</a>
-		<a href="/agora/usu7/">[usu7]</a>
-		<a href="/agora/usu8/">[usu8]</a>
-		<a href="/agora/usu9/">[usu9]</a>
+		<a href="/usu1/">[usu1]</a>
+		<a href="/usu2/">[usu2]</a>
+		<a href="/usu3/">[usu3]</a>
+		<a href="/usu4/">[usu4]</a>
+		<a href="/usu5/">[usu5]</a>
+		<a href="/usu6/">[usu6]</a>
+		<a href="/usu7/">[usu7]</a>
+		<a href="/usu8/">[usu8]</a>
+		<a href="/usu9/">[usu9]</a>
 		<br />
 		<br />
 
-		<a href="/agora/portal/">[Portal]</a>
+		<a href="/portal/">[Portal]</a>
 		<br />
 
-		<a href="/agora/config/sync_to_file.php?debug=on&print=on&force=true">[Actualitza allSchools]</a>
-		<a href="/agora/config/statistics.php">[Recull estadístiques]</a>
-		<a href="/agora/config/createSchoolsListsFiles.php">[Llista URL crons]</a>
+		<a href="/config/sync_to_file.php?debug=on&print=on&force=true">[Actualitza allSchools]</a>
+		<a href="/config/statistics.php">[Recull estadístiques]</a>
+		<a href="/config/createSchoolsListsFiles.php">[Llista URL crons]</a>
 		<br />
 
-		<a href="/agora/config/checkFiles.php">[Check files]</a>
-		<a href="/agora/config/checkCrons.php">[Check crons]</a>
-		<a href="/agora/config/checkCookies.php">[Check cookies]</a>
+		<a href="/config/checkFiles.php">[Check files]</a>
+		<a href="/config/checkCrons.php">[Check crons]</a>
+		<a href="/config/checkCookies.php">[Check cookies]</a>
 		<br />
-	</fieldset>
 
-	<fieldset>
-		<legend><img src="img/odissea.png" alt="Odissea"/></legend>
-		<a href="/odissea/">[Moodle 2]</a>
-	</fieldset>
-
-	<fieldset>
-		<legend><img src="img/blocs.png" alt="Blocs"/></legend>
-		<a href="/blocs/">[XTECBlocs]</a>
-	</fieldset>
-
-	<div style="clear:both;"></div>
-
-	<fieldset>
-		<legend> Sinapsi: </legend>
-		<a href="http://sinapsi-virtual.xtec.cat">[Sinapsi]</a>
-	</fieldset>
-
-	<fieldset>
-		<legend> Dossier: </legend>
-		<a href="http://dossier-virtual.xtec.cat">[Dossier]</a>
-	</fieldset>
-
-	<fieldset>
-		<legend><img src="img/prestatgeria.png" alt="Prestatgeria"/></legend>
-		<a href="/prestatgeria/">[Prestatgeria]</a>
-	</fieldset>
-
-	<fieldset>
-		<legend><img src="img/alexandria.png" alt="Alexandria"/></legend>
-		<a href="/alexandria/">[Alexandria]</a>
-	</fieldset>
-
-	<fieldset>
-		<legend> MPS: </legend>
-		<a href="/mps/">[Simulador d'editorial Marsupial]</a>
+        <a href="/config/phpsysinfo/">[phpSysInfo]</a>
+        <a href="/config/phpmemcached/">[phpMemCached]</a>
+        <br />
 	</fieldset>
 
 	<fieldset>
 		<legend> Gestió </legend>
-		<a href="<?php print "http://".$_SERVER["SERVER_NAME"].":8080/apex/f?p=4950"?>">[Oracle admin]</a>
 		<a href="/phpmyadmin/">[MySQL admin]</a>
-		<br/>
-		<a href="/agora/config/phpsysinfo/">[phpSysInfo]</a>
-		<a href="/agora/config/phpmemcached/">[phpMemCached]</a>
-		<br/>
+		<br />
 		<a href="/opcache.php">[OpCache]</a>
 		<a href="/phpinfo.php">[PHPInfo]</a>
 	</fieldset>

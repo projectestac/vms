@@ -1,6 +1,6 @@
 #!/bin/bash
 
-wwwdir=/vms/web
+#wwwdir=/vms/web
 
 echo 'Install PHP 7.3'
 
@@ -10,17 +10,13 @@ sudo apt-get update &> /dev/null
 sudo apt-get install -qq apache2 php7.3 php7.3-curl php7.3-tidy php7.3-gd php7.3-xml php7.3-xmlrpc php7.3-intl php7.3-cli php-pear php7.3-dev php7.3-ldap libapache2-mod-php7.3 php-codesniffer php7.3-mbstring php7.3-pgsql php7.3-mysql php-gettext php7.3-zip php7.3-soap &> /dev/null
 
 sudo mkdir /etc/apache2/sites-agora
-sudo cp -R /vms/provision/php/* /etc/apache2/sites-agora
+sudo cp -R /vms/provision/conf/* /etc/apache2/sites-agora
 
 echo "Include sites-agora/" | sudo tee -a /etc/apache2/apache2.conf
+echo "Mutex flock" | sudo tee -a /etc/apache2/apache2.conf
 
-sudo sed -i "s#DocumentRoot .*#DocumentRoot "$wwwdir"#" /etc/apache2/sites-available/000-default.conf
-#sudo sed -i "s#<Directory /var/www/>#<Directory "$wwwdir">#" /etc/apache2/sites-available/000-default.conf
-#sudo sed -i "s/AllowOverride .*/AllowOverride All/" /etc/apache2/sites-available/000-default.conf
-
-sudo sed -i "s#DocumentRoot .*#DocumentRoot "$wwwdir"#" /etc/apache2/sites-available/default-ssl.conf
-#sudo sed -i "s#<Directory /var/www/>#<Directory "$wwwdir">#" /etc/apache2/sites-available/default-ssl.conf
-#sudo sed -i "s/AllowOverride .*/AllowOverride All/" /etc/apache2/sites-available/default-ssl.conf
+sudo rm /etc/apache2/sites-enabled/*.conf
+sudo ln -s /etc/apache2/sites-agora/agora.conf /etc/apache2/sites-enabled/agora.conf
 
 echo "ServerName localhost" | sudo tee /etc/apache2/conf-available/fqdn.conf
 
@@ -29,7 +25,7 @@ sudo a2enmod ssl
 sudo a2enmod rewrite
 sudo a2ensite default-ssl
 
-sudo service apache2 restart
+sudo service apache2 start
 
 #PHP Configuration
 sudo sed -i '$ a\date.timezone = "Europe/Madrid"' /etc/php/7.3/apache2/php.ini
@@ -82,10 +78,7 @@ echo "opcache.enable_file_override = 0" | sudo tee -a /etc/php/7.3/mods-availabl
 echo 'Install memcached and redis'
 sudo apt-get install -qq php7.3-memcached php-redis memcached redis-server &> /dev/null
 
-sudo service apache2 restart
-
 echo 'Install XDebug'
-
 sudo apt-get install -qq php7.3-xdebug &> /dev/null
 
 echo "xdebug.default_enable=1" | sudo tee -a /etc/php/7.3/apache2/conf.d/20-xdebug.ini
@@ -96,3 +89,4 @@ echo "xdebug.remote_port=9000" | sudo tee -a /etc/php/7.3/apache2/conf.d/20-xdeb
 echo "xdebug.remote_handler=dbgp" | sudo tee -a /etc/php/7.3/apache2/conf.d/20-xdebug.ini
 echo "xdebug.remote_host=10.0.2.2 " | sudo tee -a /etc/php/7.3/apache2/conf.d/20-xdebug.ini
 
+sudo service apache2 restart

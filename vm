@@ -1,20 +1,25 @@
 #!/bin/bash
 
-#Exemple invocació: ./vm
+# Call example: ./vm
 
 function clone_project {
     project=$1
+    branch=$2
     giturl=git@github.com:projectestac/$project.git
-    clone_project_git $project $giturl
+    clone_project_git $project $giturl $branch
 }
 
 function clone_project_git {
     project=$1
     giturl=$2
+    branch=$3
     homedir=`pwd`
     if [ ! -d "$homedir/../$project" ]; then
         echo "Project $project not found, cloning..."
         git clone $giturl $homedir/../$project
+        pushd "$homedir/../$project"
+        git checkout -b $branch origin/$branch
+        popd
         pushd $homedir/../$project
         git submodule update --recursive --init
         popd
@@ -27,20 +32,10 @@ if [ -z "$(vagrant plugin list | grep vagrant-hosts)" ]; then
     vagrant plugin install vagrant-hosts
 fi
 
-clone_project agora
-clone_project odissea
-clone_project alexandria
-clone_project xtecblocs
-clone_project prestatgeria
-clone_project marsupial-mps
+clone_project agora aws
 #clone_project_git moodlemobile2 https://github.com/moodlehq/moodlemobile2.git
-clone_project dossier
-#clone_project sinapsi
 
 vagrant box update
 
 echo "Starting the VM"
 vagrant up --provider virtualbox
-
-echo "Running upgrade if needed"
-vagrant ssh -c "/vms/provision/upgrade.sh"

@@ -7,7 +7,7 @@ sudo apt-get update &> /dev/null
 sudo apt-get autoremove -qq  &> /dev/null
 
 echo 'Install base packages'
-sudo apt-get install -qq gcc-multilib texlive ghostscript imagemagick vsftpd &> /dev/null
+sudo apt-get install -qq gcc-multilib texlive ghostscript imagemagick vsftpd unzip &> /dev/null
 
 echo 'Log permissions'
 sudo chmod -R 777 /var/log
@@ -43,8 +43,3 @@ if [ $? -ne 0 ]; then
 else
   echo 'swapfile found. No changes made.'
 fi
-
-# output results to terminal
-#df -h
-#cat /proc/swaps
-#cat /proc/meminfo | grep Swap
