@@ -21,10 +21,10 @@ sudo chmod -R 777 $wwwdir/wp-content/cache
 sudo cp $wwwdir/.htaccess-dist $wwwdir/.htaccess
 sudo chmod 664 $wwwdir/.htaccess
 
-sudo cp /vms/xtecblocs/wp-config-vagrant.php $wwwdir/wp-config.php
+sudo cp $wwwdir/wp-config-dist.php $wwwdir/wp-config.php
 sudo chmod 664 $wwwdir/wp-config.php
 
-sudo cp /vms/xtecblocs/wp-cache-config.php $wwwdir/wp-content/wp-cache-config.php
+sudo cp $wwwdir/wp-content/wp-cache-config-dist.php $wwwdir/wp-content/wp-cache-config.php
 sudo chmod 777 $wwwdir/wp-content/wp-cache-config.php
 
 /vms/xtecblocs/create_bloc.sh global
