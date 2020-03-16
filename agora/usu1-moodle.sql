@@ -32289,6 +32289,7 @@ COPY public.m2repository (id, type, visible, sortorder) FROM stdin;
 5	url	1	5
 6	user	1	6
 7	wikimedia	1	7
+8	filesystem	1	8
 \.
 
 
@@ -32297,6 +32298,8 @@ COPY public.m2repository (id, type, visible, sortorder) FROM stdin;
 --
 
 COPY public.m2repository_instance_config (id, instanceid, name, value) FROM stdin;
+1	8	fs_path	files
+2	8	relativefiles	0
 \.
 
 
@@ -32312,6 +32315,7 @@ COPY public.m2repository_instances (id, name, typeid, userid, contextid, usernam
 5		5	0	1	\N	\N	1572464227	1572464227	0
 6		6	0	1	\N	\N	1572464227	1572464227	0
 7		7	0	1	\N	\N	1572464227	1572464227	0
+8	Fitxers	8	0	1	\N	\N	1584384068	1584384068	0
 \.
 
 
@@ -37981,7 +37985,7 @@ SELECT pg_catalog.setval('public.m2log_queries_id_seq', 1, false);
 -- Name: m2logstore_standard_log_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.m2logstore_standard_log_id_seq', 1227, true);
+SELECT pg_catalog.setval('public.m2logstore_standard_log_id_seq', 1, true);
 
 
 --
@@ -39010,21 +39014,21 @@ SELECT pg_catalog.setval('public.m2registration_hubs_id_seq', 1, false);
 -- Name: m2repository_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.m2repository_id_seq', 7, true);
+SELECT pg_catalog.setval('public.m2repository_id_seq', 8, true);
 
 
 --
 -- Name: m2repository_instance_config_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.m2repository_instance_config_id_seq', 1, false);
+SELECT pg_catalog.setval('public.m2repository_instance_config_id_seq', 2, true);
 
 
 --
 -- Name: m2repository_instances_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.m2repository_instances_id_seq', 7, true);
+SELECT pg_catalog.setval('public.m2repository_instances_id_seq', 8, true);
 
 
 --
