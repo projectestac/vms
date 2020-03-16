@@ -2,11 +2,12 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 9.5.19
--- Dumped by pg_dump version 9.5.19
+-- Dumped from database version 10.12 (Ubuntu 10.12-0ubuntu0.18.04.1)
+-- Dumped by pg_dump version 10.12 (Ubuntu 10.12-0ubuntu0.18.04.1)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
 SELECT pg_catalog.set_config('search_path', '', false);
@@ -20828,3381 +20829,3381 @@ ALTER SEQUENCE public.m2workshopform_rubric_levels_id_seq OWNED BY public.m2work
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2analytics_indicator_calc id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2analytics_indicator_calc ALTER COLUMN id SET DEFAULT nextval('public.m2analytics_indicator_calc_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2analytics_models id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2analytics_models ALTER COLUMN id SET DEFAULT nextval('public.m2analytics_models_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2analytics_models_log id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2analytics_models_log ALTER COLUMN id SET DEFAULT nextval('public.m2analytics_models_log_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2analytics_predict_samples id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2analytics_predict_samples ALTER COLUMN id SET DEFAULT nextval('public.m2analytics_predict_samples_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2analytics_prediction_actions id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2analytics_prediction_actions ALTER COLUMN id SET DEFAULT nextval('public.m2analytics_prediction_actions_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2analytics_predictions id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2analytics_predictions ALTER COLUMN id SET DEFAULT nextval('public.m2analytics_predictions_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2analytics_train_samples id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2analytics_train_samples ALTER COLUMN id SET DEFAULT nextval('public.m2analytics_train_samples_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2analytics_used_analysables id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2analytics_used_analysables ALTER COLUMN id SET DEFAULT nextval('public.m2analytics_used_analysables_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2analytics_used_files id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2analytics_used_files ALTER COLUMN id SET DEFAULT nextval('public.m2analytics_used_files_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2assign id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2assign ALTER COLUMN id SET DEFAULT nextval('public.m2assign_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2assign_grades id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2assign_grades ALTER COLUMN id SET DEFAULT nextval('public.m2assign_grades_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2assign_overrides id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2assign_overrides ALTER COLUMN id SET DEFAULT nextval('public.m2assign_overrides_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2assign_plugin_config id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2assign_plugin_config ALTER COLUMN id SET DEFAULT nextval('public.m2assign_plugin_config_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2assign_submission id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2assign_submission ALTER COLUMN id SET DEFAULT nextval('public.m2assign_submission_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2assign_user_flags id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2assign_user_flags ALTER COLUMN id SET DEFAULT nextval('public.m2assign_user_flags_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2assign_user_mapping id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2assign_user_mapping ALTER COLUMN id SET DEFAULT nextval('public.m2assign_user_mapping_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2assignfeedback_comments id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2assignfeedback_comments ALTER COLUMN id SET DEFAULT nextval('public.m2assignfeedback_comments_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2assignfeedback_editpdf_annot id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2assignfeedback_editpdf_annot ALTER COLUMN id SET DEFAULT nextval('public.m2assignfeedback_editpdf_annot_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2assignfeedback_editpdf_cmnt id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2assignfeedback_editpdf_cmnt ALTER COLUMN id SET DEFAULT nextval('public.m2assignfeedback_editpdf_cmnt_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2assignfeedback_editpdf_queue id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2assignfeedback_editpdf_queue ALTER COLUMN id SET DEFAULT nextval('public.m2assignfeedback_editpdf_queue_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2assignfeedback_editpdf_quick id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2assignfeedback_editpdf_quick ALTER COLUMN id SET DEFAULT nextval('public.m2assignfeedback_editpdf_quick_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2assignfeedback_file id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2assignfeedback_file ALTER COLUMN id SET DEFAULT nextval('public.m2assignfeedback_file_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2assignment id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2assignment ALTER COLUMN id SET DEFAULT nextval('public.m2assignment_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2assignment_submissions id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2assignment_submissions ALTER COLUMN id SET DEFAULT nextval('public.m2assignment_submissions_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2assignment_upgrade id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2assignment_upgrade ALTER COLUMN id SET DEFAULT nextval('public.m2assignment_upgrade_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2assignsubmission_file id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2assignsubmission_file ALTER COLUMN id SET DEFAULT nextval('public.m2assignsubmission_file_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2assignsubmission_onlinetext id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2assignsubmission_onlinetext ALTER COLUMN id SET DEFAULT nextval('public.m2assignsubmission_onlinetext_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2auth_oauth2_linked_login id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2auth_oauth2_linked_login ALTER COLUMN id SET DEFAULT nextval('public.m2auth_oauth2_linked_login_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2backup_controllers id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2backup_controllers ALTER COLUMN id SET DEFAULT nextval('public.m2backup_controllers_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2backup_courses id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2backup_courses ALTER COLUMN id SET DEFAULT nextval('public.m2backup_courses_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2backup_logs id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2backup_logs ALTER COLUMN id SET DEFAULT nextval('public.m2backup_logs_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2badge id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2badge ALTER COLUMN id SET DEFAULT nextval('public.m2badge_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2badge_backpack id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2badge_backpack ALTER COLUMN id SET DEFAULT nextval('public.m2badge_backpack_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2badge_competencies id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2badge_competencies ALTER COLUMN id SET DEFAULT nextval('public.m2badge_competencies_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2badge_criteria id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2badge_criteria ALTER COLUMN id SET DEFAULT nextval('public.m2badge_criteria_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2badge_criteria_met id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2badge_criteria_met ALTER COLUMN id SET DEFAULT nextval('public.m2badge_criteria_met_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2badge_criteria_param id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2badge_criteria_param ALTER COLUMN id SET DEFAULT nextval('public.m2badge_criteria_param_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2badge_endorsement id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2badge_endorsement ALTER COLUMN id SET DEFAULT nextval('public.m2badge_endorsement_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2badge_external id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2badge_external ALTER COLUMN id SET DEFAULT nextval('public.m2badge_external_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2badge_issued id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2badge_issued ALTER COLUMN id SET DEFAULT nextval('public.m2badge_issued_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2badge_manual_award id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2badge_manual_award ALTER COLUMN id SET DEFAULT nextval('public.m2badge_manual_award_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2badge_related id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2badge_related ALTER COLUMN id SET DEFAULT nextval('public.m2badge_related_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2bigdata_profiles id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2bigdata_profiles ALTER COLUMN id SET DEFAULT nextval('public.m2bigdata_profiles_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2block id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2block ALTER COLUMN id SET DEFAULT nextval('public.m2block_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2block_community id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2block_community ALTER COLUMN id SET DEFAULT nextval('public.m2block_community_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2block_instances id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2block_instances ALTER COLUMN id SET DEFAULT nextval('public.m2block_instances_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2block_positions id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2block_positions ALTER COLUMN id SET DEFAULT nextval('public.m2block_positions_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2block_recent_activity id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2block_recent_activity ALTER COLUMN id SET DEFAULT nextval('public.m2block_recent_activity_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2block_recentlyaccesseditems id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2block_recentlyaccesseditems ALTER COLUMN id SET DEFAULT nextval('public.m2block_recentlyaccesseditems_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2block_rss_client id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2block_rss_client ALTER COLUMN id SET DEFAULT nextval('public.m2block_rss_client_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2blog_association id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2blog_association ALTER COLUMN id SET DEFAULT nextval('public.m2blog_association_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2blog_external id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2blog_external ALTER COLUMN id SET DEFAULT nextval('public.m2blog_external_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2book id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2book ALTER COLUMN id SET DEFAULT nextval('public.m2book_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2book_chapters id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2book_chapters ALTER COLUMN id SET DEFAULT nextval('public.m2book_chapters_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2cache_filters id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2cache_filters ALTER COLUMN id SET DEFAULT nextval('public.m2cache_filters_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2cache_flags id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2cache_flags ALTER COLUMN id SET DEFAULT nextval('public.m2cache_flags_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2capabilities id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2capabilities ALTER COLUMN id SET DEFAULT nextval('public.m2capabilities_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2chat id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2chat ALTER COLUMN id SET DEFAULT nextval('public.m2chat_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2chat_messages id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2chat_messages ALTER COLUMN id SET DEFAULT nextval('public.m2chat_messages_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2chat_messages_current id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2chat_messages_current ALTER COLUMN id SET DEFAULT nextval('public.m2chat_messages_current_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2chat_users id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2chat_users ALTER COLUMN id SET DEFAULT nextval('public.m2chat_users_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2choice id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2choice ALTER COLUMN id SET DEFAULT nextval('public.m2choice_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2choice_answers id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2choice_answers ALTER COLUMN id SET DEFAULT nextval('public.m2choice_answers_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2choice_options id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2choice_options ALTER COLUMN id SET DEFAULT nextval('public.m2choice_options_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2choicegroup id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2choicegroup ALTER COLUMN id SET DEFAULT nextval('public.m2choicegroup_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2choicegroup_options id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2choicegroup_options ALTER COLUMN id SET DEFAULT nextval('public.m2choicegroup_options_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2cohort id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2cohort ALTER COLUMN id SET DEFAULT nextval('public.m2cohort_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2cohort_members id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2cohort_members ALTER COLUMN id SET DEFAULT nextval('public.m2cohort_members_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2comments id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2comments ALTER COLUMN id SET DEFAULT nextval('public.m2comments_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2competency id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2competency ALTER COLUMN id SET DEFAULT nextval('public.m2competency_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2competency_coursecomp id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2competency_coursecomp ALTER COLUMN id SET DEFAULT nextval('public.m2competency_coursecomp_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2competency_coursecompsetting id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2competency_coursecompsetting ALTER COLUMN id SET DEFAULT nextval('public.m2competency_coursecompsetting_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2competency_evidence id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2competency_evidence ALTER COLUMN id SET DEFAULT nextval('public.m2competency_evidence_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2competency_framework id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2competency_framework ALTER COLUMN id SET DEFAULT nextval('public.m2competency_framework_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2competency_modulecomp id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2competency_modulecomp ALTER COLUMN id SET DEFAULT nextval('public.m2competency_modulecomp_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2competency_plan id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2competency_plan ALTER COLUMN id SET DEFAULT nextval('public.m2competency_plan_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2competency_plancomp id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2competency_plancomp ALTER COLUMN id SET DEFAULT nextval('public.m2competency_plancomp_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2competency_relatedcomp id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2competency_relatedcomp ALTER COLUMN id SET DEFAULT nextval('public.m2competency_relatedcomp_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2competency_template id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2competency_template ALTER COLUMN id SET DEFAULT nextval('public.m2competency_template_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2competency_templatecohort id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2competency_templatecohort ALTER COLUMN id SET DEFAULT nextval('public.m2competency_templatecohort_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2competency_templatecomp id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2competency_templatecomp ALTER COLUMN id SET DEFAULT nextval('public.m2competency_templatecomp_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2competency_usercomp id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2competency_usercomp ALTER COLUMN id SET DEFAULT nextval('public.m2competency_usercomp_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2competency_usercompcourse id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2competency_usercompcourse ALTER COLUMN id SET DEFAULT nextval('public.m2competency_usercompcourse_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2competency_usercompplan id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2competency_usercompplan ALTER COLUMN id SET DEFAULT nextval('public.m2competency_usercompplan_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2competency_userevidence id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2competency_userevidence ALTER COLUMN id SET DEFAULT nextval('public.m2competency_userevidence_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2competency_userevidencecomp id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2competency_userevidencecomp ALTER COLUMN id SET DEFAULT nextval('public.m2competency_userevidencecomp_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2config id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2config ALTER COLUMN id SET DEFAULT nextval('public.m2config_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2config_log id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2config_log ALTER COLUMN id SET DEFAULT nextval('public.m2config_log_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2config_plugins id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2config_plugins ALTER COLUMN id SET DEFAULT nextval('public.m2config_plugins_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2context id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2context ALTER COLUMN id SET DEFAULT nextval('public.m2context_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2course id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2course ALTER COLUMN id SET DEFAULT nextval('public.m2course_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2course_categories id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2course_categories ALTER COLUMN id SET DEFAULT nextval('public.m2course_categories_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2course_completion_aggr_methd id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2course_completion_aggr_methd ALTER COLUMN id SET DEFAULT nextval('public.m2course_completion_aggr_methd_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2course_completion_crit_compl id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2course_completion_crit_compl ALTER COLUMN id SET DEFAULT nextval('public.m2course_completion_crit_compl_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2course_completion_criteria id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2course_completion_criteria ALTER COLUMN id SET DEFAULT nextval('public.m2course_completion_criteria_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2course_completion_defaults id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2course_completion_defaults ALTER COLUMN id SET DEFAULT nextval('public.m2course_completion_defaults_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2course_completions id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2course_completions ALTER COLUMN id SET DEFAULT nextval('public.m2course_completions_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2course_format_options id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2course_format_options ALTER COLUMN id SET DEFAULT nextval('public.m2course_format_options_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2course_modules id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2course_modules ALTER COLUMN id SET DEFAULT nextval('public.m2course_modules_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2course_modules_completion id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2course_modules_completion ALTER COLUMN id SET DEFAULT nextval('public.m2course_modules_completion_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2course_published id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2course_published ALTER COLUMN id SET DEFAULT nextval('public.m2course_published_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2course_request id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2course_request ALTER COLUMN id SET DEFAULT nextval('public.m2course_request_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2course_sections id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2course_sections ALTER COLUMN id SET DEFAULT nextval('public.m2course_sections_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2data id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2data ALTER COLUMN id SET DEFAULT nextval('public.m2data_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2data_content id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2data_content ALTER COLUMN id SET DEFAULT nextval('public.m2data_content_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2data_fields id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2data_fields ALTER COLUMN id SET DEFAULT nextval('public.m2data_fields_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2data_records id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2data_records ALTER COLUMN id SET DEFAULT nextval('public.m2data_records_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2editor_atto_autosave id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2editor_atto_autosave ALTER COLUMN id SET DEFAULT nextval('public.m2editor_atto_autosave_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2enrol id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2enrol ALTER COLUMN id SET DEFAULT nextval('public.m2enrol_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2enrol_flatfile id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2enrol_flatfile ALTER COLUMN id SET DEFAULT nextval('public.m2enrol_flatfile_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2enrol_lti_lti2_consumer id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2enrol_lti_lti2_consumer ALTER COLUMN id SET DEFAULT nextval('public.m2enrol_lti_lti2_consumer_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2enrol_lti_lti2_context id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2enrol_lti_lti2_context ALTER COLUMN id SET DEFAULT nextval('public.m2enrol_lti_lti2_context_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2enrol_lti_lti2_nonce id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2enrol_lti_lti2_nonce ALTER COLUMN id SET DEFAULT nextval('public.m2enrol_lti_lti2_nonce_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2enrol_lti_lti2_resource_link id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2enrol_lti_lti2_resource_link ALTER COLUMN id SET DEFAULT nextval('public.m2enrol_lti_lti2_resource_link_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2enrol_lti_lti2_share_key id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2enrol_lti_lti2_share_key ALTER COLUMN id SET DEFAULT nextval('public.m2enrol_lti_lti2_share_key_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2enrol_lti_lti2_tool_proxy id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2enrol_lti_lti2_tool_proxy ALTER COLUMN id SET DEFAULT nextval('public.m2enrol_lti_lti2_tool_proxy_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2enrol_lti_lti2_user_result id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2enrol_lti_lti2_user_result ALTER COLUMN id SET DEFAULT nextval('public.m2enrol_lti_lti2_user_result_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2enrol_lti_tool_consumer_map id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2enrol_lti_tool_consumer_map ALTER COLUMN id SET DEFAULT nextval('public.m2enrol_lti_tool_consumer_map_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2enrol_lti_tools id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2enrol_lti_tools ALTER COLUMN id SET DEFAULT nextval('public.m2enrol_lti_tools_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2enrol_lti_users id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2enrol_lti_users ALTER COLUMN id SET DEFAULT nextval('public.m2enrol_lti_users_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2enrol_paypal id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2enrol_paypal ALTER COLUMN id SET DEFAULT nextval('public.m2enrol_paypal_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2event id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2event ALTER COLUMN id SET DEFAULT nextval('public.m2event_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2event_subscriptions id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2event_subscriptions ALTER COLUMN id SET DEFAULT nextval('public.m2event_subscriptions_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2events_handlers id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2events_handlers ALTER COLUMN id SET DEFAULT nextval('public.m2events_handlers_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2events_queue id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2events_queue ALTER COLUMN id SET DEFAULT nextval('public.m2events_queue_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2events_queue_handlers id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2events_queue_handlers ALTER COLUMN id SET DEFAULT nextval('public.m2events_queue_handlers_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2external_functions id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2external_functions ALTER COLUMN id SET DEFAULT nextval('public.m2external_functions_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2external_services id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2external_services ALTER COLUMN id SET DEFAULT nextval('public.m2external_services_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2external_services_functions id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2external_services_functions ALTER COLUMN id SET DEFAULT nextval('public.m2external_services_functions_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2external_services_users id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2external_services_users ALTER COLUMN id SET DEFAULT nextval('public.m2external_services_users_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2external_tokens id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2external_tokens ALTER COLUMN id SET DEFAULT nextval('public.m2external_tokens_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2favourite id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2favourite ALTER COLUMN id SET DEFAULT nextval('public.m2favourite_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2feedback id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2feedback ALTER COLUMN id SET DEFAULT nextval('public.m2feedback_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2feedback_completed id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2feedback_completed ALTER COLUMN id SET DEFAULT nextval('public.m2feedback_completed_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2feedback_completedtmp id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2feedback_completedtmp ALTER COLUMN id SET DEFAULT nextval('public.m2feedback_completedtmp_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2feedback_item id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2feedback_item ALTER COLUMN id SET DEFAULT nextval('public.m2feedback_item_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2feedback_sitecourse_map id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2feedback_sitecourse_map ALTER COLUMN id SET DEFAULT nextval('public.m2feedback_sitecourse_map_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2feedback_template id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2feedback_template ALTER COLUMN id SET DEFAULT nextval('public.m2feedback_template_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2feedback_value id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2feedback_value ALTER COLUMN id SET DEFAULT nextval('public.m2feedback_value_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2feedback_valuetmp id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2feedback_valuetmp ALTER COLUMN id SET DEFAULT nextval('public.m2feedback_valuetmp_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2file_conversion id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2file_conversion ALTER COLUMN id SET DEFAULT nextval('public.m2file_conversion_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2files id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2files ALTER COLUMN id SET DEFAULT nextval('public.m2files_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2files_reference id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2files_reference ALTER COLUMN id SET DEFAULT nextval('public.m2files_reference_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2filter_active id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2filter_active ALTER COLUMN id SET DEFAULT nextval('public.m2filter_active_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2filter_config id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2filter_config ALTER COLUMN id SET DEFAULT nextval('public.m2filter_config_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2filter_wiris_formulas id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2filter_wiris_formulas ALTER COLUMN id SET DEFAULT nextval('public.m2filter_wiris_formulas_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2folder id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2folder ALTER COLUMN id SET DEFAULT nextval('public.m2folder_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2forum id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2forum ALTER COLUMN id SET DEFAULT nextval('public.m2forum_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2forum_digests id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2forum_digests ALTER COLUMN id SET DEFAULT nextval('public.m2forum_digests_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2forum_discussion_subs id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2forum_discussion_subs ALTER COLUMN id SET DEFAULT nextval('public.m2forum_discussion_subs_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2forum_discussions id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2forum_discussions ALTER COLUMN id SET DEFAULT nextval('public.m2forum_discussions_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2forum_posts id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2forum_posts ALTER COLUMN id SET DEFAULT nextval('public.m2forum_posts_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2forum_queue id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2forum_queue ALTER COLUMN id SET DEFAULT nextval('public.m2forum_queue_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2forum_read id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2forum_read ALTER COLUMN id SET DEFAULT nextval('public.m2forum_read_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2forum_subscriptions id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2forum_subscriptions ALTER COLUMN id SET DEFAULT nextval('public.m2forum_subscriptions_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2forum_track_prefs id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2forum_track_prefs ALTER COLUMN id SET DEFAULT nextval('public.m2forum_track_prefs_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2geogebra id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2geogebra ALTER COLUMN id SET DEFAULT nextval('public.m2geogebra_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2geogebra_attempts id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2geogebra_attempts ALTER COLUMN id SET DEFAULT nextval('public.m2geogebra_attempts_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2glossary id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2glossary ALTER COLUMN id SET DEFAULT nextval('public.m2glossary_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2glossary_alias id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2glossary_alias ALTER COLUMN id SET DEFAULT nextval('public.m2glossary_alias_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2glossary_categories id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2glossary_categories ALTER COLUMN id SET DEFAULT nextval('public.m2glossary_categories_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2glossary_entries id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2glossary_entries ALTER COLUMN id SET DEFAULT nextval('public.m2glossary_entries_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2glossary_entries_categories id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2glossary_entries_categories ALTER COLUMN id SET DEFAULT nextval('public.m2glossary_entries_categories_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2glossary_formats id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2glossary_formats ALTER COLUMN id SET DEFAULT nextval('public.m2glossary_formats_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2grade_categories id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2grade_categories ALTER COLUMN id SET DEFAULT nextval('public.m2grade_categories_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2grade_categories_history id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2grade_categories_history ALTER COLUMN id SET DEFAULT nextval('public.m2grade_categories_history_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2grade_grades id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2grade_grades ALTER COLUMN id SET DEFAULT nextval('public.m2grade_grades_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2grade_grades_history id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2grade_grades_history ALTER COLUMN id SET DEFAULT nextval('public.m2grade_grades_history_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2grade_import_newitem id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2grade_import_newitem ALTER COLUMN id SET DEFAULT nextval('public.m2grade_import_newitem_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2grade_import_values id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2grade_import_values ALTER COLUMN id SET DEFAULT nextval('public.m2grade_import_values_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2grade_items id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2grade_items ALTER COLUMN id SET DEFAULT nextval('public.m2grade_items_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2grade_items_history id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2grade_items_history ALTER COLUMN id SET DEFAULT nextval('public.m2grade_items_history_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2grade_letters id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2grade_letters ALTER COLUMN id SET DEFAULT nextval('public.m2grade_letters_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2grade_outcomes id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2grade_outcomes ALTER COLUMN id SET DEFAULT nextval('public.m2grade_outcomes_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2grade_outcomes_courses id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2grade_outcomes_courses ALTER COLUMN id SET DEFAULT nextval('public.m2grade_outcomes_courses_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2grade_outcomes_history id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2grade_outcomes_history ALTER COLUMN id SET DEFAULT nextval('public.m2grade_outcomes_history_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2grade_settings id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2grade_settings ALTER COLUMN id SET DEFAULT nextval('public.m2grade_settings_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2grading_areas id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2grading_areas ALTER COLUMN id SET DEFAULT nextval('public.m2grading_areas_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2grading_definitions id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2grading_definitions ALTER COLUMN id SET DEFAULT nextval('public.m2grading_definitions_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2grading_instances id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2grading_instances ALTER COLUMN id SET DEFAULT nextval('public.m2grading_instances_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2gradingform_guide_comments id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2gradingform_guide_comments ALTER COLUMN id SET DEFAULT nextval('public.m2gradingform_guide_comments_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2gradingform_guide_criteria id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2gradingform_guide_criteria ALTER COLUMN id SET DEFAULT nextval('public.m2gradingform_guide_criteria_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2gradingform_guide_fillings id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2gradingform_guide_fillings ALTER COLUMN id SET DEFAULT nextval('public.m2gradingform_guide_fillings_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2gradingform_rubric_criteria id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2gradingform_rubric_criteria ALTER COLUMN id SET DEFAULT nextval('public.m2gradingform_rubric_criteria_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2gradingform_rubric_fillings id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2gradingform_rubric_fillings ALTER COLUMN id SET DEFAULT nextval('public.m2gradingform_rubric_fillings_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2gradingform_rubric_levels id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2gradingform_rubric_levels ALTER COLUMN id SET DEFAULT nextval('public.m2gradingform_rubric_levels_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2groupings id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2groupings ALTER COLUMN id SET DEFAULT nextval('public.m2groupings_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2groupings_groups id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2groupings_groups ALTER COLUMN id SET DEFAULT nextval('public.m2groupings_groups_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2groups id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2groups ALTER COLUMN id SET DEFAULT nextval('public.m2groups_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2groups_members id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2groups_members ALTER COLUMN id SET DEFAULT nextval('public.m2groups_members_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2hotpot id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2hotpot ALTER COLUMN id SET DEFAULT nextval('public.m2hotpot_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2hotpot_attempts id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2hotpot_attempts ALTER COLUMN id SET DEFAULT nextval('public.m2hotpot_attempts_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2hotpot_cache id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2hotpot_cache ALTER COLUMN id SET DEFAULT nextval('public.m2hotpot_cache_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2hotpot_details id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2hotpot_details ALTER COLUMN id SET DEFAULT nextval('public.m2hotpot_details_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2hotpot_questions id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2hotpot_questions ALTER COLUMN id SET DEFAULT nextval('public.m2hotpot_questions_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2hotpot_responses id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2hotpot_responses ALTER COLUMN id SET DEFAULT nextval('public.m2hotpot_responses_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2hotpot_strings id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2hotpot_strings ALTER COLUMN id SET DEFAULT nextval('public.m2hotpot_strings_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2hvp id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2hvp ALTER COLUMN id SET DEFAULT nextval('public.m2hvp_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2hvp_auth id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2hvp_auth ALTER COLUMN id SET DEFAULT nextval('public.m2hvp_auth_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2hvp_content_user_data id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2hvp_content_user_data ALTER COLUMN id SET DEFAULT nextval('public.m2hvp_content_user_data_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2hvp_contents_libraries id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2hvp_contents_libraries ALTER COLUMN id SET DEFAULT nextval('public.m2hvp_contents_libraries_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2hvp_counters id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2hvp_counters ALTER COLUMN id SET DEFAULT nextval('public.m2hvp_counters_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2hvp_events id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2hvp_events ALTER COLUMN id SET DEFAULT nextval('public.m2hvp_events_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2hvp_libraries id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2hvp_libraries ALTER COLUMN id SET DEFAULT nextval('public.m2hvp_libraries_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2hvp_libraries_cachedassets id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2hvp_libraries_cachedassets ALTER COLUMN id SET DEFAULT nextval('public.m2hvp_libraries_cachedassets_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2hvp_libraries_hub_cache id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2hvp_libraries_hub_cache ALTER COLUMN id SET DEFAULT nextval('public.m2hvp_libraries_hub_cache_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2hvp_libraries_languages id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2hvp_libraries_languages ALTER COLUMN id SET DEFAULT nextval('public.m2hvp_libraries_languages_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2hvp_libraries_libraries id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2hvp_libraries_libraries ALTER COLUMN id SET DEFAULT nextval('public.m2hvp_libraries_libraries_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2hvp_xapi_results id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2hvp_xapi_results ALTER COLUMN id SET DEFAULT nextval('public.m2hvp_xapi_results_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2imscp id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2imscp ALTER COLUMN id SET DEFAULT nextval('public.m2imscp_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2jclic id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2jclic ALTER COLUMN id SET DEFAULT nextval('public.m2jclic_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2jclic_activities id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2jclic_activities ALTER COLUMN id SET DEFAULT nextval('public.m2jclic_activities_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2jclic_groups id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2jclic_groups ALTER COLUMN id SET DEFAULT nextval('public.m2jclic_groups_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2jclic_sessions id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2jclic_sessions ALTER COLUMN id SET DEFAULT nextval('public.m2jclic_sessions_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2jclic_settings id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2jclic_settings ALTER COLUMN id SET DEFAULT nextval('public.m2jclic_settings_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2jclic_users id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2jclic_users ALTER COLUMN id SET DEFAULT nextval('public.m2jclic_users_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2journal id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2journal ALTER COLUMN id SET DEFAULT nextval('public.m2journal_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2journal_entries id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2journal_entries ALTER COLUMN id SET DEFAULT nextval('public.m2journal_entries_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2label id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2label ALTER COLUMN id SET DEFAULT nextval('public.m2label_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2lesson id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2lesson ALTER COLUMN id SET DEFAULT nextval('public.m2lesson_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2lesson_answers id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2lesson_answers ALTER COLUMN id SET DEFAULT nextval('public.m2lesson_answers_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2lesson_attempts id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2lesson_attempts ALTER COLUMN id SET DEFAULT nextval('public.m2lesson_attempts_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2lesson_branch id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2lesson_branch ALTER COLUMN id SET DEFAULT nextval('public.m2lesson_branch_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2lesson_grades id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2lesson_grades ALTER COLUMN id SET DEFAULT nextval('public.m2lesson_grades_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2lesson_overrides id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2lesson_overrides ALTER COLUMN id SET DEFAULT nextval('public.m2lesson_overrides_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2lesson_pages id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2lesson_pages ALTER COLUMN id SET DEFAULT nextval('public.m2lesson_pages_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2lesson_timer id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2lesson_timer ALTER COLUMN id SET DEFAULT nextval('public.m2lesson_timer_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2license id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2license ALTER COLUMN id SET DEFAULT nextval('public.m2license_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2lock_db id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2lock_db ALTER COLUMN id SET DEFAULT nextval('public.m2lock_db_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2log id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2log ALTER COLUMN id SET DEFAULT nextval('public.m2log_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2log_display id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2log_display ALTER COLUMN id SET DEFAULT nextval('public.m2log_display_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2log_queries id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2log_queries ALTER COLUMN id SET DEFAULT nextval('public.m2log_queries_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2logstore_standard_log id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2logstore_standard_log ALTER COLUMN id SET DEFAULT nextval('public.m2logstore_standard_log_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2lti id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2lti ALTER COLUMN id SET DEFAULT nextval('public.m2lti_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2lti_submission id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2lti_submission ALTER COLUMN id SET DEFAULT nextval('public.m2lti_submission_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2lti_tool_proxies id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2lti_tool_proxies ALTER COLUMN id SET DEFAULT nextval('public.m2lti_tool_proxies_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2lti_tool_settings id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2lti_tool_settings ALTER COLUMN id SET DEFAULT nextval('public.m2lti_tool_settings_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2lti_types id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2lti_types ALTER COLUMN id SET DEFAULT nextval('public.m2lti_types_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2lti_types_config id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2lti_types_config ALTER COLUMN id SET DEFAULT nextval('public.m2lti_types_config_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2ltiservice_gradebookservices id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2ltiservice_gradebookservices ALTER COLUMN id SET DEFAULT nextval('public.m2ltiservice_gradebookservices_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2message id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2message ALTER COLUMN id SET DEFAULT nextval('public.m2message_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2message_airnotifier_devices id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2message_airnotifier_devices ALTER COLUMN id SET DEFAULT nextval('public.m2message_airnotifier_devices_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2message_contact_requests id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2message_contact_requests ALTER COLUMN id SET DEFAULT nextval('public.m2message_contact_requests_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2message_contacts id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2message_contacts ALTER COLUMN id SET DEFAULT nextval('public.m2message_contacts_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2message_conversation_members id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2message_conversation_members ALTER COLUMN id SET DEFAULT nextval('public.m2message_conversation_members_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2message_conversations id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2message_conversations ALTER COLUMN id SET DEFAULT nextval('public.m2message_conversations_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2message_popup id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2message_popup ALTER COLUMN id SET DEFAULT nextval('public.m2message_popup_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2message_popup_notifications id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2message_popup_notifications ALTER COLUMN id SET DEFAULT nextval('public.m2message_popup_notifications_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2message_processors id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2message_processors ALTER COLUMN id SET DEFAULT nextval('public.m2message_processors_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2message_providers id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2message_providers ALTER COLUMN id SET DEFAULT nextval('public.m2message_providers_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2message_read id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2message_read ALTER COLUMN id SET DEFAULT nextval('public.m2message_read_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2message_user_actions id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2message_user_actions ALTER COLUMN id SET DEFAULT nextval('public.m2message_user_actions_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2message_users_blocked id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2message_users_blocked ALTER COLUMN id SET DEFAULT nextval('public.m2message_users_blocked_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2messageinbound_datakeys id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2messageinbound_datakeys ALTER COLUMN id SET DEFAULT nextval('public.m2messageinbound_datakeys_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2messageinbound_handlers id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2messageinbound_handlers ALTER COLUMN id SET DEFAULT nextval('public.m2messageinbound_handlers_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2messageinbound_messagelist id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2messageinbound_messagelist ALTER COLUMN id SET DEFAULT nextval('public.m2messageinbound_messagelist_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2messages id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2messages ALTER COLUMN id SET DEFAULT nextval('public.m2messages_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2mnet_application id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2mnet_application ALTER COLUMN id SET DEFAULT nextval('public.m2mnet_application_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2mnet_host id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2mnet_host ALTER COLUMN id SET DEFAULT nextval('public.m2mnet_host_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2mnet_host2service id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2mnet_host2service ALTER COLUMN id SET DEFAULT nextval('public.m2mnet_host2service_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2mnet_log id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2mnet_log ALTER COLUMN id SET DEFAULT nextval('public.m2mnet_log_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2mnet_remote_rpc id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2mnet_remote_rpc ALTER COLUMN id SET DEFAULT nextval('public.m2mnet_remote_rpc_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2mnet_remote_service2rpc id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2mnet_remote_service2rpc ALTER COLUMN id SET DEFAULT nextval('public.m2mnet_remote_service2rpc_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2mnet_rpc id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2mnet_rpc ALTER COLUMN id SET DEFAULT nextval('public.m2mnet_rpc_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2mnet_service id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2mnet_service ALTER COLUMN id SET DEFAULT nextval('public.m2mnet_service_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2mnet_service2rpc id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2mnet_service2rpc ALTER COLUMN id SET DEFAULT nextval('public.m2mnet_service2rpc_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2mnet_session id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2mnet_session ALTER COLUMN id SET DEFAULT nextval('public.m2mnet_session_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2mnet_sso_access_control id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2mnet_sso_access_control ALTER COLUMN id SET DEFAULT nextval('public.m2mnet_sso_access_control_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2mnetservice_enrol_courses id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2mnetservice_enrol_courses ALTER COLUMN id SET DEFAULT nextval('public.m2mnetservice_enrol_courses_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2mnetservice_enrol_enrolments id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2mnetservice_enrol_enrolments ALTER COLUMN id SET DEFAULT nextval('public.m2mnetservice_enrol_enrolments_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2modules id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2modules ALTER COLUMN id SET DEFAULT nextval('public.m2modules_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2my_pages id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2my_pages ALTER COLUMN id SET DEFAULT nextval('public.m2my_pages_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2notifications id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2notifications ALTER COLUMN id SET DEFAULT nextval('public.m2notifications_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2oauth2_access_token id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2oauth2_access_token ALTER COLUMN id SET DEFAULT nextval('public.m2oauth2_access_token_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2oauth2_endpoint id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2oauth2_endpoint ALTER COLUMN id SET DEFAULT nextval('public.m2oauth2_endpoint_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2oauth2_issuer id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2oauth2_issuer ALTER COLUMN id SET DEFAULT nextval('public.m2oauth2_issuer_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2oauth2_system_account id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2oauth2_system_account ALTER COLUMN id SET DEFAULT nextval('public.m2oauth2_system_account_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2oauth2_user_field_mapping id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2oauth2_user_field_mapping ALTER COLUMN id SET DEFAULT nextval('public.m2oauth2_user_field_mapping_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2oauth_access_tokens id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2oauth_access_tokens ALTER COLUMN id SET DEFAULT nextval('public.m2oauth_access_tokens_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2oauth_authorization_codes id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2oauth_authorization_codes ALTER COLUMN id SET DEFAULT nextval('public.m2oauth_authorization_codes_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2oauth_clients id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2oauth_clients ALTER COLUMN id SET DEFAULT nextval('public.m2oauth_clients_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2oauth_jwt id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2oauth_jwt ALTER COLUMN id SET DEFAULT nextval('public.m2oauth_jwt_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2oauth_public_keys id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2oauth_public_keys ALTER COLUMN id SET DEFAULT nextval('public.m2oauth_public_keys_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2oauth_refresh_tokens id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2oauth_refresh_tokens ALTER COLUMN id SET DEFAULT nextval('public.m2oauth_refresh_tokens_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2oauth_scopes id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2oauth_scopes ALTER COLUMN id SET DEFAULT nextval('public.m2oauth_scopes_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2oauth_user_auth_scopes id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2oauth_user_auth_scopes ALTER COLUMN id SET DEFAULT nextval('public.m2oauth_user_auth_scopes_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2page id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2page ALTER COLUMN id SET DEFAULT nextval('public.m2page_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2portfolio_instance id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2portfolio_instance ALTER COLUMN id SET DEFAULT nextval('public.m2portfolio_instance_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2portfolio_instance_config id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2portfolio_instance_config ALTER COLUMN id SET DEFAULT nextval('public.m2portfolio_instance_config_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2portfolio_instance_user id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2portfolio_instance_user ALTER COLUMN id SET DEFAULT nextval('public.m2portfolio_instance_user_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2portfolio_log id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2portfolio_log ALTER COLUMN id SET DEFAULT nextval('public.m2portfolio_log_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2portfolio_mahara_queue id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2portfolio_mahara_queue ALTER COLUMN id SET DEFAULT nextval('public.m2portfolio_mahara_queue_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2portfolio_tempdata id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2portfolio_tempdata ALTER COLUMN id SET DEFAULT nextval('public.m2portfolio_tempdata_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2post id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2post ALTER COLUMN id SET DEFAULT nextval('public.m2post_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2profiling id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2profiling ALTER COLUMN id SET DEFAULT nextval('public.m2profiling_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2qtype_ddimageortext id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2qtype_ddimageortext ALTER COLUMN id SET DEFAULT nextval('public.m2qtype_ddimageortext_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2qtype_ddimageortext_drags id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2qtype_ddimageortext_drags ALTER COLUMN id SET DEFAULT nextval('public.m2qtype_ddimageortext_drags_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2qtype_ddimageortext_drops id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2qtype_ddimageortext_drops ALTER COLUMN id SET DEFAULT nextval('public.m2qtype_ddimageortext_drops_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2qtype_ddmarker id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2qtype_ddmarker ALTER COLUMN id SET DEFAULT nextval('public.m2qtype_ddmarker_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2qtype_ddmarker_drags id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2qtype_ddmarker_drags ALTER COLUMN id SET DEFAULT nextval('public.m2qtype_ddmarker_drags_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2qtype_ddmarker_drops id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2qtype_ddmarker_drops ALTER COLUMN id SET DEFAULT nextval('public.m2qtype_ddmarker_drops_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2qtype_essay_options id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2qtype_essay_options ALTER COLUMN id SET DEFAULT nextval('public.m2qtype_essay_options_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2qtype_essaywiris_backup id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2qtype_essaywiris_backup ALTER COLUMN id SET DEFAULT nextval('public.m2qtype_essaywiris_backup_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2qtype_match_options id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2qtype_match_options ALTER COLUMN id SET DEFAULT nextval('public.m2qtype_match_options_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2qtype_match_subquestions id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2qtype_match_subquestions ALTER COLUMN id SET DEFAULT nextval('public.m2qtype_match_subquestions_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2qtype_multichoice_options id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2qtype_multichoice_options ALTER COLUMN id SET DEFAULT nextval('public.m2qtype_multichoice_options_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2qtype_ordering_options id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2qtype_ordering_options ALTER COLUMN id SET DEFAULT nextval('public.m2qtype_ordering_options_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2qtype_randomsamatch_options id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2qtype_randomsamatch_options ALTER COLUMN id SET DEFAULT nextval('public.m2qtype_randomsamatch_options_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2qtype_shortanswer_options id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2qtype_shortanswer_options ALTER COLUMN id SET DEFAULT nextval('public.m2qtype_shortanswer_options_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2qtype_wq id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2qtype_wq ALTER COLUMN id SET DEFAULT nextval('public.m2qtype_wq_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2qtype_wq_variables id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2qtype_wq_variables ALTER COLUMN id SET DEFAULT nextval('public.m2qtype_wq_variables_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2question id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2question ALTER COLUMN id SET DEFAULT nextval('public.m2question_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2question_answers id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2question_answers ALTER COLUMN id SET DEFAULT nextval('public.m2question_answers_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2question_attempt_step_data id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2question_attempt_step_data ALTER COLUMN id SET DEFAULT nextval('public.m2question_attempt_step_data_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2question_attempt_steps id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2question_attempt_steps ALTER COLUMN id SET DEFAULT nextval('public.m2question_attempt_steps_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2question_attempts id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2question_attempts ALTER COLUMN id SET DEFAULT nextval('public.m2question_attempts_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2question_calculated id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2question_calculated ALTER COLUMN id SET DEFAULT nextval('public.m2question_calculated_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2question_calculated_options id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2question_calculated_options ALTER COLUMN id SET DEFAULT nextval('public.m2question_calculated_options_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2question_categories id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2question_categories ALTER COLUMN id SET DEFAULT nextval('public.m2question_categories_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2question_dataset_definitions id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2question_dataset_definitions ALTER COLUMN id SET DEFAULT nextval('public.m2question_dataset_definitions_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2question_dataset_items id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2question_dataset_items ALTER COLUMN id SET DEFAULT nextval('public.m2question_dataset_items_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2question_datasets id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2question_datasets ALTER COLUMN id SET DEFAULT nextval('public.m2question_datasets_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2question_ddwtos id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2question_ddwtos ALTER COLUMN id SET DEFAULT nextval('public.m2question_ddwtos_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2question_gapselect id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2question_gapselect ALTER COLUMN id SET DEFAULT nextval('public.m2question_gapselect_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2question_hints id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2question_hints ALTER COLUMN id SET DEFAULT nextval('public.m2question_hints_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2question_multianswer id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2question_multianswer ALTER COLUMN id SET DEFAULT nextval('public.m2question_multianswer_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2question_numerical id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2question_numerical ALTER COLUMN id SET DEFAULT nextval('public.m2question_numerical_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2question_numerical_options id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2question_numerical_options ALTER COLUMN id SET DEFAULT nextval('public.m2question_numerical_options_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2question_numerical_units id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2question_numerical_units ALTER COLUMN id SET DEFAULT nextval('public.m2question_numerical_units_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2question_response_analysis id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2question_response_analysis ALTER COLUMN id SET DEFAULT nextval('public.m2question_response_analysis_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2question_response_count id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2question_response_count ALTER COLUMN id SET DEFAULT nextval('public.m2question_response_count_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2question_statistics id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2question_statistics ALTER COLUMN id SET DEFAULT nextval('public.m2question_statistics_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2question_truefalse id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2question_truefalse ALTER COLUMN id SET DEFAULT nextval('public.m2question_truefalse_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2question_usages id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2question_usages ALTER COLUMN id SET DEFAULT nextval('public.m2question_usages_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2questionnaire id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2questionnaire ALTER COLUMN id SET DEFAULT nextval('public.m2questionnaire_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2questionnaire_dependency id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2questionnaire_dependency ALTER COLUMN id SET DEFAULT nextval('public.m2questionnaire_dependency_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2questionnaire_fb_sections id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2questionnaire_fb_sections ALTER COLUMN id SET DEFAULT nextval('public.m2questionnaire_fb_sections_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2questionnaire_feedback id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2questionnaire_feedback ALTER COLUMN id SET DEFAULT nextval('public.m2questionnaire_feedback_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2questionnaire_quest_choice id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2questionnaire_quest_choice ALTER COLUMN id SET DEFAULT nextval('public.m2questionnaire_quest_choice_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2questionnaire_question id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2questionnaire_question ALTER COLUMN id SET DEFAULT nextval('public.m2questionnaire_question_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2questionnaire_question_type id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2questionnaire_question_type ALTER COLUMN id SET DEFAULT nextval('public.m2questionnaire_question_type_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2questionnaire_resp_multiple id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2questionnaire_resp_multiple ALTER COLUMN id SET DEFAULT nextval('public.m2questionnaire_resp_multiple_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2questionnaire_resp_single id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2questionnaire_resp_single ALTER COLUMN id SET DEFAULT nextval('public.m2questionnaire_resp_single_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2questionnaire_response id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2questionnaire_response ALTER COLUMN id SET DEFAULT nextval('public.m2questionnaire_response_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2questionnaire_response_bool id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2questionnaire_response_bool ALTER COLUMN id SET DEFAULT nextval('public.m2questionnaire_response_bool_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2questionnaire_response_date id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2questionnaire_response_date ALTER COLUMN id SET DEFAULT nextval('public.m2questionnaire_response_date_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2questionnaire_response_other id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2questionnaire_response_other ALTER COLUMN id SET DEFAULT nextval('public.m2questionnaire_response_other_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2questionnaire_response_rank id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2questionnaire_response_rank ALTER COLUMN id SET DEFAULT nextval('public.m2questionnaire_response_rank_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2questionnaire_response_text id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2questionnaire_response_text ALTER COLUMN id SET DEFAULT nextval('public.m2questionnaire_response_text_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2questionnaire_survey id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2questionnaire_survey ALTER COLUMN id SET DEFAULT nextval('public.m2questionnaire_survey_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2quiz id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2quiz ALTER COLUMN id SET DEFAULT nextval('public.m2quiz_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2quiz_attempts id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2quiz_attempts ALTER COLUMN id SET DEFAULT nextval('public.m2quiz_attempts_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2quiz_feedback id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2quiz_feedback ALTER COLUMN id SET DEFAULT nextval('public.m2quiz_feedback_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2quiz_grades id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2quiz_grades ALTER COLUMN id SET DEFAULT nextval('public.m2quiz_grades_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2quiz_overrides id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2quiz_overrides ALTER COLUMN id SET DEFAULT nextval('public.m2quiz_overrides_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2quiz_overview_regrades id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2quiz_overview_regrades ALTER COLUMN id SET DEFAULT nextval('public.m2quiz_overview_regrades_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2quiz_reports id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2quiz_reports ALTER COLUMN id SET DEFAULT nextval('public.m2quiz_reports_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2quiz_sections id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2quiz_sections ALTER COLUMN id SET DEFAULT nextval('public.m2quiz_sections_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2quiz_slot_tags id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2quiz_slot_tags ALTER COLUMN id SET DEFAULT nextval('public.m2quiz_slot_tags_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2quiz_slots id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2quiz_slots ALTER COLUMN id SET DEFAULT nextval('public.m2quiz_slots_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2quiz_statistics id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2quiz_statistics ALTER COLUMN id SET DEFAULT nextval('public.m2quiz_statistics_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2qv id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2qv ALTER COLUMN id SET DEFAULT nextval('public.m2qv_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2qv_assignments id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2qv_assignments ALTER COLUMN id SET DEFAULT nextval('public.m2qv_assignments_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2qv_messages id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2qv_messages ALTER COLUMN id SET DEFAULT nextval('public.m2qv_messages_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2qv_messages_read id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2qv_messages_read ALTER COLUMN id SET DEFAULT nextval('public.m2qv_messages_read_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2qv_sections id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2qv_sections ALTER COLUMN id SET DEFAULT nextval('public.m2qv_sections_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2rating id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2rating ALTER COLUMN id SET DEFAULT nextval('public.m2rating_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2rcommon_books id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2rcommon_books ALTER COLUMN id SET DEFAULT nextval('public.m2rcommon_books_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2rcommon_books_activities id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2rcommon_books_activities ALTER COLUMN id SET DEFAULT nextval('public.m2rcommon_books_activities_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2rcommon_books_units id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2rcommon_books_units ALTER COLUMN id SET DEFAULT nextval('public.m2rcommon_books_units_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2rcommon_errors_log id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2rcommon_errors_log ALTER COLUMN id SET DEFAULT nextval('public.m2rcommon_errors_log_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2rcommon_level id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2rcommon_level ALTER COLUMN id SET DEFAULT nextval('public.m2rcommon_level_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2rcommon_publisher id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2rcommon_publisher ALTER COLUMN id SET DEFAULT nextval('public.m2rcommon_publisher_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2rcommon_user_credentials id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2rcommon_user_credentials ALTER COLUMN id SET DEFAULT nextval('public.m2rcommon_user_credentials_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2rcontent id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2rcontent ALTER COLUMN id SET DEFAULT nextval('public.m2rcontent_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2rcontent_grades id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2rcontent_grades ALTER COLUMN id SET DEFAULT nextval('public.m2rcontent_grades_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2rcontent_grades_details id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2rcontent_grades_details ALTER COLUMN id SET DEFAULT nextval('public.m2rcontent_grades_details_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2rcontent_track_credentials id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2rcontent_track_credentials ALTER COLUMN id SET DEFAULT nextval('public.m2rcontent_track_credentials_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2registration_hubs id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2registration_hubs ALTER COLUMN id SET DEFAULT nextval('public.m2registration_hubs_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2repository id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2repository ALTER COLUMN id SET DEFAULT nextval('public.m2repository_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2repository_instance_config id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2repository_instance_config ALTER COLUMN id SET DEFAULT nextval('public.m2repository_instance_config_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2repository_instances id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2repository_instances ALTER COLUMN id SET DEFAULT nextval('public.m2repository_instances_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2repository_onedrive_access id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2repository_onedrive_access ALTER COLUMN id SET DEFAULT nextval('public.m2repository_onedrive_access_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2resource id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2resource ALTER COLUMN id SET DEFAULT nextval('public.m2resource_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2resource_old id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2resource_old ALTER COLUMN id SET DEFAULT nextval('public.m2resource_old_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2role id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2role ALTER COLUMN id SET DEFAULT nextval('public.m2role_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2role_allow_assign id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2role_allow_assign ALTER COLUMN id SET DEFAULT nextval('public.m2role_allow_assign_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2role_allow_override id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2role_allow_override ALTER COLUMN id SET DEFAULT nextval('public.m2role_allow_override_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2role_allow_switch id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2role_allow_switch ALTER COLUMN id SET DEFAULT nextval('public.m2role_allow_switch_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2role_allow_view id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2role_allow_view ALTER COLUMN id SET DEFAULT nextval('public.m2role_allow_view_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2role_assignments id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2role_assignments ALTER COLUMN id SET DEFAULT nextval('public.m2role_assignments_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2role_capabilities id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2role_capabilities ALTER COLUMN id SET DEFAULT nextval('public.m2role_capabilities_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2role_context_levels id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2role_context_levels ALTER COLUMN id SET DEFAULT nextval('public.m2role_context_levels_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2role_names id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2role_names ALTER COLUMN id SET DEFAULT nextval('public.m2role_names_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2role_sortorder id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2role_sortorder ALTER COLUMN id SET DEFAULT nextval('public.m2role_sortorder_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2scale id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2scale ALTER COLUMN id SET DEFAULT nextval('public.m2scale_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2scale_history id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2scale_history ALTER COLUMN id SET DEFAULT nextval('public.m2scale_history_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2scorm id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2scorm ALTER COLUMN id SET DEFAULT nextval('public.m2scorm_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2scorm_aicc_session id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2scorm_aicc_session ALTER COLUMN id SET DEFAULT nextval('public.m2scorm_aicc_session_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2scorm_scoes id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2scorm_scoes ALTER COLUMN id SET DEFAULT nextval('public.m2scorm_scoes_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2scorm_scoes_data id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2scorm_scoes_data ALTER COLUMN id SET DEFAULT nextval('public.m2scorm_scoes_data_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2scorm_scoes_track id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2scorm_scoes_track ALTER COLUMN id SET DEFAULT nextval('public.m2scorm_scoes_track_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2scorm_seq_mapinfo id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2scorm_seq_mapinfo ALTER COLUMN id SET DEFAULT nextval('public.m2scorm_seq_mapinfo_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2scorm_seq_objective id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2scorm_seq_objective ALTER COLUMN id SET DEFAULT nextval('public.m2scorm_seq_objective_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2scorm_seq_rolluprule id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2scorm_seq_rolluprule ALTER COLUMN id SET DEFAULT nextval('public.m2scorm_seq_rolluprule_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2scorm_seq_rolluprulecond id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2scorm_seq_rolluprulecond ALTER COLUMN id SET DEFAULT nextval('public.m2scorm_seq_rolluprulecond_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2scorm_seq_rulecond id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2scorm_seq_rulecond ALTER COLUMN id SET DEFAULT nextval('public.m2scorm_seq_rulecond_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2scorm_seq_ruleconds id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2scorm_seq_ruleconds ALTER COLUMN id SET DEFAULT nextval('public.m2scorm_seq_ruleconds_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2search_index_requests id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2search_index_requests ALTER COLUMN id SET DEFAULT nextval('public.m2search_index_requests_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2search_simpledb_index id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2search_simpledb_index ALTER COLUMN id SET DEFAULT nextval('public.m2search_simpledb_index_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2sessions id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2sessions ALTER COLUMN id SET DEFAULT nextval('public.m2sessions_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2stats_daily id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2stats_daily ALTER COLUMN id SET DEFAULT nextval('public.m2stats_daily_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2stats_monthly id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2stats_monthly ALTER COLUMN id SET DEFAULT nextval('public.m2stats_monthly_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2stats_user_daily id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2stats_user_daily ALTER COLUMN id SET DEFAULT nextval('public.m2stats_user_daily_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2stats_user_monthly id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2stats_user_monthly ALTER COLUMN id SET DEFAULT nextval('public.m2stats_user_monthly_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2stats_user_weekly id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2stats_user_weekly ALTER COLUMN id SET DEFAULT nextval('public.m2stats_user_weekly_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2stats_weekly id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2stats_weekly ALTER COLUMN id SET DEFAULT nextval('public.m2stats_weekly_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2survey id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2survey ALTER COLUMN id SET DEFAULT nextval('public.m2survey_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2survey_analysis id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2survey_analysis ALTER COLUMN id SET DEFAULT nextval('public.m2survey_analysis_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2survey_answers id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2survey_answers ALTER COLUMN id SET DEFAULT nextval('public.m2survey_answers_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2survey_questions id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2survey_questions ALTER COLUMN id SET DEFAULT nextval('public.m2survey_questions_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2tag id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2tag ALTER COLUMN id SET DEFAULT nextval('public.m2tag_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2tag_area id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2tag_area ALTER COLUMN id SET DEFAULT nextval('public.m2tag_area_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2tag_coll id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2tag_coll ALTER COLUMN id SET DEFAULT nextval('public.m2tag_coll_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2tag_correlation id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2tag_correlation ALTER COLUMN id SET DEFAULT nextval('public.m2tag_correlation_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2tag_instance id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2tag_instance ALTER COLUMN id SET DEFAULT nextval('public.m2tag_instance_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2task_adhoc id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2task_adhoc ALTER COLUMN id SET DEFAULT nextval('public.m2task_adhoc_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2task_scheduled id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2task_scheduled ALTER COLUMN id SET DEFAULT nextval('public.m2task_scheduled_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2tool_cohortroles id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2tool_cohortroles ALTER COLUMN id SET DEFAULT nextval('public.m2tool_cohortroles_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2tool_customlang id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2tool_customlang ALTER COLUMN id SET DEFAULT nextval('public.m2tool_customlang_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2tool_customlang_components id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2tool_customlang_components ALTER COLUMN id SET DEFAULT nextval('public.m2tool_customlang_components_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2tool_dataprivacy_category id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2tool_dataprivacy_category ALTER COLUMN id SET DEFAULT nextval('public.m2tool_dataprivacy_category_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2tool_dataprivacy_ctxexpired id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2tool_dataprivacy_ctxexpired ALTER COLUMN id SET DEFAULT nextval('public.m2tool_dataprivacy_ctxexpired_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2tool_dataprivacy_ctxinstance id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2tool_dataprivacy_ctxinstance ALTER COLUMN id SET DEFAULT nextval('public.m2tool_dataprivacy_ctxinstance_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2tool_dataprivacy_ctxlevel id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2tool_dataprivacy_ctxlevel ALTER COLUMN id SET DEFAULT nextval('public.m2tool_dataprivacy_ctxlevel_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2tool_dataprivacy_purpose id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2tool_dataprivacy_purpose ALTER COLUMN id SET DEFAULT nextval('public.m2tool_dataprivacy_purpose_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2tool_dataprivacy_purposerole id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2tool_dataprivacy_purposerole ALTER COLUMN id SET DEFAULT nextval('public.m2tool_dataprivacy_purposerole_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2tool_dataprivacy_request id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2tool_dataprivacy_request ALTER COLUMN id SET DEFAULT nextval('public.m2tool_dataprivacy_request_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2tool_monitor_events id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2tool_monitor_events ALTER COLUMN id SET DEFAULT nextval('public.m2tool_monitor_events_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2tool_monitor_history id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2tool_monitor_history ALTER COLUMN id SET DEFAULT nextval('public.m2tool_monitor_history_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2tool_monitor_rules id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2tool_monitor_rules ALTER COLUMN id SET DEFAULT nextval('public.m2tool_monitor_rules_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2tool_monitor_subscriptions id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2tool_monitor_subscriptions ALTER COLUMN id SET DEFAULT nextval('public.m2tool_monitor_subscriptions_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2tool_policy id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2tool_policy ALTER COLUMN id SET DEFAULT nextval('public.m2tool_policy_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2tool_policy_acceptances id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2tool_policy_acceptances ALTER COLUMN id SET DEFAULT nextval('public.m2tool_policy_acceptances_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2tool_policy_versions id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2tool_policy_versions ALTER COLUMN id SET DEFAULT nextval('public.m2tool_policy_versions_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2tool_recyclebin_category id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2tool_recyclebin_category ALTER COLUMN id SET DEFAULT nextval('public.m2tool_recyclebin_category_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2tool_recyclebin_course id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2tool_recyclebin_course ALTER COLUMN id SET DEFAULT nextval('public.m2tool_recyclebin_course_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2tool_usertours_steps id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2tool_usertours_steps ALTER COLUMN id SET DEFAULT nextval('public.m2tool_usertours_steps_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2tool_usertours_tours id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2tool_usertours_tours ALTER COLUMN id SET DEFAULT nextval('public.m2tool_usertours_tours_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2upgrade_log id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2upgrade_log ALTER COLUMN id SET DEFAULT nextval('public.m2upgrade_log_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2url id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2url ALTER COLUMN id SET DEFAULT nextval('public.m2url_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2user id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2user ALTER COLUMN id SET DEFAULT nextval('public.m2user_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2user_devices id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2user_devices ALTER COLUMN id SET DEFAULT nextval('public.m2user_devices_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2user_enrolments id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2user_enrolments ALTER COLUMN id SET DEFAULT nextval('public.m2user_enrolments_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2user_info_category id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2user_info_category ALTER COLUMN id SET DEFAULT nextval('public.m2user_info_category_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2user_info_data id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2user_info_data ALTER COLUMN id SET DEFAULT nextval('public.m2user_info_data_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2user_info_field id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2user_info_field ALTER COLUMN id SET DEFAULT nextval('public.m2user_info_field_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2user_lastaccess id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2user_lastaccess ALTER COLUMN id SET DEFAULT nextval('public.m2user_lastaccess_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2user_password_history id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2user_password_history ALTER COLUMN id SET DEFAULT nextval('public.m2user_password_history_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2user_password_resets id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2user_password_resets ALTER COLUMN id SET DEFAULT nextval('public.m2user_password_resets_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2user_preferences id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2user_preferences ALTER COLUMN id SET DEFAULT nextval('public.m2user_preferences_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2user_private_key id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2user_private_key ALTER COLUMN id SET DEFAULT nextval('public.m2user_private_key_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2wiki id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2wiki ALTER COLUMN id SET DEFAULT nextval('public.m2wiki_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2wiki_links id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2wiki_links ALTER COLUMN id SET DEFAULT nextval('public.m2wiki_links_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2wiki_locks id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2wiki_locks ALTER COLUMN id SET DEFAULT nextval('public.m2wiki_locks_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2wiki_pages id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2wiki_pages ALTER COLUMN id SET DEFAULT nextval('public.m2wiki_pages_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2wiki_subwikis id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2wiki_subwikis ALTER COLUMN id SET DEFAULT nextval('public.m2wiki_subwikis_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2wiki_synonyms id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2wiki_synonyms ALTER COLUMN id SET DEFAULT nextval('public.m2wiki_synonyms_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2wiki_versions id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2wiki_versions ALTER COLUMN id SET DEFAULT nextval('public.m2wiki_versions_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2workshop id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2workshop ALTER COLUMN id SET DEFAULT nextval('public.m2workshop_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2workshop_aggregations id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2workshop_aggregations ALTER COLUMN id SET DEFAULT nextval('public.m2workshop_aggregations_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2workshop_assessments id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2workshop_assessments ALTER COLUMN id SET DEFAULT nextval('public.m2workshop_assessments_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2workshop_grades id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2workshop_grades ALTER COLUMN id SET DEFAULT nextval('public.m2workshop_grades_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2workshop_submissions id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2workshop_submissions ALTER COLUMN id SET DEFAULT nextval('public.m2workshop_submissions_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2workshopallocation_scheduled id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2workshopallocation_scheduled ALTER COLUMN id SET DEFAULT nextval('public.m2workshopallocation_scheduled_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2workshopeval_best_settings id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2workshopeval_best_settings ALTER COLUMN id SET DEFAULT nextval('public.m2workshopeval_best_settings_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2workshopform_accumulative id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2workshopform_accumulative ALTER COLUMN id SET DEFAULT nextval('public.m2workshopform_accumulative_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2workshopform_comments id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2workshopform_comments ALTER COLUMN id SET DEFAULT nextval('public.m2workshopform_comments_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2workshopform_numerrors id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2workshopform_numerrors ALTER COLUMN id SET DEFAULT nextval('public.m2workshopform_numerrors_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2workshopform_numerrors_map id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2workshopform_numerrors_map ALTER COLUMN id SET DEFAULT nextval('public.m2workshopform_numerrors_map_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2workshopform_rubric id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2workshopform_rubric ALTER COLUMN id SET DEFAULT nextval('public.m2workshopform_rubric_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2workshopform_rubric_config id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2workshopform_rubric_config ALTER COLUMN id SET DEFAULT nextval('public.m2workshopform_rubric_config_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: m2workshopform_rubric_levels id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2workshopform_rubric_levels ALTER COLUMN id SET DEFAULT nextval('public.m2workshopform_rubric_levels_id_seq'::regclass);
@@ -24217,13 +24218,6 @@ COPY public.m2analytics_indicator_calc (id, starttime, endtime, contextid, sampl
 
 
 --
--- Name: m2analytics_indicator_calc_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2analytics_indicator_calc_id_seq', 1, false);
-
-
---
 -- Data for Name: m2analytics_models; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -24231,13 +24225,6 @@ COPY public.m2analytics_models (id, enabled, trained, target, indicators, timesp
 1	0	0	\\core\\analytics\\target\\course_dropout	["\\\\mod_assign\\\\analytics\\\\indicator\\\\cognitive_depth","\\\\mod_assign\\\\analytics\\\\indicator\\\\social_breadth","\\\\mod_book\\\\analytics\\\\indicator\\\\cognitive_depth","\\\\mod_book\\\\analytics\\\\indicator\\\\social_breadth","\\\\mod_chat\\\\analytics\\\\indicator\\\\cognitive_depth","\\\\mod_chat\\\\analytics\\\\indicator\\\\social_breadth","\\\\mod_choice\\\\analytics\\\\indicator\\\\cognitive_depth","\\\\mod_choice\\\\analytics\\\\indicator\\\\social_breadth","\\\\mod_data\\\\analytics\\\\indicator\\\\cognitive_depth","\\\\mod_data\\\\analytics\\\\indicator\\\\social_breadth","\\\\mod_feedback\\\\analytics\\\\indicator\\\\cognitive_depth","\\\\mod_feedback\\\\analytics\\\\indicator\\\\social_breadth","\\\\mod_folder\\\\analytics\\\\indicator\\\\cognitive_depth","\\\\mod_folder\\\\analytics\\\\indicator\\\\social_breadth","\\\\mod_forum\\\\analytics\\\\indicator\\\\cognitive_depth","\\\\mod_forum\\\\analytics\\\\indicator\\\\social_breadth","\\\\mod_glossary\\\\analytics\\\\indicator\\\\cognitive_depth","\\\\mod_glossary\\\\analytics\\\\indicator\\\\social_breadth","\\\\mod_imscp\\\\analytics\\\\indicator\\\\cognitive_depth","\\\\mod_imscp\\\\analytics\\\\indicator\\\\social_breadth","\\\\mod_label\\\\analytics\\\\indicator\\\\cognitive_depth","\\\\mod_label\\\\analytics\\\\indicator\\\\social_breadth","\\\\mod_lesson\\\\analytics\\\\indicator\\\\cognitive_depth","\\\\mod_lesson\\\\analytics\\\\indicator\\\\social_breadth","\\\\mod_lti\\\\analytics\\\\indicator\\\\cognitive_depth","\\\\mod_lti\\\\analytics\\\\indicator\\\\social_breadth","\\\\mod_page\\\\analytics\\\\indicator\\\\cognitive_depth","\\\\mod_page\\\\analytics\\\\indicator\\\\social_breadth","\\\\mod_quiz\\\\analytics\\\\indicator\\\\cognitive_depth","\\\\mod_quiz\\\\analytics\\\\indicator\\\\social_breadth","\\\\mod_resource\\\\analytics\\\\indicator\\\\cognitive_depth","\\\\mod_resource\\\\analytics\\\\indicator\\\\social_breadth","\\\\mod_scorm\\\\analytics\\\\indicator\\\\cognitive_depth","\\\\mod_scorm\\\\analytics\\\\indicator\\\\social_breadth","\\\\mod_survey\\\\analytics\\\\indicator\\\\cognitive_depth","\\\\mod_survey\\\\analytics\\\\indicator\\\\social_breadth","\\\\mod_url\\\\analytics\\\\indicator\\\\cognitive_depth","\\\\mod_url\\\\analytics\\\\indicator\\\\social_breadth","\\\\mod_wiki\\\\analytics\\\\indicator\\\\cognitive_depth","\\\\mod_wiki\\\\analytics\\\\indicator\\\\social_breadth","\\\\mod_workshop\\\\analytics\\\\indicator\\\\cognitive_depth","\\\\mod_workshop\\\\analytics\\\\indicator\\\\social_breadth","\\\\core_course\\\\analytics\\\\indicator\\\\completion_enabled","\\\\core_course\\\\analytics\\\\indicator\\\\potential_cognitive_depth","\\\\core_course\\\\analytics\\\\indicator\\\\potential_social_breadth","\\\\core\\\\analytics\\\\indicator\\\\any_access_after_end","\\\\core\\\\analytics\\\\indicator\\\\any_access_before_start","\\\\core\\\\analytics\\\\indicator\\\\any_write_action_in_course","\\\\core\\\\analytics\\\\indicator\\\\read_actions"]	\N	0	1572464187	1572464187	1572464187	0
 2	1	1	\\core\\analytics\\target\\no_teaching	["\\\\core_course\\\\analytics\\\\indicator\\\\no_teacher","\\\\core_course\\\\analytics\\\\indicator\\\\no_student"]	\\core\\analytics\\time_splitting\\single_range	0	1572464187	1572464187	1572464187	0
 \.
-
-
---
--- Name: m2analytics_models_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2analytics_models_id_seq', 2, true);
 
 
 --
@@ -24249,25 +24236,11 @@ COPY public.m2analytics_models_log (id, modelid, version, target, indicators, ti
 
 
 --
--- Name: m2analytics_models_log_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2analytics_models_log_id_seq', 1, false);
-
-
---
 -- Data for Name: m2analytics_predict_samples; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2analytics_predict_samples (id, modelid, analysableid, timesplitting, rangeindex, sampleids, timecreated, timemodified) FROM stdin;
 \.
-
-
---
--- Name: m2analytics_predict_samples_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2analytics_predict_samples_id_seq', 1, false);
 
 
 --
@@ -24279,25 +24252,11 @@ COPY public.m2analytics_prediction_actions (id, predictionid, userid, actionname
 
 
 --
--- Name: m2analytics_prediction_actions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2analytics_prediction_actions_id_seq', 1, false);
-
-
---
 -- Data for Name: m2analytics_predictions; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2analytics_predictions (id, modelid, contextid, sampleid, rangeindex, prediction, predictionscore, calculations, timecreated, timestart, timeend) FROM stdin;
 \.
-
-
---
--- Name: m2analytics_predictions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2analytics_predictions_id_seq', 1, false);
 
 
 --
@@ -24309,13 +24268,6 @@ COPY public.m2analytics_train_samples (id, modelid, analysableid, timesplitting,
 
 
 --
--- Name: m2analytics_train_samples_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2analytics_train_samples_id_seq', 1, false);
-
-
---
 -- Data for Name: m2analytics_used_analysables; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -24324,25 +24276,11 @@ COPY public.m2analytics_used_analysables (id, modelid, action, analysableid, tim
 
 
 --
--- Name: m2analytics_used_analysables_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2analytics_used_analysables_id_seq', 1, false);
-
-
---
 -- Data for Name: m2analytics_used_files; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2analytics_used_files (id, modelid, fileid, action, "time") FROM stdin;
 \.
-
-
---
--- Name: m2analytics_used_files_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2analytics_used_files_id_seq', 1, false);
 
 
 --
@@ -24362,32 +24300,11 @@ COPY public.m2assign_grades (id, assignment, userid, timecreated, timemodified, 
 
 
 --
--- Name: m2assign_grades_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2assign_grades_id_seq', 1, false);
-
-
---
--- Name: m2assign_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2assign_id_seq', 1, false);
-
-
---
 -- Data for Name: m2assign_overrides; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2assign_overrides (id, assignid, groupid, userid, sortorder, allowsubmissionsfromdate, duedate, cutoffdate) FROM stdin;
 \.
-
-
---
--- Name: m2assign_overrides_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2assign_overrides_id_seq', 1, false);
 
 
 --
@@ -24399,25 +24316,11 @@ COPY public.m2assign_plugin_config (id, assignment, plugin, subtype, name, value
 
 
 --
--- Name: m2assign_plugin_config_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2assign_plugin_config_id_seq', 1, false);
-
-
---
 -- Data for Name: m2assign_submission; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2assign_submission (id, assignment, userid, timecreated, timemodified, status, groupid, attemptnumber, latest) FROM stdin;
 \.
-
-
---
--- Name: m2assign_submission_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2assign_submission_id_seq', 1, false);
 
 
 --
@@ -24429,25 +24332,11 @@ COPY public.m2assign_user_flags (id, userid, assignment, locked, mailed, extensi
 
 
 --
--- Name: m2assign_user_flags_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2assign_user_flags_id_seq', 1, false);
-
-
---
 -- Data for Name: m2assign_user_mapping; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2assign_user_mapping (id, assignment, userid) FROM stdin;
 \.
-
-
---
--- Name: m2assign_user_mapping_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2assign_user_mapping_id_seq', 1, false);
 
 
 --
@@ -24459,25 +24348,11 @@ COPY public.m2assignfeedback_comments (id, assignment, grade, commenttext, comme
 
 
 --
--- Name: m2assignfeedback_comments_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2assignfeedback_comments_id_seq', 1, false);
-
-
---
 -- Data for Name: m2assignfeedback_editpdf_annot; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2assignfeedback_editpdf_annot (id, gradeid, pageno, x, y, endx, endy, path, type, colour, draft) FROM stdin;
 \.
-
-
---
--- Name: m2assignfeedback_editpdf_annot_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2assignfeedback_editpdf_annot_id_seq', 1, false);
 
 
 --
@@ -24489,25 +24364,11 @@ COPY public.m2assignfeedback_editpdf_cmnt (id, gradeid, x, y, width, rawtext, pa
 
 
 --
--- Name: m2assignfeedback_editpdf_cmnt_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2assignfeedback_editpdf_cmnt_id_seq', 1, false);
-
-
---
 -- Data for Name: m2assignfeedback_editpdf_queue; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2assignfeedback_editpdf_queue (id, submissionid, submissionattempt, attemptedconversions) FROM stdin;
 \.
-
-
---
--- Name: m2assignfeedback_editpdf_queue_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2assignfeedback_editpdf_queue_id_seq', 1, false);
 
 
 --
@@ -24519,25 +24380,11 @@ COPY public.m2assignfeedback_editpdf_quick (id, userid, rawtext, width, colour) 
 
 
 --
--- Name: m2assignfeedback_editpdf_quick_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2assignfeedback_editpdf_quick_id_seq', 1, false);
-
-
---
 -- Data for Name: m2assignfeedback_file; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2assignfeedback_file (id, assignment, grade, numfiles) FROM stdin;
 \.
-
-
---
--- Name: m2assignfeedback_file_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2assignfeedback_file_id_seq', 1, false);
 
 
 --
@@ -24549,25 +24396,11 @@ COPY public.m2assignment (id, course, name, intro, introformat, assignmenttype, 
 
 
 --
--- Name: m2assignment_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2assignment_id_seq', 1, false);
-
-
---
 -- Data for Name: m2assignment_submissions; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2assignment_submissions (id, assignment, userid, timecreated, timemodified, numfiles, data1, data2, grade, submissioncomment, format, teacher, timemarked, mailed) FROM stdin;
 \.
-
-
---
--- Name: m2assignment_submissions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2assignment_submissions_id_seq', 1, false);
 
 
 --
@@ -24579,25 +24412,11 @@ COPY public.m2assignment_upgrade (id, oldcmid, oldinstance, newcmid, newinstance
 
 
 --
--- Name: m2assignment_upgrade_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2assignment_upgrade_id_seq', 1, false);
-
-
---
 -- Data for Name: m2assignsubmission_file; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2assignsubmission_file (id, assignment, submission, numfiles) FROM stdin;
 \.
-
-
---
--- Name: m2assignsubmission_file_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2assignsubmission_file_id_seq', 1, false);
 
 
 --
@@ -24609,25 +24428,11 @@ COPY public.m2assignsubmission_onlinetext (id, assignment, submission, onlinetex
 
 
 --
--- Name: m2assignsubmission_onlinetext_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2assignsubmission_onlinetext_id_seq', 1, false);
-
-
---
 -- Data for Name: m2auth_oauth2_linked_login; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2auth_oauth2_linked_login (id, timecreated, timemodified, usermodified, userid, issuerid, username, email, confirmtoken, confirmtokenexpires) FROM stdin;
 \.
-
-
---
--- Name: m2auth_oauth2_linked_login_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2auth_oauth2_linked_login_id_seq', 1, false);
 
 
 --
@@ -24639,13 +24444,6 @@ COPY public.m2backup_controllers (id, backupid, operation, type, itemid, format,
 
 
 --
--- Name: m2backup_controllers_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2backup_controllers_id_seq', 1, false);
-
-
---
 -- Data for Name: m2backup_courses; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -24654,25 +24452,11 @@ COPY public.m2backup_courses (id, courseid, laststarttime, lastendtime, laststat
 
 
 --
--- Name: m2backup_courses_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2backup_courses_id_seq', 1, false);
-
-
---
 -- Data for Name: m2backup_logs; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2backup_logs (id, backupid, loglevel, message, timecreated) FROM stdin;
 \.
-
-
---
--- Name: m2backup_logs_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2backup_logs_id_seq', 1, false);
 
 
 --
@@ -24692,25 +24476,11 @@ COPY public.m2badge_backpack (id, userid, email, backpackurl, backpackuid, autos
 
 
 --
--- Name: m2badge_backpack_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2badge_backpack_id_seq', 1, false);
-
-
---
 -- Data for Name: m2badge_competencies; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2badge_competencies (id, badgeid, targetname, targeturl, targetdescription, targetframework, targetcode) FROM stdin;
 \.
-
-
---
--- Name: m2badge_competencies_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2badge_competencies_id_seq', 1, false);
 
 
 --
@@ -24722,25 +24492,11 @@ COPY public.m2badge_criteria (id, badgeid, criteriatype, method, description, de
 
 
 --
--- Name: m2badge_criteria_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2badge_criteria_id_seq', 1, false);
-
-
---
 -- Data for Name: m2badge_criteria_met; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2badge_criteria_met (id, issuedid, critid, userid, datemet) FROM stdin;
 \.
-
-
---
--- Name: m2badge_criteria_met_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2badge_criteria_met_id_seq', 1, false);
 
 
 --
@@ -24752,25 +24508,11 @@ COPY public.m2badge_criteria_param (id, critid, name, value) FROM stdin;
 
 
 --
--- Name: m2badge_criteria_param_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2badge_criteria_param_id_seq', 1, false);
-
-
---
 -- Data for Name: m2badge_endorsement; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2badge_endorsement (id, badgeid, issuername, issuerurl, issueremail, claimid, claimcomment, dateissued) FROM stdin;
 \.
-
-
---
--- Name: m2badge_endorsement_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2badge_endorsement_id_seq', 1, false);
 
 
 --
@@ -24782,32 +24524,11 @@ COPY public.m2badge_external (id, backpackid, collectionid) FROM stdin;
 
 
 --
--- Name: m2badge_external_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2badge_external_id_seq', 1, false);
-
-
---
--- Name: m2badge_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2badge_id_seq', 1, false);
-
-
---
 -- Data for Name: m2badge_issued; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2badge_issued (id, badgeid, userid, uniquehash, dateissued, dateexpire, visible, issuernotified) FROM stdin;
 \.
-
-
---
--- Name: m2badge_issued_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2badge_issued_id_seq', 1, false);
 
 
 --
@@ -24819,13 +24540,6 @@ COPY public.m2badge_manual_award (id, badgeid, recipientid, issuerid, issuerrole
 
 
 --
--- Name: m2badge_manual_award_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2badge_manual_award_id_seq', 1, false);
-
-
---
 -- Data for Name: m2badge_related; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -24834,25 +24548,11 @@ COPY public.m2badge_related (id, badgeid, relatedbadgeid) FROM stdin;
 
 
 --
--- Name: m2badge_related_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2badge_related_id_seq', 1, false);
-
-
---
 -- Data for Name: m2bigdata_profiles; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2bigdata_profiles (id, name, courses, roles, excludedusers, tablefields, periodicity, weekday, lastcron, savedirectory) FROM stdin;
 \.
-
-
---
--- Name: m2bigdata_profiles_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2bigdata_profiles_id_seq', 1, false);
 
 
 --
@@ -24922,20 +24622,6 @@ COPY public.m2block_community (id, userid, coursename, coursedescription, course
 
 
 --
--- Name: m2block_community_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2block_community_id_seq', 1, false);
-
-
---
--- Name: m2block_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2block_id_seq', 50, true);
-
-
---
 -- Data for Name: m2block_instances; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -24970,14 +24656,8 @@ COPY public.m2block_instances (id, blockname, parentcontextid, showinsubcontexts
 28	online_users	27	0	0	my-index	4	side-post	2		1572476468	1572476468
 29	private_files	27	0	0	my-index	4	side-post	1		1572476468	1572476468
 30	timeline	27	0	0	my-index	4	side-post	0		1572476468	1572476468
+31	calendar_month	2	0	0	site-index	\N	side-pre	1		1584379319	1584379319
 \.
-
-
---
--- Name: m2block_instances_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2block_instances_id_seq', 30, true);
 
 
 --
@@ -24989,25 +24669,11 @@ COPY public.m2block_positions (id, blockinstanceid, contextid, pagetype, subpage
 
 
 --
--- Name: m2block_positions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2block_positions_id_seq', 1, false);
-
-
---
 -- Data for Name: m2block_recent_activity; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2block_recent_activity (id, courseid, cmid, timecreated, userid, action, modname) FROM stdin;
 \.
-
-
---
--- Name: m2block_recent_activity_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2block_recent_activity_id_seq', 1, false);
 
 
 --
@@ -25019,25 +24685,11 @@ COPY public.m2block_recentlyaccesseditems (id, courseid, cmid, userid, timeacces
 
 
 --
--- Name: m2block_recentlyaccesseditems_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2block_recentlyaccesseditems_id_seq', 1, false);
-
-
---
 -- Data for Name: m2block_rss_client; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2block_rss_client (id, userid, title, preferredtitle, description, shared, url, skiptime, skipuntil) FROM stdin;
 \.
-
-
---
--- Name: m2block_rss_client_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2block_rss_client_id_seq', 1, false);
 
 
 --
@@ -25049,25 +24701,11 @@ COPY public.m2blog_association (id, contextid, blogid) FROM stdin;
 
 
 --
--- Name: m2blog_association_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2blog_association_id_seq', 1, false);
-
-
---
 -- Data for Name: m2blog_external; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2blog_external (id, userid, name, description, url, filtertags, failedlastsync, timemodified, timefetched) FROM stdin;
 \.
-
-
---
--- Name: m2blog_external_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2blog_external_id_seq', 1, false);
 
 
 --
@@ -25087,20 +24725,6 @@ COPY public.m2book_chapters (id, bookid, pagenum, subchapter, title, content, co
 
 
 --
--- Name: m2book_chapters_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2book_chapters_id_seq', 1, false);
-
-
---
--- Name: m2book_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2book_id_seq', 1, false);
-
-
---
 -- Data for Name: m2cache_filters; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -25109,27 +24733,14 @@ COPY public.m2cache_filters (id, filter, version, md5key, rawtext, timemodified)
 
 
 --
--- Name: m2cache_filters_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2cache_filters_id_seq', 1, false);
-
-
---
 -- Data for Name: m2cache_flags; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2cache_flags (id, flagtype, name, timemodified, value, expiry) FROM stdin;
-2	userpreferenceschanged	3	1572476488	1	1572480088
-1	userpreferenceschanged	2	1572476575	1	1572480175
+1	userpreferenceschanged	2	1584376910	1	1584380510
+3	accesslib/dirtycontexts	/1	1584376914	1	1584380514
+2	userpreferenceschanged	3	1584378916	1	1584382516
 \.
-
-
---
--- Name: m2cache_flags_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2cache_flags_id_seq', 2, true);
 
 
 --
@@ -25842,14 +25453,9 @@ COPY public.m2capabilities (id, name, captype, contextlevel, component, riskbitm
 703	local/rcommon:importcredentials	write	10	local_rcommon	0
 704	local/rcommon:managecredentials	write	10	local_rcommon	0
 705	local/rcommon:editowncredentials	write	10	local_rcommon	0
+706	mod/hvp:emailconfirmsubmission	read	70	mod_hvp	0
+707	mod/hvp:emailnotifysubmission	read	70	mod_hvp	0
 \.
-
-
---
--- Name: m2capabilities_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2capabilities_id_seq', 705, true);
 
 
 --
@@ -25858,13 +25464,6 @@ SELECT pg_catalog.setval('public.m2capabilities_id_seq', 705, true);
 
 COPY public.m2chat (id, course, name, intro, introformat, keepdays, studentlogs, chattime, schedule, timemodified) FROM stdin;
 \.
-
-
---
--- Name: m2chat_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2chat_id_seq', 1, false);
 
 
 --
@@ -25884,32 +25483,11 @@ COPY public.m2chat_messages_current (id, chatid, userid, groupid, issystem, mess
 
 
 --
--- Name: m2chat_messages_current_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2chat_messages_current_id_seq', 1, false);
-
-
---
--- Name: m2chat_messages_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2chat_messages_id_seq', 1, false);
-
-
---
 -- Data for Name: m2chat_users; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2chat_users (id, chatid, userid, groupid, version, ip, firstping, lastping, lastmessageping, sid, course, lang) FROM stdin;
 \.
-
-
---
--- Name: m2chat_users_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2chat_users_id_seq', 1, false);
 
 
 --
@@ -25929,32 +25507,11 @@ COPY public.m2choice_answers (id, choiceid, userid, optionid, timemodified) FROM
 
 
 --
--- Name: m2choice_answers_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2choice_answers_id_seq', 1, false);
-
-
---
--- Name: m2choice_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2choice_id_seq', 1, false);
-
-
---
 -- Data for Name: m2choice_options; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2choice_options (id, choiceid, text, maxanswers, timemodified) FROM stdin;
 \.
-
-
---
--- Name: m2choice_options_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2choice_options_id_seq', 1, false);
 
 
 --
@@ -25966,25 +25523,11 @@ COPY public.m2choicegroup (id, course, name, intro, introformat, publish, multip
 
 
 --
--- Name: m2choicegroup_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2choicegroup_id_seq', 1, false);
-
-
---
 -- Data for Name: m2choicegroup_options; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2choicegroup_options (id, choicegroupid, groupid, maxanswers, timemodified) FROM stdin;
 \.
-
-
---
--- Name: m2choicegroup_options_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2choicegroup_options_id_seq', 1, false);
 
 
 --
@@ -25996,13 +25539,6 @@ COPY public.m2cohort (id, contextid, name, idnumber, description, descriptionfor
 
 
 --
--- Name: m2cohort_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2cohort_id_seq', 1, false);
-
-
---
 -- Data for Name: m2cohort_members; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -26011,25 +25547,11 @@ COPY public.m2cohort_members (id, cohortid, userid, timeadded) FROM stdin;
 
 
 --
--- Name: m2cohort_members_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2cohort_members_id_seq', 1, false);
-
-
---
 -- Data for Name: m2comments; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2comments (id, contextid, component, commentarea, itemid, content, format, userid, timecreated) FROM stdin;
 \.
-
-
---
--- Name: m2comments_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2comments_id_seq', 1, false);
 
 
 --
@@ -26049,25 +25571,11 @@ COPY public.m2competency_coursecomp (id, courseid, competencyid, ruleoutcome, ti
 
 
 --
--- Name: m2competency_coursecomp_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2competency_coursecomp_id_seq', 1, false);
-
-
---
 -- Data for Name: m2competency_coursecompsetting; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2competency_coursecompsetting (id, courseid, pushratingstouserplans, timecreated, timemodified, usermodified) FROM stdin;
 \.
-
-
---
--- Name: m2competency_coursecompsetting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2competency_coursecompsetting_id_seq', 1, false);
 
 
 --
@@ -26079,32 +25587,11 @@ COPY public.m2competency_evidence (id, usercompetencyid, contextid, action, acti
 
 
 --
--- Name: m2competency_evidence_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2competency_evidence_id_seq', 1, false);
-
-
---
 -- Data for Name: m2competency_framework; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2competency_framework (id, shortname, contextid, idnumber, description, descriptionformat, scaleid, scaleconfiguration, visible, taxonomies, timecreated, timemodified, usermodified) FROM stdin;
 \.
-
-
---
--- Name: m2competency_framework_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2competency_framework_id_seq', 1, false);
-
-
---
--- Name: m2competency_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2competency_id_seq', 1, false);
 
 
 --
@@ -26116,25 +25603,11 @@ COPY public.m2competency_modulecomp (id, cmid, timecreated, timemodified, usermo
 
 
 --
--- Name: m2competency_modulecomp_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2competency_modulecomp_id_seq', 1, false);
-
-
---
 -- Data for Name: m2competency_plan; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2competency_plan (id, name, description, descriptionformat, userid, templateid, origtemplateid, status, duedate, reviewerid, timecreated, timemodified, usermodified) FROM stdin;
 \.
-
-
---
--- Name: m2competency_plan_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2competency_plan_id_seq', 1, false);
 
 
 --
@@ -26146,25 +25619,11 @@ COPY public.m2competency_plancomp (id, planid, competencyid, sortorder, timecrea
 
 
 --
--- Name: m2competency_plancomp_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2competency_plancomp_id_seq', 1, false);
-
-
---
 -- Data for Name: m2competency_relatedcomp; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2competency_relatedcomp (id, competencyid, relatedcompetencyid, timecreated, timemodified, usermodified) FROM stdin;
 \.
-
-
---
--- Name: m2competency_relatedcomp_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2competency_relatedcomp_id_seq', 1, false);
 
 
 --
@@ -26176,25 +25635,11 @@ COPY public.m2competency_template (id, shortname, contextid, description, descri
 
 
 --
--- Name: m2competency_template_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2competency_template_id_seq', 1, false);
-
-
---
 -- Data for Name: m2competency_templatecohort; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2competency_templatecohort (id, templateid, cohortid, timecreated, timemodified, usermodified) FROM stdin;
 \.
-
-
---
--- Name: m2competency_templatecohort_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2competency_templatecohort_id_seq', 1, false);
 
 
 --
@@ -26206,25 +25651,11 @@ COPY public.m2competency_templatecomp (id, templateid, competencyid, timecreated
 
 
 --
--- Name: m2competency_templatecomp_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2competency_templatecomp_id_seq', 1, false);
-
-
---
 -- Data for Name: m2competency_usercomp; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2competency_usercomp (id, userid, competencyid, status, reviewerid, proficiency, grade, timecreated, timemodified, usermodified) FROM stdin;
 \.
-
-
---
--- Name: m2competency_usercomp_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2competency_usercomp_id_seq', 1, false);
 
 
 --
@@ -26236,25 +25667,11 @@ COPY public.m2competency_usercompcourse (id, userid, courseid, competencyid, pro
 
 
 --
--- Name: m2competency_usercompcourse_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2competency_usercompcourse_id_seq', 1, false);
-
-
---
 -- Data for Name: m2competency_usercompplan; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2competency_usercompplan (id, userid, competencyid, planid, proficiency, grade, sortorder, timecreated, timemodified, usermodified) FROM stdin;
 \.
-
-
---
--- Name: m2competency_usercompplan_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2competency_usercompplan_id_seq', 1, false);
 
 
 --
@@ -26266,25 +25683,11 @@ COPY public.m2competency_userevidence (id, userid, name, description, descriptio
 
 
 --
--- Name: m2competency_userevidence_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2competency_userevidence_id_seq', 1, false);
-
-
---
 -- Data for Name: m2competency_userevidencecomp; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2competency_userevidencecomp (id, userevidenceid, competencyid, timecreated, timemodified, usermodified) FROM stdin;
 \.
-
-
---
--- Name: m2competency_userevidencecomp_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2competency_userevidencecomp_id_seq', 1, false);
 
 
 --
@@ -26311,7 +25714,6 @@ COPY public.m2config (id, name, value) FROM stdin;
 22	siteguest	1
 26	gdversion	2
 27	licenses	unknown,allrightsreserved,public,cc,cc-nd,cc-nc-nd,cc-nc,cc-nc-sa,cc-sa
-28	version	2018120306.02
 29	enableoutcomes	0
 30	usecomments	1
 31	usetags	1
@@ -26395,7 +25797,6 @@ COPY public.m2config (id, name, value) FROM stdin;
 110	grade_report_showquickfeedback	0
 111	grade_report_meanselection	1
 112	grade_report_enableajax	0
-113	grade_report_showcalculations	1
 114	grade_report_showeyecons	0
 115	grade_report_showaverages	1
 116	grade_report_showlocks	0
@@ -26406,14 +25807,15 @@ COPY public.m2config (id, name, value) FROM stdin;
 121	grade_report_shownumberofgrades	0
 122	grade_report_averagesdisplaytype	inherit
 123	grade_report_rangesdisplaytype	inherit
-13	filterall	0
 14	texteditors	atto,tinymce,textarea
 2	rolesactive	1
-23	siteadmins	3,2
 34	enablewebservices	1
 5	theme	xtec2
-24	themerev	1572476342
 124	grade_report_averagesdecimalpoints	inherit
+23	siteadmins	3,2
+113	grade_report_showcalculations	1
+13	filterall	0
+24	themerev	1584376922
 125	grade_report_rangesdecimalpoints	inherit
 126	grade_report_historyperpage	50
 127	grade_report_overview_showrank	0
@@ -26671,8 +26073,6 @@ COPY public.m2config (id, name, value) FROM stdin;
 383	profilingallowall	0
 384	profilinglifetime	1440
 385	profilingimportprefix	(I)
-386	release	3.6.6+ (Build: 20190913)
-387	branch	36
 442	pathtounoconv	/usr/bin/unoconv
 443	filter_multilang_force_old	0
 444	filter_censor_badwords	
@@ -26769,25 +26169,25 @@ COPY public.m2config (id, name, value) FROM stdin;
 487	hotpot_maxeventlength	5
 488	vicensvives_apiurl	http://api.vicensvivesdigital.com/rest
 492	block_courses_vicensvives_defaultcategory	1
-390	allversionshash	4381c19577b6f69d32d362f4332bfb3a1444f472
-388	localcachedirpurged	1572476342
-389	scheduledtaskreset	1572476342
 280	defaulthomepage	0
 489	vicensvives_sharekey	
 490	vicensvives_sharepass	
 491	block_courses_vicensvives_maxcourses	10
 493	vicensvives_moodlews	1
 457	profileroles	3,4,5
-157	langrev	1572476342
-25	jsrev	1572476342
+495	apligestmail	1
+390	allversionshash	fbf6a998834a2e76076cf09f28ff9906c7c0f8b9
+28	version	2018120307
+389	scheduledtaskreset	1584376922
+386	release	3.6.7 (Build: 20191111)
+387	branch	36
+388	localcachedirpurged	1584376922
+25	jsrev	1584376922
+496	apligestlog	
+497	apligestlogdebug	
+498	apligestlogpath	/dades//data/portaldata//data/moodle2/usu1/log
+157	langrev	1584376922
 \.
-
-
---
--- Name: m2config_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2config_id_seq', 493, true);
 
 
 --
@@ -26795,1739 +26195,7 @@ SELECT pg_catalog.setval('public.m2config_id_seq', 493, true);
 --
 
 COPY public.m2config_log (id, userid, timemodified, plugin, name, value, oldvalue) FROM stdin;
-1	0	1572464192	\N	enableoutcomes	0	\N
-2	0	1572464192	\N	usecomments	1	\N
-3	0	1572464192	\N	usetags	1	\N
-4	0	1572464192	\N	enablenotes	1	\N
-5	0	1572464192	\N	enableportfolios	0	\N
-6	0	1572464192	\N	enablewebservices	0	\N
-7	0	1572464192	\N	messaging	1	\N
-8	0	1572464192	\N	messagingallusers	0	\N
-9	0	1572464192	\N	messagingdeletereadnotificationsdelay	604800	\N
-10	0	1572464192	\N	messagingdeleteallnotificationsdelay	2620800	\N
-11	0	1572464192	\N	messagingallowemailoverride	0	\N
-12	0	1572464192	\N	enablestats	0	\N
-13	0	1572464192	\N	enablerssfeeds	0	\N
-14	0	1572464192	\N	enableblogs	1	\N
-15	0	1572464192	\N	enablecompletion	1	\N
-16	0	1572464192	\N	completiondefault	1	\N
-17	0	1572464192	\N	enableavailability	1	\N
-18	0	1572464192	\N	enableplagiarism	0	\N
-19	0	1572464192	\N	enablebadges	1	\N
-20	0	1572464192	\N	enableglobalsearch	0	\N
-21	0	1572464192	\N	allowstealth	0	\N
-22	0	1572464192	\N	defaultpreference_maildisplay	2	\N
-23	0	1572464192	\N	defaultpreference_mailformat	1	\N
-24	0	1572464192	\N	defaultpreference_maildigest	0	\N
-25	0	1572464192	\N	defaultpreference_autosubscribe	1	\N
-26	0	1572464192	\N	defaultpreference_trackforums	0	\N
-27	0	1572464192	\N	autologinguests	0	\N
-28	0	1572464192	\N	hiddenuserfields		\N
-29	0	1572464192	\N	showuseridentity	email	\N
-30	0	1572464192	\N	fullnamedisplay	language	\N
-31	0	1572464192	\N	alternativefullnameformat	language	\N
-32	0	1572464192	\N	maxusersperpage	100	\N
-33	0	1572464192	\N	enablegravatar	0	\N
-34	0	1572464192	\N	gravatardefaulturl	mm	\N
-35	0	1572464192	\N	agedigitalconsentverification	0	\N
-36	0	1572464192	\N	agedigitalconsentmap	*, 16\nAT, 14\nES, 14\nUS, 13	\N
-37	0	1572464192	\N	sitepolicy		\N
-38	0	1572464192	\N	sitepolicyguest		\N
-39	0	1572464192	moodlecourse	visible	1	\N
-40	0	1572464192	moodlecourse	format	topics	\N
-41	0	1572464192	moodlecourse	maxsections	52	\N
-42	0	1572464193	moodlecourse	numsections	4	\N
-43	0	1572464193	moodlecourse	hiddensections	0	\N
-44	0	1572464193	moodlecourse	coursedisplay	0	\N
-45	0	1572464193	moodlecourse	courseenddateenabled	1	\N
-46	0	1572464193	moodlecourse	courseduration	31536000	\N
-47	0	1572464193	moodlecourse	lang		\N
-48	0	1572464193	moodlecourse	newsitems	5	\N
-49	0	1572464193	moodlecourse	showgrades	1	\N
-50	0	1572464193	moodlecourse	showreports	0	\N
-51	0	1572464193	moodlecourse	maxbytes	0	\N
-52	0	1572464193	moodlecourse	enablecompletion	1	\N
-53	0	1572464193	moodlecourse	groupmode	0	\N
-54	0	1572464193	moodlecourse	groupmodeforce	0	\N
-55	0	1572464193	\N	enablecourserequests	0	\N
-56	0	1572464193	\N	defaultrequestcategory	1	\N
-57	0	1572464193	\N	requestcategoryselection	0	\N
-58	0	1572464193	\N	courserequestnotify		\N
-59	0	1572464193	backup	loglifetime	30	\N
-60	0	1572464193	backup	backup_general_users	1	\N
-61	0	1572464193	backup	backup_general_users_locked		\N
-62	0	1572464193	backup	backup_general_anonymize	0	\N
-63	0	1572464193	backup	backup_general_anonymize_locked		\N
-64	0	1572464193	backup	backup_general_role_assignments	1	\N
-65	0	1572464193	backup	backup_general_role_assignments_locked		\N
-66	0	1572464193	backup	backup_general_activities	1	\N
-67	0	1572464193	backup	backup_general_activities_locked		\N
-68	0	1572464193	backup	backup_general_blocks	1	\N
-69	0	1572464193	backup	backup_general_blocks_locked		\N
-70	0	1572464193	backup	backup_general_filters	1	\N
-71	0	1572464193	backup	backup_general_filters_locked		\N
-72	0	1572464193	backup	backup_general_comments	1	\N
-73	0	1572464193	backup	backup_general_comments_locked		\N
-74	0	1572464193	backup	backup_general_badges	1	\N
-75	0	1572464193	backup	backup_general_badges_locked		\N
-76	0	1572464193	backup	backup_general_calendarevents	1	\N
-77	0	1572464193	backup	backup_general_calendarevents_locked		\N
-78	0	1572464193	backup	backup_general_userscompletion	1	\N
-79	0	1572464193	backup	backup_general_userscompletion_locked		\N
-80	0	1572464193	backup	backup_general_logs	0	\N
-81	0	1572464193	backup	backup_general_logs_locked		\N
-82	0	1572464193	backup	backup_general_histories	0	\N
-83	0	1572464193	backup	backup_general_histories_locked		\N
-84	0	1572464193	backup	backup_general_questionbank	1	\N
-85	0	1572464193	backup	backup_general_questionbank_locked		\N
-86	0	1572464193	backup	backup_general_groups	1	\N
-87	0	1572464193	backup	backup_general_groups_locked		\N
-88	0	1572464193	backup	backup_general_competencies	1	\N
-89	0	1572464193	backup	backup_general_competencies_locked		\N
-90	0	1572464193	backup	import_general_maxresults	10	\N
-91	0	1572464193	backup	import_general_duplicate_admin_allowed	0	\N
-92	0	1572464193	backup	backup_import_activities	1	\N
-93	0	1572464193	backup	backup_import_activities_locked		\N
-94	0	1572464193	backup	backup_import_blocks	1	\N
-95	0	1572464193	backup	backup_import_blocks_locked		\N
-96	0	1572464193	backup	backup_import_filters	1	\N
-97	0	1572464193	backup	backup_import_filters_locked		\N
-98	0	1572464193	backup	backup_import_calendarevents	1	\N
-99	0	1572464193	backup	backup_import_calendarevents_locked		\N
-100	0	1572464193	backup	backup_import_questionbank	1	\N
-101	0	1572464193	backup	backup_import_questionbank_locked		\N
-102	0	1572464193	backup	backup_import_groups	1	\N
-103	0	1572464193	backup	backup_import_groups_locked		\N
-104	0	1572464193	backup	backup_import_competencies	1	\N
-105	0	1572464193	backup	backup_import_competencies_locked		\N
-106	0	1572464193	backup	backup_auto_active	0	\N
-107	0	1572464193	backup	backup_auto_weekdays	0000000	\N
-108	0	1572464193	backup	backup_auto_hour	0	\N
-109	0	1572464193	backup	backup_auto_minute	0	\N
-110	0	1572464193	backup	backup_auto_storage	0	\N
-111	0	1572464193	backup	backup_auto_destination		\N
-112	0	1572464193	backup	backup_auto_max_kept	1	\N
-113	0	1572464193	backup	backup_auto_delete_days	0	\N
-114	0	1572464193	backup	backup_auto_min_kept	0	\N
-115	0	1572464193	backup	backup_shortname	0	\N
-116	0	1572464193	backup	backup_auto_skip_hidden	1	\N
-117	0	1572464193	backup	backup_auto_skip_modif_days	30	\N
-118	0	1572464193	backup	backup_auto_skip_modif_prev	0	\N
-119	0	1572464193	backup	backup_auto_users	1	\N
-120	0	1572464193	backup	backup_auto_role_assignments	1	\N
-121	0	1572464193	backup	backup_auto_activities	1	\N
-122	0	1572464193	backup	backup_auto_blocks	1	\N
-123	0	1572464193	backup	backup_auto_filters	1	\N
-124	0	1572464193	backup	backup_auto_comments	1	\N
-125	0	1572464193	backup	backup_auto_badges	1	\N
-126	0	1572464193	backup	backup_auto_calendarevents	1	\N
-127	0	1572464193	backup	backup_auto_userscompletion	1	\N
-128	0	1572464193	backup	backup_auto_logs	0	\N
-129	0	1572464193	backup	backup_auto_histories	0	\N
-130	0	1572464193	backup	backup_auto_questionbank	1	\N
-131	0	1572464193	backup	backup_auto_groups	1	\N
-132	0	1572464193	backup	backup_auto_competencies	1	\N
-133	0	1572464193	restore	restore_general_users	1	\N
-134	0	1572464193	restore	restore_general_users_locked		\N
-135	0	1572464193	restore	restore_general_enrolments	1	\N
-136	0	1572464193	restore	restore_general_enrolments_locked		\N
-137	0	1572464193	restore	restore_general_role_assignments	1	\N
-138	0	1572464193	restore	restore_general_role_assignments_locked		\N
-139	0	1572464193	restore	restore_general_activities	1	\N
-140	0	1572464193	restore	restore_general_activities_locked		\N
-141	0	1572464193	restore	restore_general_blocks	1	\N
-142	0	1572464193	restore	restore_general_blocks_locked		\N
-143	0	1572464193	restore	restore_general_filters	1	\N
-144	0	1572464193	restore	restore_general_filters_locked		\N
-145	0	1572464193	restore	restore_general_comments	1	\N
-146	0	1572464193	restore	restore_general_comments_locked		\N
-147	0	1572464193	restore	restore_general_badges	1	\N
-148	0	1572464193	restore	restore_general_badges_locked		\N
-149	0	1572464193	restore	restore_general_calendarevents	1	\N
-150	0	1572464193	restore	restore_general_calendarevents_locked		\N
-151	0	1572464193	restore	restore_general_userscompletion	1	\N
-152	0	1572464193	restore	restore_general_userscompletion_locked		\N
-153	0	1572464193	restore	restore_general_logs	1	\N
-154	0	1572464193	restore	restore_general_logs_locked		\N
-155	0	1572464193	restore	restore_general_histories	1	\N
-156	0	1572464193	restore	restore_general_histories_locked		\N
-157	0	1572464193	restore	restore_general_groups	1	\N
-158	0	1572464193	restore	restore_general_groups_locked		\N
-159	0	1572464193	restore	restore_general_competencies	1	\N
-160	0	1572464193	restore	restore_general_competencies_locked		\N
-161	0	1572464193	restore	restore_merge_overwrite_conf	0	\N
-162	0	1572464193	restore	restore_merge_overwrite_conf_locked		\N
-163	0	1572464193	restore	restore_merge_course_fullname	1	\N
-164	0	1572464193	restore	restore_merge_course_fullname_locked		\N
-165	0	1572464193	restore	restore_merge_course_shortname	1	\N
-166	0	1572464193	restore	restore_merge_course_shortname_locked		\N
-167	0	1572464193	restore	restore_merge_course_startdate	1	\N
-168	0	1572464193	restore	restore_merge_course_startdate_locked		\N
-169	0	1572464193	restore	restore_replace_overwrite_conf	0	\N
-170	0	1572464193	restore	restore_replace_overwrite_conf_locked		\N
-171	0	1572464193	restore	restore_replace_course_fullname	1	\N
-172	0	1572464193	restore	restore_replace_course_fullname_locked		\N
-173	0	1572464193	restore	restore_replace_course_shortname	1	\N
-174	0	1572464193	restore	restore_replace_course_shortname_locked		\N
-175	0	1572464193	restore	restore_replace_course_startdate	1	\N
-176	0	1572464193	restore	restore_replace_course_startdate_locked		\N
-177	0	1572464193	restore	restore_replace_keep_roles_and_enrolments	0	\N
-178	0	1572464193	restore	restore_replace_keep_roles_and_enrolments_locked		\N
-179	0	1572464193	restore	restore_replace_keep_groups_and_groupings	0	\N
-180	0	1572464193	restore	restore_replace_keep_groups_and_groupings_locked		\N
-181	0	1572464193	\N	grade_profilereport	user	\N
-182	0	1572464193	\N	grade_aggregationposition	1	\N
-183	0	1572464193	\N	grade_includescalesinaggregation	1	\N
-184	0	1572464193	\N	grade_hiddenasdate	0	\N
-185	0	1572464193	\N	gradepublishing	0	\N
-186	0	1572464193	\N	grade_export_exportfeedback	0	\N
-187	0	1572464194	\N	grade_export_displaytype	1	\N
-188	0	1572464194	\N	grade_export_decimalpoints	2	\N
-189	0	1572464194	\N	grade_navmethod	1	\N
-190	0	1572464194	\N	grade_export_userprofilefields	firstname,lastname,idnumber,institution,department,email	\N
-191	0	1572464194	\N	grade_export_customprofilefields		\N
-192	0	1572464194	\N	recovergradesdefault	0	\N
-193	0	1572464194	\N	gradeexport		\N
-194	0	1572464194	\N	unlimitedgrades	0	\N
-195	0	1572464194	\N	grade_report_showmin	1	\N
-196	0	1572464194	\N	gradepointmax	100	\N
-197	0	1572464194	\N	gradepointdefault	100	\N
-198	0	1572464194	\N	grade_minmaxtouse	1	\N
-199	0	1572464194	\N	grade_mygrades_report	overview	\N
-200	0	1572464194	\N	gradereport_mygradeurl		\N
-201	0	1572464194	\N	grade_hideforcedsettings	1	\N
-202	0	1572464194	\N	grade_aggregation	13	\N
-203	0	1572464194	\N	grade_aggregation_flag	0	\N
-204	0	1572464194	\N	grade_aggregations_visible	13	\N
-205	0	1572464194	\N	grade_aggregateonlygraded	1	\N
-206	0	1572464194	\N	grade_aggregateonlygraded_flag	2	\N
-207	0	1572464194	\N	grade_aggregateoutcomes	0	\N
-208	0	1572464194	\N	grade_aggregateoutcomes_flag	2	\N
-209	0	1572464194	\N	grade_keephigh	0	\N
-210	0	1572464194	\N	grade_keephigh_flag	3	\N
-211	0	1572464194	\N	grade_droplow	0	\N
-212	0	1572464194	\N	grade_droplow_flag	2	\N
-213	0	1572464194	\N	grade_overridecat	1	\N
-214	0	1572464194	\N	grade_displaytype	1	\N
-215	0	1572464194	\N	grade_decimalpoints	2	\N
-216	0	1572464194	\N	grade_item_advanced	iteminfo,idnumber,gradepass,plusfactor,multfactor,display,decimals,hiddenuntil,locktime	\N
-217	0	1572464194	\N	grade_report_studentsperpage	100	\N
-218	0	1572464194	\N	grade_report_showonlyactiveenrol	1	\N
-219	0	1572464194	\N	grade_report_quickgrading	1	\N
-220	0	1572464194	\N	grade_report_showquickfeedback	0	\N
-221	0	1572464194	\N	grade_report_meanselection	1	\N
-222	0	1572464194	\N	grade_report_enableajax	0	\N
-223	0	1572464194	\N	grade_report_showcalculations	1	\N
-224	0	1572464194	\N	grade_report_showeyecons	0	\N
-225	0	1572464194	\N	grade_report_showaverages	1	\N
-226	0	1572464194	\N	grade_report_showlocks	0	\N
-227	0	1572464194	\N	grade_report_showranges	0	\N
-228	0	1572464194	\N	grade_report_showanalysisicon	1	\N
-229	0	1572464194	\N	grade_report_showuserimage	1	\N
-230	0	1572464194	\N	grade_report_showactivityicons	1	\N
-231	0	1572464194	\N	grade_report_shownumberofgrades	0	\N
-232	0	1572464194	\N	grade_report_averagesdisplaytype	inherit	\N
-233	0	1572464194	\N	grade_report_rangesdisplaytype	inherit	\N
-234	0	1572464194	\N	grade_report_averagesdecimalpoints	inherit	\N
-235	0	1572464194	\N	grade_report_rangesdecimalpoints	inherit	\N
-236	0	1572464194	\N	grade_report_historyperpage	50	\N
-237	0	1572464194	\N	grade_report_overview_showrank	0	\N
-238	0	1572464194	\N	grade_report_overview_showtotalsifcontainhidden	0	\N
-239	0	1572464194	\N	grade_report_user_showrank	0	\N
-240	0	1572464194	\N	grade_report_user_showpercentage	1	\N
-241	0	1572464194	\N	grade_report_user_showgrade	1	\N
-242	0	1572464194	\N	grade_report_user_showfeedback	1	\N
-243	0	1572464194	\N	grade_report_user_showrange	1	\N
-244	0	1572464194	\N	grade_report_user_showweight	1	\N
-245	0	1572464194	\N	grade_report_user_showaverage	0	\N
-246	0	1572464194	\N	grade_report_user_showlettergrade	0	\N
-247	0	1572464194	\N	grade_report_user_rangedecimals	0	\N
-248	0	1572464194	\N	grade_report_user_showhiddenitems	1	\N
-249	0	1572464194	\N	grade_report_user_showtotalsifcontainhidden	0	\N
-250	0	1572464194	\N	grade_report_user_showcontributiontocoursetotal	1	\N
-251	0	1572464194	analytics	predictionsprocessor	\\mlbackend_php\\processor	\N
-252	0	1572464194	analytics	timesplittings	\\core\\analytics\\time_splitting\\quarters_accum,\\core\\analytics\\time_splitting\\quarters,\\core\\analytics\\time_splitting\\single_range	\N
-253	0	1572464194	analytics	modeloutputdir	/dades/agora/docs/moodle2/usu_pg/models	\N
-254	0	1572464194	analytics	onlycli	1	\N
-255	0	1572464194	analytics	modeltimelimit	1200	\N
-256	0	1572464194	core_competency	enabled	1	\N
-257	0	1572464194	core_competency	pushcourseratingstouserplans	1	\N
-258	0	1572464194	\N	badges_defaultissuername		\N
-259	0	1572464194	\N	badges_defaultissuercontact		\N
-260	0	1572464194	\N	badges_badgesalt	badges1572464183	\N
-261	0	1572464194	\N	badges_allowexternalbackpack	1	\N
-262	0	1572464194	\N	badges_allowcoursebadges	1	\N
-263	0	1572464195	\N	timezone	Europe/Madrid	\N
-264	0	1572464196	\N	forcetimezone	99	\N
-265	0	1572464196	\N	country	0	\N
-266	0	1572464196	\N	defaultcity		\N
-267	0	1572464196	\N	geoip2file	/dades/agora/docs/moodle2/usu_pg/geoip/GeoLite2-City.mmdb	\N
-268	0	1572464196	\N	googlemapkey3		\N
-269	0	1572464196	\N	allcountrycodes		\N
-270	0	1572464196	\N	autolang	1	\N
-271	0	1572464196	\N	lang	en	\N
-272	0	1572464196	\N	langmenu	1	\N
-273	0	1572464196	\N	langlist		\N
-274	0	1572464196	\N	langcache	1	\N
-275	0	1572464196	\N	langstringcache	1	\N
-276	0	1572464196	\N	locale		\N
-277	0	1572464196	\N	latinexcelexport	0	\N
-278	0	1572464197	\N	requiremodintro	0	\N
-279	0	1572464197	\N	registerauth		\N
-280	0	1572464197	\N	authloginviaemail	0	\N
-281	0	1572464197	\N	allowaccountssameemail	0	\N
-282	0	1572464197	\N	authpreventaccountcreation	0	\N
-283	0	1572464197	\N	loginpageautofocus	0	\N
-284	0	1572464197	\N	guestloginbutton	1	\N
-285	0	1572464197	\N	limitconcurrentlogins	0	\N
-286	0	1572464197	\N	alternateloginurl		\N
-287	0	1572464197	\N	forgottenpasswordurl		\N
-288	0	1572464197	\N	auth_instructions		\N
-289	0	1572464197	\N	allowemailaddresses		\N
-290	0	1572464197	\N	denyemailaddresses		\N
-291	0	1572464197	\N	verifychangedemail	1	\N
-292	0	1572464197	\N	recaptchapublickey		\N
-293	0	1572464197	\N	recaptchaprivatekey		\N
-294	0	1572464197	cachestore_apcu	testperformance	0	\N
-295	0	1572464197	cachestore_memcached	testservers		\N
-296	0	1572464197	cachestore_mongodb	testserver		\N
-297	0	1572464197	cachestore_redis	test_server		\N
-298	0	1572464197	cachestore_redis	test_password		\N
-299	0	1572464197	cachestore_redis	test_serializer	1	\N
-300	0	1572464197	\N	filteruploadedfiles	0	\N
-301	0	1572464197	\N	filtermatchoneperpage	0	\N
-302	0	1572464197	\N	filtermatchonepertext	0	\N
-303	0	1572464197	\N	sitedefaultlicense	allrightsreserved	\N
-304	0	1572464197	\N	media_default_width	400	\N
-305	0	1572464197	\N	media_default_height	300	\N
-306	0	1572464197	\N	portfolio_moderate_filesize_threshold	1048576	\N
-307	0	1572464197	\N	portfolio_high_filesize_threshold	5242880	\N
-308	0	1572464197	\N	portfolio_moderate_db_threshold	20	\N
-309	0	1572464197	\N	portfolio_high_db_threshold	50	\N
-310	0	1572464197	question_preview	behaviour	deferredfeedback	\N
-311	0	1572464197	question_preview	correctness	1	\N
-312	0	1572464197	question_preview	marks	2	\N
-313	0	1572464197	question_preview	markdp	2	\N
-314	0	1572464197	question_preview	feedback	1	\N
-315	0	1572464197	question_preview	generalfeedback	1	\N
-316	0	1572464197	question_preview	rightanswer	1	\N
-317	0	1572464197	question_preview	history	0	\N
-318	0	1572464197	\N	repositorycacheexpire	120	\N
-319	0	1572464197	\N	repositorygetfiletimeout	30	\N
-320	0	1572464197	\N	repositorysyncfiletimeout	1	\N
-321	0	1572464197	\N	repositorysyncimagetimeout	3	\N
-322	0	1572464197	\N	repositoryallowexternallinks	1	\N
-323	0	1572464197	\N	legacyfilesinnewcourses	0	\N
-324	0	1572464197	\N	legacyfilesaddallowed	1	\N
-325	0	1572464197	\N	searchengine	simpledb	\N
-326	0	1572464197	\N	searchindexwhendisabled	0	\N
-327	0	1572464197	\N	searchindextime	600	\N
-328	0	1572464197	\N	searchallavailablecourses	0	\N
-329	0	1572464197	\N	enablewsdocumentation	0	\N
-330	0	1572464197	\N	allowbeforeblock	0	\N
-331	0	1572464197	\N	allowedip		\N
-332	0	1572464197	\N	blockedip		\N
-333	0	1572464197	\N	protectusernames	1	\N
-334	0	1572464197	\N	forcelogin	0	\N
-335	0	1572464197	\N	forceloginforprofiles	1	\N
-336	0	1572464197	\N	forceloginforprofileimage	0	\N
-337	0	1572464197	\N	opentogoogle	0	\N
-338	0	1572464197	\N	allowindexing	0	\N
-339	0	1572464197	\N	maxbytes	0	\N
-340	0	1572464197	\N	userquota	104857600	\N
-341	0	1572464197	\N	allowobjectembed	0	\N
-342	0	1572464197	\N	enabletrusttext	0	\N
-343	0	1572464197	\N	maxeditingtime	1800	\N
-344	0	1572464197	\N	extendedusernamechars	0	\N
-345	0	1572464197	\N	keeptagnamecase	1	\N
-346	0	1572464197	\N	profilesforenrolledusersonly	1	\N
-347	0	1572464197	\N	cronclionly	1	\N
-348	0	1572464197	\N	cronremotepassword		\N
-349	0	1572464197	tool_task	enablerunnow	1	\N
-350	0	1572464197	\N	lockoutthreshold	0	\N
-351	0	1572464197	\N	lockoutwindow	1800	\N
-352	0	1572464197	\N	lockoutduration	1800	\N
-353	0	1572464197	\N	passwordpolicy	1	\N
-354	0	1572464197	\N	minpasswordlength	8	\N
-355	0	1572464197	\N	minpassworddigits	1	\N
-356	0	1572464197	\N	minpasswordlower	1	\N
-357	0	1572464197	\N	minpasswordupper	1	\N
-358	0	1572464197	\N	minpasswordnonalphanum	1	\N
-359	0	1572464197	\N	maxconsecutiveidentchars	0	\N
-360	0	1572464197	\N	passwordreuselimit	0	\N
-361	0	1572464197	\N	pwresettime	1800	\N
-362	0	1572464197	\N	passwordchangelogout	0	\N
-363	0	1572464197	\N	passwordchangetokendeletion	0	\N
-364	0	1572464197	\N	tokenduration	7257600	\N
-365	0	1572464197	\N	groupenrolmentkeypolicy	1	\N
-366	0	1572464197	\N	disableuserimages	0	\N
-367	0	1572464197	\N	emailchangeconfirmation	1	\N
-368	0	1572464197	\N	rememberusername	2	\N
-369	0	1572464197	\N	strictformsrequired	0	\N
-370	0	1572464197	\N	cookiesecure	1	\N
-371	0	1572464197	\N	cookiehttponly	0	\N
-372	0	1572464197	\N	allowframembedding	0	\N
-373	0	1572464197	\N	curlsecurityblockedhosts		\N
-374	0	1572464197	\N	curlsecurityallowedport		\N
-375	0	1572464197	\N	displayloginfailures	0	\N
-376	0	1572464197	\N	notifyloginfailures		\N
-377	0	1572464197	\N	notifyloginthreshold	10	\N
-378	0	1572464197	\N	themelist		\N
-379	0	1572464197	\N	themedesignermode	0	\N
-380	0	1572464197	\N	allowuserthemes	0	\N
-381	0	1572464197	\N	allowcoursethemes	0	\N
-382	0	1572464197	\N	allowcategorythemes	0	\N
-383	0	1572464197	\N	allowcohortthemes	0	\N
-384	0	1572464197	\N	allowthemechangeonurl	0	\N
-385	0	1572464197	\N	allowuserblockhiding	1	\N
-386	0	1572464197	\N	allowblockstodock	1	\N
-387	0	1572464197	\N	custommenuitems		\N
-388	0	1572464197	\N	customusermenuitems	grades,grades|/grade/report/mygrades.php|t/grades\nmessages,message|/message/index.php|t/message\npreferences,moodle|/user/preferences.php|t/preferences	\N
-389	0	1572464197	\N	enabledevicedetection	1	\N
-390	0	1572464197	\N	devicedetectregex	[]	\N
-391	0	1572464197	theme_boost	preset	default.scss	\N
-392	0	1572464197	theme_boost	presetfiles		\N
-393	0	1572464197	theme_boost	backgroundimage		\N
-394	0	1572464197	theme_boost	brandcolor		\N
-395	0	1572464197	theme_boost	scsspre		\N
-396	0	1572464197	theme_boost	scss		\N
-397	0	1572464197	theme_clean	invert	0	\N
-398	0	1572464197	theme_clean	logo		\N
-399	0	1572464197	theme_clean	smalllogo		\N
-400	0	1572464197	theme_clean	sitename	1	\N
-401	0	1572464197	theme_clean	customcss		\N
-402	0	1572464197	theme_clean	footnote		\N
-403	0	1572464197	theme_more	textcolor	#333366	\N
-404	0	1572464197	theme_more	linkcolor	#FF6500	\N
-405	0	1572464197	theme_more	bodybackground		\N
-406	0	1572464198	theme_more	backgroundimage		\N
-407	0	1572464198	theme_more	backgroundrepeat	repeat	\N
-408	0	1572464198	theme_more	backgroundposition	0	\N
-409	0	1572464198	theme_more	backgroundfixed	0	\N
-410	0	1572464198	theme_more	contentbackground	#FFFFFF	\N
-411	0	1572464198	theme_more	secondarybackground	#FFFFFF	\N
-412	0	1572464198	theme_more	invert	1	\N
-413	0	1572464198	theme_more	logo		\N
-414	0	1572464198	theme_more	smalllogo		\N
-415	0	1572464198	theme_more	sitename	1	\N
-416	0	1572464198	theme_more	customcss		\N
-417	0	1572464198	theme_more	footnote		\N
-418	0	1572464198	core_admin	logo		\N
-419	0	1572464198	core_admin	logocompact		\N
-420	0	1572464198	\N	calendartype	gregorian	\N
-421	0	1572464198	\N	calendar_adminseesall	0	\N
-422	0	1572464198	\N	calendar_site_timeformat	0	\N
-423	0	1572464198	\N	calendar_startwday	1	\N
-424	0	1572464198	\N	calendar_weekend	65	\N
-425	0	1572464198	\N	calendar_lookahead	21	\N
-426	0	1572464198	\N	calendar_maxevents	10	\N
-427	0	1572464198	\N	enablecalendarexport	1	\N
-428	0	1572464198	\N	calendar_customexport	1	\N
-429	0	1572464198	\N	calendar_exportlookahead	365	\N
-430	0	1572464198	\N	calendar_exportlookback	5	\N
-431	0	1572464198	\N	calendar_exportsalt	IMigi46Z9yR3UDPrJTAdd3qEfgaH9LBQnuuZ2sKStpFFqBRHKcKHcwSkDOdW	\N
-432	0	1572464198	\N	calendar_showicalsource	1	\N
-433	0	1572464198	\N	useblogassociations	1	\N
-434	0	1572464198	\N	bloglevel	4	\N
-435	0	1572464198	\N	useexternalblogs	1	\N
-436	0	1572464198	\N	externalblogcrontime	86400	\N
-437	0	1572464198	\N	maxexternalblogsperuser	1	\N
-438	0	1572464198	\N	blogusecomments	1	\N
-439	0	1572464198	\N	blogshowcommentscount	1	\N
-440	0	1572464198	\N	defaulthomepage	1	\N
-441	0	1572464198	\N	allowguestmymoodle	1	\N
-442	0	1572464198	\N	navshowfullcoursenames	0	\N
-443	0	1572464198	\N	navshowcategories	1	\N
-444	0	1572464198	\N	navshowmycoursecategories	0	\N
-445	0	1572464198	\N	navshowallcourses	0	\N
-446	0	1572464198	\N	navsortmycoursessort	sortorder	\N
-447	0	1572464198	\N	navcourselimit	10	\N
-448	0	1572464198	\N	usesitenameforsitepages	0	\N
-449	0	1572464198	\N	linkadmincategories	1	\N
-450	0	1572464198	\N	linkcoursesections	1	\N
-451	0	1572464198	\N	navshowfrontpagemods	1	\N
-452	0	1572464198	\N	navadduserpostslinks	1	\N
-453	0	1572464198	\N	formatstringstriptags	1	\N
-454	0	1572464198	\N	emoticons	[{"text":":-)","imagename":"s\\/smiley","imagecomponent":"core","altidentifier":"smiley","altcomponent":"core_pix"},{"text":":)","imagename":"s\\/smiley","imagecomponent":"core","altidentifier":"smiley","altcomponent":"core_pix"},{"text":":-D","imagename":"s\\/biggrin","imagecomponent":"core","altidentifier":"biggrin","altcomponent":"core_pix"},{"text":";-)","imagename":"s\\/wink","imagecomponent":"core","altidentifier":"wink","altcomponent":"core_pix"},{"text":":-\\/","imagename":"s\\/mixed","imagecomponent":"core","altidentifier":"mixed","altcomponent":"core_pix"},{"text":"V-.","imagename":"s\\/thoughtful","imagecomponent":"core","altidentifier":"thoughtful","altcomponent":"core_pix"},{"text":":-P","imagename":"s\\/tongueout","imagecomponent":"core","altidentifier":"tongueout","altcomponent":"core_pix"},{"text":":-p","imagename":"s\\/tongueout","imagecomponent":"core","altidentifier":"tongueout","altcomponent":"core_pix"},{"text":"B-)","imagename":"s\\/cool","imagecomponent":"core","altidentifier":"cool","altcomponent":"core_pix"},{"text":"^-)","imagename":"s\\/approve","imagecomponent":"core","altidentifier":"approve","altcomponent":"core_pix"},{"text":"8-)","imagename":"s\\/wideeyes","imagecomponent":"core","altidentifier":"wideeyes","altcomponent":"core_pix"},{"text":":o)","imagename":"s\\/clown","imagecomponent":"core","altidentifier":"clown","altcomponent":"core_pix"},{"text":":-(","imagename":"s\\/sad","imagecomponent":"core","altidentifier":"sad","altcomponent":"core_pix"},{"text":":(","imagename":"s\\/sad","imagecomponent":"core","altidentifier":"sad","altcomponent":"core_pix"},{"text":"8-.","imagename":"s\\/shy","imagecomponent":"core","altidentifier":"shy","altcomponent":"core_pix"},{"text":":-I","imagename":"s\\/blush","imagecomponent":"core","altidentifier":"blush","altcomponent":"core_pix"},{"text":":-X","imagename":"s\\/kiss","imagecomponent":"core","altidentifier":"kiss","altcomponent":"core_pix"},{"text":"8-o","imagename":"s\\/surprise","imagecomponent":"core","altidentifier":"surprise","altcomponent":"core_pix"},{"text":"P-|","imagename":"s\\/blackeye","imagecomponent":"core","altidentifier":"blackeye","altcomponent":"core_pix"},{"text":"8-[","imagename":"s\\/angry","imagecomponent":"core","altidentifier":"angry","altcomponent":"core_pix"},{"text":"(grr)","imagename":"s\\/angry","imagecomponent":"core","altidentifier":"angry","altcomponent":"core_pix"},{"text":"xx-P","imagename":"s\\/dead","imagecomponent":"core","altidentifier":"dead","altcomponent":"core_pix"},{"text":"|-.","imagename":"s\\/sleepy","imagecomponent":"core","altidentifier":"sleepy","altcomponent":"core_pix"},{"text":"}-]","imagename":"s\\/evil","imagecomponent":"core","altidentifier":"evil","altcomponent":"core_pix"},{"text":"(h)","imagename":"s\\/heart","imagecomponent":"core","altidentifier":"heart","altcomponent":"core_pix"},{"text":"(heart)","imagename":"s\\/heart","imagecomponent":"core","altidentifier":"heart","altcomponent":"core_pix"},{"text":"(y)","imagename":"s\\/yes","imagecomponent":"core","altidentifier":"yes","altcomponent":"core"},{"text":"(n)","imagename":"s\\/no","imagecomponent":"core","altidentifier":"no","altcomponent":"core"},{"text":"(martin)","imagename":"s\\/martin","imagecomponent":"core","altidentifier":"martin","altcomponent":"core_pix"},{"text":"( )","imagename":"s\\/egg","imagecomponent":"core","altidentifier":"egg","altcomponent":"core_pix"}]	\N
-455	0	1572464198	\N	docroot	https://docs.moodle.org	\N
-456	0	1572464198	\N	doclang		\N
-457	0	1572464198	\N	doctonewwindow	0	\N
-458	0	1572464198	\N	coursecontactduplicates	0	\N
-459	0	1572464198	\N	courselistshortnames	0	\N
-460	0	1572464198	\N	coursesperpage	20	\N
-461	0	1572464198	\N	courseswithsummarieslimit	10	\N
-462	0	1572464198	\N	courseoverviewfileslimit	1	\N
-463	0	1572464198	\N	courseoverviewfilesext	.jpg,.gif,.png	\N
-464	0	1572464198	\N	coursegraceperiodbefore	0	\N
-465	0	1572464198	\N	coursegraceperiodafter	0	\N
-466	0	1572464198	\N	useexternalyui	0	\N
-467	0	1572464198	\N	yuicomboloading	1	\N
-468	0	1572464198	\N	cachejs	1	\N
-469	0	1572464198	\N	modchooserdefault	1	\N
-470	0	1572464198	\N	additionalhtmlhead		\N
-471	0	1572464198	\N	additionalhtmltopofbody		\N
-472	0	1572464198	\N	additionalhtmlfooter		\N
-473	0	1572464198	\N	pathtophp		\N
-474	0	1572464198	\N	pathtodu		\N
-475	0	1572464198	\N	aspellpath		\N
-476	0	1572464198	\N	pathtodot		\N
-477	0	1572464198	\N	pathtogs	/usr/bin/gs	\N
-478	0	1572464198	\N	pathtopython		\N
-479	0	1572464198	\N	supportname	Admin User	\N
-480	0	1572464198	\N	supportemail		\N
-481	0	1572464198	\N	supportpage		\N
-482	0	1572464198	\N	dbsessions	0	\N
-483	0	1572464198	\N	sessioncookie		\N
-484	0	1572464198	\N	sessioncookiepath		\N
-485	0	1572464198	\N	sessioncookiedomain		\N
-486	0	1572464198	\N	statsfirstrun	none	\N
-487	0	1572464198	\N	statsmaxruntime	0	\N
-488	0	1572464198	\N	statsruntimedays	31	\N
-489	0	1572464198	\N	statsuserthreshold	0	\N
-490	0	1572464198	\N	slasharguments	1	\N
-491	0	1572464198	\N	getremoteaddrconf	0	\N
-492	0	1572464198	\N	proxyhost		\N
-493	0	1572464198	\N	proxyport	0	\N
-494	0	1572464198	\N	proxytype	HTTP	\N
-495	0	1572464198	\N	proxyuser		\N
-496	0	1572464198	\N	proxypassword		\N
-497	0	1572464198	\N	proxybypass	localhost, 127.0.0.1	\N
-498	0	1572464198	\N	maintenance_enabled	0	\N
-499	0	1572464198	\N	maintenance_message		\N
-500	0	1572464198	\N	deleteunconfirmed	168	\N
-501	0	1572464198	\N	deleteincompleteusers	0	\N
-502	0	1572464198	\N	disablegradehistory	0	\N
-503	0	1572464198	\N	gradehistorylifetime	0	\N
-504	0	1572464198	\N	tempdatafoldercleanup	168	\N
-505	0	1572464198	\N	extramemorylimit	512M	\N
-506	0	1572464198	\N	maxtimelimit	0	\N
-507	0	1572464198	\N	curlcache	120	\N
-508	0	1572464198	\N	curltimeoutkbitrate	56	\N
-509	0	1572464198	\N	smtphosts		\N
-510	0	1572464198	\N	smtpsecure		\N
-511	0	1572464198	\N	smtpauthtype	LOGIN	\N
-512	0	1572464198	\N	smtpuser		\N
-513	0	1572464198	\N	smtppass		\N
-514	0	1572464198	\N	smtpmaxbulk	1	\N
-515	0	1572464198	\N	noreplyaddress	noreply@agora-virtual.xtec.cat	\N
-516	0	1572464198	\N	allowedemaildomains		\N
-517	0	1572464198	\N	sitemailcharset	0	\N
-518	0	1572464198	\N	allowusermailcharset	0	\N
-519	0	1572464198	\N	allowattachments	1	\N
-520	0	1572464198	\N	mailnewline	LF	\N
-521	0	1572464198	\N	emailfromvia	1	\N
-522	0	1572464198	\N	updateautocheck	1	\N
-523	0	1572464198	\N	updateminmaturity	200	\N
-524	0	1572464198	\N	updatenotifybuilds	0	\N
-525	0	1572464198	\N	enablesafebrowserintegration	0	\N
-526	0	1572464198	\N	dndallowtextandlinks	0	\N
-527	0	1572464198	\N	pathtosassc		\N
-528	0	1572464198	\N	contextlocking	0	\N
-529	0	1572464198	\N	contextlockappliestoadmin	1	\N
-530	0	1572464198	\N	forceclean	0	\N
-531	0	1572464198	\N	debug	0	\N
-532	0	1572464198	\N	debugdisplay	1	\N
-533	0	1572464198	\N	debugsmtp	0	\N
-534	0	1572464198	\N	perfdebug	7	\N
-535	0	1572464198	\N	debugstringids	0	\N
-536	0	1572464198	\N	debugvalidators	0	\N
-537	0	1572464198	\N	debugpageinfo	0	\N
-538	0	1572464198	\N	profilingenabled	0	\N
-539	0	1572464198	\N	profilingincluded		\N
-540	0	1572464198	\N	profilingexcluded		\N
-541	0	1572464199	\N	profilingautofrec	0	\N
-542	0	1572464199	\N	profilingallowme	0	\N
-543	0	1572464199	\N	profilingallowall	0	\N
-544	0	1572464199	\N	profilinglifetime	1440	\N
-545	0	1572464199	\N	profilingimportprefix	(I)	\N
-546	0	1572464219	activitynames	filter_active	1	
-547	0	1572464219	mathjaxloader	filter_active	1	
-548	0	1572464219	mediaplugin	filter_active	1	
-549	2	1572464535	\N	notloggedinroleid	6	\N
-550	2	1572464535	\N	guestroleid	6	\N
-551	2	1572464535	\N	defaultuserroleid	7	\N
-552	2	1572464535	\N	creatornewroleid	3	\N
-553	2	1572464535	\N	restorernewroleid	3	\N
-554	2	1572464535	tool_dataprivacy	contactdataprotectionofficer	0	\N
-555	2	1572464535	tool_dataprivacy	automaticdeletionrequests	1	\N
-556	2	1572464535	tool_dataprivacy	privacyrequestexpiry	604800	\N
-557	2	1572464535	tool_dataprivacy	requireallenddatesforuserdeletion	1	\N
-558	2	1572464535	tool_dataprivacy	showdataretentionsummary	1	\N
-559	2	1572464535	tool_log	exportlog	1	\N
-560	2	1572464535	\N	sitepolicyhandler		\N
-561	2	1572464535	\N	gradebookroles	5	\N
-562	2	1572464535	analytics	logstore	logstore_standard	\N
-563	2	1572464535	assign	feedback_plugin_for_gradebook	assignfeedback_comments	\N
-564	2	1572464535	assign	showrecentsubmissions	0	\N
-565	2	1572464535	assign	submissionreceipts	1	\N
-566	2	1572464535	assign	submissionstatement	This assignment is my own work, except where I have acknowledged the use of the works of other people.	\N
-567	2	1572464535	assign	maxperpage	-1	\N
-568	2	1572464535	assign	alwaysshowdescription	1	\N
-569	2	1572464535	assign	alwaysshowdescription_adv		\N
-570	2	1572464535	assign	alwaysshowdescription_locked		\N
-571	2	1572464535	assign	allowsubmissionsfromdate	0	\N
-572	2	1572464535	assign	allowsubmissionsfromdate_enabled	1	\N
-573	2	1572464535	assign	allowsubmissionsfromdate_adv		\N
-574	2	1572464535	assign	duedate	604800	\N
-575	2	1572464535	assign	duedate_enabled	1	\N
-576	2	1572464535	assign	duedate_adv		\N
-577	2	1572464535	assign	cutoffdate	1209600	\N
-578	2	1572464535	assign	cutoffdate_enabled		\N
-579	2	1572464535	assign	cutoffdate_adv		\N
-580	2	1572464535	assign	gradingduedate	1209600	\N
-581	2	1572464535	assign	gradingduedate_enabled	1	\N
-582	2	1572464535	assign	gradingduedate_adv		\N
-583	2	1572464535	assign	submissiondrafts	0	\N
-584	2	1572464535	assign	submissiondrafts_adv		\N
-585	2	1572464535	assign	submissiondrafts_locked		\N
-586	2	1572464535	assign	requiresubmissionstatement	0	\N
-587	2	1572464535	assign	requiresubmissionstatement_adv		\N
-588	2	1572464535	assign	requiresubmissionstatement_locked		\N
-589	2	1572464535	assign	attemptreopenmethod	none	\N
-590	2	1572464535	assign	attemptreopenmethod_adv		\N
-591	2	1572464535	assign	attemptreopenmethod_locked		\N
-592	2	1572464535	assign	maxattempts	-1	\N
-593	2	1572464535	assign	maxattempts_adv		\N
-594	2	1572464535	assign	maxattempts_locked		\N
-595	2	1572464535	assign	teamsubmission	0	\N
-596	2	1572464535	assign	teamsubmission_adv		\N
-597	2	1572464535	assign	teamsubmission_locked		\N
-598	2	1572464535	assign	preventsubmissionnotingroup	0	\N
-599	2	1572464535	assign	preventsubmissionnotingroup_adv		\N
-600	2	1572464535	assign	preventsubmissionnotingroup_locked		\N
-601	2	1572464535	assign	requireallteammemberssubmit	0	\N
-602	2	1572464535	assign	requireallteammemberssubmit_adv		\N
-603	2	1572464535	assign	requireallteammemberssubmit_locked		\N
-604	2	1572464535	assign	teamsubmissiongroupingid		\N
-605	2	1572464535	assign	teamsubmissiongroupingid_adv		\N
-606	2	1572464535	assign	sendnotifications	0	\N
-607	2	1572464535	assign	sendnotifications_adv		\N
-608	2	1572464535	assign	sendnotifications_locked		\N
-609	2	1572464535	assign	sendlatenotifications	0	\N
-610	2	1572464535	assign	sendlatenotifications_adv		\N
-611	2	1572464535	assign	sendlatenotifications_locked		\N
-612	2	1572464535	assign	sendstudentnotifications	1	\N
-613	2	1572464535	assign	sendstudentnotifications_adv		\N
-614	2	1572464535	assign	sendstudentnotifications_locked		\N
-615	2	1572464535	assign	blindmarking	0	\N
-616	2	1572464535	assign	blindmarking_adv		\N
-617	2	1572464535	assign	blindmarking_locked		\N
-618	2	1572464535	assign	markingworkflow	0	\N
-619	2	1572464535	assign	markingworkflow_adv		\N
-620	2	1572464535	assign	markingworkflow_locked		\N
-621	2	1572464535	assign	markingallocation	0	\N
-622	2	1572464535	assign	markingallocation_adv		\N
-623	2	1572464535	assign	markingallocation_locked		\N
-624	2	1572464535	assignsubmission_file	default	1	\N
-625	2	1572464535	assignsubmission_file	maxfiles	20	\N
-626	2	1572464535	assignsubmission_file	filetypes		\N
-627	2	1572464535	assignsubmission_file	maxbytes	0	\N
-628	2	1572464535	assignsubmission_onlinetext	default	0	\N
-629	2	1572464535	assignfeedback_comments	default	1	\N
-630	2	1572464535	assignfeedback_comments	inline	0	\N
-631	2	1572464535	assignfeedback_comments	inline_adv		\N
-632	2	1572464535	assignfeedback_comments	inline_locked		\N
-633	2	1572464535	assignfeedback_editpdf	default	1	\N
-634	2	1572464535	assignfeedback_editpdf	stamps		\N
-635	2	1572464535	assignfeedback_file	default	0	\N
-636	2	1572464535	assignfeedback_offline	default	0	\N
-637	2	1572464535	book	numberingoptions	0,1,2,3	\N
-638	2	1572464535	book	navoptions	0,1,2	\N
-639	2	1572464535	book	numbering	1	\N
-640	2	1572464535	book	navstyle	1	\N
-641	2	1572464535	\N	chat_method	ajax	\N
-642	2	1572464535	\N	chat_refresh_userlist	10	\N
-643	2	1572464535	\N	chat_old_ping	35	\N
-644	2	1572464535	\N	chat_refresh_room	5	\N
-645	2	1572464535	\N	chat_normal_updatemode	jsupdate	\N
-646	2	1572464535	\N	chat_serverhost	agora-virtual.xtec.cat	\N
-647	2	1572464535	\N	chat_serverip	127.0.0.1	\N
-648	2	1572464535	\N	chat_serverport	9111	\N
-649	2	1572464535	\N	chat_servermax	100	\N
-650	2	1572464535	\N	data_enablerssfeeds	0	\N
-651	2	1572464535	\N	feedback_allowfullanonymous	0	\N
-652	2	1572464535	resource	framesize	130	\N
-653	2	1572464535	resource	displayoptions	0,1,4,5,6	\N
-654	2	1572464535	resource	printintro	1	\N
-655	2	1572464535	resource	display	0	\N
-656	2	1572464535	resource	showsize	0	\N
-657	2	1572464535	resource	showtype	0	\N
-658	2	1572464535	resource	showdate	0	\N
-659	2	1572464535	resource	popupwidth	620	\N
-660	2	1572464535	resource	popupheight	450	\N
-661	2	1572464535	resource	filterfiles	0	\N
-662	2	1572464535	folder	showexpanded	1	\N
-663	2	1572464535	folder	maxsizetodownload	0	\N
-664	2	1572464535	\N	forum_displaymode	3	\N
-665	2	1572464535	\N	forum_shortpost	300	\N
-666	2	1572464535	\N	forum_longpost	600	\N
-667	2	1572464535	\N	forum_manydiscussions	100	\N
-668	2	1572464535	\N	forum_maxbytes	512000	\N
-669	2	1572464535	\N	forum_maxattachments	9	\N
-670	2	1572464535	\N	forum_subscription	0	\N
-671	2	1572464535	\N	forum_trackingtype	1	\N
-672	2	1572464535	\N	forum_trackreadposts	1	\N
-673	2	1572464535	\N	forum_allowforcedreadtracking	0	\N
-674	2	1572464535	\N	forum_oldpostdays	14	\N
-675	2	1572464535	\N	forum_usermarksread	0	\N
-676	2	1572464535	\N	forum_cleanreadtime	2	\N
-677	2	1572464535	\N	digestmailtime	17	\N
-678	2	1572464535	\N	forum_enablerssfeeds	0	\N
-679	2	1572464535	\N	forum_enabletimedposts	1	\N
-680	2	1572464535	\N	glossary_entbypage	10	\N
-681	2	1572464535	\N	glossary_dupentries	0	\N
-682	2	1572464535	\N	glossary_allowcomments	0	\N
-683	2	1572464535	\N	glossary_linkbydefault	1	\N
-684	2	1572464535	\N	glossary_defaultapproval	1	\N
-685	2	1572464535	\N	glossary_enablerssfeeds	0	\N
-686	2	1572464535	\N	glossary_linkentries	0	\N
-687	2	1572464535	\N	glossary_casesensitive	0	\N
-688	2	1572464535	\N	glossary_fullmatch	0	\N
-689	2	1572464535	imscp	keepold	1	\N
-690	2	1572464535	imscp	keepold_adv		\N
-691	2	1572464535	label	dndmedia	1	\N
-692	2	1572464535	label	dndresizewidth	400	\N
-693	2	1572464535	label	dndresizeheight	400	\N
-694	2	1572464535	mod_lesson	mediafile		\N
-695	2	1572464535	mod_lesson	mediafile_adv	1	\N
-696	2	1572464536	mod_lesson	mediawidth	640	\N
-697	2	1572464536	mod_lesson	mediaheight	480	\N
-698	2	1572464536	mod_lesson	mediaclose	0	\N
-699	2	1572464536	mod_lesson	progressbar	0	\N
-700	2	1572464536	mod_lesson	progressbar_adv		\N
-701	2	1572464536	mod_lesson	ongoing	0	\N
-702	2	1572464536	mod_lesson	ongoing_adv	1	\N
-703	2	1572464536	mod_lesson	displayleftmenu	0	\N
-704	2	1572464536	mod_lesson	displayleftmenu_adv		\N
-705	2	1572464536	mod_lesson	displayleftif	0	\N
-706	2	1572464536	mod_lesson	displayleftif_adv	1	\N
-707	2	1572464536	mod_lesson	slideshow	0	\N
-708	2	1572464536	mod_lesson	slideshow_adv	1	\N
-709	2	1572464536	mod_lesson	slideshowwidth	640	\N
-710	2	1572464536	mod_lesson	slideshowheight	480	\N
-711	2	1572464536	mod_lesson	slideshowbgcolor	#FFFFFF	\N
-712	2	1572464536	mod_lesson	maxanswers	5	\N
-713	2	1572464536	mod_lesson	maxanswers_adv	1	\N
-714	2	1572464536	mod_lesson	defaultfeedback	0	\N
-715	2	1572464536	mod_lesson	defaultfeedback_adv	1	\N
-716	2	1572464536	mod_lesson	activitylink		\N
-717	2	1572464536	mod_lesson	activitylink_adv	1	\N
-718	2	1572464536	mod_lesson	timelimit	0	\N
-719	2	1572464536	mod_lesson	timelimit_adv		\N
-720	2	1572464536	mod_lesson	password	0	\N
-721	2	1572464536	mod_lesson	password_adv	1	\N
-722	2	1572464536	mod_lesson	modattempts	0	\N
-723	2	1572464536	mod_lesson	modattempts_adv		\N
-724	2	1572464536	mod_lesson	displayreview	0	\N
-725	2	1572464536	mod_lesson	displayreview_adv		\N
-726	2	1572464536	mod_lesson	maximumnumberofattempts	1	\N
-727	2	1572464536	mod_lesson	maximumnumberofattempts_adv		\N
-728	2	1572464536	mod_lesson	defaultnextpage	0	\N
-729	2	1572464536	mod_lesson	defaultnextpage_adv	1	\N
-730	2	1572464536	mod_lesson	numberofpagestoshow	1	\N
-731	2	1572464536	mod_lesson	numberofpagestoshow_adv	1	\N
-732	2	1572464536	mod_lesson	practice	0	\N
-733	2	1572464536	mod_lesson	practice_adv		\N
-734	2	1572464536	mod_lesson	customscoring	1	\N
-735	2	1572464536	mod_lesson	customscoring_adv	1	\N
-736	2	1572464536	mod_lesson	retakesallowed	0	\N
-737	2	1572464536	mod_lesson	retakesallowed_adv		\N
-738	2	1572464536	mod_lesson	handlingofretakes	0	\N
-739	2	1572464536	mod_lesson	handlingofretakes_adv	1	\N
-740	2	1572464536	mod_lesson	minimumnumberofquestions	0	\N
-741	2	1572464536	mod_lesson	minimumnumberofquestions_adv	1	\N
-742	2	1572464536	page	displayoptions	5	\N
-743	2	1572464536	page	printheading	1	\N
-744	2	1572464536	page	printintro	0	\N
-745	2	1572464536	page	printlastmodified	1	\N
-746	2	1572464536	page	display	5	\N
-747	2	1572464536	page	popupwidth	620	\N
-748	2	1572464536	page	popupheight	450	\N
-749	2	1572464536	quiz	timelimit	0	\N
-750	2	1572464536	quiz	timelimit_adv		\N
-751	2	1572464536	quiz	overduehandling	autosubmit	\N
-752	2	1572464536	quiz	overduehandling_adv		\N
-753	2	1572464536	quiz	graceperiod	86400	\N
-754	2	1572464536	quiz	graceperiod_adv		\N
-755	2	1572464536	quiz	graceperiodmin	60	\N
-756	2	1572464536	quiz	attempts	0	\N
-757	2	1572464536	quiz	attempts_adv		\N
-758	2	1572464536	quiz	grademethod	1	\N
-759	2	1572464536	quiz	grademethod_adv		\N
-760	2	1572464536	quiz	maximumgrade	10	\N
-761	2	1572464536	quiz	questionsperpage	1	\N
-762	2	1572464536	quiz	questionsperpage_adv		\N
-763	2	1572464536	quiz	navmethod	free	\N
-764	2	1572464536	quiz	navmethod_adv	1	\N
-765	2	1572464536	quiz	shuffleanswers	1	\N
-766	2	1572464536	quiz	shuffleanswers_adv		\N
-767	2	1572464536	quiz	preferredbehaviour	deferredfeedback	\N
-768	2	1572464536	quiz	canredoquestions	0	\N
-769	2	1572464536	quiz	canredoquestions_adv	1	\N
-770	2	1572464536	quiz	attemptonlast	0	\N
-771	2	1572464536	quiz	attemptonlast_adv	1	\N
-772	2	1572464536	quiz	reviewattempt	69904	\N
-773	2	1572464536	quiz	reviewcorrectness	69904	\N
-774	2	1572464536	quiz	reviewmarks	69904	\N
-775	2	1572464536	quiz	reviewspecificfeedback	69904	\N
-776	2	1572464536	quiz	reviewgeneralfeedback	69904	\N
-777	2	1572464536	quiz	reviewrightanswer	69904	\N
-778	2	1572464536	quiz	reviewoverallfeedback	4368	\N
-779	2	1572464536	quiz	showuserpicture	0	\N
-780	2	1572464536	quiz	showuserpicture_adv		\N
-781	2	1572464536	quiz	decimalpoints	2	\N
-782	2	1572464536	quiz	decimalpoints_adv		\N
-783	2	1572464536	quiz	questiondecimalpoints	-1	\N
-784	2	1572464536	quiz	questiondecimalpoints_adv	1	\N
-785	2	1572464536	quiz	showblocks	0	\N
-786	2	1572464536	quiz	showblocks_adv	1	\N
-787	2	1572464536	quiz	password		\N
-788	2	1572464536	quiz	password_adv		\N
-789	2	1572464536	quiz	subnet		\N
-790	2	1572464536	quiz	subnet_adv	1	\N
-791	2	1572464536	quiz	delay1	0	\N
-792	2	1572464536	quiz	delay1_adv	1	\N
-793	2	1572464536	quiz	delay2	0	\N
-794	2	1572464536	quiz	delay2_adv	1	\N
-795	2	1572464536	quiz	browsersecurity	-	\N
-796	2	1572464536	quiz	browsersecurity_adv	1	\N
-797	2	1572464536	quiz	initialnumfeedbacks	2	\N
-798	2	1572464536	quiz	autosaveperiod	60	\N
-799	2	1572464536	scorm	displaycoursestructure	0	\N
-800	2	1572464536	scorm	displaycoursestructure_adv		\N
-801	2	1572464536	scorm	popup	0	\N
-802	2	1572464536	scorm	popup_adv		\N
-803	2	1572464536	scorm	displayactivityname	1	\N
-804	2	1572464536	scorm	framewidth	100	\N
-805	2	1572464536	scorm	framewidth_adv	1	\N
-806	2	1572464536	scorm	frameheight	500	\N
-807	2	1572464536	scorm	frameheight_adv	1	\N
-808	2	1572464536	scorm	winoptgrp_adv	1	\N
-809	2	1572464536	scorm	scrollbars	0	\N
-810	2	1572464536	scorm	directories	0	\N
-811	2	1572464536	scorm	location	0	\N
-812	2	1572464536	scorm	menubar	0	\N
-813	2	1572464536	scorm	toolbar	0	\N
-814	2	1572464536	scorm	status	0	\N
-815	2	1572464536	scorm	skipview	0	\N
-816	2	1572464536	scorm	skipview_adv	1	\N
-817	2	1572464536	scorm	hidebrowse	0	\N
-818	2	1572464536	scorm	hidebrowse_adv	1	\N
-819	2	1572464536	scorm	hidetoc	0	\N
-820	2	1572464536	scorm	hidetoc_adv	1	\N
-821	2	1572464536	scorm	nav	1	\N
-822	2	1572464536	scorm	nav_adv	1	\N
-823	2	1572464536	scorm	navpositionleft	-100	\N
-824	2	1572464536	scorm	navpositionleft_adv	1	\N
-825	2	1572464536	scorm	navpositiontop	-100	\N
-826	2	1572464536	scorm	navpositiontop_adv	1	\N
-827	2	1572464536	scorm	collapsetocwinsize	767	\N
-828	2	1572464536	scorm	collapsetocwinsize_adv	1	\N
-829	2	1572464536	scorm	displayattemptstatus	1	\N
-830	2	1572464536	scorm	displayattemptstatus_adv		\N
-831	2	1572464536	scorm	grademethod	1	\N
-832	2	1572464536	scorm	maxgrade	100	\N
-833	2	1572464536	scorm	maxattempt	0	\N
-834	2	1572464536	scorm	whatgrade	0	\N
-835	2	1572464536	scorm	forcecompleted	0	\N
-836	2	1572464536	scorm	forcenewattempt	0	\N
-837	2	1572464536	scorm	autocommit	0	\N
-838	2	1572464536	scorm	masteryoverride	1	\N
-839	2	1572464536	scorm	lastattemptlock	0	\N
-840	2	1572464536	scorm	auto	0	\N
-841	2	1572464536	scorm	updatefreq	0	\N
-842	2	1572464536	scorm	scormstandard	0	\N
-843	2	1572464536	scorm	allowtypeexternal	0	\N
-844	2	1572464536	scorm	allowtypelocalsync	0	\N
-845	2	1572464536	scorm	allowtypeexternalaicc	0	\N
-846	2	1572464536	scorm	allowaicchacp	0	\N
-847	2	1572464536	scorm	aicchacptimeout	30	\N
-848	2	1572464536	scorm	aicchacpkeepsessiondata	1	\N
-849	2	1572464536	scorm	aiccuserid	1	\N
-850	2	1572464536	scorm	forcejavascript	1	\N
-851	2	1572464536	scorm	allowapidebug	0	\N
-852	2	1572464536	scorm	apidebugmask	.*	\N
-853	2	1572464536	scorm	protectpackagedownloads	0	\N
-854	2	1572464536	url	framesize	130	\N
-855	2	1572464536	url	secretphrase		\N
-856	2	1572464536	url	rolesinparams	0	\N
-857	2	1572464536	url	displayoptions	0,1,5,6	\N
-858	2	1572464536	url	printintro	1	\N
-859	2	1572464536	url	display	0	\N
-860	2	1572464536	url	popupwidth	620	\N
-861	2	1572464536	url	popupheight	450	\N
-862	2	1572464536	workshop	grade	80	\N
-863	2	1572464536	workshop	gradinggrade	20	\N
-864	2	1572464536	workshop	gradedecimals	0	\N
-865	2	1572464536	workshop	maxbytes	0	\N
-866	2	1572464536	workshop	strategy	accumulative	\N
-867	2	1572464536	workshop	examplesmode	0	\N
-868	2	1572464536	workshopallocation_random	numofreviews	5	\N
-869	2	1572464536	workshopform_numerrors	grade0	No	\N
-870	2	1572464536	workshopform_numerrors	grade1	Yes	\N
-871	2	1572464536	workshopeval_best	comparison	5	\N
-872	2	1572464536	tool_recyclebin	coursebinenable	1	\N
-873	2	1572464536	tool_recyclebin	coursebinexpiry	604800	\N
-874	2	1572464536	tool_recyclebin	categorybinenable	1	\N
-875	2	1572464536	tool_recyclebin	categorybinexpiry	604800	\N
-876	2	1572464536	tool_recyclebin	autohide	1	\N
-877	2	1572464536	antivirus_clamav	runningmethod	commandline	\N
-878	2	1572464536	antivirus_clamav	pathtoclam		\N
-879	2	1572464536	antivirus_clamav	pathtounixsocket		\N
-880	2	1572464536	antivirus_clamav	clamfailureonupload	donothing	\N
-881	2	1572464536	auth_cas	hostname		\N
-882	2	1572464536	auth_cas	baseuri		\N
-883	2	1572464536	auth_cas	port	0	\N
-884	2	1572464536	auth_cas	casversion	2.0	\N
-885	2	1572464536	auth_cas	language	CAS_Languages_English	\N
-886	2	1572464536	auth_cas	proxycas	0	\N
-887	2	1572464536	auth_cas	logoutcas	0	\N
-888	2	1572464536	auth_cas	multiauth	0	\N
-889	2	1572464536	auth_cas	certificate_check	0	\N
-890	2	1572464536	auth_cas	certificate_path		\N
-891	2	1572464536	auth_cas	curl_ssl_version		\N
-892	2	1572464536	auth_cas	logout_return_url		\N
-893	2	1572464536	auth_cas	host_url		\N
-894	2	1572464536	auth_cas	ldap_version	3	\N
-895	2	1572464536	auth_cas	start_tls	0	\N
-896	2	1572464536	auth_cas	ldapencoding	utf-8	\N
-897	2	1572464536	auth_cas	pagesize	250	\N
-898	2	1572464536	auth_cas	bind_dn		\N
-899	2	1572464536	auth_cas	bind_pw		\N
-900	2	1572464536	auth_cas	user_type	default	\N
-901	2	1572464536	auth_cas	contexts		\N
-902	2	1572464536	auth_cas	search_sub	0	\N
-903	2	1572464536	auth_cas	opt_deref	0	\N
-904	2	1572464536	auth_cas	user_attribute		\N
-905	2	1572464536	auth_cas	memberattribute		\N
-906	2	1572464536	auth_cas	memberattribute_isdn		\N
-907	2	1572464536	auth_cas	objectclass		\N
-908	2	1572464536	auth_cas	attrcreators		\N
-909	2	1572464536	auth_cas	groupecreators		\N
-910	2	1572464536	auth_cas	removeuser	0	\N
-911	2	1572464536	auth_cas	field_map_firstname		\N
-912	2	1572464536	auth_cas	field_updatelocal_firstname	oncreate	\N
-913	2	1572464536	auth_cas	field_updateremote_firstname	0	\N
-914	2	1572464536	auth_cas	field_lock_firstname	unlocked	\N
-915	2	1572464537	auth_cas	field_map_lastname		\N
-916	2	1572464537	auth_cas	field_updatelocal_lastname	oncreate	\N
-917	2	1572464537	auth_cas	field_updateremote_lastname	0	\N
-918	2	1572464537	auth_cas	field_lock_lastname	unlocked	\N
-919	2	1572464537	auth_cas	field_map_email		\N
-920	2	1572464537	auth_cas	field_updatelocal_email	oncreate	\N
-921	2	1572464537	auth_cas	field_updateremote_email	0	\N
-922	2	1572464537	auth_cas	field_lock_email	unlocked	\N
-923	2	1572464537	auth_cas	field_map_city		\N
-924	2	1572464537	auth_cas	field_updatelocal_city	oncreate	\N
-925	2	1572464537	auth_cas	field_updateremote_city	0	\N
-926	2	1572464537	auth_cas	field_lock_city	unlocked	\N
-927	2	1572464537	auth_cas	field_map_country		\N
-928	2	1572464537	auth_cas	field_updatelocal_country	oncreate	\N
-929	2	1572464537	auth_cas	field_updateremote_country	0	\N
-930	2	1572464537	auth_cas	field_lock_country	unlocked	\N
-931	2	1572464537	auth_cas	field_map_lang		\N
-932	2	1572464537	auth_cas	field_updatelocal_lang	oncreate	\N
-933	2	1572464537	auth_cas	field_updateremote_lang	0	\N
-934	2	1572464537	auth_cas	field_lock_lang	unlocked	\N
-935	2	1572464537	auth_cas	field_map_description		\N
-936	2	1572464537	auth_cas	field_updatelocal_description	oncreate	\N
-937	2	1572464537	auth_cas	field_updateremote_description	0	\N
-938	2	1572464537	auth_cas	field_lock_description	unlocked	\N
-939	2	1572464537	auth_cas	field_map_url		\N
-940	2	1572464537	auth_cas	field_updatelocal_url	oncreate	\N
-941	2	1572464537	auth_cas	field_updateremote_url	0	\N
-942	2	1572464537	auth_cas	field_lock_url	unlocked	\N
-943	2	1572464537	auth_cas	field_map_idnumber		\N
-944	2	1572464537	auth_cas	field_updatelocal_idnumber	oncreate	\N
-945	2	1572464537	auth_cas	field_updateremote_idnumber	0	\N
-946	2	1572464537	auth_cas	field_lock_idnumber	unlocked	\N
-947	2	1572464537	auth_cas	field_map_institution		\N
-948	2	1572464537	auth_cas	field_updatelocal_institution	oncreate	\N
-949	2	1572464537	auth_cas	field_updateremote_institution	0	\N
-950	2	1572464537	auth_cas	field_lock_institution	unlocked	\N
-951	2	1572464537	auth_cas	field_map_department		\N
-952	2	1572464537	auth_cas	field_updatelocal_department	oncreate	\N
-953	2	1572464537	auth_cas	field_updateremote_department	0	\N
-954	2	1572464537	auth_cas	field_lock_department	unlocked	\N
-955	2	1572464537	auth_cas	field_map_phone1		\N
-956	2	1572464537	auth_cas	field_updatelocal_phone1	oncreate	\N
-957	2	1572464537	auth_cas	field_updateremote_phone1	0	\N
-958	2	1572464537	auth_cas	field_lock_phone1	unlocked	\N
-959	2	1572464537	auth_cas	field_map_phone2		\N
-960	2	1572464537	auth_cas	field_updatelocal_phone2	oncreate	\N
-961	2	1572464537	auth_cas	field_updateremote_phone2	0	\N
-962	2	1572464537	auth_cas	field_lock_phone2	unlocked	\N
-963	2	1572464537	auth_cas	field_map_address		\N
-964	2	1572464537	auth_cas	field_updatelocal_address	oncreate	\N
-965	2	1572464537	auth_cas	field_updateremote_address	0	\N
-966	2	1572464537	auth_cas	field_lock_address	unlocked	\N
-967	2	1572464537	auth_cas	field_map_firstnamephonetic		\N
-968	2	1572464537	auth_cas	field_updatelocal_firstnamephonetic	oncreate	\N
-969	2	1572464537	auth_cas	field_updateremote_firstnamephonetic	0	\N
-970	2	1572464537	auth_cas	field_lock_firstnamephonetic	unlocked	\N
-971	2	1572464537	auth_cas	field_map_lastnamephonetic		\N
-972	2	1572464537	auth_cas	field_updatelocal_lastnamephonetic	oncreate	\N
-973	2	1572464537	auth_cas	field_updateremote_lastnamephonetic	0	\N
-974	2	1572464537	auth_cas	field_lock_lastnamephonetic	unlocked	\N
-975	2	1572464537	auth_cas	field_map_middlename		\N
-976	2	1572464537	auth_cas	field_updatelocal_middlename	oncreate	\N
-977	2	1572464537	auth_cas	field_updateremote_middlename	0	\N
-978	2	1572464537	auth_cas	field_lock_middlename	unlocked	\N
-979	2	1572464537	auth_cas	field_map_alternatename		\N
-980	2	1572464537	auth_cas	field_updatelocal_alternatename	oncreate	\N
-981	2	1572464537	auth_cas	field_updateremote_alternatename	0	\N
-982	2	1572464537	auth_cas	field_lock_alternatename	unlocked	\N
-983	2	1572464537	auth_email	recaptcha	0	\N
-984	2	1572464537	auth_email	field_lock_firstname	unlocked	\N
-985	2	1572464537	auth_email	field_lock_lastname	unlocked	\N
-986	2	1572464537	auth_email	field_lock_email	unlocked	\N
-987	2	1572464537	auth_email	field_lock_city	unlocked	\N
-988	2	1572464537	auth_email	field_lock_country	unlocked	\N
-989	2	1572464537	auth_email	field_lock_lang	unlocked	\N
-990	2	1572464537	auth_email	field_lock_description	unlocked	\N
-991	2	1572464537	auth_email	field_lock_url	unlocked	\N
-992	2	1572464537	auth_email	field_lock_idnumber	unlocked	\N
-993	2	1572464537	auth_email	field_lock_institution	unlocked	\N
-994	2	1572464537	auth_email	field_lock_department	unlocked	\N
-995	2	1572464537	auth_email	field_lock_phone1	unlocked	\N
-996	2	1572464537	auth_email	field_lock_phone2	unlocked	\N
-997	2	1572464537	auth_email	field_lock_address	unlocked	\N
-998	2	1572464537	auth_email	field_lock_firstnamephonetic	unlocked	\N
-999	2	1572464537	auth_email	field_lock_lastnamephonetic	unlocked	\N
-1000	2	1572464537	auth_email	field_lock_middlename	unlocked	\N
-1001	2	1572464537	auth_email	field_lock_alternatename	unlocked	\N
-1002	2	1572464537	auth_db	host	127.0.0.1	\N
-1003	2	1572464537	auth_db	type	mysqli	\N
-1004	2	1572464537	auth_db	sybasequoting	0	\N
-1005	2	1572464537	auth_db	name		\N
-1006	2	1572464537	auth_db	user		\N
-1007	2	1572464537	auth_db	pass		\N
-1008	2	1572464537	auth_db	table		\N
-1009	2	1572464537	auth_db	fielduser		\N
-1010	2	1572464537	auth_db	fieldpass		\N
-1011	2	1572464537	auth_db	passtype	plaintext	\N
-1012	2	1572464537	auth_db	extencoding	utf-8	\N
-1013	2	1572464537	auth_db	setupsql		\N
-1014	2	1572464537	auth_db	debugauthdb	0	\N
-1015	2	1572464537	auth_db	changepasswordurl		\N
-1016	2	1572464537	auth_db	removeuser	0	\N
-1017	2	1572464537	auth_db	updateusers	0	\N
-1018	2	1572464537	auth_db	field_map_firstname		\N
-1019	2	1572464537	auth_db	field_updatelocal_firstname	oncreate	\N
-1020	2	1572464537	auth_db	field_updateremote_firstname	0	\N
-1021	2	1572464537	auth_db	field_lock_firstname	unlocked	\N
-1022	2	1572464537	auth_db	field_map_lastname		\N
-1023	2	1572464537	auth_db	field_updatelocal_lastname	oncreate	\N
-1024	2	1572464537	auth_db	field_updateremote_lastname	0	\N
-1025	2	1572464537	auth_db	field_lock_lastname	unlocked	\N
-1026	2	1572464537	auth_db	field_map_email		\N
-1027	2	1572464537	auth_db	field_updatelocal_email	oncreate	\N
-1028	2	1572464537	auth_db	field_updateremote_email	0	\N
-1029	2	1572464537	auth_db	field_lock_email	unlocked	\N
-1030	2	1572464537	auth_db	field_map_city		\N
-1031	2	1572464537	auth_db	field_updatelocal_city	oncreate	\N
-1032	2	1572464537	auth_db	field_updateremote_city	0	\N
-1033	2	1572464537	auth_db	field_lock_city	unlocked	\N
-1034	2	1572464537	auth_db	field_map_country		\N
-1035	2	1572464537	auth_db	field_updatelocal_country	oncreate	\N
-1036	2	1572464537	auth_db	field_updateremote_country	0	\N
-1037	2	1572464537	auth_db	field_lock_country	unlocked	\N
-1038	2	1572464537	auth_db	field_map_lang		\N
-1039	2	1572464537	auth_db	field_updatelocal_lang	oncreate	\N
-1040	2	1572464537	auth_db	field_updateremote_lang	0	\N
-1041	2	1572464537	auth_db	field_lock_lang	unlocked	\N
-1042	2	1572464537	auth_db	field_map_description		\N
-1043	2	1572464537	auth_db	field_updatelocal_description	oncreate	\N
-1044	2	1572464537	auth_db	field_updateremote_description	0	\N
-1045	2	1572464537	auth_db	field_lock_description	unlocked	\N
-1046	2	1572464537	auth_db	field_map_url		\N
-1047	2	1572464537	auth_db	field_updatelocal_url	oncreate	\N
-1048	2	1572464537	auth_db	field_updateremote_url	0	\N
-1049	2	1572464537	auth_db	field_lock_url	unlocked	\N
-1050	2	1572464537	auth_db	field_map_idnumber		\N
-1051	2	1572464537	auth_db	field_updatelocal_idnumber	oncreate	\N
-1052	2	1572464537	auth_db	field_updateremote_idnumber	0	\N
-1053	2	1572464537	auth_db	field_lock_idnumber	unlocked	\N
-1054	2	1572464537	auth_db	field_map_institution		\N
-1055	2	1572464537	auth_db	field_updatelocal_institution	oncreate	\N
-1056	2	1572464537	auth_db	field_updateremote_institution	0	\N
-1057	2	1572464537	auth_db	field_lock_institution	unlocked	\N
-1058	2	1572464537	auth_db	field_map_department		\N
-1059	2	1572464537	auth_db	field_updatelocal_department	oncreate	\N
-1060	2	1572464537	auth_db	field_updateremote_department	0	\N
-1061	2	1572464537	auth_db	field_lock_department	unlocked	\N
-1062	2	1572464537	auth_db	field_map_phone1		\N
-1063	2	1572464537	auth_db	field_updatelocal_phone1	oncreate	\N
-1064	2	1572464537	auth_db	field_updateremote_phone1	0	\N
-1065	2	1572464537	auth_db	field_lock_phone1	unlocked	\N
-1066	2	1572464537	auth_db	field_map_phone2		\N
-1067	2	1572464537	auth_db	field_updatelocal_phone2	oncreate	\N
-1068	2	1572464537	auth_db	field_updateremote_phone2	0	\N
-1069	2	1572464537	auth_db	field_lock_phone2	unlocked	\N
-1070	2	1572464537	auth_db	field_map_address		\N
-1071	2	1572464537	auth_db	field_updatelocal_address	oncreate	\N
-1072	2	1572464537	auth_db	field_updateremote_address	0	\N
-1073	2	1572464537	auth_db	field_lock_address	unlocked	\N
-1074	2	1572464537	auth_db	field_map_firstnamephonetic		\N
-1075	2	1572464537	auth_db	field_updatelocal_firstnamephonetic	oncreate	\N
-1076	2	1572464537	auth_db	field_updateremote_firstnamephonetic	0	\N
-1077	2	1572464537	auth_db	field_lock_firstnamephonetic	unlocked	\N
-1078	2	1572464537	auth_db	field_map_lastnamephonetic		\N
-1079	2	1572464537	auth_db	field_updatelocal_lastnamephonetic	oncreate	\N
-1080	2	1572464537	auth_db	field_updateremote_lastnamephonetic	0	\N
-1081	2	1572464537	auth_db	field_lock_lastnamephonetic	unlocked	\N
-1082	2	1572464537	auth_db	field_map_middlename		\N
-1083	2	1572464537	auth_db	field_updatelocal_middlename	oncreate	\N
-1084	2	1572464537	auth_db	field_updateremote_middlename	0	\N
-1085	2	1572464537	auth_db	field_lock_middlename	unlocked	\N
-1086	2	1572464537	auth_db	field_map_alternatename		\N
-1087	2	1572464537	auth_db	field_updatelocal_alternatename	oncreate	\N
-1088	2	1572464537	auth_db	field_updateremote_alternatename	0	\N
-1089	2	1572464537	auth_db	field_lock_alternatename	unlocked	\N
-1090	2	1572464537	auth_ldap	host_url		\N
-1091	2	1572464537	auth_ldap	ldap_version	3	\N
-1092	2	1572464537	auth_ldap	start_tls	0	\N
-1093	2	1572464537	auth_ldap	ldapencoding	utf-8	\N
-1094	2	1572464537	auth_ldap	pagesize	250	\N
-1095	2	1572464537	auth_ldap	preventpassindb	0	\N
-1096	2	1572464537	auth_ldap	bind_dn		\N
-1097	2	1572464537	auth_ldap	bind_pw		\N
-1098	2	1572464537	auth_ldap	user_type	default	\N
-1099	2	1572464537	auth_ldap	contexts		\N
-1100	2	1572464537	auth_ldap	search_sub	0	\N
-1101	2	1572464537	auth_ldap	opt_deref	0	\N
-1102	2	1572464537	auth_ldap	user_attribute		\N
-1103	2	1572464537	auth_ldap	suspended_attribute		\N
-1104	2	1572464537	auth_ldap	memberattribute		\N
-1105	2	1572464537	auth_ldap	memberattribute_isdn		\N
-1106	2	1572464537	auth_ldap	objectclass		\N
-1107	2	1572464537	auth_ldap	forcechangepassword	0	\N
-1108	2	1572464537	auth_ldap	stdchangepassword	0	\N
-1109	2	1572464537	auth_ldap	passtype	plaintext	\N
-1110	2	1572464537	auth_ldap	changepasswordurl		\N
-1111	2	1572464537	auth_ldap	expiration	0	\N
-1112	2	1572464537	auth_ldap	expiration_warning		\N
-1113	2	1572464537	auth_ldap	expireattr		\N
-1114	2	1572464537	auth_ldap	gracelogins	0	\N
-1115	2	1572464537	auth_ldap	graceattr		\N
-1116	2	1572464537	auth_ldap	auth_user_create	0	\N
-1117	2	1572464537	auth_ldap	create_context		\N
-1118	2	1572464537	auth_ldap	managercontext		\N
-1119	2	1572464537	auth_ldap	coursecreatorcontext		\N
-1120	2	1572464537	auth_ldap	removeuser	0	\N
-1121	2	1572464537	auth_ldap	sync_suspended	0	\N
-1122	2	1572464537	auth_ldap	ntlmsso_enabled	0	\N
-1123	2	1572464537	auth_ldap	ntlmsso_subnet		\N
-1124	2	1572464537	auth_ldap	ntlmsso_ie_fastpath	0	\N
-1125	2	1572464537	auth_ldap	ntlmsso_type	ntlm	\N
-1126	2	1572464537	auth_ldap	ntlmsso_remoteuserformat		\N
-1127	2	1572464537	auth_ldap	field_map_firstname		\N
-1128	2	1572464537	auth_ldap	field_updatelocal_firstname	oncreate	\N
-1129	2	1572464537	auth_ldap	field_updateremote_firstname	0	\N
-1130	2	1572464537	auth_ldap	field_lock_firstname	unlocked	\N
-1131	2	1572464537	auth_ldap	field_map_lastname		\N
-1132	2	1572464537	auth_ldap	field_updatelocal_lastname	oncreate	\N
-1133	2	1572464537	auth_ldap	field_updateremote_lastname	0	\N
-1134	2	1572464537	auth_ldap	field_lock_lastname	unlocked	\N
-1135	2	1572464537	auth_ldap	field_map_email		\N
-1136	2	1572464537	auth_ldap	field_updatelocal_email	oncreate	\N
-1137	2	1572464537	auth_ldap	field_updateremote_email	0	\N
-1138	2	1572464537	auth_ldap	field_lock_email	unlocked	\N
-1139	2	1572464537	auth_ldap	field_map_city		\N
-1140	2	1572464537	auth_ldap	field_updatelocal_city	oncreate	\N
-1141	2	1572464537	auth_ldap	field_updateremote_city	0	\N
-1142	2	1572464537	auth_ldap	field_lock_city	unlocked	\N
-1143	2	1572464537	auth_ldap	field_map_country		\N
-1144	2	1572464537	auth_ldap	field_updatelocal_country	oncreate	\N
-1145	2	1572464537	auth_ldap	field_updateremote_country	0	\N
-1146	2	1572464537	auth_ldap	field_lock_country	unlocked	\N
-1147	2	1572464537	auth_ldap	field_map_lang		\N
-1148	2	1572464537	auth_ldap	field_updatelocal_lang	oncreate	\N
-1149	2	1572464537	auth_ldap	field_updateremote_lang	0	\N
-1150	2	1572464537	auth_ldap	field_lock_lang	unlocked	\N
-1151	2	1572464537	auth_ldap	field_map_description		\N
-1152	2	1572464537	auth_ldap	field_updatelocal_description	oncreate	\N
-1153	2	1572464537	auth_ldap	field_updateremote_description	0	\N
-1154	2	1572464537	auth_ldap	field_lock_description	unlocked	\N
-1155	2	1572464537	auth_ldap	field_map_url		\N
-1156	2	1572464537	auth_ldap	field_updatelocal_url	oncreate	\N
-1157	2	1572464537	auth_ldap	field_updateremote_url	0	\N
-1158	2	1572464537	auth_ldap	field_lock_url	unlocked	\N
-1159	2	1572464537	auth_ldap	field_map_idnumber		\N
-1160	2	1572464537	auth_ldap	field_updatelocal_idnumber	oncreate	\N
-1161	2	1572464537	auth_ldap	field_updateremote_idnumber	0	\N
-1162	2	1572464537	auth_ldap	field_lock_idnumber	unlocked	\N
-1163	2	1572464537	auth_ldap	field_map_institution		\N
-1164	2	1572464537	auth_ldap	field_updatelocal_institution	oncreate	\N
-1165	2	1572464537	auth_ldap	field_updateremote_institution	0	\N
-1166	2	1572464537	auth_ldap	field_lock_institution	unlocked	\N
-1167	2	1572464537	auth_ldap	field_map_department		\N
-1168	2	1572464537	auth_ldap	field_updatelocal_department	oncreate	\N
-1169	2	1572464537	auth_ldap	field_updateremote_department	0	\N
-1170	2	1572464537	auth_ldap	field_lock_department	unlocked	\N
-1171	2	1572464537	auth_ldap	field_map_phone1		\N
-1172	2	1572464537	auth_ldap	field_updatelocal_phone1	oncreate	\N
-1173	2	1572464537	auth_ldap	field_updateremote_phone1	0	\N
-1174	2	1572464537	auth_ldap	field_lock_phone1	unlocked	\N
-1175	2	1572464537	auth_ldap	field_map_phone2		\N
-1176	2	1572464537	auth_ldap	field_updatelocal_phone2	oncreate	\N
-1177	2	1572464537	auth_ldap	field_updateremote_phone2	0	\N
-1178	2	1572464537	auth_ldap	field_lock_phone2	unlocked	\N
-1179	2	1572464537	auth_ldap	field_map_address		\N
-1180	2	1572464537	auth_ldap	field_updatelocal_address	oncreate	\N
-1181	2	1572464537	auth_ldap	field_updateremote_address	0	\N
-1182	2	1572464537	auth_ldap	field_lock_address	unlocked	\N
-1183	2	1572464537	auth_ldap	field_map_firstnamephonetic		\N
-1184	2	1572464537	auth_ldap	field_updatelocal_firstnamephonetic	oncreate	\N
-1185	2	1572464537	auth_ldap	field_updateremote_firstnamephonetic	0	\N
-1186	2	1572464537	auth_ldap	field_lock_firstnamephonetic	unlocked	\N
-1187	2	1572464537	auth_ldap	field_map_lastnamephonetic		\N
-1188	2	1572464537	auth_ldap	field_updatelocal_lastnamephonetic	oncreate	\N
-1189	2	1572464537	auth_ldap	field_updateremote_lastnamephonetic	0	\N
-1190	2	1572464537	auth_ldap	field_lock_lastnamephonetic	unlocked	\N
-1191	2	1572464537	auth_ldap	field_map_middlename		\N
-1192	2	1572464537	auth_ldap	field_updatelocal_middlename	oncreate	\N
-1193	2	1572464537	auth_ldap	field_updateremote_middlename	0	\N
-1194	2	1572464537	auth_ldap	field_lock_middlename	unlocked	\N
-1195	2	1572464537	auth_ldap	field_map_alternatename		\N
-1196	2	1572464537	auth_ldap	field_updatelocal_alternatename	oncreate	\N
-1197	2	1572464538	auth_ldap	field_updateremote_alternatename	0	\N
-1198	2	1572464538	auth_ldap	field_lock_alternatename	unlocked	\N
-1199	2	1572464538	auth_manual	expiration	0	\N
-1200	2	1572464538	auth_manual	expirationtime	30	\N
-1201	2	1572464538	auth_manual	expiration_warning	0	\N
-1202	2	1572464538	auth_manual	field_lock_firstname	unlocked	\N
-1203	2	1572464538	auth_manual	field_lock_lastname	unlocked	\N
-1204	2	1572464538	auth_manual	field_lock_email	unlocked	\N
-1205	2	1572464538	auth_manual	field_lock_city	unlocked	\N
-1206	2	1572464538	auth_manual	field_lock_country	unlocked	\N
-1207	2	1572464538	auth_manual	field_lock_lang	unlocked	\N
-1208	2	1572464538	auth_manual	field_lock_description	unlocked	\N
-1209	2	1572464538	auth_manual	field_lock_url	unlocked	\N
-1210	2	1572464538	auth_manual	field_lock_idnumber	unlocked	\N
-1211	2	1572464538	auth_manual	field_lock_institution	unlocked	\N
-1212	2	1572464538	auth_manual	field_lock_department	unlocked	\N
-1213	2	1572464538	auth_manual	field_lock_phone1	unlocked	\N
-1214	2	1572464538	auth_manual	field_lock_phone2	unlocked	\N
-1215	2	1572464538	auth_manual	field_lock_address	unlocked	\N
-1216	2	1572464538	auth_manual	field_lock_firstnamephonetic	unlocked	\N
-1217	2	1572464538	auth_manual	field_lock_lastnamephonetic	unlocked	\N
-1218	2	1572464538	auth_manual	field_lock_middlename	unlocked	\N
-1219	2	1572464538	auth_manual	field_lock_alternatename	unlocked	\N
-1220	2	1572464538	auth_mnet	rpc_negotiation_timeout	30	\N
-1221	2	1572464538	auth_none	field_lock_firstname	unlocked	\N
-1222	2	1572464538	auth_none	field_lock_lastname	unlocked	\N
-1223	2	1572464538	auth_none	field_lock_email	unlocked	\N
-1224	2	1572464538	auth_none	field_lock_city	unlocked	\N
-1225	2	1572464538	auth_none	field_lock_country	unlocked	\N
-1226	2	1572464538	auth_none	field_lock_lang	unlocked	\N
-1227	2	1572464538	auth_none	field_lock_description	unlocked	\N
-1228	2	1572464538	auth_none	field_lock_url	unlocked	\N
-1229	2	1572464538	auth_none	field_lock_idnumber	unlocked	\N
-1230	2	1572464538	auth_none	field_lock_institution	unlocked	\N
-1231	2	1572464538	auth_none	field_lock_department	unlocked	\N
-1232	2	1572464538	auth_none	field_lock_phone1	unlocked	\N
-1233	2	1572464538	auth_none	field_lock_phone2	unlocked	\N
-1234	2	1572464538	auth_none	field_lock_address	unlocked	\N
-1235	2	1572464538	auth_none	field_lock_firstnamephonetic	unlocked	\N
-1236	2	1572464538	auth_none	field_lock_lastnamephonetic	unlocked	\N
-1237	2	1572464538	auth_none	field_lock_middlename	unlocked	\N
-1238	2	1572464538	auth_none	field_lock_alternatename	unlocked	\N
-1239	2	1572464538	auth_oauth2	field_lock_firstname	unlocked	\N
-1240	2	1572464538	auth_oauth2	field_lock_lastname	unlocked	\N
-1241	2	1572464538	auth_oauth2	field_lock_email	unlocked	\N
-1242	2	1572464538	auth_oauth2	field_lock_city	unlocked	\N
-1243	2	1572464538	auth_oauth2	field_lock_country	unlocked	\N
-1244	2	1572464538	auth_oauth2	field_lock_lang	unlocked	\N
-1245	2	1572464538	auth_oauth2	field_lock_description	unlocked	\N
-1246	2	1572464538	auth_oauth2	field_lock_url	unlocked	\N
-1247	2	1572464538	auth_oauth2	field_lock_idnumber	unlocked	\N
-1248	2	1572464538	auth_oauth2	field_lock_institution	unlocked	\N
-1249	2	1572464538	auth_oauth2	field_lock_department	unlocked	\N
-1250	2	1572464538	auth_oauth2	field_lock_phone1	unlocked	\N
-1251	2	1572464538	auth_oauth2	field_lock_phone2	unlocked	\N
-1252	2	1572464538	auth_oauth2	field_lock_address	unlocked	\N
-1253	2	1572464538	auth_oauth2	field_lock_firstnamephonetic	unlocked	\N
-1254	2	1572464538	auth_oauth2	field_lock_lastnamephonetic	unlocked	\N
-1255	2	1572464538	auth_oauth2	field_lock_middlename	unlocked	\N
-1256	2	1572464538	auth_oauth2	field_lock_alternatename	unlocked	\N
-1257	2	1572464538	auth_shibboleth	user_attribute		\N
-1258	2	1572464538	auth_shibboleth	convert_data		\N
-1259	2	1572464538	auth_shibboleth	alt_login	off	\N
-1260	2	1572464538	auth_shibboleth	organization_selection	urn:mace:organization1:providerID, Example Organization 1\n        https://another.idp-id.com/shibboleth, Other Example Organization, /Shibboleth.sso/DS/SWITCHaai\n        urn:mace:organization2:providerID, Example Organization 2, /Shibboleth.sso/WAYF/SWITCHaai	\N
-1261	2	1572464538	auth_shibboleth	logout_handler		\N
-1262	2	1572464538	auth_shibboleth	logout_return_url		\N
-1263	2	1572464538	auth_shibboleth	login_name	Shibboleth Login	\N
-1264	2	1572464538	auth_shibboleth	auth_logo		\N
-1265	2	1572464538	auth_shibboleth	auth_instructions	Use the <a href="https://agora-virtual.xtec.cat/agora/moodle2/auth/shibboleth/index.php">Shibboleth login</a> to get access via Shibboleth, if your institution supports it.<br />Otherwise, use the normal login form shown here.	\N
-1266	2	1572464538	auth_shibboleth	changepasswordurl		\N
-1267	2	1572464538	auth_shibboleth	field_map_firstname		\N
-1268	2	1572464538	auth_shibboleth	field_updatelocal_firstname	oncreate	\N
-1269	2	1572464538	auth_shibboleth	field_lock_firstname	unlocked	\N
-1270	2	1572464538	auth_shibboleth	field_map_lastname		\N
-1271	2	1572464538	auth_shibboleth	field_updatelocal_lastname	oncreate	\N
-1272	2	1572464538	auth_shibboleth	field_lock_lastname	unlocked	\N
-1273	2	1572464538	auth_shibboleth	field_map_email		\N
-1274	2	1572464538	auth_shibboleth	field_updatelocal_email	oncreate	\N
-1275	2	1572464538	auth_shibboleth	field_lock_email	unlocked	\N
-1276	2	1572464538	auth_shibboleth	field_map_city		\N
-1277	2	1572464538	auth_shibboleth	field_updatelocal_city	oncreate	\N
-1278	2	1572464538	auth_shibboleth	field_lock_city	unlocked	\N
-1279	2	1572464538	auth_shibboleth	field_map_country		\N
-1280	2	1572464538	auth_shibboleth	field_updatelocal_country	oncreate	\N
-1281	2	1572464538	auth_shibboleth	field_lock_country	unlocked	\N
-1282	2	1572464538	auth_shibboleth	field_map_lang		\N
-1283	2	1572464538	auth_shibboleth	field_updatelocal_lang	oncreate	\N
-1284	2	1572464538	auth_shibboleth	field_lock_lang	unlocked	\N
-1285	2	1572464538	auth_shibboleth	field_map_description		\N
-1286	2	1572464538	auth_shibboleth	field_updatelocal_description	oncreate	\N
-1287	2	1572464538	auth_shibboleth	field_lock_description	unlocked	\N
-1288	2	1572464538	auth_shibboleth	field_map_url		\N
-1289	2	1572464538	auth_shibboleth	field_updatelocal_url	oncreate	\N
-1290	2	1572464538	auth_shibboleth	field_lock_url	unlocked	\N
-1291	2	1572464538	auth_shibboleth	field_map_idnumber		\N
-1292	2	1572464538	auth_shibboleth	field_updatelocal_idnumber	oncreate	\N
-1293	2	1572464538	auth_shibboleth	field_lock_idnumber	unlocked	\N
-1294	2	1572464538	auth_shibboleth	field_map_institution		\N
-1295	2	1572464538	auth_shibboleth	field_updatelocal_institution	oncreate	\N
-1296	2	1572464538	auth_shibboleth	field_lock_institution	unlocked	\N
-1297	2	1572464538	auth_shibboleth	field_map_department		\N
-1298	2	1572464538	auth_shibboleth	field_updatelocal_department	oncreate	\N
-1299	2	1572464538	auth_shibboleth	field_lock_department	unlocked	\N
-1300	2	1572464538	auth_shibboleth	field_map_phone1		\N
-1301	2	1572464538	auth_shibboleth	field_updatelocal_phone1	oncreate	\N
-1302	2	1572464538	auth_shibboleth	field_lock_phone1	unlocked	\N
-1303	2	1572464538	auth_shibboleth	field_map_phone2		\N
-1304	2	1572464538	auth_shibboleth	field_updatelocal_phone2	oncreate	\N
-1305	2	1572464538	auth_shibboleth	field_lock_phone2	unlocked	\N
-1306	2	1572464538	auth_shibboleth	field_map_address		\N
-1307	2	1572464538	auth_shibboleth	field_updatelocal_address	oncreate	\N
-1308	2	1572464538	auth_shibboleth	field_lock_address	unlocked	\N
-1309	2	1572464538	auth_shibboleth	field_map_firstnamephonetic		\N
-1310	2	1572464538	auth_shibboleth	field_updatelocal_firstnamephonetic	oncreate	\N
-1311	2	1572464538	auth_shibboleth	field_lock_firstnamephonetic	unlocked	\N
-1312	2	1572464538	auth_shibboleth	field_map_lastnamephonetic		\N
-1313	2	1572464538	auth_shibboleth	field_updatelocal_lastnamephonetic	oncreate	\N
-1314	2	1572464538	auth_shibboleth	field_lock_lastnamephonetic	unlocked	\N
-1315	2	1572464538	auth_shibboleth	field_map_middlename		\N
-1316	2	1572464538	auth_shibboleth	field_updatelocal_middlename	oncreate	\N
-1317	2	1572464538	auth_shibboleth	field_lock_middlename	unlocked	\N
-1318	2	1572464538	auth_shibboleth	field_map_alternatename		\N
-1319	2	1572464538	auth_shibboleth	field_updatelocal_alternatename	oncreate	\N
-1320	2	1572464538	auth_shibboleth	field_lock_alternatename	unlocked	\N
-1321	2	1572464538	block_activity_results	config_showbest	3	\N
-1322	2	1572464538	block_activity_results	config_showbest_locked		\N
-1323	2	1572464538	block_activity_results	config_showworst	0	\N
-1324	2	1572464538	block_activity_results	config_showworst_locked		\N
-1325	2	1572464538	block_activity_results	config_usegroups	0	\N
-1326	2	1572464538	block_activity_results	config_usegroups_locked		\N
-1327	2	1572464538	block_activity_results	config_nameformat	1	\N
-1328	2	1572464538	block_activity_results	config_nameformat_locked		\N
-1329	2	1572464538	block_activity_results	config_gradeformat	1	\N
-1330	2	1572464538	block_activity_results	config_gradeformat_locked		\N
-1331	2	1572464538	block_activity_results	config_decimalpoints	2	\N
-1332	2	1572464538	block_activity_results	config_decimalpoints_locked		\N
-1333	2	1572464538	\N	block_course_list_adminview	all	\N
-1334	2	1572464538	\N	block_course_list_hideallcourseslink	0	\N
-1335	2	1572464538	\N	block_html_allowcssclasses	0	\N
-1336	2	1572464538	\N	block_online_users_timetosee	5	\N
-1337	2	1572464538	\N	block_rss_client_num_entries	5	\N
-1338	2	1572464538	\N	block_rss_client_timeout	30	\N
-1339	2	1572464538	block_section_links	numsections1	22	\N
-1340	2	1572464538	block_section_links	incby1	2	\N
-1341	2	1572464538	block_section_links	numsections2	40	\N
-1342	2	1572464538	block_section_links	incby2	5	\N
-1343	2	1572464538	block_tag_youtube	apikey		\N
-1344	2	1572464538	format_singleactivity	activitytype	forum	\N
-1345	2	1572464538	fileconverter_googledrive	issuerid		\N
-1346	2	1572464538	\N	pathtounoconv	/usr/bin/unoconv	\N
-1347	2	1572464538	enrol_cohort	roleid	5	\N
-1348	2	1572464538	enrol_cohort	unenrolaction	0	\N
-1349	2	1572464538	enrol_meta	nosyncroleids		\N
-1350	2	1572464538	enrol_meta	syncall	1	\N
-1351	2	1572464538	enrol_meta	unenrolaction	3	\N
-1352	2	1572464538	enrol_meta	coursesort	sortorder	\N
-1353	2	1572464538	enrol_database	dbtype		\N
-1354	2	1572464538	enrol_database	dbhost	localhost	\N
-1355	2	1572464538	enrol_database	dbuser		\N
-1356	2	1572464538	enrol_database	dbpass		\N
-1357	2	1572464538	enrol_database	dbname		\N
-1358	2	1572464538	enrol_database	dbencoding	utf-8	\N
-1359	2	1572464538	enrol_database	dbsetupsql		\N
-1360	2	1572464538	enrol_database	dbsybasequoting	0	\N
-1361	2	1572464538	enrol_database	debugdb	0	\N
-1362	2	1572464538	enrol_database	localcoursefield	idnumber	\N
-1363	2	1572464538	enrol_database	localuserfield	idnumber	\N
-1364	2	1572464538	enrol_database	localrolefield	shortname	\N
-1365	2	1572464538	enrol_database	localcategoryfield	id	\N
-1366	2	1572464538	enrol_database	remoteenroltable		\N
-1367	2	1572464538	enrol_database	remotecoursefield		\N
-1368	2	1572464538	enrol_database	remoteuserfield		\N
-1369	2	1572464538	enrol_database	remoterolefield		\N
-1370	2	1572464538	enrol_database	remoteotheruserfield		\N
-1371	2	1572464538	enrol_database	defaultrole	5	\N
-1372	2	1572464538	enrol_database	ignorehiddencourses	0	\N
-1373	2	1572464538	enrol_database	unenrolaction	0	\N
-1374	2	1572464538	enrol_database	newcoursetable		\N
-1375	2	1572464538	enrol_database	newcoursefullname	fullname	\N
-1376	2	1572464538	enrol_database	newcourseshortname	shortname	\N
-1377	2	1572464538	enrol_database	newcourseidnumber	idnumber	\N
-1378	2	1572464538	enrol_database	newcoursecategory		\N
-1379	2	1572464538	enrol_database	defaultcategory	1	\N
-1380	2	1572464538	enrol_database	templatecourse		\N
-1381	2	1572464538	enrol_flatfile	location		\N
-1382	2	1572464538	enrol_flatfile	encoding	UTF-8	\N
-1383	2	1572464538	enrol_flatfile	mailstudents	0	\N
-1384	2	1572464538	enrol_flatfile	mailteachers	0	\N
-1385	2	1572464538	enrol_flatfile	mailadmins	0	\N
-1386	2	1572464538	enrol_flatfile	unenrolaction	3	\N
-1387	2	1572464538	enrol_flatfile	expiredaction	3	\N
-1388	2	1572464538	enrol_guest	requirepassword	0	\N
-1389	2	1572464538	enrol_guest	usepasswordpolicy	0	\N
-1390	2	1572464538	enrol_guest	showhint	0	\N
-1391	2	1572464538	enrol_guest	defaultenrol	1	\N
-1392	2	1572464538	enrol_guest	status	1	\N
-1393	2	1572464538	enrol_guest	status_adv		\N
-1394	2	1572464538	enrol_imsenterprise	imsfilelocation		\N
-1395	2	1572464538	enrol_imsenterprise	logtolocation		\N
-1396	2	1572464538	enrol_imsenterprise	mailadmins	0	\N
-1397	2	1572464538	enrol_imsenterprise	createnewusers	0	\N
-1398	2	1572464538	enrol_imsenterprise	imsupdateusers	0	\N
-1399	2	1572464538	enrol_imsenterprise	imsdeleteusers	0	\N
-1400	2	1572464538	enrol_imsenterprise	fixcaseusernames	0	\N
-1401	2	1572464538	enrol_imsenterprise	fixcasepersonalnames	0	\N
-1402	2	1572464538	enrol_imsenterprise	imssourcedidfallback	0	\N
-1403	2	1572464538	enrol_imsenterprise	imsrolemap01	5	\N
-1404	2	1572464538	enrol_imsenterprise	imsrolemap02	3	\N
-1405	2	1572464538	enrol_imsenterprise	imsrolemap03	3	\N
-1406	2	1572464538	enrol_imsenterprise	imsrolemap04	5	\N
-1407	2	1572464538	enrol_imsenterprise	imsrolemap05	0	\N
-1408	2	1572464538	enrol_imsenterprise	imsrolemap06	4	\N
-1409	2	1572464538	enrol_imsenterprise	imsrolemap07	0	\N
-1410	2	1572464538	enrol_imsenterprise	imsrolemap08	4	\N
-1411	2	1572464538	enrol_imsenterprise	truncatecoursecodes	0	\N
-1412	2	1572464538	enrol_imsenterprise	createnewcourses	0	\N
-1413	2	1572464538	enrol_imsenterprise	updatecourses	0	\N
-1414	2	1572464538	enrol_imsenterprise	createnewcategories	0	\N
-1415	2	1572464538	enrol_imsenterprise	nestedcategories	0	\N
-1416	2	1572464538	enrol_imsenterprise	categoryidnumber	0	\N
-1417	2	1572464538	enrol_imsenterprise	categoryseparator		\N
-1418	2	1572464538	enrol_imsenterprise	imsunenrol	0	\N
-1419	2	1572464538	enrol_imsenterprise	imscoursemapshortname	coursecode	\N
-1420	2	1572464538	enrol_imsenterprise	imscoursemapfullname	short	\N
-1421	2	1572464538	enrol_imsenterprise	imscoursemapsummary	ignore	\N
-1422	2	1572464538	enrol_imsenterprise	imsrestricttarget		\N
-1423	2	1572464538	enrol_imsenterprise	imscapitafix	0	\N
-1424	2	1572464538	enrol_ldap	host_url		\N
-1425	2	1572464538	enrol_ldap	start_tls	0	\N
-1426	2	1572464538	enrol_ldap	ldap_version	3	\N
-1427	2	1572464538	enrol_ldap	ldapencoding	utf-8	\N
-1428	2	1572464538	enrol_ldap	pagesize	250	\N
-1429	2	1572464538	enrol_ldap	bind_dn		\N
-1430	2	1572464538	enrol_ldap	bind_pw		\N
-1431	2	1572464538	enrol_ldap	course_search_sub	0	\N
-1432	2	1572464538	enrol_ldap	memberattribute_isdn	0	\N
-1433	2	1572464538	enrol_ldap	user_contexts		\N
-1434	2	1572464538	enrol_ldap	user_search_sub	0	\N
-1435	2	1572464538	enrol_ldap	user_type	default	\N
-1436	2	1572464538	enrol_ldap	opt_deref	0	\N
-1437	2	1572464538	enrol_ldap	idnumber_attribute		\N
-1438	2	1572464538	enrol_ldap	objectclass		\N
-1439	2	1572464538	enrol_ldap	course_idnumber		\N
-1440	2	1572464538	enrol_ldap	course_shortname		\N
-1441	2	1572464538	enrol_ldap	course_fullname		\N
-1442	2	1572464538	enrol_ldap	course_summary		\N
-1443	2	1572464538	enrol_ldap	ignorehiddencourses	0	\N
-1444	2	1572464538	enrol_ldap	unenrolaction	0	\N
-1445	2	1572464538	enrol_ldap	autocreate	0	\N
-1446	2	1572464538	enrol_ldap	category	1	\N
-1447	2	1572464538	enrol_ldap	template		\N
-1448	2	1572464538	enrol_ldap	course_shortname_updateonsync	0	\N
-1449	2	1572464538	enrol_ldap	course_fullname_updateonsync	0	\N
-1450	2	1572464538	enrol_ldap	course_summary_updateonsync	0	\N
-1451	2	1572464538	enrol_ldap	nested_groups	0	\N
-1452	2	1572464538	enrol_ldap	group_memberofattribute		\N
-1453	2	1572464538	enrol_manual	expiredaction	1	\N
-1454	2	1572464538	enrol_manual	expirynotifyhour	6	\N
-1455	2	1572464538	enrol_manual	defaultenrol	1	\N
-1456	2	1572464538	enrol_manual	status	0	\N
-1457	2	1572464538	enrol_manual	roleid	5	\N
-1458	2	1572464538	enrol_manual	enrolstart	4	\N
-1459	2	1572464538	enrol_manual	enrolperiod	0	\N
-1460	2	1572464538	enrol_manual	expirynotify	0	\N
-1461	2	1572464538	enrol_manual	expirythreshold	86400	\N
-1462	2	1572464538	enrol_mnet	roleid	5	\N
-1463	2	1572464538	enrol_mnet	roleid_adv	1	\N
-1464	2	1572464538	enrol_paypal	paypalbusiness		\N
-1465	2	1572464539	enrol_paypal	mailstudents	0	\N
-1466	2	1572464539	enrol_paypal	mailteachers	0	\N
-1467	2	1572464539	enrol_paypal	mailadmins	0	\N
-1468	2	1572464539	enrol_paypal	expiredaction	3	\N
-1469	2	1572464539	enrol_paypal	status	1	\N
-1470	2	1572464539	enrol_paypal	cost	0	\N
-1471	2	1572464539	enrol_paypal	currency	USD	\N
-1472	2	1572464539	enrol_paypal	roleid	5	\N
-1473	2	1572464539	enrol_paypal	enrolperiod	0	\N
-1474	2	1572464539	enrol_lti	emaildisplay	2	\N
-1475	2	1572464539	enrol_lti	city		\N
-1476	2	1572464539	enrol_lti	country		\N
-1477	2	1572464539	enrol_lti	timezone	99	\N
-1478	2	1572464539	enrol_lti	lang	en	\N
-1479	2	1572464539	enrol_lti	institution		\N
-1480	2	1572464539	enrol_self	requirepassword	0	\N
-1481	2	1572464539	enrol_self	usepasswordpolicy	0	\N
-1482	2	1572464539	enrol_self	showhint	0	\N
-1483	2	1572464539	enrol_self	expiredaction	1	\N
-1484	2	1572464539	enrol_self	expirynotifyhour	6	\N
-1485	2	1572464539	enrol_self	defaultenrol	1	\N
-1486	2	1572464539	enrol_self	status	1	\N
-1487	2	1572464539	enrol_self	newenrols	1	\N
-1488	2	1572464539	enrol_self	groupkey	0	\N
-1489	2	1572464539	enrol_self	roleid	5	\N
-1490	2	1572464539	enrol_self	enrolperiod	0	\N
-1491	2	1572464539	enrol_self	expirynotify	0	\N
-1492	2	1572464539	enrol_self	expirythreshold	86400	\N
-1493	2	1572464539	enrol_self	longtimenosee	0	\N
-1494	2	1572464539	enrol_self	maxenrolled	0	\N
-1495	2	1572464539	enrol_self	sendcoursewelcomemessage	1	\N
-1496	2	1572464539	filter_urltolink	formats	0	\N
-1497	2	1572464539	filter_urltolink	embedimages	1	\N
-1498	2	1572464539	filter_emoticon	formats	1,4,0	\N
-1499	2	1572464539	filter_mathjaxloader	httpsurl	https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js	\N
-1500	2	1572464539	filter_mathjaxloader	texfiltercompatibility	0	\N
-1501	2	1572464539	filter_mathjaxloader	mathjaxconfig	\nMathJax.Hub.Config({\n    config: ["Accessible.js", "Safe.js"],\n    errorSettings: { message: ["!"] },\n    skipStartupTypeset: true,\n    messageStyle: "none"\n});\n	\N
-1502	2	1572464539	filter_mathjaxloader	additionaldelimiters		\N
-1503	2	1572464539	\N	filter_multilang_force_old	0	\N
-1504	2	1572464539	filter_tex	latexpreamble	\\usepackage[latin1]{inputenc}\n\\usepackage{amsmath}\n\\usepackage{amsfonts}\n\\RequirePackage{amsmath,amssymb,latexsym}\n	\N
-1505	2	1572464539	filter_tex	latexbackground	#FFFFFF	\N
-1506	2	1572464539	filter_tex	density	120	\N
-1507	2	1572464539	filter_tex	pathlatex	/usr/bin/latex	\N
-1508	2	1572464539	filter_tex	pathdvips	/usr/bin/dvips	\N
-1509	2	1572464539	filter_tex	pathconvert	/usr/bin/convert	\N
-1510	2	1572464539	filter_tex	pathdvisvgm	/usr/bin/dvisvgm	\N
-1511	2	1572464539	filter_tex	pathmimetex		\N
-1512	2	1572464539	filter_tex	convertformat	gif	\N
-1513	2	1572464539	\N	filter_censor_badwords		\N
-1514	2	1572464539	logstore_database	dbdriver		\N
-1515	2	1572464539	logstore_database	dbhost		\N
-1516	2	1572464539	logstore_database	dbuser		\N
-1517	2	1572464539	logstore_database	dbpass		\N
-1518	2	1572464539	logstore_database	dbname		\N
-1519	2	1572464539	logstore_database	dbtable		\N
-1520	2	1572464539	logstore_database	dbpersist	0	\N
-1521	2	1572464539	logstore_database	dbsocket		\N
-1522	2	1572464539	logstore_database	dbport		\N
-1523	2	1572464539	logstore_database	dbschema		\N
-1524	2	1572464539	logstore_database	dbcollation		\N
-1525	2	1572464539	logstore_database	dbhandlesoptions	0	\N
-1526	2	1572464539	logstore_database	buffersize	50	\N
-1527	2	1572464539	logstore_database	logguests	0	\N
-1528	2	1572464539	logstore_database	includelevels	1,2,0	\N
-1529	2	1572464539	logstore_database	includeactions	c,r,u,d	\N
-1530	2	1572464539	logstore_legacy	loglegacy	0	\N
-1531	2	1572464539	\N	logguests	1	\N
-1532	2	1572464539	\N	loglifetime	0	\N
-1533	2	1572464539	logstore_standard	logguests	1	\N
-1534	2	1572464539	logstore_standard	loglifetime	0	\N
-1535	2	1572464539	logstore_standard	buffersize	50	\N
-1536	2	1572464539	media_videojs	videoextensions	html_video,.f4v,.flv	\N
-1537	2	1572464539	media_videojs	audioextensions	html_audio	\N
-1538	2	1572464539	media_videojs	rtmp	0	\N
-1539	2	1572464539	media_videojs	useflash	0	\N
-1540	2	1572464539	media_videojs	youtube	1	\N
-1541	2	1572464539	media_videojs	videocssclass	video-js	\N
-1542	2	1572464539	media_videojs	audiocssclass	video-js	\N
-1543	2	1572464539	media_videojs	limitsize	1	\N
-1544	2	1572464539	\N	jabberhost		\N
-1545	2	1572464539	\N	jabberserver		\N
-1546	2	1572464539	\N	jabberusername		\N
-1547	2	1572464539	\N	jabberpassword		\N
-1548	2	1572464539	\N	jabberport	5222	\N
-1549	2	1572464539	\N	airnotifierurl	https://messages.moodle.net	\N
-1550	2	1572464539	\N	airnotifierport	443	\N
-1551	2	1572464539	\N	airnotifiermobileappname	com.moodle.moodlemobile	\N
-1552	2	1572464539	\N	airnotifierappname	commoodlemoodlemobile	\N
-1553	2	1572464539	\N	airnotifieraccesskey		\N
-1554	2	1572464539	qtype_multichoice	answerhowmany	1	\N
-1555	2	1572464539	qtype_multichoice	shuffleanswers	1	\N
-1556	2	1572464539	qtype_multichoice	answernumbering	abc	\N
-1557	2	1572464539	editor_atto	toolbar	collapse = collapse\nstyle1 = title, bold, italic\nlist = unorderedlist, orderedlist\nlinks = link\nfiles = image, media, recordrtc, managefiles\nstyle2 = underline, strike, subscript, superscript\nalign = align\nindent = indent\ninsert = equation, charmap, table, clear\nundo = undo\naccessibility = accessibilitychecker, accessibilityhelper\nother = html	\N
-1558	2	1572464539	editor_atto	autosavefrequency	60	\N
-1559	2	1572464539	atto_collapse	showgroups	5	\N
-1560	2	1572464539	atto_equation	librarygroup1	\n\\cdot\n\\times\n\\ast\n\\div\n\\diamond\n\\pm\n\\mp\n\\oplus\n\\ominus\n\\otimes\n\\oslash\n\\odot\n\\circ\n\\bullet\n\\asymp\n\\equiv\n\\subseteq\n\\supseteq\n\\leq\n\\geq\n\\preceq\n\\succeq\n\\sim\n\\simeq\n\\approx\n\\subset\n\\supset\n\\ll\n\\gg\n\\prec\n\\succ\n\\infty\n\\in\n\\ni\n\\forall\n\\exists\n\\neq\n	\N
-1561	2	1572464539	atto_equation	librarygroup2	\n\\leftarrow\n\\rightarrow\n\\uparrow\n\\downarrow\n\\leftrightarrow\n\\nearrow\n\\searrow\n\\swarrow\n\\nwarrow\n\\Leftarrow\n\\Rightarrow\n\\Uparrow\n\\Downarrow\n\\Leftrightarrow\n	\N
-1562	2	1572464539	atto_equation	librarygroup3	\n\\alpha\n\\beta\n\\gamma\n\\delta\n\\epsilon\n\\zeta\n\\eta\n\\theta\n\\iota\n\\kappa\n\\lambda\n\\mu\n\\nu\n\\xi\n\\pi\n\\rho\n\\sigma\n\\tau\n\\upsilon\n\\phi\n\\chi\n\\psi\n\\omega\n\\Gamma\n\\Delta\n\\Theta\n\\Lambda\n\\Xi\n\\Pi\n\\Sigma\n\\Upsilon\n\\Phi\n\\Psi\n\\Omega\n	\N
-1563	2	1572464539	atto_equation	librarygroup4	\n\\sum{a,b}\n\\sqrt[a]{b+c}\n\\int_{a}^{b}{c}\n\\iint_{a}^{b}{c}\n\\iiint_{a}^{b}{c}\n\\oint{a}\n(a)\n[a]\n\\lbrace{a}\\rbrace\n\\left| \\begin{matrix} a_1 & a_2 \\ a_3 & a_4 \\end{matrix} \\right|\n\\frac{a}{b+c}\n\\vec{a}\n\\binom {a} {b}\n{a \\brack b}\n{a \\brace b}\n	\N
-1564	2	1572464539	atto_recordrtc	allowedtypes	both	\N
-1565	2	1572464539	atto_recordrtc	audiobitrate	128000	\N
-1566	2	1572464539	atto_recordrtc	videobitrate	2500000	\N
-1567	2	1572464539	atto_recordrtc	timelimit	120	\N
-1568	2	1572464539	atto_table	allowborders	0	\N
-1569	2	1572464539	atto_table	allowbackgroundcolour	0	\N
-1570	2	1572464539	atto_table	allowwidth	0	\N
-1571	2	1572464539	editor_tinymce	customtoolbar	wrap,formatselect,wrap,bold,italic,wrap,bullist,numlist,wrap,link,unlink,wrap,image\n\nundo,redo,wrap,underline,strikethrough,sub,sup,wrap,justifyleft,justifycenter,justifyright,wrap,outdent,indent,wrap,forecolor,backcolor,wrap,ltr,rtl\n\nfontselect,fontsizeselect,wrap,code,search,replace,wrap,nonbreaking,charmap,table,wrap,cleanup,removeformat,pastetext,pasteword,wrap,fullscreen	\N
-1660	2	1572475798	\N	vicensvives_apiurl	http://api.vicensvivesdigital.com/rest	\N
-1572	2	1572464539	editor_tinymce	fontselectlist	Trebuchet=Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;Arial=arial,helvetica,sans-serif;Courier New=courier new,courier,monospace;Georgia=georgia,times new roman,times,serif;Tahoma=tahoma,arial,helvetica,sans-serif;Times New Roman=times new roman,times,serif;Verdana=verdana,arial,helvetica,sans-serif;Impact=impact;Wingdings=wingdings	\N
-1573	2	1572464539	editor_tinymce	customconfig		\N
-1574	2	1572464539	tinymce_moodleemoticon	requireemoticon	1	\N
-1575	2	1572464539	tinymce_spellchecker	spellengine		\N
-1576	2	1572464539	tinymce_spellchecker	spelllanguagelist	+English=en,Danish=da,Dutch=nl,Finnish=fi,French=fr,German=de,Italian=it,Polish=pl,Portuguese=pt,Spanish=es,Swedish=sv	\N
-1577	2	1572464539	\N	profileroles	5,4,3	\N
-1578	2	1572464539	\N	coursecontact	3	\N
-1579	2	1572464539	\N	frontpage	6	\N
-1580	2	1572464539	\N	frontpageloggedin	6	\N
-1581	2	1572464539	\N	maxcategorydepth	2	\N
-1582	2	1572464539	\N	frontpagecourselimit	200	\N
-1583	2	1572464539	\N	commentsperpage	15	\N
-1584	2	1572464539	\N	defaultfrontpageroleid	8	\N
-1585	2	1572464539	\N	messageinbound_enabled	0	\N
-1586	2	1572464539	\N	messageinbound_mailbox		\N
-1587	2	1572464539	\N	messageinbound_domain		\N
-1588	2	1572464539	\N	messageinbound_host		\N
-1589	2	1572464539	\N	messageinbound_hostssl	ssl	\N
-1590	2	1572464539	\N	messageinbound_hostuser		\N
-1591	2	1572464539	\N	messageinbound_hostpass		\N
-1592	2	1572464539	\N	enablemobilewebservice	1	\N
-1593	2	1572464539	tool_mobile	apppolicy		\N
-1594	2	1572464585	\N	timezone	Europe/Madrid	\N
-1595	2	1572464585	\N	registerauth		\N
-1596	2	1572464585	tool_mobile	typeoflogin	1	\N
-1597	2	1572464585	tool_mobile	forcedurlscheme		\N
-1598	2	1572464585	\N	mobilecssurl		\N
-1599	2	1572464585	tool_mobile	enablesmartappbanners	0	\N
-1600	2	1572464585	tool_mobile	iosappid	633359593	\N
-1601	2	1572464585	tool_mobile	androidappid	com.moodle.moodlemobile	\N
-1602	2	1572464585	tool_mobile	setuplink	https://download.moodle.org/mobile	\N
-1603	2	1572464585	tool_mobile	forcelogout	0	\N
-1604	2	1572464585	tool_mobile	disabledfeatures		\N
-1605	2	1572464585	tool_mobile	custommenuitems		\N
-1606	2	1572464585	tool_mobile	customlangstrings		\N
-1607	2	1572475797	choicegroup	sortgroupsby	1	\N
-1608	2	1572475797	mod_hvp	enable_save_content_state	1	\N
-1609	2	1572475797	mod_hvp	content_state_frequency	30	\N
-1610	2	1572475797	mod_hvp	send_usage_statistics	1	\N
-1611	2	1572475797	mod_hvp	frame	1	\N
-1612	2	1572475797	mod_hvp	export	4	\N
-1613	2	1572475797	mod_hvp	embed	3	\N
-1614	2	1572475797	mod_hvp	copyright	0	\N
-1615	2	1572475797	mod_hvp	icon	0	\N
-1616	2	1572475797	mod_hvp	enable_lrs_content_types	0	\N
-1617	2	1572475797	\N	hotpot_enablemymoodle	1	\N
-1618	2	1572475797	\N	hotpot_enablecache	1	\N
-1619	2	1572475797	\N	hotpot_enablecron		\N
-1620	2	1572475797	\N	hotpot_enableswf	1	\N
-1621	2	1572475797	\N	hotpot_enableobfuscate	1	\N
-1622	2	1572475797	\N	hotpot_bodystyles		\N
-1623	2	1572475798	\N	hotpot_frameheight	85	\N
-1624	2	1572475798	\N	hotpot_lockframe	0	\N
-1625	2	1572475798	\N	hotpot_storedetails	0	\N
-1626	2	1572475798	\N	hotpot_maxeventlength	5	\N
-1627	2	1572475798	jclic	jarbase	https://clic.xtec.cat/dist/jclic	\N
-1628	2	1572475798	jclic	lap	5	\N
-1629	2	1572475798	jclic	pluginjs	https://clic.xtec.cat/dist/jclic/jclicplugin.js	\N
-1630	2	1572475798	jclic	jclicjs	https://clic.xtec.cat/dist/jclic.js/jclic.min.js	\N
-1631	2	1572475798	journal	showrecentactivity	0	\N
-1632	2	1572475798	journal	overview	1	\N
-1633	2	1572475798	questionnaire	usergraph	0	\N
-1634	2	1572475798	questionnaire	maxsections	10	\N
-1635	2	1572475798	questionnaire	downloadoptions	response,submitted,institution,department,course,group,id,fullname,username	\N
-1636	2	1572475798	qv	distpluginappl	http://clic.xtec.cat/qv_viewer/dist/html/appl/	\N
-1637	2	1572475798	qv	distpluginscripts	http://clic.xtec.cat/qv_viewer/dist/html/scripts/	\N
-1638	2	1572475798	qv	distplugincss	http://clic.xtec.cat/qv_viewer/dist/html/css/	\N
-1639	2	1572475798	qv	skins	default,infantil,formal	\N
-1640	2	1572475798	rcontent	whatgrade	0	\N
-1641	2	1572475798	rcontent	framesize	400	\N
-1642	2	1572475798	rcontent	popup	0	\N
-1643	2	1572475798	rcontent	frame	checked	\N
-1644	2	1572475798	rcontent	popupscrollbars	checked	\N
-1645	2	1572475798	rcontent	popupmenubar	checked	\N
-1646	2	1572475798	rcontent	popuptoolbar	checked	\N
-1647	2	1572475798	rcontent	popupstatus	checked	\N
-1648	2	1572475798	rcontent	popupwidth	600	\N
-1649	2	1572475798	rcontent	popupheight	800	\N
-1650	2	1572475798	rcontent	tracer		\N
-1651	2	1572475798	rcontent	registersperreportpage	20	\N
-1652	2	1572475798	block_completion_progress	wrapafter	16	\N
-1653	2	1572475798	block_completion_progress	defaultlongbars	squeeze	\N
-1654	2	1572475798	block_completion_progress	coursenametoshow	shortname	\N
-1655	2	1572475798	block_completion_progress	completed_colour	#73A839	\N
-1656	2	1572475798	block_completion_progress	submittednotcomplete_colour	#FFCC00	\N
-1657	2	1572475798	block_completion_progress	notCompleted_colour	#C71C22	\N
-1658	2	1572475798	block_completion_progress	futureNotCompleted_colour	#025187	\N
-1659	2	1572475798	block_completion_progress	showinactive	0	\N
-1661	2	1572475798	\N	vicensvives_sharekey		\N
-1662	2	1572475798	\N	vicensvives_sharepass		\N
-1663	2	1572475798	\N	block_courses_vicensvives_maxcourses	10	\N
-1664	2	1572475798	\N	block_courses_vicensvives_defaultcategory	1	\N
-1665	2	1572475798	mybooks	viewer_opening	1	\N
-1666	2	1572475798	mybooks	addkey	1	\N
-1667	2	1572475798	filter_wiris	editor_enable	1	\N
-1668	2	1572475798	filter_wiris	chem_editor_enable	1	\N
-1669	2	1572475798	filter_wiris	allow_editorplugin_active_course	0	\N
-1670	2	1572475798	filter_wiris	imageservicehost	www.wiris.net	\N
-1671	2	1572475798	filter_wiris	imageservicepath	/demo/editor/render	\N
-1672	2	1572475798	filter_wiris	imageserviceprotocol	https	\N
-1673	2	1572475798	filter_wiris	imageformat	svg	\N
-1674	2	1572475798	filter_wiris	pluginperformance	1	\N
-1675	2	1572475798	filter_wiris	editormodalwindowfullscreen	0	\N
-1676	2	1572475798	filter_wiris	access_provider_enabled	0	\N
-1677	2	1572475798	local_alexandriaimporter	alexandria_url	http://alexandria.xtec.cat	\N
-1678	2	1572475798	local_alexandriaimporter	alexandria_token		\N
-1679	2	1572475798	local_alexandriaimporter	show_description		\N
-1680	2	1572475798	local_clickedu	webserviceurl		\N
-1681	2	1572475798	local_clickedu	syncusers	0	\N
-1682	2	1572475798	local_clickedu	synccourses	0	\N
-1683	2	1572475798	local_clickedu	synccontents	0	\N
-1684	2	1572475798	local_clickedu	coursecat	1	\N
-1685	2	1572475798	local_clickedu	teacherrole	3	\N
-1686	2	1572475798	local_clickedu	studentrole	5	\N
-1687	2	1572475798	qtype_ordering	defaultanswerformat	0	\N
-1688	2	1572475798	qtype_wq	quizzesserviceurl	http://www.wiris.net/demo/quizzes	\N
-1689	2	1572475798	qtype_wq	quizzeseditorurl	http://www.wiris.net/demo/editor	\N
-1690	2	1572475798	qtype_wq	quizzeshandurl	http://www.wiris.net/demo/hand	\N
-1691	2	1572475798	qtype_wq	quizzeswirislauncherurl	http://stateful.wiris.net/demo/wiris	\N
-1692	2	1572475798	qtype_wq	quizzeswirisurl	http://www.wiris.net/demo/wiris	\N
-1693	2	1572475798	qtype_wq	access_provider_enabled	0	\N
-1694	2	1572475798	atto_fontfamily	fontselectlist	Arial=Arial, Helvetica, sans-serif;\r\nTimes=Times New Roman, Times, serif;\r\nCourier=Courier New, Courier, mono;\r\nGeorgia=Georgia, Times New Roman, Times, serif;\r\nVerdana=Verdana, Geneva, sans-serif;\r\nTrebuchet=Trebuchet MS, Helvetica, sans-serif;	\N
-1695	2	1572475798	theme_xtec2	logo		\N
-1696	2	1572475798	theme_xtec2	logo_color	#675A70	\N
-1697	2	1572475798	theme_xtec2	logo_color_transparency	40	\N
-1698	2	1572475798	theme_xtec2	top_menus	0	\N
-1699	2	1572475798	theme_xtec2	block_layout	left	\N
-1700	2	1572475798	theme_xtec2	footnote		\N
-1701	2	1572475798	theme_xtec2	website		\N
-1702	2	1572475798	theme_xtec2	email		\N
-1703	2	1572475798	theme_xtec2	phone		\N
-1704	2	1572475798	theme_xtec2	nodes	1	\N
-1705	2	1572475798	theme_xtec2	whatsapp		\N
-1706	2	1572475798	theme_xtec2	facebook		\N
-1707	2	1572475798	theme_xtec2	twitter		\N
-1708	2	1572475798	theme_xtec2	googleplus		\N
-1709	2	1572475798	theme_xtec2	instagram		\N
-1710	2	1572475798	theme_xtec2	flickr		\N
-1711	2	1572475798	theme_xtec2	linkedin		\N
-1712	2	1572475798	theme_xtec2	pinterest		\N
-1713	2	1572475798	theme_xtec2	youtube		\N
-1714	2	1572475798	theme_xtec2	skype		\N
-1715	2	1572475798	theme_xtec2	colorset	grana	\N
-1716	2	1572475798	theme_xtec2	color2	#AC2013	\N
-1717	2	1572475798	theme_xtec2	color4	#303030	\N
-1718	2	1572475798	theme_xtec2	color5	#AC2013	\N
-1719	2	1572475798	theme_xtec2	fontsize	mitjana	\N
-1720	2	1572475798	theme_xtec2	fontstyle	normal	\N
-1721	2	1572475798	theme_xtec2	importcss		\N
-1722	2	1572475798	theme_xtec2	customcss		\N
-1723	2	1572476119	\N	profileroles	3,4,5	5,4,3
-1724	2	1572476119	\N	passwordpolicy	0	1
-1725	3	1572476730	\N	defaulthomepage	0	1
 \.
-
-
---
--- Name: m2config_log_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2config_log_id_seq', 1725, true);
 
 
 --
@@ -28787,7 +26455,6 @@ COPY public.m2config_plugins (id, plugin, name, value) FROM stdin;
 260	auth_mnet	version	2018120300
 262	auth_nologin	version	2018120300
 263	auth_none	version	2018120300
-264	auth_oauth2	version	2018120300
 265	auth_shibboleth	version	2018120300
 267	auth_webservice	version	2018120300
 268	calendartype_gregorian	version	2018120300
@@ -29015,7 +26682,6 @@ COPY public.m2config_plugins (id, plugin, name, value) FROM stdin;
 499	block_lp	version	2018120300
 500	block_mentees	version	2018120300
 501	block_mnet_hosts	version	2018120300
-502	block_myoverview	version	2018120300
 503	block_myprofile	version	2018120300
 504	block_navigation	version	2018120300
 505	block_news_items	version	2018120300
@@ -29444,7 +27110,6 @@ COPY public.m2config_plugins (id, plugin, name, value) FROM stdin;
 980	assignsubmission_file	default	1
 981	assignsubmission_file	maxfiles	20
 982	assignsubmission_file	filetypes	
-983	assignsubmission_file	maxbytes	0
 984	assignsubmission_onlinetext	default	0
 985	assignfeedback_comments	default	1
 986	assignfeedback_comments	inline	0
@@ -30346,18 +28011,7 @@ COPY public.m2config_plugins (id, plugin, name, value) FROM stdin;
 1884	tool_mobile	disabledfeatures	
 1885	tool_mobile	custommenuitems	
 1886	tool_mobile	customlangstrings	
-1887	qtype_essaywiris	version	2019103000
-1888	qtype_matchwiris	version	2019103000
-1889	qtype_multianswerwiris	version	2019103000
-1890	qtype_multichoicewiris	version	2019103000
-1891	qtype_ordering	version	2019102496
-1892	qtype_shortanswerwiris	version	2019103000
-1893	qtype_truefalsewiris	version	2019103000
-1894	qtype_wq	version	2019103000
-1895	mod_choicegroup	version	2019051001
 1896	mod_geogebra	version	2019010600
-1897	mod_hotpot	version	2019101241
-1899	mod_hvp	version	2019081600
 1901	mod_hvp	site_type	network
 1902	mod_hvp	site_uuid	be7a6615-7bde-4371-a243-28709c01a786
 1903	mod_hvp	content_type_cache_updated_at	1572475530
@@ -30378,17 +28032,22 @@ COPY public.m2config_plugins (id, plugin, name, value) FROM stdin;
 1920	message	message_provider_mod_questionnaire_notification_loggedin	email
 1921	message	message_provider_mod_questionnaire_notification_loggedoff	email
 1922	mod_qv	version	2019010700
+1889	qtype_multianswerwiris	version	2020011300
+1890	qtype_multichoicewiris	version	2020011300
+1891	qtype_ordering	version	2019121400
+1892	qtype_shortanswerwiris	version	2020011300
+1893	qtype_truefalsewiris	version	2020011300
+1894	qtype_wq	version	2020011300
+1895	mod_choicegroup	version	2019051002
+1897	mod_hotpot	version	2019111042
+1899	mod_hvp	version	2020020500
 1923	mod_rcontent	version	2017101000
 1925	block_completion_progress	version	2019072700
-1926	block_courses_vicensvives	version	2017062100
-1927	block_licenses_vicensvives	version	2017062100
 1928	block_my_books	version	2015111700
 1930	block_rgrade	version	2016090500
 1931	filter_wiris	version	2019091700
 1932	format_simple	version	2012121100
-1933	format_vv	version	2017062100
 1934	report_coursequotas	version	2016091400
-1935	qformat_hotpot	version	2019101221
 1936	theme_xtec2	version	2015022500
 1937	hotpotattempt_hp	version	2010112400
 1938	hotpotattempt_html	version	2010112400
@@ -30401,7 +28060,6 @@ COPY public.m2config_plugins (id, plugin, name, value) FROM stdin;
 1945	hotpotreport_overview	version	2010112400
 1946	hotpotreport_responses	version	2010112400
 1947	hotpotreport_scores	version	2010112400
-1948	atto_fontfamily	version	2015051500
 1949	atto_fontsize	version	2015042701
 1950	atto_wiris	version	2019091700
 1856	editor_atto	toolbar	collapse = collapse\nstyle1 = title, bold, italic\nlist = unorderedlist, orderedlist\nlinks = link\nfiles = image, media, recordrtc, managefiles\nstyle2 = underline, strike, subscript, superscript\nalign = align\nindent = indent\ninsert = equation, charmap, table, clear\nundo = undo\naccessibility = accessibilitychecker, accessibilityhelper\nmath = wiris\nother = html
@@ -30413,7 +28071,6 @@ COPY public.m2config_plugins (id, plugin, name, value) FROM stdin;
 1957	local_oauth	version	2016021600
 1958	local_rcommon	version	2017101000
 1960	rcommon	enabled	0
-1961	local_wsvicensvives	version	2016072900
 1962	choicegroup	sortgroupsby	1
 1963	mod_hvp	enable_save_content_state	1
 1964	mod_hvp	content_state_frequency	30
@@ -30481,6 +28138,11 @@ COPY public.m2config_plugins (id, plugin, name, value) FROM stdin;
 2026	local_clickedu	teacherrole	3
 2027	local_clickedu	studentrole	5
 2028	qtype_ordering	defaultanswerformat	0
+1927	block_licenses_vicensvives	version	2018090100
+1933	format_vv	version	2018090100
+1935	qformat_hotpot	version	2019111022
+1948	atto_fontfamily	version	2020010600
+1961	local_wsvicensvives	version	2018090100
 2029	qtype_wq	quizzesserviceurl	http://www.wiris.net/demo/quizzes
 2030	qtype_wq	quizzeseditorurl	http://www.wiris.net/demo/editor
 2031	qtype_wq	quizzeshandurl	http://www.wiris.net/demo/hand
@@ -30517,14 +28179,34 @@ COPY public.m2config_plugins (id, plugin, name, value) FROM stdin;
 2062	theme_xtec2	importcss	
 2063	theme_xtec2	customcss	
 1751	enrol_ldap	objectclass	(objectClass=*)
+983	assignsubmission_file	maxbytes	0
+2064	rcommon	data_store_log	/dades//data/portaldata//data/moodle2/usu1
+1887	qtype_essaywiris	version	2020011300
+1888	qtype_matchwiris	version	2020011300
+2065	message	airnotifier_provider_mod_hvp_submission_permitted	permitted
+2066	message	email_provider_mod_hvp_submission_permitted	permitted
+2067	message	jabber_provider_mod_hvp_submission_permitted	permitted
+2068	message	popup_provider_mod_hvp_submission_permitted	permitted
+2069	message	message_provider_mod_hvp_submission_loggedin	email
+2070	message	message_provider_mod_hvp_submission_loggedoff	email
+2071	message	airnotifier_provider_mod_hvp_confirmation_permitted	permitted
+2072	message	email_provider_mod_hvp_confirmation_permitted	permitted
+2073	message	jabber_provider_mod_hvp_confirmation_permitted	permitted
+2074	message	popup_provider_mod_hvp_confirmation_permitted	permitted
+2075	message	message_provider_mod_hvp_confirmation_loggedin	airnotifier,email
+2076	message	message_provider_mod_hvp_confirmation_loggedoff	airnotifier,email
+264	auth_oauth2	version	2018120301
+1926	block_courses_vicensvives	version	2018090100
+502	block_myoverview	version	2018120301
+2077	atto_cloze	version	2017072801
+2078	local_agora	environment_url	
+2079	theme_xtec2	agora_alert_message	
+2080	theme_xtec2	agora_alert_start	
+2081	theme_xtec2	agora_alert_end	
+2082	theme_xtec2	admin_alert_message	
+2083	theme_xtec2	admin_alert_start	
+2084	theme_xtec2	admin_alert_end	
 \.
-
-
---
--- Name: m2config_plugins_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2config_plugins_id_seq', 2063, true);
 
 
 --
@@ -30568,14 +28250,8 @@ COPY public.m2context (id, contextlevel, instanceid, path, depth, locked) FROM s
 34	80	28	/1/27/34	3	0
 35	80	29	/1/27/35	3	0
 36	80	30	/1/27/36	3	0
+37	80	31	/1/2/37	3	0
 \.
-
-
---
--- Name: m2context_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2context_id_seq', 36, true);
 
 
 --
@@ -30591,7 +28267,7 @@ COPY public.m2context_temp (id, path, depth, locked) FROM stdin;
 --
 
 COPY public.m2course (id, category, sortorder, fullname, shortname, idnumber, summary, summaryformat, format, showgrades, newsitems, startdate, enddate, marker, maxbytes, legacyfiles, showreports, visible, visibleold, groupmode, groupmodeforce, defaultgroupingid, lang, calendartype, theme, timecreated, timemodified, requested, enablecompletion, completionnotify, cacherev) FROM stdin;
-1	0	0	Usu 1	usu1			0	site	1	3	0	0	0	0	0	0	1	1	0	0	0				1572464183	1572464585	0	0	0	1572476342
+1	0	0	usu1 VM dev	usu1		Moodle del centre usu1 VM dev	0	site	1	3	0	0	0	0	0	0	1	1	0	0	0				1572464183	1572464585	0	0	0	1584379312
 \.
 
 
@@ -30605,25 +28281,11 @@ COPY public.m2course_categories (id, name, idnumber, description, descriptionfor
 
 
 --
--- Name: m2course_categories_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2course_categories_id_seq', 1, true);
-
-
---
 -- Data for Name: m2course_completion_aggr_methd; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2course_completion_aggr_methd (id, course, criteriatype, method, value) FROM stdin;
 \.
-
-
---
--- Name: m2course_completion_aggr_methd_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2course_completion_aggr_methd_id_seq', 1, false);
 
 
 --
@@ -30635,25 +28297,11 @@ COPY public.m2course_completion_crit_compl (id, userid, course, criteriaid, grad
 
 
 --
--- Name: m2course_completion_crit_compl_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2course_completion_crit_compl_id_seq', 1, false);
-
-
---
 -- Data for Name: m2course_completion_criteria; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2course_completion_criteria (id, course, criteriatype, module, moduleinstance, courseinstance, enrolperiod, timeend, gradepass, role) FROM stdin;
 \.
-
-
---
--- Name: m2course_completion_criteria_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2course_completion_criteria_id_seq', 1, false);
 
 
 --
@@ -30665,25 +28313,11 @@ COPY public.m2course_completion_defaults (id, course, module, completion, comple
 
 
 --
--- Name: m2course_completion_defaults_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2course_completion_defaults_id_seq', 1, false);
-
-
---
 -- Data for Name: m2course_completions; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2course_completions (id, userid, course, timeenrolled, timestarted, timecompleted, reaggregate) FROM stdin;
 \.
-
-
---
--- Name: m2course_completions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2course_completions_id_seq', 1, false);
 
 
 --
@@ -30693,20 +28327,6 @@ SELECT pg_catalog.setval('public.m2course_completions_id_seq', 1, false);
 COPY public.m2course_format_options (id, courseid, format, sectionid, name, value) FROM stdin;
 1	1	site	0	numsections	1
 \.
-
-
---
--- Name: m2course_format_options_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2course_format_options_id_seq', 1, true);
-
-
---
--- Name: m2course_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2course_id_seq', 2, false);
 
 
 --
@@ -30726,32 +28346,11 @@ COPY public.m2course_modules_completion (id, coursemoduleid, userid, completions
 
 
 --
--- Name: m2course_modules_completion_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2course_modules_completion_id_seq', 1, false);
-
-
---
--- Name: m2course_modules_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2course_modules_id_seq', 1, false);
-
-
---
 -- Data for Name: m2course_published; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2course_published (id, huburl, courseid, timepublished, enrollable, hubcourseid, status, timechecked) FROM stdin;
 \.
-
-
---
--- Name: m2course_published_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2course_published_id_seq', 1, false);
 
 
 --
@@ -30763,25 +28362,12 @@ COPY public.m2course_request (id, fullname, shortname, summary, summaryformat, c
 
 
 --
--- Name: m2course_request_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2course_request_id_seq', 1, false);
-
-
---
 -- Data for Name: m2course_sections; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2course_sections (id, course, section, name, summary, summaryformat, sequence, visible, availability, timemodified) FROM stdin;
+1	1	1	\N		1		1	\N	1584379312
 \.
-
-
---
--- Name: m2course_sections_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2course_sections_id_seq', 1, false);
 
 
 --
@@ -30801,32 +28387,11 @@ COPY public.m2data_content (id, fieldid, recordid, content, content1, content2, 
 
 
 --
--- Name: m2data_content_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2data_content_id_seq', 1, false);
-
-
---
 -- Data for Name: m2data_fields; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2data_fields (id, dataid, type, name, description, required, param1, param2, param3, param4, param5, param6, param7, param8, param9, param10) FROM stdin;
 \.
-
-
---
--- Name: m2data_fields_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2data_fields_id_seq', 1, false);
-
-
---
--- Name: m2data_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2data_id_seq', 1, false);
 
 
 --
@@ -30838,26 +28403,12 @@ COPY public.m2data_records (id, userid, groupid, dataid, timecreated, timemodifi
 
 
 --
--- Name: m2data_records_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2data_records_id_seq', 1, false);
-
-
---
 -- Data for Name: m2editor_atto_autosave; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2editor_atto_autosave (id, elementid, contextid, pagehash, userid, drafttext, draftid, pageinstance, timemodified) FROM stdin;
 5	id_description_editor	5	6dbc2fb00ddf2a78cea80696a4da95df5163973b	3		77815974	yui_3_17_2_1_1572476590470_145	1572476595
 \.
-
-
---
--- Name: m2editor_atto_autosave_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2editor_atto_autosave_id_seq', 5, true);
 
 
 --
@@ -30877,32 +28428,11 @@ COPY public.m2enrol_flatfile (id, action, roleid, userid, courseid, timestart, t
 
 
 --
--- Name: m2enrol_flatfile_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2enrol_flatfile_id_seq', 1, false);
-
-
---
--- Name: m2enrol_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2enrol_id_seq', 1, false);
-
-
---
 -- Data for Name: m2enrol_lti_lti2_consumer; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2enrol_lti_lti2_consumer (id, name, consumerkey256, consumerkey, secret, ltiversion, consumername, consumerversion, consumerguid, profile, toolproxy, settings, protected, enabled, enablefrom, enableuntil, lastaccess, created, updated) FROM stdin;
 \.
-
-
---
--- Name: m2enrol_lti_lti2_consumer_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2enrol_lti_lti2_consumer_id_seq', 1, false);
 
 
 --
@@ -30914,25 +28444,11 @@ COPY public.m2enrol_lti_lti2_context (id, consumerid, lticontextkey, type, setti
 
 
 --
--- Name: m2enrol_lti_lti2_context_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2enrol_lti_lti2_context_id_seq', 1, false);
-
-
---
 -- Data for Name: m2enrol_lti_lti2_nonce; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2enrol_lti_lti2_nonce (id, consumerid, value, expires) FROM stdin;
 \.
-
-
---
--- Name: m2enrol_lti_lti2_nonce_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2enrol_lti_lti2_nonce_id_seq', 1, false);
 
 
 --
@@ -30944,25 +28460,11 @@ COPY public.m2enrol_lti_lti2_resource_link (id, contextid, consumerid, ltiresour
 
 
 --
--- Name: m2enrol_lti_lti2_resource_link_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2enrol_lti_lti2_resource_link_id_seq', 1, false);
-
-
---
 -- Data for Name: m2enrol_lti_lti2_share_key; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2enrol_lti_lti2_share_key (id, sharekey, resourcelinkid, autoapprove, expires) FROM stdin;
 \.
-
-
---
--- Name: m2enrol_lti_lti2_share_key_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2enrol_lti_lti2_share_key_id_seq', 1, false);
 
 
 --
@@ -30974,25 +28476,11 @@ COPY public.m2enrol_lti_lti2_tool_proxy (id, toolproxykey, consumerid, toolproxy
 
 
 --
--- Name: m2enrol_lti_lti2_tool_proxy_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2enrol_lti_lti2_tool_proxy_id_seq', 1, false);
-
-
---
 -- Data for Name: m2enrol_lti_lti2_user_result; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2enrol_lti_lti2_user_result (id, resourcelinkid, ltiuserkey, ltiresultsourcedid, created, updated) FROM stdin;
 \.
-
-
---
--- Name: m2enrol_lti_lti2_user_result_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2enrol_lti_lti2_user_result_id_seq', 1, false);
 
 
 --
@@ -31004,25 +28492,11 @@ COPY public.m2enrol_lti_tool_consumer_map (id, toolid, consumerid) FROM stdin;
 
 
 --
--- Name: m2enrol_lti_tool_consumer_map_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2enrol_lti_tool_consumer_map_id_seq', 1, false);
-
-
---
 -- Data for Name: m2enrol_lti_tools; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2enrol_lti_tools (id, enrolid, contextid, institution, lang, timezone, maxenrolled, maildisplay, city, country, gradesync, gradesynccompletion, membersync, membersyncmode, roleinstructor, rolelearner, secret, timecreated, timemodified) FROM stdin;
 \.
-
-
---
--- Name: m2enrol_lti_tools_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2enrol_lti_tools_id_seq', 1, false);
 
 
 --
@@ -31034,25 +28508,11 @@ COPY public.m2enrol_lti_users (id, userid, toolid, serviceurl, sourceid, consume
 
 
 --
--- Name: m2enrol_lti_users_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2enrol_lti_users_id_seq', 1, false);
-
-
---
 -- Data for Name: m2enrol_paypal; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2enrol_paypal (id, business, receiver_email, receiver_id, item_name, courseid, userid, instanceid, memo, tax, option_name1, option_selection1_x, option_name2, option_selection2_x, payment_status, pending_reason, reason_code, txn_id, parent_txn_id, payment_type, timeupdated) FROM stdin;
 \.
-
-
---
--- Name: m2enrol_paypal_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2enrol_paypal_id_seq', 1, false);
 
 
 --
@@ -31064,13 +28524,6 @@ COPY public.m2event (id, name, description, format, categoryid, courseid, groupi
 
 
 --
--- Name: m2event_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2event_id_seq', 1, false);
-
-
---
 -- Data for Name: m2event_subscriptions; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -31079,25 +28532,11 @@ COPY public.m2event_subscriptions (id, url, categoryid, courseid, groupid, useri
 
 
 --
--- Name: m2event_subscriptions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2event_subscriptions_id_seq', 1, false);
-
-
---
 -- Data for Name: m2events_handlers; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2events_handlers (id, eventname, component, handlerfile, handlerfunction, schedule, status, internal) FROM stdin;
 \.
-
-
---
--- Name: m2events_handlers_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2events_handlers_id_seq', 1, false);
 
 
 --
@@ -31114,20 +28553,6 @@ COPY public.m2events_queue (id, eventdata, stackdump, userid, timecreated) FROM 
 
 COPY public.m2events_queue_handlers (id, queuedeventid, handlerid, status, errormessage, timemodified) FROM stdin;
 \.
-
-
---
--- Name: m2events_queue_handlers_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2events_queue_handlers_id_seq', 1, false);
-
-
---
--- Name: m2events_queue_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2events_queue_id_seq', 1, false);
 
 
 --
@@ -31683,13 +29108,6 @@ COPY public.m2external_functions (id, name, classname, methodname, classpath, co
 
 
 --
--- Name: m2external_functions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2external_functions_id_seq', 544, true);
-
-
---
 -- Data for Name: m2external_services; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -31706,334 +29124,7 @@ COPY public.m2external_services (id, name, enabled, requiredcapability, restrict
 --
 
 COPY public.m2external_services_functions (id, externalserviceid, functionname) FROM stdin;
-1	1	core_badges_get_user_badges
-2	1	core_blog_get_entries
-3	1	core_blog_view_entries
-4	1	core_calendar_get_calendar_monthly_view
-5	1	core_calendar_get_calendar_day_view
-6	1	core_calendar_get_calendar_upcoming_view
-7	1	core_calendar_create_calendar_events
-8	1	core_calendar_delete_calendar_events
-9	1	core_calendar_get_calendar_events
-10	1	core_calendar_get_action_events_by_timesort
-11	1	core_calendar_get_action_events_by_course
-12	1	core_calendar_get_action_events_by_courses
-13	1	core_calendar_get_calendar_event_by_id
-14	1	core_comment_get_comments
-15	1	core_completion_get_activities_completion_status
-16	1	core_completion_get_course_completion_status
-17	1	core_completion_mark_course_self_completed
-18	1	core_completion_update_activity_completion_status_manually
-19	1	core_course_get_categories
-20	1	core_course_get_contents
-21	1	core_course_get_course_module
-22	1	core_course_get_course_module_by_instance
-23	1	core_course_get_courses
-24	1	core_course_search_courses
-25	1	core_course_view_course
-26	1	core_course_get_activities_overview
-27	1	core_course_get_user_navigation_options
-28	1	core_course_get_user_administration_options
-29	1	core_course_get_courses_by_field
-30	1	core_course_check_updates
-31	1	core_course_get_updates_since
-32	1	core_course_get_enrolled_courses_by_timeline_classification
-33	1	core_course_get_recent_courses
-34	1	core_course_set_favourite_courses
-35	1	core_enrol_get_course_enrolment_methods
-36	1	core_enrol_get_enrolled_users
-37	1	core_enrol_get_users_courses
-38	1	core_files_get_files
-39	1	core_get_component_strings
-40	1	core_group_get_activity_allowed_groups
-41	1	core_group_get_activity_groupmode
-42	1	core_group_get_course_user_groups
-43	1	core_message_block_user
-44	1	core_message_block_contacts
-45	1	core_message_create_contacts
-46	1	core_message_get_contact_requests
-47	1	core_message_create_contact_request
-48	1	core_message_confirm_contact_request
-49	1	core_message_decline_contact_request
-50	1	core_message_get_received_contact_requests_count
-51	1	core_message_delete_contacts
-52	1	core_message_delete_conversation
-53	1	core_message_delete_conversations_by_id
-54	1	core_message_delete_message
-55	1	core_message_get_blocked_users
-56	1	core_message_data_for_messagearea_search_messages
-57	1	core_message_message_search_users
-58	1	core_message_data_for_messagearea_conversations
-59	1	core_message_data_for_messagearea_contacts
-60	1	core_message_data_for_messagearea_messages
-61	1	core_message_get_contacts
-62	1	core_message_get_user_contacts
-63	1	core_message_get_conversations
-64	1	core_message_get_conversation
-65	1	core_message_get_conversation_between_users
-66	1	core_message_get_messages
-67	1	core_message_get_conversation_counts
-68	1	core_message_get_unread_conversation_counts
-69	1	core_message_get_conversation_members
-70	1	core_message_get_member_info
-71	1	core_message_get_unread_conversations_count
-72	1	core_message_mark_all_notifications_as_read
-73	1	core_message_mark_all_messages_as_read
-74	1	core_message_mark_all_conversation_messages_as_read
-75	1	core_message_mark_message_read
-76	1	core_message_mark_notification_read
-77	1	core_message_message_processor_config_form
-78	1	core_message_search_contacts
-79	1	core_message_send_instant_messages
-80	1	core_message_send_messages_to_conversation
-81	1	core_message_get_conversation_messages
-82	1	core_message_unblock_user
-83	1	core_message_unblock_contacts
-84	1	core_message_get_user_notification_preferences
-85	1	core_message_get_user_message_preferences
-86	1	core_message_set_favourite_conversations
-87	1	core_message_unset_favourite_conversations
-88	1	core_notes_create_notes
-89	1	core_notes_delete_notes
-90	1	core_notes_get_course_notes
-91	1	core_notes_view_notes
-92	1	core_question_update_flag
-93	1	core_rating_get_item_ratings
-94	1	core_rating_add_rating
-95	1	core_user_add_user_device
-96	1	core_user_add_user_private_files
-97	1	core_user_get_course_user_profiles
-98	1	core_user_get_users_by_field
 509	3	mod_data_get_entries
-99	1	core_user_remove_user_device
-100	1	core_user_update_user_preferences
-101	1	core_user_view_user_list
-102	1	core_user_view_user_profile
-103	1	core_user_get_user_preferences
-104	1	core_user_update_picture
-105	1	core_user_set_user_preferences
-106	1	core_user_agree_site_policy
-107	1	core_user_get_private_files_info
-108	1	core_competency_competency_viewed
-109	1	core_competency_list_course_competencies
-110	1	core_competency_get_scale_values
-111	1	core_competency_user_competency_viewed
-112	1	core_competency_user_competency_viewed_in_plan
-113	1	core_competency_user_competency_viewed_in_course
-114	1	core_competency_user_competency_plan_viewed
-115	1	core_competency_grade_competency_in_course
-116	1	core_competency_delete_evidence
-117	1	core_webservice_get_site_info
-118	1	core_block_get_course_blocks
-119	1	core_block_get_dashboard_blocks
-120	1	core_filters_get_available_in_context
-121	1	mod_assign_get_grades
-122	1	mod_assign_get_assignments
-123	1	mod_assign_get_submissions
-124	1	mod_assign_get_user_flags
-125	1	mod_assign_set_user_flags
-126	1	mod_assign_get_user_mappings
-127	1	mod_assign_revert_submissions_to_draft
-128	1	mod_assign_lock_submissions
-129	1	mod_assign_unlock_submissions
-130	1	mod_assign_save_submission
-131	1	mod_assign_submit_for_grading
-132	1	mod_assign_save_grade
-133	1	mod_assign_save_grades
-134	1	mod_assign_save_user_extensions
-135	1	mod_assign_reveal_identities
-136	1	mod_assign_view_grading_table
-137	1	mod_assign_view_submission_status
-138	1	mod_assign_get_submission_status
-139	1	mod_assign_list_participants
-140	1	mod_assign_submit_grading_form
-141	1	mod_assign_get_participant
-142	1	mod_assign_view_assign
-143	1	mod_book_view_book
-144	1	mod_book_get_books_by_courses
-145	1	mod_chat_login_user
-146	1	mod_chat_get_chat_users
-147	1	mod_chat_send_chat_message
-148	1	mod_chat_get_chat_latest_messages
-149	1	mod_chat_view_chat
-150	1	mod_chat_get_chats_by_courses
-151	1	mod_chat_get_sessions
-152	1	mod_chat_get_session_messages
-153	1	mod_choice_get_choice_results
-154	1	mod_choice_get_choice_options
-155	1	mod_choice_submit_choice_response
-156	1	mod_choice_view_choice
-157	1	mod_choice_get_choices_by_courses
-158	1	mod_choice_delete_choice_responses
-159	1	mod_data_get_databases_by_courses
-160	1	mod_data_view_database
-161	1	mod_data_get_data_access_information
-162	1	mod_data_get_entries
-163	1	mod_data_get_entry
-164	1	mod_data_get_fields
-165	1	mod_data_search_entries
-166	1	mod_data_approve_entry
-167	1	mod_data_delete_entry
-168	1	mod_data_add_entry
-169	1	mod_data_update_entry
-170	1	mod_feedback_get_feedbacks_by_courses
-171	1	mod_feedback_get_feedback_access_information
-172	1	mod_feedback_view_feedback
-173	1	mod_feedback_get_current_completed_tmp
-174	1	mod_feedback_get_items
-175	1	mod_feedback_launch_feedback
-176	1	mod_feedback_get_page_items
-177	1	mod_feedback_process_page
-178	1	mod_feedback_get_analysis
-179	1	mod_feedback_get_unfinished_responses
-180	1	mod_feedback_get_finished_responses
-181	1	mod_feedback_get_non_respondents
-182	1	mod_feedback_get_responses_analysis
-183	1	mod_feedback_get_last_completed
-184	1	mod_folder_view_folder
-185	1	mod_folder_get_folders_by_courses
-186	1	mod_forum_get_forums_by_courses
-187	1	mod_forum_get_forum_discussion_posts
-188	1	mod_forum_get_forum_discussions_paginated
-189	1	mod_forum_view_forum
-190	1	mod_forum_view_forum_discussion
-191	1	mod_forum_add_discussion_post
-192	1	mod_forum_add_discussion
-193	1	mod_forum_can_add_discussion
-194	1	mod_glossary_get_glossaries_by_courses
-195	1	mod_glossary_view_glossary
-196	1	mod_glossary_view_entry
-197	1	mod_glossary_get_entries_by_letter
-198	1	mod_glossary_get_entries_by_date
-199	1	mod_glossary_get_categories
-200	1	mod_glossary_get_entries_by_category
-201	1	mod_glossary_get_authors
-202	1	mod_glossary_get_entries_by_author
-203	1	mod_glossary_get_entries_by_author_id
-204	1	mod_glossary_get_entries_by_search
-205	1	mod_glossary_get_entries_by_term
-206	1	mod_glossary_get_entries_to_approve
-207	1	mod_glossary_get_entry_by_id
-208	1	mod_glossary_add_entry
-209	1	mod_imscp_view_imscp
-210	1	mod_imscp_get_imscps_by_courses
-211	1	mod_label_get_labels_by_courses
-212	1	mod_lesson_get_lessons_by_courses
-213	1	mod_lesson_get_lesson_access_information
-214	1	mod_lesson_view_lesson
-215	1	mod_lesson_get_questions_attempts
-216	1	mod_lesson_get_user_grade
-217	1	mod_lesson_get_user_attempt_grade
-218	1	mod_lesson_get_content_pages_viewed
-219	1	mod_lesson_get_user_timers
-220	1	mod_lesson_get_pages
-221	1	mod_lesson_launch_attempt
-222	1	mod_lesson_get_page_data
-223	1	mod_lesson_process_page
-224	1	mod_lesson_finish_attempt
-225	1	mod_lesson_get_attempts_overview
-226	1	mod_lesson_get_user_attempt
-227	1	mod_lesson_get_pages_possible_jumps
-228	1	mod_lesson_get_lesson
-229	1	mod_lti_get_tool_launch_data
-230	1	mod_lti_get_ltis_by_courses
-231	1	mod_lti_view_lti
-232	1	mod_page_view_page
-233	1	mod_page_get_pages_by_courses
-234	1	mod_quiz_get_quizzes_by_courses
-235	1	mod_quiz_view_quiz
-236	1	mod_quiz_get_user_attempts
-237	1	mod_quiz_get_user_best_grade
-238	1	mod_quiz_get_combined_review_options
-239	1	mod_quiz_start_attempt
-240	1	mod_quiz_get_attempt_data
-241	1	mod_quiz_get_attempt_summary
-242	1	mod_quiz_save_attempt
-243	1	mod_quiz_process_attempt
-244	1	mod_quiz_get_attempt_review
-245	1	mod_quiz_view_attempt
-246	1	mod_quiz_view_attempt_summary
-247	1	mod_quiz_view_attempt_review
-248	1	mod_quiz_get_quiz_feedback_for_grade
-249	1	mod_quiz_get_quiz_access_information
-250	1	mod_quiz_get_attempt_access_information
-251	1	mod_quiz_get_quiz_required_qtypes
-252	1	mod_resource_view_resource
-253	1	mod_resource_get_resources_by_courses
-254	1	mod_scorm_view_scorm
-255	1	mod_scorm_get_scorm_attempt_count
-256	1	mod_scorm_get_scorm_scoes
-257	1	mod_scorm_get_scorm_user_data
-258	1	mod_scorm_insert_scorm_tracks
-259	1	mod_scorm_get_scorm_sco_tracks
-260	1	mod_scorm_get_scorms_by_courses
-261	1	mod_scorm_launch_sco
-262	1	mod_survey_get_surveys_by_courses
-263	1	mod_survey_view_survey
-264	1	mod_survey_get_questions
-265	1	mod_survey_submit_answers
-266	1	mod_url_view_url
-267	1	mod_url_get_urls_by_courses
-268	1	mod_wiki_get_wikis_by_courses
-269	1	mod_wiki_view_wiki
-270	1	mod_wiki_view_page
-271	1	mod_wiki_get_subwikis
-272	1	mod_wiki_get_subwiki_pages
-273	1	mod_wiki_get_subwiki_files
-274	1	mod_wiki_get_page_contents
-275	1	mod_wiki_get_page_for_editing
-276	1	mod_wiki_new_page
-277	1	mod_wiki_edit_page
-278	1	mod_workshop_get_workshops_by_courses
-279	1	mod_workshop_get_workshop_access_information
-280	1	mod_workshop_get_user_plan
-281	1	mod_workshop_view_workshop
-282	1	mod_workshop_add_submission
-283	1	mod_workshop_update_submission
-284	1	mod_workshop_delete_submission
-285	1	mod_workshop_get_submissions
-286	1	mod_workshop_get_submission
-287	1	mod_workshop_get_submission_assessments
-288	1	mod_workshop_get_assessment
-289	1	mod_workshop_get_assessment_form_definition
-290	1	mod_workshop_get_reviewer_assessments
-291	1	mod_workshop_update_assessment
-292	1	mod_workshop_get_grades
-293	1	mod_workshop_evaluate_assessment
-294	1	mod_workshop_get_grades_report
-295	1	mod_workshop_view_submission
-296	1	mod_workshop_evaluate_submission
-297	1	enrol_guest_get_instance_info
-298	1	enrol_self_get_instance_info
-299	1	enrol_self_enrol_user
-300	1	message_airnotifier_is_system_configured
-301	1	message_airnotifier_are_notification_preferences_configured
-302	1	message_airnotifier_get_user_devices
-303	1	message_airnotifier_enable_device
-304	1	message_popup_get_popup_notifications
-305	1	message_popup_get_unread_popup_notification_count
-306	1	block_recentlyaccesseditems_get_recent_items
-307	1	block_starredcourses_get_starred_courses
-308	1	report_insights_set_notuseful_prediction
-309	1	report_insights_set_fixed_prediction
-310	1	gradereport_overview_get_course_grades
-311	1	gradereport_overview_view_grade_report
-312	1	gradereport_user_get_grades_table
-313	1	gradereport_user_view_grade_report
-314	1	gradereport_user_get_grade_items
-315	1	tool_lp_data_for_course_competencies_page
-316	1	tool_lp_data_for_plans_page
-317	1	tool_lp_data_for_plan_page
-318	1	tool_lp_data_for_user_evidence_list_page
-319	1	tool_lp_data_for_user_evidence_page
-320	1	tool_lp_data_for_user_competency_summary
-321	1	tool_lp_data_for_user_competency_summary_in_plan
-322	1	tool_lp_data_for_user_competency_summary_in_course
-323	1	tool_mobile_get_plugins_supporting_mobile
-324	1	tool_mobile_get_public_config
-325	1	tool_mobile_get_config
-326	1	tool_mobile_get_autologin_key
-327	1	tool_mobile_get_content
 328	2	local_clickedu_get_activities
 329	2	local_clickedu_get_grades
 330	3	block_recentlyaccesseditems_get_recent_items
@@ -32367,28 +29458,341 @@ COPY public.m2external_services_functions (id, externalserviceid, functionname) 
 659	4	local_wsvicensvives_update_lti_grade
 660	4	local_wsvicensvives_get_lti_grade
 661	3	mod_choicegroup_get_choicegroup_options
-662	1	mod_choicegroup_get_choicegroup_options
 663	3	mod_choicegroup_submit_choicegroup_response
-664	1	mod_choicegroup_submit_choicegroup_response
 665	3	mod_choicegroup_view_choicegroup
-666	1	mod_choicegroup_view_choicegroup
 667	3	mod_choicegroup_delete_choicegroup_responses
-668	1	mod_choicegroup_delete_choicegroup_responses
+669	1	core_badges_get_user_badges
+670	1	core_blog_get_entries
+671	1	core_blog_view_entries
+672	1	core_calendar_get_calendar_monthly_view
+673	1	core_calendar_get_calendar_day_view
+674	1	core_calendar_get_calendar_upcoming_view
+675	1	core_calendar_create_calendar_events
+676	1	core_calendar_delete_calendar_events
+677	1	core_calendar_get_calendar_events
+678	1	core_calendar_get_action_events_by_timesort
+679	1	core_calendar_get_action_events_by_course
+680	1	core_calendar_get_action_events_by_courses
+681	1	core_calendar_get_calendar_event_by_id
+682	1	core_comment_get_comments
+683	1	core_completion_get_activities_completion_status
+684	1	core_completion_get_course_completion_status
+685	1	core_completion_mark_course_self_completed
+686	1	core_completion_update_activity_completion_status_manually
+687	1	core_course_get_categories
+688	1	core_course_get_contents
+689	1	core_course_get_course_module
+690	1	core_course_get_course_module_by_instance
+691	1	core_course_get_courses
+692	1	core_course_search_courses
+693	1	core_course_view_course
+694	1	core_course_get_activities_overview
+695	1	core_course_get_user_navigation_options
+696	1	core_course_get_user_administration_options
+697	1	core_course_get_courses_by_field
+698	1	core_course_check_updates
+699	1	core_course_get_updates_since
+700	1	core_course_get_enrolled_courses_by_timeline_classification
+701	1	core_course_get_recent_courses
+702	1	core_course_set_favourite_courses
+703	1	core_enrol_get_course_enrolment_methods
+704	1	core_enrol_get_enrolled_users
+705	1	core_enrol_get_users_courses
+706	1	core_files_get_files
+707	1	core_get_component_strings
+708	1	core_group_get_activity_allowed_groups
+709	1	core_group_get_activity_groupmode
+710	1	core_group_get_course_user_groups
+711	1	core_message_block_user
+712	1	core_message_block_contacts
+713	1	core_message_create_contacts
+714	1	core_message_get_contact_requests
+715	1	core_message_create_contact_request
+716	1	core_message_confirm_contact_request
+717	1	core_message_decline_contact_request
+718	1	core_message_get_received_contact_requests_count
+719	1	core_message_delete_contacts
+720	1	core_message_delete_conversation
+721	1	core_message_delete_conversations_by_id
+722	1	core_message_delete_message
+723	1	core_message_get_blocked_users
+724	1	core_message_data_for_messagearea_search_messages
+725	1	core_message_message_search_users
+726	1	core_message_data_for_messagearea_conversations
+727	1	core_message_data_for_messagearea_contacts
+728	1	core_message_data_for_messagearea_messages
+729	1	core_message_get_contacts
+730	1	core_message_get_user_contacts
+731	1	core_message_get_conversations
+732	1	core_message_get_conversation
+733	1	core_message_get_conversation_between_users
+734	1	core_message_get_messages
+735	1	core_message_get_conversation_counts
+736	1	core_message_get_unread_conversation_counts
+737	1	core_message_get_conversation_members
+738	1	core_message_get_member_info
+739	1	core_message_get_unread_conversations_count
+740	1	core_message_mark_all_notifications_as_read
+741	1	core_message_mark_all_messages_as_read
+742	1	core_message_mark_all_conversation_messages_as_read
+743	1	core_message_mark_message_read
+744	1	core_message_mark_notification_read
+745	1	core_message_message_processor_config_form
+746	1	core_message_search_contacts
+747	1	core_message_send_instant_messages
+748	1	core_message_send_messages_to_conversation
+749	1	core_message_get_conversation_messages
+750	1	core_message_unblock_user
+751	1	core_message_unblock_contacts
+752	1	core_message_get_user_notification_preferences
+753	1	core_message_get_user_message_preferences
+754	1	core_message_set_favourite_conversations
+755	1	core_message_unset_favourite_conversations
+756	1	core_notes_create_notes
+757	1	core_notes_delete_notes
+758	1	core_notes_get_course_notes
+759	1	core_notes_view_notes
+760	1	core_question_update_flag
+761	1	core_rating_get_item_ratings
+762	1	core_rating_add_rating
+763	1	core_user_add_user_device
+764	1	core_user_add_user_private_files
+765	1	core_user_get_course_user_profiles
+766	1	core_user_get_users_by_field
+767	1	core_user_remove_user_device
+768	1	core_user_update_user_preferences
+769	1	core_user_view_user_list
+770	1	core_user_view_user_profile
+771	1	core_user_get_user_preferences
+772	1	core_user_update_picture
+773	1	core_user_set_user_preferences
+774	1	core_user_agree_site_policy
+775	1	core_user_get_private_files_info
+776	1	core_competency_competency_viewed
+777	1	core_competency_list_course_competencies
+778	1	core_competency_get_scale_values
+779	1	core_competency_user_competency_viewed
+780	1	core_competency_user_competency_viewed_in_plan
+781	1	core_competency_user_competency_viewed_in_course
+782	1	core_competency_user_competency_plan_viewed
+783	1	core_competency_grade_competency_in_course
+784	1	core_competency_delete_evidence
+785	1	core_webservice_get_site_info
+786	1	core_block_get_course_blocks
+787	1	core_block_get_dashboard_blocks
+788	1	core_filters_get_available_in_context
+789	1	mod_assign_get_grades
+790	1	mod_assign_get_assignments
+791	1	mod_assign_get_submissions
+792	1	mod_assign_get_user_flags
+793	1	mod_assign_set_user_flags
+794	1	mod_assign_get_user_mappings
+795	1	mod_assign_revert_submissions_to_draft
+796	1	mod_assign_lock_submissions
+797	1	mod_assign_unlock_submissions
+798	1	mod_assign_save_submission
+799	1	mod_assign_submit_for_grading
+800	1	mod_assign_save_grade
+801	1	mod_assign_save_grades
+802	1	mod_assign_save_user_extensions
+803	1	mod_assign_reveal_identities
+804	1	mod_assign_view_grading_table
+805	1	mod_assign_view_submission_status
+806	1	mod_assign_get_submission_status
+807	1	mod_assign_list_participants
+808	1	mod_assign_submit_grading_form
+809	1	mod_assign_get_participant
+810	1	mod_assign_view_assign
+811	1	mod_book_view_book
+812	1	mod_book_get_books_by_courses
+813	1	mod_chat_login_user
+814	1	mod_chat_get_chat_users
+815	1	mod_chat_send_chat_message
+816	1	mod_chat_get_chat_latest_messages
+817	1	mod_chat_view_chat
+818	1	mod_chat_get_chats_by_courses
+819	1	mod_chat_get_sessions
+820	1	mod_chat_get_session_messages
+821	1	mod_choice_get_choice_results
+822	1	mod_choice_get_choice_options
+823	1	mod_choice_submit_choice_response
+824	1	mod_choice_view_choice
+825	1	mod_choice_get_choices_by_courses
+826	1	mod_choice_delete_choice_responses
+827	1	mod_data_get_databases_by_courses
+828	1	mod_data_view_database
+829	1	mod_data_get_data_access_information
+830	1	mod_data_get_entries
+831	1	mod_data_get_entry
+832	1	mod_data_get_fields
+833	1	mod_data_search_entries
+834	1	mod_data_approve_entry
+835	1	mod_data_delete_entry
+836	1	mod_data_add_entry
+837	1	mod_data_update_entry
+838	1	mod_feedback_get_feedbacks_by_courses
+839	1	mod_feedback_get_feedback_access_information
+840	1	mod_feedback_view_feedback
+841	1	mod_feedback_get_current_completed_tmp
+842	1	mod_feedback_get_items
+843	1	mod_feedback_launch_feedback
+844	1	mod_feedback_get_page_items
+845	1	mod_feedback_process_page
+846	1	mod_feedback_get_analysis
+847	1	mod_feedback_get_unfinished_responses
+848	1	mod_feedback_get_finished_responses
+849	1	mod_feedback_get_non_respondents
+850	1	mod_feedback_get_responses_analysis
+851	1	mod_feedback_get_last_completed
+852	1	mod_folder_view_folder
+853	1	mod_folder_get_folders_by_courses
+854	1	mod_forum_get_forums_by_courses
+855	1	mod_forum_get_forum_discussion_posts
+856	1	mod_forum_get_forum_discussions_paginated
+857	1	mod_forum_view_forum
+858	1	mod_forum_view_forum_discussion
+859	1	mod_forum_add_discussion_post
+860	1	mod_forum_add_discussion
+861	1	mod_forum_can_add_discussion
+862	1	mod_glossary_get_glossaries_by_courses
+863	1	mod_glossary_view_glossary
+864	1	mod_glossary_view_entry
+865	1	mod_glossary_get_entries_by_letter
+866	1	mod_glossary_get_entries_by_date
+867	1	mod_glossary_get_categories
+868	1	mod_glossary_get_entries_by_category
+869	1	mod_glossary_get_authors
+870	1	mod_glossary_get_entries_by_author
+871	1	mod_glossary_get_entries_by_author_id
+872	1	mod_glossary_get_entries_by_search
+873	1	mod_glossary_get_entries_by_term
+874	1	mod_glossary_get_entries_to_approve
+875	1	mod_glossary_get_entry_by_id
+876	1	mod_glossary_add_entry
+877	1	mod_imscp_view_imscp
+878	1	mod_imscp_get_imscps_by_courses
+879	1	mod_label_get_labels_by_courses
+880	1	mod_lesson_get_lessons_by_courses
+881	1	mod_lesson_get_lesson_access_information
+882	1	mod_lesson_view_lesson
+883	1	mod_lesson_get_questions_attempts
+884	1	mod_lesson_get_user_grade
+885	1	mod_lesson_get_user_attempt_grade
+886	1	mod_lesson_get_content_pages_viewed
+887	1	mod_lesson_get_user_timers
+888	1	mod_lesson_get_pages
+889	1	mod_lesson_launch_attempt
+890	1	mod_lesson_get_page_data
+891	1	mod_lesson_process_page
+892	1	mod_lesson_finish_attempt
+893	1	mod_lesson_get_attempts_overview
+894	1	mod_lesson_get_user_attempt
+895	1	mod_lesson_get_pages_possible_jumps
+896	1	mod_lesson_get_lesson
+897	1	mod_lti_get_tool_launch_data
+898	1	mod_lti_get_ltis_by_courses
+899	1	mod_lti_view_lti
+900	1	mod_page_view_page
+901	1	mod_page_get_pages_by_courses
+902	1	mod_quiz_get_quizzes_by_courses
+903	1	mod_quiz_view_quiz
+904	1	mod_quiz_get_user_attempts
+905	1	mod_quiz_get_user_best_grade
+906	1	mod_quiz_get_combined_review_options
+907	1	mod_quiz_start_attempt
+908	1	mod_quiz_get_attempt_data
+909	1	mod_quiz_get_attempt_summary
+910	1	mod_quiz_save_attempt
+911	1	mod_quiz_process_attempt
+912	1	mod_quiz_get_attempt_review
+913	1	mod_quiz_view_attempt
+914	1	mod_quiz_view_attempt_summary
+915	1	mod_quiz_view_attempt_review
+916	1	mod_quiz_get_quiz_feedback_for_grade
+917	1	mod_quiz_get_quiz_access_information
+918	1	mod_quiz_get_attempt_access_information
+919	1	mod_quiz_get_quiz_required_qtypes
+920	1	mod_resource_view_resource
+921	1	mod_resource_get_resources_by_courses
+922	1	mod_scorm_view_scorm
+923	1	mod_scorm_get_scorm_attempt_count
+924	1	mod_scorm_get_scorm_scoes
+925	1	mod_scorm_get_scorm_user_data
+926	1	mod_scorm_insert_scorm_tracks
+927	1	mod_scorm_get_scorm_sco_tracks
+928	1	mod_scorm_get_scorms_by_courses
+929	1	mod_scorm_launch_sco
+930	1	mod_survey_get_surveys_by_courses
+931	1	mod_survey_view_survey
+932	1	mod_survey_get_questions
+933	1	mod_survey_submit_answers
+934	1	mod_url_view_url
+935	1	mod_url_get_urls_by_courses
+936	1	mod_wiki_get_wikis_by_courses
+937	1	mod_wiki_view_wiki
+938	1	mod_wiki_view_page
+939	1	mod_wiki_get_subwikis
+940	1	mod_wiki_get_subwiki_pages
+941	1	mod_wiki_get_subwiki_files
+942	1	mod_wiki_get_page_contents
+943	1	mod_wiki_get_page_for_editing
+944	1	mod_wiki_new_page
+945	1	mod_wiki_edit_page
+946	1	mod_workshop_get_workshops_by_courses
+947	1	mod_workshop_get_workshop_access_information
+948	1	mod_workshop_get_user_plan
+949	1	mod_workshop_view_workshop
+950	1	mod_workshop_add_submission
+951	1	mod_workshop_update_submission
+952	1	mod_workshop_delete_submission
+953	1	mod_workshop_get_submissions
+954	1	mod_workshop_get_submission
+955	1	mod_workshop_get_submission_assessments
+956	1	mod_workshop_get_assessment
+957	1	mod_workshop_get_assessment_form_definition
+958	1	mod_workshop_get_reviewer_assessments
+959	1	mod_workshop_update_assessment
+960	1	mod_workshop_get_grades
+961	1	mod_workshop_evaluate_assessment
+962	1	mod_workshop_get_grades_report
+963	1	mod_workshop_view_submission
+964	1	mod_workshop_evaluate_submission
+965	1	enrol_guest_get_instance_info
+966	1	enrol_self_get_instance_info
+967	1	enrol_self_enrol_user
+968	1	message_airnotifier_is_system_configured
+969	1	message_airnotifier_are_notification_preferences_configured
+970	1	message_airnotifier_get_user_devices
+971	1	message_airnotifier_enable_device
+972	1	message_popup_get_popup_notifications
+973	1	message_popup_get_unread_popup_notification_count
+974	1	block_recentlyaccesseditems_get_recent_items
+975	1	block_starredcourses_get_starred_courses
+976	1	report_insights_set_notuseful_prediction
+977	1	report_insights_set_fixed_prediction
+978	1	gradereport_overview_get_course_grades
+979	1	gradereport_overview_view_grade_report
+980	1	gradereport_user_get_grades_table
+981	1	gradereport_user_view_grade_report
+982	1	gradereport_user_get_grade_items
+983	1	tool_lp_data_for_course_competencies_page
+984	1	tool_lp_data_for_plans_page
+985	1	tool_lp_data_for_plan_page
+986	1	tool_lp_data_for_user_evidence_list_page
+987	1	tool_lp_data_for_user_evidence_page
+988	1	tool_lp_data_for_user_competency_summary
+989	1	tool_lp_data_for_user_competency_summary_in_plan
+990	1	tool_lp_data_for_user_competency_summary_in_course
+991	1	tool_mobile_get_plugins_supporting_mobile
+992	1	tool_mobile_get_public_config
+993	1	tool_mobile_get_config
+994	1	tool_mobile_get_autologin_key
+995	1	tool_mobile_get_content
+996	1	mod_choicegroup_get_choicegroup_options
+997	1	mod_choicegroup_submit_choicegroup_response
+998	1	mod_choicegroup_view_choicegroup
+999	1	mod_choicegroup_delete_choicegroup_responses
 \.
-
-
---
--- Name: m2external_services_functions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2external_services_functions_id_seq', 668, true);
-
-
---
--- Name: m2external_services_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2external_services_id_seq', 4, true);
 
 
 --
@@ -32400,13 +29804,6 @@ COPY public.m2external_services_users (id, externalserviceid, userid, iprestrict
 
 
 --
--- Name: m2external_services_users_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2external_services_users_id_seq', 1, false);
-
-
---
 -- Data for Name: m2external_tokens; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -32415,25 +29812,11 @@ COPY public.m2external_tokens (id, token, privatetoken, tokentype, userid, exter
 
 
 --
--- Name: m2external_tokens_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2external_tokens_id_seq', 1, false);
-
-
---
 -- Data for Name: m2favourite; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2favourite (id, component, itemtype, itemid, contextid, userid, ordering, timecreated, timemodified) FROM stdin;
 \.
-
-
---
--- Name: m2favourite_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2favourite_id_seq', 1, false);
 
 
 --
@@ -32453,32 +29836,11 @@ COPY public.m2feedback_completed (id, feedback, userid, timemodified, random_res
 
 
 --
--- Name: m2feedback_completed_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2feedback_completed_id_seq', 1, false);
-
-
---
 -- Data for Name: m2feedback_completedtmp; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2feedback_completedtmp (id, feedback, userid, guestid, timemodified, random_response, anonymous_response, courseid) FROM stdin;
 \.
-
-
---
--- Name: m2feedback_completedtmp_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2feedback_completedtmp_id_seq', 1, false);
-
-
---
--- Name: m2feedback_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2feedback_id_seq', 1, false);
 
 
 --
@@ -32490,25 +29852,11 @@ COPY public.m2feedback_item (id, feedback, template, name, label, presentation, 
 
 
 --
--- Name: m2feedback_item_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2feedback_item_id_seq', 1, false);
-
-
---
 -- Data for Name: m2feedback_sitecourse_map; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2feedback_sitecourse_map (id, feedbackid, courseid) FROM stdin;
 \.
-
-
---
--- Name: m2feedback_sitecourse_map_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2feedback_sitecourse_map_id_seq', 1, false);
 
 
 --
@@ -32520,25 +29868,11 @@ COPY public.m2feedback_template (id, course, ispublic, name) FROM stdin;
 
 
 --
--- Name: m2feedback_template_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2feedback_template_id_seq', 1, false);
-
-
---
 -- Data for Name: m2feedback_value; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2feedback_value (id, course_id, item, completed, tmp_completed, value) FROM stdin;
 \.
-
-
---
--- Name: m2feedback_value_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2feedback_value_id_seq', 1, false);
 
 
 --
@@ -32550,13 +29884,6 @@ COPY public.m2feedback_valuetmp (id, course_id, item, completed, tmp_completed, 
 
 
 --
--- Name: m2feedback_valuetmp_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2feedback_valuetmp_id_seq', 1, false);
-
-
---
 -- Data for Name: m2file_conversion; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -32565,32 +29892,11 @@ COPY public.m2file_conversion (id, usermodified, timecreated, timemodified, sour
 
 
 --
--- Name: m2file_conversion_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2file_conversion_id_seq', 1, false);
-
-
---
 -- Data for Name: m2files; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2files (id, contenthash, pathnamehash, contextid, component, filearea, itemid, filepath, filename, userid, filesize, mimetype, status, source, author, license, timecreated, timemodified, sortorder, referencefileid) FROM stdin;
-1	41cfeee5884a43a4650a851f4f85e7b28316fcc9	a48e186a2cc853a9e94e9305f4e9bc086391212d	1	theme_more	backgroundimage	0	/	background.jpg	2	4451	image/jpeg	0	\N	\N	\N	1572464234	1572464234	0	\N
-2	da39a3ee5e6b4b0d3255bfef95601890afd80709	d1da7ab1bb9c08a926037367bf8ce9a838034ead	1	theme_more	backgroundimage	0	/	.	2	0	\N	0	\N	\N	\N	1572464234	1572464234	0	\N
-3	5f8e911d0da441e36f47c5c46f4393269211ca56	508e674d49c30d4fde325fe6c7f6fd3d56b247e1	1	assignfeedback_editpdf	stamps	0	/	smile.png	2	1085	image/png	0	\N	\N	\N	1572464235	1572464235	0	\N
-4	da39a3ee5e6b4b0d3255bfef95601890afd80709	70b7cdade7b4e27d4e83f0cdaad10d6a3c0cccb5	1	assignfeedback_editpdf	stamps	0	/	.	2	0	\N	0	\N	\N	\N	1572464235	1572464235	0	\N
-5	75c101cb8cb34ea573cd25ac38f8157b1de901b8	68317eab56c67d32aeaee5acf509a0c4aa828b6b	1	assignfeedback_editpdf	stamps	0	/	sad.png	2	966	image/png	0	\N	\N	\N	1572464235	1572464235	0	\N
-6	0c5190a24c3943966541401c883eacaa20ca20cb	695a55ff780e61c9e59428aa425430b0d6bde53b	1	assignfeedback_editpdf	stamps	0	/	tick.png	2	1039	image/png	0	\N	\N	\N	1572464235	1572464235	0	\N
-7	8c96a486d5801e0f4ab8c411f561f1c687e1f865	373e63af262a9b8466ba8632551520be793c37ff	1	assignfeedback_editpdf	stamps	0	/	cross.png	2	861	image/png	0	\N	\N	\N	1572464235	1572464235	0	\N
 \.
-
-
---
--- Name: m2files_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2files_id_seq', 7, true);
 
 
 --
@@ -32602,13 +29908,6 @@ COPY public.m2files_reference (id, repositoryid, lastsync, reference, referenceh
 
 
 --
--- Name: m2files_reference_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2files_reference_id_seq', 1, false);
-
-
---
 -- Data for Name: m2filter_active; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -32616,14 +29915,8 @@ COPY public.m2filter_active (id, filter, contextid, active, sortorder) FROM stdi
 2	mathjaxloader	1	1	1
 1	activitynames	1	1	2
 3	mediaplugin	1	1	3
+4	tex	1	1	4
 \.
-
-
---
--- Name: m2filter_active_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2filter_active_id_seq', 3, true);
 
 
 --
@@ -32635,13 +29928,6 @@ COPY public.m2filter_config (id, filter, contextid, name, value) FROM stdin;
 
 
 --
--- Name: m2filter_config_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2filter_config_id_seq', 1, false);
-
-
---
 -- Data for Name: m2filter_wiris_formulas; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -32650,25 +29936,11 @@ COPY public.m2filter_wiris_formulas (id, md5, content, jsoncontent, alt, timecre
 
 
 --
--- Name: m2filter_wiris_formulas_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2filter_wiris_formulas_id_seq', 1, false);
-
-
---
 -- Data for Name: m2folder; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2folder (id, course, name, intro, introformat, revision, timemodified, display, showexpanded, showdownloadfolder) FROM stdin;
 \.
-
-
---
--- Name: m2folder_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2folder_id_seq', 1, false);
 
 
 --
@@ -32688,25 +29960,11 @@ COPY public.m2forum_digests (id, userid, forum, maildigest) FROM stdin;
 
 
 --
--- Name: m2forum_digests_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2forum_digests_id_seq', 1, false);
-
-
---
 -- Data for Name: m2forum_discussion_subs; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2forum_discussion_subs (id, forum, userid, discussion, preference) FROM stdin;
 \.
-
-
---
--- Name: m2forum_discussion_subs_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2forum_discussion_subs_id_seq', 1, false);
 
 
 --
@@ -32718,32 +29976,11 @@ COPY public.m2forum_discussions (id, course, forum, name, firstpost, userid, gro
 
 
 --
--- Name: m2forum_discussions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2forum_discussions_id_seq', 1, false);
-
-
---
--- Name: m2forum_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2forum_id_seq', 1, false);
-
-
---
 -- Data for Name: m2forum_posts; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2forum_posts (id, discussion, parent, userid, created, modified, mailed, subject, message, messageformat, messagetrust, attachment, totalscore, mailnow, deleted) FROM stdin;
 \.
-
-
---
--- Name: m2forum_posts_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2forum_posts_id_seq', 1, false);
 
 
 --
@@ -32755,25 +29992,11 @@ COPY public.m2forum_queue (id, userid, discussionid, postid, timemodified) FROM 
 
 
 --
--- Name: m2forum_queue_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2forum_queue_id_seq', 1, false);
-
-
---
 -- Data for Name: m2forum_read; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2forum_read (id, userid, forumid, discussionid, postid, firstread, lastread) FROM stdin;
 \.
-
-
---
--- Name: m2forum_read_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2forum_read_id_seq', 1, false);
 
 
 --
@@ -32785,25 +30008,11 @@ COPY public.m2forum_subscriptions (id, userid, forum) FROM stdin;
 
 
 --
--- Name: m2forum_subscriptions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2forum_subscriptions_id_seq', 1, false);
-
-
---
 -- Data for Name: m2forum_track_prefs; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2forum_track_prefs (id, userid, forumid) FROM stdin;
 \.
-
-
---
--- Name: m2forum_track_prefs_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2forum_track_prefs_id_seq', 1, false);
 
 
 --
@@ -32823,20 +30032,6 @@ COPY public.m2geogebra_attempts (id, geogebra, userid, vars, gradecomment, finis
 
 
 --
--- Name: m2geogebra_attempts_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2geogebra_attempts_id_seq', 1, false);
-
-
---
--- Name: m2geogebra_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2geogebra_id_seq', 1, false);
-
-
---
 -- Data for Name: m2glossary; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -32853,25 +30048,11 @@ COPY public.m2glossary_alias (id, entryid, alias) FROM stdin;
 
 
 --
--- Name: m2glossary_alias_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2glossary_alias_id_seq', 1, false);
-
-
---
 -- Data for Name: m2glossary_categories; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2glossary_categories (id, glossaryid, name, usedynalink) FROM stdin;
 \.
-
-
---
--- Name: m2glossary_categories_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2glossary_categories_id_seq', 1, false);
 
 
 --
@@ -32891,20 +30072,6 @@ COPY public.m2glossary_entries_categories (id, categoryid, entryid) FROM stdin;
 
 
 --
--- Name: m2glossary_entries_categories_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2glossary_entries_categories_id_seq', 1, false);
-
-
---
--- Name: m2glossary_entries_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2glossary_entries_id_seq', 1, false);
-
-
---
 -- Data for Name: m2glossary_formats; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -32917,20 +30084,6 @@ COPY public.m2glossary_formats (id, name, popupformatname, visible, showgroup, s
 6	fullwithauthor	fullwithauthor	1	1	standard,category,date,author				
 7	fullwithoutauthor	fullwithoutauthor	1	1	standard,category,date				
 \.
-
-
---
--- Name: m2glossary_formats_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2glossary_formats_id_seq', 7, true);
-
-
---
--- Name: m2glossary_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2glossary_id_seq', 1, false);
 
 
 --
@@ -32950,20 +30103,6 @@ COPY public.m2grade_categories_history (id, action, oldid, source, timemodified,
 
 
 --
--- Name: m2grade_categories_history_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2grade_categories_history_id_seq', 1, false);
-
-
---
--- Name: m2grade_categories_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2grade_categories_id_seq', 1, false);
-
-
---
 -- Data for Name: m2grade_grades; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -32980,20 +30119,6 @@ COPY public.m2grade_grades_history (id, action, oldid, source, timemodified, log
 
 
 --
--- Name: m2grade_grades_history_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2grade_grades_history_id_seq', 1, false);
-
-
---
--- Name: m2grade_grades_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2grade_grades_id_seq', 1, false);
-
-
---
 -- Data for Name: m2grade_import_newitem; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -33002,25 +30127,11 @@ COPY public.m2grade_import_newitem (id, itemname, importcode, importer) FROM std
 
 
 --
--- Name: m2grade_import_newitem_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2grade_import_newitem_id_seq', 1, false);
-
-
---
 -- Data for Name: m2grade_import_values; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2grade_import_values (id, itemid, newgradeitem, userid, finalgrade, feedback, importcode, importer, importonlyfeedback) FROM stdin;
 \.
-
-
---
--- Name: m2grade_import_values_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2grade_import_values_id_seq', 1, false);
 
 
 --
@@ -33040,32 +30151,11 @@ COPY public.m2grade_items_history (id, action, oldid, source, timemodified, logg
 
 
 --
--- Name: m2grade_items_history_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2grade_items_history_id_seq', 1, false);
-
-
---
--- Name: m2grade_items_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2grade_items_id_seq', 1, false);
-
-
---
 -- Data for Name: m2grade_letters; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2grade_letters (id, contextid, lowerboundary, letter) FROM stdin;
 \.
-
-
---
--- Name: m2grade_letters_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2grade_letters_id_seq', 1, false);
 
 
 --
@@ -33085,32 +30175,11 @@ COPY public.m2grade_outcomes_courses (id, courseid, outcomeid) FROM stdin;
 
 
 --
--- Name: m2grade_outcomes_courses_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2grade_outcomes_courses_id_seq', 1, false);
-
-
---
 -- Data for Name: m2grade_outcomes_history; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2grade_outcomes_history (id, action, oldid, source, timemodified, loggeduser, courseid, shortname, fullname, scaleid, description, descriptionformat) FROM stdin;
 \.
-
-
---
--- Name: m2grade_outcomes_history_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2grade_outcomes_history_id_seq', 1, false);
-
-
---
--- Name: m2grade_outcomes_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2grade_outcomes_id_seq', 1, false);
 
 
 --
@@ -33122,25 +30191,11 @@ COPY public.m2grade_settings (id, courseid, name, value) FROM stdin;
 
 
 --
--- Name: m2grade_settings_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2grade_settings_id_seq', 1, false);
-
-
---
 -- Data for Name: m2grading_areas; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2grading_areas (id, contextid, component, areaname, activemethod) FROM stdin;
 \.
-
-
---
--- Name: m2grading_areas_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2grading_areas_id_seq', 1, false);
 
 
 --
@@ -33152,25 +30207,11 @@ COPY public.m2grading_definitions (id, areaid, method, name, description, descri
 
 
 --
--- Name: m2grading_definitions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2grading_definitions_id_seq', 1, false);
-
-
---
 -- Data for Name: m2grading_instances; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2grading_instances (id, definitionid, raterid, itemid, rawgrade, status, feedback, feedbackformat, timemodified) FROM stdin;
 \.
-
-
---
--- Name: m2grading_instances_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2grading_instances_id_seq', 1, false);
 
 
 --
@@ -33182,25 +30223,11 @@ COPY public.m2gradingform_guide_comments (id, definitionid, sortorder, descripti
 
 
 --
--- Name: m2gradingform_guide_comments_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2gradingform_guide_comments_id_seq', 1, false);
-
-
---
 -- Data for Name: m2gradingform_guide_criteria; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2gradingform_guide_criteria (id, definitionid, sortorder, shortname, description, descriptionformat, descriptionmarkers, descriptionmarkersformat, maxscore) FROM stdin;
 \.
-
-
---
--- Name: m2gradingform_guide_criteria_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2gradingform_guide_criteria_id_seq', 1, false);
 
 
 --
@@ -33212,25 +30239,11 @@ COPY public.m2gradingform_guide_fillings (id, instanceid, criterionid, remark, r
 
 
 --
--- Name: m2gradingform_guide_fillings_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2gradingform_guide_fillings_id_seq', 1, false);
-
-
---
 -- Data for Name: m2gradingform_rubric_criteria; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2gradingform_rubric_criteria (id, definitionid, sortorder, description, descriptionformat) FROM stdin;
 \.
-
-
---
--- Name: m2gradingform_rubric_criteria_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2gradingform_rubric_criteria_id_seq', 1, false);
 
 
 --
@@ -33242,25 +30255,11 @@ COPY public.m2gradingform_rubric_fillings (id, instanceid, criterionid, levelid,
 
 
 --
--- Name: m2gradingform_rubric_fillings_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2gradingform_rubric_fillings_id_seq', 1, false);
-
-
---
 -- Data for Name: m2gradingform_rubric_levels; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2gradingform_rubric_levels (id, criterionid, score, definition, definitionformat) FROM stdin;
 \.
-
-
---
--- Name: m2gradingform_rubric_levels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2gradingform_rubric_levels_id_seq', 1, false);
 
 
 --
@@ -33280,20 +30279,6 @@ COPY public.m2groupings_groups (id, groupingid, groupid, timeadded) FROM stdin;
 
 
 --
--- Name: m2groupings_groups_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2groupings_groups_id_seq', 1, false);
-
-
---
--- Name: m2groupings_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2groupings_id_seq', 1, false);
-
-
---
 -- Data for Name: m2groups; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -33302,25 +30287,11 @@ COPY public.m2groups (id, courseid, idnumber, name, description, descriptionform
 
 
 --
--- Name: m2groups_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2groups_id_seq', 1, false);
-
-
---
 -- Data for Name: m2groups_members; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2groups_members (id, groupid, userid, timeadded, component, itemid) FROM stdin;
 \.
-
-
---
--- Name: m2groups_members_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2groups_members_id_seq', 1, false);
 
 
 --
@@ -33340,25 +30311,11 @@ COPY public.m2hotpot_attempts (id, hotpotid, userid, starttime, endtime, score, 
 
 
 --
--- Name: m2hotpot_attempts_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2hotpot_attempts_id_seq', 1, false);
-
-
---
 -- Data for Name: m2hotpot_cache; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2hotpot_cache (id, hotpotid, slasharguments, hotpot_bodystyles, hotpot_enableobfuscate, hotpot_enableswf, name, sourcefile, sourcetype, sourcelocation, sourcerepositoryid, sourcelastmodified, sourceetag, configfile, configlocation, configrepositoryid, configlastmodified, configetag, navigation, title, stopbutton, stoptext, allowpaste, usefilters, useglossary, usemediafilter, studentfeedback, studentfeedbackurl, timelimit, delay3, clickreporting, content, timemodified, md5key) FROM stdin;
 \.
-
-
---
--- Name: m2hotpot_cache_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2hotpot_cache_id_seq', 1, false);
 
 
 --
@@ -33370,32 +30327,11 @@ COPY public.m2hotpot_details (id, attemptid, details) FROM stdin;
 
 
 --
--- Name: m2hotpot_details_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2hotpot_details_id_seq', 1, false);
-
-
---
--- Name: m2hotpot_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2hotpot_id_seq', 1, false);
-
-
---
 -- Data for Name: m2hotpot_questions; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2hotpot_questions (id, name, type, text, hotpotid, md5key) FROM stdin;
 \.
-
-
---
--- Name: m2hotpot_questions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2hotpot_questions_id_seq', 1, false);
 
 
 --
@@ -33407,25 +30343,11 @@ COPY public.m2hotpot_responses (id, attemptid, questionid, score, weighting, cor
 
 
 --
--- Name: m2hotpot_responses_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2hotpot_responses_id_seq', 1, false);
-
-
---
 -- Data for Name: m2hotpot_strings; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2hotpot_strings (id, string, md5key) FROM stdin;
 \.
-
-
---
--- Name: m2hotpot_strings_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2hotpot_strings_id_seq', 1, false);
 
 
 --
@@ -33445,25 +30367,11 @@ COPY public.m2hvp_auth (id, user_id, created_at, secret) FROM stdin;
 
 
 --
--- Name: m2hvp_auth_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2hvp_auth_id_seq', 1, false);
-
-
---
 -- Data for Name: m2hvp_content_user_data; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2hvp_content_user_data (id, user_id, hvp_id, sub_content_id, data_id, data, preloaded, delete_on_content_change) FROM stdin;
 \.
-
-
---
--- Name: m2hvp_content_user_data_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2hvp_content_user_data_id_seq', 1, false);
 
 
 --
@@ -33475,13 +30383,6 @@ COPY public.m2hvp_contents_libraries (id, hvp_id, library_id, dependency_type, d
 
 
 --
--- Name: m2hvp_contents_libraries_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2hvp_contents_libraries_id_seq', 1, false);
-
-
---
 -- Data for Name: m2hvp_counters; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -33490,32 +30391,11 @@ COPY public.m2hvp_counters (id, type, library_name, library_version, num) FROM s
 
 
 --
--- Name: m2hvp_counters_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2hvp_counters_id_seq', 1, false);
-
-
---
 -- Data for Name: m2hvp_events; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2hvp_events (id, user_id, created_at, type, sub_type, content_id, content_title, library_name, library_version) FROM stdin;
 \.
-
-
---
--- Name: m2hvp_events_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2hvp_events_id_seq', 1, false);
-
-
---
--- Name: m2hvp_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2hvp_id_seq', 1, false);
 
 
 --
@@ -33532,13 +30412,6 @@ COPY public.m2hvp_libraries (id, machine_name, title, major_version, minor_versi
 
 COPY public.m2hvp_libraries_cachedassets (id, library_id, hash) FROM stdin;
 \.
-
-
---
--- Name: m2hvp_libraries_cachedassets_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2hvp_libraries_cachedassets_id_seq', 1, false);
 
 
 --
@@ -33592,20 +30465,6 @@ COPY public.m2hvp_libraries_hub_cache (id, machine_name, major_version, minor_ve
 
 
 --
--- Name: m2hvp_libraries_hub_cache_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2hvp_libraries_hub_cache_id_seq', 42, true);
-
-
---
--- Name: m2hvp_libraries_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2hvp_libraries_id_seq', 1, false);
-
-
---
 -- Data for Name: m2hvp_libraries_languages; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -33614,25 +30473,11 @@ COPY public.m2hvp_libraries_languages (id, library_id, language_code, language_j
 
 
 --
--- Name: m2hvp_libraries_languages_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2hvp_libraries_languages_id_seq', 1, false);
-
-
---
 -- Data for Name: m2hvp_libraries_libraries; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2hvp_libraries_libraries (id, library_id, required_library_id, dependency_type) FROM stdin;
 \.
-
-
---
--- Name: m2hvp_libraries_libraries_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2hvp_libraries_libraries_id_seq', 1, false);
 
 
 --
@@ -33652,25 +30497,11 @@ COPY public.m2hvp_xapi_results (id, content_id, user_id, parent_id, interaction_
 
 
 --
--- Name: m2hvp_xapi_results_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2hvp_xapi_results_id_seq', 1, false);
-
-
---
 -- Data for Name: m2imscp; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2imscp (id, course, name, intro, introformat, revision, keepold, structure, timemodified) FROM stdin;
 \.
-
-
---
--- Name: m2imscp_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2imscp_id_seq', 1, false);
 
 
 --
@@ -33690,13 +30521,6 @@ COPY public.m2jclic_activities (id, session_id, activity_id, activity_name, num_
 
 
 --
--- Name: m2jclic_activities_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2jclic_activities_id_seq', 1, false);
-
-
---
 -- Data for Name: m2jclic_groups; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -33705,32 +30529,11 @@ COPY public.m2jclic_groups (id, group_id, group_name, group_description, group_i
 
 
 --
--- Name: m2jclic_groups_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2jclic_groups_id_seq', 1, false);
-
-
---
--- Name: m2jclic_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2jclic_id_seq', 1, false);
-
-
---
 -- Data for Name: m2jclic_sessions; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2jclic_sessions (id, jclicid, session_id, user_id, session_datetime, project_name, session_key, session_code, session_context) FROM stdin;
 \.
-
-
---
--- Name: m2jclic_sessions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2jclic_sessions_id_seq', 1, false);
 
 
 --
@@ -33748,25 +30551,11 @@ COPY public.m2jclic_settings (id, setting_key, setting_value) FROM stdin;
 
 
 --
--- Name: m2jclic_settings_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2jclic_settings_id_seq', 6, true);
-
-
---
 -- Data for Name: m2jclic_users; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2jclic_users (id, user_id, group_id, user_name, user_pwd, user_icon, user_code, user_keywords) FROM stdin;
 \.
-
-
---
--- Name: m2jclic_users_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2jclic_users_id_seq', 1, false);
 
 
 --
@@ -33786,32 +30575,11 @@ COPY public.m2journal_entries (id, journal, userid, modified, text, format, rati
 
 
 --
--- Name: m2journal_entries_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2journal_entries_id_seq', 1, false);
-
-
---
--- Name: m2journal_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2journal_id_seq', 1, false);
-
-
---
 -- Data for Name: m2label; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2label (id, course, name, intro, introformat, timemodified) FROM stdin;
 \.
-
-
---
--- Name: m2label_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2label_id_seq', 1, false);
 
 
 --
@@ -33831,25 +30599,11 @@ COPY public.m2lesson_answers (id, lessonid, pageid, jumpto, grade, score, flags,
 
 
 --
--- Name: m2lesson_answers_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2lesson_answers_id_seq', 1, false);
-
-
---
 -- Data for Name: m2lesson_attempts; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2lesson_attempts (id, lessonid, pageid, userid, answerid, retry, correct, useranswer, timeseen) FROM stdin;
 \.
-
-
---
--- Name: m2lesson_attempts_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2lesson_attempts_id_seq', 1, false);
 
 
 --
@@ -33861,32 +30615,11 @@ COPY public.m2lesson_branch (id, lessonid, userid, pageid, retry, flag, timeseen
 
 
 --
--- Name: m2lesson_branch_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2lesson_branch_id_seq', 1, false);
-
-
---
 -- Data for Name: m2lesson_grades; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2lesson_grades (id, lessonid, userid, grade, late, completed) FROM stdin;
 \.
-
-
---
--- Name: m2lesson_grades_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2lesson_grades_id_seq', 1, false);
-
-
---
--- Name: m2lesson_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2lesson_id_seq', 1, false);
 
 
 --
@@ -33898,13 +30631,6 @@ COPY public.m2lesson_overrides (id, lessonid, groupid, userid, available, deadli
 
 
 --
--- Name: m2lesson_overrides_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2lesson_overrides_id_seq', 1, false);
-
-
---
 -- Data for Name: m2lesson_pages; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -33913,25 +30639,11 @@ COPY public.m2lesson_pages (id, lessonid, prevpageid, nextpageid, qtype, qoption
 
 
 --
--- Name: m2lesson_pages_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2lesson_pages_id_seq', 1, false);
-
-
---
 -- Data for Name: m2lesson_timer; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2lesson_timer (id, lessonid, userid, starttime, lessontime, completed, timemodifiedoffline) FROM stdin;
 \.
-
-
---
--- Name: m2lesson_timer_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2lesson_timer_id_seq', 1, false);
 
 
 --
@@ -33952,13 +30664,6 @@ COPY public.m2license (id, shortname, fullname, source, enabled, version) FROM s
 
 
 --
--- Name: m2license_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2license_id_seq', 9, true);
-
-
---
 -- Data for Name: m2lock_db; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -33966,14 +30671,9 @@ COPY public.m2lock_db (id, resourcekey, expires, owner) FROM stdin;
 2	boost	\N	\N
 1	build_course_cache_1	\N	\N
 3	xtec2	\N	\N
+5	core_theme_get_css_content_xtec2	\N	\N
+4	core_modinfo_build_course_cache_1	\N	\N
 \.
-
-
---
--- Name: m2lock_db_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2lock_db_id_seq', 3, true);
 
 
 --
@@ -34217,20 +30917,6 @@ COPY public.m2log_display (id, module, action, mtable, field, component) FROM st
 
 
 --
--- Name: m2log_display_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2log_display_id_seq', 224, true);
-
-
---
--- Name: m2log_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2log_id_seq', 1, false);
-
-
---
 -- Data for Name: m2log_queries; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -34239,1228 +30925,11 @@ COPY public.m2log_queries (id, qtype, sqltext, sqlparams, error, info, backtrace
 
 
 --
--- Name: m2log_queries_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2log_queries_id_seq', 1, false);
-
-
---
 -- Data for Name: m2logstore_standard_log; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2logstore_standard_log (id, eventname, component, action, target, objecttable, objectid, crud, edulevel, contextid, contextlevel, contextinstanceid, userid, courseid, relateduserid, anonymous, other, timecreated, origin, ip, realuserid) FROM stdin;
-1	\\core\\event\\user_loggedin	core	loggedin	user	user	2	r	0	1	10	0	2	0	\N	0	a:1:{s:8:"username";s:5:"admin";}	1572464314	web	192.168.33.1	\N
-2	\\core\\event\\user_password_updated	core	updated	user_password	\N	\N	u	0	5	30	2	2	0	2	0	a:1:{s:14:"forgottenreset";b:0;}	1572464531	web	192.168.33.1	\N
-3	\\core\\event\\user_updated	core	updated	user	user	2	u	0	5	30	2	2	0	2	0	N;	1572464531	web	192.168.33.1	\N
-4	\\core\\event\\config_log_created	core	created	config_log	config_log	549	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"notloggedinroleid";s:8:"oldvalue";N;s:5:"value";s:1:"6";s:6:"plugin";N;}	1572464535	web	192.168.33.1	\N
-5	\\core\\event\\config_log_created	core	created	config_log	config_log	550	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:11:"guestroleid";s:8:"oldvalue";N;s:5:"value";s:1:"6";s:6:"plugin";N;}	1572464535	web	192.168.33.1	\N
-6	\\core\\event\\config_log_created	core	created	config_log	config_log	551	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"defaultuserroleid";s:8:"oldvalue";N;s:5:"value";s:1:"7";s:6:"plugin";N;}	1572464535	web	192.168.33.1	\N
-7	\\core\\event\\config_log_created	core	created	config_log	config_log	552	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:16:"creatornewroleid";s:8:"oldvalue";N;s:5:"value";s:1:"3";s:6:"plugin";N;}	1572464535	web	192.168.33.1	\N
-8	\\core\\event\\config_log_created	core	created	config_log	config_log	553	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"restorernewroleid";s:8:"oldvalue";N;s:5:"value";s:1:"3";s:6:"plugin";N;}	1572464535	web	192.168.33.1	\N
-9	\\core\\event\\config_log_created	core	created	config_log	config_log	554	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:28:"contactdataprotectionofficer";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:16:"tool_dataprivacy";}	1572464535	web	192.168.33.1	\N
-10	\\core\\event\\config_log_created	core	created	config_log	config_log	555	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:25:"automaticdeletionrequests";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:16:"tool_dataprivacy";}	1572464535	web	192.168.33.1	\N
-11	\\core\\event\\config_log_created	core	created	config_log	config_log	556	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:20:"privacyrequestexpiry";s:8:"oldvalue";N;s:5:"value";s:6:"604800";s:6:"plugin";s:16:"tool_dataprivacy";}	1572464535	web	192.168.33.1	\N
-12	\\core\\event\\config_log_created	core	created	config_log	config_log	557	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:33:"requireallenddatesforuserdeletion";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:16:"tool_dataprivacy";}	1572464535	web	192.168.33.1	\N
-13	\\core\\event\\config_log_created	core	created	config_log	config_log	558	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:24:"showdataretentionsummary";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:16:"tool_dataprivacy";}	1572464535	web	192.168.33.1	\N
-14	\\core\\event\\config_log_created	core	created	config_log	config_log	559	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:9:"exportlog";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:8:"tool_log";}	1572464535	web	192.168.33.1	\N
-15	\\core\\event\\config_log_created	core	created	config_log	config_log	560	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"sitepolicyhandler";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";N;}	1572464535	web	192.168.33.1	\N
-16	\\core\\event\\config_log_created	core	created	config_log	config_log	561	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"gradebookroles";s:8:"oldvalue";N;s:5:"value";s:1:"5";s:6:"plugin";N;}	1572464535	web	192.168.33.1	\N
-17	\\core\\event\\config_log_created	core	created	config_log	config_log	562	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:8:"logstore";s:8:"oldvalue";N;s:5:"value";s:17:"logstore_standard";s:6:"plugin";s:9:"analytics";}	1572464535	web	192.168.33.1	\N
-18	\\core\\event\\config_log_created	core	created	config_log	config_log	563	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:29:"feedback_plugin_for_gradebook";s:8:"oldvalue";N;s:5:"value";s:23:"assignfeedback_comments";s:6:"plugin";s:6:"assign";}	1572464535	web	192.168.33.1	\N
-19	\\core\\event\\config_log_created	core	created	config_log	config_log	564	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:21:"showrecentsubmissions";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:6:"assign";}	1572464535	web	192.168.33.1	\N
-20	\\core\\event\\config_log_created	core	created	config_log	config_log	565	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:18:"submissionreceipts";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:6:"assign";}	1572464535	web	192.168.33.1	\N
-21	\\core\\event\\config_log_created	core	created	config_log	config_log	566	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:19:"submissionstatement";s:8:"oldvalue";N;s:5:"value";s:102:"This assignment is my own work, except where I have acknowledged the use of the works of other people.";s:6:"plugin";s:6:"assign";}	1572464535	web	192.168.33.1	\N
-22	\\core\\event\\config_log_created	core	created	config_log	config_log	567	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:10:"maxperpage";s:8:"oldvalue";N;s:5:"value";s:2:"-1";s:6:"plugin";s:6:"assign";}	1572464535	web	192.168.33.1	\N
-23	\\core\\event\\config_log_created	core	created	config_log	config_log	568	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:21:"alwaysshowdescription";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:6:"assign";}	1572464535	web	192.168.33.1	\N
-24	\\core\\event\\config_log_created	core	created	config_log	config_log	569	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:25:"alwaysshowdescription_adv";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:6:"assign";}	1572464535	web	192.168.33.1	\N
-25	\\core\\event\\config_log_created	core	created	config_log	config_log	570	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:28:"alwaysshowdescription_locked";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:6:"assign";}	1572464535	web	192.168.33.1	\N
-26	\\core\\event\\config_log_created	core	created	config_log	config_log	571	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:24:"allowsubmissionsfromdate";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:6:"assign";}	1572464535	web	192.168.33.1	\N
-27	\\core\\event\\config_log_created	core	created	config_log	config_log	572	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:32:"allowsubmissionsfromdate_enabled";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:6:"assign";}	1572464535	web	192.168.33.1	\N
-28	\\core\\event\\config_log_created	core	created	config_log	config_log	573	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:28:"allowsubmissionsfromdate_adv";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:6:"assign";}	1572464535	web	192.168.33.1	\N
-29	\\core\\event\\config_log_created	core	created	config_log	config_log	574	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:7:"duedate";s:8:"oldvalue";N;s:5:"value";s:6:"604800";s:6:"plugin";s:6:"assign";}	1572464535	web	192.168.33.1	\N
-30	\\core\\event\\config_log_created	core	created	config_log	config_log	575	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"duedate_enabled";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:6:"assign";}	1572464535	web	192.168.33.1	\N
-31	\\core\\event\\config_log_created	core	created	config_log	config_log	576	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:11:"duedate_adv";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:6:"assign";}	1572464535	web	192.168.33.1	\N
-32	\\core\\event\\config_log_created	core	created	config_log	config_log	577	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:10:"cutoffdate";s:8:"oldvalue";N;s:5:"value";s:7:"1209600";s:6:"plugin";s:6:"assign";}	1572464535	web	192.168.33.1	\N
-33	\\core\\event\\config_log_created	core	created	config_log	config_log	578	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:18:"cutoffdate_enabled";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:6:"assign";}	1572464535	web	192.168.33.1	\N
-34	\\core\\event\\config_log_created	core	created	config_log	config_log	579	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"cutoffdate_adv";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:6:"assign";}	1572464535	web	192.168.33.1	\N
-35	\\core\\event\\config_log_created	core	created	config_log	config_log	580	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"gradingduedate";s:8:"oldvalue";N;s:5:"value";s:7:"1209600";s:6:"plugin";s:6:"assign";}	1572464535	web	192.168.33.1	\N
-36	\\core\\event\\config_log_created	core	created	config_log	config_log	581	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:22:"gradingduedate_enabled";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:6:"assign";}	1572464535	web	192.168.33.1	\N
-37	\\core\\event\\config_log_created	core	created	config_log	config_log	582	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:18:"gradingduedate_adv";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:6:"assign";}	1572464535	web	192.168.33.1	\N
-38	\\core\\event\\config_log_created	core	created	config_log	config_log	583	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:16:"submissiondrafts";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:6:"assign";}	1572464535	web	192.168.33.1	\N
-39	\\core\\event\\config_log_created	core	created	config_log	config_log	584	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:20:"submissiondrafts_adv";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:6:"assign";}	1572464535	web	192.168.33.1	\N
-40	\\core\\event\\config_log_created	core	created	config_log	config_log	585	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:23:"submissiondrafts_locked";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:6:"assign";}	1572464535	web	192.168.33.1	\N
-41	\\core\\event\\config_log_created	core	created	config_log	config_log	586	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:26:"requiresubmissionstatement";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:6:"assign";}	1572464535	web	192.168.33.1	\N
-42	\\core\\event\\config_log_created	core	created	config_log	config_log	587	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:30:"requiresubmissionstatement_adv";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:6:"assign";}	1572464535	web	192.168.33.1	\N
-43	\\core\\event\\config_log_created	core	created	config_log	config_log	588	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:33:"requiresubmissionstatement_locked";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:6:"assign";}	1572464535	web	192.168.33.1	\N
-44	\\core\\event\\config_log_created	core	created	config_log	config_log	589	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:19:"attemptreopenmethod";s:8:"oldvalue";N;s:5:"value";s:4:"none";s:6:"plugin";s:6:"assign";}	1572464535	web	192.168.33.1	\N
-45	\\core\\event\\config_log_created	core	created	config_log	config_log	590	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:23:"attemptreopenmethod_adv";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:6:"assign";}	1572464535	web	192.168.33.1	\N
-46	\\core\\event\\config_log_created	core	created	config_log	config_log	591	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:26:"attemptreopenmethod_locked";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:6:"assign";}	1572464535	web	192.168.33.1	\N
-47	\\core\\event\\config_log_created	core	created	config_log	config_log	592	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:11:"maxattempts";s:8:"oldvalue";N;s:5:"value";s:2:"-1";s:6:"plugin";s:6:"assign";}	1572464535	web	192.168.33.1	\N
-48	\\core\\event\\config_log_created	core	created	config_log	config_log	593	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"maxattempts_adv";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:6:"assign";}	1572464535	web	192.168.33.1	\N
-49	\\core\\event\\config_log_created	core	created	config_log	config_log	594	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:18:"maxattempts_locked";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:6:"assign";}	1572464535	web	192.168.33.1	\N
-50	\\core\\event\\config_log_created	core	created	config_log	config_log	595	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"teamsubmission";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:6:"assign";}	1572464535	web	192.168.33.1	\N
-51	\\core\\event\\config_log_created	core	created	config_log	config_log	596	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:18:"teamsubmission_adv";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:6:"assign";}	1572464535	web	192.168.33.1	\N
-52	\\core\\event\\config_log_created	core	created	config_log	config_log	597	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:21:"teamsubmission_locked";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:6:"assign";}	1572464535	web	192.168.33.1	\N
-53	\\core\\event\\config_log_created	core	created	config_log	config_log	598	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:27:"preventsubmissionnotingroup";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:6:"assign";}	1572464535	web	192.168.33.1	\N
-54	\\core\\event\\config_log_created	core	created	config_log	config_log	599	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:31:"preventsubmissionnotingroup_adv";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:6:"assign";}	1572464535	web	192.168.33.1	\N
-55	\\core\\event\\config_log_created	core	created	config_log	config_log	600	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:34:"preventsubmissionnotingroup_locked";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:6:"assign";}	1572464535	web	192.168.33.1	\N
-56	\\core\\event\\config_log_created	core	created	config_log	config_log	601	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:27:"requireallteammemberssubmit";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:6:"assign";}	1572464535	web	192.168.33.1	\N
-57	\\core\\event\\config_log_created	core	created	config_log	config_log	602	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:31:"requireallteammemberssubmit_adv";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:6:"assign";}	1572464535	web	192.168.33.1	\N
-58	\\core\\event\\config_log_created	core	created	config_log	config_log	603	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:34:"requireallteammemberssubmit_locked";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:6:"assign";}	1572464535	web	192.168.33.1	\N
-59	\\core\\event\\config_log_created	core	created	config_log	config_log	604	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:24:"teamsubmissiongroupingid";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:6:"assign";}	1572464535	web	192.168.33.1	\N
-60	\\core\\event\\config_log_created	core	created	config_log	config_log	605	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:28:"teamsubmissiongroupingid_adv";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:6:"assign";}	1572464535	web	192.168.33.1	\N
-61	\\core\\event\\config_log_created	core	created	config_log	config_log	606	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"sendnotifications";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:6:"assign";}	1572464535	web	192.168.33.1	\N
-62	\\core\\event\\config_log_created	core	created	config_log	config_log	607	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:21:"sendnotifications_adv";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:6:"assign";}	1572464535	web	192.168.33.1	\N
-63	\\core\\event\\config_log_created	core	created	config_log	config_log	608	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:24:"sendnotifications_locked";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:6:"assign";}	1572464535	web	192.168.33.1	\N
-64	\\core\\event\\config_log_created	core	created	config_log	config_log	609	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:21:"sendlatenotifications";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:6:"assign";}	1572464535	web	192.168.33.1	\N
-65	\\core\\event\\config_log_created	core	created	config_log	config_log	610	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:25:"sendlatenotifications_adv";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:6:"assign";}	1572464535	web	192.168.33.1	\N
-66	\\core\\event\\config_log_created	core	created	config_log	config_log	611	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:28:"sendlatenotifications_locked";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:6:"assign";}	1572464535	web	192.168.33.1	\N
-67	\\core\\event\\config_log_created	core	created	config_log	config_log	612	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:24:"sendstudentnotifications";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:6:"assign";}	1572464535	web	192.168.33.1	\N
-68	\\core\\event\\config_log_created	core	created	config_log	config_log	613	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:28:"sendstudentnotifications_adv";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:6:"assign";}	1572464535	web	192.168.33.1	\N
-69	\\core\\event\\config_log_created	core	created	config_log	config_log	614	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:31:"sendstudentnotifications_locked";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:6:"assign";}	1572464535	web	192.168.33.1	\N
-70	\\core\\event\\config_log_created	core	created	config_log	config_log	615	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:12:"blindmarking";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:6:"assign";}	1572464535	web	192.168.33.1	\N
-71	\\core\\event\\config_log_created	core	created	config_log	config_log	616	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:16:"blindmarking_adv";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:6:"assign";}	1572464535	web	192.168.33.1	\N
-72	\\core\\event\\config_log_created	core	created	config_log	config_log	617	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:19:"blindmarking_locked";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:6:"assign";}	1572464535	web	192.168.33.1	\N
-73	\\core\\event\\config_log_created	core	created	config_log	config_log	618	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"markingworkflow";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:6:"assign";}	1572464535	web	192.168.33.1	\N
-74	\\core\\event\\config_log_created	core	created	config_log	config_log	619	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:19:"markingworkflow_adv";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:6:"assign";}	1572464535	web	192.168.33.1	\N
-75	\\core\\event\\config_log_created	core	created	config_log	config_log	620	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:22:"markingworkflow_locked";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:6:"assign";}	1572464535	web	192.168.33.1	\N
-76	\\core\\event\\config_log_created	core	created	config_log	config_log	621	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"markingallocation";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:6:"assign";}	1572464535	web	192.168.33.1	\N
-77	\\core\\event\\config_log_created	core	created	config_log	config_log	622	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:21:"markingallocation_adv";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:6:"assign";}	1572464535	web	192.168.33.1	\N
-78	\\core\\event\\config_log_created	core	created	config_log	config_log	623	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:24:"markingallocation_locked";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:6:"assign";}	1572464535	web	192.168.33.1	\N
-79	\\core\\event\\config_log_created	core	created	config_log	config_log	624	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:7:"default";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:21:"assignsubmission_file";}	1572464535	web	192.168.33.1	\N
-80	\\core\\event\\config_log_created	core	created	config_log	config_log	625	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:8:"maxfiles";s:8:"oldvalue";N;s:5:"value";s:2:"20";s:6:"plugin";s:21:"assignsubmission_file";}	1572464535	web	192.168.33.1	\N
-81	\\core\\event\\config_log_created	core	created	config_log	config_log	626	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:9:"filetypes";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:21:"assignsubmission_file";}	1572464535	web	192.168.33.1	\N
-82	\\core\\event\\config_log_created	core	created	config_log	config_log	627	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:8:"maxbytes";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:21:"assignsubmission_file";}	1572464535	web	192.168.33.1	\N
-83	\\core\\event\\config_log_created	core	created	config_log	config_log	628	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:7:"default";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:27:"assignsubmission_onlinetext";}	1572464535	web	192.168.33.1	\N
-84	\\core\\event\\config_log_created	core	created	config_log	config_log	629	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:7:"default";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:23:"assignfeedback_comments";}	1572464535	web	192.168.33.1	\N
-85	\\core\\event\\config_log_created	core	created	config_log	config_log	630	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:6:"inline";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:23:"assignfeedback_comments";}	1572464535	web	192.168.33.1	\N
-86	\\core\\event\\config_log_created	core	created	config_log	config_log	631	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:10:"inline_adv";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:23:"assignfeedback_comments";}	1572464535	web	192.168.33.1	\N
-87	\\core\\event\\config_log_created	core	created	config_log	config_log	632	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:13:"inline_locked";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:23:"assignfeedback_comments";}	1572464535	web	192.168.33.1	\N
-88	\\core\\event\\config_log_created	core	created	config_log	config_log	633	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:7:"default";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:22:"assignfeedback_editpdf";}	1572464535	web	192.168.33.1	\N
-89	\\core\\event\\config_log_created	core	created	config_log	config_log	634	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:6:"stamps";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:22:"assignfeedback_editpdf";}	1572464535	web	192.168.33.1	\N
-90	\\core\\event\\config_log_created	core	created	config_log	config_log	635	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:7:"default";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:19:"assignfeedback_file";}	1572464535	web	192.168.33.1	\N
-91	\\core\\event\\config_log_created	core	created	config_log	config_log	636	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:7:"default";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:22:"assignfeedback_offline";}	1572464535	web	192.168.33.1	\N
-92	\\core\\event\\config_log_created	core	created	config_log	config_log	637	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:16:"numberingoptions";s:8:"oldvalue";N;s:5:"value";s:7:"0,1,2,3";s:6:"plugin";s:4:"book";}	1572464535	web	192.168.33.1	\N
-93	\\core\\event\\config_log_created	core	created	config_log	config_log	638	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:10:"navoptions";s:8:"oldvalue";N;s:5:"value";s:5:"0,1,2";s:6:"plugin";s:4:"book";}	1572464535	web	192.168.33.1	\N
-94	\\core\\event\\config_log_created	core	created	config_log	config_log	639	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:9:"numbering";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:4:"book";}	1572464535	web	192.168.33.1	\N
-95	\\core\\event\\config_log_created	core	created	config_log	config_log	640	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:8:"navstyle";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:4:"book";}	1572464535	web	192.168.33.1	\N
-96	\\core\\event\\config_log_created	core	created	config_log	config_log	641	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:11:"chat_method";s:8:"oldvalue";N;s:5:"value";s:4:"ajax";s:6:"plugin";N;}	1572464535	web	192.168.33.1	\N
-97	\\core\\event\\config_log_created	core	created	config_log	config_log	642	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:21:"chat_refresh_userlist";s:8:"oldvalue";N;s:5:"value";s:2:"10";s:6:"plugin";N;}	1572464535	web	192.168.33.1	\N
-98	\\core\\event\\config_log_created	core	created	config_log	config_log	643	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:13:"chat_old_ping";s:8:"oldvalue";N;s:5:"value";s:2:"35";s:6:"plugin";N;}	1572464535	web	192.168.33.1	\N
-99	\\core\\event\\config_log_created	core	created	config_log	config_log	644	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"chat_refresh_room";s:8:"oldvalue";N;s:5:"value";s:1:"5";s:6:"plugin";N;}	1572464535	web	192.168.33.1	\N
-100	\\core\\event\\config_log_created	core	created	config_log	config_log	645	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:22:"chat_normal_updatemode";s:8:"oldvalue";N;s:5:"value";s:8:"jsupdate";s:6:"plugin";N;}	1572464535	web	192.168.33.1	\N
-101	\\core\\event\\config_log_created	core	created	config_log	config_log	646	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"chat_serverhost";s:8:"oldvalue";N;s:5:"value";s:22:"agora-virtual.xtec.cat";s:6:"plugin";N;}	1572464535	web	192.168.33.1	\N
-102	\\core\\event\\config_log_created	core	created	config_log	config_log	647	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:13:"chat_serverip";s:8:"oldvalue";N;s:5:"value";s:9:"127.0.0.1";s:6:"plugin";N;}	1572464535	web	192.168.33.1	\N
-103	\\core\\event\\config_log_created	core	created	config_log	config_log	648	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"chat_serverport";s:8:"oldvalue";N;s:5:"value";s:4:"9111";s:6:"plugin";N;}	1572464535	web	192.168.33.1	\N
-104	\\core\\event\\config_log_created	core	created	config_log	config_log	649	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"chat_servermax";s:8:"oldvalue";N;s:5:"value";s:3:"100";s:6:"plugin";N;}	1572464535	web	192.168.33.1	\N
-105	\\core\\event\\config_log_created	core	created	config_log	config_log	650	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:19:"data_enablerssfeeds";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";N;}	1572464535	web	192.168.33.1	\N
-106	\\core\\event\\config_log_created	core	created	config_log	config_log	651	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:27:"feedback_allowfullanonymous";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";N;}	1572464535	web	192.168.33.1	\N
-107	\\core\\event\\config_log_created	core	created	config_log	config_log	652	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:9:"framesize";s:8:"oldvalue";N;s:5:"value";s:3:"130";s:6:"plugin";s:8:"resource";}	1572464535	web	192.168.33.1	\N
-108	\\core\\event\\config_log_created	core	created	config_log	config_log	653	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"displayoptions";s:8:"oldvalue";N;s:5:"value";s:9:"0,1,4,5,6";s:6:"plugin";s:8:"resource";}	1572464535	web	192.168.33.1	\N
-109	\\core\\event\\config_log_created	core	created	config_log	config_log	654	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:10:"printintro";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:8:"resource";}	1572464535	web	192.168.33.1	\N
-110	\\core\\event\\config_log_created	core	created	config_log	config_log	655	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:7:"display";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:8:"resource";}	1572464535	web	192.168.33.1	\N
-111	\\core\\event\\config_log_created	core	created	config_log	config_log	656	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:8:"showsize";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:8:"resource";}	1572464535	web	192.168.33.1	\N
-112	\\core\\event\\config_log_created	core	created	config_log	config_log	657	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:8:"showtype";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:8:"resource";}	1572464535	web	192.168.33.1	\N
-113	\\core\\event\\config_log_created	core	created	config_log	config_log	658	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:8:"showdate";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:8:"resource";}	1572464535	web	192.168.33.1	\N
-114	\\core\\event\\config_log_created	core	created	config_log	config_log	659	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:10:"popupwidth";s:8:"oldvalue";N;s:5:"value";s:3:"620";s:6:"plugin";s:8:"resource";}	1572464535	web	192.168.33.1	\N
-115	\\core\\event\\config_log_created	core	created	config_log	config_log	660	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:11:"popupheight";s:8:"oldvalue";N;s:5:"value";s:3:"450";s:6:"plugin";s:8:"resource";}	1572464535	web	192.168.33.1	\N
-116	\\core\\event\\config_log_created	core	created	config_log	config_log	661	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:11:"filterfiles";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:8:"resource";}	1572464535	web	192.168.33.1	\N
-117	\\core\\event\\config_log_created	core	created	config_log	config_log	662	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:12:"showexpanded";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:6:"folder";}	1572464535	web	192.168.33.1	\N
-118	\\core\\event\\config_log_created	core	created	config_log	config_log	663	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"maxsizetodownload";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:6:"folder";}	1572464535	web	192.168.33.1	\N
-119	\\core\\event\\config_log_created	core	created	config_log	config_log	664	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"forum_displaymode";s:8:"oldvalue";N;s:5:"value";s:1:"3";s:6:"plugin";N;}	1572464535	web	192.168.33.1	\N
-120	\\core\\event\\config_log_created	core	created	config_log	config_log	665	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"forum_shortpost";s:8:"oldvalue";N;s:5:"value";s:3:"300";s:6:"plugin";N;}	1572464535	web	192.168.33.1	\N
-121	\\core\\event\\config_log_created	core	created	config_log	config_log	666	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"forum_longpost";s:8:"oldvalue";N;s:5:"value";s:3:"600";s:6:"plugin";N;}	1572464535	web	192.168.33.1	\N
-122	\\core\\event\\config_log_created	core	created	config_log	config_log	667	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:21:"forum_manydiscussions";s:8:"oldvalue";N;s:5:"value";s:3:"100";s:6:"plugin";N;}	1572464535	web	192.168.33.1	\N
-123	\\core\\event\\config_log_created	core	created	config_log	config_log	668	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"forum_maxbytes";s:8:"oldvalue";N;s:5:"value";s:6:"512000";s:6:"plugin";N;}	1572464535	web	192.168.33.1	\N
-124	\\core\\event\\config_log_created	core	created	config_log	config_log	669	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:20:"forum_maxattachments";s:8:"oldvalue";N;s:5:"value";s:1:"9";s:6:"plugin";N;}	1572464535	web	192.168.33.1	\N
-125	\\core\\event\\config_log_created	core	created	config_log	config_log	670	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:18:"forum_subscription";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";N;}	1572464535	web	192.168.33.1	\N
-126	\\core\\event\\config_log_created	core	created	config_log	config_log	671	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:18:"forum_trackingtype";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";N;}	1572464535	web	192.168.33.1	\N
-127	\\core\\event\\config_log_created	core	created	config_log	config_log	672	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:20:"forum_trackreadposts";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";N;}	1572464535	web	192.168.33.1	\N
-128	\\core\\event\\config_log_created	core	created	config_log	config_log	673	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:29:"forum_allowforcedreadtracking";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";N;}	1572464535	web	192.168.33.1	\N
-129	\\core\\event\\config_log_created	core	created	config_log	config_log	674	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"forum_oldpostdays";s:8:"oldvalue";N;s:5:"value";s:2:"14";s:6:"plugin";N;}	1572464535	web	192.168.33.1	\N
-130	\\core\\event\\config_log_created	core	created	config_log	config_log	675	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:19:"forum_usermarksread";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";N;}	1572464535	web	192.168.33.1	\N
-131	\\core\\event\\config_log_created	core	created	config_log	config_log	676	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:19:"forum_cleanreadtime";s:8:"oldvalue";N;s:5:"value";s:1:"2";s:6:"plugin";N;}	1572464535	web	192.168.33.1	\N
-132	\\core\\event\\config_log_created	core	created	config_log	config_log	677	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"digestmailtime";s:8:"oldvalue";N;s:5:"value";s:2:"17";s:6:"plugin";N;}	1572464535	web	192.168.33.1	\N
-133	\\core\\event\\config_log_created	core	created	config_log	config_log	678	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:20:"forum_enablerssfeeds";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";N;}	1572464535	web	192.168.33.1	\N
-134	\\core\\event\\config_log_created	core	created	config_log	config_log	679	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:22:"forum_enabletimedposts";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";N;}	1572464535	web	192.168.33.1	\N
-135	\\core\\event\\config_log_created	core	created	config_log	config_log	680	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:18:"glossary_entbypage";s:8:"oldvalue";N;s:5:"value";s:2:"10";s:6:"plugin";N;}	1572464535	web	192.168.33.1	\N
-136	\\core\\event\\config_log_created	core	created	config_log	config_log	681	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:19:"glossary_dupentries";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";N;}	1572464535	web	192.168.33.1	\N
-137	\\core\\event\\config_log_created	core	created	config_log	config_log	682	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:22:"glossary_allowcomments";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";N;}	1572464535	web	192.168.33.1	\N
-138	\\core\\event\\config_log_created	core	created	config_log	config_log	683	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:22:"glossary_linkbydefault";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";N;}	1572464535	web	192.168.33.1	\N
-139	\\core\\event\\config_log_created	core	created	config_log	config_log	684	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:24:"glossary_defaultapproval";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";N;}	1572464535	web	192.168.33.1	\N
-140	\\core\\event\\config_log_created	core	created	config_log	config_log	685	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:23:"glossary_enablerssfeeds";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";N;}	1572464535	web	192.168.33.1	\N
-141	\\core\\event\\config_log_created	core	created	config_log	config_log	686	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:20:"glossary_linkentries";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";N;}	1572464535	web	192.168.33.1	\N
-142	\\core\\event\\config_log_created	core	created	config_log	config_log	687	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:22:"glossary_casesensitive";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";N;}	1572464535	web	192.168.33.1	\N
-143	\\core\\event\\config_log_created	core	created	config_log	config_log	688	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:18:"glossary_fullmatch";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";N;}	1572464535	web	192.168.33.1	\N
-144	\\core\\event\\config_log_created	core	created	config_log	config_log	689	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:7:"keepold";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:5:"imscp";}	1572464535	web	192.168.33.1	\N
-145	\\core\\event\\config_log_created	core	created	config_log	config_log	690	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:11:"keepold_adv";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:5:"imscp";}	1572464535	web	192.168.33.1	\N
-146	\\core\\event\\config_log_created	core	created	config_log	config_log	691	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:8:"dndmedia";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:5:"label";}	1572464535	web	192.168.33.1	\N
-147	\\core\\event\\config_log_created	core	created	config_log	config_log	692	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"dndresizewidth";s:8:"oldvalue";N;s:5:"value";s:3:"400";s:6:"plugin";s:5:"label";}	1572464535	web	192.168.33.1	\N
-148	\\core\\event\\config_log_created	core	created	config_log	config_log	693	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"dndresizeheight";s:8:"oldvalue";N;s:5:"value";s:3:"400";s:6:"plugin";s:5:"label";}	1572464535	web	192.168.33.1	\N
-149	\\core\\event\\config_log_created	core	created	config_log	config_log	694	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:9:"mediafile";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:10:"mod_lesson";}	1572464535	web	192.168.33.1	\N
-150	\\core\\event\\config_log_created	core	created	config_log	config_log	695	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:13:"mediafile_adv";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:10:"mod_lesson";}	1572464535	web	192.168.33.1	\N
-151	\\core\\event\\config_log_created	core	created	config_log	config_log	696	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:10:"mediawidth";s:8:"oldvalue";N;s:5:"value";s:3:"640";s:6:"plugin";s:10:"mod_lesson";}	1572464536	web	192.168.33.1	\N
-152	\\core\\event\\config_log_created	core	created	config_log	config_log	697	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:11:"mediaheight";s:8:"oldvalue";N;s:5:"value";s:3:"480";s:6:"plugin";s:10:"mod_lesson";}	1572464536	web	192.168.33.1	\N
-153	\\core\\event\\config_log_created	core	created	config_log	config_log	698	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:10:"mediaclose";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:10:"mod_lesson";}	1572464536	web	192.168.33.1	\N
-154	\\core\\event\\config_log_created	core	created	config_log	config_log	699	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:11:"progressbar";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:10:"mod_lesson";}	1572464536	web	192.168.33.1	\N
-155	\\core\\event\\config_log_created	core	created	config_log	config_log	700	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"progressbar_adv";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:10:"mod_lesson";}	1572464536	web	192.168.33.1	\N
-156	\\core\\event\\config_log_created	core	created	config_log	config_log	701	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:7:"ongoing";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:10:"mod_lesson";}	1572464536	web	192.168.33.1	\N
-157	\\core\\event\\config_log_created	core	created	config_log	config_log	702	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:11:"ongoing_adv";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:10:"mod_lesson";}	1572464536	web	192.168.33.1	\N
-158	\\core\\event\\config_log_created	core	created	config_log	config_log	703	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"displayleftmenu";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:10:"mod_lesson";}	1572464536	web	192.168.33.1	\N
-159	\\core\\event\\config_log_created	core	created	config_log	config_log	704	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:19:"displayleftmenu_adv";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:10:"mod_lesson";}	1572464536	web	192.168.33.1	\N
-160	\\core\\event\\config_log_created	core	created	config_log	config_log	705	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:13:"displayleftif";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:10:"mod_lesson";}	1572464536	web	192.168.33.1	\N
-161	\\core\\event\\config_log_created	core	created	config_log	config_log	706	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"displayleftif_adv";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:10:"mod_lesson";}	1572464536	web	192.168.33.1	\N
-162	\\core\\event\\config_log_created	core	created	config_log	config_log	707	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:9:"slideshow";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:10:"mod_lesson";}	1572464536	web	192.168.33.1	\N
-163	\\core\\event\\config_log_created	core	created	config_log	config_log	708	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:13:"slideshow_adv";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:10:"mod_lesson";}	1572464536	web	192.168.33.1	\N
-164	\\core\\event\\config_log_created	core	created	config_log	config_log	709	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"slideshowwidth";s:8:"oldvalue";N;s:5:"value";s:3:"640";s:6:"plugin";s:10:"mod_lesson";}	1572464536	web	192.168.33.1	\N
-165	\\core\\event\\config_log_created	core	created	config_log	config_log	710	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"slideshowheight";s:8:"oldvalue";N;s:5:"value";s:3:"480";s:6:"plugin";s:10:"mod_lesson";}	1572464536	web	192.168.33.1	\N
-166	\\core\\event\\config_log_created	core	created	config_log	config_log	711	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:16:"slideshowbgcolor";s:8:"oldvalue";N;s:5:"value";s:7:"#FFFFFF";s:6:"plugin";s:10:"mod_lesson";}	1572464536	web	192.168.33.1	\N
-167	\\core\\event\\config_log_created	core	created	config_log	config_log	712	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:10:"maxanswers";s:8:"oldvalue";N;s:5:"value";s:1:"5";s:6:"plugin";s:10:"mod_lesson";}	1572464536	web	192.168.33.1	\N
-168	\\core\\event\\config_log_created	core	created	config_log	config_log	713	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"maxanswers_adv";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:10:"mod_lesson";}	1572464536	web	192.168.33.1	\N
-169	\\core\\event\\config_log_created	core	created	config_log	config_log	714	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"defaultfeedback";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:10:"mod_lesson";}	1572464536	web	192.168.33.1	\N
-170	\\core\\event\\config_log_created	core	created	config_log	config_log	715	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:19:"defaultfeedback_adv";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:10:"mod_lesson";}	1572464536	web	192.168.33.1	\N
-171	\\core\\event\\config_log_created	core	created	config_log	config_log	716	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:12:"activitylink";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:10:"mod_lesson";}	1572464536	web	192.168.33.1	\N
-172	\\core\\event\\config_log_created	core	created	config_log	config_log	717	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:16:"activitylink_adv";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:10:"mod_lesson";}	1572464536	web	192.168.33.1	\N
-173	\\core\\event\\config_log_created	core	created	config_log	config_log	718	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:9:"timelimit";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:10:"mod_lesson";}	1572464536	web	192.168.33.1	\N
-174	\\core\\event\\config_log_created	core	created	config_log	config_log	719	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:13:"timelimit_adv";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:10:"mod_lesson";}	1572464536	web	192.168.33.1	\N
-175	\\core\\event\\config_log_created	core	created	config_log	config_log	720	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:8:"password";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:10:"mod_lesson";}	1572464536	web	192.168.33.1	\N
-176	\\core\\event\\config_log_created	core	created	config_log	config_log	721	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:12:"password_adv";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:10:"mod_lesson";}	1572464536	web	192.168.33.1	\N
-177	\\core\\event\\config_log_created	core	created	config_log	config_log	722	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:11:"modattempts";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:10:"mod_lesson";}	1572464536	web	192.168.33.1	\N
-178	\\core\\event\\config_log_created	core	created	config_log	config_log	723	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"modattempts_adv";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:10:"mod_lesson";}	1572464536	web	192.168.33.1	\N
-179	\\core\\event\\config_log_created	core	created	config_log	config_log	724	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:13:"displayreview";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:10:"mod_lesson";}	1572464536	web	192.168.33.1	\N
-180	\\core\\event\\config_log_created	core	created	config_log	config_log	725	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"displayreview_adv";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:10:"mod_lesson";}	1572464536	web	192.168.33.1	\N
-181	\\core\\event\\config_log_created	core	created	config_log	config_log	726	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:23:"maximumnumberofattempts";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:10:"mod_lesson";}	1572464536	web	192.168.33.1	\N
-182	\\core\\event\\config_log_created	core	created	config_log	config_log	727	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:27:"maximumnumberofattempts_adv";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:10:"mod_lesson";}	1572464536	web	192.168.33.1	\N
-183	\\core\\event\\config_log_created	core	created	config_log	config_log	728	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"defaultnextpage";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:10:"mod_lesson";}	1572464536	web	192.168.33.1	\N
-184	\\core\\event\\config_log_created	core	created	config_log	config_log	729	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:19:"defaultnextpage_adv";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:10:"mod_lesson";}	1572464536	web	192.168.33.1	\N
-185	\\core\\event\\config_log_created	core	created	config_log	config_log	730	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:19:"numberofpagestoshow";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:10:"mod_lesson";}	1572464536	web	192.168.33.1	\N
-186	\\core\\event\\config_log_created	core	created	config_log	config_log	731	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:23:"numberofpagestoshow_adv";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:10:"mod_lesson";}	1572464536	web	192.168.33.1	\N
-187	\\core\\event\\config_log_created	core	created	config_log	config_log	732	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:8:"practice";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:10:"mod_lesson";}	1572464536	web	192.168.33.1	\N
-188	\\core\\event\\config_log_created	core	created	config_log	config_log	733	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:12:"practice_adv";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:10:"mod_lesson";}	1572464536	web	192.168.33.1	\N
-189	\\core\\event\\config_log_created	core	created	config_log	config_log	734	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:13:"customscoring";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:10:"mod_lesson";}	1572464536	web	192.168.33.1	\N
-190	\\core\\event\\config_log_created	core	created	config_log	config_log	735	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"customscoring_adv";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:10:"mod_lesson";}	1572464536	web	192.168.33.1	\N
-191	\\core\\event\\config_log_created	core	created	config_log	config_log	736	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"retakesallowed";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:10:"mod_lesson";}	1572464536	web	192.168.33.1	\N
-192	\\core\\event\\config_log_created	core	created	config_log	config_log	737	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:18:"retakesallowed_adv";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:10:"mod_lesson";}	1572464536	web	192.168.33.1	\N
-193	\\core\\event\\config_log_created	core	created	config_log	config_log	738	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"handlingofretakes";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:10:"mod_lesson";}	1572464536	web	192.168.33.1	\N
-194	\\core\\event\\config_log_created	core	created	config_log	config_log	739	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:21:"handlingofretakes_adv";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:10:"mod_lesson";}	1572464536	web	192.168.33.1	\N
-195	\\core\\event\\config_log_created	core	created	config_log	config_log	740	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:24:"minimumnumberofquestions";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:10:"mod_lesson";}	1572464536	web	192.168.33.1	\N
-196	\\core\\event\\config_log_created	core	created	config_log	config_log	741	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:28:"minimumnumberofquestions_adv";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:10:"mod_lesson";}	1572464536	web	192.168.33.1	\N
-197	\\core\\event\\config_log_created	core	created	config_log	config_log	742	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"displayoptions";s:8:"oldvalue";N;s:5:"value";s:1:"5";s:6:"plugin";s:4:"page";}	1572464536	web	192.168.33.1	\N
-198	\\core\\event\\config_log_created	core	created	config_log	config_log	743	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:12:"printheading";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:4:"page";}	1572464536	web	192.168.33.1	\N
-199	\\core\\event\\config_log_created	core	created	config_log	config_log	744	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:10:"printintro";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:4:"page";}	1572464536	web	192.168.33.1	\N
-200	\\core\\event\\config_log_created	core	created	config_log	config_log	745	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"printlastmodified";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:4:"page";}	1572464536	web	192.168.33.1	\N
-201	\\core\\event\\config_log_created	core	created	config_log	config_log	746	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:7:"display";s:8:"oldvalue";N;s:5:"value";s:1:"5";s:6:"plugin";s:4:"page";}	1572464536	web	192.168.33.1	\N
-202	\\core\\event\\config_log_created	core	created	config_log	config_log	747	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:10:"popupwidth";s:8:"oldvalue";N;s:5:"value";s:3:"620";s:6:"plugin";s:4:"page";}	1572464536	web	192.168.33.1	\N
-203	\\core\\event\\config_log_created	core	created	config_log	config_log	748	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:11:"popupheight";s:8:"oldvalue";N;s:5:"value";s:3:"450";s:6:"plugin";s:4:"page";}	1572464536	web	192.168.33.1	\N
-204	\\core\\event\\config_log_created	core	created	config_log	config_log	749	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:9:"timelimit";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:4:"quiz";}	1572464536	web	192.168.33.1	\N
-205	\\core\\event\\config_log_created	core	created	config_log	config_log	750	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:13:"timelimit_adv";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:4:"quiz";}	1572464536	web	192.168.33.1	\N
-206	\\core\\event\\config_log_created	core	created	config_log	config_log	751	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"overduehandling";s:8:"oldvalue";N;s:5:"value";s:10:"autosubmit";s:6:"plugin";s:4:"quiz";}	1572464536	web	192.168.33.1	\N
-207	\\core\\event\\config_log_created	core	created	config_log	config_log	752	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:19:"overduehandling_adv";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:4:"quiz";}	1572464536	web	192.168.33.1	\N
-208	\\core\\event\\config_log_created	core	created	config_log	config_log	753	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:11:"graceperiod";s:8:"oldvalue";N;s:5:"value";s:5:"86400";s:6:"plugin";s:4:"quiz";}	1572464536	web	192.168.33.1	\N
-209	\\core\\event\\config_log_created	core	created	config_log	config_log	754	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"graceperiod_adv";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:4:"quiz";}	1572464536	web	192.168.33.1	\N
-210	\\core\\event\\config_log_created	core	created	config_log	config_log	755	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"graceperiodmin";s:8:"oldvalue";N;s:5:"value";s:2:"60";s:6:"plugin";s:4:"quiz";}	1572464536	web	192.168.33.1	\N
-211	\\core\\event\\config_log_created	core	created	config_log	config_log	756	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:8:"attempts";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:4:"quiz";}	1572464536	web	192.168.33.1	\N
-212	\\core\\event\\config_log_created	core	created	config_log	config_log	757	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:12:"attempts_adv";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:4:"quiz";}	1572464536	web	192.168.33.1	\N
-213	\\core\\event\\config_log_created	core	created	config_log	config_log	758	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:11:"grademethod";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:4:"quiz";}	1572464536	web	192.168.33.1	\N
-214	\\core\\event\\config_log_created	core	created	config_log	config_log	759	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"grademethod_adv";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:4:"quiz";}	1572464536	web	192.168.33.1	\N
-215	\\core\\event\\config_log_created	core	created	config_log	config_log	760	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:12:"maximumgrade";s:8:"oldvalue";N;s:5:"value";s:2:"10";s:6:"plugin";s:4:"quiz";}	1572464536	web	192.168.33.1	\N
-216	\\core\\event\\config_log_created	core	created	config_log	config_log	761	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:16:"questionsperpage";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:4:"quiz";}	1572464536	web	192.168.33.1	\N
-217	\\core\\event\\config_log_created	core	created	config_log	config_log	762	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:20:"questionsperpage_adv";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:4:"quiz";}	1572464536	web	192.168.33.1	\N
-218	\\core\\event\\config_log_created	core	created	config_log	config_log	763	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:9:"navmethod";s:8:"oldvalue";N;s:5:"value";s:4:"free";s:6:"plugin";s:4:"quiz";}	1572464536	web	192.168.33.1	\N
-219	\\core\\event\\config_log_created	core	created	config_log	config_log	764	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:13:"navmethod_adv";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:4:"quiz";}	1572464536	web	192.168.33.1	\N
-220	\\core\\event\\config_log_created	core	created	config_log	config_log	765	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"shuffleanswers";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:4:"quiz";}	1572464536	web	192.168.33.1	\N
-221	\\core\\event\\config_log_created	core	created	config_log	config_log	766	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:18:"shuffleanswers_adv";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:4:"quiz";}	1572464536	web	192.168.33.1	\N
-222	\\core\\event\\config_log_created	core	created	config_log	config_log	767	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:18:"preferredbehaviour";s:8:"oldvalue";N;s:5:"value";s:16:"deferredfeedback";s:6:"plugin";s:4:"quiz";}	1572464536	web	192.168.33.1	\N
-223	\\core\\event\\config_log_created	core	created	config_log	config_log	768	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:16:"canredoquestions";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:4:"quiz";}	1572464536	web	192.168.33.1	\N
-224	\\core\\event\\config_log_created	core	created	config_log	config_log	769	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:20:"canredoquestions_adv";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:4:"quiz";}	1572464536	web	192.168.33.1	\N
-225	\\core\\event\\config_log_created	core	created	config_log	config_log	770	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:13:"attemptonlast";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:4:"quiz";}	1572464536	web	192.168.33.1	\N
-226	\\core\\event\\config_log_created	core	created	config_log	config_log	771	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"attemptonlast_adv";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:4:"quiz";}	1572464536	web	192.168.33.1	\N
-227	\\core\\event\\config_log_created	core	created	config_log	config_log	772	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:13:"reviewattempt";s:8:"oldvalue";N;s:5:"value";s:5:"69904";s:6:"plugin";s:4:"quiz";}	1572464536	web	192.168.33.1	\N
-228	\\core\\event\\config_log_created	core	created	config_log	config_log	773	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"reviewcorrectness";s:8:"oldvalue";N;s:5:"value";s:5:"69904";s:6:"plugin";s:4:"quiz";}	1572464536	web	192.168.33.1	\N
-229	\\core\\event\\config_log_created	core	created	config_log	config_log	774	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:11:"reviewmarks";s:8:"oldvalue";N;s:5:"value";s:5:"69904";s:6:"plugin";s:4:"quiz";}	1572464536	web	192.168.33.1	\N
-230	\\core\\event\\config_log_created	core	created	config_log	config_log	775	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:22:"reviewspecificfeedback";s:8:"oldvalue";N;s:5:"value";s:5:"69904";s:6:"plugin";s:4:"quiz";}	1572464536	web	192.168.33.1	\N
-231	\\core\\event\\config_log_created	core	created	config_log	config_log	776	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:21:"reviewgeneralfeedback";s:8:"oldvalue";N;s:5:"value";s:5:"69904";s:6:"plugin";s:4:"quiz";}	1572464536	web	192.168.33.1	\N
-232	\\core\\event\\config_log_created	core	created	config_log	config_log	777	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"reviewrightanswer";s:8:"oldvalue";N;s:5:"value";s:5:"69904";s:6:"plugin";s:4:"quiz";}	1572464536	web	192.168.33.1	\N
-233	\\core\\event\\config_log_created	core	created	config_log	config_log	778	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:21:"reviewoverallfeedback";s:8:"oldvalue";N;s:5:"value";s:4:"4368";s:6:"plugin";s:4:"quiz";}	1572464536	web	192.168.33.1	\N
-234	\\core\\event\\config_log_created	core	created	config_log	config_log	779	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"showuserpicture";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:4:"quiz";}	1572464536	web	192.168.33.1	\N
-235	\\core\\event\\config_log_created	core	created	config_log	config_log	780	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:19:"showuserpicture_adv";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:4:"quiz";}	1572464536	web	192.168.33.1	\N
-236	\\core\\event\\config_log_created	core	created	config_log	config_log	781	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:13:"decimalpoints";s:8:"oldvalue";N;s:5:"value";s:1:"2";s:6:"plugin";s:4:"quiz";}	1572464536	web	192.168.33.1	\N
-237	\\core\\event\\config_log_created	core	created	config_log	config_log	782	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"decimalpoints_adv";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:4:"quiz";}	1572464536	web	192.168.33.1	\N
-238	\\core\\event\\config_log_created	core	created	config_log	config_log	783	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:21:"questiondecimalpoints";s:8:"oldvalue";N;s:5:"value";s:2:"-1";s:6:"plugin";s:4:"quiz";}	1572464536	web	192.168.33.1	\N
-239	\\core\\event\\config_log_created	core	created	config_log	config_log	784	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:25:"questiondecimalpoints_adv";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:4:"quiz";}	1572464536	web	192.168.33.1	\N
-240	\\core\\event\\config_log_created	core	created	config_log	config_log	785	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:10:"showblocks";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:4:"quiz";}	1572464536	web	192.168.33.1	\N
-241	\\core\\event\\config_log_created	core	created	config_log	config_log	786	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"showblocks_adv";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:4:"quiz";}	1572464536	web	192.168.33.1	\N
-242	\\core\\event\\config_log_created	core	created	config_log	config_log	787	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:8:"password";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:4:"quiz";}	1572464536	web	192.168.33.1	\N
-243	\\core\\event\\config_log_created	core	created	config_log	config_log	788	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:12:"password_adv";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:4:"quiz";}	1572464536	web	192.168.33.1	\N
-244	\\core\\event\\config_log_created	core	created	config_log	config_log	789	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:6:"subnet";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:4:"quiz";}	1572464536	web	192.168.33.1	\N
-245	\\core\\event\\config_log_created	core	created	config_log	config_log	790	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:10:"subnet_adv";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:4:"quiz";}	1572464536	web	192.168.33.1	\N
-246	\\core\\event\\config_log_created	core	created	config_log	config_log	791	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:6:"delay1";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:4:"quiz";}	1572464536	web	192.168.33.1	\N
-247	\\core\\event\\config_log_created	core	created	config_log	config_log	792	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:10:"delay1_adv";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:4:"quiz";}	1572464536	web	192.168.33.1	\N
-248	\\core\\event\\config_log_created	core	created	config_log	config_log	793	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:6:"delay2";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:4:"quiz";}	1572464536	web	192.168.33.1	\N
-249	\\core\\event\\config_log_created	core	created	config_log	config_log	794	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:10:"delay2_adv";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:4:"quiz";}	1572464536	web	192.168.33.1	\N
-250	\\core\\event\\config_log_created	core	created	config_log	config_log	795	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"browsersecurity";s:8:"oldvalue";N;s:5:"value";s:1:"-";s:6:"plugin";s:4:"quiz";}	1572464536	web	192.168.33.1	\N
-251	\\core\\event\\config_log_created	core	created	config_log	config_log	796	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:19:"browsersecurity_adv";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:4:"quiz";}	1572464536	web	192.168.33.1	\N
-252	\\core\\event\\config_log_created	core	created	config_log	config_log	797	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:19:"initialnumfeedbacks";s:8:"oldvalue";N;s:5:"value";s:1:"2";s:6:"plugin";s:4:"quiz";}	1572464536	web	192.168.33.1	\N
-253	\\core\\event\\config_log_created	core	created	config_log	config_log	798	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"autosaveperiod";s:8:"oldvalue";N;s:5:"value";s:2:"60";s:6:"plugin";s:4:"quiz";}	1572464536	web	192.168.33.1	\N
-254	\\core\\event\\config_log_created	core	created	config_log	config_log	799	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:22:"displaycoursestructure";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:5:"scorm";}	1572464536	web	192.168.33.1	\N
-255	\\core\\event\\config_log_created	core	created	config_log	config_log	800	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:26:"displaycoursestructure_adv";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:5:"scorm";}	1572464536	web	192.168.33.1	\N
-256	\\core\\event\\config_log_created	core	created	config_log	config_log	801	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:5:"popup";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:5:"scorm";}	1572464536	web	192.168.33.1	\N
-257	\\core\\event\\config_log_created	core	created	config_log	config_log	802	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:9:"popup_adv";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:5:"scorm";}	1572464536	web	192.168.33.1	\N
-258	\\core\\event\\config_log_created	core	created	config_log	config_log	803	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:19:"displayactivityname";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:5:"scorm";}	1572464536	web	192.168.33.1	\N
-259	\\core\\event\\config_log_created	core	created	config_log	config_log	804	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:10:"framewidth";s:8:"oldvalue";N;s:5:"value";s:3:"100";s:6:"plugin";s:5:"scorm";}	1572464536	web	192.168.33.1	\N
-260	\\core\\event\\config_log_created	core	created	config_log	config_log	805	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"framewidth_adv";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:5:"scorm";}	1572464536	web	192.168.33.1	\N
-261	\\core\\event\\config_log_created	core	created	config_log	config_log	806	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:11:"frameheight";s:8:"oldvalue";N;s:5:"value";s:3:"500";s:6:"plugin";s:5:"scorm";}	1572464536	web	192.168.33.1	\N
-262	\\core\\event\\config_log_created	core	created	config_log	config_log	807	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"frameheight_adv";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:5:"scorm";}	1572464536	web	192.168.33.1	\N
-263	\\core\\event\\config_log_created	core	created	config_log	config_log	808	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:13:"winoptgrp_adv";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:5:"scorm";}	1572464536	web	192.168.33.1	\N
-264	\\core\\event\\config_log_created	core	created	config_log	config_log	809	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:10:"scrollbars";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:5:"scorm";}	1572464536	web	192.168.33.1	\N
-265	\\core\\event\\config_log_created	core	created	config_log	config_log	810	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:11:"directories";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:5:"scorm";}	1572464536	web	192.168.33.1	\N
-266	\\core\\event\\config_log_created	core	created	config_log	config_log	811	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:8:"location";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:5:"scorm";}	1572464536	web	192.168.33.1	\N
-267	\\core\\event\\config_log_created	core	created	config_log	config_log	812	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:7:"menubar";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:5:"scorm";}	1572464536	web	192.168.33.1	\N
-268	\\core\\event\\config_log_created	core	created	config_log	config_log	813	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:7:"toolbar";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:5:"scorm";}	1572464536	web	192.168.33.1	\N
-269	\\core\\event\\config_log_created	core	created	config_log	config_log	814	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:6:"status";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:5:"scorm";}	1572464536	web	192.168.33.1	\N
-270	\\core\\event\\config_log_created	core	created	config_log	config_log	815	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:8:"skipview";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:5:"scorm";}	1572464536	web	192.168.33.1	\N
-271	\\core\\event\\config_log_created	core	created	config_log	config_log	816	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:12:"skipview_adv";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:5:"scorm";}	1572464536	web	192.168.33.1	\N
-272	\\core\\event\\config_log_created	core	created	config_log	config_log	817	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:10:"hidebrowse";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:5:"scorm";}	1572464536	web	192.168.33.1	\N
-273	\\core\\event\\config_log_created	core	created	config_log	config_log	818	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"hidebrowse_adv";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:5:"scorm";}	1572464536	web	192.168.33.1	\N
-274	\\core\\event\\config_log_created	core	created	config_log	config_log	819	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:7:"hidetoc";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:5:"scorm";}	1572464536	web	192.168.33.1	\N
-275	\\core\\event\\config_log_created	core	created	config_log	config_log	820	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:11:"hidetoc_adv";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:5:"scorm";}	1572464536	web	192.168.33.1	\N
-276	\\core\\event\\config_log_created	core	created	config_log	config_log	821	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:3:"nav";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:5:"scorm";}	1572464536	web	192.168.33.1	\N
-277	\\core\\event\\config_log_created	core	created	config_log	config_log	822	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:7:"nav_adv";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:5:"scorm";}	1572464536	web	192.168.33.1	\N
-278	\\core\\event\\config_log_created	core	created	config_log	config_log	823	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"navpositionleft";s:8:"oldvalue";N;s:5:"value";s:4:"-100";s:6:"plugin";s:5:"scorm";}	1572464536	web	192.168.33.1	\N
-279	\\core\\event\\config_log_created	core	created	config_log	config_log	824	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:19:"navpositionleft_adv";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:5:"scorm";}	1572464536	web	192.168.33.1	\N
-280	\\core\\event\\config_log_created	core	created	config_log	config_log	825	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"navpositiontop";s:8:"oldvalue";N;s:5:"value";s:4:"-100";s:6:"plugin";s:5:"scorm";}	1572464536	web	192.168.33.1	\N
-281	\\core\\event\\config_log_created	core	created	config_log	config_log	826	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:18:"navpositiontop_adv";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:5:"scorm";}	1572464536	web	192.168.33.1	\N
-282	\\core\\event\\config_log_created	core	created	config_log	config_log	827	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:18:"collapsetocwinsize";s:8:"oldvalue";N;s:5:"value";s:3:"767";s:6:"plugin";s:5:"scorm";}	1572464536	web	192.168.33.1	\N
-283	\\core\\event\\config_log_created	core	created	config_log	config_log	828	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:22:"collapsetocwinsize_adv";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:5:"scorm";}	1572464536	web	192.168.33.1	\N
-284	\\core\\event\\config_log_created	core	created	config_log	config_log	829	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:20:"displayattemptstatus";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:5:"scorm";}	1572464536	web	192.168.33.1	\N
-285	\\core\\event\\config_log_created	core	created	config_log	config_log	830	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:24:"displayattemptstatus_adv";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:5:"scorm";}	1572464536	web	192.168.33.1	\N
-286	\\core\\event\\config_log_created	core	created	config_log	config_log	831	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:11:"grademethod";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:5:"scorm";}	1572464536	web	192.168.33.1	\N
-287	\\core\\event\\config_log_created	core	created	config_log	config_log	832	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:8:"maxgrade";s:8:"oldvalue";N;s:5:"value";s:3:"100";s:6:"plugin";s:5:"scorm";}	1572464536	web	192.168.33.1	\N
-288	\\core\\event\\config_log_created	core	created	config_log	config_log	833	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:10:"maxattempt";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:5:"scorm";}	1572464536	web	192.168.33.1	\N
-289	\\core\\event\\config_log_created	core	created	config_log	config_log	834	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:9:"whatgrade";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:5:"scorm";}	1572464536	web	192.168.33.1	\N
-290	\\core\\event\\config_log_created	core	created	config_log	config_log	835	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"forcecompleted";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:5:"scorm";}	1572464536	web	192.168.33.1	\N
-291	\\core\\event\\config_log_created	core	created	config_log	config_log	836	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"forcenewattempt";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:5:"scorm";}	1572464536	web	192.168.33.1	\N
-292	\\core\\event\\config_log_created	core	created	config_log	config_log	837	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:10:"autocommit";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:5:"scorm";}	1572464536	web	192.168.33.1	\N
-293	\\core\\event\\config_log_created	core	created	config_log	config_log	838	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"masteryoverride";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:5:"scorm";}	1572464536	web	192.168.33.1	\N
-294	\\core\\event\\config_log_created	core	created	config_log	config_log	839	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"lastattemptlock";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:5:"scorm";}	1572464536	web	192.168.33.1	\N
-295	\\core\\event\\config_log_created	core	created	config_log	config_log	840	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:4:"auto";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:5:"scorm";}	1572464536	web	192.168.33.1	\N
-296	\\core\\event\\config_log_created	core	created	config_log	config_log	841	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:10:"updatefreq";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:5:"scorm";}	1572464536	web	192.168.33.1	\N
-297	\\core\\event\\config_log_created	core	created	config_log	config_log	842	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:13:"scormstandard";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:5:"scorm";}	1572464536	web	192.168.33.1	\N
-298	\\core\\event\\config_log_created	core	created	config_log	config_log	843	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"allowtypeexternal";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:5:"scorm";}	1572464536	web	192.168.33.1	\N
-299	\\core\\event\\config_log_created	core	created	config_log	config_log	844	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:18:"allowtypelocalsync";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:5:"scorm";}	1572464536	web	192.168.33.1	\N
-300	\\core\\event\\config_log_created	core	created	config_log	config_log	845	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:21:"allowtypeexternalaicc";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:5:"scorm";}	1572464536	web	192.168.33.1	\N
-301	\\core\\event\\config_log_created	core	created	config_log	config_log	846	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:13:"allowaicchacp";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:5:"scorm";}	1572464536	web	192.168.33.1	\N
-302	\\core\\event\\config_log_created	core	created	config_log	config_log	847	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"aicchacptimeout";s:8:"oldvalue";N;s:5:"value";s:2:"30";s:6:"plugin";s:5:"scorm";}	1572464536	web	192.168.33.1	\N
-303	\\core\\event\\config_log_created	core	created	config_log	config_log	848	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:23:"aicchacpkeepsessiondata";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:5:"scorm";}	1572464536	web	192.168.33.1	\N
-304	\\core\\event\\config_log_created	core	created	config_log	config_log	849	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:10:"aiccuserid";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:5:"scorm";}	1572464536	web	192.168.33.1	\N
-305	\\core\\event\\config_log_created	core	created	config_log	config_log	850	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"forcejavascript";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:5:"scorm";}	1572464536	web	192.168.33.1	\N
-306	\\core\\event\\config_log_created	core	created	config_log	config_log	851	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:13:"allowapidebug";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:5:"scorm";}	1572464536	web	192.168.33.1	\N
-307	\\core\\event\\config_log_created	core	created	config_log	config_log	852	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:12:"apidebugmask";s:8:"oldvalue";N;s:5:"value";s:2:".*";s:6:"plugin";s:5:"scorm";}	1572464536	web	192.168.33.1	\N
-308	\\core\\event\\config_log_created	core	created	config_log	config_log	853	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:23:"protectpackagedownloads";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:5:"scorm";}	1572464536	web	192.168.33.1	\N
-309	\\core\\event\\config_log_created	core	created	config_log	config_log	854	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:9:"framesize";s:8:"oldvalue";N;s:5:"value";s:3:"130";s:6:"plugin";s:3:"url";}	1572464536	web	192.168.33.1	\N
-310	\\core\\event\\config_log_created	core	created	config_log	config_log	855	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:12:"secretphrase";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:3:"url";}	1572464536	web	192.168.33.1	\N
-311	\\core\\event\\config_log_created	core	created	config_log	config_log	856	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:13:"rolesinparams";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:3:"url";}	1572464536	web	192.168.33.1	\N
-312	\\core\\event\\config_log_created	core	created	config_log	config_log	857	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"displayoptions";s:8:"oldvalue";N;s:5:"value";s:7:"0,1,5,6";s:6:"plugin";s:3:"url";}	1572464536	web	192.168.33.1	\N
-313	\\core\\event\\config_log_created	core	created	config_log	config_log	858	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:10:"printintro";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:3:"url";}	1572464536	web	192.168.33.1	\N
-314	\\core\\event\\config_log_created	core	created	config_log	config_log	859	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:7:"display";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:3:"url";}	1572464536	web	192.168.33.1	\N
-315	\\core\\event\\config_log_created	core	created	config_log	config_log	860	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:10:"popupwidth";s:8:"oldvalue";N;s:5:"value";s:3:"620";s:6:"plugin";s:3:"url";}	1572464536	web	192.168.33.1	\N
-316	\\core\\event\\config_log_created	core	created	config_log	config_log	861	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:11:"popupheight";s:8:"oldvalue";N;s:5:"value";s:3:"450";s:6:"plugin";s:3:"url";}	1572464536	web	192.168.33.1	\N
-317	\\core\\event\\config_log_created	core	created	config_log	config_log	862	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:5:"grade";s:8:"oldvalue";N;s:5:"value";s:2:"80";s:6:"plugin";s:8:"workshop";}	1572464536	web	192.168.33.1	\N
-318	\\core\\event\\config_log_created	core	created	config_log	config_log	863	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:12:"gradinggrade";s:8:"oldvalue";N;s:5:"value";s:2:"20";s:6:"plugin";s:8:"workshop";}	1572464536	web	192.168.33.1	\N
-319	\\core\\event\\config_log_created	core	created	config_log	config_log	864	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:13:"gradedecimals";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:8:"workshop";}	1572464536	web	192.168.33.1	\N
-320	\\core\\event\\config_log_created	core	created	config_log	config_log	865	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:8:"maxbytes";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:8:"workshop";}	1572464536	web	192.168.33.1	\N
-321	\\core\\event\\config_log_created	core	created	config_log	config_log	866	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:8:"strategy";s:8:"oldvalue";N;s:5:"value";s:12:"accumulative";s:6:"plugin";s:8:"workshop";}	1572464536	web	192.168.33.1	\N
-322	\\core\\event\\config_log_created	core	created	config_log	config_log	867	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:12:"examplesmode";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:8:"workshop";}	1572464536	web	192.168.33.1	\N
-323	\\core\\event\\config_log_created	core	created	config_log	config_log	868	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:12:"numofreviews";s:8:"oldvalue";N;s:5:"value";s:1:"5";s:6:"plugin";s:25:"workshopallocation_random";}	1572464536	web	192.168.33.1	\N
-324	\\core\\event\\config_log_created	core	created	config_log	config_log	869	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:6:"grade0";s:8:"oldvalue";N;s:5:"value";s:2:"No";s:6:"plugin";s:22:"workshopform_numerrors";}	1572464536	web	192.168.33.1	\N
-325	\\core\\event\\config_log_created	core	created	config_log	config_log	870	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:6:"grade1";s:8:"oldvalue";N;s:5:"value";s:3:"Yes";s:6:"plugin";s:22:"workshopform_numerrors";}	1572464536	web	192.168.33.1	\N
-326	\\core\\event\\config_log_created	core	created	config_log	config_log	871	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:10:"comparison";s:8:"oldvalue";N;s:5:"value";s:1:"5";s:6:"plugin";s:17:"workshopeval_best";}	1572464536	web	192.168.33.1	\N
-327	\\core\\event\\config_log_created	core	created	config_log	config_log	872	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"coursebinenable";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:15:"tool_recyclebin";}	1572464536	web	192.168.33.1	\N
-328	\\core\\event\\config_log_created	core	created	config_log	config_log	873	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"coursebinexpiry";s:8:"oldvalue";N;s:5:"value";s:6:"604800";s:6:"plugin";s:15:"tool_recyclebin";}	1572464536	web	192.168.33.1	\N
-329	\\core\\event\\config_log_created	core	created	config_log	config_log	874	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"categorybinenable";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:15:"tool_recyclebin";}	1572464536	web	192.168.33.1	\N
-330	\\core\\event\\config_log_created	core	created	config_log	config_log	875	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"categorybinexpiry";s:8:"oldvalue";N;s:5:"value";s:6:"604800";s:6:"plugin";s:15:"tool_recyclebin";}	1572464536	web	192.168.33.1	\N
-331	\\core\\event\\config_log_created	core	created	config_log	config_log	876	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:8:"autohide";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:15:"tool_recyclebin";}	1572464536	web	192.168.33.1	\N
-332	\\core\\event\\config_log_created	core	created	config_log	config_log	877	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:13:"runningmethod";s:8:"oldvalue";N;s:5:"value";s:11:"commandline";s:6:"plugin";s:16:"antivirus_clamav";}	1572464536	web	192.168.33.1	\N
-333	\\core\\event\\config_log_created	core	created	config_log	config_log	878	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:10:"pathtoclam";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:16:"antivirus_clamav";}	1572464536	web	192.168.33.1	\N
-334	\\core\\event\\config_log_created	core	created	config_log	config_log	879	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:16:"pathtounixsocket";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:16:"antivirus_clamav";}	1572464536	web	192.168.33.1	\N
-335	\\core\\event\\config_log_created	core	created	config_log	config_log	880	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:19:"clamfailureonupload";s:8:"oldvalue";N;s:5:"value";s:9:"donothing";s:6:"plugin";s:16:"antivirus_clamav";}	1572464536	web	192.168.33.1	\N
-336	\\core\\event\\config_log_created	core	created	config_log	config_log	881	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:8:"hostname";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:8:"auth_cas";}	1572464536	web	192.168.33.1	\N
-337	\\core\\event\\config_log_created	core	created	config_log	config_log	882	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:7:"baseuri";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:8:"auth_cas";}	1572464536	web	192.168.33.1	\N
-338	\\core\\event\\config_log_created	core	created	config_log	config_log	883	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:4:"port";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:8:"auth_cas";}	1572464536	web	192.168.33.1	\N
-339	\\core\\event\\config_log_created	core	created	config_log	config_log	884	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:10:"casversion";s:8:"oldvalue";N;s:5:"value";s:3:"2.0";s:6:"plugin";s:8:"auth_cas";}	1572464536	web	192.168.33.1	\N
-340	\\core\\event\\config_log_created	core	created	config_log	config_log	885	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:8:"language";s:8:"oldvalue";N;s:5:"value";s:21:"CAS_Languages_English";s:6:"plugin";s:8:"auth_cas";}	1572464536	web	192.168.33.1	\N
-341	\\core\\event\\config_log_created	core	created	config_log	config_log	886	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:8:"proxycas";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:8:"auth_cas";}	1572464536	web	192.168.33.1	\N
-342	\\core\\event\\config_log_created	core	created	config_log	config_log	887	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:9:"logoutcas";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:8:"auth_cas";}	1572464536	web	192.168.33.1	\N
-343	\\core\\event\\config_log_created	core	created	config_log	config_log	888	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:9:"multiauth";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:8:"auth_cas";}	1572464536	web	192.168.33.1	\N
-344	\\core\\event\\config_log_created	core	created	config_log	config_log	889	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"certificate_check";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:8:"auth_cas";}	1572464536	web	192.168.33.1	\N
-345	\\core\\event\\config_log_created	core	created	config_log	config_log	890	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:16:"certificate_path";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:8:"auth_cas";}	1572464536	web	192.168.33.1	\N
-346	\\core\\event\\config_log_created	core	created	config_log	config_log	891	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:16:"curl_ssl_version";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:8:"auth_cas";}	1572464536	web	192.168.33.1	\N
-347	\\core\\event\\config_log_created	core	created	config_log	config_log	892	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"logout_return_url";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:8:"auth_cas";}	1572464536	web	192.168.33.1	\N
-348	\\core\\event\\config_log_created	core	created	config_log	config_log	893	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:8:"host_url";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:8:"auth_cas";}	1572464536	web	192.168.33.1	\N
-349	\\core\\event\\config_log_created	core	created	config_log	config_log	894	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:12:"ldap_version";s:8:"oldvalue";N;s:5:"value";s:1:"3";s:6:"plugin";s:8:"auth_cas";}	1572464536	web	192.168.33.1	\N
-350	\\core\\event\\config_log_created	core	created	config_log	config_log	895	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:9:"start_tls";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:8:"auth_cas";}	1572464536	web	192.168.33.1	\N
-351	\\core\\event\\config_log_created	core	created	config_log	config_log	896	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:12:"ldapencoding";s:8:"oldvalue";N;s:5:"value";s:5:"utf-8";s:6:"plugin";s:8:"auth_cas";}	1572464536	web	192.168.33.1	\N
-352	\\core\\event\\config_log_created	core	created	config_log	config_log	897	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:8:"pagesize";s:8:"oldvalue";N;s:5:"value";s:3:"250";s:6:"plugin";s:8:"auth_cas";}	1572464536	web	192.168.33.1	\N
-353	\\core\\event\\config_log_created	core	created	config_log	config_log	898	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:7:"bind_dn";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:8:"auth_cas";}	1572464536	web	192.168.33.1	\N
-354	\\core\\event\\config_log_created	core	created	config_log	config_log	899	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:7:"bind_pw";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:8:"auth_cas";}	1572464536	web	192.168.33.1	\N
-355	\\core\\event\\config_log_created	core	created	config_log	config_log	900	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:9:"user_type";s:8:"oldvalue";N;s:5:"value";s:7:"default";s:6:"plugin";s:8:"auth_cas";}	1572464536	web	192.168.33.1	\N
-356	\\core\\event\\config_log_created	core	created	config_log	config_log	901	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:8:"contexts";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:8:"auth_cas";}	1572464536	web	192.168.33.1	\N
-357	\\core\\event\\config_log_created	core	created	config_log	config_log	902	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:10:"search_sub";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:8:"auth_cas";}	1572464536	web	192.168.33.1	\N
-358	\\core\\event\\config_log_created	core	created	config_log	config_log	903	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:9:"opt_deref";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:8:"auth_cas";}	1572464536	web	192.168.33.1	\N
-359	\\core\\event\\config_log_created	core	created	config_log	config_log	904	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"user_attribute";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:8:"auth_cas";}	1572464536	web	192.168.33.1	\N
-360	\\core\\event\\config_log_created	core	created	config_log	config_log	905	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"memberattribute";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:8:"auth_cas";}	1572464536	web	192.168.33.1	\N
-361	\\core\\event\\config_log_created	core	created	config_log	config_log	906	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:20:"memberattribute_isdn";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:8:"auth_cas";}	1572464536	web	192.168.33.1	\N
-362	\\core\\event\\config_log_created	core	created	config_log	config_log	907	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:11:"objectclass";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:8:"auth_cas";}	1572464536	web	192.168.33.1	\N
-363	\\core\\event\\config_log_created	core	created	config_log	config_log	908	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:12:"attrcreators";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:8:"auth_cas";}	1572464536	web	192.168.33.1	\N
-364	\\core\\event\\config_log_created	core	created	config_log	config_log	909	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"groupecreators";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:8:"auth_cas";}	1572464536	web	192.168.33.1	\N
-365	\\core\\event\\config_log_created	core	created	config_log	config_log	910	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:10:"removeuser";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:8:"auth_cas";}	1572464536	web	192.168.33.1	\N
-366	\\core\\event\\config_log_created	core	created	config_log	config_log	911	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:19:"field_map_firstname";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:8:"auth_cas";}	1572464536	web	192.168.33.1	\N
-367	\\core\\event\\config_log_created	core	created	config_log	config_log	912	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:27:"field_updatelocal_firstname";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:8:"auth_cas";}	1572464536	web	192.168.33.1	\N
-368	\\core\\event\\config_log_created	core	created	config_log	config_log	913	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:28:"field_updateremote_firstname";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:8:"auth_cas";}	1572464536	web	192.168.33.1	\N
-369	\\core\\event\\config_log_created	core	created	config_log	config_log	914	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:20:"field_lock_firstname";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:8:"auth_cas";}	1572464536	web	192.168.33.1	\N
-370	\\core\\event\\config_log_created	core	created	config_log	config_log	915	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:18:"field_map_lastname";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:8:"auth_cas";}	1572464537	web	192.168.33.1	\N
-371	\\core\\event\\config_log_created	core	created	config_log	config_log	916	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:26:"field_updatelocal_lastname";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:8:"auth_cas";}	1572464537	web	192.168.33.1	\N
-372	\\core\\event\\config_log_created	core	created	config_log	config_log	917	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:27:"field_updateremote_lastname";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:8:"auth_cas";}	1572464537	web	192.168.33.1	\N
-373	\\core\\event\\config_log_created	core	created	config_log	config_log	918	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:19:"field_lock_lastname";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:8:"auth_cas";}	1572464537	web	192.168.33.1	\N
-374	\\core\\event\\config_log_created	core	created	config_log	config_log	919	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"field_map_email";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:8:"auth_cas";}	1572464537	web	192.168.33.1	\N
-375	\\core\\event\\config_log_created	core	created	config_log	config_log	920	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:23:"field_updatelocal_email";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:8:"auth_cas";}	1572464537	web	192.168.33.1	\N
-376	\\core\\event\\config_log_created	core	created	config_log	config_log	921	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:24:"field_updateremote_email";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:8:"auth_cas";}	1572464537	web	192.168.33.1	\N
-377	\\core\\event\\config_log_created	core	created	config_log	config_log	922	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:16:"field_lock_email";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:8:"auth_cas";}	1572464537	web	192.168.33.1	\N
-378	\\core\\event\\config_log_created	core	created	config_log	config_log	923	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"field_map_city";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:8:"auth_cas";}	1572464537	web	192.168.33.1	\N
-379	\\core\\event\\config_log_created	core	created	config_log	config_log	924	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:22:"field_updatelocal_city";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:8:"auth_cas";}	1572464537	web	192.168.33.1	\N
-380	\\core\\event\\config_log_created	core	created	config_log	config_log	925	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:23:"field_updateremote_city";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:8:"auth_cas";}	1572464537	web	192.168.33.1	\N
-381	\\core\\event\\config_log_created	core	created	config_log	config_log	926	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"field_lock_city";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:8:"auth_cas";}	1572464537	web	192.168.33.1	\N
-382	\\core\\event\\config_log_created	core	created	config_log	config_log	927	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"field_map_country";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:8:"auth_cas";}	1572464537	web	192.168.33.1	\N
-383	\\core\\event\\config_log_created	core	created	config_log	config_log	928	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:25:"field_updatelocal_country";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:8:"auth_cas";}	1572464537	web	192.168.33.1	\N
-384	\\core\\event\\config_log_created	core	created	config_log	config_log	929	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:26:"field_updateremote_country";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:8:"auth_cas";}	1572464537	web	192.168.33.1	\N
-385	\\core\\event\\config_log_created	core	created	config_log	config_log	930	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:18:"field_lock_country";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:8:"auth_cas";}	1572464537	web	192.168.33.1	\N
-386	\\core\\event\\config_log_created	core	created	config_log	config_log	931	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"field_map_lang";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:8:"auth_cas";}	1572464537	web	192.168.33.1	\N
-387	\\core\\event\\config_log_created	core	created	config_log	config_log	932	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:22:"field_updatelocal_lang";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:8:"auth_cas";}	1572464537	web	192.168.33.1	\N
-388	\\core\\event\\config_log_created	core	created	config_log	config_log	933	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:23:"field_updateremote_lang";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:8:"auth_cas";}	1572464537	web	192.168.33.1	\N
-389	\\core\\event\\config_log_created	core	created	config_log	config_log	934	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"field_lock_lang";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:8:"auth_cas";}	1572464537	web	192.168.33.1	\N
-390	\\core\\event\\config_log_created	core	created	config_log	config_log	935	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:21:"field_map_description";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:8:"auth_cas";}	1572464537	web	192.168.33.1	\N
-391	\\core\\event\\config_log_created	core	created	config_log	config_log	936	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:29:"field_updatelocal_description";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:8:"auth_cas";}	1572464537	web	192.168.33.1	\N
-392	\\core\\event\\config_log_created	core	created	config_log	config_log	937	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:30:"field_updateremote_description";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:8:"auth_cas";}	1572464537	web	192.168.33.1	\N
-393	\\core\\event\\config_log_created	core	created	config_log	config_log	938	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:22:"field_lock_description";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:8:"auth_cas";}	1572464537	web	192.168.33.1	\N
-394	\\core\\event\\config_log_created	core	created	config_log	config_log	939	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:13:"field_map_url";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:8:"auth_cas";}	1572464537	web	192.168.33.1	\N
-395	\\core\\event\\config_log_created	core	created	config_log	config_log	940	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:21:"field_updatelocal_url";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:8:"auth_cas";}	1572464537	web	192.168.33.1	\N
-396	\\core\\event\\config_log_created	core	created	config_log	config_log	941	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:22:"field_updateremote_url";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:8:"auth_cas";}	1572464537	web	192.168.33.1	\N
-397	\\core\\event\\config_log_created	core	created	config_log	config_log	942	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"field_lock_url";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:8:"auth_cas";}	1572464537	web	192.168.33.1	\N
-398	\\core\\event\\config_log_created	core	created	config_log	config_log	943	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:18:"field_map_idnumber";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:8:"auth_cas";}	1572464537	web	192.168.33.1	\N
-399	\\core\\event\\config_log_created	core	created	config_log	config_log	944	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:26:"field_updatelocal_idnumber";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:8:"auth_cas";}	1572464537	web	192.168.33.1	\N
-400	\\core\\event\\config_log_created	core	created	config_log	config_log	945	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:27:"field_updateremote_idnumber";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:8:"auth_cas";}	1572464537	web	192.168.33.1	\N
-401	\\core\\event\\config_log_created	core	created	config_log	config_log	946	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:19:"field_lock_idnumber";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:8:"auth_cas";}	1572464537	web	192.168.33.1	\N
-402	\\core\\event\\config_log_created	core	created	config_log	config_log	947	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:21:"field_map_institution";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:8:"auth_cas";}	1572464537	web	192.168.33.1	\N
-403	\\core\\event\\config_log_created	core	created	config_log	config_log	948	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:29:"field_updatelocal_institution";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:8:"auth_cas";}	1572464537	web	192.168.33.1	\N
-404	\\core\\event\\config_log_created	core	created	config_log	config_log	949	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:30:"field_updateremote_institution";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:8:"auth_cas";}	1572464537	web	192.168.33.1	\N
-405	\\core\\event\\config_log_created	core	created	config_log	config_log	950	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:22:"field_lock_institution";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:8:"auth_cas";}	1572464537	web	192.168.33.1	\N
-406	\\core\\event\\config_log_created	core	created	config_log	config_log	951	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:20:"field_map_department";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:8:"auth_cas";}	1572464537	web	192.168.33.1	\N
-407	\\core\\event\\config_log_created	core	created	config_log	config_log	952	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:28:"field_updatelocal_department";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:8:"auth_cas";}	1572464537	web	192.168.33.1	\N
-507	\\core\\event\\config_log_created	core	created	config_log	config_log	1052	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:27:"field_updateremote_idnumber";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-408	\\core\\event\\config_log_created	core	created	config_log	config_log	953	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:29:"field_updateremote_department";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:8:"auth_cas";}	1572464537	web	192.168.33.1	\N
-409	\\core\\event\\config_log_created	core	created	config_log	config_log	954	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:21:"field_lock_department";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:8:"auth_cas";}	1572464537	web	192.168.33.1	\N
-410	\\core\\event\\config_log_created	core	created	config_log	config_log	955	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:16:"field_map_phone1";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:8:"auth_cas";}	1572464537	web	192.168.33.1	\N
-411	\\core\\event\\config_log_created	core	created	config_log	config_log	956	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:24:"field_updatelocal_phone1";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:8:"auth_cas";}	1572464537	web	192.168.33.1	\N
-412	\\core\\event\\config_log_created	core	created	config_log	config_log	957	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:25:"field_updateremote_phone1";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:8:"auth_cas";}	1572464537	web	192.168.33.1	\N
-413	\\core\\event\\config_log_created	core	created	config_log	config_log	958	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"field_lock_phone1";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:8:"auth_cas";}	1572464537	web	192.168.33.1	\N
-414	\\core\\event\\config_log_created	core	created	config_log	config_log	959	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:16:"field_map_phone2";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:8:"auth_cas";}	1572464537	web	192.168.33.1	\N
-415	\\core\\event\\config_log_created	core	created	config_log	config_log	960	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:24:"field_updatelocal_phone2";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:8:"auth_cas";}	1572464537	web	192.168.33.1	\N
-416	\\core\\event\\config_log_created	core	created	config_log	config_log	961	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:25:"field_updateremote_phone2";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:8:"auth_cas";}	1572464537	web	192.168.33.1	\N
-417	\\core\\event\\config_log_created	core	created	config_log	config_log	962	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"field_lock_phone2";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:8:"auth_cas";}	1572464537	web	192.168.33.1	\N
-418	\\core\\event\\config_log_created	core	created	config_log	config_log	963	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"field_map_address";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:8:"auth_cas";}	1572464537	web	192.168.33.1	\N
-419	\\core\\event\\config_log_created	core	created	config_log	config_log	964	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:25:"field_updatelocal_address";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:8:"auth_cas";}	1572464537	web	192.168.33.1	\N
-420	\\core\\event\\config_log_created	core	created	config_log	config_log	965	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:26:"field_updateremote_address";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:8:"auth_cas";}	1572464537	web	192.168.33.1	\N
-421	\\core\\event\\config_log_created	core	created	config_log	config_log	966	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:18:"field_lock_address";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:8:"auth_cas";}	1572464537	web	192.168.33.1	\N
-422	\\core\\event\\config_log_created	core	created	config_log	config_log	967	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:27:"field_map_firstnamephonetic";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:8:"auth_cas";}	1572464537	web	192.168.33.1	\N
-423	\\core\\event\\config_log_created	core	created	config_log	config_log	968	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:35:"field_updatelocal_firstnamephonetic";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:8:"auth_cas";}	1572464537	web	192.168.33.1	\N
-424	\\core\\event\\config_log_created	core	created	config_log	config_log	969	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:36:"field_updateremote_firstnamephonetic";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:8:"auth_cas";}	1572464537	web	192.168.33.1	\N
-425	\\core\\event\\config_log_created	core	created	config_log	config_log	970	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:28:"field_lock_firstnamephonetic";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:8:"auth_cas";}	1572464537	web	192.168.33.1	\N
-426	\\core\\event\\config_log_created	core	created	config_log	config_log	971	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:26:"field_map_lastnamephonetic";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:8:"auth_cas";}	1572464537	web	192.168.33.1	\N
-427	\\core\\event\\config_log_created	core	created	config_log	config_log	972	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:34:"field_updatelocal_lastnamephonetic";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:8:"auth_cas";}	1572464537	web	192.168.33.1	\N
-428	\\core\\event\\config_log_created	core	created	config_log	config_log	973	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:35:"field_updateremote_lastnamephonetic";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:8:"auth_cas";}	1572464537	web	192.168.33.1	\N
-429	\\core\\event\\config_log_created	core	created	config_log	config_log	974	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:27:"field_lock_lastnamephonetic";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:8:"auth_cas";}	1572464537	web	192.168.33.1	\N
-430	\\core\\event\\config_log_created	core	created	config_log	config_log	975	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:20:"field_map_middlename";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:8:"auth_cas";}	1572464537	web	192.168.33.1	\N
-431	\\core\\event\\config_log_created	core	created	config_log	config_log	976	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:28:"field_updatelocal_middlename";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:8:"auth_cas";}	1572464537	web	192.168.33.1	\N
-432	\\core\\event\\config_log_created	core	created	config_log	config_log	977	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:29:"field_updateremote_middlename";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:8:"auth_cas";}	1572464537	web	192.168.33.1	\N
-433	\\core\\event\\config_log_created	core	created	config_log	config_log	978	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:21:"field_lock_middlename";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:8:"auth_cas";}	1572464537	web	192.168.33.1	\N
-434	\\core\\event\\config_log_created	core	created	config_log	config_log	979	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:23:"field_map_alternatename";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:8:"auth_cas";}	1572464537	web	192.168.33.1	\N
-435	\\core\\event\\config_log_created	core	created	config_log	config_log	980	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:31:"field_updatelocal_alternatename";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:8:"auth_cas";}	1572464537	web	192.168.33.1	\N
-436	\\core\\event\\config_log_created	core	created	config_log	config_log	981	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:32:"field_updateremote_alternatename";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:8:"auth_cas";}	1572464537	web	192.168.33.1	\N
-437	\\core\\event\\config_log_created	core	created	config_log	config_log	982	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:24:"field_lock_alternatename";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:8:"auth_cas";}	1572464537	web	192.168.33.1	\N
-438	\\core\\event\\config_log_created	core	created	config_log	config_log	983	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:9:"recaptcha";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:10:"auth_email";}	1572464537	web	192.168.33.1	\N
-439	\\core\\event\\config_log_created	core	created	config_log	config_log	984	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:20:"field_lock_firstname";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:10:"auth_email";}	1572464537	web	192.168.33.1	\N
-440	\\core\\event\\config_log_created	core	created	config_log	config_log	985	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:19:"field_lock_lastname";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:10:"auth_email";}	1572464537	web	192.168.33.1	\N
-441	\\core\\event\\config_log_created	core	created	config_log	config_log	986	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:16:"field_lock_email";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:10:"auth_email";}	1572464537	web	192.168.33.1	\N
-442	\\core\\event\\config_log_created	core	created	config_log	config_log	987	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"field_lock_city";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:10:"auth_email";}	1572464537	web	192.168.33.1	\N
-443	\\core\\event\\config_log_created	core	created	config_log	config_log	988	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:18:"field_lock_country";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:10:"auth_email";}	1572464537	web	192.168.33.1	\N
-444	\\core\\event\\config_log_created	core	created	config_log	config_log	989	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"field_lock_lang";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:10:"auth_email";}	1572464537	web	192.168.33.1	\N
-445	\\core\\event\\config_log_created	core	created	config_log	config_log	990	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:22:"field_lock_description";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:10:"auth_email";}	1572464537	web	192.168.33.1	\N
-446	\\core\\event\\config_log_created	core	created	config_log	config_log	991	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"field_lock_url";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:10:"auth_email";}	1572464537	web	192.168.33.1	\N
-447	\\core\\event\\config_log_created	core	created	config_log	config_log	992	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:19:"field_lock_idnumber";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:10:"auth_email";}	1572464537	web	192.168.33.1	\N
-448	\\core\\event\\config_log_created	core	created	config_log	config_log	993	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:22:"field_lock_institution";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:10:"auth_email";}	1572464537	web	192.168.33.1	\N
-449	\\core\\event\\config_log_created	core	created	config_log	config_log	994	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:21:"field_lock_department";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:10:"auth_email";}	1572464537	web	192.168.33.1	\N
-450	\\core\\event\\config_log_created	core	created	config_log	config_log	995	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"field_lock_phone1";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:10:"auth_email";}	1572464537	web	192.168.33.1	\N
-451	\\core\\event\\config_log_created	core	created	config_log	config_log	996	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"field_lock_phone2";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:10:"auth_email";}	1572464537	web	192.168.33.1	\N
-452	\\core\\event\\config_log_created	core	created	config_log	config_log	997	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:18:"field_lock_address";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:10:"auth_email";}	1572464537	web	192.168.33.1	\N
-453	\\core\\event\\config_log_created	core	created	config_log	config_log	998	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:28:"field_lock_firstnamephonetic";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:10:"auth_email";}	1572464537	web	192.168.33.1	\N
-454	\\core\\event\\config_log_created	core	created	config_log	config_log	999	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:27:"field_lock_lastnamephonetic";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:10:"auth_email";}	1572464537	web	192.168.33.1	\N
-455	\\core\\event\\config_log_created	core	created	config_log	config_log	1000	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:21:"field_lock_middlename";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:10:"auth_email";}	1572464537	web	192.168.33.1	\N
-456	\\core\\event\\config_log_created	core	created	config_log	config_log	1001	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:24:"field_lock_alternatename";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:10:"auth_email";}	1572464537	web	192.168.33.1	\N
-457	\\core\\event\\config_log_created	core	created	config_log	config_log	1002	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:4:"host";s:8:"oldvalue";N;s:5:"value";s:9:"127.0.0.1";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-458	\\core\\event\\config_log_created	core	created	config_log	config_log	1003	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:4:"type";s:8:"oldvalue";N;s:5:"value";s:6:"mysqli";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-459	\\core\\event\\config_log_created	core	created	config_log	config_log	1004	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:13:"sybasequoting";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-460	\\core\\event\\config_log_created	core	created	config_log	config_log	1005	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:4:"name";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-461	\\core\\event\\config_log_created	core	created	config_log	config_log	1006	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:4:"user";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-462	\\core\\event\\config_log_created	core	created	config_log	config_log	1007	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:4:"pass";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-463	\\core\\event\\config_log_created	core	created	config_log	config_log	1008	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:5:"table";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-464	\\core\\event\\config_log_created	core	created	config_log	config_log	1009	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:9:"fielduser";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-465	\\core\\event\\config_log_created	core	created	config_log	config_log	1010	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:9:"fieldpass";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-466	\\core\\event\\config_log_created	core	created	config_log	config_log	1011	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:8:"passtype";s:8:"oldvalue";N;s:5:"value";s:9:"plaintext";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-467	\\core\\event\\config_log_created	core	created	config_log	config_log	1012	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:11:"extencoding";s:8:"oldvalue";N;s:5:"value";s:5:"utf-8";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-468	\\core\\event\\config_log_created	core	created	config_log	config_log	1013	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:8:"setupsql";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-469	\\core\\event\\config_log_created	core	created	config_log	config_log	1014	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:11:"debugauthdb";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-470	\\core\\event\\config_log_created	core	created	config_log	config_log	1015	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"changepasswordurl";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-471	\\core\\event\\config_log_created	core	created	config_log	config_log	1016	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:10:"removeuser";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-472	\\core\\event\\config_log_created	core	created	config_log	config_log	1017	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:11:"updateusers";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-473	\\core\\event\\config_log_created	core	created	config_log	config_log	1018	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:19:"field_map_firstname";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-474	\\core\\event\\config_log_created	core	created	config_log	config_log	1019	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:27:"field_updatelocal_firstname";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-475	\\core\\event\\config_log_created	core	created	config_log	config_log	1020	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:28:"field_updateremote_firstname";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-476	\\core\\event\\config_log_created	core	created	config_log	config_log	1021	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:20:"field_lock_firstname";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-477	\\core\\event\\config_log_created	core	created	config_log	config_log	1022	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:18:"field_map_lastname";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-478	\\core\\event\\config_log_created	core	created	config_log	config_log	1023	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:26:"field_updatelocal_lastname";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-479	\\core\\event\\config_log_created	core	created	config_log	config_log	1024	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:27:"field_updateremote_lastname";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-480	\\core\\event\\config_log_created	core	created	config_log	config_log	1025	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:19:"field_lock_lastname";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-481	\\core\\event\\config_log_created	core	created	config_log	config_log	1026	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"field_map_email";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-482	\\core\\event\\config_log_created	core	created	config_log	config_log	1027	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:23:"field_updatelocal_email";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-483	\\core\\event\\config_log_created	core	created	config_log	config_log	1028	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:24:"field_updateremote_email";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-484	\\core\\event\\config_log_created	core	created	config_log	config_log	1029	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:16:"field_lock_email";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-485	\\core\\event\\config_log_created	core	created	config_log	config_log	1030	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"field_map_city";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-486	\\core\\event\\config_log_created	core	created	config_log	config_log	1031	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:22:"field_updatelocal_city";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-487	\\core\\event\\config_log_created	core	created	config_log	config_log	1032	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:23:"field_updateremote_city";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-488	\\core\\event\\config_log_created	core	created	config_log	config_log	1033	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"field_lock_city";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-489	\\core\\event\\config_log_created	core	created	config_log	config_log	1034	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"field_map_country";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-490	\\core\\event\\config_log_created	core	created	config_log	config_log	1035	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:25:"field_updatelocal_country";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-491	\\core\\event\\config_log_created	core	created	config_log	config_log	1036	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:26:"field_updateremote_country";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-492	\\core\\event\\config_log_created	core	created	config_log	config_log	1037	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:18:"field_lock_country";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-493	\\core\\event\\config_log_created	core	created	config_log	config_log	1038	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"field_map_lang";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-494	\\core\\event\\config_log_created	core	created	config_log	config_log	1039	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:22:"field_updatelocal_lang";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-495	\\core\\event\\config_log_created	core	created	config_log	config_log	1040	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:23:"field_updateremote_lang";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-496	\\core\\event\\config_log_created	core	created	config_log	config_log	1041	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"field_lock_lang";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-497	\\core\\event\\config_log_created	core	created	config_log	config_log	1042	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:21:"field_map_description";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-498	\\core\\event\\config_log_created	core	created	config_log	config_log	1043	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:29:"field_updatelocal_description";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-499	\\core\\event\\config_log_created	core	created	config_log	config_log	1044	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:30:"field_updateremote_description";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-500	\\core\\event\\config_log_created	core	created	config_log	config_log	1045	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:22:"field_lock_description";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-501	\\core\\event\\config_log_created	core	created	config_log	config_log	1046	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:13:"field_map_url";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-502	\\core\\event\\config_log_created	core	created	config_log	config_log	1047	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:21:"field_updatelocal_url";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-503	\\core\\event\\config_log_created	core	created	config_log	config_log	1048	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:22:"field_updateremote_url";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-504	\\core\\event\\config_log_created	core	created	config_log	config_log	1049	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"field_lock_url";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-505	\\core\\event\\config_log_created	core	created	config_log	config_log	1050	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:18:"field_map_idnumber";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-506	\\core\\event\\config_log_created	core	created	config_log	config_log	1051	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:26:"field_updatelocal_idnumber";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-508	\\core\\event\\config_log_created	core	created	config_log	config_log	1053	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:19:"field_lock_idnumber";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-509	\\core\\event\\config_log_created	core	created	config_log	config_log	1054	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:21:"field_map_institution";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-510	\\core\\event\\config_log_created	core	created	config_log	config_log	1055	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:29:"field_updatelocal_institution";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-511	\\core\\event\\config_log_created	core	created	config_log	config_log	1056	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:30:"field_updateremote_institution";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-512	\\core\\event\\config_log_created	core	created	config_log	config_log	1057	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:22:"field_lock_institution";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-513	\\core\\event\\config_log_created	core	created	config_log	config_log	1058	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:20:"field_map_department";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-514	\\core\\event\\config_log_created	core	created	config_log	config_log	1059	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:28:"field_updatelocal_department";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-515	\\core\\event\\config_log_created	core	created	config_log	config_log	1060	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:29:"field_updateremote_department";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-516	\\core\\event\\config_log_created	core	created	config_log	config_log	1061	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:21:"field_lock_department";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-517	\\core\\event\\config_log_created	core	created	config_log	config_log	1062	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:16:"field_map_phone1";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-518	\\core\\event\\config_log_created	core	created	config_log	config_log	1063	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:24:"field_updatelocal_phone1";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-519	\\core\\event\\config_log_created	core	created	config_log	config_log	1064	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:25:"field_updateremote_phone1";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-520	\\core\\event\\config_log_created	core	created	config_log	config_log	1065	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"field_lock_phone1";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-521	\\core\\event\\config_log_created	core	created	config_log	config_log	1066	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:16:"field_map_phone2";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-522	\\core\\event\\config_log_created	core	created	config_log	config_log	1067	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:24:"field_updatelocal_phone2";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-523	\\core\\event\\config_log_created	core	created	config_log	config_log	1068	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:25:"field_updateremote_phone2";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-524	\\core\\event\\config_log_created	core	created	config_log	config_log	1069	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"field_lock_phone2";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-525	\\core\\event\\config_log_created	core	created	config_log	config_log	1070	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"field_map_address";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-526	\\core\\event\\config_log_created	core	created	config_log	config_log	1071	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:25:"field_updatelocal_address";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-527	\\core\\event\\config_log_created	core	created	config_log	config_log	1072	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:26:"field_updateremote_address";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-528	\\core\\event\\config_log_created	core	created	config_log	config_log	1073	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:18:"field_lock_address";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-529	\\core\\event\\config_log_created	core	created	config_log	config_log	1074	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:27:"field_map_firstnamephonetic";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-530	\\core\\event\\config_log_created	core	created	config_log	config_log	1075	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:35:"field_updatelocal_firstnamephonetic";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-531	\\core\\event\\config_log_created	core	created	config_log	config_log	1076	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:36:"field_updateremote_firstnamephonetic";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-532	\\core\\event\\config_log_created	core	created	config_log	config_log	1077	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:28:"field_lock_firstnamephonetic";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-533	\\core\\event\\config_log_created	core	created	config_log	config_log	1078	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:26:"field_map_lastnamephonetic";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-534	\\core\\event\\config_log_created	core	created	config_log	config_log	1079	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:34:"field_updatelocal_lastnamephonetic";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-535	\\core\\event\\config_log_created	core	created	config_log	config_log	1080	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:35:"field_updateremote_lastnamephonetic";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-536	\\core\\event\\config_log_created	core	created	config_log	config_log	1081	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:27:"field_lock_lastnamephonetic";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-537	\\core\\event\\config_log_created	core	created	config_log	config_log	1082	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:20:"field_map_middlename";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-538	\\core\\event\\config_log_created	core	created	config_log	config_log	1083	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:28:"field_updatelocal_middlename";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-539	\\core\\event\\config_log_created	core	created	config_log	config_log	1084	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:29:"field_updateremote_middlename";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-540	\\core\\event\\config_log_created	core	created	config_log	config_log	1085	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:21:"field_lock_middlename";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-541	\\core\\event\\config_log_created	core	created	config_log	config_log	1086	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:23:"field_map_alternatename";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-542	\\core\\event\\config_log_created	core	created	config_log	config_log	1087	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:31:"field_updatelocal_alternatename";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-543	\\core\\event\\config_log_created	core	created	config_log	config_log	1088	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:32:"field_updateremote_alternatename";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-544	\\core\\event\\config_log_created	core	created	config_log	config_log	1089	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:24:"field_lock_alternatename";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:7:"auth_db";}	1572464537	web	192.168.33.1	\N
-545	\\core\\event\\config_log_created	core	created	config_log	config_log	1090	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:8:"host_url";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-546	\\core\\event\\config_log_created	core	created	config_log	config_log	1091	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:12:"ldap_version";s:8:"oldvalue";N;s:5:"value";s:1:"3";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-547	\\core\\event\\config_log_created	core	created	config_log	config_log	1092	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:9:"start_tls";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-548	\\core\\event\\config_log_created	core	created	config_log	config_log	1093	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:12:"ldapencoding";s:8:"oldvalue";N;s:5:"value";s:5:"utf-8";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-549	\\core\\event\\config_log_created	core	created	config_log	config_log	1094	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:8:"pagesize";s:8:"oldvalue";N;s:5:"value";s:3:"250";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-550	\\core\\event\\config_log_created	core	created	config_log	config_log	1095	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"preventpassindb";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-551	\\core\\event\\config_log_created	core	created	config_log	config_log	1096	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:7:"bind_dn";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-552	\\core\\event\\config_log_created	core	created	config_log	config_log	1097	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:7:"bind_pw";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-553	\\core\\event\\config_log_created	core	created	config_log	config_log	1098	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:9:"user_type";s:8:"oldvalue";N;s:5:"value";s:7:"default";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-554	\\core\\event\\config_log_created	core	created	config_log	config_log	1099	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:8:"contexts";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-555	\\core\\event\\config_log_created	core	created	config_log	config_log	1100	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:10:"search_sub";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-556	\\core\\event\\config_log_created	core	created	config_log	config_log	1101	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:9:"opt_deref";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-557	\\core\\event\\config_log_created	core	created	config_log	config_log	1102	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"user_attribute";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-558	\\core\\event\\config_log_created	core	created	config_log	config_log	1103	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:19:"suspended_attribute";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-559	\\core\\event\\config_log_created	core	created	config_log	config_log	1104	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"memberattribute";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-560	\\core\\event\\config_log_created	core	created	config_log	config_log	1105	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:20:"memberattribute_isdn";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-561	\\core\\event\\config_log_created	core	created	config_log	config_log	1106	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:11:"objectclass";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-562	\\core\\event\\config_log_created	core	created	config_log	config_log	1107	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:19:"forcechangepassword";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-563	\\core\\event\\config_log_created	core	created	config_log	config_log	1108	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"stdchangepassword";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-564	\\core\\event\\config_log_created	core	created	config_log	config_log	1109	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:8:"passtype";s:8:"oldvalue";N;s:5:"value";s:9:"plaintext";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-565	\\core\\event\\config_log_created	core	created	config_log	config_log	1110	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"changepasswordurl";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-566	\\core\\event\\config_log_created	core	created	config_log	config_log	1111	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:10:"expiration";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-567	\\core\\event\\config_log_created	core	created	config_log	config_log	1112	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:18:"expiration_warning";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-568	\\core\\event\\config_log_created	core	created	config_log	config_log	1113	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:10:"expireattr";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-569	\\core\\event\\config_log_created	core	created	config_log	config_log	1114	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:11:"gracelogins";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-570	\\core\\event\\config_log_created	core	created	config_log	config_log	1115	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:9:"graceattr";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-571	\\core\\event\\config_log_created	core	created	config_log	config_log	1116	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:16:"auth_user_create";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-572	\\core\\event\\config_log_created	core	created	config_log	config_log	1117	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"create_context";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-573	\\core\\event\\config_log_created	core	created	config_log	config_log	1118	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"managercontext";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-574	\\core\\event\\config_log_created	core	created	config_log	config_log	1119	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:20:"coursecreatorcontext";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-575	\\core\\event\\config_log_created	core	created	config_log	config_log	1120	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:10:"removeuser";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-576	\\core\\event\\config_log_created	core	created	config_log	config_log	1121	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"sync_suspended";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-577	\\core\\event\\config_log_created	core	created	config_log	config_log	1122	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"ntlmsso_enabled";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-578	\\core\\event\\config_log_created	core	created	config_log	config_log	1123	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"ntlmsso_subnet";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-579	\\core\\event\\config_log_created	core	created	config_log	config_log	1124	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:19:"ntlmsso_ie_fastpath";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-580	\\core\\event\\config_log_created	core	created	config_log	config_log	1125	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:12:"ntlmsso_type";s:8:"oldvalue";N;s:5:"value";s:4:"ntlm";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-581	\\core\\event\\config_log_created	core	created	config_log	config_log	1126	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:24:"ntlmsso_remoteuserformat";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-582	\\core\\event\\config_log_created	core	created	config_log	config_log	1127	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:19:"field_map_firstname";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-583	\\core\\event\\config_log_created	core	created	config_log	config_log	1128	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:27:"field_updatelocal_firstname";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-584	\\core\\event\\config_log_created	core	created	config_log	config_log	1129	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:28:"field_updateremote_firstname";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-585	\\core\\event\\config_log_created	core	created	config_log	config_log	1130	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:20:"field_lock_firstname";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-586	\\core\\event\\config_log_created	core	created	config_log	config_log	1131	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:18:"field_map_lastname";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-587	\\core\\event\\config_log_created	core	created	config_log	config_log	1132	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:26:"field_updatelocal_lastname";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-588	\\core\\event\\config_log_created	core	created	config_log	config_log	1133	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:27:"field_updateremote_lastname";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-589	\\core\\event\\config_log_created	core	created	config_log	config_log	1134	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:19:"field_lock_lastname";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-590	\\core\\event\\config_log_created	core	created	config_log	config_log	1135	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"field_map_email";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-591	\\core\\event\\config_log_created	core	created	config_log	config_log	1136	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:23:"field_updatelocal_email";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-592	\\core\\event\\config_log_created	core	created	config_log	config_log	1137	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:24:"field_updateremote_email";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-593	\\core\\event\\config_log_created	core	created	config_log	config_log	1138	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:16:"field_lock_email";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-594	\\core\\event\\config_log_created	core	created	config_log	config_log	1139	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"field_map_city";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-595	\\core\\event\\config_log_created	core	created	config_log	config_log	1140	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:22:"field_updatelocal_city";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-596	\\core\\event\\config_log_created	core	created	config_log	config_log	1141	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:23:"field_updateremote_city";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-597	\\core\\event\\config_log_created	core	created	config_log	config_log	1142	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"field_lock_city";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-598	\\core\\event\\config_log_created	core	created	config_log	config_log	1143	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"field_map_country";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-599	\\core\\event\\config_log_created	core	created	config_log	config_log	1144	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:25:"field_updatelocal_country";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-600	\\core\\event\\config_log_created	core	created	config_log	config_log	1145	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:26:"field_updateremote_country";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-601	\\core\\event\\config_log_created	core	created	config_log	config_log	1146	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:18:"field_lock_country";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-602	\\core\\event\\config_log_created	core	created	config_log	config_log	1147	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"field_map_lang";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-603	\\core\\event\\config_log_created	core	created	config_log	config_log	1148	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:22:"field_updatelocal_lang";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-604	\\core\\event\\config_log_created	core	created	config_log	config_log	1149	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:23:"field_updateremote_lang";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-605	\\core\\event\\config_log_created	core	created	config_log	config_log	1150	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"field_lock_lang";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-606	\\core\\event\\config_log_created	core	created	config_log	config_log	1151	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:21:"field_map_description";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-607	\\core\\event\\config_log_created	core	created	config_log	config_log	1152	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:29:"field_updatelocal_description";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-608	\\core\\event\\config_log_created	core	created	config_log	config_log	1153	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:30:"field_updateremote_description";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-609	\\core\\event\\config_log_created	core	created	config_log	config_log	1154	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:22:"field_lock_description";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-610	\\core\\event\\config_log_created	core	created	config_log	config_log	1155	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:13:"field_map_url";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-611	\\core\\event\\config_log_created	core	created	config_log	config_log	1156	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:21:"field_updatelocal_url";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-612	\\core\\event\\config_log_created	core	created	config_log	config_log	1157	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:22:"field_updateremote_url";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-613	\\core\\event\\config_log_created	core	created	config_log	config_log	1158	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"field_lock_url";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-614	\\core\\event\\config_log_created	core	created	config_log	config_log	1159	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:18:"field_map_idnumber";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-615	\\core\\event\\config_log_created	core	created	config_log	config_log	1160	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:26:"field_updatelocal_idnumber";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-616	\\core\\event\\config_log_created	core	created	config_log	config_log	1161	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:27:"field_updateremote_idnumber";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-617	\\core\\event\\config_log_created	core	created	config_log	config_log	1162	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:19:"field_lock_idnumber";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-618	\\core\\event\\config_log_created	core	created	config_log	config_log	1163	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:21:"field_map_institution";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-619	\\core\\event\\config_log_created	core	created	config_log	config_log	1164	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:29:"field_updatelocal_institution";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-620	\\core\\event\\config_log_created	core	created	config_log	config_log	1165	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:30:"field_updateremote_institution";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-621	\\core\\event\\config_log_created	core	created	config_log	config_log	1166	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:22:"field_lock_institution";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-622	\\core\\event\\config_log_created	core	created	config_log	config_log	1167	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:20:"field_map_department";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-623	\\core\\event\\config_log_created	core	created	config_log	config_log	1168	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:28:"field_updatelocal_department";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-624	\\core\\event\\config_log_created	core	created	config_log	config_log	1169	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:29:"field_updateremote_department";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-625	\\core\\event\\config_log_created	core	created	config_log	config_log	1170	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:21:"field_lock_department";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-626	\\core\\event\\config_log_created	core	created	config_log	config_log	1171	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:16:"field_map_phone1";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-627	\\core\\event\\config_log_created	core	created	config_log	config_log	1172	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:24:"field_updatelocal_phone1";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-628	\\core\\event\\config_log_created	core	created	config_log	config_log	1173	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:25:"field_updateremote_phone1";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-629	\\core\\event\\config_log_created	core	created	config_log	config_log	1174	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"field_lock_phone1";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-630	\\core\\event\\config_log_created	core	created	config_log	config_log	1175	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:16:"field_map_phone2";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-631	\\core\\event\\config_log_created	core	created	config_log	config_log	1176	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:24:"field_updatelocal_phone2";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-632	\\core\\event\\config_log_created	core	created	config_log	config_log	1177	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:25:"field_updateremote_phone2";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-633	\\core\\event\\config_log_created	core	created	config_log	config_log	1178	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"field_lock_phone2";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-634	\\core\\event\\config_log_created	core	created	config_log	config_log	1179	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"field_map_address";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-635	\\core\\event\\config_log_created	core	created	config_log	config_log	1180	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:25:"field_updatelocal_address";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-636	\\core\\event\\config_log_created	core	created	config_log	config_log	1181	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:26:"field_updateremote_address";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-637	\\core\\event\\config_log_created	core	created	config_log	config_log	1182	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:18:"field_lock_address";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-638	\\core\\event\\config_log_created	core	created	config_log	config_log	1183	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:27:"field_map_firstnamephonetic";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-639	\\core\\event\\config_log_created	core	created	config_log	config_log	1184	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:35:"field_updatelocal_firstnamephonetic";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-640	\\core\\event\\config_log_created	core	created	config_log	config_log	1185	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:36:"field_updateremote_firstnamephonetic";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-641	\\core\\event\\config_log_created	core	created	config_log	config_log	1186	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:28:"field_lock_firstnamephonetic";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-642	\\core\\event\\config_log_created	core	created	config_log	config_log	1187	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:26:"field_map_lastnamephonetic";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-643	\\core\\event\\config_log_created	core	created	config_log	config_log	1188	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:34:"field_updatelocal_lastnamephonetic";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-644	\\core\\event\\config_log_created	core	created	config_log	config_log	1189	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:35:"field_updateremote_lastnamephonetic";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-645	\\core\\event\\config_log_created	core	created	config_log	config_log	1190	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:27:"field_lock_lastnamephonetic";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-646	\\core\\event\\config_log_created	core	created	config_log	config_log	1191	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:20:"field_map_middlename";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-647	\\core\\event\\config_log_created	core	created	config_log	config_log	1192	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:28:"field_updatelocal_middlename";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-648	\\core\\event\\config_log_created	core	created	config_log	config_log	1193	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:29:"field_updateremote_middlename";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-649	\\core\\event\\config_log_created	core	created	config_log	config_log	1194	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:21:"field_lock_middlename";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-650	\\core\\event\\config_log_created	core	created	config_log	config_log	1195	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:23:"field_map_alternatename";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-651	\\core\\event\\config_log_created	core	created	config_log	config_log	1196	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:31:"field_updatelocal_alternatename";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:9:"auth_ldap";}	1572464537	web	192.168.33.1	\N
-652	\\core\\event\\config_log_created	core	created	config_log	config_log	1197	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:32:"field_updateremote_alternatename";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:9:"auth_ldap";}	1572464538	web	192.168.33.1	\N
-653	\\core\\event\\config_log_created	core	created	config_log	config_log	1198	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:24:"field_lock_alternatename";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:9:"auth_ldap";}	1572464538	web	192.168.33.1	\N
-654	\\core\\event\\config_log_created	core	created	config_log	config_log	1199	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:10:"expiration";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:11:"auth_manual";}	1572464538	web	192.168.33.1	\N
-655	\\core\\event\\config_log_created	core	created	config_log	config_log	1200	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"expirationtime";s:8:"oldvalue";N;s:5:"value";s:2:"30";s:6:"plugin";s:11:"auth_manual";}	1572464538	web	192.168.33.1	\N
-656	\\core\\event\\config_log_created	core	created	config_log	config_log	1201	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:18:"expiration_warning";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:11:"auth_manual";}	1572464538	web	192.168.33.1	\N
-657	\\core\\event\\config_log_created	core	created	config_log	config_log	1202	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:20:"field_lock_firstname";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:11:"auth_manual";}	1572464538	web	192.168.33.1	\N
-658	\\core\\event\\config_log_created	core	created	config_log	config_log	1203	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:19:"field_lock_lastname";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:11:"auth_manual";}	1572464538	web	192.168.33.1	\N
-659	\\core\\event\\config_log_created	core	created	config_log	config_log	1204	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:16:"field_lock_email";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:11:"auth_manual";}	1572464538	web	192.168.33.1	\N
-660	\\core\\event\\config_log_created	core	created	config_log	config_log	1205	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"field_lock_city";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:11:"auth_manual";}	1572464538	web	192.168.33.1	\N
-661	\\core\\event\\config_log_created	core	created	config_log	config_log	1206	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:18:"field_lock_country";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:11:"auth_manual";}	1572464538	web	192.168.33.1	\N
-662	\\core\\event\\config_log_created	core	created	config_log	config_log	1207	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"field_lock_lang";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:11:"auth_manual";}	1572464538	web	192.168.33.1	\N
-663	\\core\\event\\config_log_created	core	created	config_log	config_log	1208	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:22:"field_lock_description";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:11:"auth_manual";}	1572464538	web	192.168.33.1	\N
-664	\\core\\event\\config_log_created	core	created	config_log	config_log	1209	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"field_lock_url";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:11:"auth_manual";}	1572464538	web	192.168.33.1	\N
-665	\\core\\event\\config_log_created	core	created	config_log	config_log	1210	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:19:"field_lock_idnumber";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:11:"auth_manual";}	1572464538	web	192.168.33.1	\N
-666	\\core\\event\\config_log_created	core	created	config_log	config_log	1211	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:22:"field_lock_institution";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:11:"auth_manual";}	1572464538	web	192.168.33.1	\N
-667	\\core\\event\\config_log_created	core	created	config_log	config_log	1212	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:21:"field_lock_department";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:11:"auth_manual";}	1572464538	web	192.168.33.1	\N
-668	\\core\\event\\config_log_created	core	created	config_log	config_log	1213	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"field_lock_phone1";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:11:"auth_manual";}	1572464538	web	192.168.33.1	\N
-669	\\core\\event\\config_log_created	core	created	config_log	config_log	1214	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"field_lock_phone2";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:11:"auth_manual";}	1572464538	web	192.168.33.1	\N
-670	\\core\\event\\config_log_created	core	created	config_log	config_log	1215	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:18:"field_lock_address";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:11:"auth_manual";}	1572464538	web	192.168.33.1	\N
-671	\\core\\event\\config_log_created	core	created	config_log	config_log	1216	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:28:"field_lock_firstnamephonetic";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:11:"auth_manual";}	1572464538	web	192.168.33.1	\N
-672	\\core\\event\\config_log_created	core	created	config_log	config_log	1217	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:27:"field_lock_lastnamephonetic";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:11:"auth_manual";}	1572464538	web	192.168.33.1	\N
-673	\\core\\event\\config_log_created	core	created	config_log	config_log	1218	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:21:"field_lock_middlename";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:11:"auth_manual";}	1572464538	web	192.168.33.1	\N
-674	\\core\\event\\config_log_created	core	created	config_log	config_log	1219	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:24:"field_lock_alternatename";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:11:"auth_manual";}	1572464538	web	192.168.33.1	\N
-675	\\core\\event\\config_log_created	core	created	config_log	config_log	1220	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:23:"rpc_negotiation_timeout";s:8:"oldvalue";N;s:5:"value";s:2:"30";s:6:"plugin";s:9:"auth_mnet";}	1572464538	web	192.168.33.1	\N
-676	\\core\\event\\config_log_created	core	created	config_log	config_log	1221	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:20:"field_lock_firstname";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:9:"auth_none";}	1572464538	web	192.168.33.1	\N
-677	\\core\\event\\config_log_created	core	created	config_log	config_log	1222	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:19:"field_lock_lastname";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:9:"auth_none";}	1572464538	web	192.168.33.1	\N
-678	\\core\\event\\config_log_created	core	created	config_log	config_log	1223	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:16:"field_lock_email";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:9:"auth_none";}	1572464538	web	192.168.33.1	\N
-679	\\core\\event\\config_log_created	core	created	config_log	config_log	1224	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"field_lock_city";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:9:"auth_none";}	1572464538	web	192.168.33.1	\N
-680	\\core\\event\\config_log_created	core	created	config_log	config_log	1225	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:18:"field_lock_country";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:9:"auth_none";}	1572464538	web	192.168.33.1	\N
-681	\\core\\event\\config_log_created	core	created	config_log	config_log	1226	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"field_lock_lang";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:9:"auth_none";}	1572464538	web	192.168.33.1	\N
-682	\\core\\event\\config_log_created	core	created	config_log	config_log	1227	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:22:"field_lock_description";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:9:"auth_none";}	1572464538	web	192.168.33.1	\N
-683	\\core\\event\\config_log_created	core	created	config_log	config_log	1228	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"field_lock_url";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:9:"auth_none";}	1572464538	web	192.168.33.1	\N
-684	\\core\\event\\config_log_created	core	created	config_log	config_log	1229	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:19:"field_lock_idnumber";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:9:"auth_none";}	1572464538	web	192.168.33.1	\N
-685	\\core\\event\\config_log_created	core	created	config_log	config_log	1230	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:22:"field_lock_institution";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:9:"auth_none";}	1572464538	web	192.168.33.1	\N
-686	\\core\\event\\config_log_created	core	created	config_log	config_log	1231	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:21:"field_lock_department";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:9:"auth_none";}	1572464538	web	192.168.33.1	\N
-687	\\core\\event\\config_log_created	core	created	config_log	config_log	1232	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"field_lock_phone1";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:9:"auth_none";}	1572464538	web	192.168.33.1	\N
-688	\\core\\event\\config_log_created	core	created	config_log	config_log	1233	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"field_lock_phone2";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:9:"auth_none";}	1572464538	web	192.168.33.1	\N
-689	\\core\\event\\config_log_created	core	created	config_log	config_log	1234	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:18:"field_lock_address";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:9:"auth_none";}	1572464538	web	192.168.33.1	\N
-690	\\core\\event\\config_log_created	core	created	config_log	config_log	1235	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:28:"field_lock_firstnamephonetic";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:9:"auth_none";}	1572464538	web	192.168.33.1	\N
-691	\\core\\event\\config_log_created	core	created	config_log	config_log	1236	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:27:"field_lock_lastnamephonetic";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:9:"auth_none";}	1572464538	web	192.168.33.1	\N
-692	\\core\\event\\config_log_created	core	created	config_log	config_log	1237	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:21:"field_lock_middlename";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:9:"auth_none";}	1572464538	web	192.168.33.1	\N
-693	\\core\\event\\config_log_created	core	created	config_log	config_log	1238	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:24:"field_lock_alternatename";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:9:"auth_none";}	1572464538	web	192.168.33.1	\N
-694	\\core\\event\\config_log_created	core	created	config_log	config_log	1239	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:20:"field_lock_firstname";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:11:"auth_oauth2";}	1572464538	web	192.168.33.1	\N
-695	\\core\\event\\config_log_created	core	created	config_log	config_log	1240	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:19:"field_lock_lastname";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:11:"auth_oauth2";}	1572464538	web	192.168.33.1	\N
-696	\\core\\event\\config_log_created	core	created	config_log	config_log	1241	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:16:"field_lock_email";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:11:"auth_oauth2";}	1572464538	web	192.168.33.1	\N
-697	\\core\\event\\config_log_created	core	created	config_log	config_log	1242	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"field_lock_city";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:11:"auth_oauth2";}	1572464538	web	192.168.33.1	\N
-698	\\core\\event\\config_log_created	core	created	config_log	config_log	1243	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:18:"field_lock_country";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:11:"auth_oauth2";}	1572464538	web	192.168.33.1	\N
-699	\\core\\event\\config_log_created	core	created	config_log	config_log	1244	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"field_lock_lang";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:11:"auth_oauth2";}	1572464538	web	192.168.33.1	\N
-700	\\core\\event\\config_log_created	core	created	config_log	config_log	1245	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:22:"field_lock_description";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:11:"auth_oauth2";}	1572464538	web	192.168.33.1	\N
-701	\\core\\event\\config_log_created	core	created	config_log	config_log	1246	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"field_lock_url";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:11:"auth_oauth2";}	1572464538	web	192.168.33.1	\N
-702	\\core\\event\\config_log_created	core	created	config_log	config_log	1247	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:19:"field_lock_idnumber";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:11:"auth_oauth2";}	1572464538	web	192.168.33.1	\N
-703	\\core\\event\\config_log_created	core	created	config_log	config_log	1248	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:22:"field_lock_institution";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:11:"auth_oauth2";}	1572464538	web	192.168.33.1	\N
-704	\\core\\event\\config_log_created	core	created	config_log	config_log	1249	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:21:"field_lock_department";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:11:"auth_oauth2";}	1572464538	web	192.168.33.1	\N
-705	\\core\\event\\config_log_created	core	created	config_log	config_log	1250	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"field_lock_phone1";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:11:"auth_oauth2";}	1572464538	web	192.168.33.1	\N
-706	\\core\\event\\config_log_created	core	created	config_log	config_log	1251	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"field_lock_phone2";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:11:"auth_oauth2";}	1572464538	web	192.168.33.1	\N
-707	\\core\\event\\config_log_created	core	created	config_log	config_log	1252	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:18:"field_lock_address";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:11:"auth_oauth2";}	1572464538	web	192.168.33.1	\N
-708	\\core\\event\\config_log_created	core	created	config_log	config_log	1253	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:28:"field_lock_firstnamephonetic";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:11:"auth_oauth2";}	1572464538	web	192.168.33.1	\N
-709	\\core\\event\\config_log_created	core	created	config_log	config_log	1254	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:27:"field_lock_lastnamephonetic";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:11:"auth_oauth2";}	1572464538	web	192.168.33.1	\N
-710	\\core\\event\\config_log_created	core	created	config_log	config_log	1255	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:21:"field_lock_middlename";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:11:"auth_oauth2";}	1572464538	web	192.168.33.1	\N
-711	\\core\\event\\config_log_created	core	created	config_log	config_log	1256	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:24:"field_lock_alternatename";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:11:"auth_oauth2";}	1572464538	web	192.168.33.1	\N
-712	\\core\\event\\config_log_created	core	created	config_log	config_log	1257	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"user_attribute";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:15:"auth_shibboleth";}	1572464538	web	192.168.33.1	\N
-713	\\core\\event\\config_log_created	core	created	config_log	config_log	1258	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:12:"convert_data";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:15:"auth_shibboleth";}	1572464538	web	192.168.33.1	\N
-714	\\core\\event\\config_log_created	core	created	config_log	config_log	1259	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:9:"alt_login";s:8:"oldvalue";N;s:5:"value";s:3:"off";s:6:"plugin";s:15:"auth_shibboleth";}	1572464538	web	192.168.33.1	\N
-715	\\core\\event\\config_log_created	core	created	config_log	config_log	1260	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:22:"organization_selection";s:8:"oldvalue";N;s:5:"value";s:259:"urn:mace:organization1:providerID, Example Organization 1\n        https://another.idp-id.com/shibboleth, Other Example Organization, /Shibboleth.sso/DS/SWITCHaai\n        urn:mace:organization2:providerID, Example Organization 2, /Shibboleth.sso/WAYF/SWITCHaai";s:6:"plugin";s:15:"auth_shibboleth";}	1572464538	web	192.168.33.1	\N
-716	\\core\\event\\config_log_created	core	created	config_log	config_log	1261	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"logout_handler";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:15:"auth_shibboleth";}	1572464538	web	192.168.33.1	\N
-717	\\core\\event\\config_log_created	core	created	config_log	config_log	1262	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"logout_return_url";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:15:"auth_shibboleth";}	1572464538	web	192.168.33.1	\N
-718	\\core\\event\\config_log_created	core	created	config_log	config_log	1263	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:10:"login_name";s:8:"oldvalue";N;s:5:"value";s:16:"Shibboleth Login";s:6:"plugin";s:15:"auth_shibboleth";}	1572464538	web	192.168.33.1	\N
-719	\\core\\event\\config_log_created	core	created	config_log	config_log	1264	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:9:"auth_logo";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:15:"auth_shibboleth";}	1572464538	web	192.168.33.1	\N
-720	\\core\\event\\config_log_created	core	created	config_log	config_log	1265	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"auth_instructions";s:8:"oldvalue";N;s:5:"value";s:226:"Use the <a href="https://agora-virtual.xtec.cat/agora/moodle2/auth/shibboleth/index.php">Shibboleth login</a> to get access via Shibboleth, if your institution supports it.<br />Otherwise, use the normal login form shown here.";s:6:"plugin";s:15:"auth_shibboleth";}	1572464538	web	192.168.33.1	\N
-721	\\core\\event\\config_log_created	core	created	config_log	config_log	1266	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"changepasswordurl";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:15:"auth_shibboleth";}	1572464538	web	192.168.33.1	\N
-722	\\core\\event\\config_log_created	core	created	config_log	config_log	1267	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:19:"field_map_firstname";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:15:"auth_shibboleth";}	1572464538	web	192.168.33.1	\N
-723	\\core\\event\\config_log_created	core	created	config_log	config_log	1268	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:27:"field_updatelocal_firstname";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:15:"auth_shibboleth";}	1572464538	web	192.168.33.1	\N
-724	\\core\\event\\config_log_created	core	created	config_log	config_log	1269	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:20:"field_lock_firstname";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:15:"auth_shibboleth";}	1572464538	web	192.168.33.1	\N
-725	\\core\\event\\config_log_created	core	created	config_log	config_log	1270	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:18:"field_map_lastname";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:15:"auth_shibboleth";}	1572464538	web	192.168.33.1	\N
-726	\\core\\event\\config_log_created	core	created	config_log	config_log	1271	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:26:"field_updatelocal_lastname";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:15:"auth_shibboleth";}	1572464538	web	192.168.33.1	\N
-727	\\core\\event\\config_log_created	core	created	config_log	config_log	1272	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:19:"field_lock_lastname";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:15:"auth_shibboleth";}	1572464538	web	192.168.33.1	\N
-728	\\core\\event\\config_log_created	core	created	config_log	config_log	1273	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"field_map_email";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:15:"auth_shibboleth";}	1572464538	web	192.168.33.1	\N
-729	\\core\\event\\config_log_created	core	created	config_log	config_log	1274	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:23:"field_updatelocal_email";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:15:"auth_shibboleth";}	1572464538	web	192.168.33.1	\N
-730	\\core\\event\\config_log_created	core	created	config_log	config_log	1275	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:16:"field_lock_email";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:15:"auth_shibboleth";}	1572464538	web	192.168.33.1	\N
-731	\\core\\event\\config_log_created	core	created	config_log	config_log	1276	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"field_map_city";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:15:"auth_shibboleth";}	1572464538	web	192.168.33.1	\N
-732	\\core\\event\\config_log_created	core	created	config_log	config_log	1277	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:22:"field_updatelocal_city";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:15:"auth_shibboleth";}	1572464538	web	192.168.33.1	\N
-733	\\core\\event\\config_log_created	core	created	config_log	config_log	1278	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"field_lock_city";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:15:"auth_shibboleth";}	1572464538	web	192.168.33.1	\N
-734	\\core\\event\\config_log_created	core	created	config_log	config_log	1279	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"field_map_country";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:15:"auth_shibboleth";}	1572464538	web	192.168.33.1	\N
-735	\\core\\event\\config_log_created	core	created	config_log	config_log	1280	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:25:"field_updatelocal_country";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:15:"auth_shibboleth";}	1572464538	web	192.168.33.1	\N
-736	\\core\\event\\config_log_created	core	created	config_log	config_log	1281	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:18:"field_lock_country";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:15:"auth_shibboleth";}	1572464538	web	192.168.33.1	\N
-737	\\core\\event\\config_log_created	core	created	config_log	config_log	1282	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"field_map_lang";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:15:"auth_shibboleth";}	1572464538	web	192.168.33.1	\N
-738	\\core\\event\\config_log_created	core	created	config_log	config_log	1283	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:22:"field_updatelocal_lang";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:15:"auth_shibboleth";}	1572464538	web	192.168.33.1	\N
-739	\\core\\event\\config_log_created	core	created	config_log	config_log	1284	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"field_lock_lang";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:15:"auth_shibboleth";}	1572464538	web	192.168.33.1	\N
-740	\\core\\event\\config_log_created	core	created	config_log	config_log	1285	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:21:"field_map_description";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:15:"auth_shibboleth";}	1572464538	web	192.168.33.1	\N
-741	\\core\\event\\config_log_created	core	created	config_log	config_log	1286	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:29:"field_updatelocal_description";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:15:"auth_shibboleth";}	1572464538	web	192.168.33.1	\N
-742	\\core\\event\\config_log_created	core	created	config_log	config_log	1287	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:22:"field_lock_description";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:15:"auth_shibboleth";}	1572464538	web	192.168.33.1	\N
-743	\\core\\event\\config_log_created	core	created	config_log	config_log	1288	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:13:"field_map_url";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:15:"auth_shibboleth";}	1572464538	web	192.168.33.1	\N
-744	\\core\\event\\config_log_created	core	created	config_log	config_log	1289	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:21:"field_updatelocal_url";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:15:"auth_shibboleth";}	1572464538	web	192.168.33.1	\N
-745	\\core\\event\\config_log_created	core	created	config_log	config_log	1290	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"field_lock_url";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:15:"auth_shibboleth";}	1572464538	web	192.168.33.1	\N
-746	\\core\\event\\config_log_created	core	created	config_log	config_log	1291	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:18:"field_map_idnumber";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:15:"auth_shibboleth";}	1572464538	web	192.168.33.1	\N
-747	\\core\\event\\config_log_created	core	created	config_log	config_log	1292	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:26:"field_updatelocal_idnumber";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:15:"auth_shibboleth";}	1572464538	web	192.168.33.1	\N
-748	\\core\\event\\config_log_created	core	created	config_log	config_log	1293	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:19:"field_lock_idnumber";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:15:"auth_shibboleth";}	1572464538	web	192.168.33.1	\N
-749	\\core\\event\\config_log_created	core	created	config_log	config_log	1294	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:21:"field_map_institution";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:15:"auth_shibboleth";}	1572464538	web	192.168.33.1	\N
-750	\\core\\event\\config_log_created	core	created	config_log	config_log	1295	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:29:"field_updatelocal_institution";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:15:"auth_shibboleth";}	1572464538	web	192.168.33.1	\N
-751	\\core\\event\\config_log_created	core	created	config_log	config_log	1296	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:22:"field_lock_institution";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:15:"auth_shibboleth";}	1572464538	web	192.168.33.1	\N
-752	\\core\\event\\config_log_created	core	created	config_log	config_log	1297	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:20:"field_map_department";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:15:"auth_shibboleth";}	1572464538	web	192.168.33.1	\N
-753	\\core\\event\\config_log_created	core	created	config_log	config_log	1298	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:28:"field_updatelocal_department";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:15:"auth_shibboleth";}	1572464538	web	192.168.33.1	\N
-754	\\core\\event\\config_log_created	core	created	config_log	config_log	1299	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:21:"field_lock_department";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:15:"auth_shibboleth";}	1572464538	web	192.168.33.1	\N
-755	\\core\\event\\config_log_created	core	created	config_log	config_log	1300	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:16:"field_map_phone1";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:15:"auth_shibboleth";}	1572464538	web	192.168.33.1	\N
-756	\\core\\event\\config_log_created	core	created	config_log	config_log	1301	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:24:"field_updatelocal_phone1";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:15:"auth_shibboleth";}	1572464538	web	192.168.33.1	\N
-757	\\core\\event\\config_log_created	core	created	config_log	config_log	1302	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"field_lock_phone1";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:15:"auth_shibboleth";}	1572464538	web	192.168.33.1	\N
-758	\\core\\event\\config_log_created	core	created	config_log	config_log	1303	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:16:"field_map_phone2";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:15:"auth_shibboleth";}	1572464538	web	192.168.33.1	\N
-759	\\core\\event\\config_log_created	core	created	config_log	config_log	1304	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:24:"field_updatelocal_phone2";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:15:"auth_shibboleth";}	1572464538	web	192.168.33.1	\N
-760	\\core\\event\\config_log_created	core	created	config_log	config_log	1305	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"field_lock_phone2";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:15:"auth_shibboleth";}	1572464538	web	192.168.33.1	\N
-761	\\core\\event\\config_log_created	core	created	config_log	config_log	1306	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"field_map_address";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:15:"auth_shibboleth";}	1572464538	web	192.168.33.1	\N
-762	\\core\\event\\config_log_created	core	created	config_log	config_log	1307	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:25:"field_updatelocal_address";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:15:"auth_shibboleth";}	1572464538	web	192.168.33.1	\N
-763	\\core\\event\\config_log_created	core	created	config_log	config_log	1308	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:18:"field_lock_address";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:15:"auth_shibboleth";}	1572464538	web	192.168.33.1	\N
-764	\\core\\event\\config_log_created	core	created	config_log	config_log	1309	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:27:"field_map_firstnamephonetic";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:15:"auth_shibboleth";}	1572464538	web	192.168.33.1	\N
-765	\\core\\event\\config_log_created	core	created	config_log	config_log	1310	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:35:"field_updatelocal_firstnamephonetic";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:15:"auth_shibboleth";}	1572464538	web	192.168.33.1	\N
-766	\\core\\event\\config_log_created	core	created	config_log	config_log	1311	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:28:"field_lock_firstnamephonetic";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:15:"auth_shibboleth";}	1572464538	web	192.168.33.1	\N
-767	\\core\\event\\config_log_created	core	created	config_log	config_log	1312	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:26:"field_map_lastnamephonetic";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:15:"auth_shibboleth";}	1572464538	web	192.168.33.1	\N
-768	\\core\\event\\config_log_created	core	created	config_log	config_log	1313	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:34:"field_updatelocal_lastnamephonetic";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:15:"auth_shibboleth";}	1572464538	web	192.168.33.1	\N
-769	\\core\\event\\config_log_created	core	created	config_log	config_log	1314	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:27:"field_lock_lastnamephonetic";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:15:"auth_shibboleth";}	1572464538	web	192.168.33.1	\N
-770	\\core\\event\\config_log_created	core	created	config_log	config_log	1315	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:20:"field_map_middlename";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:15:"auth_shibboleth";}	1572464538	web	192.168.33.1	\N
-771	\\core\\event\\config_log_created	core	created	config_log	config_log	1316	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:28:"field_updatelocal_middlename";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:15:"auth_shibboleth";}	1572464538	web	192.168.33.1	\N
-772	\\core\\event\\config_log_created	core	created	config_log	config_log	1317	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:21:"field_lock_middlename";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:15:"auth_shibboleth";}	1572464538	web	192.168.33.1	\N
-773	\\core\\event\\config_log_created	core	created	config_log	config_log	1318	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:23:"field_map_alternatename";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:15:"auth_shibboleth";}	1572464538	web	192.168.33.1	\N
-774	\\core\\event\\config_log_created	core	created	config_log	config_log	1319	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:31:"field_updatelocal_alternatename";s:8:"oldvalue";N;s:5:"value";s:8:"oncreate";s:6:"plugin";s:15:"auth_shibboleth";}	1572464538	web	192.168.33.1	\N
-775	\\core\\event\\config_log_created	core	created	config_log	config_log	1320	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:24:"field_lock_alternatename";s:8:"oldvalue";N;s:5:"value";s:8:"unlocked";s:6:"plugin";s:15:"auth_shibboleth";}	1572464538	web	192.168.33.1	\N
-776	\\core\\event\\config_log_created	core	created	config_log	config_log	1321	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"config_showbest";s:8:"oldvalue";N;s:5:"value";s:1:"3";s:6:"plugin";s:22:"block_activity_results";}	1572464538	web	192.168.33.1	\N
-777	\\core\\event\\config_log_created	core	created	config_log	config_log	1322	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:22:"config_showbest_locked";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:22:"block_activity_results";}	1572464538	web	192.168.33.1	\N
-778	\\core\\event\\config_log_created	core	created	config_log	config_log	1323	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:16:"config_showworst";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:22:"block_activity_results";}	1572464538	web	192.168.33.1	\N
-779	\\core\\event\\config_log_created	core	created	config_log	config_log	1324	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:23:"config_showworst_locked";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:22:"block_activity_results";}	1572464538	web	192.168.33.1	\N
-780	\\core\\event\\config_log_created	core	created	config_log	config_log	1325	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:16:"config_usegroups";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:22:"block_activity_results";}	1572464538	web	192.168.33.1	\N
-781	\\core\\event\\config_log_created	core	created	config_log	config_log	1326	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:23:"config_usegroups_locked";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:22:"block_activity_results";}	1572464538	web	192.168.33.1	\N
-782	\\core\\event\\config_log_created	core	created	config_log	config_log	1327	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"config_nameformat";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:22:"block_activity_results";}	1572464538	web	192.168.33.1	\N
-783	\\core\\event\\config_log_created	core	created	config_log	config_log	1328	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:24:"config_nameformat_locked";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:22:"block_activity_results";}	1572464538	web	192.168.33.1	\N
-784	\\core\\event\\config_log_created	core	created	config_log	config_log	1329	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:18:"config_gradeformat";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:22:"block_activity_results";}	1572464538	web	192.168.33.1	\N
-785	\\core\\event\\config_log_created	core	created	config_log	config_log	1330	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:25:"config_gradeformat_locked";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:22:"block_activity_results";}	1572464538	web	192.168.33.1	\N
-786	\\core\\event\\config_log_created	core	created	config_log	config_log	1331	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:20:"config_decimalpoints";s:8:"oldvalue";N;s:5:"value";s:1:"2";s:6:"plugin";s:22:"block_activity_results";}	1572464538	web	192.168.33.1	\N
-787	\\core\\event\\config_log_created	core	created	config_log	config_log	1332	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:27:"config_decimalpoints_locked";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:22:"block_activity_results";}	1572464538	web	192.168.33.1	\N
-788	\\core\\event\\config_log_created	core	created	config_log	config_log	1333	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:27:"block_course_list_adminview";s:8:"oldvalue";N;s:5:"value";s:3:"all";s:6:"plugin";N;}	1572464538	web	192.168.33.1	\N
-789	\\core\\event\\config_log_created	core	created	config_log	config_log	1334	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:36:"block_course_list_hideallcourseslink";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";N;}	1572464538	web	192.168.33.1	\N
-790	\\core\\event\\config_log_created	core	created	config_log	config_log	1335	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:26:"block_html_allowcssclasses";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";N;}	1572464538	web	192.168.33.1	\N
-791	\\core\\event\\config_log_created	core	created	config_log	config_log	1336	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:28:"block_online_users_timetosee";s:8:"oldvalue";N;s:5:"value";s:1:"5";s:6:"plugin";N;}	1572464538	web	192.168.33.1	\N
-792	\\core\\event\\config_log_created	core	created	config_log	config_log	1337	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:28:"block_rss_client_num_entries";s:8:"oldvalue";N;s:5:"value";s:1:"5";s:6:"plugin";N;}	1572464538	web	192.168.33.1	\N
-793	\\core\\event\\config_log_created	core	created	config_log	config_log	1338	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:24:"block_rss_client_timeout";s:8:"oldvalue";N;s:5:"value";s:2:"30";s:6:"plugin";N;}	1572464538	web	192.168.33.1	\N
-794	\\core\\event\\config_log_created	core	created	config_log	config_log	1339	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:12:"numsections1";s:8:"oldvalue";N;s:5:"value";s:2:"22";s:6:"plugin";s:19:"block_section_links";}	1572464538	web	192.168.33.1	\N
-795	\\core\\event\\config_log_created	core	created	config_log	config_log	1340	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:6:"incby1";s:8:"oldvalue";N;s:5:"value";s:1:"2";s:6:"plugin";s:19:"block_section_links";}	1572464538	web	192.168.33.1	\N
-796	\\core\\event\\config_log_created	core	created	config_log	config_log	1341	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:12:"numsections2";s:8:"oldvalue";N;s:5:"value";s:2:"40";s:6:"plugin";s:19:"block_section_links";}	1572464538	web	192.168.33.1	\N
-797	\\core\\event\\config_log_created	core	created	config_log	config_log	1342	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:6:"incby2";s:8:"oldvalue";N;s:5:"value";s:1:"5";s:6:"plugin";s:19:"block_section_links";}	1572464538	web	192.168.33.1	\N
-798	\\core\\event\\config_log_created	core	created	config_log	config_log	1343	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:6:"apikey";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:17:"block_tag_youtube";}	1572464538	web	192.168.33.1	\N
-799	\\core\\event\\config_log_created	core	created	config_log	config_log	1344	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:12:"activitytype";s:8:"oldvalue";N;s:5:"value";s:5:"forum";s:6:"plugin";s:21:"format_singleactivity";}	1572464538	web	192.168.33.1	\N
-800	\\core\\event\\config_log_created	core	created	config_log	config_log	1345	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:8:"issuerid";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:25:"fileconverter_googledrive";}	1572464538	web	192.168.33.1	\N
-801	\\core\\event\\config_log_created	core	created	config_log	config_log	1346	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:13:"pathtounoconv";s:8:"oldvalue";N;s:5:"value";s:16:"/usr/bin/unoconv";s:6:"plugin";N;}	1572464538	web	192.168.33.1	\N
-802	\\core\\event\\config_log_created	core	created	config_log	config_log	1347	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:6:"roleid";s:8:"oldvalue";N;s:5:"value";s:1:"5";s:6:"plugin";s:12:"enrol_cohort";}	1572464538	web	192.168.33.1	\N
-803	\\core\\event\\config_log_created	core	created	config_log	config_log	1348	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:13:"unenrolaction";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:12:"enrol_cohort";}	1572464538	web	192.168.33.1	\N
-804	\\core\\event\\config_log_created	core	created	config_log	config_log	1349	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:13:"nosyncroleids";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:10:"enrol_meta";}	1572464538	web	192.168.33.1	\N
-805	\\core\\event\\config_log_created	core	created	config_log	config_log	1350	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:7:"syncall";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:10:"enrol_meta";}	1572464538	web	192.168.33.1	\N
-806	\\core\\event\\config_log_created	core	created	config_log	config_log	1351	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:13:"unenrolaction";s:8:"oldvalue";N;s:5:"value";s:1:"3";s:6:"plugin";s:10:"enrol_meta";}	1572464538	web	192.168.33.1	\N
-807	\\core\\event\\config_log_created	core	created	config_log	config_log	1352	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:10:"coursesort";s:8:"oldvalue";N;s:5:"value";s:9:"sortorder";s:6:"plugin";s:10:"enrol_meta";}	1572464538	web	192.168.33.1	\N
-808	\\core\\event\\config_log_created	core	created	config_log	config_log	1353	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:6:"dbtype";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:14:"enrol_database";}	1572464538	web	192.168.33.1	\N
-809	\\core\\event\\config_log_created	core	created	config_log	config_log	1354	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:6:"dbhost";s:8:"oldvalue";N;s:5:"value";s:9:"localhost";s:6:"plugin";s:14:"enrol_database";}	1572464538	web	192.168.33.1	\N
-810	\\core\\event\\config_log_created	core	created	config_log	config_log	1355	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:6:"dbuser";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:14:"enrol_database";}	1572464538	web	192.168.33.1	\N
-811	\\core\\event\\config_log_created	core	created	config_log	config_log	1356	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:6:"dbpass";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:14:"enrol_database";}	1572464538	web	192.168.33.1	\N
-812	\\core\\event\\config_log_created	core	created	config_log	config_log	1357	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:6:"dbname";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:14:"enrol_database";}	1572464538	web	192.168.33.1	\N
-813	\\core\\event\\config_log_created	core	created	config_log	config_log	1358	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:10:"dbencoding";s:8:"oldvalue";N;s:5:"value";s:5:"utf-8";s:6:"plugin";s:14:"enrol_database";}	1572464538	web	192.168.33.1	\N
-814	\\core\\event\\config_log_created	core	created	config_log	config_log	1359	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:10:"dbsetupsql";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:14:"enrol_database";}	1572464538	web	192.168.33.1	\N
-815	\\core\\event\\config_log_created	core	created	config_log	config_log	1360	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"dbsybasequoting";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:14:"enrol_database";}	1572464538	web	192.168.33.1	\N
-816	\\core\\event\\config_log_created	core	created	config_log	config_log	1361	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:7:"debugdb";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:14:"enrol_database";}	1572464538	web	192.168.33.1	\N
-817	\\core\\event\\config_log_created	core	created	config_log	config_log	1362	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:16:"localcoursefield";s:8:"oldvalue";N;s:5:"value";s:8:"idnumber";s:6:"plugin";s:14:"enrol_database";}	1572464538	web	192.168.33.1	\N
-818	\\core\\event\\config_log_created	core	created	config_log	config_log	1363	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"localuserfield";s:8:"oldvalue";N;s:5:"value";s:8:"idnumber";s:6:"plugin";s:14:"enrol_database";}	1572464538	web	192.168.33.1	\N
-819	\\core\\event\\config_log_created	core	created	config_log	config_log	1364	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"localrolefield";s:8:"oldvalue";N;s:5:"value";s:9:"shortname";s:6:"plugin";s:14:"enrol_database";}	1572464538	web	192.168.33.1	\N
-820	\\core\\event\\config_log_created	core	created	config_log	config_log	1365	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:18:"localcategoryfield";s:8:"oldvalue";N;s:5:"value";s:2:"id";s:6:"plugin";s:14:"enrol_database";}	1572464538	web	192.168.33.1	\N
-821	\\core\\event\\config_log_created	core	created	config_log	config_log	1366	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:16:"remoteenroltable";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:14:"enrol_database";}	1572464538	web	192.168.33.1	\N
-822	\\core\\event\\config_log_created	core	created	config_log	config_log	1367	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"remotecoursefield";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:14:"enrol_database";}	1572464538	web	192.168.33.1	\N
-823	\\core\\event\\config_log_created	core	created	config_log	config_log	1368	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"remoteuserfield";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:14:"enrol_database";}	1572464538	web	192.168.33.1	\N
-824	\\core\\event\\config_log_created	core	created	config_log	config_log	1369	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"remoterolefield";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:14:"enrol_database";}	1572464538	web	192.168.33.1	\N
-825	\\core\\event\\config_log_created	core	created	config_log	config_log	1370	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:20:"remoteotheruserfield";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:14:"enrol_database";}	1572464538	web	192.168.33.1	\N
-826	\\core\\event\\config_log_created	core	created	config_log	config_log	1371	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:11:"defaultrole";s:8:"oldvalue";N;s:5:"value";s:1:"5";s:6:"plugin";s:14:"enrol_database";}	1572464538	web	192.168.33.1	\N
-827	\\core\\event\\config_log_created	core	created	config_log	config_log	1372	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:19:"ignorehiddencourses";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:14:"enrol_database";}	1572464538	web	192.168.33.1	\N
-828	\\core\\event\\config_log_created	core	created	config_log	config_log	1373	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:13:"unenrolaction";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:14:"enrol_database";}	1572464538	web	192.168.33.1	\N
-829	\\core\\event\\config_log_created	core	created	config_log	config_log	1374	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"newcoursetable";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:14:"enrol_database";}	1572464538	web	192.168.33.1	\N
-830	\\core\\event\\config_log_created	core	created	config_log	config_log	1375	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"newcoursefullname";s:8:"oldvalue";N;s:5:"value";s:8:"fullname";s:6:"plugin";s:14:"enrol_database";}	1572464538	web	192.168.33.1	\N
-831	\\core\\event\\config_log_created	core	created	config_log	config_log	1376	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:18:"newcourseshortname";s:8:"oldvalue";N;s:5:"value";s:9:"shortname";s:6:"plugin";s:14:"enrol_database";}	1572464538	web	192.168.33.1	\N
-832	\\core\\event\\config_log_created	core	created	config_log	config_log	1377	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"newcourseidnumber";s:8:"oldvalue";N;s:5:"value";s:8:"idnumber";s:6:"plugin";s:14:"enrol_database";}	1572464538	web	192.168.33.1	\N
-833	\\core\\event\\config_log_created	core	created	config_log	config_log	1378	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"newcoursecategory";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:14:"enrol_database";}	1572464538	web	192.168.33.1	\N
-834	\\core\\event\\config_log_created	core	created	config_log	config_log	1379	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"defaultcategory";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:14:"enrol_database";}	1572464538	web	192.168.33.1	\N
-835	\\core\\event\\config_log_created	core	created	config_log	config_log	1380	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"templatecourse";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:14:"enrol_database";}	1572464538	web	192.168.33.1	\N
-836	\\core\\event\\config_log_created	core	created	config_log	config_log	1381	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:8:"location";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:14:"enrol_flatfile";}	1572464538	web	192.168.33.1	\N
-837	\\core\\event\\config_log_created	core	created	config_log	config_log	1382	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:8:"encoding";s:8:"oldvalue";N;s:5:"value";s:5:"UTF-8";s:6:"plugin";s:14:"enrol_flatfile";}	1572464538	web	192.168.33.1	\N
-838	\\core\\event\\config_log_created	core	created	config_log	config_log	1383	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:12:"mailstudents";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:14:"enrol_flatfile";}	1572464538	web	192.168.33.1	\N
-839	\\core\\event\\config_log_created	core	created	config_log	config_log	1384	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:12:"mailteachers";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:14:"enrol_flatfile";}	1572464538	web	192.168.33.1	\N
-840	\\core\\event\\config_log_created	core	created	config_log	config_log	1385	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:10:"mailadmins";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:14:"enrol_flatfile";}	1572464538	web	192.168.33.1	\N
-841	\\core\\event\\config_log_created	core	created	config_log	config_log	1386	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:13:"unenrolaction";s:8:"oldvalue";N;s:5:"value";s:1:"3";s:6:"plugin";s:14:"enrol_flatfile";}	1572464538	web	192.168.33.1	\N
-842	\\core\\event\\config_log_created	core	created	config_log	config_log	1387	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:13:"expiredaction";s:8:"oldvalue";N;s:5:"value";s:1:"3";s:6:"plugin";s:14:"enrol_flatfile";}	1572464538	web	192.168.33.1	\N
-843	\\core\\event\\config_log_created	core	created	config_log	config_log	1388	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"requirepassword";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:11:"enrol_guest";}	1572464538	web	192.168.33.1	\N
-844	\\core\\event\\config_log_created	core	created	config_log	config_log	1389	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"usepasswordpolicy";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:11:"enrol_guest";}	1572464538	web	192.168.33.1	\N
-845	\\core\\event\\config_log_created	core	created	config_log	config_log	1390	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:8:"showhint";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:11:"enrol_guest";}	1572464538	web	192.168.33.1	\N
-846	\\core\\event\\config_log_created	core	created	config_log	config_log	1391	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:12:"defaultenrol";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:11:"enrol_guest";}	1572464538	web	192.168.33.1	\N
-847	\\core\\event\\config_log_created	core	created	config_log	config_log	1392	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:6:"status";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:11:"enrol_guest";}	1572464538	web	192.168.33.1	\N
-848	\\core\\event\\config_log_created	core	created	config_log	config_log	1393	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:10:"status_adv";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:11:"enrol_guest";}	1572464538	web	192.168.33.1	\N
-849	\\core\\event\\config_log_created	core	created	config_log	config_log	1394	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"imsfilelocation";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:19:"enrol_imsenterprise";}	1572464538	web	192.168.33.1	\N
-850	\\core\\event\\config_log_created	core	created	config_log	config_log	1395	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:13:"logtolocation";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:19:"enrol_imsenterprise";}	1572464538	web	192.168.33.1	\N
-851	\\core\\event\\config_log_created	core	created	config_log	config_log	1396	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:10:"mailadmins";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:19:"enrol_imsenterprise";}	1572464538	web	192.168.33.1	\N
-852	\\core\\event\\config_log_created	core	created	config_log	config_log	1397	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"createnewusers";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:19:"enrol_imsenterprise";}	1572464538	web	192.168.33.1	\N
-853	\\core\\event\\config_log_created	core	created	config_log	config_log	1398	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"imsupdateusers";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:19:"enrol_imsenterprise";}	1572464538	web	192.168.33.1	\N
-854	\\core\\event\\config_log_created	core	created	config_log	config_log	1399	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"imsdeleteusers";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:19:"enrol_imsenterprise";}	1572464538	web	192.168.33.1	\N
-855	\\core\\event\\config_log_created	core	created	config_log	config_log	1400	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:16:"fixcaseusernames";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:19:"enrol_imsenterprise";}	1572464538	web	192.168.33.1	\N
-856	\\core\\event\\config_log_created	core	created	config_log	config_log	1401	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:20:"fixcasepersonalnames";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:19:"enrol_imsenterprise";}	1572464538	web	192.168.33.1	\N
-857	\\core\\event\\config_log_created	core	created	config_log	config_log	1402	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:20:"imssourcedidfallback";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:19:"enrol_imsenterprise";}	1572464538	web	192.168.33.1	\N
-858	\\core\\event\\config_log_created	core	created	config_log	config_log	1403	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:12:"imsrolemap01";s:8:"oldvalue";N;s:5:"value";s:1:"5";s:6:"plugin";s:19:"enrol_imsenterprise";}	1572464538	web	192.168.33.1	\N
-859	\\core\\event\\config_log_created	core	created	config_log	config_log	1404	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:12:"imsrolemap02";s:8:"oldvalue";N;s:5:"value";s:1:"3";s:6:"plugin";s:19:"enrol_imsenterprise";}	1572464538	web	192.168.33.1	\N
-860	\\core\\event\\config_log_created	core	created	config_log	config_log	1405	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:12:"imsrolemap03";s:8:"oldvalue";N;s:5:"value";s:1:"3";s:6:"plugin";s:19:"enrol_imsenterprise";}	1572464538	web	192.168.33.1	\N
-861	\\core\\event\\config_log_created	core	created	config_log	config_log	1406	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:12:"imsrolemap04";s:8:"oldvalue";N;s:5:"value";s:1:"5";s:6:"plugin";s:19:"enrol_imsenterprise";}	1572464538	web	192.168.33.1	\N
-862	\\core\\event\\config_log_created	core	created	config_log	config_log	1407	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:12:"imsrolemap05";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:19:"enrol_imsenterprise";}	1572464538	web	192.168.33.1	\N
-863	\\core\\event\\config_log_created	core	created	config_log	config_log	1408	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:12:"imsrolemap06";s:8:"oldvalue";N;s:5:"value";s:1:"4";s:6:"plugin";s:19:"enrol_imsenterprise";}	1572464538	web	192.168.33.1	\N
-864	\\core\\event\\config_log_created	core	created	config_log	config_log	1409	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:12:"imsrolemap07";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:19:"enrol_imsenterprise";}	1572464538	web	192.168.33.1	\N
-865	\\core\\event\\config_log_created	core	created	config_log	config_log	1410	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:12:"imsrolemap08";s:8:"oldvalue";N;s:5:"value";s:1:"4";s:6:"plugin";s:19:"enrol_imsenterprise";}	1572464538	web	192.168.33.1	\N
-866	\\core\\event\\config_log_created	core	created	config_log	config_log	1411	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:19:"truncatecoursecodes";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:19:"enrol_imsenterprise";}	1572464538	web	192.168.33.1	\N
-867	\\core\\event\\config_log_created	core	created	config_log	config_log	1412	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:16:"createnewcourses";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:19:"enrol_imsenterprise";}	1572464538	web	192.168.33.1	\N
-868	\\core\\event\\config_log_created	core	created	config_log	config_log	1413	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:13:"updatecourses";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:19:"enrol_imsenterprise";}	1572464538	web	192.168.33.1	\N
-869	\\core\\event\\config_log_created	core	created	config_log	config_log	1414	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:19:"createnewcategories";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:19:"enrol_imsenterprise";}	1572464538	web	192.168.33.1	\N
-870	\\core\\event\\config_log_created	core	created	config_log	config_log	1415	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:16:"nestedcategories";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:19:"enrol_imsenterprise";}	1572464538	web	192.168.33.1	\N
-871	\\core\\event\\config_log_created	core	created	config_log	config_log	1416	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:16:"categoryidnumber";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:19:"enrol_imsenterprise";}	1572464538	web	192.168.33.1	\N
-872	\\core\\event\\config_log_created	core	created	config_log	config_log	1417	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"categoryseparator";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:19:"enrol_imsenterprise";}	1572464538	web	192.168.33.1	\N
-873	\\core\\event\\config_log_created	core	created	config_log	config_log	1418	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:10:"imsunenrol";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:19:"enrol_imsenterprise";}	1572464538	web	192.168.33.1	\N
-874	\\core\\event\\config_log_created	core	created	config_log	config_log	1419	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:21:"imscoursemapshortname";s:8:"oldvalue";N;s:5:"value";s:10:"coursecode";s:6:"plugin";s:19:"enrol_imsenterprise";}	1572464538	web	192.168.33.1	\N
-875	\\core\\event\\config_log_created	core	created	config_log	config_log	1420	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:20:"imscoursemapfullname";s:8:"oldvalue";N;s:5:"value";s:5:"short";s:6:"plugin";s:19:"enrol_imsenterprise";}	1572464538	web	192.168.33.1	\N
-876	\\core\\event\\config_log_created	core	created	config_log	config_log	1421	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:19:"imscoursemapsummary";s:8:"oldvalue";N;s:5:"value";s:6:"ignore";s:6:"plugin";s:19:"enrol_imsenterprise";}	1572464538	web	192.168.33.1	\N
-877	\\core\\event\\config_log_created	core	created	config_log	config_log	1422	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"imsrestricttarget";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:19:"enrol_imsenterprise";}	1572464538	web	192.168.33.1	\N
-878	\\core\\event\\config_log_created	core	created	config_log	config_log	1423	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:12:"imscapitafix";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:19:"enrol_imsenterprise";}	1572464538	web	192.168.33.1	\N
-879	\\core\\event\\config_log_created	core	created	config_log	config_log	1424	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:8:"host_url";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:10:"enrol_ldap";}	1572464538	web	192.168.33.1	\N
-880	\\core\\event\\config_log_created	core	created	config_log	config_log	1425	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:9:"start_tls";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:10:"enrol_ldap";}	1572464538	web	192.168.33.1	\N
-881	\\core\\event\\config_log_created	core	created	config_log	config_log	1426	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:12:"ldap_version";s:8:"oldvalue";N;s:5:"value";s:1:"3";s:6:"plugin";s:10:"enrol_ldap";}	1572464538	web	192.168.33.1	\N
-882	\\core\\event\\config_log_created	core	created	config_log	config_log	1427	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:12:"ldapencoding";s:8:"oldvalue";N;s:5:"value";s:5:"utf-8";s:6:"plugin";s:10:"enrol_ldap";}	1572464538	web	192.168.33.1	\N
-883	\\core\\event\\config_log_created	core	created	config_log	config_log	1428	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:8:"pagesize";s:8:"oldvalue";N;s:5:"value";s:3:"250";s:6:"plugin";s:10:"enrol_ldap";}	1572464538	web	192.168.33.1	\N
-884	\\core\\event\\config_log_created	core	created	config_log	config_log	1429	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:7:"bind_dn";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:10:"enrol_ldap";}	1572464538	web	192.168.33.1	\N
-885	\\core\\event\\config_log_created	core	created	config_log	config_log	1430	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:7:"bind_pw";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:10:"enrol_ldap";}	1572464538	web	192.168.33.1	\N
-886	\\core\\event\\config_log_created	core	created	config_log	config_log	1431	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"course_search_sub";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:10:"enrol_ldap";}	1572464538	web	192.168.33.1	\N
-887	\\core\\event\\config_log_created	core	created	config_log	config_log	1432	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:20:"memberattribute_isdn";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:10:"enrol_ldap";}	1572464538	web	192.168.33.1	\N
-888	\\core\\event\\config_log_created	core	created	config_log	config_log	1433	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:13:"user_contexts";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:10:"enrol_ldap";}	1572464538	web	192.168.33.1	\N
-889	\\core\\event\\config_log_created	core	created	config_log	config_log	1434	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"user_search_sub";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:10:"enrol_ldap";}	1572464538	web	192.168.33.1	\N
-890	\\core\\event\\config_log_created	core	created	config_log	config_log	1435	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:9:"user_type";s:8:"oldvalue";N;s:5:"value";s:7:"default";s:6:"plugin";s:10:"enrol_ldap";}	1572464538	web	192.168.33.1	\N
-891	\\core\\event\\config_log_created	core	created	config_log	config_log	1436	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:9:"opt_deref";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:10:"enrol_ldap";}	1572464538	web	192.168.33.1	\N
-892	\\core\\event\\config_log_created	core	created	config_log	config_log	1437	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:18:"idnumber_attribute";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:10:"enrol_ldap";}	1572464538	web	192.168.33.1	\N
-893	\\core\\event\\config_log_created	core	created	config_log	config_log	1438	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:11:"objectclass";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:10:"enrol_ldap";}	1572464538	web	192.168.33.1	\N
-894	\\core\\event\\config_log_created	core	created	config_log	config_log	1439	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"course_idnumber";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:10:"enrol_ldap";}	1572464538	web	192.168.33.1	\N
-895	\\core\\event\\config_log_created	core	created	config_log	config_log	1440	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:16:"course_shortname";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:10:"enrol_ldap";}	1572464538	web	192.168.33.1	\N
-896	\\core\\event\\config_log_created	core	created	config_log	config_log	1441	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"course_fullname";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:10:"enrol_ldap";}	1572464538	web	192.168.33.1	\N
-897	\\core\\event\\config_log_created	core	created	config_log	config_log	1442	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"course_summary";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:10:"enrol_ldap";}	1572464538	web	192.168.33.1	\N
-898	\\core\\event\\config_log_created	core	created	config_log	config_log	1443	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:19:"ignorehiddencourses";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:10:"enrol_ldap";}	1572464538	web	192.168.33.1	\N
-899	\\core\\event\\config_log_created	core	created	config_log	config_log	1444	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:13:"unenrolaction";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:10:"enrol_ldap";}	1572464538	web	192.168.33.1	\N
-900	\\core\\event\\config_log_created	core	created	config_log	config_log	1445	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:10:"autocreate";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:10:"enrol_ldap";}	1572464538	web	192.168.33.1	\N
-901	\\core\\event\\config_log_created	core	created	config_log	config_log	1446	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:8:"category";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:10:"enrol_ldap";}	1572464538	web	192.168.33.1	\N
-902	\\core\\event\\config_log_created	core	created	config_log	config_log	1447	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:8:"template";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:10:"enrol_ldap";}	1572464538	web	192.168.33.1	\N
-903	\\core\\event\\config_log_created	core	created	config_log	config_log	1448	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:29:"course_shortname_updateonsync";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:10:"enrol_ldap";}	1572464538	web	192.168.33.1	\N
-904	\\core\\event\\config_log_created	core	created	config_log	config_log	1449	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:28:"course_fullname_updateonsync";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:10:"enrol_ldap";}	1572464538	web	192.168.33.1	\N
-905	\\core\\event\\config_log_created	core	created	config_log	config_log	1450	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:27:"course_summary_updateonsync";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:10:"enrol_ldap";}	1572464538	web	192.168.33.1	\N
-906	\\core\\event\\config_log_created	core	created	config_log	config_log	1451	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:13:"nested_groups";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:10:"enrol_ldap";}	1572464538	web	192.168.33.1	\N
-907	\\core\\event\\config_log_created	core	created	config_log	config_log	1452	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:23:"group_memberofattribute";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:10:"enrol_ldap";}	1572464538	web	192.168.33.1	\N
-908	\\core\\event\\config_log_created	core	created	config_log	config_log	1453	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:13:"expiredaction";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:12:"enrol_manual";}	1572464538	web	192.168.33.1	\N
-909	\\core\\event\\config_log_created	core	created	config_log	config_log	1454	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:16:"expirynotifyhour";s:8:"oldvalue";N;s:5:"value";s:1:"6";s:6:"plugin";s:12:"enrol_manual";}	1572464538	web	192.168.33.1	\N
-910	\\core\\event\\config_log_created	core	created	config_log	config_log	1455	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:12:"defaultenrol";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:12:"enrol_manual";}	1572464538	web	192.168.33.1	\N
-911	\\core\\event\\config_log_created	core	created	config_log	config_log	1456	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:6:"status";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:12:"enrol_manual";}	1572464538	web	192.168.33.1	\N
-912	\\core\\event\\config_log_created	core	created	config_log	config_log	1457	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:6:"roleid";s:8:"oldvalue";N;s:5:"value";s:1:"5";s:6:"plugin";s:12:"enrol_manual";}	1572464538	web	192.168.33.1	\N
-913	\\core\\event\\config_log_created	core	created	config_log	config_log	1458	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:10:"enrolstart";s:8:"oldvalue";N;s:5:"value";s:1:"4";s:6:"plugin";s:12:"enrol_manual";}	1572464538	web	192.168.33.1	\N
-914	\\core\\event\\config_log_created	core	created	config_log	config_log	1459	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:11:"enrolperiod";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:12:"enrol_manual";}	1572464538	web	192.168.33.1	\N
-915	\\core\\event\\config_log_created	core	created	config_log	config_log	1460	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:12:"expirynotify";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:12:"enrol_manual";}	1572464538	web	192.168.33.1	\N
-916	\\core\\event\\config_log_created	core	created	config_log	config_log	1461	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"expirythreshold";s:8:"oldvalue";N;s:5:"value";s:5:"86400";s:6:"plugin";s:12:"enrol_manual";}	1572464538	web	192.168.33.1	\N
-917	\\core\\event\\config_log_created	core	created	config_log	config_log	1462	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:6:"roleid";s:8:"oldvalue";N;s:5:"value";s:1:"5";s:6:"plugin";s:10:"enrol_mnet";}	1572464538	web	192.168.33.1	\N
-918	\\core\\event\\config_log_created	core	created	config_log	config_log	1463	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:10:"roleid_adv";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:10:"enrol_mnet";}	1572464538	web	192.168.33.1	\N
-919	\\core\\event\\config_log_created	core	created	config_log	config_log	1464	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"paypalbusiness";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:12:"enrol_paypal";}	1572464538	web	192.168.33.1	\N
-920	\\core\\event\\config_log_created	core	created	config_log	config_log	1465	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:12:"mailstudents";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:12:"enrol_paypal";}	1572464539	web	192.168.33.1	\N
-921	\\core\\event\\config_log_created	core	created	config_log	config_log	1466	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:12:"mailteachers";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:12:"enrol_paypal";}	1572464539	web	192.168.33.1	\N
-922	\\core\\event\\config_log_created	core	created	config_log	config_log	1467	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:10:"mailadmins";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:12:"enrol_paypal";}	1572464539	web	192.168.33.1	\N
-923	\\core\\event\\config_log_created	core	created	config_log	config_log	1468	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:13:"expiredaction";s:8:"oldvalue";N;s:5:"value";s:1:"3";s:6:"plugin";s:12:"enrol_paypal";}	1572464539	web	192.168.33.1	\N
-924	\\core\\event\\config_log_created	core	created	config_log	config_log	1469	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:6:"status";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:12:"enrol_paypal";}	1572464539	web	192.168.33.1	\N
-925	\\core\\event\\config_log_created	core	created	config_log	config_log	1470	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:4:"cost";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:12:"enrol_paypal";}	1572464539	web	192.168.33.1	\N
-926	\\core\\event\\config_log_created	core	created	config_log	config_log	1471	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:8:"currency";s:8:"oldvalue";N;s:5:"value";s:3:"USD";s:6:"plugin";s:12:"enrol_paypal";}	1572464539	web	192.168.33.1	\N
-927	\\core\\event\\config_log_created	core	created	config_log	config_log	1472	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:6:"roleid";s:8:"oldvalue";N;s:5:"value";s:1:"5";s:6:"plugin";s:12:"enrol_paypal";}	1572464539	web	192.168.33.1	\N
-928	\\core\\event\\config_log_created	core	created	config_log	config_log	1473	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:11:"enrolperiod";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:12:"enrol_paypal";}	1572464539	web	192.168.33.1	\N
-929	\\core\\event\\config_log_created	core	created	config_log	config_log	1474	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:12:"emaildisplay";s:8:"oldvalue";N;s:5:"value";s:1:"2";s:6:"plugin";s:9:"enrol_lti";}	1572464539	web	192.168.33.1	\N
-930	\\core\\event\\config_log_created	core	created	config_log	config_log	1475	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:4:"city";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:9:"enrol_lti";}	1572464539	web	192.168.33.1	\N
-931	\\core\\event\\config_log_created	core	created	config_log	config_log	1476	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:7:"country";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:9:"enrol_lti";}	1572464539	web	192.168.33.1	\N
-932	\\core\\event\\config_log_created	core	created	config_log	config_log	1477	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:8:"timezone";s:8:"oldvalue";N;s:5:"value";s:2:"99";s:6:"plugin";s:9:"enrol_lti";}	1572464539	web	192.168.33.1	\N
-933	\\core\\event\\config_log_created	core	created	config_log	config_log	1478	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:4:"lang";s:8:"oldvalue";N;s:5:"value";s:2:"en";s:6:"plugin";s:9:"enrol_lti";}	1572464539	web	192.168.33.1	\N
-934	\\core\\event\\config_log_created	core	created	config_log	config_log	1479	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:11:"institution";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:9:"enrol_lti";}	1572464539	web	192.168.33.1	\N
-935	\\core\\event\\config_log_created	core	created	config_log	config_log	1480	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"requirepassword";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:10:"enrol_self";}	1572464539	web	192.168.33.1	\N
-936	\\core\\event\\config_log_created	core	created	config_log	config_log	1481	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"usepasswordpolicy";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:10:"enrol_self";}	1572464539	web	192.168.33.1	\N
-937	\\core\\event\\config_log_created	core	created	config_log	config_log	1482	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:8:"showhint";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:10:"enrol_self";}	1572464539	web	192.168.33.1	\N
-938	\\core\\event\\config_log_created	core	created	config_log	config_log	1483	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:13:"expiredaction";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:10:"enrol_self";}	1572464539	web	192.168.33.1	\N
-939	\\core\\event\\config_log_created	core	created	config_log	config_log	1484	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:16:"expirynotifyhour";s:8:"oldvalue";N;s:5:"value";s:1:"6";s:6:"plugin";s:10:"enrol_self";}	1572464539	web	192.168.33.1	\N
-940	\\core\\event\\config_log_created	core	created	config_log	config_log	1485	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:12:"defaultenrol";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:10:"enrol_self";}	1572464539	web	192.168.33.1	\N
-941	\\core\\event\\config_log_created	core	created	config_log	config_log	1486	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:6:"status";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:10:"enrol_self";}	1572464539	web	192.168.33.1	\N
-942	\\core\\event\\config_log_created	core	created	config_log	config_log	1487	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:9:"newenrols";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:10:"enrol_self";}	1572464539	web	192.168.33.1	\N
-943	\\core\\event\\config_log_created	core	created	config_log	config_log	1488	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:8:"groupkey";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:10:"enrol_self";}	1572464539	web	192.168.33.1	\N
-944	\\core\\event\\config_log_created	core	created	config_log	config_log	1489	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:6:"roleid";s:8:"oldvalue";N;s:5:"value";s:1:"5";s:6:"plugin";s:10:"enrol_self";}	1572464539	web	192.168.33.1	\N
-945	\\core\\event\\config_log_created	core	created	config_log	config_log	1490	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:11:"enrolperiod";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:10:"enrol_self";}	1572464539	web	192.168.33.1	\N
-946	\\core\\event\\config_log_created	core	created	config_log	config_log	1491	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:12:"expirynotify";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:10:"enrol_self";}	1572464539	web	192.168.33.1	\N
-947	\\core\\event\\config_log_created	core	created	config_log	config_log	1492	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"expirythreshold";s:8:"oldvalue";N;s:5:"value";s:5:"86400";s:6:"plugin";s:10:"enrol_self";}	1572464539	web	192.168.33.1	\N
-948	\\core\\event\\config_log_created	core	created	config_log	config_log	1493	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:13:"longtimenosee";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:10:"enrol_self";}	1572464539	web	192.168.33.1	\N
-949	\\core\\event\\config_log_created	core	created	config_log	config_log	1494	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:11:"maxenrolled";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:10:"enrol_self";}	1572464539	web	192.168.33.1	\N
-950	\\core\\event\\config_log_created	core	created	config_log	config_log	1495	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:24:"sendcoursewelcomemessage";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:10:"enrol_self";}	1572464539	web	192.168.33.1	\N
-951	\\core\\event\\config_log_created	core	created	config_log	config_log	1496	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:7:"formats";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:16:"filter_urltolink";}	1572464539	web	192.168.33.1	\N
-952	\\core\\event\\config_log_created	core	created	config_log	config_log	1497	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:11:"embedimages";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:16:"filter_urltolink";}	1572464539	web	192.168.33.1	\N
-953	\\core\\event\\config_log_created	core	created	config_log	config_log	1498	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:7:"formats";s:8:"oldvalue";N;s:5:"value";s:5:"1,4,0";s:6:"plugin";s:15:"filter_emoticon";}	1572464539	web	192.168.33.1	\N
-954	\\core\\event\\config_log_created	core	created	config_log	config_log	1499	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:8:"httpsurl";s:8:"oldvalue";N;s:5:"value";s:63:"https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js";s:6:"plugin";s:20:"filter_mathjaxloader";}	1572464539	web	192.168.33.1	\N
-955	\\core\\event\\config_log_created	core	created	config_log	config_log	1500	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:22:"texfiltercompatibility";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:20:"filter_mathjaxloader";}	1572464539	web	192.168.33.1	\N
-956	\\core\\event\\config_log_created	core	created	config_log	config_log	1501	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:13:"mathjaxconfig";s:8:"oldvalue";N;s:5:"value";s:162:"\nMathJax.Hub.Config({\n    config: ["Accessible.js", "Safe.js"],\n    errorSettings: { message: ["!"] },\n    skipStartupTypeset: true,\n    messageStyle: "none"\n});\n";s:6:"plugin";s:20:"filter_mathjaxloader";}	1572464539	web	192.168.33.1	\N
-957	\\core\\event\\config_log_created	core	created	config_log	config_log	1502	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:20:"additionaldelimiters";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:20:"filter_mathjaxloader";}	1572464539	web	192.168.33.1	\N
-958	\\core\\event\\config_log_created	core	created	config_log	config_log	1503	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:26:"filter_multilang_force_old";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";N;}	1572464539	web	192.168.33.1	\N
-959	\\core\\event\\config_log_created	core	created	config_log	config_log	1504	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:13:"latexpreamble";s:8:"oldvalue";N;s:5:"value";s:115:"\\usepackage[latin1]{inputenc}\n\\usepackage{amsmath}\n\\usepackage{amsfonts}\n\\RequirePackage{amsmath,amssymb,latexsym}\n";s:6:"plugin";s:10:"filter_tex";}	1572464539	web	192.168.33.1	\N
-960	\\core\\event\\config_log_created	core	created	config_log	config_log	1505	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"latexbackground";s:8:"oldvalue";N;s:5:"value";s:7:"#FFFFFF";s:6:"plugin";s:10:"filter_tex";}	1572464539	web	192.168.33.1	\N
-961	\\core\\event\\config_log_created	core	created	config_log	config_log	1506	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:7:"density";s:8:"oldvalue";N;s:5:"value";s:3:"120";s:6:"plugin";s:10:"filter_tex";}	1572464539	web	192.168.33.1	\N
-962	\\core\\event\\config_log_created	core	created	config_log	config_log	1507	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:9:"pathlatex";s:8:"oldvalue";N;s:5:"value";s:14:"/usr/bin/latex";s:6:"plugin";s:10:"filter_tex";}	1572464539	web	192.168.33.1	\N
-963	\\core\\event\\config_log_created	core	created	config_log	config_log	1508	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:9:"pathdvips";s:8:"oldvalue";N;s:5:"value";s:14:"/usr/bin/dvips";s:6:"plugin";s:10:"filter_tex";}	1572464539	web	192.168.33.1	\N
-964	\\core\\event\\config_log_created	core	created	config_log	config_log	1509	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:11:"pathconvert";s:8:"oldvalue";N;s:5:"value";s:16:"/usr/bin/convert";s:6:"plugin";s:10:"filter_tex";}	1572464539	web	192.168.33.1	\N
-965	\\core\\event\\config_log_created	core	created	config_log	config_log	1510	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:11:"pathdvisvgm";s:8:"oldvalue";N;s:5:"value";s:16:"/usr/bin/dvisvgm";s:6:"plugin";s:10:"filter_tex";}	1572464539	web	192.168.33.1	\N
-966	\\core\\event\\config_log_created	core	created	config_log	config_log	1511	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:11:"pathmimetex";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:10:"filter_tex";}	1572464539	web	192.168.33.1	\N
-967	\\core\\event\\config_log_created	core	created	config_log	config_log	1512	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:13:"convertformat";s:8:"oldvalue";N;s:5:"value";s:3:"gif";s:6:"plugin";s:10:"filter_tex";}	1572464539	web	192.168.33.1	\N
-968	\\core\\event\\config_log_created	core	created	config_log	config_log	1513	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:22:"filter_censor_badwords";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";N;}	1572464539	web	192.168.33.1	\N
-969	\\core\\event\\config_log_created	core	created	config_log	config_log	1514	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:8:"dbdriver";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:17:"logstore_database";}	1572464539	web	192.168.33.1	\N
-970	\\core\\event\\config_log_created	core	created	config_log	config_log	1515	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:6:"dbhost";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:17:"logstore_database";}	1572464539	web	192.168.33.1	\N
-971	\\core\\event\\config_log_created	core	created	config_log	config_log	1516	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:6:"dbuser";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:17:"logstore_database";}	1572464539	web	192.168.33.1	\N
-972	\\core\\event\\config_log_created	core	created	config_log	config_log	1517	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:6:"dbpass";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:17:"logstore_database";}	1572464539	web	192.168.33.1	\N
-973	\\core\\event\\config_log_created	core	created	config_log	config_log	1518	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:6:"dbname";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:17:"logstore_database";}	1572464539	web	192.168.33.1	\N
-974	\\core\\event\\config_log_created	core	created	config_log	config_log	1519	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:7:"dbtable";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:17:"logstore_database";}	1572464539	web	192.168.33.1	\N
-975	\\core\\event\\config_log_created	core	created	config_log	config_log	1520	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:9:"dbpersist";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:17:"logstore_database";}	1572464539	web	192.168.33.1	\N
-976	\\core\\event\\config_log_created	core	created	config_log	config_log	1521	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:8:"dbsocket";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:17:"logstore_database";}	1572464539	web	192.168.33.1	\N
-977	\\core\\event\\config_log_created	core	created	config_log	config_log	1522	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:6:"dbport";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:17:"logstore_database";}	1572464539	web	192.168.33.1	\N
-978	\\core\\event\\config_log_created	core	created	config_log	config_log	1523	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:8:"dbschema";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:17:"logstore_database";}	1572464539	web	192.168.33.1	\N
-979	\\core\\event\\config_log_created	core	created	config_log	config_log	1524	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:11:"dbcollation";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:17:"logstore_database";}	1572464539	web	192.168.33.1	\N
-980	\\core\\event\\config_log_created	core	created	config_log	config_log	1525	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:16:"dbhandlesoptions";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:17:"logstore_database";}	1572464539	web	192.168.33.1	\N
-981	\\core\\event\\config_log_created	core	created	config_log	config_log	1526	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:10:"buffersize";s:8:"oldvalue";N;s:5:"value";s:2:"50";s:6:"plugin";s:17:"logstore_database";}	1572464539	web	192.168.33.1	\N
-982	\\core\\event\\config_log_created	core	created	config_log	config_log	1527	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:9:"logguests";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:17:"logstore_database";}	1572464539	web	192.168.33.1	\N
-983	\\core\\event\\config_log_created	core	created	config_log	config_log	1528	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:13:"includelevels";s:8:"oldvalue";N;s:5:"value";s:5:"1,2,0";s:6:"plugin";s:17:"logstore_database";}	1572464539	web	192.168.33.1	\N
-984	\\core\\event\\config_log_created	core	created	config_log	config_log	1529	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"includeactions";s:8:"oldvalue";N;s:5:"value";s:7:"c,r,u,d";s:6:"plugin";s:17:"logstore_database";}	1572464539	web	192.168.33.1	\N
-985	\\core\\event\\config_log_created	core	created	config_log	config_log	1530	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:9:"loglegacy";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:15:"logstore_legacy";}	1572464539	web	192.168.33.1	\N
-986	\\core\\event\\config_log_created	core	created	config_log	config_log	1531	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:9:"logguests";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";N;}	1572464539	web	192.168.33.1	\N
-987	\\core\\event\\config_log_created	core	created	config_log	config_log	1532	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:11:"loglifetime";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";N;}	1572464539	web	192.168.33.1	\N
-988	\\core\\event\\config_log_created	core	created	config_log	config_log	1533	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:9:"logguests";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:17:"logstore_standard";}	1572464539	web	192.168.33.1	\N
-989	\\core\\event\\config_log_created	core	created	config_log	config_log	1534	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:11:"loglifetime";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:17:"logstore_standard";}	1572464539	web	192.168.33.1	\N
-990	\\core\\event\\config_log_created	core	created	config_log	config_log	1535	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:10:"buffersize";s:8:"oldvalue";N;s:5:"value";s:2:"50";s:6:"plugin";s:17:"logstore_standard";}	1572464539	web	192.168.33.1	\N
-991	\\core\\event\\config_log_created	core	created	config_log	config_log	1536	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"videoextensions";s:8:"oldvalue";N;s:5:"value";s:20:"html_video,.f4v,.flv";s:6:"plugin";s:13:"media_videojs";}	1572464539	web	192.168.33.1	\N
-992	\\core\\event\\config_log_created	core	created	config_log	config_log	1537	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"audioextensions";s:8:"oldvalue";N;s:5:"value";s:10:"html_audio";s:6:"plugin";s:13:"media_videojs";}	1572464539	web	192.168.33.1	\N
-993	\\core\\event\\config_log_created	core	created	config_log	config_log	1538	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:4:"rtmp";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:13:"media_videojs";}	1572464539	web	192.168.33.1	\N
-994	\\core\\event\\config_log_created	core	created	config_log	config_log	1539	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:8:"useflash";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:13:"media_videojs";}	1572464539	web	192.168.33.1	\N
-995	\\core\\event\\config_log_created	core	created	config_log	config_log	1540	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:7:"youtube";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:13:"media_videojs";}	1572464539	web	192.168.33.1	\N
-996	\\core\\event\\config_log_created	core	created	config_log	config_log	1541	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:13:"videocssclass";s:8:"oldvalue";N;s:5:"value";s:8:"video-js";s:6:"plugin";s:13:"media_videojs";}	1572464539	web	192.168.33.1	\N
-997	\\core\\event\\config_log_created	core	created	config_log	config_log	1542	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:13:"audiocssclass";s:8:"oldvalue";N;s:5:"value";s:8:"video-js";s:6:"plugin";s:13:"media_videojs";}	1572464539	web	192.168.33.1	\N
-998	\\core\\event\\config_log_created	core	created	config_log	config_log	1543	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:9:"limitsize";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:13:"media_videojs";}	1572464539	web	192.168.33.1	\N
-999	\\core\\event\\config_log_created	core	created	config_log	config_log	1544	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:10:"jabberhost";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";N;}	1572464539	web	192.168.33.1	\N
-1000	\\core\\event\\config_log_created	core	created	config_log	config_log	1545	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:12:"jabberserver";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";N;}	1572464539	web	192.168.33.1	\N
-1001	\\core\\event\\config_log_created	core	created	config_log	config_log	1546	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"jabberusername";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";N;}	1572464539	web	192.168.33.1	\N
-1002	\\core\\event\\config_log_created	core	created	config_log	config_log	1547	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"jabberpassword";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";N;}	1572464539	web	192.168.33.1	\N
-1003	\\core\\event\\config_log_created	core	created	config_log	config_log	1548	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:10:"jabberport";s:8:"oldvalue";N;s:5:"value";s:4:"5222";s:6:"plugin";N;}	1572464539	web	192.168.33.1	\N
-1004	\\core\\event\\config_log_created	core	created	config_log	config_log	1549	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"airnotifierurl";s:8:"oldvalue";N;s:5:"value";s:27:"https://messages.moodle.net";s:6:"plugin";N;}	1572464539	web	192.168.33.1	\N
-1005	\\core\\event\\config_log_created	core	created	config_log	config_log	1550	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"airnotifierport";s:8:"oldvalue";N;s:5:"value";s:3:"443";s:6:"plugin";N;}	1572464539	web	192.168.33.1	\N
-1006	\\core\\event\\config_log_created	core	created	config_log	config_log	1551	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:24:"airnotifiermobileappname";s:8:"oldvalue";N;s:5:"value";s:23:"com.moodle.moodlemobile";s:6:"plugin";N;}	1572464539	web	192.168.33.1	\N
-1007	\\core\\event\\config_log_created	core	created	config_log	config_log	1552	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:18:"airnotifierappname";s:8:"oldvalue";N;s:5:"value";s:21:"commoodlemoodlemobile";s:6:"plugin";N;}	1572464539	web	192.168.33.1	\N
-1008	\\core\\event\\config_log_created	core	created	config_log	config_log	1553	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:20:"airnotifieraccesskey";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";N;}	1572464539	web	192.168.33.1	\N
-1009	\\core\\event\\config_log_created	core	created	config_log	config_log	1554	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:13:"answerhowmany";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:17:"qtype_multichoice";}	1572464539	web	192.168.33.1	\N
-1010	\\core\\event\\config_log_created	core	created	config_log	config_log	1555	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"shuffleanswers";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:17:"qtype_multichoice";}	1572464539	web	192.168.33.1	\N
-1011	\\core\\event\\config_log_created	core	created	config_log	config_log	1556	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"answernumbering";s:8:"oldvalue";N;s:5:"value";s:3:"abc";s:6:"plugin";s:17:"qtype_multichoice";}	1572464539	web	192.168.33.1	\N
-1012	\\core\\event\\config_log_created	core	created	config_log	config_log	1557	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:7:"toolbar";s:8:"oldvalue";N;s:5:"value";s:345:"collapse = collapse\nstyle1 = title, bold, italic\nlist = unorderedlist, orderedlist\nlinks = link\nfiles = image, media, recordrtc, managefiles\nstyle2 = underline, strike, subscript, superscript\nalign = align\nindent = indent\ninsert = equation, charmap, table, clear\nundo = undo\naccessibility = accessibilitychecker, accessibilityhelper\nother = html";s:6:"plugin";s:11:"editor_atto";}	1572464539	web	192.168.33.1	\N
-1013	\\core\\event\\config_log_created	core	created	config_log	config_log	1558	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"autosavefrequency";s:8:"oldvalue";N;s:5:"value";s:2:"60";s:6:"plugin";s:11:"editor_atto";}	1572464539	web	192.168.33.1	\N
-1014	\\core\\event\\config_log_created	core	created	config_log	config_log	1559	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:10:"showgroups";s:8:"oldvalue";N;s:5:"value";s:1:"5";s:6:"plugin";s:13:"atto_collapse";}	1572464539	web	192.168.33.1	\N
-1015	\\core\\event\\config_log_created	core	created	config_log	config_log	1560	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:13:"librarygroup1";s:8:"oldvalue";N;s:5:"value";s:244:"\n\\cdot\n\\times\n\\ast\n\\div\n\\diamond\n\\pm\n\\mp\n\\oplus\n\\ominus\n\\otimes\n\\oslash\n\\odot\n\\circ\n\\bullet\n\\asymp\n\\equiv\n\\subseteq\n\\supseteq\n\\leq\n\\geq\n\\preceq\n\\succeq\n\\sim\n\\simeq\n\\approx\n\\subset\n\\supset\n\\ll\n\\gg\n\\prec\n\\succ\n\\infty\n\\in\n\\ni\n\\forall\n\\exists\n\\neq\n";s:6:"plugin";s:13:"atto_equation";}	1572464539	web	192.168.33.1	\N
-1016	\\core\\event\\config_log_created	core	created	config_log	config_log	1561	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:13:"librarygroup2";s:8:"oldvalue";N;s:5:"value";s:155:"\n\\leftarrow\n\\rightarrow\n\\uparrow\n\\downarrow\n\\leftrightarrow\n\\nearrow\n\\searrow\n\\swarrow\n\\nwarrow\n\\Leftarrow\n\\Rightarrow\n\\Uparrow\n\\Downarrow\n\\Leftrightarrow\n";s:6:"plugin";s:13:"atto_equation";}	1572464539	web	192.168.33.1	\N
-1017	\\core\\event\\config_log_created	core	created	config_log	config_log	1562	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:13:"librarygroup3";s:8:"oldvalue";N;s:5:"value";s:210:"\n\\alpha\n\\beta\n\\gamma\n\\delta\n\\epsilon\n\\zeta\n\\eta\n\\theta\n\\iota\n\\kappa\n\\lambda\n\\mu\n\\nu\n\\xi\n\\pi\n\\rho\n\\sigma\n\\tau\n\\upsilon\n\\phi\n\\chi\n\\psi\n\\omega\n\\Gamma\n\\Delta\n\\Theta\n\\Lambda\n\\Xi\n\\Pi\n\\Sigma\n\\Upsilon\n\\Phi\n\\Psi\n\\Omega\n";s:6:"plugin";s:13:"atto_equation";}	1572464539	web	192.168.33.1	\N
-1018	\\core\\event\\config_log_created	core	created	config_log	config_log	1563	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:13:"librarygroup4";s:8:"oldvalue";N;s:5:"value";s:239:"\n\\sum{a,b}\n\\sqrt[a]{b+c}\n\\int_{a}^{b}{c}\n\\iint_{a}^{b}{c}\n\\iiint_{a}^{b}{c}\n\\oint{a}\n(a)\n[a]\n\\lbrace{a}\\rbrace\n\\left| \\begin{matrix} a_1 & a_2 \\ a_3 & a_4 \\end{matrix} \\right|\n\\frac{a}{b+c}\n\\vec{a}\n\\binom {a} {b}\n{a \\brack b}\n{a \\brace b}\n";s:6:"plugin";s:13:"atto_equation";}	1572464539	web	192.168.33.1	\N
-1019	\\core\\event\\config_log_created	core	created	config_log	config_log	1564	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:12:"allowedtypes";s:8:"oldvalue";N;s:5:"value";s:4:"both";s:6:"plugin";s:14:"atto_recordrtc";}	1572464539	web	192.168.33.1	\N
-1020	\\core\\event\\config_log_created	core	created	config_log	config_log	1565	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:12:"audiobitrate";s:8:"oldvalue";N;s:5:"value";s:6:"128000";s:6:"plugin";s:14:"atto_recordrtc";}	1572464539	web	192.168.33.1	\N
-1021	\\core\\event\\config_log_created	core	created	config_log	config_log	1566	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:12:"videobitrate";s:8:"oldvalue";N;s:5:"value";s:7:"2500000";s:6:"plugin";s:14:"atto_recordrtc";}	1572464539	web	192.168.33.1	\N
-1022	\\core\\event\\config_log_created	core	created	config_log	config_log	1567	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:9:"timelimit";s:8:"oldvalue";N;s:5:"value";s:3:"120";s:6:"plugin";s:14:"atto_recordrtc";}	1572464539	web	192.168.33.1	\N
-1023	\\core\\event\\config_log_created	core	created	config_log	config_log	1568	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:12:"allowborders";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:10:"atto_table";}	1572464539	web	192.168.33.1	\N
-1024	\\core\\event\\config_log_created	core	created	config_log	config_log	1569	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:21:"allowbackgroundcolour";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:10:"atto_table";}	1572464539	web	192.168.33.1	\N
-1025	\\core\\event\\config_log_created	core	created	config_log	config_log	1570	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:10:"allowwidth";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:10:"atto_table";}	1572464539	web	192.168.33.1	\N
-1026	\\core\\event\\config_log_created	core	created	config_log	config_log	1571	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:13:"customtoolbar";s:8:"oldvalue";N;s:5:"value";s:378:"wrap,formatselect,wrap,bold,italic,wrap,bullist,numlist,wrap,link,unlink,wrap,image\n\nundo,redo,wrap,underline,strikethrough,sub,sup,wrap,justifyleft,justifycenter,justifyright,wrap,outdent,indent,wrap,forecolor,backcolor,wrap,ltr,rtl\n\nfontselect,fontsizeselect,wrap,code,search,replace,wrap,nonbreaking,charmap,table,wrap,cleanup,removeformat,pastetext,pasteword,wrap,fullscreen";s:6:"plugin";s:14:"editor_tinymce";}	1572464539	web	192.168.33.1	\N
-1027	\\core\\event\\config_log_created	core	created	config_log	config_log	1572	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"fontselectlist";s:8:"oldvalue";N;s:5:"value";s:338:"Trebuchet=Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;Arial=arial,helvetica,sans-serif;Courier New=courier new,courier,monospace;Georgia=georgia,times new roman,times,serif;Tahoma=tahoma,arial,helvetica,sans-serif;Times New Roman=times new roman,times,serif;Verdana=verdana,arial,helvetica,sans-serif;Impact=impact;Wingdings=wingdings";s:6:"plugin";s:14:"editor_tinymce";}	1572464539	web	192.168.33.1	\N
-1028	\\core\\event\\config_log_created	core	created	config_log	config_log	1573	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:12:"customconfig";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:14:"editor_tinymce";}	1572464539	web	192.168.33.1	\N
-1029	\\core\\event\\config_log_created	core	created	config_log	config_log	1574	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"requireemoticon";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:22:"tinymce_moodleemoticon";}	1572464539	web	192.168.33.1	\N
-1030	\\core\\event\\config_log_created	core	created	config_log	config_log	1575	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:11:"spellengine";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:20:"tinymce_spellchecker";}	1572464539	web	192.168.33.1	\N
-1031	\\core\\event\\config_log_created	core	created	config_log	config_log	1576	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"spelllanguagelist";s:8:"oldvalue";N;s:5:"value";s:118:"+English=en,Danish=da,Dutch=nl,Finnish=fi,French=fr,German=de,Italian=it,Polish=pl,Portuguese=pt,Spanish=es,Swedish=sv";s:6:"plugin";s:20:"tinymce_spellchecker";}	1572464539	web	192.168.33.1	\N
-1032	\\core\\event\\config_log_created	core	created	config_log	config_log	1577	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:12:"profileroles";s:8:"oldvalue";N;s:5:"value";s:5:"5,4,3";s:6:"plugin";N;}	1572464539	web	192.168.33.1	\N
-1033	\\core\\event\\config_log_created	core	created	config_log	config_log	1578	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:13:"coursecontact";s:8:"oldvalue";N;s:5:"value";s:1:"3";s:6:"plugin";N;}	1572464539	web	192.168.33.1	\N
-1034	\\core\\event\\config_log_created	core	created	config_log	config_log	1579	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:9:"frontpage";s:8:"oldvalue";N;s:5:"value";s:1:"6";s:6:"plugin";N;}	1572464539	web	192.168.33.1	\N
-1035	\\core\\event\\config_log_created	core	created	config_log	config_log	1580	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"frontpageloggedin";s:8:"oldvalue";N;s:5:"value";s:1:"6";s:6:"plugin";N;}	1572464539	web	192.168.33.1	\N
-1036	\\core\\event\\config_log_created	core	created	config_log	config_log	1581	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:16:"maxcategorydepth";s:8:"oldvalue";N;s:5:"value";s:1:"2";s:6:"plugin";N;}	1572464539	web	192.168.33.1	\N
-1037	\\core\\event\\config_log_created	core	created	config_log	config_log	1582	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:20:"frontpagecourselimit";s:8:"oldvalue";N;s:5:"value";s:3:"200";s:6:"plugin";N;}	1572464539	web	192.168.33.1	\N
-1038	\\core\\event\\config_log_created	core	created	config_log	config_log	1583	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"commentsperpage";s:8:"oldvalue";N;s:5:"value";s:2:"15";s:6:"plugin";N;}	1572464539	web	192.168.33.1	\N
-1039	\\core\\event\\config_log_created	core	created	config_log	config_log	1584	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:22:"defaultfrontpageroleid";s:8:"oldvalue";N;s:5:"value";s:1:"8";s:6:"plugin";N;}	1572464539	web	192.168.33.1	\N
-1040	\\core\\event\\config_log_created	core	created	config_log	config_log	1585	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:22:"messageinbound_enabled";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";N;}	1572464539	web	192.168.33.1	\N
-1041	\\core\\event\\config_log_created	core	created	config_log	config_log	1586	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:22:"messageinbound_mailbox";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";N;}	1572464539	web	192.168.33.1	\N
-1042	\\core\\event\\config_log_created	core	created	config_log	config_log	1587	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:21:"messageinbound_domain";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";N;}	1572464539	web	192.168.33.1	\N
-1043	\\core\\event\\config_log_created	core	created	config_log	config_log	1588	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:19:"messageinbound_host";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";N;}	1572464539	web	192.168.33.1	\N
-1044	\\core\\event\\config_log_created	core	created	config_log	config_log	1589	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:22:"messageinbound_hostssl";s:8:"oldvalue";N;s:5:"value";s:3:"ssl";s:6:"plugin";N;}	1572464539	web	192.168.33.1	\N
-1045	\\core\\event\\config_log_created	core	created	config_log	config_log	1590	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:23:"messageinbound_hostuser";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";N;}	1572464539	web	192.168.33.1	\N
-1046	\\core\\event\\config_log_created	core	created	config_log	config_log	1591	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:23:"messageinbound_hostpass";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";N;}	1572464539	web	192.168.33.1	\N
-1047	\\core\\event\\config_log_created	core	created	config_log	config_log	1592	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:22:"enablemobilewebservice";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";N;}	1572464539	web	192.168.33.1	\N
-1048	\\core\\event\\config_log_created	core	created	config_log	config_log	1593	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:9:"apppolicy";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:11:"tool_mobile";}	1572464539	web	192.168.33.1	\N
-1049	\\core\\event\\config_log_created	core	created	config_log	config_log	1594	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:8:"timezone";s:8:"oldvalue";N;s:5:"value";s:13:"Europe/Madrid";s:6:"plugin";N;}	1572464585	web	192.168.33.1	\N
-1050	\\core\\event\\config_log_created	core	created	config_log	config_log	1595	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:12:"registerauth";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";N;}	1572464585	web	192.168.33.1	\N
-1051	\\core\\event\\config_log_created	core	created	config_log	config_log	1596	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:11:"typeoflogin";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:11:"tool_mobile";}	1572464585	web	192.168.33.1	\N
-1052	\\core\\event\\config_log_created	core	created	config_log	config_log	1597	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"forcedurlscheme";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:11:"tool_mobile";}	1572464585	web	192.168.33.1	\N
-1053	\\core\\event\\config_log_created	core	created	config_log	config_log	1598	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:12:"mobilecssurl";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";N;}	1572464585	web	192.168.33.1	\N
-1054	\\core\\event\\config_log_created	core	created	config_log	config_log	1599	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:21:"enablesmartappbanners";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:11:"tool_mobile";}	1572464585	web	192.168.33.1	\N
-1055	\\core\\event\\config_log_created	core	created	config_log	config_log	1600	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:8:"iosappid";s:8:"oldvalue";N;s:5:"value";s:9:"633359593";s:6:"plugin";s:11:"tool_mobile";}	1572464585	web	192.168.33.1	\N
-1056	\\core\\event\\config_log_created	core	created	config_log	config_log	1601	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:12:"androidappid";s:8:"oldvalue";N;s:5:"value";s:23:"com.moodle.moodlemobile";s:6:"plugin";s:11:"tool_mobile";}	1572464585	web	192.168.33.1	\N
-1057	\\core\\event\\config_log_created	core	created	config_log	config_log	1602	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:9:"setuplink";s:8:"oldvalue";N;s:5:"value";s:34:"https://download.moodle.org/mobile";s:6:"plugin";s:11:"tool_mobile";}	1572464585	web	192.168.33.1	\N
-1058	\\core\\event\\config_log_created	core	created	config_log	config_log	1603	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:11:"forcelogout";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:11:"tool_mobile";}	1572464585	web	192.168.33.1	\N
-1059	\\core\\event\\config_log_created	core	created	config_log	config_log	1604	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:16:"disabledfeatures";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:11:"tool_mobile";}	1572464585	web	192.168.33.1	\N
-1060	\\core\\event\\config_log_created	core	created	config_log	config_log	1605	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"custommenuitems";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:11:"tool_mobile";}	1572464585	web	192.168.33.1	\N
-1061	\\core\\event\\config_log_created	core	created	config_log	config_log	1606	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"customlangstrings";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:11:"tool_mobile";}	1572464585	web	192.168.33.1	\N
-1062	\\core\\event\\course_viewed	core	viewed	course	\N	\N	r	2	2	50	1	0	1	\N	0	N;	1572465675	web	192.168.33.1	\N
-1063	\\core\\event\\course_viewed	core	viewed	course	\N	\N	r	2	2	50	1	0	1	\N	0	N;	1572475319	web	192.168.33.1	\N
-1064	\\core\\event\\user_login_failed	core	failed	user_login	\N	\N	r	0	1	10	0	2	0	\N	0	a:2:{s:8:"username";s:5:"admin";s:6:"reason";i:3;}	1572475747	web	192.168.33.1	\N
-1065	\\core\\event\\user_loggedin	core	loggedin	user	user	2	r	0	1	10	0	2	0	\N	0	a:1:{s:8:"username";s:5:"admin";}	1572475765	web	192.168.33.1	\N
-1066	\\core\\event\\config_log_created	core	created	config_log	config_log	1607	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:12:"sortgroupsby";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:11:"choicegroup";}	1572475797	web	192.168.33.1	\N
-1067	\\core\\event\\config_log_created	core	created	config_log	config_log	1608	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:25:"enable_save_content_state";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:7:"mod_hvp";}	1572475797	web	192.168.33.1	\N
-1068	\\core\\event\\config_log_created	core	created	config_log	config_log	1609	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:23:"content_state_frequency";s:8:"oldvalue";N;s:5:"value";s:2:"30";s:6:"plugin";s:7:"mod_hvp";}	1572475797	web	192.168.33.1	\N
-1069	\\core\\event\\config_log_created	core	created	config_log	config_log	1610	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:21:"send_usage_statistics";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:7:"mod_hvp";}	1572475797	web	192.168.33.1	\N
-1070	\\core\\event\\config_log_created	core	created	config_log	config_log	1611	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:5:"frame";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:7:"mod_hvp";}	1572475797	web	192.168.33.1	\N
-1071	\\core\\event\\config_log_created	core	created	config_log	config_log	1612	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:6:"export";s:8:"oldvalue";N;s:5:"value";s:1:"4";s:6:"plugin";s:7:"mod_hvp";}	1572475797	web	192.168.33.1	\N
-1072	\\core\\event\\config_log_created	core	created	config_log	config_log	1613	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:5:"embed";s:8:"oldvalue";N;s:5:"value";s:1:"3";s:6:"plugin";s:7:"mod_hvp";}	1572475797	web	192.168.33.1	\N
-1073	\\core\\event\\config_log_created	core	created	config_log	config_log	1614	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:9:"copyright";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:7:"mod_hvp";}	1572475797	web	192.168.33.1	\N
-1074	\\core\\event\\config_log_created	core	created	config_log	config_log	1615	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:4:"icon";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:7:"mod_hvp";}	1572475797	web	192.168.33.1	\N
-1075	\\core\\event\\config_log_created	core	created	config_log	config_log	1616	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:24:"enable_lrs_content_types";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:7:"mod_hvp";}	1572475797	web	192.168.33.1	\N
-1076	\\core\\event\\config_log_created	core	created	config_log	config_log	1617	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:21:"hotpot_enablemymoodle";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";N;}	1572475797	web	192.168.33.1	\N
-1077	\\core\\event\\config_log_created	core	created	config_log	config_log	1618	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:18:"hotpot_enablecache";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";N;}	1572475797	web	192.168.33.1	\N
-1078	\\core\\event\\config_log_created	core	created	config_log	config_log	1619	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"hotpot_enablecron";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";N;}	1572475797	web	192.168.33.1	\N
-1079	\\core\\event\\config_log_created	core	created	config_log	config_log	1620	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:16:"hotpot_enableswf";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";N;}	1572475797	web	192.168.33.1	\N
-1080	\\core\\event\\config_log_created	core	created	config_log	config_log	1621	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:22:"hotpot_enableobfuscate";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";N;}	1572475797	web	192.168.33.1	\N
-1081	\\core\\event\\config_log_created	core	created	config_log	config_log	1622	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"hotpot_bodystyles";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";N;}	1572475797	web	192.168.33.1	\N
-1082	\\core\\event\\config_log_created	core	created	config_log	config_log	1623	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:18:"hotpot_frameheight";s:8:"oldvalue";N;s:5:"value";s:2:"85";s:6:"plugin";N;}	1572475798	web	192.168.33.1	\N
-1083	\\core\\event\\config_log_created	core	created	config_log	config_log	1624	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:16:"hotpot_lockframe";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";N;}	1572475798	web	192.168.33.1	\N
-1084	\\core\\event\\config_log_created	core	created	config_log	config_log	1625	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:19:"hotpot_storedetails";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";N;}	1572475798	web	192.168.33.1	\N
-1085	\\core\\event\\config_log_created	core	created	config_log	config_log	1626	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:21:"hotpot_maxeventlength";s:8:"oldvalue";N;s:5:"value";s:1:"5";s:6:"plugin";N;}	1572475798	web	192.168.33.1	\N
-1086	\\core\\event\\config_log_created	core	created	config_log	config_log	1627	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:7:"jarbase";s:8:"oldvalue";N;s:5:"value";s:32:"https://clic.xtec.cat/dist/jclic";s:6:"plugin";s:5:"jclic";}	1572475798	web	192.168.33.1	\N
-1087	\\core\\event\\config_log_created	core	created	config_log	config_log	1628	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:3:"lap";s:8:"oldvalue";N;s:5:"value";s:1:"5";s:6:"plugin";s:5:"jclic";}	1572475798	web	192.168.33.1	\N
-1088	\\core\\event\\config_log_created	core	created	config_log	config_log	1629	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:8:"pluginjs";s:8:"oldvalue";N;s:5:"value";s:47:"https://clic.xtec.cat/dist/jclic/jclicplugin.js";s:6:"plugin";s:5:"jclic";}	1572475798	web	192.168.33.1	\N
-1089	\\core\\event\\config_log_created	core	created	config_log	config_log	1630	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:7:"jclicjs";s:8:"oldvalue";N;s:5:"value";s:48:"https://clic.xtec.cat/dist/jclic.js/jclic.min.js";s:6:"plugin";s:5:"jclic";}	1572475798	web	192.168.33.1	\N
-1090	\\core\\event\\config_log_created	core	created	config_log	config_log	1631	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:18:"showrecentactivity";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:7:"journal";}	1572475798	web	192.168.33.1	\N
-1091	\\core\\event\\config_log_created	core	created	config_log	config_log	1632	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:8:"overview";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:7:"journal";}	1572475798	web	192.168.33.1	\N
-1092	\\core\\event\\config_log_created	core	created	config_log	config_log	1633	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:9:"usergraph";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:13:"questionnaire";}	1572475798	web	192.168.33.1	\N
-1093	\\core\\event\\config_log_created	core	created	config_log	config_log	1634	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:11:"maxsections";s:8:"oldvalue";N;s:5:"value";s:2:"10";s:6:"plugin";s:13:"questionnaire";}	1572475798	web	192.168.33.1	\N
-1094	\\core\\event\\config_log_created	core	created	config_log	config_log	1635	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"downloadoptions";s:8:"oldvalue";N;s:5:"value";s:75:"response,submitted,institution,department,course,group,id,fullname,username";s:6:"plugin";s:13:"questionnaire";}	1572475798	web	192.168.33.1	\N
-1095	\\core\\event\\config_log_created	core	created	config_log	config_log	1636	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"distpluginappl";s:8:"oldvalue";N;s:5:"value";s:46:"http://clic.xtec.cat/qv_viewer/dist/html/appl/";s:6:"plugin";s:2:"qv";}	1572475798	web	192.168.33.1	\N
-1096	\\core\\event\\config_log_created	core	created	config_log	config_log	1637	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"distpluginscripts";s:8:"oldvalue";N;s:5:"value";s:49:"http://clic.xtec.cat/qv_viewer/dist/html/scripts/";s:6:"plugin";s:2:"qv";}	1572475798	web	192.168.33.1	\N
-1097	\\core\\event\\config_log_created	core	created	config_log	config_log	1638	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:13:"distplugincss";s:8:"oldvalue";N;s:5:"value";s:45:"http://clic.xtec.cat/qv_viewer/dist/html/css/";s:6:"plugin";s:2:"qv";}	1572475798	web	192.168.33.1	\N
-1098	\\core\\event\\config_log_created	core	created	config_log	config_log	1639	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:5:"skins";s:8:"oldvalue";N;s:5:"value";s:23:"default,infantil,formal";s:6:"plugin";s:2:"qv";}	1572475798	web	192.168.33.1	\N
-1099	\\core\\event\\config_log_created	core	created	config_log	config_log	1640	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:9:"whatgrade";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:8:"rcontent";}	1572475798	web	192.168.33.1	\N
-1100	\\core\\event\\config_log_created	core	created	config_log	config_log	1641	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:9:"framesize";s:8:"oldvalue";N;s:5:"value";s:3:"400";s:6:"plugin";s:8:"rcontent";}	1572475798	web	192.168.33.1	\N
-1101	\\core\\event\\config_log_created	core	created	config_log	config_log	1642	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:5:"popup";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:8:"rcontent";}	1572475798	web	192.168.33.1	\N
-1102	\\core\\event\\config_log_created	core	created	config_log	config_log	1643	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:5:"frame";s:8:"oldvalue";N;s:5:"value";s:7:"checked";s:6:"plugin";s:8:"rcontent";}	1572475798	web	192.168.33.1	\N
-1103	\\core\\event\\config_log_created	core	created	config_log	config_log	1644	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"popupscrollbars";s:8:"oldvalue";N;s:5:"value";s:7:"checked";s:6:"plugin";s:8:"rcontent";}	1572475798	web	192.168.33.1	\N
-1104	\\core\\event\\config_log_created	core	created	config_log	config_log	1645	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:12:"popupmenubar";s:8:"oldvalue";N;s:5:"value";s:7:"checked";s:6:"plugin";s:8:"rcontent";}	1572475798	web	192.168.33.1	\N
-1105	\\core\\event\\config_log_created	core	created	config_log	config_log	1646	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:12:"popuptoolbar";s:8:"oldvalue";N;s:5:"value";s:7:"checked";s:6:"plugin";s:8:"rcontent";}	1572475798	web	192.168.33.1	\N
-1106	\\core\\event\\config_log_created	core	created	config_log	config_log	1647	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:11:"popupstatus";s:8:"oldvalue";N;s:5:"value";s:7:"checked";s:6:"plugin";s:8:"rcontent";}	1572475798	web	192.168.33.1	\N
-1107	\\core\\event\\config_log_created	core	created	config_log	config_log	1648	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:10:"popupwidth";s:8:"oldvalue";N;s:5:"value";s:3:"600";s:6:"plugin";s:8:"rcontent";}	1572475798	web	192.168.33.1	\N
-1108	\\core\\event\\config_log_created	core	created	config_log	config_log	1649	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:11:"popupheight";s:8:"oldvalue";N;s:5:"value";s:3:"800";s:6:"plugin";s:8:"rcontent";}	1572475798	web	192.168.33.1	\N
-1109	\\core\\event\\config_log_created	core	created	config_log	config_log	1650	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:6:"tracer";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:8:"rcontent";}	1572475798	web	192.168.33.1	\N
-1110	\\core\\event\\config_log_created	core	created	config_log	config_log	1651	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:22:"registersperreportpage";s:8:"oldvalue";N;s:5:"value";s:2:"20";s:6:"plugin";s:8:"rcontent";}	1572475798	web	192.168.33.1	\N
-1111	\\core\\event\\config_log_created	core	created	config_log	config_log	1652	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:9:"wrapafter";s:8:"oldvalue";N;s:5:"value";s:2:"16";s:6:"plugin";s:25:"block_completion_progress";}	1572475798	web	192.168.33.1	\N
-1112	\\core\\event\\config_log_created	core	created	config_log	config_log	1653	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"defaultlongbars";s:8:"oldvalue";N;s:5:"value";s:7:"squeeze";s:6:"plugin";s:25:"block_completion_progress";}	1572475798	web	192.168.33.1	\N
-1113	\\core\\event\\config_log_created	core	created	config_log	config_log	1654	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:16:"coursenametoshow";s:8:"oldvalue";N;s:5:"value";s:9:"shortname";s:6:"plugin";s:25:"block_completion_progress";}	1572475798	web	192.168.33.1	\N
-1114	\\core\\event\\config_log_created	core	created	config_log	config_log	1655	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:16:"completed_colour";s:8:"oldvalue";N;s:5:"value";s:7:"#73A839";s:6:"plugin";s:25:"block_completion_progress";}	1572475798	web	192.168.33.1	\N
-1115	\\core\\event\\config_log_created	core	created	config_log	config_log	1656	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:27:"submittednotcomplete_colour";s:8:"oldvalue";N;s:5:"value";s:7:"#FFCC00";s:6:"plugin";s:25:"block_completion_progress";}	1572475798	web	192.168.33.1	\N
-1116	\\core\\event\\config_log_created	core	created	config_log	config_log	1657	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:19:"notCompleted_colour";s:8:"oldvalue";N;s:5:"value";s:7:"#C71C22";s:6:"plugin";s:25:"block_completion_progress";}	1572475798	web	192.168.33.1	\N
-1117	\\core\\event\\config_log_created	core	created	config_log	config_log	1658	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:25:"futureNotCompleted_colour";s:8:"oldvalue";N;s:5:"value";s:7:"#025187";s:6:"plugin";s:25:"block_completion_progress";}	1572475798	web	192.168.33.1	\N
-1118	\\core\\event\\config_log_created	core	created	config_log	config_log	1659	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:12:"showinactive";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:25:"block_completion_progress";}	1572475798	web	192.168.33.1	\N
-1119	\\core\\event\\config_log_created	core	created	config_log	config_log	1660	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:18:"vicensvives_apiurl";s:8:"oldvalue";N;s:5:"value";s:38:"http://api.vicensvivesdigital.com/rest";s:6:"plugin";N;}	1572475798	web	192.168.33.1	\N
-1120	\\core\\event\\config_log_created	core	created	config_log	config_log	1661	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:20:"vicensvives_sharekey";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";N;}	1572475798	web	192.168.33.1	\N
-1121	\\core\\event\\config_log_created	core	created	config_log	config_log	1662	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:21:"vicensvives_sharepass";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";N;}	1572475798	web	192.168.33.1	\N
-1122	\\core\\event\\config_log_created	core	created	config_log	config_log	1663	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:36:"block_courses_vicensvives_maxcourses";s:8:"oldvalue";N;s:5:"value";s:2:"10";s:6:"plugin";N;}	1572475798	web	192.168.33.1	\N
-1123	\\core\\event\\config_log_created	core	created	config_log	config_log	1664	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:41:"block_courses_vicensvives_defaultcategory";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";N;}	1572475798	web	192.168.33.1	\N
-1124	\\core\\event\\config_log_created	core	created	config_log	config_log	1665	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"viewer_opening";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:7:"mybooks";}	1572475798	web	192.168.33.1	\N
-1125	\\core\\event\\config_log_created	core	created	config_log	config_log	1666	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:6:"addkey";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:7:"mybooks";}	1572475798	web	192.168.33.1	\N
-1126	\\core\\event\\config_log_created	core	created	config_log	config_log	1667	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:13:"editor_enable";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:12:"filter_wiris";}	1572475798	web	192.168.33.1	\N
-1127	\\core\\event\\config_log_created	core	created	config_log	config_log	1668	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:18:"chem_editor_enable";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:12:"filter_wiris";}	1572475798	web	192.168.33.1	\N
-1128	\\core\\event\\config_log_created	core	created	config_log	config_log	1669	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:32:"allow_editorplugin_active_course";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:12:"filter_wiris";}	1572475798	web	192.168.33.1	\N
-1129	\\core\\event\\config_log_created	core	created	config_log	config_log	1670	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:16:"imageservicehost";s:8:"oldvalue";N;s:5:"value";s:13:"www.wiris.net";s:6:"plugin";s:12:"filter_wiris";}	1572475798	web	192.168.33.1	\N
-1130	\\core\\event\\config_log_created	core	created	config_log	config_log	1671	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:16:"imageservicepath";s:8:"oldvalue";N;s:5:"value";s:19:"/demo/editor/render";s:6:"plugin";s:12:"filter_wiris";}	1572475798	web	192.168.33.1	\N
-1131	\\core\\event\\config_log_created	core	created	config_log	config_log	1672	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:20:"imageserviceprotocol";s:8:"oldvalue";N;s:5:"value";s:5:"https";s:6:"plugin";s:12:"filter_wiris";}	1572475798	web	192.168.33.1	\N
-1132	\\core\\event\\config_log_created	core	created	config_log	config_log	1673	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:11:"imageformat";s:8:"oldvalue";N;s:5:"value";s:3:"svg";s:6:"plugin";s:12:"filter_wiris";}	1572475798	web	192.168.33.1	\N
-1133	\\core\\event\\config_log_created	core	created	config_log	config_log	1674	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"pluginperformance";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:12:"filter_wiris";}	1572475798	web	192.168.33.1	\N
-1134	\\core\\event\\config_log_created	core	created	config_log	config_log	1675	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:27:"editormodalwindowfullscreen";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:12:"filter_wiris";}	1572475798	web	192.168.33.1	\N
-1135	\\core\\event\\config_log_created	core	created	config_log	config_log	1676	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:23:"access_provider_enabled";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:12:"filter_wiris";}	1572475798	web	192.168.33.1	\N
-1136	\\core\\event\\config_log_created	core	created	config_log	config_log	1677	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"alexandria_url";s:8:"oldvalue";N;s:5:"value";s:26:"http://alexandria.xtec.cat";s:6:"plugin";s:24:"local_alexandriaimporter";}	1572475798	web	192.168.33.1	\N
-1137	\\core\\event\\config_log_created	core	created	config_log	config_log	1678	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:16:"alexandria_token";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:24:"local_alexandriaimporter";}	1572475798	web	192.168.33.1	\N
-1138	\\core\\event\\config_log_created	core	created	config_log	config_log	1679	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:16:"show_description";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:24:"local_alexandriaimporter";}	1572475798	web	192.168.33.1	\N
-1139	\\core\\event\\config_log_created	core	created	config_log	config_log	1680	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:13:"webserviceurl";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:14:"local_clickedu";}	1572475798	web	192.168.33.1	\N
-1140	\\core\\event\\config_log_created	core	created	config_log	config_log	1681	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:9:"syncusers";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:14:"local_clickedu";}	1572475798	web	192.168.33.1	\N
-1141	\\core\\event\\config_log_created	core	created	config_log	config_log	1682	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:11:"synccourses";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:14:"local_clickedu";}	1572475798	web	192.168.33.1	\N
-1142	\\core\\event\\config_log_created	core	created	config_log	config_log	1683	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:12:"synccontents";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:14:"local_clickedu";}	1572475798	web	192.168.33.1	\N
-1143	\\core\\event\\config_log_created	core	created	config_log	config_log	1684	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:9:"coursecat";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:14:"local_clickedu";}	1572475798	web	192.168.33.1	\N
-1144	\\core\\event\\config_log_created	core	created	config_log	config_log	1685	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:11:"teacherrole";s:8:"oldvalue";N;s:5:"value";s:1:"3";s:6:"plugin";s:14:"local_clickedu";}	1572475798	web	192.168.33.1	\N
-1145	\\core\\event\\config_log_created	core	created	config_log	config_log	1686	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:11:"studentrole";s:8:"oldvalue";N;s:5:"value";s:1:"5";s:6:"plugin";s:14:"local_clickedu";}	1572475798	web	192.168.33.1	\N
-1146	\\core\\event\\config_log_created	core	created	config_log	config_log	1687	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:19:"defaultanswerformat";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:14:"qtype_ordering";}	1572475798	web	192.168.33.1	\N
-1147	\\core\\event\\config_log_created	core	created	config_log	config_log	1688	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:17:"quizzesserviceurl";s:8:"oldvalue";N;s:5:"value";s:33:"http://www.wiris.net/demo/quizzes";s:6:"plugin";s:8:"qtype_wq";}	1572475798	web	192.168.33.1	\N
-1148	\\core\\event\\config_log_created	core	created	config_log	config_log	1689	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:16:"quizzeseditorurl";s:8:"oldvalue";N;s:5:"value";s:32:"http://www.wiris.net/demo/editor";s:6:"plugin";s:8:"qtype_wq";}	1572475798	web	192.168.33.1	\N
-1149	\\core\\event\\config_log_created	core	created	config_log	config_log	1690	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"quizzeshandurl";s:8:"oldvalue";N;s:5:"value";s:30:"http://www.wiris.net/demo/hand";s:6:"plugin";s:8:"qtype_wq";}	1572475798	web	192.168.33.1	\N
-1150	\\core\\event\\config_log_created	core	created	config_log	config_log	1691	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:23:"quizzeswirislauncherurl";s:8:"oldvalue";N;s:5:"value";s:36:"http://stateful.wiris.net/demo/wiris";s:6:"plugin";s:8:"qtype_wq";}	1572475798	web	192.168.33.1	\N
-1151	\\core\\event\\config_log_created	core	created	config_log	config_log	1692	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:15:"quizzeswirisurl";s:8:"oldvalue";N;s:5:"value";s:31:"http://www.wiris.net/demo/wiris";s:6:"plugin";s:8:"qtype_wq";}	1572475798	web	192.168.33.1	\N
-1152	\\core\\event\\config_log_created	core	created	config_log	config_log	1693	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:23:"access_provider_enabled";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:8:"qtype_wq";}	1572475798	web	192.168.33.1	\N
-1153	\\core\\event\\config_log_created	core	created	config_log	config_log	1694	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"fontselectlist";s:8:"oldvalue";N;s:5:"value";s:245:"Arial=Arial, Helvetica, sans-serif;\r\nTimes=Times New Roman, Times, serif;\r\nCourier=Courier New, Courier, mono;\r\nGeorgia=Georgia, Times New Roman, Times, serif;\r\nVerdana=Verdana, Geneva, sans-serif;\r\nTrebuchet=Trebuchet MS, Helvetica, sans-serif;";s:6:"plugin";s:15:"atto_fontfamily";}	1572475798	web	192.168.33.1	\N
-1154	\\core\\event\\config_log_created	core	created	config_log	config_log	1695	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:4:"logo";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:11:"theme_xtec2";}	1572475798	web	192.168.33.1	\N
-1155	\\core\\event\\config_log_created	core	created	config_log	config_log	1696	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:10:"logo_color";s:8:"oldvalue";N;s:5:"value";s:7:"#675A70";s:6:"plugin";s:11:"theme_xtec2";}	1572475798	web	192.168.33.1	\N
-1156	\\core\\event\\config_log_created	core	created	config_log	config_log	1697	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:23:"logo_color_transparency";s:8:"oldvalue";N;s:5:"value";s:2:"40";s:6:"plugin";s:11:"theme_xtec2";}	1572475798	web	192.168.33.1	\N
-1157	\\core\\event\\config_log_created	core	created	config_log	config_log	1698	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:9:"top_menus";s:8:"oldvalue";N;s:5:"value";s:1:"0";s:6:"plugin";s:11:"theme_xtec2";}	1572475798	web	192.168.33.1	\N
-1158	\\core\\event\\config_log_created	core	created	config_log	config_log	1699	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:12:"block_layout";s:8:"oldvalue";N;s:5:"value";s:4:"left";s:6:"plugin";s:11:"theme_xtec2";}	1572475798	web	192.168.33.1	\N
-1159	\\core\\event\\config_log_created	core	created	config_log	config_log	1700	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:8:"footnote";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:11:"theme_xtec2";}	1572475798	web	192.168.33.1	\N
-1160	\\core\\event\\config_log_created	core	created	config_log	config_log	1701	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:7:"website";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:11:"theme_xtec2";}	1572475798	web	192.168.33.1	\N
-1161	\\core\\event\\config_log_created	core	created	config_log	config_log	1702	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:5:"email";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:11:"theme_xtec2";}	1572475798	web	192.168.33.1	\N
-1162	\\core\\event\\config_log_created	core	created	config_log	config_log	1703	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:5:"phone";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:11:"theme_xtec2";}	1572475798	web	192.168.33.1	\N
-1163	\\core\\event\\config_log_created	core	created	config_log	config_log	1704	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:5:"nodes";s:8:"oldvalue";N;s:5:"value";s:1:"1";s:6:"plugin";s:11:"theme_xtec2";}	1572475798	web	192.168.33.1	\N
-1164	\\core\\event\\config_log_created	core	created	config_log	config_log	1705	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:8:"whatsapp";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:11:"theme_xtec2";}	1572475798	web	192.168.33.1	\N
-1165	\\core\\event\\config_log_created	core	created	config_log	config_log	1706	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:8:"facebook";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:11:"theme_xtec2";}	1572475798	web	192.168.33.1	\N
-1166	\\core\\event\\config_log_created	core	created	config_log	config_log	1707	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:7:"twitter";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:11:"theme_xtec2";}	1572475798	web	192.168.33.1	\N
-1167	\\core\\event\\config_log_created	core	created	config_log	config_log	1708	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:10:"googleplus";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:11:"theme_xtec2";}	1572475798	web	192.168.33.1	\N
-1168	\\core\\event\\config_log_created	core	created	config_log	config_log	1709	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:9:"instagram";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:11:"theme_xtec2";}	1572475798	web	192.168.33.1	\N
-1169	\\core\\event\\config_log_created	core	created	config_log	config_log	1710	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:6:"flickr";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:11:"theme_xtec2";}	1572475798	web	192.168.33.1	\N
-1170	\\core\\event\\config_log_created	core	created	config_log	config_log	1711	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:8:"linkedin";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:11:"theme_xtec2";}	1572475798	web	192.168.33.1	\N
-1171	\\core\\event\\config_log_created	core	created	config_log	config_log	1712	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:9:"pinterest";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:11:"theme_xtec2";}	1572475798	web	192.168.33.1	\N
-1172	\\core\\event\\config_log_created	core	created	config_log	config_log	1713	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:7:"youtube";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:11:"theme_xtec2";}	1572475798	web	192.168.33.1	\N
-1173	\\core\\event\\config_log_created	core	created	config_log	config_log	1714	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:5:"skype";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:11:"theme_xtec2";}	1572475798	web	192.168.33.1	\N
-1174	\\core\\event\\config_log_created	core	created	config_log	config_log	1715	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:8:"colorset";s:8:"oldvalue";N;s:5:"value";s:5:"grana";s:6:"plugin";s:11:"theme_xtec2";}	1572475798	web	192.168.33.1	\N
-1175	\\core\\event\\config_log_created	core	created	config_log	config_log	1716	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:6:"color2";s:8:"oldvalue";N;s:5:"value";s:7:"#AC2013";s:6:"plugin";s:11:"theme_xtec2";}	1572475798	web	192.168.33.1	\N
-1176	\\core\\event\\config_log_created	core	created	config_log	config_log	1717	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:6:"color4";s:8:"oldvalue";N;s:5:"value";s:7:"#303030";s:6:"plugin";s:11:"theme_xtec2";}	1572475798	web	192.168.33.1	\N
-1177	\\core\\event\\config_log_created	core	created	config_log	config_log	1718	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:6:"color5";s:8:"oldvalue";N;s:5:"value";s:7:"#AC2013";s:6:"plugin";s:11:"theme_xtec2";}	1572475798	web	192.168.33.1	\N
-1178	\\core\\event\\config_log_created	core	created	config_log	config_log	1719	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:8:"fontsize";s:8:"oldvalue";N;s:5:"value";s:7:"mitjana";s:6:"plugin";s:11:"theme_xtec2";}	1572475798	web	192.168.33.1	\N
-1179	\\core\\event\\config_log_created	core	created	config_log	config_log	1720	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:9:"fontstyle";s:8:"oldvalue";N;s:5:"value";s:6:"normal";s:6:"plugin";s:11:"theme_xtec2";}	1572475798	web	192.168.33.1	\N
-1180	\\core\\event\\config_log_created	core	created	config_log	config_log	1721	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:9:"importcss";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:11:"theme_xtec2";}	1572475798	web	192.168.33.1	\N
-1181	\\core\\event\\config_log_created	core	created	config_log	config_log	1722	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:9:"customcss";s:8:"oldvalue";N;s:5:"value";s:0:"";s:6:"plugin";s:11:"theme_xtec2";}	1572475798	web	192.168.33.1	\N
-1182	\\core\\event\\dashboard_viewed	core	viewed	dashboard	\N	\N	r	0	5	30	2	2	0	2	0	N;	1572476010	web	192.168.33.1	\N
-1183	\\tool_usertours\\event\\tour_started	tool_usertours	started	tour	tool_usertours_tours	2	r	2	5	30	2	2	0	2	0	a:1:{s:7:"pageurl";s:52:"https://agora-virtual.xtec.cat/agora/usu1/moodle/my/";}	1572476012	web	192.168.33.1	\N
-1190	\\core\\event\\dashboard_viewed	core	viewed	dashboard	\N	\N	r	0	5	30	2	2	0	2	0	N;	1572476324	web	192.168.33.1	\N
-1198	\\core\\event\\user_password_updated	core	updated	user_password	\N	\N	u	0	5	30	2	3	0	2	0	a:1:{s:14:"forgottenreset";b:0;}	1572476575	web	192.168.33.1	\N
-1199	\\core\\event\\user_updated	core	updated	user	user	2	u	0	5	30	2	3	0	2	0	N;	1572476575	web	192.168.33.1	\N
-1184	\\tool_usertours\\event\\step_shown	tool_usertours	shown	step	tool_usertours_steps	7	r	2	5	30	2	2	0	2	0	a:3:{s:7:"pageurl";s:52:"https://agora-virtual.xtec.cat/agora/usu1/moodle/my/";s:6:"tourid";i:2;s:9:"stepindex";i:0;}	1572476016	web	192.168.33.1	\N
-1187	\\core\\event\\config_log_created	core	created	config_log	config_log	1723	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:12:"profileroles";s:8:"oldvalue";s:5:"5,4,3";s:5:"value";s:5:"3,4,5";s:6:"plugin";N;}	1572476119	web	192.168.33.1	\N
-1188	\\core\\event\\config_log_created	core	created	config_log	config_log	1724	c	0	1	10	0	2	0	\N	0	a:4:{s:4:"name";s:14:"passwordpolicy";s:8:"oldvalue";s:1:"1";s:5:"value";s:1:"0";s:6:"plugin";N;}	1572476119	web	192.168.33.1	\N
-1185	\\tool_usertours\\event\\tour_ended	tool_usertours	ended	tour	tool_usertours_tours	2	c	2	5	30	2	2	0	2	0	a:3:{s:7:"pageurl";s:52:"https://agora-virtual.xtec.cat/agora/usu1/moodle/my/";s:6:"stepid";i:7;s:9:"stepindex";i:0;}	1572476018	web	192.168.33.1	\N
-1186	\\core\\event\\dashboard_viewed	core	viewed	dashboard	\N	\N	r	0	5	30	2	2	0	2	0	N;	1572476025	web	192.168.33.1	\N
-1189	\\core\\event\\user_created	core	created	user	user	3	c	0	27	30	3	2	0	3	0	N;	1572476206	web	192.168.33.1	\N
-1191	\\core\\event\\user_loggedout	core	loggedout	user	user	2	r	0	1	10	0	2	0	\N	0	a:1:{s:9:"sessionid";s:26:"qk1hmdcrasbk515gvqbucpqk0h";}	1572476452	web	192.168.33.1	\N
-1192	\\core\\event\\course_viewed	core	viewed	course	\N	\N	r	2	2	50	1	0	1	\N	0	N;	1572476454	web	192.168.33.1	\N
-1193	\\core\\event\\user_loggedin	core	loggedin	user	user	3	r	0	1	10	0	3	0	\N	0	a:1:{s:8:"username";s:9:"xtecadmin";}	1572476464	web	192.168.33.1	\N
-1194	\\core\\event\\dashboard_viewed	core	viewed	dashboard	\N	\N	r	0	27	30	3	3	0	3	0	N;	1572476471	web	192.168.33.1	\N
-1195	\\tool_usertours\\event\\tour_started	tool_usertours	started	tour	tool_usertours_tours	2	r	2	27	30	3	3	0	3	0	a:1:{s:7:"pageurl";s:52:"https://agora-virtual.xtec.cat/agora/usu1/moodle/my/";}	1572476473	web	192.168.33.1	\N
-1196	\\tool_usertours\\event\\step_shown	tool_usertours	shown	step	tool_usertours_steps	7	r	2	27	30	3	3	0	3	0	a:3:{s:7:"pageurl";s:52:"https://agora-virtual.xtec.cat/agora/usu1/moodle/my/";s:6:"tourid";i:2;s:9:"stepindex";i:0;}	1572476477	web	192.168.33.1	\N
-1197	\\tool_usertours\\event\\tour_ended	tool_usertours	ended	tour	tool_usertours_tours	2	c	2	27	30	3	3	0	3	0	a:3:{s:7:"pageurl";s:52:"https://agora-virtual.xtec.cat/agora/usu1/moodle/my/";s:6:"stepid";i:7;s:9:"stepindex";i:0;}	1572476488	web	192.168.33.1	\N
-1200	\\core\\event\\dashboard_viewed	core	viewed	dashboard	\N	\N	r	0	27	30	3	3	0	3	0	N;	1572476635	web	192.168.33.1	\N
-1201	\\core\\event\\config_log_created	core	created	config_log	config_log	1725	c	0	1	10	0	3	0	\N	0	a:4:{s:4:"name";s:15:"defaulthomepage";s:8:"oldvalue";s:1:"1";s:5:"value";s:1:"0";s:6:"plugin";N;}	1572476730	web	192.168.33.1	\N
-1202	\\core\\event\\course_viewed	core	viewed	course	\N	\N	r	2	2	50	1	3	1	\N	0	N;	1572476734	web	192.168.33.1	\N
-1203	\\core\\event\\course_viewed	core	viewed	course	\N	\N	r	2	2	50	1	3	1	\N	0	N;	1572476760	web	192.168.33.1	\N
 \.
-
-
---
--- Name: m2logstore_standard_log_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2logstore_standard_log_id_seq', 1203, true);
 
 
 --
@@ -35472,25 +30941,11 @@ COPY public.m2lti (id, course, name, intro, introformat, timecreated, timemodifi
 
 
 --
--- Name: m2lti_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2lti_id_seq', 1, false);
-
-
---
 -- Data for Name: m2lti_submission; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2lti_submission (id, ltiid, userid, datesubmitted, dateupdated, gradepercent, originalgrade, launchid, state) FROM stdin;
 \.
-
-
---
--- Name: m2lti_submission_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2lti_submission_id_seq', 1, false);
 
 
 --
@@ -35502,25 +30957,11 @@ COPY public.m2lti_tool_proxies (id, name, regurl, state, guid, secret, vendorcod
 
 
 --
--- Name: m2lti_tool_proxies_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2lti_tool_proxies_id_seq', 1, false);
-
-
---
 -- Data for Name: m2lti_tool_settings; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2lti_tool_settings (id, toolproxyid, course, coursemoduleid, settings, timecreated, timemodified) FROM stdin;
 \.
-
-
---
--- Name: m2lti_tool_settings_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2lti_tool_settings_id_seq', 1, false);
 
 
 --
@@ -35540,32 +30981,11 @@ COPY public.m2lti_types_config (id, typeid, name, value) FROM stdin;
 
 
 --
--- Name: m2lti_types_config_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2lti_types_config_id_seq', 1, false);
-
-
---
--- Name: m2lti_types_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2lti_types_id_seq', 1, false);
-
-
---
 -- Data for Name: m2ltiservice_gradebookservices; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2ltiservice_gradebookservices (id, gradeitemid, courseid, toolproxyid, typeid, baseurl, ltilinkid, tag) FROM stdin;
 \.
-
-
---
--- Name: m2ltiservice_gradebookservices_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2ltiservice_gradebookservices_id_seq', 1, false);
 
 
 --
@@ -35585,25 +31005,11 @@ COPY public.m2message_airnotifier_devices (id, userdeviceid, enable) FROM stdin;
 
 
 --
--- Name: m2message_airnotifier_devices_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2message_airnotifier_devices_id_seq', 1, false);
-
-
---
 -- Data for Name: m2message_contact_requests; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2message_contact_requests (id, userid, requesteduserid, timecreated) FROM stdin;
 \.
-
-
---
--- Name: m2message_contact_requests_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2message_contact_requests_id_seq', 1, false);
 
 
 --
@@ -35615,25 +31021,11 @@ COPY public.m2message_contacts (id, userid, contactid, timecreated) FROM stdin;
 
 
 --
--- Name: m2message_contacts_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2message_contacts_id_seq', 1, false);
-
-
---
 -- Data for Name: m2message_conversation_members; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2message_conversation_members (id, conversationid, userid, timecreated) FROM stdin;
 \.
-
-
---
--- Name: m2message_conversation_members_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2message_conversation_members_id_seq', 1, false);
 
 
 --
@@ -35645,20 +31037,6 @@ COPY public.m2message_conversations (id, type, name, convhash, component, itemty
 
 
 --
--- Name: m2message_conversations_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2message_conversations_id_seq', 1, false);
-
-
---
--- Name: m2message_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2message_id_seq', 1, false);
-
-
---
 -- Data for Name: m2message_popup; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -35667,25 +31045,11 @@ COPY public.m2message_popup (id, messageid, isread) FROM stdin;
 
 
 --
--- Name: m2message_popup_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2message_popup_id_seq', 1, false);
-
-
---
 -- Data for Name: m2message_popup_notifications; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2message_popup_notifications (id, notificationid) FROM stdin;
 \.
-
-
---
--- Name: m2message_popup_notifications_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2message_popup_notifications_id_seq', 1, false);
 
 
 --
@@ -35698,13 +31062,6 @@ COPY public.m2message_processors (id, name, enabled) FROM stdin;
 3	jabber	1
 4	popup	1
 \.
-
-
---
--- Name: m2message_processors_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2message_processors_id_seq', 4, true);
 
 
 --
@@ -35750,14 +31107,9 @@ COPY public.m2message_providers (id, name, component, capability) FROM stdin;
 36	notification	tool_monitor	tool/monitor:subscribe
 37	message	mod_questionnaire	\N
 38	notification	mod_questionnaire	\N
+39	submission	mod_hvp	mod/hvp:emailnotifysubmission
+40	confirmation	mod_hvp	mod/hvp:emailconfirmsubmission
 \.
-
-
---
--- Name: m2message_providers_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2message_providers_id_seq', 38, true);
 
 
 --
@@ -35769,25 +31121,11 @@ COPY public.m2message_read (id, useridfrom, useridto, subject, fullmessage, full
 
 
 --
--- Name: m2message_read_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2message_read_id_seq', 1, false);
-
-
---
 -- Data for Name: m2message_user_actions; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2message_user_actions (id, userid, messageid, action, timecreated) FROM stdin;
 \.
-
-
---
--- Name: m2message_user_actions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2message_user_actions_id_seq', 1, false);
 
 
 --
@@ -35799,25 +31137,11 @@ COPY public.m2message_users_blocked (id, userid, blockeduserid, timecreated) FRO
 
 
 --
--- Name: m2message_users_blocked_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2message_users_blocked_id_seq', 1, false);
-
-
---
 -- Data for Name: m2messageinbound_datakeys; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2messageinbound_datakeys (id, handler, datavalue, datakey, timecreated, expires) FROM stdin;
 \.
-
-
---
--- Name: m2messageinbound_datakeys_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2messageinbound_datakeys_id_seq', 1, false);
 
 
 --
@@ -35832,25 +31156,11 @@ COPY public.m2messageinbound_handlers (id, component, classname, defaultexpirati
 
 
 --
--- Name: m2messageinbound_handlers_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2messageinbound_handlers_id_seq', 3, true);
-
-
---
 -- Data for Name: m2messageinbound_messagelist; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2messageinbound_messagelist (id, messageid, userid, address, timecreated) FROM stdin;
 \.
-
-
---
--- Name: m2messageinbound_messagelist_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2messageinbound_messagelist_id_seq', 1, false);
 
 
 --
@@ -35862,13 +31172,6 @@ COPY public.m2messages (id, useridfrom, conversationid, subject, fullmessage, fu
 
 
 --
--- Name: m2messages_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2messages_id_seq', 1, false);
-
-
---
 -- Data for Name: m2mnet_application; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -35876,13 +31179,6 @@ COPY public.m2mnet_application (id, name, display_name, xmlrpc_server_url, sso_l
 1	moodle	Moodle	/mnet/xmlrpc/server.php	/auth/mnet/land.php	/auth/mnet/jump.php
 2	mahara	Mahara	/api/xmlrpc/server.php	/auth/xmlrpc/land.php	/auth/xmlrpc/jump.php
 \.
-
-
---
--- Name: m2mnet_application_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2mnet_application_id_seq', 2, true);
 
 
 --
@@ -35904,32 +31200,11 @@ COPY public.m2mnet_host2service (id, hostid, serviceid, publish, subscribe) FROM
 
 
 --
--- Name: m2mnet_host2service_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2mnet_host2service_id_seq', 1, false);
-
-
---
--- Name: m2mnet_host_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2mnet_host_id_seq', 2, true);
-
-
---
 -- Data for Name: m2mnet_log; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2mnet_log (id, hostid, remoteid, "time", userid, ip, course, coursename, module, cmid, action, url, info) FROM stdin;
 \.
-
-
---
--- Name: m2mnet_log_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2mnet_log_id_seq', 1, false);
 
 
 --
@@ -35957,13 +31232,6 @@ COPY public.m2mnet_remote_rpc (id, functionname, xmlrpcpath, plugintype, pluginn
 
 
 --
--- Name: m2mnet_remote_rpc_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2mnet_remote_rpc_id_seq', 16, true);
-
-
---
 -- Data for Name: m2mnet_remote_service2rpc; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -35988,13 +31256,6 @@ COPY public.m2mnet_remote_service2rpc (id, serviceid, rpcid) FROM stdin;
 
 
 --
--- Name: m2mnet_remote_service2rpc_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2mnet_remote_service2rpc_id_seq', 16, true);
-
-
---
 -- Data for Name: m2mnet_rpc; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -36015,13 +31276,6 @@ COPY public.m2mnet_rpc (id, functionname, xmlrpcpath, plugintype, pluginname, en
 14	course_enrolments	enrol/mnet/enrol.php/course_enrolments	enrol	mnet	1	Returns a list of users from the client server who are enrolled in our course\nSuitable instance of enrol_mnet must be created in the course. This method will not\nreturn any information about the enrolments in courses that are not available for\nremote enrolment, even if their users are enrolled into them via other plugin\n(note the difference from {@link self::user_enrolments()}).\nThis method will return enrolment information for users from hosts regardless\nthe enrolment plugin. It does not matter if the user was enrolled remotely by\ntheir admin or locally. Once the course is available for remote enrolments, we\nwill tell them everything about their users.\nIn Moodle 1.x the returned array used to be indexed by username. The side effect\nof MDL-19219 fix is that we do not need to use such index and therefore we can\nreturn all enrolment records. MNet clients 1.x will only use the last record for\nthe student, if she is enrolled via multiple plugins.	a:2:{s:10:"parameters";a:2:{i:0;a:3:{s:4:"name";s:8:"courseid";s:4:"type";s:3:"int";s:11:"description";s:16:"ID of our course";}i:1;a:3:{s:4:"name";s:5:"roles";s:4:"type";s:12:"string|array";s:11:"description";s:58:"comma separated list of role shortnames (or array of them)";}}s:6:"return";a:2:{s:4:"type";s:5:"array";s:11:"description";s:0:"";}}	enrol.php	enrol_mnet_mnetservice_enrol	0
 15	fetch_file	portfolio/mahara/lib.php/fetch_file	portfolio	mahara	1	xmlrpc (mnet) function to get the file.\nreads in the file and returns it base_64 encoded\nso that it can be enrypted by mnet.	a:2:{s:10:"parameters";a:1:{i:0;a:3:{s:4:"name";s:5:"token";s:4:"type";s:6:"string";s:11:"description";s:56:"the token recieved previously during send_content_intent";}}s:6:"return";a:2:{s:4:"type";s:4:"void";s:11:"description";s:0:"";}}	lib.php	portfolio_plugin_mahara	1
 \.
-
-
---
--- Name: m2mnet_rpc_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2mnet_rpc_id_seq', 15, true);
 
 
 --
@@ -36060,32 +31314,11 @@ COPY public.m2mnet_service2rpc (id, serviceid, rpcid) FROM stdin;
 
 
 --
--- Name: m2mnet_service2rpc_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2mnet_service2rpc_id_seq', 15, true);
-
-
---
--- Name: m2mnet_service_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2mnet_service_id_seq', 4, true);
-
-
---
 -- Data for Name: m2mnet_session; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2mnet_session (id, userid, username, token, mnethostid, useragent, confirm_timeout, session_id, expires) FROM stdin;
 \.
-
-
---
--- Name: m2mnet_session_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2mnet_session_id_seq', 1, false);
 
 
 --
@@ -36097,13 +31330,6 @@ COPY public.m2mnet_sso_access_control (id, username, mnet_host_id, accessctrl) F
 
 
 --
--- Name: m2mnet_sso_access_control_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2mnet_sso_access_control_id_seq', 1, false);
-
-
---
 -- Data for Name: m2mnetservice_enrol_courses; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -36112,25 +31338,11 @@ COPY public.m2mnetservice_enrol_courses (id, hostid, remoteid, categoryid, categ
 
 
 --
--- Name: m2mnetservice_enrol_courses_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2mnetservice_enrol_courses_id_seq', 1, false);
-
-
---
 -- Data for Name: m2mnetservice_enrol_enrolments; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2mnetservice_enrol_enrolments (id, hostid, userid, remotecourseid, rolename, enroltime, enroltype) FROM stdin;
 \.
-
-
---
--- Name: m2mnetservice_enrol_enrolments_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2mnetservice_enrol_enrolments_id_seq', 1, false);
 
 
 --
@@ -36173,13 +31385,6 @@ COPY public.m2modules (id, name, cron, lastcron, search, visible) FROM stdin;
 
 
 --
--- Name: m2modules_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2modules_id_seq', 31, true);
-
-
---
 -- Data for Name: m2my_pages; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -36192,25 +31397,11 @@ COPY public.m2my_pages (id, userid, name, private, sortorder) FROM stdin;
 
 
 --
--- Name: m2my_pages_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2my_pages_id_seq', 4, true);
-
-
---
 -- Data for Name: m2notifications; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2notifications (id, useridfrom, useridto, subject, fullmessage, fullmessageformat, fullmessagehtml, smallmessage, component, eventtype, contexturl, contexturlname, timeread, timecreated) FROM stdin;
 \.
-
-
---
--- Name: m2notifications_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2notifications_id_seq', 1, false);
 
 
 --
@@ -36222,25 +31413,11 @@ COPY public.m2oauth2_access_token (id, timecreated, timemodified, usermodified, 
 
 
 --
--- Name: m2oauth2_access_token_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2oauth2_access_token_id_seq', 1, false);
-
-
---
 -- Data for Name: m2oauth2_endpoint; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2oauth2_endpoint (id, timecreated, timemodified, usermodified, name, url, issuerid) FROM stdin;
 \.
-
-
---
--- Name: m2oauth2_endpoint_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2oauth2_endpoint_id_seq', 1, false);
 
 
 --
@@ -36252,25 +31429,11 @@ COPY public.m2oauth2_issuer (id, timecreated, timemodified, usermodified, name, 
 
 
 --
--- Name: m2oauth2_issuer_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2oauth2_issuer_id_seq', 1, false);
-
-
---
 -- Data for Name: m2oauth2_system_account; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2oauth2_system_account (id, timecreated, timemodified, usermodified, issuerid, refreshtoken, grantedscopes, email, username) FROM stdin;
 \.
-
-
---
--- Name: m2oauth2_system_account_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2oauth2_system_account_id_seq', 1, false);
 
 
 --
@@ -36282,25 +31445,11 @@ COPY public.m2oauth2_user_field_mapping (id, timemodified, timecreated, usermodi
 
 
 --
--- Name: m2oauth2_user_field_mapping_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2oauth2_user_field_mapping_id_seq', 1, false);
-
-
---
 -- Data for Name: m2oauth_access_tokens; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2oauth_access_tokens (id, access_token, client_id, user_id, expires, scope) FROM stdin;
 \.
-
-
---
--- Name: m2oauth_access_tokens_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2oauth_access_tokens_id_seq', 1, false);
 
 
 --
@@ -36312,25 +31461,11 @@ COPY public.m2oauth_authorization_codes (id, authorization_code, client_id, user
 
 
 --
--- Name: m2oauth_authorization_codes_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2oauth_authorization_codes_id_seq', 1, false);
-
-
---
 -- Data for Name: m2oauth_clients; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2oauth_clients (id, client_id, client_secret, redirect_uri, grant_types, scope, user_id) FROM stdin;
 \.
-
-
---
--- Name: m2oauth_clients_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2oauth_clients_id_seq', 1, false);
 
 
 --
@@ -36342,25 +31477,11 @@ COPY public.m2oauth_jwt (id, client_id, subject, public_key) FROM stdin;
 
 
 --
--- Name: m2oauth_jwt_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2oauth_jwt_id_seq', 1, false);
-
-
---
 -- Data for Name: m2oauth_public_keys; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2oauth_public_keys (id, client_id, public_key, private_key, encryption_algorithm) FROM stdin;
 \.
-
-
---
--- Name: m2oauth_public_keys_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2oauth_public_keys_id_seq', 1, false);
 
 
 --
@@ -36372,25 +31493,11 @@ COPY public.m2oauth_refresh_tokens (id, refresh_token, client_id, user_id, expir
 
 
 --
--- Name: m2oauth_refresh_tokens_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2oauth_refresh_tokens_id_seq', 1, false);
-
-
---
 -- Data for Name: m2oauth_scopes; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2oauth_scopes (id, scope, is_default) FROM stdin;
 \.
-
-
---
--- Name: m2oauth_scopes_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2oauth_scopes_id_seq', 1, false);
 
 
 --
@@ -36402,25 +31509,11 @@ COPY public.m2oauth_user_auth_scopes (id, client_id, user_id, scope) FROM stdin;
 
 
 --
--- Name: m2oauth_user_auth_scopes_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2oauth_user_auth_scopes_id_seq', 1, false);
-
-
---
 -- Data for Name: m2page; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2page (id, course, name, intro, introformat, content, contentformat, legacyfiles, legacyfileslast, display, displayoptions, revision, timemodified) FROM stdin;
 \.
-
-
---
--- Name: m2page_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2page_id_seq', 1, false);
 
 
 --
@@ -36440,32 +31533,11 @@ COPY public.m2portfolio_instance_config (id, instance, name, value) FROM stdin;
 
 
 --
--- Name: m2portfolio_instance_config_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2portfolio_instance_config_id_seq', 1, false);
-
-
---
--- Name: m2portfolio_instance_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2portfolio_instance_id_seq', 1, false);
-
-
---
 -- Data for Name: m2portfolio_instance_user; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2portfolio_instance_user (id, instance, userid, name, value) FROM stdin;
 \.
-
-
---
--- Name: m2portfolio_instance_user_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2portfolio_instance_user_id_seq', 1, false);
 
 
 --
@@ -36477,25 +31549,11 @@ COPY public.m2portfolio_log (id, userid, "time", portfolio, caller_class, caller
 
 
 --
--- Name: m2portfolio_log_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2portfolio_log_id_seq', 1, false);
-
-
---
 -- Data for Name: m2portfolio_mahara_queue; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2portfolio_mahara_queue (id, transferid, token) FROM stdin;
 \.
-
-
---
--- Name: m2portfolio_mahara_queue_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2portfolio_mahara_queue_id_seq', 1, false);
 
 
 --
@@ -36507,13 +31565,6 @@ COPY public.m2portfolio_tempdata (id, data, expirytime, userid, instance, queued
 
 
 --
--- Name: m2portfolio_tempdata_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2portfolio_tempdata_id_seq', 1, false);
-
-
---
 -- Data for Name: m2post; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -36522,25 +31573,11 @@ COPY public.m2post (id, module, userid, courseid, groupid, moduleid, coursemodul
 
 
 --
--- Name: m2post_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2post_id_seq', 1, false);
-
-
---
 -- Data for Name: m2profiling; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2profiling (id, runid, url, data, totalexecutiontime, totalcputime, totalcalls, totalmemory, runreference, runcomment, timecreated) FROM stdin;
 \.
-
-
---
--- Name: m2profiling_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2profiling_id_seq', 1, false);
 
 
 --
@@ -36560,32 +31597,11 @@ COPY public.m2qtype_ddimageortext_drags (id, questionid, no, draggroup, infinite
 
 
 --
--- Name: m2qtype_ddimageortext_drags_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2qtype_ddimageortext_drags_id_seq', 1, false);
-
-
---
 -- Data for Name: m2qtype_ddimageortext_drops; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2qtype_ddimageortext_drops (id, questionid, no, xleft, ytop, choice, label) FROM stdin;
 \.
-
-
---
--- Name: m2qtype_ddimageortext_drops_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2qtype_ddimageortext_drops_id_seq', 1, false);
-
-
---
--- Name: m2qtype_ddimageortext_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2qtype_ddimageortext_id_seq', 1, false);
 
 
 --
@@ -36605,32 +31621,11 @@ COPY public.m2qtype_ddmarker_drags (id, questionid, no, label, infinite, noofdra
 
 
 --
--- Name: m2qtype_ddmarker_drags_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2qtype_ddmarker_drags_id_seq', 1, false);
-
-
---
 -- Data for Name: m2qtype_ddmarker_drops; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2qtype_ddmarker_drops (id, questionid, no, shape, coords, choice) FROM stdin;
 \.
-
-
---
--- Name: m2qtype_ddmarker_drops_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2qtype_ddmarker_drops_id_seq', 1, false);
-
-
---
--- Name: m2qtype_ddmarker_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2qtype_ddmarker_id_seq', 1, false);
 
 
 --
@@ -36642,25 +31637,11 @@ COPY public.m2qtype_essay_options (id, questionid, responseformat, responserequi
 
 
 --
--- Name: m2qtype_essay_options_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2qtype_essay_options_id_seq', 1, false);
-
-
---
 -- Data for Name: m2qtype_essaywiris_backup; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2qtype_essaywiris_backup (id, questionid, responseformat, responsefieldlines, attachments, graderinfo, graderinfoformat) FROM stdin;
 \.
-
-
---
--- Name: m2qtype_essaywiris_backup_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2qtype_essaywiris_backup_id_seq', 1, false);
 
 
 --
@@ -36672,25 +31653,11 @@ COPY public.m2qtype_match_options (id, questionid, shuffleanswers, correctfeedba
 
 
 --
--- Name: m2qtype_match_options_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2qtype_match_options_id_seq', 1, false);
-
-
---
 -- Data for Name: m2qtype_match_subquestions; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2qtype_match_subquestions (id, questionid, questiontext, questiontextformat, answertext) FROM stdin;
 \.
-
-
---
--- Name: m2qtype_match_subquestions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2qtype_match_subquestions_id_seq', 1, false);
 
 
 --
@@ -36702,25 +31669,11 @@ COPY public.m2qtype_multichoice_options (id, questionid, layout, single, shuffle
 
 
 --
--- Name: m2qtype_multichoice_options_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2qtype_multichoice_options_id_seq', 1, false);
-
-
---
 -- Data for Name: m2qtype_ordering_options; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2qtype_ordering_options (id, questionid, layouttype, selecttype, selectcount, gradingtype, showgrading, numberingstyle, correctfeedback, correctfeedbackformat, incorrectfeedback, incorrectfeedbackformat, partiallycorrectfeedback, partiallycorrectfeedbackformat) FROM stdin;
 \.
-
-
---
--- Name: m2qtype_ordering_options_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2qtype_ordering_options_id_seq', 1, false);
 
 
 --
@@ -36732,25 +31685,11 @@ COPY public.m2qtype_randomsamatch_options (id, questionid, choose, subcats, corr
 
 
 --
--- Name: m2qtype_randomsamatch_options_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2qtype_randomsamatch_options_id_seq', 1, false);
-
-
---
 -- Data for Name: m2qtype_shortanswer_options; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2qtype_shortanswer_options (id, questionid, usecase) FROM stdin;
 \.
-
-
---
--- Name: m2qtype_shortanswer_options_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2qtype_shortanswer_options_id_seq', 1, false);
 
 
 --
@@ -36762,25 +31701,11 @@ COPY public.m2qtype_wq (id, question, xml, hash, options) FROM stdin;
 
 
 --
--- Name: m2qtype_wq_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2qtype_wq_id_seq', 1, false);
-
-
---
 -- Data for Name: m2qtype_wq_variables; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2qtype_wq_variables (id, identifier, value) FROM stdin;
 \.
-
-
---
--- Name: m2qtype_wq_variables_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2qtype_wq_variables_id_seq', 1, false);
 
 
 --
@@ -36800,25 +31725,11 @@ COPY public.m2question_answers (id, question, answer, answerformat, fraction, fe
 
 
 --
--- Name: m2question_answers_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2question_answers_id_seq', 1, false);
-
-
---
 -- Data for Name: m2question_attempt_step_data; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2question_attempt_step_data (id, attemptstepid, name, value) FROM stdin;
 \.
-
-
---
--- Name: m2question_attempt_step_data_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2question_attempt_step_data_id_seq', 1, false);
 
 
 --
@@ -36830,25 +31741,11 @@ COPY public.m2question_attempt_steps (id, questionattemptid, sequencenumber, sta
 
 
 --
--- Name: m2question_attempt_steps_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2question_attempt_steps_id_seq', 1, false);
-
-
---
 -- Data for Name: m2question_attempts; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2question_attempts (id, questionusageid, slot, behaviour, questionid, variant, maxmark, minfraction, maxfraction, flagged, questionsummary, rightanswer, responsesummary, timemodified) FROM stdin;
 \.
-
-
---
--- Name: m2question_attempts_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2question_attempts_id_seq', 1, false);
 
 
 --
@@ -36860,25 +31757,11 @@ COPY public.m2question_calculated (id, question, answer, tolerance, tolerancetyp
 
 
 --
--- Name: m2question_calculated_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2question_calculated_id_seq', 1, false);
-
-
---
 -- Data for Name: m2question_calculated_options; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2question_calculated_options (id, question, synchronize, single, shuffleanswers, correctfeedback, correctfeedbackformat, partiallycorrectfeedback, partiallycorrectfeedbackformat, incorrectfeedback, incorrectfeedbackformat, answernumbering, shownumcorrect) FROM stdin;
 \.
-
-
---
--- Name: m2question_calculated_options_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2question_calculated_options_id_seq', 1, false);
 
 
 --
@@ -36890,25 +31773,11 @@ COPY public.m2question_categories (id, name, contextid, info, infoformat, stamp,
 
 
 --
--- Name: m2question_categories_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2question_categories_id_seq', 1, false);
-
-
---
 -- Data for Name: m2question_dataset_definitions; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2question_dataset_definitions (id, category, name, type, options, itemcount) FROM stdin;
 \.
-
-
---
--- Name: m2question_dataset_definitions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2question_dataset_definitions_id_seq', 1, false);
 
 
 --
@@ -36920,25 +31789,11 @@ COPY public.m2question_dataset_items (id, definition, itemnumber, value) FROM st
 
 
 --
--- Name: m2question_dataset_items_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2question_dataset_items_id_seq', 1, false);
-
-
---
 -- Data for Name: m2question_datasets; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2question_datasets (id, question, datasetdefinition) FROM stdin;
 \.
-
-
---
--- Name: m2question_datasets_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2question_datasets_id_seq', 1, false);
 
 
 --
@@ -36950,25 +31805,11 @@ COPY public.m2question_ddwtos (id, questionid, shuffleanswers, correctfeedback, 
 
 
 --
--- Name: m2question_ddwtos_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2question_ddwtos_id_seq', 1, false);
-
-
---
 -- Data for Name: m2question_gapselect; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2question_gapselect (id, questionid, shuffleanswers, correctfeedback, correctfeedbackformat, partiallycorrectfeedback, partiallycorrectfeedbackformat, incorrectfeedback, incorrectfeedbackformat, shownumcorrect) FROM stdin;
 \.
-
-
---
--- Name: m2question_gapselect_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2question_gapselect_id_seq', 1, false);
 
 
 --
@@ -36980,32 +31821,11 @@ COPY public.m2question_hints (id, questionid, hint, hintformat, shownumcorrect, 
 
 
 --
--- Name: m2question_hints_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2question_hints_id_seq', 1, false);
-
-
---
--- Name: m2question_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2question_id_seq', 1, false);
-
-
---
 -- Data for Name: m2question_multianswer; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2question_multianswer (id, question, sequence) FROM stdin;
 \.
-
-
---
--- Name: m2question_multianswer_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2question_multianswer_id_seq', 1, false);
 
 
 --
@@ -37017,25 +31837,11 @@ COPY public.m2question_numerical (id, question, answer, tolerance) FROM stdin;
 
 
 --
--- Name: m2question_numerical_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2question_numerical_id_seq', 1, false);
-
-
---
 -- Data for Name: m2question_numerical_options; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2question_numerical_options (id, question, showunits, unitsleft, unitgradingtype, unitpenalty) FROM stdin;
 \.
-
-
---
--- Name: m2question_numerical_options_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2question_numerical_options_id_seq', 1, false);
 
 
 --
@@ -37047,25 +31853,11 @@ COPY public.m2question_numerical_units (id, question, multiplier, unit) FROM std
 
 
 --
--- Name: m2question_numerical_units_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2question_numerical_units_id_seq', 1, false);
-
-
---
 -- Data for Name: m2question_response_analysis; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2question_response_analysis (id, hashcode, whichtries, timemodified, questionid, variant, subqid, aid, response, credit) FROM stdin;
 \.
-
-
---
--- Name: m2question_response_analysis_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2question_response_analysis_id_seq', 1, false);
 
 
 --
@@ -37077,25 +31869,11 @@ COPY public.m2question_response_count (id, analysisid, try, rcount) FROM stdin;
 
 
 --
--- Name: m2question_response_count_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2question_response_count_id_seq', 1, false);
-
-
---
 -- Data for Name: m2question_statistics; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2question_statistics (id, hashcode, timemodified, questionid, slot, subquestion, variant, s, effectiveweight, negcovar, discriminationindex, discriminativeefficiency, sd, facility, subquestions, maxmark, positions, randomguessscore) FROM stdin;
 \.
-
-
---
--- Name: m2question_statistics_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2question_statistics_id_seq', 1, false);
 
 
 --
@@ -37107,25 +31885,11 @@ COPY public.m2question_truefalse (id, question, trueanswer, falseanswer) FROM st
 
 
 --
--- Name: m2question_truefalse_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2question_truefalse_id_seq', 1, false);
-
-
---
 -- Data for Name: m2question_usages; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2question_usages (id, contextid, component, preferredbehaviour) FROM stdin;
 \.
-
-
---
--- Name: m2question_usages_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2question_usages_id_seq', 1, false);
 
 
 --
@@ -37145,25 +31909,11 @@ COPY public.m2questionnaire_dependency (id, questionid, surveyid, dependquestion
 
 
 --
--- Name: m2questionnaire_dependency_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2questionnaire_dependency_id_seq', 1, false);
-
-
---
 -- Data for Name: m2questionnaire_fb_sections; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2questionnaire_fb_sections (id, surveyid, section, scorecalculation, sectionlabel, sectionheading, sectionheadingformat) FROM stdin;
 \.
-
-
---
--- Name: m2questionnaire_fb_sections_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2questionnaire_fb_sections_id_seq', 1, false);
 
 
 --
@@ -37175,20 +31925,6 @@ COPY public.m2questionnaire_feedback (id, sectionid, feedbacklabel, feedbacktext
 
 
 --
--- Name: m2questionnaire_feedback_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2questionnaire_feedback_id_seq', 1, false);
-
-
---
--- Name: m2questionnaire_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2questionnaire_id_seq', 1, false);
-
-
---
 -- Data for Name: m2questionnaire_quest_choice; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -37197,25 +31933,11 @@ COPY public.m2questionnaire_quest_choice (id, question_id, content, value) FROM 
 
 
 --
--- Name: m2questionnaire_quest_choice_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2questionnaire_quest_choice_id_seq', 1, false);
-
-
---
 -- Data for Name: m2questionnaire_question; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2questionnaire_question (id, surveyid, name, type_id, result_id, length, precise, "position", content, required, deleted) FROM stdin;
 \.
-
-
---
--- Name: m2questionnaire_question_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2questionnaire_question_id_seq', 1, false);
 
 
 --
@@ -37238,13 +31960,6 @@ COPY public.m2questionnaire_question_type (id, typeid, type, has_choices, respon
 
 
 --
--- Name: m2questionnaire_question_type_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2questionnaire_question_type_id_seq', 11, true);
-
-
---
 -- Data for Name: m2questionnaire_resp_multiple; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -37253,25 +31968,11 @@ COPY public.m2questionnaire_resp_multiple (id, response_id, question_id, choice_
 
 
 --
--- Name: m2questionnaire_resp_multiple_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2questionnaire_resp_multiple_id_seq', 1, false);
-
-
---
 -- Data for Name: m2questionnaire_resp_single; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2questionnaire_resp_single (id, response_id, question_id, choice_id) FROM stdin;
 \.
-
-
---
--- Name: m2questionnaire_resp_single_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2questionnaire_resp_single_id_seq', 1, false);
 
 
 --
@@ -37291,32 +31992,11 @@ COPY public.m2questionnaire_response_bool (id, response_id, question_id, choice_
 
 
 --
--- Name: m2questionnaire_response_bool_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2questionnaire_response_bool_id_seq', 1, false);
-
-
---
 -- Data for Name: m2questionnaire_response_date; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2questionnaire_response_date (id, response_id, question_id, response) FROM stdin;
 \.
-
-
---
--- Name: m2questionnaire_response_date_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2questionnaire_response_date_id_seq', 1, false);
-
-
---
--- Name: m2questionnaire_response_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2questionnaire_response_id_seq', 1, false);
 
 
 --
@@ -37328,25 +32008,11 @@ COPY public.m2questionnaire_response_other (id, response_id, question_id, choice
 
 
 --
--- Name: m2questionnaire_response_other_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2questionnaire_response_other_id_seq', 1, false);
-
-
---
 -- Data for Name: m2questionnaire_response_rank; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2questionnaire_response_rank (id, response_id, question_id, choice_id, rankvalue) FROM stdin;
 \.
-
-
---
--- Name: m2questionnaire_response_rank_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2questionnaire_response_rank_id_seq', 1, false);
 
 
 --
@@ -37358,25 +32024,11 @@ COPY public.m2questionnaire_response_text (id, response_id, question_id, respons
 
 
 --
--- Name: m2questionnaire_response_text_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2questionnaire_response_text_id_seq', 1, false);
-
-
---
 -- Data for Name: m2questionnaire_survey; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2questionnaire_survey (id, name, courseid, realm, status, title, email, subtitle, info, theme, thanks_page, thank_head, thank_body, feedbacksections, feedbacknotes, feedbackscores, chart_type) FROM stdin;
 \.
-
-
---
--- Name: m2questionnaire_survey_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2questionnaire_survey_id_seq', 1, false);
 
 
 --
@@ -37396,25 +32048,11 @@ COPY public.m2quiz_attempts (id, quiz, userid, attempt, uniqueid, layout, curren
 
 
 --
--- Name: m2quiz_attempts_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2quiz_attempts_id_seq', 1, false);
-
-
---
 -- Data for Name: m2quiz_feedback; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2quiz_feedback (id, quizid, feedbacktext, feedbacktextformat, mingrade, maxgrade) FROM stdin;
 \.
-
-
---
--- Name: m2quiz_feedback_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2quiz_feedback_id_seq', 1, false);
 
 
 --
@@ -37426,20 +32064,6 @@ COPY public.m2quiz_grades (id, quiz, userid, grade, timemodified) FROM stdin;
 
 
 --
--- Name: m2quiz_grades_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2quiz_grades_id_seq', 1, false);
-
-
---
--- Name: m2quiz_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2quiz_id_seq', 1, false);
-
-
---
 -- Data for Name: m2quiz_overrides; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -37448,25 +32072,11 @@ COPY public.m2quiz_overrides (id, quiz, groupid, userid, timeopen, timeclose, ti
 
 
 --
--- Name: m2quiz_overrides_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2quiz_overrides_id_seq', 1, false);
-
-
---
 -- Data for Name: m2quiz_overview_regrades; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2quiz_overview_regrades (id, questionusageid, slot, newfraction, oldfraction, regraded, timemodified) FROM stdin;
 \.
-
-
---
--- Name: m2quiz_overview_regrades_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2quiz_overview_regrades_id_seq', 1, false);
 
 
 --
@@ -37482,25 +32092,11 @@ COPY public.m2quiz_reports (id, name, displayorder, capability) FROM stdin;
 
 
 --
--- Name: m2quiz_reports_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2quiz_reports_id_seq', 4, true);
-
-
---
 -- Data for Name: m2quiz_sections; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2quiz_sections (id, quizid, firstslot, heading, shufflequestions) FROM stdin;
 \.
-
-
---
--- Name: m2quiz_sections_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2quiz_sections_id_seq', 1, false);
 
 
 --
@@ -37512,13 +32108,6 @@ COPY public.m2quiz_slot_tags (id, slotid, tagid, tagname) FROM stdin;
 
 
 --
--- Name: m2quiz_slot_tags_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2quiz_slot_tags_id_seq', 1, false);
-
-
---
 -- Data for Name: m2quiz_slots; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -37527,25 +32116,11 @@ COPY public.m2quiz_slots (id, slot, quizid, page, requireprevious, questionid, q
 
 
 --
--- Name: m2quiz_slots_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2quiz_slots_id_seq', 1, false);
-
-
---
 -- Data for Name: m2quiz_statistics; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2quiz_statistics (id, hashcode, whichattempts, timemodified, firstattemptscount, highestattemptscount, lastattemptscount, allattemptscount, firstattemptsavg, highestattemptsavg, lastattemptsavg, allattemptsavg, median, standarddeviation, skewness, kurtosis, cic, errorratio, standarderror) FROM stdin;
 \.
-
-
---
--- Name: m2quiz_statistics_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2quiz_statistics_id_seq', 1, false);
 
 
 --
@@ -37565,32 +32140,11 @@ COPY public.m2qv_assignments (id, qvid, userid, sectionorder, itemorder, idnumbe
 
 
 --
--- Name: m2qv_assignments_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2qv_assignments_id_seq', 1, false);
-
-
---
--- Name: m2qv_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2qv_id_seq', 1, false);
-
-
---
 -- Data for Name: m2qv_messages; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2qv_messages (id, sid, itemid, userid, created, message) FROM stdin;
 \.
-
-
---
--- Name: m2qv_messages_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2qv_messages_id_seq', 1, false);
 
 
 --
@@ -37602,13 +32156,6 @@ COPY public.m2qv_messages_read (id, sid, userid, timereaded) FROM stdin;
 
 
 --
--- Name: m2qv_messages_read_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2qv_messages_read_id_seq', 1, false);
-
-
---
 -- Data for Name: m2qv_sections; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -37617,25 +32164,11 @@ COPY public.m2qv_sections (id, assignmentid, sectionid, responses, scores, pendi
 
 
 --
--- Name: m2qv_sections_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2qv_sections_id_seq', 1, false);
-
-
---
 -- Data for Name: m2rating; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2rating (id, contextid, component, ratingarea, itemid, scaleid, rating, userid, timecreated, timemodified) FROM stdin;
 \.
-
-
---
--- Name: m2rating_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2rating_id_seq', 1, false);
 
 
 --
@@ -37655,20 +32188,6 @@ COPY public.m2rcommon_books_activities (id, bookid, unitid, code, name, summary,
 
 
 --
--- Name: m2rcommon_books_activities_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2rcommon_books_activities_id_seq', 1, false);
-
-
---
--- Name: m2rcommon_books_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2rcommon_books_id_seq', 1, false);
-
-
---
 -- Data for Name: m2rcommon_books_units; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -37677,25 +32196,11 @@ COPY public.m2rcommon_books_units (id, bookid, code, name, summary, sortorder, t
 
 
 --
--- Name: m2rcommon_books_units_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2rcommon_books_units_id_seq', 1, false);
-
-
---
 -- Data for Name: m2rcommon_errors_log; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2rcommon_errors_log (id, "time", userid, ip, course, module, cmid, action, url, info) FROM stdin;
 \.
-
-
---
--- Name: m2rcommon_errors_log_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2rcommon_errors_log_id_seq', 1, false);
 
 
 --
@@ -37717,13 +32222,6 @@ COPY public.m2rcommon_level (id, name, code, timecreated, timemodified) FROM std
 
 
 --
--- Name: m2rcommon_level_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2rcommon_level_id_seq', 10, true);
-
-
---
 -- Data for Name: m2rcommon_publisher; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -37732,25 +32230,11 @@ COPY public.m2rcommon_publisher (id, name, code, urlwsauthentication, urlwsbooks
 
 
 --
--- Name: m2rcommon_publisher_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2rcommon_publisher_id_seq', 1, false);
-
-
---
 -- Data for Name: m2rcommon_user_credentials; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2rcommon_user_credentials (id, euserid, isbn, credentials, timecreated, timemodified) FROM stdin;
 \.
-
-
---
--- Name: m2rcommon_user_credentials_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2rcommon_user_credentials_id_seq', 1, false);
 
 
 --
@@ -37778,27 +32262,6 @@ COPY public.m2rcontent_grades_details (id, userid, rcontentid, unitid, activityi
 
 
 --
--- Name: m2rcontent_grades_details_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2rcontent_grades_details_id_seq', 1, false);
-
-
---
--- Name: m2rcontent_grades_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2rcontent_grades_id_seq', 1, false);
-
-
---
--- Name: m2rcontent_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2rcontent_id_seq', 1, false);
-
-
---
 -- Data for Name: m2rcontent_track_credentials; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -37807,25 +32270,11 @@ COPY public.m2rcontent_track_credentials (id, username, password, publisherid, t
 
 
 --
--- Name: m2rcontent_track_credentials_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2rcontent_track_credentials_id_seq', 1, false);
-
-
---
 -- Data for Name: m2registration_hubs; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2registration_hubs (id, token, hubname, huburl, confirmed, secret, timemodified) FROM stdin;
 \.
-
-
---
--- Name: m2registration_hubs_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2registration_hubs_id_seq', 1, false);
 
 
 --
@@ -37844,25 +32293,11 @@ COPY public.m2repository (id, type, visible, sortorder) FROM stdin;
 
 
 --
--- Name: m2repository_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2repository_id_seq', 7, true);
-
-
---
 -- Data for Name: m2repository_instance_config; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2repository_instance_config (id, instanceid, name, value) FROM stdin;
 \.
-
-
---
--- Name: m2repository_instance_config_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2repository_instance_config_id_seq', 1, false);
 
 
 --
@@ -37881,25 +32316,11 @@ COPY public.m2repository_instances (id, name, typeid, userid, contextid, usernam
 
 
 --
--- Name: m2repository_instances_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2repository_instances_id_seq', 7, true);
-
-
---
 -- Data for Name: m2repository_onedrive_access; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2repository_onedrive_access (id, timemodified, timecreated, usermodified, permissionid, itemid) FROM stdin;
 \.
-
-
---
--- Name: m2repository_onedrive_access_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2repository_onedrive_access_id_seq', 1, false);
 
 
 --
@@ -37911,25 +32332,11 @@ COPY public.m2resource (id, course, name, intro, introformat, tobemigrated, lega
 
 
 --
--- Name: m2resource_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2resource_id_seq', 1, false);
-
-
---
 -- Data for Name: m2resource_old; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2resource_old (id, course, name, type, reference, intro, introformat, alltext, popup, options, timemodified, oldid, cmid, newmodule, newid, migrated) FROM stdin;
 \.
-
-
---
--- Name: m2resource_old_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2resource_old_id_seq', 1, false);
 
 
 --
@@ -37964,13 +32371,6 @@ COPY public.m2role_allow_assign (id, roleid, allowassign) FROM stdin;
 
 
 --
--- Name: m2role_allow_assign_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2role_allow_assign_id_seq', 7, true);
-
-
---
 -- Data for Name: m2role_allow_override; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -37990,13 +32390,6 @@ COPY public.m2role_allow_override (id, roleid, allowoverride) FROM stdin;
 
 
 --
--- Name: m2role_allow_override_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2role_allow_override_id_seq', 11, true);
-
-
---
 -- Data for Name: m2role_allow_switch; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -38011,13 +32404,6 @@ COPY public.m2role_allow_switch (id, roleid, allowswitch) FROM stdin;
 8	4	5
 9	4	6
 \.
-
-
---
--- Name: m2role_allow_switch_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2role_allow_switch_id_seq', 9, true);
 
 
 --
@@ -38053,25 +32439,11 @@ COPY public.m2role_allow_view (id, roleid, allowview) FROM stdin;
 
 
 --
--- Name: m2role_allow_view_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2role_allow_view_id_seq', 24, true);
-
-
---
 -- Data for Name: m2role_assignments; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2role_assignments (id, roleid, contextid, userid, timemodified, modifierid, component, itemid, sortorder) FROM stdin;
 \.
-
-
---
--- Name: m2role_assignments_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2role_assignments_id_seq', 1, false);
 
 
 --
@@ -39624,13 +33996,6 @@ COPY public.m2role_capabilities (id, contextid, roleid, capability, permission, 
 
 
 --
--- Name: m2role_capabilities_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2role_capabilities_id_seq', 1541, true);
-
-
---
 -- Data for Name: m2role_context_levels; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -39650,20 +34015,6 @@ COPY public.m2role_context_levels (id, roleid, contextlevel) FROM stdin;
 
 
 --
--- Name: m2role_context_levels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2role_context_levels_id_seq', 11, true);
-
-
---
--- Name: m2role_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2role_id_seq', 8, true);
-
-
---
 -- Data for Name: m2role_names; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -39672,25 +34023,11 @@ COPY public.m2role_names (id, roleid, contextid, name) FROM stdin;
 
 
 --
--- Name: m2role_names_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2role_names_id_seq', 1, false);
-
-
---
 -- Data for Name: m2role_sortorder; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2role_sortorder (id, userid, roleid, contextid, sortoder) FROM stdin;
 \.
-
-
---
--- Name: m2role_sortorder_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2role_sortorder_id_seq', 1, false);
 
 
 --
@@ -39712,20 +34049,6 @@ COPY public.m2scale_history (id, action, oldid, source, timemodified, loggeduser
 
 
 --
--- Name: m2scale_history_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2scale_history_id_seq', 1, false);
-
-
---
--- Name: m2scale_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2scale_id_seq', 2, true);
-
-
---
 -- Data for Name: m2scorm; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -39739,20 +34062,6 @@ COPY public.m2scorm (id, course, name, scormtype, reference, intro, introformat,
 
 COPY public.m2scorm_aicc_session (id, userid, scormid, hacpsession, scoid, scormmode, scormstatus, attempt, lessonstatus, sessiontime, timecreated, timemodified) FROM stdin;
 \.
-
-
---
--- Name: m2scorm_aicc_session_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2scorm_aicc_session_id_seq', 1, false);
-
-
---
--- Name: m2scorm_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2scorm_id_seq', 1, false);
 
 
 --
@@ -39772,32 +34081,11 @@ COPY public.m2scorm_scoes_data (id, scoid, name, value) FROM stdin;
 
 
 --
--- Name: m2scorm_scoes_data_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2scorm_scoes_data_id_seq', 1, false);
-
-
---
--- Name: m2scorm_scoes_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2scorm_scoes_id_seq', 1, false);
-
-
---
 -- Data for Name: m2scorm_scoes_track; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2scorm_scoes_track (id, userid, scormid, scoid, attempt, element, value, timemodified) FROM stdin;
 \.
-
-
---
--- Name: m2scorm_scoes_track_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2scorm_scoes_track_id_seq', 1, false);
 
 
 --
@@ -39809,25 +34097,11 @@ COPY public.m2scorm_seq_mapinfo (id, scoid, objectiveid, targetobjectiveid, read
 
 
 --
--- Name: m2scorm_seq_mapinfo_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2scorm_seq_mapinfo_id_seq', 1, false);
-
-
---
 -- Data for Name: m2scorm_seq_objective; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2scorm_seq_objective (id, scoid, primaryobj, objectiveid, satisfiedbymeasure, minnormalizedmeasure) FROM stdin;
 \.
-
-
---
--- Name: m2scorm_seq_objective_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2scorm_seq_objective_id_seq', 1, false);
 
 
 --
@@ -39839,25 +34113,11 @@ COPY public.m2scorm_seq_rolluprule (id, scoid, childactivityset, minimumcount, m
 
 
 --
--- Name: m2scorm_seq_rolluprule_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2scorm_seq_rolluprule_id_seq', 1, false);
-
-
---
 -- Data for Name: m2scorm_seq_rolluprulecond; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2scorm_seq_rolluprulecond (id, scoid, rollupruleid, operator, cond) FROM stdin;
 \.
-
-
---
--- Name: m2scorm_seq_rolluprulecond_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2scorm_seq_rolluprulecond_id_seq', 1, false);
 
 
 --
@@ -39869,25 +34129,11 @@ COPY public.m2scorm_seq_rulecond (id, scoid, ruleconditionsid, refrencedobjectiv
 
 
 --
--- Name: m2scorm_seq_rulecond_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2scorm_seq_rulecond_id_seq', 1, false);
-
-
---
 -- Data for Name: m2scorm_seq_ruleconds; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2scorm_seq_ruleconds (id, scoid, conditioncombination, ruletype, action) FROM stdin;
 \.
-
-
---
--- Name: m2scorm_seq_ruleconds_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2scorm_seq_ruleconds_id_seq', 1, false);
 
 
 --
@@ -39899,13 +34145,6 @@ COPY public.m2search_index_requests (id, contextid, searcharea, timerequested, p
 
 
 --
--- Name: m2search_index_requests_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2search_index_requests_id_seq', 1, false);
-
-
---
 -- Data for Name: m2search_simpledb_index; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -39914,26 +34153,13 @@ COPY public.m2search_simpledb_index (id, docid, itemid, title, content, contexti
 
 
 --
--- Name: m2search_simpledb_index_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2search_simpledb_index_id_seq', 1, false);
-
-
---
 -- Data for Name: m2sessions; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2sessions (id, state, sid, userid, sessdata, timecreated, timemodified, firstip, lastip) FROM stdin;
 7	0	0s65uh07if1ofeomq5isuslkan	3	\N	1572476464	1572476776	192.168.33.1	192.168.33.1
+10	0	9q50dhdpmoip6s1r5kcvt2cdgu	0	\N	1584379441	1584379442	192.168.33.1	192.168.33.1
 \.
-
-
---
--- Name: m2sessions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2sessions_id_seq', 7, true);
 
 
 --
@@ -39945,25 +34171,11 @@ COPY public.m2stats_daily (id, courseid, timeend, roleid, stattype, stat1, stat2
 
 
 --
--- Name: m2stats_daily_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2stats_daily_id_seq', 1, false);
-
-
---
 -- Data for Name: m2stats_monthly; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2stats_monthly (id, courseid, timeend, roleid, stattype, stat1, stat2) FROM stdin;
 \.
-
-
---
--- Name: m2stats_monthly_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2stats_monthly_id_seq', 1, false);
 
 
 --
@@ -39975,25 +34187,11 @@ COPY public.m2stats_user_daily (id, courseid, userid, roleid, timeend, statsread
 
 
 --
--- Name: m2stats_user_daily_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2stats_user_daily_id_seq', 1, false);
-
-
---
 -- Data for Name: m2stats_user_monthly; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2stats_user_monthly (id, courseid, userid, roleid, timeend, statsreads, statswrites, stattype) FROM stdin;
 \.
-
-
---
--- Name: m2stats_user_monthly_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2stats_user_monthly_id_seq', 1, false);
 
 
 --
@@ -40005,25 +34203,11 @@ COPY public.m2stats_user_weekly (id, courseid, userid, roleid, timeend, statsrea
 
 
 --
--- Name: m2stats_user_weekly_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2stats_user_weekly_id_seq', 1, false);
-
-
---
 -- Data for Name: m2stats_weekly; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2stats_weekly (id, courseid, timeend, roleid, stattype, stat1, stat2) FROM stdin;
 \.
-
-
---
--- Name: m2stats_weekly_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2stats_weekly_id_seq', 1, false);
 
 
 --
@@ -40048,32 +34232,11 @@ COPY public.m2survey_analysis (id, survey, userid, notes) FROM stdin;
 
 
 --
--- Name: m2survey_analysis_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2survey_analysis_id_seq', 1, false);
-
-
---
 -- Data for Name: m2survey_answers; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2survey_answers (id, userid, survey, question, "time", answer1, answer2) FROM stdin;
 \.
-
-
---
--- Name: m2survey_answers_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2survey_answers_id_seq', 1, false);
-
-
---
--- Name: m2survey_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2survey_id_seq', 5, true);
 
 
 --
@@ -40158,13 +34321,6 @@ COPY public.m2survey_questions (id, text, shorttext, multi, intro, type, options
 
 
 --
--- Name: m2survey_questions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2survey_questions_id_seq', 73, true);
-
-
---
 -- Data for Name: m2tag; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -40192,26 +34348,12 @@ COPY public.m2tag_area (id, component, itemtype, enabled, tagcollid, callback, c
 
 
 --
--- Name: m2tag_area_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2tag_area_id_seq', 11, true);
-
-
---
 -- Data for Name: m2tag_coll; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2tag_coll (id, name, isdefault, component, sortorder, searchable, customurl) FROM stdin;
 1	\N	1	\N	0	1	\N
 \.
-
-
---
--- Name: m2tag_coll_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2tag_coll_id_seq', 1, true);
 
 
 --
@@ -40223,32 +34365,11 @@ COPY public.m2tag_correlation (id, tagid, correlatedtags) FROM stdin;
 
 
 --
--- Name: m2tag_correlation_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2tag_correlation_id_seq', 1, false);
-
-
---
--- Name: m2tag_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2tag_id_seq', 1, false);
-
-
---
 -- Data for Name: m2tag_instance; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2tag_instance (id, tagid, component, itemtype, itemid, contextid, tiuserid, ordering, timecreated, timemodified) FROM stdin;
 \.
-
-
---
--- Name: m2tag_instance_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2tag_instance_id_seq', 1, false);
 
 
 --
@@ -40260,53 +34381,10 @@ COPY public.m2task_adhoc (id, component, classname, nextruntime, faildelay, cust
 
 
 --
--- Name: m2task_adhoc_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2task_adhoc_id_seq', 1, false);
-
-
---
 -- Data for Name: m2task_scheduled; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2task_scheduled (id, component, classname, lastruntime, nextruntime, blocking, minute, hour, day, month, dayofweek, faildelay, customised, disabled) FROM stdin;
-1	moodle	\\core\\task\\session_cleanup_task	0	1572464220	0	*	*	*	*	*	0	0	0
-2	moodle	\\core\\task\\delete_unconfirmed_users_task	0	1572465600	0	0	*	*	*	*	0	0	0
-3	moodle	\\core\\task\\delete_incomplete_users_task	0	1572465900	0	5	*	*	*	*	0	0	0
-4	moodle	\\core\\task\\backup_cleanup_task	0	1572466200	0	10	*	*	*	*	0	0	0
-5	moodle	\\core\\task\\tag_cron_task	0	1572487620	0	7	3	*	*	*	0	0	0
-6	moodle	\\core\\task\\context_cleanup_task	0	1572467100	0	25	*	*	*	*	0	0	0
-7	moodle	\\core\\task\\cache_cleanup_task	0	1572467400	0	30	*	*	*	*	0	0	0
-8	moodle	\\core\\task\\messaging_cleanup_task	0	1572467700	0	35	*	*	*	*	0	0	0
-9	moodle	\\core\\task\\send_new_user_passwords_task	0	1572464220	0	*	*	*	*	*	0	0	0
-10	moodle	\\core\\task\\send_failed_login_notifications_task	0	1572464220	0	*	*	*	*	*	0	0	0
-11	moodle	\\core\\task\\create_contexts_task	0	1572476400	1	0	0	*	*	*	0	0	0
-12	moodle	\\core\\task\\legacy_plugin_cron_task	0	1572464220	0	*	*	*	*	*	0	0	0
-13	moodle	\\core\\task\\grade_cron_task	0	1572464220	0	*	*	*	*	*	0	0	0
-14	moodle	\\core\\task\\completion_regular_task	0	1572464220	0	*	*	*	*	*	0	0	0
-15	moodle	\\core\\task\\completion_daily_task	0	1572491700	0	15	4	*	*	*	0	0	0
-16	moodle	\\core\\task\\portfolio_cron_task	0	1572464220	0	*	*	*	*	*	0	0	0
-17	moodle	\\core\\task\\plagiarism_cron_task	0	1572464220	0	*	*	*	*	*	0	0	0
-18	moodle	\\core\\task\\calendar_cron_task	0	1572464220	0	*	*	*	*	*	0	0	0
-19	moodle	\\core\\task\\blog_cron_task	0	1572464220	0	*	*	*	*	*	0	0	0
-20	moodle	\\core\\task\\question_cron_task	0	1572464220	0	*	*	*	*	*	0	0	0
-21	moodle	\\core\\task\\registration_cron_task	0	1572642960	0	16	22	*	*	5	0	0	0
-22	moodle	\\core\\task\\check_for_updates_task	0	1572469200	0	0	*/2	*	*	*	0	0	0
-23	moodle	\\core\\task\\cache_cron_task	0	1572465000	0	50	*	*	*	*	0	0	0
-24	moodle	\\core\\task\\automated_backup_task	0	1572465000	0	50	*	*	*	*	0	0	0
-25	moodle	\\core\\task\\badges_cron_task	0	1572464400	0	*/5	*	*	*	*	0	0	0
-26	moodle	\\core\\task\\file_temp_cleanup_task	0	1572479700	0	55	*/6	*	*	*	0	0	0
-27	moodle	\\core\\task\\file_trash_cleanup_task	0	1572479700	0	55	*/6	*	*	*	0	0	0
-28	moodle	\\core\\task\\search_index_task	0	1572465600	0	*/30	*	*	*	*	0	0	0
-29	moodle	\\core\\task\\search_optimize_task	0	1572477300	0	15	*/12	*	*	*	0	0	0
-30	moodle	\\core\\task\\stats_cron_task	0	1572476400	0	0	0	*	*	*	0	0	0
-31	moodle	\\core\\task\\password_reset_cleanup_task	0	1572476400	0	0	*/6	*	*	*	0	0	0
-32	moodle	\\core\\task\\complete_plans_task	0	1572466260	0	11	*	*	*	*	0	0	0
-33	moodle	\\core\\task\\sync_plans_from_template_cohorts_task	0	1572466320	0	12	*	*	*	*	0	0	0
-34	moodle	\\core_files\\task\\conversion_cleanup_task	0	1572484500	0	15	2	*	*	*	0	0	0
-35	moodle	\\core\\oauth2\\refresh_system_tokens_task	0	1572467400	0	30	*	*	*	*	0	0	0
-36	moodle	\\core\\task\\analytics_cleanup_task	0	1572464520	0	42	*	*	*	*	0	0	0
 37	qtype_random	\\qtype_random\\task\\remove_unused_questions	0	1572465900	0	5	*	*	*	*	0	0	0
 38	mod_forum	\\mod_forum\\task\\cron_task	0	1572464220	0	*	*	*	*	*	0	0	0
 39	mod_scorm	\\mod_scorm\\task\\cron_task	0	1572464400	0	*/5	*	*	*	*	0	0	0
@@ -40333,6 +34411,40 @@ COPY public.m2task_scheduled (id, component, classname, lastruntime, nextruntime
 60	repository_onedrive	\\repository_onedrive\\remove_temp_access_task	0	1572616860	0	1	15	*	*	5	0	0	0
 61	tool_analytics	\\tool_analytics\\task\\train_models	0	1572501600	0	0	7	*	*	*	0	0	0
 62	tool_analytics	\\tool_analytics\\task\\predict_models	0	1572501600	0	0	7	*	*	*	0	0	0
+2	moodle	\\core\\task\\delete_unconfirmed_users_task	0	1584378000	0	0	*	*	*	*	0	0	0
+3	moodle	\\core\\task\\delete_incomplete_users_task	0	1584378300	0	5	*	*	*	*	0	0	0
+4	moodle	\\core\\task\\backup_cleanup_task	0	1584378600	0	10	*	*	*	*	0	0	0
+5	moodle	\\core\\task\\tag_cron_task	0	1584411780	0	23	3	*	*	*	0	0	0
+6	moodle	\\core\\task\\context_cleanup_task	0	1584379500	0	25	*	*	*	*	0	0	0
+7	moodle	\\core\\task\\cache_cleanup_task	0	1584379800	0	30	*	*	*	*	0	0	0
+8	moodle	\\core\\task\\messaging_cleanup_task	0	1584380100	0	35	*	*	*	*	0	0	0
+9	moodle	\\core\\task\\send_new_user_passwords_task	0	1584376920	0	*	*	*	*	*	0	0	0
+10	moodle	\\core\\task\\send_failed_login_notifications_task	0	1584376920	0	*	*	*	*	*	0	0	0
+11	moodle	\\core\\task\\create_contexts_task	0	1584399600	1	0	0	*	*	*	0	0	0
+12	moodle	\\core\\task\\legacy_plugin_cron_task	0	1584376920	0	*	*	*	*	*	0	0	0
+13	moodle	\\core\\task\\grade_cron_task	0	1584376920	0	*	*	*	*	*	0	0	0
+15	moodle	\\core\\task\\completion_daily_task	0	1584418800	0	20	5	*	*	*	0	0	0
+16	moodle	\\core\\task\\portfolio_cron_task	0	1584376920	0	*	*	*	*	*	0	0	0
+17	moodle	\\core\\task\\plagiarism_cron_task	0	1584376920	0	*	*	*	*	*	0	0	0
+18	moodle	\\core\\task\\calendar_cron_task	0	1584376920	0	*	*	*	*	*	0	0	0
+19	moodle	\\core\\task\\blog_cron_task	0	1584376920	0	*	*	*	*	*	0	0	0
+20	moodle	\\core\\task\\question_cron_task	0	1584376920	0	*	*	*	*	*	0	0	0
+21	moodle	\\core\\task\\registration_cron_task	0	1584429060	0	11	8	*	*	2	0	0	0
+22	moodle	\\core\\task\\check_for_updates_task	0	1584378000	0	0	*/2	*	*	*	0	0	0
+23	moodle	\\core\\task\\cache_cron_task	0	1584377400	0	50	*	*	*	*	0	0	0
+24	moodle	\\core\\task\\automated_backup_task	0	1584377400	0	50	*	*	*	*	0	0	0
+25	moodle	\\core\\task\\badges_cron_task	0	1584377100	0	*/5	*	*	*	*	0	0	0
+26	moodle	\\core\\task\\file_temp_cleanup_task	0	1584381300	0	55	*/6	*	*	*	0	0	0
+27	moodle	\\core\\task\\file_trash_cleanup_task	0	1584381300	0	55	*/6	*	*	*	0	0	0
+28	moodle	\\core\\task\\search_index_task	0	1584378000	0	*/30	*	*	*	*	0	0	0
+29	moodle	\\core\\task\\search_optimize_task	0	1584400500	0	15	*/12	*	*	*	0	0	0
+30	moodle	\\core\\task\\stats_cron_task	0	1584399600	0	0	0	*	*	*	0	0	0
+31	moodle	\\core\\task\\password_reset_cleanup_task	0	1584378000	0	0	*/6	*	*	*	0	0	0
+32	moodle	\\core\\task\\complete_plans_task	0	1584378300	0	5	*	*	*	*	0	0	0
+33	moodle	\\core\\task\\sync_plans_from_template_cohorts_task	0	1584379140	0	19	*	*	*	*	0	0	0
+34	moodle	\\core_files\\task\\conversion_cleanup_task	0	1584408180	0	23	2	*	*	*	0	0	0
+35	moodle	\\core\\oauth2\\refresh_system_tokens_task	0	1584379800	0	30	*	*	*	*	0	0	0
+36	moodle	\\core\\task\\analytics_cleanup_task	0	1584376920	0	42	*	*	*	*	0	0	0
 63	tool_cohortroles	\\tool_cohortroles\\task\\cohort_role_sync	0	1572466680	0	18	*	*	*	*	0	0	0
 64	tool_dataprivacy	\\tool_dataprivacy\\task\\expired_retention_period	0	1572541200	0	0	18	*	*	*	0	0	0
 65	tool_dataprivacy	\\tool_dataprivacy\\task\\delete_expired_contexts	0	1572505200	0	0	8	*	*	*	0	0	0
@@ -40349,23 +34461,18 @@ COPY public.m2task_scheduled (id, component, classname, lastruntime, nextruntime
 76	ltiservice_gradebookservices	\\ltiservice_gradebookservices\\task\\cleanup_task	0	1572530640	0	4	15	*	*	*	0	0	0
 77	logstore_legacy	\\logstore_legacy\\task\\cleanup_task	0	1572495060	0	11	5	*	*	*	0	0	0
 78	logstore_standard	\\logstore_standard\\task\\cleanup_task	0	1572491100	0	5	4	*	*	*	0	0	0
-79	mod_hvp	\\mod_hvp\\task\\look_for_updates	0	1572549780	0	23	20	*	*	*	0	0	0
-80	mod_hvp	\\mod_hvp\\task\\remove_tmpfiles	0	1572549300	0	15	20	*	*	*	0	0	0
-81	mod_hvp	\\mod_hvp\\task\\remove_old_log_entries	0	1572498660	0	11	6	*	*	*	0	0	0
-82	mod_hvp	\\mod_hvp\\task\\remove_old_auth_tokens	0	1572476520	0	2	*	*	*	*	0	0	0
 83	mod_questionnaire	\\mod_questionnaire\\task\\cleanup	0	1572476640	0	4	*/12	*	*	*	0	0	0
 84	local_agora	\\local_agora\\task\\adware	0	1572747900	0	25	3	*	*	0	0	0	0
 85	local_agora	\\local_agora\\task\\scripts	0	1572475560	0	*	*	*	*	*	0	0	0
 86	local_bigdata	\\local_bigdata\\task\\export	0	1572485640	0	34	2	*	*	*	0	0	1
 87	local_oauth	\\local_oauth\\task\\clean	0	1572475560	0	*	*	*	*	*	0	0	0
+1	moodle	\\core\\task\\session_cleanup_task	0	1584376920	0	*	*	*	*	*	0	0	0
+14	moodle	\\core\\task\\completion_regular_task	0	1584376920	0	*	*	*	*	*	0	0	0
+79	mod_hvp	\\mod_hvp\\task\\look_for_updates	0	1584378420	0	7	18	*	*	*	0	0	0
+80	mod_hvp	\\mod_hvp\\task\\remove_tmpfiles	0	1584451320	0	22	14	*	*	*	0	0	0
+81	mod_hvp	\\mod_hvp\\task\\remove_old_log_entries	0	1584439560	0	6	11	*	*	*	0	0	0
+82	mod_hvp	\\mod_hvp\\task\\remove_old_auth_tokens	0	1584378840	0	14	*	*	*	*	0	0	0
 \.
-
-
---
--- Name: m2task_scheduled_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2task_scheduled_id_seq', 87, true);
 
 
 --
@@ -40374,13 +34481,6 @@ SELECT pg_catalog.setval('public.m2task_scheduled_id_seq', 87, true);
 
 COPY public.m2tool_cohortroles (id, cohortid, roleid, userid, timecreated, timemodified, usermodified) FROM stdin;
 \.
-
-
---
--- Name: m2tool_cohortroles_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2tool_cohortroles_id_seq', 1, false);
 
 
 --
@@ -40400,32 +34500,11 @@ COPY public.m2tool_customlang_components (id, name, version) FROM stdin;
 
 
 --
--- Name: m2tool_customlang_components_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2tool_customlang_components_id_seq', 1, false);
-
-
---
--- Name: m2tool_customlang_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2tool_customlang_id_seq', 1, false);
-
-
---
 -- Data for Name: m2tool_dataprivacy_category; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2tool_dataprivacy_category (id, name, description, descriptionformat, usermodified, timecreated, timemodified) FROM stdin;
 \.
-
-
---
--- Name: m2tool_dataprivacy_category_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2tool_dataprivacy_category_id_seq', 1, false);
 
 
 --
@@ -40437,25 +34516,11 @@ COPY public.m2tool_dataprivacy_ctxexpired (id, contextid, unexpiredroles, expire
 
 
 --
--- Name: m2tool_dataprivacy_ctxexpired_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2tool_dataprivacy_ctxexpired_id_seq', 1, false);
-
-
---
 -- Data for Name: m2tool_dataprivacy_ctxinstance; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2tool_dataprivacy_ctxinstance (id, contextid, purposeid, categoryid, usermodified, timecreated, timemodified) FROM stdin;
 \.
-
-
---
--- Name: m2tool_dataprivacy_ctxinstance_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2tool_dataprivacy_ctxinstance_id_seq', 1, false);
 
 
 --
@@ -40467,25 +34532,11 @@ COPY public.m2tool_dataprivacy_ctxlevel (id, contextlevel, purposeid, categoryid
 
 
 --
--- Name: m2tool_dataprivacy_ctxlevel_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2tool_dataprivacy_ctxlevel_id_seq', 1, false);
-
-
---
 -- Data for Name: m2tool_dataprivacy_purpose; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2tool_dataprivacy_purpose (id, name, description, descriptionformat, lawfulbases, sensitivedatareasons, retentionperiod, protected, usermodified, timecreated, timemodified) FROM stdin;
 \.
-
-
---
--- Name: m2tool_dataprivacy_purpose_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2tool_dataprivacy_purpose_id_seq', 1, false);
 
 
 --
@@ -40497,25 +34548,11 @@ COPY public.m2tool_dataprivacy_purposerole (id, purposeid, roleid, lawfulbases, 
 
 
 --
--- Name: m2tool_dataprivacy_purposerole_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2tool_dataprivacy_purposerole_id_seq', 1, false);
-
-
---
 -- Data for Name: m2tool_dataprivacy_request; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2tool_dataprivacy_request (id, type, comments, commentsformat, userid, requestedby, status, dpo, dpocomment, dpocommentformat, usermodified, timecreated, timemodified, creationmethod) FROM stdin;
 \.
-
-
---
--- Name: m2tool_dataprivacy_request_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2tool_dataprivacy_request_id_seq', 1, false);
 
 
 --
@@ -40527,25 +34564,11 @@ COPY public.m2tool_monitor_events (id, eventname, contextid, contextlevel, conte
 
 
 --
--- Name: m2tool_monitor_events_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2tool_monitor_events_id_seq', 1, false);
-
-
---
 -- Data for Name: m2tool_monitor_history; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2tool_monitor_history (id, sid, userid, timesent) FROM stdin;
 \.
-
-
---
--- Name: m2tool_monitor_history_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2tool_monitor_history_id_seq', 1, false);
 
 
 --
@@ -40557,25 +34580,11 @@ COPY public.m2tool_monitor_rules (id, description, descriptionformat, name, user
 
 
 --
--- Name: m2tool_monitor_rules_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2tool_monitor_rules_id_seq', 1, false);
-
-
---
 -- Data for Name: m2tool_monitor_subscriptions; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2tool_monitor_subscriptions (id, courseid, ruleid, cmid, userid, timecreated, lastnotificationsent, inactivedate) FROM stdin;
 \.
-
-
---
--- Name: m2tool_monitor_subscriptions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2tool_monitor_subscriptions_id_seq', 1, false);
 
 
 --
@@ -40595,32 +34604,11 @@ COPY public.m2tool_policy_acceptances (id, policyversionid, userid, status, lang
 
 
 --
--- Name: m2tool_policy_acceptances_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2tool_policy_acceptances_id_seq', 1, false);
-
-
---
--- Name: m2tool_policy_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2tool_policy_id_seq', 1, false);
-
-
---
 -- Data for Name: m2tool_policy_versions; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2tool_policy_versions (id, name, type, audience, archived, usermodified, timecreated, timemodified, policyid, agreementstyle, optional, revision, summary, summaryformat, content, contentformat) FROM stdin;
 \.
-
-
---
--- Name: m2tool_policy_versions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2tool_policy_versions_id_seq', 1, false);
 
 
 --
@@ -40632,25 +34620,11 @@ COPY public.m2tool_recyclebin_category (id, categoryid, shortname, fullname, tim
 
 
 --
--- Name: m2tool_recyclebin_category_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2tool_recyclebin_category_id_seq', 1, false);
-
-
---
 -- Data for Name: m2tool_recyclebin_course; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2tool_recyclebin_course (id, courseid, section, module, name, timecreated) FROM stdin;
 \.
-
-
---
--- Name: m2tool_recyclebin_course_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2tool_recyclebin_course_id_seq', 1, false);
 
 
 --
@@ -40676,13 +34650,6 @@ COPY public.m2tool_usertours_steps (id, tourid, title, content, targettype, targ
 
 
 --
--- Name: m2tool_usertours_steps_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2tool_usertours_steps_id_seq', 14, true);
-
-
---
 -- Data for Name: m2tool_usertours_tours; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -40690,13 +34657,6 @@ COPY public.m2tool_usertours_tours (id, name, description, pathmatch, enabled, s
 1	New Messaging System	New messaging interface in Moodle 3.6	/course/view.php%	1	1	{"placement":"bottom","orphan":"0","backdrop":"0","reflex":"0","filtervalues":{"category":[],"course":["0"],"courseformat":[],"role":[],"theme":[]},"majorupdatetime":1543468823,"shipped_tour":true,"shipped_filename":"36_messaging.json","shipped_version":3}
 2	Dashboard	New dashboard features	/my/%	1	0	{"placement":"top","orphan":"0","backdrop":"0","reflex":"0","filtervalues":{"category":[],"course":["0"],"courseformat":[],"role":[],"theme":[]},"majorupdatetime":1543396938,"shipped_tour":true,"shipped_filename":"36_dashboard.json","shipped_version":3}
 \.
-
-
---
--- Name: m2tool_usertours_tours_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2tool_usertours_tours_id_seq', 2, true);
 
 
 --
@@ -42047,14 +36007,71 @@ COPY public.m2upgrade_log (id, type, plugin, version, targetversion, info, detai
 1341	0	local_wsvicensvives	\N	2016072900	Starting plugin installation	\N		0	1572475548
 1342	0	local_wsvicensvives	2016072900	2016072900	Upgrade savepoint reached	\N		0	1572475548
 1343	0	local_wsvicensvives	2016072900	2016072900	Plugin installed	\N		0	1572475548
+1344	0	core	2018120306.02	2018120307	Starting core upgrade	\N		0	1584376913
+1345	0	core	2018120306.06	2018120307	Upgrade savepoint reached	\N		0	1584376913
+1346	0	core	2018120307	2018120307	Upgrade savepoint reached	\N		0	1584376913
+1347	0	core	2018120307	2018120307	Core upgraded	\N		0	1584376914
+1348	0	qtype_essaywiris	2019103000	2020011300	Starting plugin upgrade	\N		0	1584376914
+1349	0	qtype_essaywiris	2020011300	2020011300	Upgrade savepoint reached	\N		0	1584376914
+1350	0	qtype_essaywiris	2020011300	2020011300	Plugin upgraded	\N		0	1584376914
+1351	0	qtype_matchwiris	2019103000	2020011300	Starting plugin upgrade	\N		0	1584376914
+1352	0	qtype_matchwiris	2020011300	2020011300	Upgrade savepoint reached	\N		0	1584376914
+1353	0	qtype_matchwiris	2020011300	2020011300	Plugin upgraded	\N		0	1584376914
+1354	0	qtype_multianswerwiris	2019103000	2020011300	Starting plugin upgrade	\N		0	1584376914
+1355	0	qtype_multianswerwiris	2020011300	2020011300	Upgrade savepoint reached	\N		0	1584376914
+1356	0	qtype_multianswerwiris	2020011300	2020011300	Plugin upgraded	\N		0	1584376914
+1357	0	qtype_multichoicewiris	2019103000	2020011300	Starting plugin upgrade	\N		0	1584376914
+1358	0	qtype_multichoicewiris	2020011300	2020011300	Upgrade savepoint reached	\N		0	1584376914
+1359	0	qtype_multichoicewiris	2020011300	2020011300	Plugin upgraded	\N		0	1584376914
+1360	0	qtype_ordering	2019102496	2019121400	Starting plugin upgrade	\N		0	1584376914
+1361	0	qtype_ordering	2019121400	2019121400	Upgrade savepoint reached	\N		0	1584376914
+1362	0	qtype_ordering	2019121400	2019121400	Plugin upgraded	\N		0	1584376914
+1363	0	qtype_shortanswerwiris	2019103000	2020011300	Starting plugin upgrade	\N		0	1584376914
+1364	0	qtype_shortanswerwiris	2020011300	2020011300	Upgrade savepoint reached	\N		0	1584376914
+1365	0	qtype_shortanswerwiris	2020011300	2020011300	Plugin upgraded	\N		0	1584376914
+1366	0	qtype_truefalsewiris	2019103000	2020011300	Starting plugin upgrade	\N		0	1584376914
+1367	0	qtype_truefalsewiris	2020011300	2020011300	Upgrade savepoint reached	\N		0	1584376914
+1368	0	qtype_truefalsewiris	2020011300	2020011300	Plugin upgraded	\N		0	1584376914
+1369	0	qtype_wq	2019103000	2020011300	Starting plugin upgrade	\N		0	1584376914
+1370	0	qtype_wq	2020011300	2020011300	Upgrade savepoint reached	\N		0	1584376914
+1371	0	qtype_wq	2020011300	2020011300	Plugin upgraded	\N		0	1584376914
+1372	0	mod_choicegroup	2019051001	2019051002	Starting plugin upgrade	\N		0	1584376914
+1373	0	mod_choicegroup	2019051002	2019051002	Upgrade savepoint reached	\N		0	1584376914
+1374	0	mod_choicegroup	2019051002	2019051002	Plugin upgraded	\N		0	1584376914
+1375	0	mod_hotpot	2019101241	2019111042	Starting plugin upgrade	\N		0	1584376914
+1376	0	mod_hotpot	2019111042	2019111042	Upgrade savepoint reached	\N		0	1584376914
+1377	0	mod_hotpot	2019111042	2019111042	Plugin upgraded	\N		0	1584376914
+1378	0	mod_hvp	2019081600	2020020500	Starting plugin upgrade	\N		0	1584376914
+1379	0	mod_hvp	2020020500	2020020500	Upgrade savepoint reached	\N		0	1584376914
+1380	0	mod_hvp	2020020500	2020020500	Plugin upgraded	\N		0	1584376914
+1381	0	auth_oauth2	2018120300	2018120301	Starting plugin upgrade	\N		0	1584376914
+1382	0	auth_oauth2	2018120301	2018120301	Upgrade savepoint reached	\N		0	1584376914
+1383	0	auth_oauth2	2018120301	2018120301	Plugin upgraded	\N		0	1584376914
+1384	0	block_courses_vicensvives	2017062100	2018090100	Starting plugin upgrade	\N		0	1584376915
+1385	0	block_courses_vicensvives	2018090100	2018090100	Upgrade savepoint reached	\N		0	1584376915
+1386	0	block_courses_vicensvives	2018090100	2018090100	Plugin upgraded	\N		0	1584376915
+1387	0	block_licenses_vicensvives	2017062100	2018090100	Starting plugin upgrade	\N		0	1584376915
+1388	0	block_licenses_vicensvives	2018090100	2018090100	Upgrade savepoint reached	\N		0	1584376915
+1389	0	block_licenses_vicensvives	2018090100	2018090100	Plugin upgraded	\N		0	1584376915
+1390	0	block_myoverview	2018120300	2018120301	Starting plugin upgrade	\N		0	1584376915
+1391	0	block_myoverview	2018120301	2018120301	Upgrade savepoint reached	\N		0	1584376915
+1392	0	block_myoverview	2018120301	2018120301	Plugin upgraded	\N		0	1584376915
+1393	0	format_vv	2017062100	2018090100	Starting plugin upgrade	\N		0	1584376915
+1394	0	format_vv	2018090100	2018090100	Upgrade savepoint reached	\N		0	1584376915
+1395	0	format_vv	2018090100	2018090100	Plugin upgraded	\N		0	1584376915
+1396	0	qformat_hotpot	2019101221	2019111022	Starting plugin upgrade	\N		0	1584376915
+1397	0	qformat_hotpot	2019111022	2019111022	Upgrade savepoint reached	\N		0	1584376915
+1398	0	qformat_hotpot	2019111022	2019111022	Plugin upgraded	\N		0	1584376915
+1399	0	atto_cloze	\N	2017072801	Starting plugin installation	\N		0	1584376916
+1400	0	atto_cloze	2017072801	2017072801	Upgrade savepoint reached	\N		0	1584376916
+1401	0	atto_cloze	2017072801	2017072801	Plugin installed	\N		0	1584376916
+1402	0	atto_fontfamily	2015051500	2020010600	Starting plugin upgrade	\N		0	1584376916
+1403	0	atto_fontfamily	2020010600	2020010600	Upgrade savepoint reached	\N		0	1584376916
+1404	0	atto_fontfamily	2020010600	2020010600	Plugin upgraded	\N		0	1584376916
+1405	0	local_wsvicensvives	2016072900	2018090100	Starting plugin upgrade	\N		0	1584376916
+1406	0	local_wsvicensvives	2018090100	2018090100	Upgrade savepoint reached	\N		0	1584376916
+1407	0	local_wsvicensvives	2018090100	2018090100	Plugin upgraded	\N		0	1584376916
 \.
-
-
---
--- Name: m2upgrade_log_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2upgrade_log_id_seq', 1343, true);
 
 
 --
@@ -42066,20 +36083,13 @@ COPY public.m2url (id, course, name, intro, introformat, externalurl, display, d
 
 
 --
--- Name: m2url_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2url_id_seq', 1, false);
-
-
---
 -- Data for Name: m2user; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2user (id, auth, confirmed, policyagreed, deleted, suspended, mnethostid, username, password, idnumber, firstname, lastname, email, emailstop, icq, skype, yahoo, aim, msn, phone1, phone2, institution, department, address, city, country, lang, calendartype, theme, timezone, firstaccess, lastaccess, lastlogin, currentlogin, lastip, secret, picture, url, description, descriptionformat, mailformat, maildigest, maildisplay, autosubscribe, trackforums, timecreated, timemodified, trustbitmask, imagealt, lastnamephonetic, firstnamephonetic, middlename, alternatename) FROM stdin;
 1	manual	1	0	0	0	1	guest	$2y$10$0/gPSRjliCTrhqxE5NV.1uN/v31ZMfBWlvwLrz46lNpjdG203Hr7G		Guest user	 	root@localhost	0													en	gregorian		99	0	0	0	0			0		This user is a special user that allows read-only access to some courses.	1	1	0	2	1	0	0	1572464184	0	\N	\N	\N	\N	\N
-2	manual	1	0	0	0	1	admin	$2y$10$4obHozumLWhE8Bu2fQTYFu1uHkD6c1GBik20q4EM.DaDySTXAu.aK		Admin	User	admin@xtec.invalid	0											Barcelona	CT	en	gregorian		99	1572464314	1572476321	1572464314	1572475765	192.168.33.1		0			1	1	0	1	1	0	0	1572476575	0					
-3	manual	1	0	0	0	1	xtecadmin	$2y$10$aMZF46hG6yEeeAXcr38FwOazRgu2dhBUQVOSD8fHblw0uMsrNX6P2		Administrador	XTEC	xtecadmin@xtec.invalid	0											Barcelona	CT	ca	gregorian		99	1572476464	1572476722	0	1572476464	192.168.33.1		0			1	1	0	2	1	0	1572476206	1572476206	0					
+2	manual	1	0	0	0	1	admin	6142bfd56a583d891f0b1dcdbb2a9ef8		Administrador/a	usu1 VM dev	usu1@xtec.cat	0								usu1 VM dev		Test	ciutat	CT	en	gregorian		99	1572464314	1572476321	1572464314	1572475765	192.168.33.1		0			1	1	0	1	1	0	0	1572476575	0					
+3	manual	1	0	0	0	1	xtecadmin	$2y$10$355UXZkCyLVJ9tgwg9/eNuClvQH27AskcVmvN/TZGbcf3pITc/PJa		Administrador/a	XTEC	agora@xtec.invalid	1											Barcelona	es	ca	gregorian		99	1572476464	1584379413	1572476464	1584378916	192.168.33.1		0		Administrador/a de la XTEC	1	0	0	1	1	0	1572476206	1572476206	0					
 \.
 
 
@@ -42092,32 +36102,11 @@ COPY public.m2user_devices (id, userid, appid, name, model, platform, version, p
 
 
 --
--- Name: m2user_devices_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2user_devices_id_seq', 1, false);
-
-
---
 -- Data for Name: m2user_enrolments; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2user_enrolments (id, status, enrolid, userid, timestart, timeend, modifierid, timecreated, timemodified) FROM stdin;
 \.
-
-
---
--- Name: m2user_enrolments_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2user_enrolments_id_seq', 1, false);
-
-
---
--- Name: m2user_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2user_id_seq', 3, true);
 
 
 --
@@ -42129,25 +36118,11 @@ COPY public.m2user_info_category (id, name, sortorder) FROM stdin;
 
 
 --
--- Name: m2user_info_category_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2user_info_category_id_seq', 1, false);
-
-
---
 -- Data for Name: m2user_info_data; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2user_info_data (id, userid, fieldid, data, dataformat) FROM stdin;
 \.
-
-
---
--- Name: m2user_info_data_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2user_info_data_id_seq', 1, false);
 
 
 --
@@ -42159,25 +36134,11 @@ COPY public.m2user_info_field (id, shortname, name, datatype, description, descr
 
 
 --
--- Name: m2user_info_field_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2user_info_field_id_seq', 1, false);
-
-
---
 -- Data for Name: m2user_lastaccess; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2user_lastaccess (id, userid, courseid, timeaccess) FROM stdin;
 \.
-
-
---
--- Name: m2user_lastaccess_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2user_lastaccess_id_seq', 1, false);
 
 
 --
@@ -42189,25 +36150,11 @@ COPY public.m2user_password_history (id, userid, hash, timecreated) FROM stdin;
 
 
 --
--- Name: m2user_password_history_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2user_password_history_id_seq', 1, false);
-
-
---
 -- Data for Name: m2user_password_resets; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2user_password_resets (id, userid, timerequested, timererequested, token) FROM stdin;
 \.
-
-
---
--- Name: m2user_password_resets_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2user_password_resets_id_seq', 1, false);
 
 
 --
@@ -42226,15 +36173,8 @@ COPY public.m2user_preferences (id, userid, name, value) FROM stdin;
 10	3	core_message_migrate_data	1
 11	3	tool_usertours_tour_completion_time_2	1572476488
 2	2	auth_manual_passwordupdatetime	1572476575
-12	2	auth_forcepasswordchange	0
+12	2	auth_forcepasswordchange	1
 \.
-
-
---
--- Name: m2user_preferences_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2user_preferences_id_seq', 12, true);
 
 
 --
@@ -42246,25 +36186,11 @@ COPY public.m2user_private_key (id, script, value, userid, instance, iprestricti
 
 
 --
--- Name: m2user_private_key_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2user_private_key_id_seq', 1, false);
-
-
---
 -- Data for Name: m2wiki; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2wiki (id, course, name, intro, introformat, timecreated, timemodified, firstpagetitle, wikimode, defaultformat, forceformat, editbegin, editend) FROM stdin;
 \.
-
-
---
--- Name: m2wiki_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2wiki_id_seq', 1, false);
 
 
 --
@@ -42276,25 +36202,11 @@ COPY public.m2wiki_links (id, subwikiid, frompageid, topageid, tomissingpage) FR
 
 
 --
--- Name: m2wiki_links_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2wiki_links_id_seq', 1, false);
-
-
---
 -- Data for Name: m2wiki_locks; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2wiki_locks (id, pageid, sectionname, userid, lockedat) FROM stdin;
 \.
-
-
---
--- Name: m2wiki_locks_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2wiki_locks_id_seq', 1, false);
 
 
 --
@@ -42306,25 +36218,11 @@ COPY public.m2wiki_pages (id, subwikiid, title, cachedcontent, timecreated, time
 
 
 --
--- Name: m2wiki_pages_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2wiki_pages_id_seq', 1, false);
-
-
---
 -- Data for Name: m2wiki_subwikis; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2wiki_subwikis (id, wikiid, groupid, userid) FROM stdin;
 \.
-
-
---
--- Name: m2wiki_subwikis_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2wiki_subwikis_id_seq', 1, false);
 
 
 --
@@ -42336,25 +36234,11 @@ COPY public.m2wiki_synonyms (id, subwikiid, pageid, pagesynonym) FROM stdin;
 
 
 --
--- Name: m2wiki_synonyms_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2wiki_synonyms_id_seq', 1, false);
-
-
---
 -- Data for Name: m2wiki_versions; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2wiki_versions (id, pageid, content, contentformat, version, timecreated, userid) FROM stdin;
 \.
-
-
---
--- Name: m2wiki_versions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2wiki_versions_id_seq', 1, false);
 
 
 --
@@ -42374,25 +36258,11 @@ COPY public.m2workshop_aggregations (id, workshopid, userid, gradinggrade, timeg
 
 
 --
--- Name: m2workshop_aggregations_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2workshop_aggregations_id_seq', 1, false);
-
-
---
 -- Data for Name: m2workshop_assessments; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2workshop_assessments (id, submissionid, reviewerid, weight, timecreated, timemodified, grade, gradinggrade, gradinggradeover, gradinggradeoverby, feedbackauthor, feedbackauthorformat, feedbackauthorattachment, feedbackreviewer, feedbackreviewerformat) FROM stdin;
 \.
-
-
---
--- Name: m2workshop_assessments_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2workshop_assessments_id_seq', 1, false);
 
 
 --
@@ -42404,32 +36274,11 @@ COPY public.m2workshop_grades (id, assessmentid, strategy, dimensionid, grade, p
 
 
 --
--- Name: m2workshop_grades_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2workshop_grades_id_seq', 1, false);
-
-
---
--- Name: m2workshop_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2workshop_id_seq', 1, false);
-
-
---
 -- Data for Name: m2workshop_submissions; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2workshop_submissions (id, workshopid, example, authorid, timecreated, timemodified, title, content, contentformat, contenttrust, attachment, grade, gradeover, gradeoverby, feedbackauthor, feedbackauthorformat, timegraded, published, late) FROM stdin;
 \.
-
-
---
--- Name: m2workshop_submissions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2workshop_submissions_id_seq', 1, false);
 
 
 --
@@ -42441,25 +36290,11 @@ COPY public.m2workshopallocation_scheduled (id, workshopid, enabled, submissione
 
 
 --
--- Name: m2workshopallocation_scheduled_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2workshopallocation_scheduled_id_seq', 1, false);
-
-
---
 -- Data for Name: m2workshopeval_best_settings; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2workshopeval_best_settings (id, workshopid, comparison) FROM stdin;
 \.
-
-
---
--- Name: m2workshopeval_best_settings_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2workshopeval_best_settings_id_seq', 1, false);
 
 
 --
@@ -42471,25 +36306,11 @@ COPY public.m2workshopform_accumulative (id, workshopid, sort, description, desc
 
 
 --
--- Name: m2workshopform_accumulative_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2workshopform_accumulative_id_seq', 1, false);
-
-
---
 -- Data for Name: m2workshopform_comments; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2workshopform_comments (id, workshopid, sort, description, descriptionformat) FROM stdin;
 \.
-
-
---
--- Name: m2workshopform_comments_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2workshopform_comments_id_seq', 1, false);
 
 
 --
@@ -42501,25 +36322,11 @@ COPY public.m2workshopform_numerrors (id, workshopid, sort, description, descrip
 
 
 --
--- Name: m2workshopform_numerrors_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2workshopform_numerrors_id_seq', 1, false);
-
-
---
 -- Data for Name: m2workshopform_numerrors_map; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.m2workshopform_numerrors_map (id, workshopid, nonegative, grade) FROM stdin;
 \.
-
-
---
--- Name: m2workshopform_numerrors_map_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.m2workshopform_numerrors_map_id_seq', 1, false);
 
 
 --
@@ -42539,6 +36346,3374 @@ COPY public.m2workshopform_rubric_config (id, workshopid, layout) FROM stdin;
 
 
 --
+-- Data for Name: m2workshopform_rubric_levels; Type: TABLE DATA; Schema: public; Owner: -
+--
+
+COPY public.m2workshopform_rubric_levels (id, dimensionid, grade, definition, definitionformat) FROM stdin;
+\.
+
+
+--
+-- Name: m2analytics_indicator_calc_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2analytics_indicator_calc_id_seq', 1, false);
+
+
+--
+-- Name: m2analytics_models_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2analytics_models_id_seq', 2, true);
+
+
+--
+-- Name: m2analytics_models_log_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2analytics_models_log_id_seq', 1, false);
+
+
+--
+-- Name: m2analytics_predict_samples_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2analytics_predict_samples_id_seq', 1, false);
+
+
+--
+-- Name: m2analytics_prediction_actions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2analytics_prediction_actions_id_seq', 1, false);
+
+
+--
+-- Name: m2analytics_predictions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2analytics_predictions_id_seq', 1, false);
+
+
+--
+-- Name: m2analytics_train_samples_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2analytics_train_samples_id_seq', 1, false);
+
+
+--
+-- Name: m2analytics_used_analysables_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2analytics_used_analysables_id_seq', 1, false);
+
+
+--
+-- Name: m2analytics_used_files_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2analytics_used_files_id_seq', 1, false);
+
+
+--
+-- Name: m2assign_grades_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2assign_grades_id_seq', 1, false);
+
+
+--
+-- Name: m2assign_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2assign_id_seq', 1, false);
+
+
+--
+-- Name: m2assign_overrides_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2assign_overrides_id_seq', 1, false);
+
+
+--
+-- Name: m2assign_plugin_config_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2assign_plugin_config_id_seq', 1, false);
+
+
+--
+-- Name: m2assign_submission_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2assign_submission_id_seq', 1, false);
+
+
+--
+-- Name: m2assign_user_flags_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2assign_user_flags_id_seq', 1, false);
+
+
+--
+-- Name: m2assign_user_mapping_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2assign_user_mapping_id_seq', 1, false);
+
+
+--
+-- Name: m2assignfeedback_comments_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2assignfeedback_comments_id_seq', 1, false);
+
+
+--
+-- Name: m2assignfeedback_editpdf_annot_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2assignfeedback_editpdf_annot_id_seq', 1, false);
+
+
+--
+-- Name: m2assignfeedback_editpdf_cmnt_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2assignfeedback_editpdf_cmnt_id_seq', 1, false);
+
+
+--
+-- Name: m2assignfeedback_editpdf_queue_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2assignfeedback_editpdf_queue_id_seq', 1, false);
+
+
+--
+-- Name: m2assignfeedback_editpdf_quick_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2assignfeedback_editpdf_quick_id_seq', 1, false);
+
+
+--
+-- Name: m2assignfeedback_file_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2assignfeedback_file_id_seq', 1, false);
+
+
+--
+-- Name: m2assignment_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2assignment_id_seq', 1, false);
+
+
+--
+-- Name: m2assignment_submissions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2assignment_submissions_id_seq', 1, false);
+
+
+--
+-- Name: m2assignment_upgrade_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2assignment_upgrade_id_seq', 1, false);
+
+
+--
+-- Name: m2assignsubmission_file_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2assignsubmission_file_id_seq', 1, false);
+
+
+--
+-- Name: m2assignsubmission_onlinetext_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2assignsubmission_onlinetext_id_seq', 1, false);
+
+
+--
+-- Name: m2auth_oauth2_linked_login_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2auth_oauth2_linked_login_id_seq', 1, false);
+
+
+--
+-- Name: m2backup_controllers_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2backup_controllers_id_seq', 1, false);
+
+
+--
+-- Name: m2backup_courses_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2backup_courses_id_seq', 1, false);
+
+
+--
+-- Name: m2backup_logs_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2backup_logs_id_seq', 1, false);
+
+
+--
+-- Name: m2badge_backpack_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2badge_backpack_id_seq', 1, false);
+
+
+--
+-- Name: m2badge_competencies_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2badge_competencies_id_seq', 1, false);
+
+
+--
+-- Name: m2badge_criteria_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2badge_criteria_id_seq', 1, false);
+
+
+--
+-- Name: m2badge_criteria_met_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2badge_criteria_met_id_seq', 1, false);
+
+
+--
+-- Name: m2badge_criteria_param_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2badge_criteria_param_id_seq', 1, false);
+
+
+--
+-- Name: m2badge_endorsement_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2badge_endorsement_id_seq', 1, false);
+
+
+--
+-- Name: m2badge_external_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2badge_external_id_seq', 1, false);
+
+
+--
+-- Name: m2badge_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2badge_id_seq', 1, false);
+
+
+--
+-- Name: m2badge_issued_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2badge_issued_id_seq', 1, false);
+
+
+--
+-- Name: m2badge_manual_award_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2badge_manual_award_id_seq', 1, false);
+
+
+--
+-- Name: m2badge_related_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2badge_related_id_seq', 1, false);
+
+
+--
+-- Name: m2bigdata_profiles_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2bigdata_profiles_id_seq', 1, false);
+
+
+--
+-- Name: m2block_community_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2block_community_id_seq', 1, false);
+
+
+--
+-- Name: m2block_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2block_id_seq', 50, true);
+
+
+--
+-- Name: m2block_instances_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2block_instances_id_seq', 31, true);
+
+
+--
+-- Name: m2block_positions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2block_positions_id_seq', 1, false);
+
+
+--
+-- Name: m2block_recent_activity_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2block_recent_activity_id_seq', 1, false);
+
+
+--
+-- Name: m2block_recentlyaccesseditems_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2block_recentlyaccesseditems_id_seq', 1, false);
+
+
+--
+-- Name: m2block_rss_client_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2block_rss_client_id_seq', 1, false);
+
+
+--
+-- Name: m2blog_association_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2blog_association_id_seq', 1, false);
+
+
+--
+-- Name: m2blog_external_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2blog_external_id_seq', 1, false);
+
+
+--
+-- Name: m2book_chapters_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2book_chapters_id_seq', 1, false);
+
+
+--
+-- Name: m2book_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2book_id_seq', 1, false);
+
+
+--
+-- Name: m2cache_filters_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2cache_filters_id_seq', 1, false);
+
+
+--
+-- Name: m2cache_flags_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2cache_flags_id_seq', 3, true);
+
+
+--
+-- Name: m2capabilities_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2capabilities_id_seq', 707, true);
+
+
+--
+-- Name: m2chat_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2chat_id_seq', 1, false);
+
+
+--
+-- Name: m2chat_messages_current_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2chat_messages_current_id_seq', 1, false);
+
+
+--
+-- Name: m2chat_messages_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2chat_messages_id_seq', 1, false);
+
+
+--
+-- Name: m2chat_users_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2chat_users_id_seq', 1, false);
+
+
+--
+-- Name: m2choice_answers_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2choice_answers_id_seq', 1, false);
+
+
+--
+-- Name: m2choice_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2choice_id_seq', 1, false);
+
+
+--
+-- Name: m2choice_options_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2choice_options_id_seq', 1, false);
+
+
+--
+-- Name: m2choicegroup_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2choicegroup_id_seq', 1, false);
+
+
+--
+-- Name: m2choicegroup_options_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2choicegroup_options_id_seq', 1, false);
+
+
+--
+-- Name: m2cohort_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2cohort_id_seq', 1, false);
+
+
+--
+-- Name: m2cohort_members_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2cohort_members_id_seq', 1, false);
+
+
+--
+-- Name: m2comments_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2comments_id_seq', 1, false);
+
+
+--
+-- Name: m2competency_coursecomp_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2competency_coursecomp_id_seq', 1, false);
+
+
+--
+-- Name: m2competency_coursecompsetting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2competency_coursecompsetting_id_seq', 1, false);
+
+
+--
+-- Name: m2competency_evidence_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2competency_evidence_id_seq', 1, false);
+
+
+--
+-- Name: m2competency_framework_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2competency_framework_id_seq', 1, false);
+
+
+--
+-- Name: m2competency_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2competency_id_seq', 1, false);
+
+
+--
+-- Name: m2competency_modulecomp_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2competency_modulecomp_id_seq', 1, false);
+
+
+--
+-- Name: m2competency_plan_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2competency_plan_id_seq', 1, false);
+
+
+--
+-- Name: m2competency_plancomp_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2competency_plancomp_id_seq', 1, false);
+
+
+--
+-- Name: m2competency_relatedcomp_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2competency_relatedcomp_id_seq', 1, false);
+
+
+--
+-- Name: m2competency_template_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2competency_template_id_seq', 1, false);
+
+
+--
+-- Name: m2competency_templatecohort_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2competency_templatecohort_id_seq', 1, false);
+
+
+--
+-- Name: m2competency_templatecomp_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2competency_templatecomp_id_seq', 1, false);
+
+
+--
+-- Name: m2competency_usercomp_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2competency_usercomp_id_seq', 1, false);
+
+
+--
+-- Name: m2competency_usercompcourse_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2competency_usercompcourse_id_seq', 1, false);
+
+
+--
+-- Name: m2competency_usercompplan_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2competency_usercompplan_id_seq', 1, false);
+
+
+--
+-- Name: m2competency_userevidence_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2competency_userevidence_id_seq', 1, false);
+
+
+--
+-- Name: m2competency_userevidencecomp_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2competency_userevidencecomp_id_seq', 1, false);
+
+
+--
+-- Name: m2config_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2config_id_seq', 498, true);
+
+
+--
+-- Name: m2config_log_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2config_log_id_seq', 1737, true);
+
+
+--
+-- Name: m2config_plugins_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2config_plugins_id_seq', 2084, true);
+
+
+--
+-- Name: m2context_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2context_id_seq', 37, true);
+
+
+--
+-- Name: m2course_categories_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2course_categories_id_seq', 1, true);
+
+
+--
+-- Name: m2course_completion_aggr_methd_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2course_completion_aggr_methd_id_seq', 1, false);
+
+
+--
+-- Name: m2course_completion_crit_compl_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2course_completion_crit_compl_id_seq', 1, false);
+
+
+--
+-- Name: m2course_completion_criteria_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2course_completion_criteria_id_seq', 1, false);
+
+
+--
+-- Name: m2course_completion_defaults_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2course_completion_defaults_id_seq', 1, false);
+
+
+--
+-- Name: m2course_completions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2course_completions_id_seq', 1, false);
+
+
+--
+-- Name: m2course_format_options_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2course_format_options_id_seq', 1, true);
+
+
+--
+-- Name: m2course_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2course_id_seq', 2, false);
+
+
+--
+-- Name: m2course_modules_completion_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2course_modules_completion_id_seq', 1, false);
+
+
+--
+-- Name: m2course_modules_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2course_modules_id_seq', 1, false);
+
+
+--
+-- Name: m2course_published_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2course_published_id_seq', 1, false);
+
+
+--
+-- Name: m2course_request_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2course_request_id_seq', 1, false);
+
+
+--
+-- Name: m2course_sections_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2course_sections_id_seq', 1, true);
+
+
+--
+-- Name: m2data_content_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2data_content_id_seq', 1, false);
+
+
+--
+-- Name: m2data_fields_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2data_fields_id_seq', 1, false);
+
+
+--
+-- Name: m2data_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2data_id_seq', 1, false);
+
+
+--
+-- Name: m2data_records_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2data_records_id_seq', 1, false);
+
+
+--
+-- Name: m2editor_atto_autosave_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2editor_atto_autosave_id_seq', 5, true);
+
+
+--
+-- Name: m2enrol_flatfile_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2enrol_flatfile_id_seq', 1, false);
+
+
+--
+-- Name: m2enrol_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2enrol_id_seq', 1, false);
+
+
+--
+-- Name: m2enrol_lti_lti2_consumer_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2enrol_lti_lti2_consumer_id_seq', 1, false);
+
+
+--
+-- Name: m2enrol_lti_lti2_context_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2enrol_lti_lti2_context_id_seq', 1, false);
+
+
+--
+-- Name: m2enrol_lti_lti2_nonce_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2enrol_lti_lti2_nonce_id_seq', 1, false);
+
+
+--
+-- Name: m2enrol_lti_lti2_resource_link_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2enrol_lti_lti2_resource_link_id_seq', 1, false);
+
+
+--
+-- Name: m2enrol_lti_lti2_share_key_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2enrol_lti_lti2_share_key_id_seq', 1, false);
+
+
+--
+-- Name: m2enrol_lti_lti2_tool_proxy_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2enrol_lti_lti2_tool_proxy_id_seq', 1, false);
+
+
+--
+-- Name: m2enrol_lti_lti2_user_result_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2enrol_lti_lti2_user_result_id_seq', 1, false);
+
+
+--
+-- Name: m2enrol_lti_tool_consumer_map_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2enrol_lti_tool_consumer_map_id_seq', 1, false);
+
+
+--
+-- Name: m2enrol_lti_tools_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2enrol_lti_tools_id_seq', 1, false);
+
+
+--
+-- Name: m2enrol_lti_users_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2enrol_lti_users_id_seq', 1, false);
+
+
+--
+-- Name: m2enrol_paypal_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2enrol_paypal_id_seq', 1, false);
+
+
+--
+-- Name: m2event_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2event_id_seq', 1, false);
+
+
+--
+-- Name: m2event_subscriptions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2event_subscriptions_id_seq', 1, false);
+
+
+--
+-- Name: m2events_handlers_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2events_handlers_id_seq', 1, false);
+
+
+--
+-- Name: m2events_queue_handlers_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2events_queue_handlers_id_seq', 1, false);
+
+
+--
+-- Name: m2events_queue_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2events_queue_id_seq', 1, false);
+
+
+--
+-- Name: m2external_functions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2external_functions_id_seq', 544, true);
+
+
+--
+-- Name: m2external_services_functions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2external_services_functions_id_seq', 999, true);
+
+
+--
+-- Name: m2external_services_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2external_services_id_seq', 4, true);
+
+
+--
+-- Name: m2external_services_users_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2external_services_users_id_seq', 1, false);
+
+
+--
+-- Name: m2external_tokens_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2external_tokens_id_seq', 1, false);
+
+
+--
+-- Name: m2favourite_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2favourite_id_seq', 1, false);
+
+
+--
+-- Name: m2feedback_completed_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2feedback_completed_id_seq', 1, false);
+
+
+--
+-- Name: m2feedback_completedtmp_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2feedback_completedtmp_id_seq', 1, false);
+
+
+--
+-- Name: m2feedback_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2feedback_id_seq', 1, false);
+
+
+--
+-- Name: m2feedback_item_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2feedback_item_id_seq', 1, false);
+
+
+--
+-- Name: m2feedback_sitecourse_map_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2feedback_sitecourse_map_id_seq', 1, false);
+
+
+--
+-- Name: m2feedback_template_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2feedback_template_id_seq', 1, false);
+
+
+--
+-- Name: m2feedback_value_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2feedback_value_id_seq', 1, false);
+
+
+--
+-- Name: m2feedback_valuetmp_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2feedback_valuetmp_id_seq', 1, false);
+
+
+--
+-- Name: m2file_conversion_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2file_conversion_id_seq', 1, false);
+
+
+--
+-- Name: m2files_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2files_id_seq', 7, true);
+
+
+--
+-- Name: m2files_reference_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2files_reference_id_seq', 1, false);
+
+
+--
+-- Name: m2filter_active_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2filter_active_id_seq', 4, true);
+
+
+--
+-- Name: m2filter_config_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2filter_config_id_seq', 1, false);
+
+
+--
+-- Name: m2filter_wiris_formulas_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2filter_wiris_formulas_id_seq', 1, false);
+
+
+--
+-- Name: m2folder_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2folder_id_seq', 1, false);
+
+
+--
+-- Name: m2forum_digests_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2forum_digests_id_seq', 1, false);
+
+
+--
+-- Name: m2forum_discussion_subs_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2forum_discussion_subs_id_seq', 1, false);
+
+
+--
+-- Name: m2forum_discussions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2forum_discussions_id_seq', 1, false);
+
+
+--
+-- Name: m2forum_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2forum_id_seq', 1, false);
+
+
+--
+-- Name: m2forum_posts_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2forum_posts_id_seq', 1, false);
+
+
+--
+-- Name: m2forum_queue_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2forum_queue_id_seq', 1, false);
+
+
+--
+-- Name: m2forum_read_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2forum_read_id_seq', 1, false);
+
+
+--
+-- Name: m2forum_subscriptions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2forum_subscriptions_id_seq', 1, false);
+
+
+--
+-- Name: m2forum_track_prefs_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2forum_track_prefs_id_seq', 1, false);
+
+
+--
+-- Name: m2geogebra_attempts_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2geogebra_attempts_id_seq', 1, false);
+
+
+--
+-- Name: m2geogebra_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2geogebra_id_seq', 1, false);
+
+
+--
+-- Name: m2glossary_alias_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2glossary_alias_id_seq', 1, false);
+
+
+--
+-- Name: m2glossary_categories_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2glossary_categories_id_seq', 1, false);
+
+
+--
+-- Name: m2glossary_entries_categories_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2glossary_entries_categories_id_seq', 1, false);
+
+
+--
+-- Name: m2glossary_entries_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2glossary_entries_id_seq', 1, false);
+
+
+--
+-- Name: m2glossary_formats_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2glossary_formats_id_seq', 7, true);
+
+
+--
+-- Name: m2glossary_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2glossary_id_seq', 1, false);
+
+
+--
+-- Name: m2grade_categories_history_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2grade_categories_history_id_seq', 1, false);
+
+
+--
+-- Name: m2grade_categories_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2grade_categories_id_seq', 1, false);
+
+
+--
+-- Name: m2grade_grades_history_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2grade_grades_history_id_seq', 1, false);
+
+
+--
+-- Name: m2grade_grades_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2grade_grades_id_seq', 1, false);
+
+
+--
+-- Name: m2grade_import_newitem_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2grade_import_newitem_id_seq', 1, false);
+
+
+--
+-- Name: m2grade_import_values_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2grade_import_values_id_seq', 1, false);
+
+
+--
+-- Name: m2grade_items_history_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2grade_items_history_id_seq', 1, false);
+
+
+--
+-- Name: m2grade_items_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2grade_items_id_seq', 1, false);
+
+
+--
+-- Name: m2grade_letters_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2grade_letters_id_seq', 1, false);
+
+
+--
+-- Name: m2grade_outcomes_courses_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2grade_outcomes_courses_id_seq', 1, false);
+
+
+--
+-- Name: m2grade_outcomes_history_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2grade_outcomes_history_id_seq', 1, false);
+
+
+--
+-- Name: m2grade_outcomes_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2grade_outcomes_id_seq', 1, false);
+
+
+--
+-- Name: m2grade_settings_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2grade_settings_id_seq', 1, false);
+
+
+--
+-- Name: m2grading_areas_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2grading_areas_id_seq', 1, false);
+
+
+--
+-- Name: m2grading_definitions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2grading_definitions_id_seq', 1, false);
+
+
+--
+-- Name: m2grading_instances_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2grading_instances_id_seq', 1, false);
+
+
+--
+-- Name: m2gradingform_guide_comments_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2gradingform_guide_comments_id_seq', 1, false);
+
+
+--
+-- Name: m2gradingform_guide_criteria_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2gradingform_guide_criteria_id_seq', 1, false);
+
+
+--
+-- Name: m2gradingform_guide_fillings_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2gradingform_guide_fillings_id_seq', 1, false);
+
+
+--
+-- Name: m2gradingform_rubric_criteria_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2gradingform_rubric_criteria_id_seq', 1, false);
+
+
+--
+-- Name: m2gradingform_rubric_fillings_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2gradingform_rubric_fillings_id_seq', 1, false);
+
+
+--
+-- Name: m2gradingform_rubric_levels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2gradingform_rubric_levels_id_seq', 1, false);
+
+
+--
+-- Name: m2groupings_groups_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2groupings_groups_id_seq', 1, false);
+
+
+--
+-- Name: m2groupings_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2groupings_id_seq', 1, false);
+
+
+--
+-- Name: m2groups_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2groups_id_seq', 1, false);
+
+
+--
+-- Name: m2groups_members_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2groups_members_id_seq', 1, false);
+
+
+--
+-- Name: m2hotpot_attempts_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2hotpot_attempts_id_seq', 1, false);
+
+
+--
+-- Name: m2hotpot_cache_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2hotpot_cache_id_seq', 1, false);
+
+
+--
+-- Name: m2hotpot_details_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2hotpot_details_id_seq', 1, false);
+
+
+--
+-- Name: m2hotpot_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2hotpot_id_seq', 1, false);
+
+
+--
+-- Name: m2hotpot_questions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2hotpot_questions_id_seq', 1, false);
+
+
+--
+-- Name: m2hotpot_responses_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2hotpot_responses_id_seq', 1, false);
+
+
+--
+-- Name: m2hotpot_strings_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2hotpot_strings_id_seq', 1, false);
+
+
+--
+-- Name: m2hvp_auth_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2hvp_auth_id_seq', 1, false);
+
+
+--
+-- Name: m2hvp_content_user_data_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2hvp_content_user_data_id_seq', 1, false);
+
+
+--
+-- Name: m2hvp_contents_libraries_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2hvp_contents_libraries_id_seq', 1, false);
+
+
+--
+-- Name: m2hvp_counters_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2hvp_counters_id_seq', 1, false);
+
+
+--
+-- Name: m2hvp_events_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2hvp_events_id_seq', 1, false);
+
+
+--
+-- Name: m2hvp_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2hvp_id_seq', 1, false);
+
+
+--
+-- Name: m2hvp_libraries_cachedassets_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2hvp_libraries_cachedassets_id_seq', 1, false);
+
+
+--
+-- Name: m2hvp_libraries_hub_cache_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2hvp_libraries_hub_cache_id_seq', 42, true);
+
+
+--
+-- Name: m2hvp_libraries_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2hvp_libraries_id_seq', 1, false);
+
+
+--
+-- Name: m2hvp_libraries_languages_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2hvp_libraries_languages_id_seq', 1, false);
+
+
+--
+-- Name: m2hvp_libraries_libraries_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2hvp_libraries_libraries_id_seq', 1, false);
+
+
+--
+-- Name: m2hvp_xapi_results_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2hvp_xapi_results_id_seq', 1, false);
+
+
+--
+-- Name: m2imscp_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2imscp_id_seq', 1, false);
+
+
+--
+-- Name: m2jclic_activities_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2jclic_activities_id_seq', 1, false);
+
+
+--
+-- Name: m2jclic_groups_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2jclic_groups_id_seq', 1, false);
+
+
+--
+-- Name: m2jclic_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2jclic_id_seq', 1, false);
+
+
+--
+-- Name: m2jclic_sessions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2jclic_sessions_id_seq', 1, false);
+
+
+--
+-- Name: m2jclic_settings_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2jclic_settings_id_seq', 6, true);
+
+
+--
+-- Name: m2jclic_users_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2jclic_users_id_seq', 1, false);
+
+
+--
+-- Name: m2journal_entries_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2journal_entries_id_seq', 1, false);
+
+
+--
+-- Name: m2journal_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2journal_id_seq', 1, false);
+
+
+--
+-- Name: m2label_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2label_id_seq', 1, false);
+
+
+--
+-- Name: m2lesson_answers_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2lesson_answers_id_seq', 1, false);
+
+
+--
+-- Name: m2lesson_attempts_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2lesson_attempts_id_seq', 1, false);
+
+
+--
+-- Name: m2lesson_branch_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2lesson_branch_id_seq', 1, false);
+
+
+--
+-- Name: m2lesson_grades_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2lesson_grades_id_seq', 1, false);
+
+
+--
+-- Name: m2lesson_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2lesson_id_seq', 1, false);
+
+
+--
+-- Name: m2lesson_overrides_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2lesson_overrides_id_seq', 1, false);
+
+
+--
+-- Name: m2lesson_pages_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2lesson_pages_id_seq', 1, false);
+
+
+--
+-- Name: m2lesson_timer_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2lesson_timer_id_seq', 1, false);
+
+
+--
+-- Name: m2license_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2license_id_seq', 9, true);
+
+
+--
+-- Name: m2lock_db_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2lock_db_id_seq', 5, true);
+
+
+--
+-- Name: m2log_display_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2log_display_id_seq', 224, true);
+
+
+--
+-- Name: m2log_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2log_id_seq', 1, false);
+
+
+--
+-- Name: m2log_queries_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2log_queries_id_seq', 1, false);
+
+
+--
+-- Name: m2logstore_standard_log_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2logstore_standard_log_id_seq', 1227, true);
+
+
+--
+-- Name: m2lti_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2lti_id_seq', 1, false);
+
+
+--
+-- Name: m2lti_submission_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2lti_submission_id_seq', 1, false);
+
+
+--
+-- Name: m2lti_tool_proxies_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2lti_tool_proxies_id_seq', 1, false);
+
+
+--
+-- Name: m2lti_tool_settings_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2lti_tool_settings_id_seq', 1, false);
+
+
+--
+-- Name: m2lti_types_config_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2lti_types_config_id_seq', 1, false);
+
+
+--
+-- Name: m2lti_types_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2lti_types_id_seq', 1, false);
+
+
+--
+-- Name: m2ltiservice_gradebookservices_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2ltiservice_gradebookservices_id_seq', 1, false);
+
+
+--
+-- Name: m2message_airnotifier_devices_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2message_airnotifier_devices_id_seq', 1, false);
+
+
+--
+-- Name: m2message_contact_requests_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2message_contact_requests_id_seq', 1, false);
+
+
+--
+-- Name: m2message_contacts_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2message_contacts_id_seq', 1, false);
+
+
+--
+-- Name: m2message_conversation_members_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2message_conversation_members_id_seq', 1, false);
+
+
+--
+-- Name: m2message_conversations_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2message_conversations_id_seq', 1, false);
+
+
+--
+-- Name: m2message_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2message_id_seq', 1, false);
+
+
+--
+-- Name: m2message_popup_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2message_popup_id_seq', 1, false);
+
+
+--
+-- Name: m2message_popup_notifications_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2message_popup_notifications_id_seq', 1, false);
+
+
+--
+-- Name: m2message_processors_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2message_processors_id_seq', 4, true);
+
+
+--
+-- Name: m2message_providers_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2message_providers_id_seq', 40, true);
+
+
+--
+-- Name: m2message_read_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2message_read_id_seq', 1, false);
+
+
+--
+-- Name: m2message_user_actions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2message_user_actions_id_seq', 1, false);
+
+
+--
+-- Name: m2message_users_blocked_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2message_users_blocked_id_seq', 1, false);
+
+
+--
+-- Name: m2messageinbound_datakeys_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2messageinbound_datakeys_id_seq', 1, false);
+
+
+--
+-- Name: m2messageinbound_handlers_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2messageinbound_handlers_id_seq', 3, true);
+
+
+--
+-- Name: m2messageinbound_messagelist_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2messageinbound_messagelist_id_seq', 1, false);
+
+
+--
+-- Name: m2messages_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2messages_id_seq', 1, false);
+
+
+--
+-- Name: m2mnet_application_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2mnet_application_id_seq', 2, true);
+
+
+--
+-- Name: m2mnet_host2service_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2mnet_host2service_id_seq', 1, false);
+
+
+--
+-- Name: m2mnet_host_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2mnet_host_id_seq', 2, true);
+
+
+--
+-- Name: m2mnet_log_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2mnet_log_id_seq', 1, false);
+
+
+--
+-- Name: m2mnet_remote_rpc_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2mnet_remote_rpc_id_seq', 16, true);
+
+
+--
+-- Name: m2mnet_remote_service2rpc_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2mnet_remote_service2rpc_id_seq', 16, true);
+
+
+--
+-- Name: m2mnet_rpc_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2mnet_rpc_id_seq', 15, true);
+
+
+--
+-- Name: m2mnet_service2rpc_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2mnet_service2rpc_id_seq', 15, true);
+
+
+--
+-- Name: m2mnet_service_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2mnet_service_id_seq', 4, true);
+
+
+--
+-- Name: m2mnet_session_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2mnet_session_id_seq', 1, false);
+
+
+--
+-- Name: m2mnet_sso_access_control_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2mnet_sso_access_control_id_seq', 1, false);
+
+
+--
+-- Name: m2mnetservice_enrol_courses_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2mnetservice_enrol_courses_id_seq', 1, false);
+
+
+--
+-- Name: m2mnetservice_enrol_enrolments_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2mnetservice_enrol_enrolments_id_seq', 1, false);
+
+
+--
+-- Name: m2modules_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2modules_id_seq', 31, true);
+
+
+--
+-- Name: m2my_pages_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2my_pages_id_seq', 4, true);
+
+
+--
+-- Name: m2notifications_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2notifications_id_seq', 1, false);
+
+
+--
+-- Name: m2oauth2_access_token_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2oauth2_access_token_id_seq', 1, false);
+
+
+--
+-- Name: m2oauth2_endpoint_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2oauth2_endpoint_id_seq', 1, false);
+
+
+--
+-- Name: m2oauth2_issuer_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2oauth2_issuer_id_seq', 1, false);
+
+
+--
+-- Name: m2oauth2_system_account_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2oauth2_system_account_id_seq', 1, false);
+
+
+--
+-- Name: m2oauth2_user_field_mapping_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2oauth2_user_field_mapping_id_seq', 1, false);
+
+
+--
+-- Name: m2oauth_access_tokens_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2oauth_access_tokens_id_seq', 1, false);
+
+
+--
+-- Name: m2oauth_authorization_codes_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2oauth_authorization_codes_id_seq', 1, false);
+
+
+--
+-- Name: m2oauth_clients_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2oauth_clients_id_seq', 1, false);
+
+
+--
+-- Name: m2oauth_jwt_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2oauth_jwt_id_seq', 1, false);
+
+
+--
+-- Name: m2oauth_public_keys_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2oauth_public_keys_id_seq', 1, false);
+
+
+--
+-- Name: m2oauth_refresh_tokens_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2oauth_refresh_tokens_id_seq', 1, false);
+
+
+--
+-- Name: m2oauth_scopes_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2oauth_scopes_id_seq', 1, false);
+
+
+--
+-- Name: m2oauth_user_auth_scopes_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2oauth_user_auth_scopes_id_seq', 1, false);
+
+
+--
+-- Name: m2page_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2page_id_seq', 1, false);
+
+
+--
+-- Name: m2portfolio_instance_config_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2portfolio_instance_config_id_seq', 1, false);
+
+
+--
+-- Name: m2portfolio_instance_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2portfolio_instance_id_seq', 1, false);
+
+
+--
+-- Name: m2portfolio_instance_user_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2portfolio_instance_user_id_seq', 1, false);
+
+
+--
+-- Name: m2portfolio_log_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2portfolio_log_id_seq', 1, false);
+
+
+--
+-- Name: m2portfolio_mahara_queue_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2portfolio_mahara_queue_id_seq', 1, false);
+
+
+--
+-- Name: m2portfolio_tempdata_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2portfolio_tempdata_id_seq', 1, false);
+
+
+--
+-- Name: m2post_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2post_id_seq', 1, false);
+
+
+--
+-- Name: m2profiling_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2profiling_id_seq', 1, false);
+
+
+--
+-- Name: m2qtype_ddimageortext_drags_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2qtype_ddimageortext_drags_id_seq', 1, false);
+
+
+--
+-- Name: m2qtype_ddimageortext_drops_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2qtype_ddimageortext_drops_id_seq', 1, false);
+
+
+--
+-- Name: m2qtype_ddimageortext_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2qtype_ddimageortext_id_seq', 1, false);
+
+
+--
+-- Name: m2qtype_ddmarker_drags_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2qtype_ddmarker_drags_id_seq', 1, false);
+
+
+--
+-- Name: m2qtype_ddmarker_drops_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2qtype_ddmarker_drops_id_seq', 1, false);
+
+
+--
+-- Name: m2qtype_ddmarker_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2qtype_ddmarker_id_seq', 1, false);
+
+
+--
+-- Name: m2qtype_essay_options_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2qtype_essay_options_id_seq', 1, false);
+
+
+--
+-- Name: m2qtype_essaywiris_backup_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2qtype_essaywiris_backup_id_seq', 1, false);
+
+
+--
+-- Name: m2qtype_match_options_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2qtype_match_options_id_seq', 1, false);
+
+
+--
+-- Name: m2qtype_match_subquestions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2qtype_match_subquestions_id_seq', 1, false);
+
+
+--
+-- Name: m2qtype_multichoice_options_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2qtype_multichoice_options_id_seq', 1, false);
+
+
+--
+-- Name: m2qtype_ordering_options_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2qtype_ordering_options_id_seq', 1, false);
+
+
+--
+-- Name: m2qtype_randomsamatch_options_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2qtype_randomsamatch_options_id_seq', 1, false);
+
+
+--
+-- Name: m2qtype_shortanswer_options_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2qtype_shortanswer_options_id_seq', 1, false);
+
+
+--
+-- Name: m2qtype_wq_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2qtype_wq_id_seq', 1, false);
+
+
+--
+-- Name: m2qtype_wq_variables_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2qtype_wq_variables_id_seq', 1, false);
+
+
+--
+-- Name: m2question_answers_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2question_answers_id_seq', 1, false);
+
+
+--
+-- Name: m2question_attempt_step_data_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2question_attempt_step_data_id_seq', 1, false);
+
+
+--
+-- Name: m2question_attempt_steps_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2question_attempt_steps_id_seq', 1, false);
+
+
+--
+-- Name: m2question_attempts_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2question_attempts_id_seq', 1, false);
+
+
+--
+-- Name: m2question_calculated_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2question_calculated_id_seq', 1, false);
+
+
+--
+-- Name: m2question_calculated_options_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2question_calculated_options_id_seq', 1, false);
+
+
+--
+-- Name: m2question_categories_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2question_categories_id_seq', 1, false);
+
+
+--
+-- Name: m2question_dataset_definitions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2question_dataset_definitions_id_seq', 1, false);
+
+
+--
+-- Name: m2question_dataset_items_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2question_dataset_items_id_seq', 1, false);
+
+
+--
+-- Name: m2question_datasets_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2question_datasets_id_seq', 1, false);
+
+
+--
+-- Name: m2question_ddwtos_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2question_ddwtos_id_seq', 1, false);
+
+
+--
+-- Name: m2question_gapselect_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2question_gapselect_id_seq', 1, false);
+
+
+--
+-- Name: m2question_hints_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2question_hints_id_seq', 1, false);
+
+
+--
+-- Name: m2question_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2question_id_seq', 1, false);
+
+
+--
+-- Name: m2question_multianswer_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2question_multianswer_id_seq', 1, false);
+
+
+--
+-- Name: m2question_numerical_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2question_numerical_id_seq', 1, false);
+
+
+--
+-- Name: m2question_numerical_options_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2question_numerical_options_id_seq', 1, false);
+
+
+--
+-- Name: m2question_numerical_units_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2question_numerical_units_id_seq', 1, false);
+
+
+--
+-- Name: m2question_response_analysis_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2question_response_analysis_id_seq', 1, false);
+
+
+--
+-- Name: m2question_response_count_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2question_response_count_id_seq', 1, false);
+
+
+--
+-- Name: m2question_statistics_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2question_statistics_id_seq', 1, false);
+
+
+--
+-- Name: m2question_truefalse_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2question_truefalse_id_seq', 1, false);
+
+
+--
+-- Name: m2question_usages_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2question_usages_id_seq', 1, false);
+
+
+--
+-- Name: m2questionnaire_dependency_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2questionnaire_dependency_id_seq', 1, false);
+
+
+--
+-- Name: m2questionnaire_fb_sections_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2questionnaire_fb_sections_id_seq', 1, false);
+
+
+--
+-- Name: m2questionnaire_feedback_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2questionnaire_feedback_id_seq', 1, false);
+
+
+--
+-- Name: m2questionnaire_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2questionnaire_id_seq', 1, false);
+
+
+--
+-- Name: m2questionnaire_quest_choice_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2questionnaire_quest_choice_id_seq', 1, false);
+
+
+--
+-- Name: m2questionnaire_question_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2questionnaire_question_id_seq', 1, false);
+
+
+--
+-- Name: m2questionnaire_question_type_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2questionnaire_question_type_id_seq', 11, true);
+
+
+--
+-- Name: m2questionnaire_resp_multiple_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2questionnaire_resp_multiple_id_seq', 1, false);
+
+
+--
+-- Name: m2questionnaire_resp_single_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2questionnaire_resp_single_id_seq', 1, false);
+
+
+--
+-- Name: m2questionnaire_response_bool_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2questionnaire_response_bool_id_seq', 1, false);
+
+
+--
+-- Name: m2questionnaire_response_date_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2questionnaire_response_date_id_seq', 1, false);
+
+
+--
+-- Name: m2questionnaire_response_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2questionnaire_response_id_seq', 1, false);
+
+
+--
+-- Name: m2questionnaire_response_other_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2questionnaire_response_other_id_seq', 1, false);
+
+
+--
+-- Name: m2questionnaire_response_rank_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2questionnaire_response_rank_id_seq', 1, false);
+
+
+--
+-- Name: m2questionnaire_response_text_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2questionnaire_response_text_id_seq', 1, false);
+
+
+--
+-- Name: m2questionnaire_survey_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2questionnaire_survey_id_seq', 1, false);
+
+
+--
+-- Name: m2quiz_attempts_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2quiz_attempts_id_seq', 1, false);
+
+
+--
+-- Name: m2quiz_feedback_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2quiz_feedback_id_seq', 1, false);
+
+
+--
+-- Name: m2quiz_grades_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2quiz_grades_id_seq', 1, false);
+
+
+--
+-- Name: m2quiz_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2quiz_id_seq', 1, false);
+
+
+--
+-- Name: m2quiz_overrides_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2quiz_overrides_id_seq', 1, false);
+
+
+--
+-- Name: m2quiz_overview_regrades_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2quiz_overview_regrades_id_seq', 1, false);
+
+
+--
+-- Name: m2quiz_reports_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2quiz_reports_id_seq', 4, true);
+
+
+--
+-- Name: m2quiz_sections_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2quiz_sections_id_seq', 1, false);
+
+
+--
+-- Name: m2quiz_slot_tags_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2quiz_slot_tags_id_seq', 1, false);
+
+
+--
+-- Name: m2quiz_slots_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2quiz_slots_id_seq', 1, false);
+
+
+--
+-- Name: m2quiz_statistics_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2quiz_statistics_id_seq', 1, false);
+
+
+--
+-- Name: m2qv_assignments_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2qv_assignments_id_seq', 1, false);
+
+
+--
+-- Name: m2qv_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2qv_id_seq', 1, false);
+
+
+--
+-- Name: m2qv_messages_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2qv_messages_id_seq', 1, false);
+
+
+--
+-- Name: m2qv_messages_read_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2qv_messages_read_id_seq', 1, false);
+
+
+--
+-- Name: m2qv_sections_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2qv_sections_id_seq', 1, false);
+
+
+--
+-- Name: m2rating_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2rating_id_seq', 1, false);
+
+
+--
+-- Name: m2rcommon_books_activities_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2rcommon_books_activities_id_seq', 1, false);
+
+
+--
+-- Name: m2rcommon_books_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2rcommon_books_id_seq', 1, false);
+
+
+--
+-- Name: m2rcommon_books_units_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2rcommon_books_units_id_seq', 1, false);
+
+
+--
+-- Name: m2rcommon_errors_log_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2rcommon_errors_log_id_seq', 1, false);
+
+
+--
+-- Name: m2rcommon_level_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2rcommon_level_id_seq', 10, true);
+
+
+--
+-- Name: m2rcommon_publisher_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2rcommon_publisher_id_seq', 1, false);
+
+
+--
+-- Name: m2rcommon_user_credentials_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2rcommon_user_credentials_id_seq', 1, false);
+
+
+--
+-- Name: m2rcontent_grades_details_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2rcontent_grades_details_id_seq', 1, false);
+
+
+--
+-- Name: m2rcontent_grades_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2rcontent_grades_id_seq', 1, false);
+
+
+--
+-- Name: m2rcontent_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2rcontent_id_seq', 1, false);
+
+
+--
+-- Name: m2rcontent_track_credentials_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2rcontent_track_credentials_id_seq', 1, false);
+
+
+--
+-- Name: m2registration_hubs_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2registration_hubs_id_seq', 1, false);
+
+
+--
+-- Name: m2repository_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2repository_id_seq', 7, true);
+
+
+--
+-- Name: m2repository_instance_config_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2repository_instance_config_id_seq', 1, false);
+
+
+--
+-- Name: m2repository_instances_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2repository_instances_id_seq', 7, true);
+
+
+--
+-- Name: m2repository_onedrive_access_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2repository_onedrive_access_id_seq', 1, false);
+
+
+--
+-- Name: m2resource_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2resource_id_seq', 1, false);
+
+
+--
+-- Name: m2resource_old_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2resource_old_id_seq', 1, false);
+
+
+--
+-- Name: m2role_allow_assign_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2role_allow_assign_id_seq', 7, true);
+
+
+--
+-- Name: m2role_allow_override_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2role_allow_override_id_seq', 11, true);
+
+
+--
+-- Name: m2role_allow_switch_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2role_allow_switch_id_seq', 9, true);
+
+
+--
+-- Name: m2role_allow_view_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2role_allow_view_id_seq', 24, true);
+
+
+--
+-- Name: m2role_assignments_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2role_assignments_id_seq', 1, false);
+
+
+--
+-- Name: m2role_capabilities_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2role_capabilities_id_seq', 1541, true);
+
+
+--
+-- Name: m2role_context_levels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2role_context_levels_id_seq', 11, true);
+
+
+--
+-- Name: m2role_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2role_id_seq', 8, true);
+
+
+--
+-- Name: m2role_names_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2role_names_id_seq', 1, false);
+
+
+--
+-- Name: m2role_sortorder_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2role_sortorder_id_seq', 1, false);
+
+
+--
+-- Name: m2scale_history_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2scale_history_id_seq', 1, false);
+
+
+--
+-- Name: m2scale_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2scale_id_seq', 2, true);
+
+
+--
+-- Name: m2scorm_aicc_session_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2scorm_aicc_session_id_seq', 1, false);
+
+
+--
+-- Name: m2scorm_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2scorm_id_seq', 1, false);
+
+
+--
+-- Name: m2scorm_scoes_data_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2scorm_scoes_data_id_seq', 1, false);
+
+
+--
+-- Name: m2scorm_scoes_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2scorm_scoes_id_seq', 1, false);
+
+
+--
+-- Name: m2scorm_scoes_track_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2scorm_scoes_track_id_seq', 1, false);
+
+
+--
+-- Name: m2scorm_seq_mapinfo_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2scorm_seq_mapinfo_id_seq', 1, false);
+
+
+--
+-- Name: m2scorm_seq_objective_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2scorm_seq_objective_id_seq', 1, false);
+
+
+--
+-- Name: m2scorm_seq_rolluprule_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2scorm_seq_rolluprule_id_seq', 1, false);
+
+
+--
+-- Name: m2scorm_seq_rolluprulecond_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2scorm_seq_rolluprulecond_id_seq', 1, false);
+
+
+--
+-- Name: m2scorm_seq_rulecond_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2scorm_seq_rulecond_id_seq', 1, false);
+
+
+--
+-- Name: m2scorm_seq_ruleconds_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2scorm_seq_ruleconds_id_seq', 1, false);
+
+
+--
+-- Name: m2search_index_requests_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2search_index_requests_id_seq', 1, false);
+
+
+--
+-- Name: m2search_simpledb_index_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2search_simpledb_index_id_seq', 1, false);
+
+
+--
+-- Name: m2sessions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2sessions_id_seq', 10, true);
+
+
+--
+-- Name: m2stats_daily_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2stats_daily_id_seq', 1, false);
+
+
+--
+-- Name: m2stats_monthly_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2stats_monthly_id_seq', 1, false);
+
+
+--
+-- Name: m2stats_user_daily_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2stats_user_daily_id_seq', 1, false);
+
+
+--
+-- Name: m2stats_user_monthly_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2stats_user_monthly_id_seq', 1, false);
+
+
+--
+-- Name: m2stats_user_weekly_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2stats_user_weekly_id_seq', 1, false);
+
+
+--
+-- Name: m2stats_weekly_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2stats_weekly_id_seq', 1, false);
+
+
+--
+-- Name: m2survey_analysis_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2survey_analysis_id_seq', 1, false);
+
+
+--
+-- Name: m2survey_answers_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2survey_answers_id_seq', 1, false);
+
+
+--
+-- Name: m2survey_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2survey_id_seq', 5, true);
+
+
+--
+-- Name: m2survey_questions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2survey_questions_id_seq', 73, true);
+
+
+--
+-- Name: m2tag_area_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2tag_area_id_seq', 11, true);
+
+
+--
+-- Name: m2tag_coll_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2tag_coll_id_seq', 1, true);
+
+
+--
+-- Name: m2tag_correlation_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2tag_correlation_id_seq', 1, false);
+
+
+--
+-- Name: m2tag_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2tag_id_seq', 1, false);
+
+
+--
+-- Name: m2tag_instance_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2tag_instance_id_seq', 1, false);
+
+
+--
+-- Name: m2task_adhoc_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2task_adhoc_id_seq', 1, false);
+
+
+--
+-- Name: m2task_scheduled_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2task_scheduled_id_seq', 87, true);
+
+
+--
+-- Name: m2tool_cohortroles_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2tool_cohortroles_id_seq', 1, false);
+
+
+--
+-- Name: m2tool_customlang_components_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2tool_customlang_components_id_seq', 1, false);
+
+
+--
+-- Name: m2tool_customlang_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2tool_customlang_id_seq', 1, false);
+
+
+--
+-- Name: m2tool_dataprivacy_category_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2tool_dataprivacy_category_id_seq', 1, false);
+
+
+--
+-- Name: m2tool_dataprivacy_ctxexpired_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2tool_dataprivacy_ctxexpired_id_seq', 1, false);
+
+
+--
+-- Name: m2tool_dataprivacy_ctxinstance_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2tool_dataprivacy_ctxinstance_id_seq', 1, false);
+
+
+--
+-- Name: m2tool_dataprivacy_ctxlevel_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2tool_dataprivacy_ctxlevel_id_seq', 1, false);
+
+
+--
+-- Name: m2tool_dataprivacy_purpose_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2tool_dataprivacy_purpose_id_seq', 1, false);
+
+
+--
+-- Name: m2tool_dataprivacy_purposerole_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2tool_dataprivacy_purposerole_id_seq', 1, false);
+
+
+--
+-- Name: m2tool_dataprivacy_request_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2tool_dataprivacy_request_id_seq', 1, false);
+
+
+--
+-- Name: m2tool_monitor_events_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2tool_monitor_events_id_seq', 1, false);
+
+
+--
+-- Name: m2tool_monitor_history_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2tool_monitor_history_id_seq', 1, false);
+
+
+--
+-- Name: m2tool_monitor_rules_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2tool_monitor_rules_id_seq', 1, false);
+
+
+--
+-- Name: m2tool_monitor_subscriptions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2tool_monitor_subscriptions_id_seq', 1, false);
+
+
+--
+-- Name: m2tool_policy_acceptances_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2tool_policy_acceptances_id_seq', 1, false);
+
+
+--
+-- Name: m2tool_policy_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2tool_policy_id_seq', 1, false);
+
+
+--
+-- Name: m2tool_policy_versions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2tool_policy_versions_id_seq', 1, false);
+
+
+--
+-- Name: m2tool_recyclebin_category_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2tool_recyclebin_category_id_seq', 1, false);
+
+
+--
+-- Name: m2tool_recyclebin_course_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2tool_recyclebin_course_id_seq', 1, false);
+
+
+--
+-- Name: m2tool_usertours_steps_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2tool_usertours_steps_id_seq', 14, true);
+
+
+--
+-- Name: m2tool_usertours_tours_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2tool_usertours_tours_id_seq', 2, true);
+
+
+--
+-- Name: m2upgrade_log_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2upgrade_log_id_seq', 1407, true);
+
+
+--
+-- Name: m2url_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2url_id_seq', 1, false);
+
+
+--
+-- Name: m2user_devices_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2user_devices_id_seq', 1, false);
+
+
+--
+-- Name: m2user_enrolments_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2user_enrolments_id_seq', 1, false);
+
+
+--
+-- Name: m2user_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2user_id_seq', 3, true);
+
+
+--
+-- Name: m2user_info_category_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2user_info_category_id_seq', 1, false);
+
+
+--
+-- Name: m2user_info_data_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2user_info_data_id_seq', 1, false);
+
+
+--
+-- Name: m2user_info_field_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2user_info_field_id_seq', 1, false);
+
+
+--
+-- Name: m2user_lastaccess_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2user_lastaccess_id_seq', 1, false);
+
+
+--
+-- Name: m2user_password_history_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2user_password_history_id_seq', 1, false);
+
+
+--
+-- Name: m2user_password_resets_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2user_password_resets_id_seq', 1, false);
+
+
+--
+-- Name: m2user_preferences_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2user_preferences_id_seq', 12, true);
+
+
+--
+-- Name: m2user_private_key_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2user_private_key_id_seq', 1, false);
+
+
+--
+-- Name: m2wiki_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2wiki_id_seq', 1, false);
+
+
+--
+-- Name: m2wiki_links_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2wiki_links_id_seq', 1, false);
+
+
+--
+-- Name: m2wiki_locks_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2wiki_locks_id_seq', 1, false);
+
+
+--
+-- Name: m2wiki_pages_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2wiki_pages_id_seq', 1, false);
+
+
+--
+-- Name: m2wiki_subwikis_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2wiki_subwikis_id_seq', 1, false);
+
+
+--
+-- Name: m2wiki_synonyms_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2wiki_synonyms_id_seq', 1, false);
+
+
+--
+-- Name: m2wiki_versions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2wiki_versions_id_seq', 1, false);
+
+
+--
+-- Name: m2workshop_aggregations_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2workshop_aggregations_id_seq', 1, false);
+
+
+--
+-- Name: m2workshop_assessments_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2workshop_assessments_id_seq', 1, false);
+
+
+--
+-- Name: m2workshop_grades_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2workshop_grades_id_seq', 1, false);
+
+
+--
+-- Name: m2workshop_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2workshop_id_seq', 1, false);
+
+
+--
+-- Name: m2workshop_submissions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2workshop_submissions_id_seq', 1, false);
+
+
+--
+-- Name: m2workshopallocation_scheduled_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2workshopallocation_scheduled_id_seq', 1, false);
+
+
+--
+-- Name: m2workshopeval_best_settings_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2workshopeval_best_settings_id_seq', 1, false);
+
+
+--
+-- Name: m2workshopform_accumulative_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2workshopform_accumulative_id_seq', 1, false);
+
+
+--
+-- Name: m2workshopform_comments_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2workshopform_comments_id_seq', 1, false);
+
+
+--
+-- Name: m2workshopform_numerrors_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2workshopform_numerrors_id_seq', 1, false);
+
+
+--
+-- Name: m2workshopform_numerrors_map_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.m2workshopform_numerrors_map_id_seq', 1, false);
+
+
+--
 -- Name: m2workshopform_rubric_config_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
@@ -42553,14 +39728,6 @@ SELECT pg_catalog.setval('public.m2workshopform_rubric_id_seq', 1, false);
 
 
 --
--- Data for Name: m2workshopform_rubric_levels; Type: TABLE DATA; Schema: public; Owner: -
---
-
-COPY public.m2workshopform_rubric_levels (id, dimensionid, grade, definition, definitionformat) FROM stdin;
-\.
-
-
---
 -- Name: m2workshopform_rubric_levels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
@@ -42568,7 +39735,7 @@ SELECT pg_catalog.setval('public.m2workshopform_rubric_levels_id_seq', 1, false)
 
 
 --
--- Name: m2analindicalc_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2analytics_indicator_calc m2analindicalc_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2analytics_indicator_calc
@@ -42576,7 +39743,7 @@ ALTER TABLE ONLY public.m2analytics_indicator_calc
 
 
 --
--- Name: m2analmode_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2analytics_models m2analmode_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2analytics_models
@@ -42584,7 +39751,7 @@ ALTER TABLE ONLY public.m2analytics_models
 
 
 --
--- Name: m2analmodelog_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2analytics_models_log m2analmodelog_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2analytics_models_log
@@ -42592,7 +39759,7 @@ ALTER TABLE ONLY public.m2analytics_models_log
 
 
 --
--- Name: m2analpred_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2analytics_predictions m2analpred_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2analytics_predictions
@@ -42600,7 +39767,7 @@ ALTER TABLE ONLY public.m2analytics_predictions
 
 
 --
--- Name: m2analpredacti_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2analytics_prediction_actions m2analpredacti_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2analytics_prediction_actions
@@ -42608,7 +39775,7 @@ ALTER TABLE ONLY public.m2analytics_prediction_actions
 
 
 --
--- Name: m2analpredsamp_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2analytics_predict_samples m2analpredsamp_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2analytics_predict_samples
@@ -42616,7 +39783,7 @@ ALTER TABLE ONLY public.m2analytics_predict_samples
 
 
 --
--- Name: m2analtraisamp_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2analytics_train_samples m2analtraisamp_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2analytics_train_samples
@@ -42624,7 +39791,7 @@ ALTER TABLE ONLY public.m2analytics_train_samples
 
 
 --
--- Name: m2analusedanal_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2analytics_used_analysables m2analusedanal_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2analytics_used_analysables
@@ -42632,7 +39799,7 @@ ALTER TABLE ONLY public.m2analytics_used_analysables
 
 
 --
--- Name: m2analusedfile_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2analytics_used_files m2analusedfile_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2analytics_used_files
@@ -42640,7 +39807,7 @@ ALTER TABLE ONLY public.m2analytics_used_files
 
 
 --
--- Name: m2assi_id3_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2assignment m2assi_id3_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2assignment
@@ -42648,7 +39815,7 @@ ALTER TABLE ONLY public.m2assignment
 
 
 --
--- Name: m2assi_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2assign m2assi_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2assign
@@ -42656,7 +39823,7 @@ ALTER TABLE ONLY public.m2assign
 
 
 --
--- Name: m2assicomm_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2assignfeedback_comments m2assicomm_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2assignfeedback_comments
@@ -42664,7 +39831,7 @@ ALTER TABLE ONLY public.m2assignfeedback_comments
 
 
 --
--- Name: m2assieditanno_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2assignfeedback_editpdf_annot m2assieditanno_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2assignfeedback_editpdf_annot
@@ -42672,7 +39839,7 @@ ALTER TABLE ONLY public.m2assignfeedback_editpdf_annot
 
 
 --
--- Name: m2assieditcmnt_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2assignfeedback_editpdf_cmnt m2assieditcmnt_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2assignfeedback_editpdf_cmnt
@@ -42680,7 +39847,7 @@ ALTER TABLE ONLY public.m2assignfeedback_editpdf_cmnt
 
 
 --
--- Name: m2assieditqueu_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2assignfeedback_editpdf_queue m2assieditqueu_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2assignfeedback_editpdf_queue
@@ -42688,7 +39855,7 @@ ALTER TABLE ONLY public.m2assignfeedback_editpdf_queue
 
 
 --
--- Name: m2assieditquic_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2assignfeedback_editpdf_quick m2assieditquic_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2assignfeedback_editpdf_quick
@@ -42696,7 +39863,7 @@ ALTER TABLE ONLY public.m2assignfeedback_editpdf_quick
 
 
 --
--- Name: m2assifile_id3_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2assignfeedback_file m2assifile_id3_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2assignfeedback_file
@@ -42704,7 +39871,7 @@ ALTER TABLE ONLY public.m2assignfeedback_file
 
 
 --
--- Name: m2assifile_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2assignsubmission_file m2assifile_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2assignsubmission_file
@@ -42712,7 +39879,7 @@ ALTER TABLE ONLY public.m2assignsubmission_file
 
 
 --
--- Name: m2assigrad_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2assign_grades m2assigrad_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2assign_grades
@@ -42720,7 +39887,7 @@ ALTER TABLE ONLY public.m2assign_grades
 
 
 --
--- Name: m2assionli_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2assignsubmission_onlinetext m2assionli_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2assignsubmission_onlinetext
@@ -42728,7 +39895,7 @@ ALTER TABLE ONLY public.m2assignsubmission_onlinetext
 
 
 --
--- Name: m2assiover_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2assign_overrides m2assiover_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2assign_overrides
@@ -42736,7 +39903,7 @@ ALTER TABLE ONLY public.m2assign_overrides
 
 
 --
--- Name: m2assiplugconf_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2assign_plugin_config m2assiplugconf_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2assign_plugin_config
@@ -42744,7 +39911,7 @@ ALTER TABLE ONLY public.m2assign_plugin_config
 
 
 --
--- Name: m2assisubm_id3_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2assignment_submissions m2assisubm_id3_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2assignment_submissions
@@ -42752,7 +39919,7 @@ ALTER TABLE ONLY public.m2assignment_submissions
 
 
 --
--- Name: m2assisubm_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2assign_submission m2assisubm_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2assign_submission
@@ -42760,7 +39927,7 @@ ALTER TABLE ONLY public.m2assign_submission
 
 
 --
--- Name: m2assiupgr_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2assignment_upgrade m2assiupgr_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2assignment_upgrade
@@ -42768,7 +39935,7 @@ ALTER TABLE ONLY public.m2assignment_upgrade
 
 
 --
--- Name: m2assiuserflag_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2assign_user_flags m2assiuserflag_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2assign_user_flags
@@ -42776,7 +39943,7 @@ ALTER TABLE ONLY public.m2assign_user_flags
 
 
 --
--- Name: m2assiusermapp_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2assign_user_mapping m2assiusermapp_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2assign_user_mapping
@@ -42784,7 +39951,7 @@ ALTER TABLE ONLY public.m2assign_user_mapping
 
 
 --
--- Name: m2authoautlinklogi_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2auth_oauth2_linked_login m2authoautlinklogi_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2auth_oauth2_linked_login
@@ -42792,7 +39959,7 @@ ALTER TABLE ONLY public.m2auth_oauth2_linked_login
 
 
 --
--- Name: m2backcont_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2backup_controllers m2backcont_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2backup_controllers
@@ -42800,7 +39967,7 @@ ALTER TABLE ONLY public.m2backup_controllers
 
 
 --
--- Name: m2backcour_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2backup_courses m2backcour_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2backup_courses
@@ -42808,7 +39975,7 @@ ALTER TABLE ONLY public.m2backup_courses
 
 
 --
--- Name: m2backlogs_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2backup_logs m2backlogs_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2backup_logs
@@ -42816,7 +39983,7 @@ ALTER TABLE ONLY public.m2backup_logs
 
 
 --
--- Name: m2badg_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2badge m2badg_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2badge
@@ -42824,7 +39991,7 @@ ALTER TABLE ONLY public.m2badge
 
 
 --
--- Name: m2badgback_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2badge_backpack m2badgback_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2badge_backpack
@@ -42832,7 +39999,7 @@ ALTER TABLE ONLY public.m2badge_backpack
 
 
 --
--- Name: m2badgcomp_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2badge_competencies m2badgcomp_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2badge_competencies
@@ -42840,7 +40007,7 @@ ALTER TABLE ONLY public.m2badge_competencies
 
 
 --
--- Name: m2badgcrit_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2badge_criteria m2badgcrit_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2badge_criteria
@@ -42848,7 +40015,7 @@ ALTER TABLE ONLY public.m2badge_criteria
 
 
 --
--- Name: m2badgcritmet_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2badge_criteria_met m2badgcritmet_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2badge_criteria_met
@@ -42856,7 +40023,7 @@ ALTER TABLE ONLY public.m2badge_criteria_met
 
 
 --
--- Name: m2badgcritpara_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2badge_criteria_param m2badgcritpara_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2badge_criteria_param
@@ -42864,7 +40031,7 @@ ALTER TABLE ONLY public.m2badge_criteria_param
 
 
 --
--- Name: m2badgendo_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2badge_endorsement m2badgendo_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2badge_endorsement
@@ -42872,7 +40039,7 @@ ALTER TABLE ONLY public.m2badge_endorsement
 
 
 --
--- Name: m2badgexte_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2badge_external m2badgexte_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2badge_external
@@ -42880,7 +40047,7 @@ ALTER TABLE ONLY public.m2badge_external
 
 
 --
--- Name: m2badgissu_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2badge_issued m2badgissu_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2badge_issued
@@ -42888,7 +40055,7 @@ ALTER TABLE ONLY public.m2badge_issued
 
 
 --
--- Name: m2badgmanuawar_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2badge_manual_award m2badgmanuawar_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2badge_manual_award
@@ -42896,7 +40063,7 @@ ALTER TABLE ONLY public.m2badge_manual_award
 
 
 --
--- Name: m2badgrela_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2badge_related m2badgrela_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2badge_related
@@ -42904,7 +40071,7 @@ ALTER TABLE ONLY public.m2badge_related
 
 
 --
--- Name: m2bigdprof_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2bigdata_profiles m2bigdprof_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2bigdata_profiles
@@ -42912,7 +40079,7 @@ ALTER TABLE ONLY public.m2bigdata_profiles
 
 
 --
--- Name: m2bloc_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2block m2bloc_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2block
@@ -42920,7 +40087,7 @@ ALTER TABLE ONLY public.m2block
 
 
 --
--- Name: m2bloccomm_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2block_community m2bloccomm_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2block_community
@@ -42928,7 +40095,7 @@ ALTER TABLE ONLY public.m2block_community
 
 
 --
--- Name: m2blocinst_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2block_instances m2blocinst_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2block_instances
@@ -42936,7 +40103,7 @@ ALTER TABLE ONLY public.m2block_instances
 
 
 --
--- Name: m2blocposi_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2block_positions m2blocposi_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2block_positions
@@ -42944,7 +40111,7 @@ ALTER TABLE ONLY public.m2block_positions
 
 
 --
--- Name: m2blocrece_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2block_recentlyaccesseditems m2blocrece_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2block_recentlyaccesseditems
@@ -42952,7 +40119,7 @@ ALTER TABLE ONLY public.m2block_recentlyaccesseditems
 
 
 --
--- Name: m2blocreceacti_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2block_recent_activity m2blocreceacti_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2block_recent_activity
@@ -42960,7 +40127,7 @@ ALTER TABLE ONLY public.m2block_recent_activity
 
 
 --
--- Name: m2blocrssclie_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2block_rss_client m2blocrssclie_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2block_rss_client
@@ -42968,7 +40135,7 @@ ALTER TABLE ONLY public.m2block_rss_client
 
 
 --
--- Name: m2blogasso_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2blog_association m2blogasso_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2blog_association
@@ -42976,7 +40143,7 @@ ALTER TABLE ONLY public.m2blog_association
 
 
 --
--- Name: m2blogexte_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2blog_external m2blogexte_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2blog_external
@@ -42984,7 +40151,7 @@ ALTER TABLE ONLY public.m2blog_external
 
 
 --
--- Name: m2book_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2book m2book_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2book
@@ -42992,7 +40159,7 @@ ALTER TABLE ONLY public.m2book
 
 
 --
--- Name: m2bookchap_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2book_chapters m2bookchap_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2book_chapters
@@ -43000,7 +40167,7 @@ ALTER TABLE ONLY public.m2book_chapters
 
 
 --
--- Name: m2cachfilt_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2cache_filters m2cachfilt_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2cache_filters
@@ -43008,7 +40175,7 @@ ALTER TABLE ONLY public.m2cache_filters
 
 
 --
--- Name: m2cachflag_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2cache_flags m2cachflag_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2cache_flags
@@ -43016,7 +40183,7 @@ ALTER TABLE ONLY public.m2cache_flags
 
 
 --
--- Name: m2capa_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2capabilities m2capa_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2capabilities
@@ -43024,7 +40191,7 @@ ALTER TABLE ONLY public.m2capabilities
 
 
 --
--- Name: m2chat_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2chat m2chat_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2chat
@@ -43032,7 +40199,7 @@ ALTER TABLE ONLY public.m2chat
 
 
 --
--- Name: m2chatmess_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2chat_messages m2chatmess_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2chat_messages
@@ -43040,7 +40207,7 @@ ALTER TABLE ONLY public.m2chat_messages
 
 
 --
--- Name: m2chatmesscurr_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2chat_messages_current m2chatmesscurr_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2chat_messages_current
@@ -43048,7 +40215,7 @@ ALTER TABLE ONLY public.m2chat_messages_current
 
 
 --
--- Name: m2chatuser_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2chat_users m2chatuser_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2chat_users
@@ -43056,7 +40223,7 @@ ALTER TABLE ONLY public.m2chat_users
 
 
 --
--- Name: m2choi_id2_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2choicegroup m2choi_id2_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2choicegroup
@@ -43064,7 +40231,7 @@ ALTER TABLE ONLY public.m2choicegroup
 
 
 --
--- Name: m2choi_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2choice m2choi_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2choice
@@ -43072,7 +40239,7 @@ ALTER TABLE ONLY public.m2choice
 
 
 --
--- Name: m2choiansw_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2choice_answers m2choiansw_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2choice_answers
@@ -43080,7 +40247,7 @@ ALTER TABLE ONLY public.m2choice_answers
 
 
 --
--- Name: m2choiopti_id2_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2choicegroup_options m2choiopti_id2_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2choicegroup_options
@@ -43088,7 +40255,7 @@ ALTER TABLE ONLY public.m2choicegroup_options
 
 
 --
--- Name: m2choiopti_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2choice_options m2choiopti_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2choice_options
@@ -43096,7 +40263,7 @@ ALTER TABLE ONLY public.m2choice_options
 
 
 --
--- Name: m2coho_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2cohort m2coho_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2cohort
@@ -43104,7 +40271,7 @@ ALTER TABLE ONLY public.m2cohort
 
 
 --
--- Name: m2cohomemb_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2cohort_members m2cohomemb_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2cohort_members
@@ -43112,7 +40279,7 @@ ALTER TABLE ONLY public.m2cohort_members
 
 
 --
--- Name: m2comm_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2comments m2comm_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2comments
@@ -43120,7 +40287,7 @@ ALTER TABLE ONLY public.m2comments
 
 
 --
--- Name: m2comp_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2competency m2comp_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2competency
@@ -43128,7 +40295,7 @@ ALTER TABLE ONLY public.m2competency
 
 
 --
--- Name: m2compcour_id3_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2competency_coursecomp m2compcour_id3_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2competency_coursecomp
@@ -43136,7 +40303,7 @@ ALTER TABLE ONLY public.m2competency_coursecomp
 
 
 --
--- Name: m2compcour_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2competency_coursecompsetting m2compcour_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2competency_coursecompsetting
@@ -43144,7 +40311,7 @@ ALTER TABLE ONLY public.m2competency_coursecompsetting
 
 
 --
--- Name: m2compevid_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2competency_evidence m2compevid_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2competency_evidence
@@ -43152,7 +40319,7 @@ ALTER TABLE ONLY public.m2competency_evidence
 
 
 --
--- Name: m2compfram_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2competency_framework m2compfram_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2competency_framework
@@ -43160,7 +40327,7 @@ ALTER TABLE ONLY public.m2competency_framework
 
 
 --
--- Name: m2compmodu_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2competency_modulecomp m2compmodu_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2competency_modulecomp
@@ -43168,7 +40335,7 @@ ALTER TABLE ONLY public.m2competency_modulecomp
 
 
 --
--- Name: m2compplan_id3_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2competency_plancomp m2compplan_id3_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2competency_plancomp
@@ -43176,7 +40343,7 @@ ALTER TABLE ONLY public.m2competency_plancomp
 
 
 --
--- Name: m2compplan_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2competency_plan m2compplan_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2competency_plan
@@ -43184,7 +40351,7 @@ ALTER TABLE ONLY public.m2competency_plan
 
 
 --
--- Name: m2comprela_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2competency_relatedcomp m2comprela_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2competency_relatedcomp
@@ -43192,7 +40359,7 @@ ALTER TABLE ONLY public.m2competency_relatedcomp
 
 
 --
--- Name: m2comptemp_id3_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2competency_templatecomp m2comptemp_id3_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2competency_templatecomp
@@ -43200,7 +40367,7 @@ ALTER TABLE ONLY public.m2competency_templatecomp
 
 
 --
--- Name: m2comptemp_id5_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2competency_templatecohort m2comptemp_id5_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2competency_templatecohort
@@ -43208,7 +40375,7 @@ ALTER TABLE ONLY public.m2competency_templatecohort
 
 
 --
--- Name: m2comptemp_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2competency_template m2comptemp_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2competency_template
@@ -43216,7 +40383,7 @@ ALTER TABLE ONLY public.m2competency_template
 
 
 --
--- Name: m2compuser_id3_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2competency_usercompcourse m2compuser_id3_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2competency_usercompcourse
@@ -43224,7 +40391,7 @@ ALTER TABLE ONLY public.m2competency_usercompcourse
 
 
 --
--- Name: m2compuser_id5_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2competency_usercompplan m2compuser_id5_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2competency_usercompplan
@@ -43232,7 +40399,7 @@ ALTER TABLE ONLY public.m2competency_usercompplan
 
 
 --
--- Name: m2compuser_id7_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2competency_userevidence m2compuser_id7_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2competency_userevidence
@@ -43240,7 +40407,7 @@ ALTER TABLE ONLY public.m2competency_userevidence
 
 
 --
--- Name: m2compuser_id9_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2competency_userevidencecomp m2compuser_id9_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2competency_userevidencecomp
@@ -43248,7 +40415,7 @@ ALTER TABLE ONLY public.m2competency_userevidencecomp
 
 
 --
--- Name: m2compuser_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2competency_usercomp m2compuser_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2competency_usercomp
@@ -43256,7 +40423,7 @@ ALTER TABLE ONLY public.m2competency_usercomp
 
 
 --
--- Name: m2conf_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2config m2conf_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2config
@@ -43264,7 +40431,7 @@ ALTER TABLE ONLY public.m2config
 
 
 --
--- Name: m2conflog_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2config_log m2conflog_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2config_log
@@ -43272,7 +40439,7 @@ ALTER TABLE ONLY public.m2config_log
 
 
 --
--- Name: m2confplug_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2config_plugins m2confplug_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2config_plugins
@@ -43280,7 +40447,7 @@ ALTER TABLE ONLY public.m2config_plugins
 
 
 --
--- Name: m2cont_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2context m2cont_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2context
@@ -43288,7 +40455,7 @@ ALTER TABLE ONLY public.m2context
 
 
 --
--- Name: m2conttemp_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2context_temp m2conttemp_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2context_temp
@@ -43296,7 +40463,7 @@ ALTER TABLE ONLY public.m2context_temp
 
 
 --
--- Name: m2cour_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2course m2cour_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2course
@@ -43304,7 +40471,7 @@ ALTER TABLE ONLY public.m2course
 
 
 --
--- Name: m2courcate_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2course_categories m2courcate_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2course_categories
@@ -43312,7 +40479,7 @@ ALTER TABLE ONLY public.m2course_categories
 
 
 --
--- Name: m2courcomp_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2course_completions m2courcomp_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2course_completions
@@ -43320,7 +40487,7 @@ ALTER TABLE ONLY public.m2course_completions
 
 
 --
--- Name: m2courcompaggrmeth_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2course_completion_aggr_methd m2courcompaggrmeth_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2course_completion_aggr_methd
@@ -43328,7 +40495,7 @@ ALTER TABLE ONLY public.m2course_completion_aggr_methd
 
 
 --
--- Name: m2courcompcrit_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2course_completion_criteria m2courcompcrit_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2course_completion_criteria
@@ -43336,7 +40503,7 @@ ALTER TABLE ONLY public.m2course_completion_criteria
 
 
 --
--- Name: m2courcompcritcomp_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2course_completion_crit_compl m2courcompcritcomp_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2course_completion_crit_compl
@@ -43344,7 +40511,7 @@ ALTER TABLE ONLY public.m2course_completion_crit_compl
 
 
 --
--- Name: m2courcompdefa_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2course_completion_defaults m2courcompdefa_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2course_completion_defaults
@@ -43352,7 +40519,7 @@ ALTER TABLE ONLY public.m2course_completion_defaults
 
 
 --
--- Name: m2courformopti_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2course_format_options m2courformopti_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2course_format_options
@@ -43360,7 +40527,7 @@ ALTER TABLE ONLY public.m2course_format_options
 
 
 --
--- Name: m2courmodu_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2course_modules m2courmodu_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2course_modules
@@ -43368,7 +40535,7 @@ ALTER TABLE ONLY public.m2course_modules
 
 
 --
--- Name: m2courmoducomp_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2course_modules_completion m2courmoducomp_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2course_modules_completion
@@ -43376,7 +40543,7 @@ ALTER TABLE ONLY public.m2course_modules_completion
 
 
 --
--- Name: m2courpubl_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2course_published m2courpubl_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2course_published
@@ -43384,7 +40551,7 @@ ALTER TABLE ONLY public.m2course_published
 
 
 --
--- Name: m2courrequ_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2course_request m2courrequ_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2course_request
@@ -43392,7 +40559,7 @@ ALTER TABLE ONLY public.m2course_request
 
 
 --
--- Name: m2coursect_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2course_sections m2coursect_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2course_sections
@@ -43400,7 +40567,7 @@ ALTER TABLE ONLY public.m2course_sections
 
 
 --
--- Name: m2data_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2data m2data_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2data
@@ -43408,7 +40575,7 @@ ALTER TABLE ONLY public.m2data
 
 
 --
--- Name: m2datacont_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2data_content m2datacont_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2data_content
@@ -43416,7 +40583,7 @@ ALTER TABLE ONLY public.m2data_content
 
 
 --
--- Name: m2datafiel_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2data_fields m2datafiel_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2data_fields
@@ -43424,7 +40591,7 @@ ALTER TABLE ONLY public.m2data_fields
 
 
 --
--- Name: m2datareco_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2data_records m2datareco_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2data_records
@@ -43432,7 +40599,7 @@ ALTER TABLE ONLY public.m2data_records
 
 
 --
--- Name: m2editattoauto_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2editor_atto_autosave m2editattoauto_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2editor_atto_autosave
@@ -43440,7 +40607,7 @@ ALTER TABLE ONLY public.m2editor_atto_autosave
 
 
 --
--- Name: m2enro_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2enrol m2enro_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2enrol
@@ -43448,7 +40615,7 @@ ALTER TABLE ONLY public.m2enrol
 
 
 --
--- Name: m2enroflat_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2enrol_flatfile m2enroflat_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2enrol_flatfile
@@ -43456,7 +40623,7 @@ ALTER TABLE ONLY public.m2enrol_flatfile
 
 
 --
--- Name: m2enroltilti2cons_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2enrol_lti_lti2_consumer m2enroltilti2cons_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2enrol_lti_lti2_consumer
@@ -43464,7 +40631,7 @@ ALTER TABLE ONLY public.m2enrol_lti_lti2_consumer
 
 
 --
--- Name: m2enroltilti2cont_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2enrol_lti_lti2_context m2enroltilti2cont_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2enrol_lti_lti2_context
@@ -43472,7 +40639,7 @@ ALTER TABLE ONLY public.m2enrol_lti_lti2_context
 
 
 --
--- Name: m2enroltilti2nonc_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2enrol_lti_lti2_nonce m2enroltilti2nonc_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2enrol_lti_lti2_nonce
@@ -43480,7 +40647,7 @@ ALTER TABLE ONLY public.m2enrol_lti_lti2_nonce
 
 
 --
--- Name: m2enroltilti2resolink_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2enrol_lti_lti2_resource_link m2enroltilti2resolink_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2enrol_lti_lti2_resource_link
@@ -43488,7 +40655,7 @@ ALTER TABLE ONLY public.m2enrol_lti_lti2_resource_link
 
 
 --
--- Name: m2enroltilti2sharkey_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2enrol_lti_lti2_share_key m2enroltilti2sharkey_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2enrol_lti_lti2_share_key
@@ -43496,7 +40663,7 @@ ALTER TABLE ONLY public.m2enrol_lti_lti2_share_key
 
 
 --
--- Name: m2enroltilti2toolprox_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2enrol_lti_lti2_tool_proxy m2enroltilti2toolprox_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2enrol_lti_lti2_tool_proxy
@@ -43504,7 +40671,7 @@ ALTER TABLE ONLY public.m2enrol_lti_lti2_tool_proxy
 
 
 --
--- Name: m2enroltilti2userresu_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2enrol_lti_lti2_user_result m2enroltilti2userresu_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2enrol_lti_lti2_user_result
@@ -43512,7 +40679,7 @@ ALTER TABLE ONLY public.m2enrol_lti_lti2_user_result
 
 
 --
--- Name: m2enroltitool_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2enrol_lti_tools m2enroltitool_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2enrol_lti_tools
@@ -43520,7 +40687,7 @@ ALTER TABLE ONLY public.m2enrol_lti_tools
 
 
 --
--- Name: m2enroltitoolconsmap_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2enrol_lti_tool_consumer_map m2enroltitoolconsmap_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2enrol_lti_tool_consumer_map
@@ -43528,7 +40695,7 @@ ALTER TABLE ONLY public.m2enrol_lti_tool_consumer_map
 
 
 --
--- Name: m2enroltiuser_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2enrol_lti_users m2enroltiuser_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2enrol_lti_users
@@ -43536,7 +40703,7 @@ ALTER TABLE ONLY public.m2enrol_lti_users
 
 
 --
--- Name: m2enropayp_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2enrol_paypal m2enropayp_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2enrol_paypal
@@ -43544,7 +40711,7 @@ ALTER TABLE ONLY public.m2enrol_paypal
 
 
 --
--- Name: m2even_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2event m2even_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2event
@@ -43552,7 +40719,7 @@ ALTER TABLE ONLY public.m2event
 
 
 --
--- Name: m2evenhand_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2events_handlers m2evenhand_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2events_handlers
@@ -43560,7 +40727,7 @@ ALTER TABLE ONLY public.m2events_handlers
 
 
 --
--- Name: m2evenqueu_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2events_queue m2evenqueu_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2events_queue
@@ -43568,7 +40735,7 @@ ALTER TABLE ONLY public.m2events_queue
 
 
 --
--- Name: m2evenqueuhand_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2events_queue_handlers m2evenqueuhand_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2events_queue_handlers
@@ -43576,7 +40743,7 @@ ALTER TABLE ONLY public.m2events_queue_handlers
 
 
 --
--- Name: m2evensubs_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2event_subscriptions m2evensubs_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2event_subscriptions
@@ -43584,7 +40751,7 @@ ALTER TABLE ONLY public.m2event_subscriptions
 
 
 --
--- Name: m2extefunc_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2external_functions m2extefunc_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2external_functions
@@ -43592,7 +40759,7 @@ ALTER TABLE ONLY public.m2external_functions
 
 
 --
--- Name: m2exteserv_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2external_services m2exteserv_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2external_services
@@ -43600,7 +40767,7 @@ ALTER TABLE ONLY public.m2external_services
 
 
 --
--- Name: m2exteservfunc_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2external_services_functions m2exteservfunc_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2external_services_functions
@@ -43608,7 +40775,7 @@ ALTER TABLE ONLY public.m2external_services_functions
 
 
 --
--- Name: m2exteservuser_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2external_services_users m2exteservuser_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2external_services_users
@@ -43616,7 +40783,7 @@ ALTER TABLE ONLY public.m2external_services_users
 
 
 --
--- Name: m2extetoke_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2external_tokens m2extetoke_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2external_tokens
@@ -43624,7 +40791,7 @@ ALTER TABLE ONLY public.m2external_tokens
 
 
 --
--- Name: m2favo_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2favourite m2favo_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2favourite
@@ -43632,7 +40799,7 @@ ALTER TABLE ONLY public.m2favourite
 
 
 --
--- Name: m2feed_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2feedback m2feed_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2feedback
@@ -43640,7 +40807,7 @@ ALTER TABLE ONLY public.m2feedback
 
 
 --
--- Name: m2feedcomp_id3_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2feedback_completedtmp m2feedcomp_id3_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2feedback_completedtmp
@@ -43648,7 +40815,7 @@ ALTER TABLE ONLY public.m2feedback_completedtmp
 
 
 --
--- Name: m2feedcomp_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2feedback_completed m2feedcomp_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2feedback_completed
@@ -43656,7 +40823,7 @@ ALTER TABLE ONLY public.m2feedback_completed
 
 
 --
--- Name: m2feeditem_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2feedback_item m2feeditem_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2feedback_item
@@ -43664,7 +40831,7 @@ ALTER TABLE ONLY public.m2feedback_item
 
 
 --
--- Name: m2feedsitemap_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2feedback_sitecourse_map m2feedsitemap_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2feedback_sitecourse_map
@@ -43672,7 +40839,7 @@ ALTER TABLE ONLY public.m2feedback_sitecourse_map
 
 
 --
--- Name: m2feedtemp_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2feedback_template m2feedtemp_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2feedback_template
@@ -43680,7 +40847,7 @@ ALTER TABLE ONLY public.m2feedback_template
 
 
 --
--- Name: m2feedvalu_id3_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2feedback_valuetmp m2feedvalu_id3_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2feedback_valuetmp
@@ -43688,7 +40855,7 @@ ALTER TABLE ONLY public.m2feedback_valuetmp
 
 
 --
--- Name: m2feedvalu_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2feedback_value m2feedvalu_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2feedback_value
@@ -43696,7 +40863,7 @@ ALTER TABLE ONLY public.m2feedback_value
 
 
 --
--- Name: m2file_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2files m2file_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2files
@@ -43704,7 +40871,7 @@ ALTER TABLE ONLY public.m2files
 
 
 --
--- Name: m2fileconv_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2file_conversion m2fileconv_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2file_conversion
@@ -43712,7 +40879,7 @@ ALTER TABLE ONLY public.m2file_conversion
 
 
 --
--- Name: m2filerefe_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2files_reference m2filerefe_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2files_reference
@@ -43720,7 +40887,7 @@ ALTER TABLE ONLY public.m2files_reference
 
 
 --
--- Name: m2filtacti_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2filter_active m2filtacti_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2filter_active
@@ -43728,7 +40895,7 @@ ALTER TABLE ONLY public.m2filter_active
 
 
 --
--- Name: m2filtconf_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2filter_config m2filtconf_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2filter_config
@@ -43736,7 +40903,7 @@ ALTER TABLE ONLY public.m2filter_config
 
 
 --
--- Name: m2filtwiriform_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2filter_wiris_formulas m2filtwiriform_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2filter_wiris_formulas
@@ -43744,7 +40911,7 @@ ALTER TABLE ONLY public.m2filter_wiris_formulas
 
 
 --
--- Name: m2fold_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2folder m2fold_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2folder
@@ -43752,7 +40919,7 @@ ALTER TABLE ONLY public.m2folder
 
 
 --
--- Name: m2foru_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2forum m2foru_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2forum
@@ -43760,7 +40927,7 @@ ALTER TABLE ONLY public.m2forum
 
 
 --
--- Name: m2forudige_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2forum_digests m2forudige_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2forum_digests
@@ -43768,7 +40935,7 @@ ALTER TABLE ONLY public.m2forum_digests
 
 
 --
--- Name: m2forudisc_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2forum_discussions m2forudisc_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2forum_discussions
@@ -43776,7 +40943,7 @@ ALTER TABLE ONLY public.m2forum_discussions
 
 
 --
--- Name: m2forudiscsubs_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2forum_discussion_subs m2forudiscsubs_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2forum_discussion_subs
@@ -43784,7 +40951,7 @@ ALTER TABLE ONLY public.m2forum_discussion_subs
 
 
 --
--- Name: m2forupost_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2forum_posts m2forupost_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2forum_posts
@@ -43792,7 +40959,7 @@ ALTER TABLE ONLY public.m2forum_posts
 
 
 --
--- Name: m2foruqueu_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2forum_queue m2foruqueu_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2forum_queue
@@ -43800,7 +40967,7 @@ ALTER TABLE ONLY public.m2forum_queue
 
 
 --
--- Name: m2foruread_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2forum_read m2foruread_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2forum_read
@@ -43808,7 +40975,7 @@ ALTER TABLE ONLY public.m2forum_read
 
 
 --
--- Name: m2forusubs_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2forum_subscriptions m2forusubs_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2forum_subscriptions
@@ -43816,7 +40983,7 @@ ALTER TABLE ONLY public.m2forum_subscriptions
 
 
 --
--- Name: m2forutracpref_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2forum_track_prefs m2forutracpref_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2forum_track_prefs
@@ -43824,7 +40991,7 @@ ALTER TABLE ONLY public.m2forum_track_prefs
 
 
 --
--- Name: m2geog_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2geogebra m2geog_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2geogebra
@@ -43832,7 +40999,7 @@ ALTER TABLE ONLY public.m2geogebra
 
 
 --
--- Name: m2geogatte_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2geogebra_attempts m2geogatte_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2geogebra_attempts
@@ -43840,7 +41007,7 @@ ALTER TABLE ONLY public.m2geogebra_attempts
 
 
 --
--- Name: m2glos_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2glossary m2glos_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2glossary
@@ -43848,7 +41015,7 @@ ALTER TABLE ONLY public.m2glossary
 
 
 --
--- Name: m2glosalia_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2glossary_alias m2glosalia_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2glossary_alias
@@ -43856,7 +41023,7 @@ ALTER TABLE ONLY public.m2glossary_alias
 
 
 --
--- Name: m2gloscate_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2glossary_categories m2gloscate_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2glossary_categories
@@ -43864,7 +41031,7 @@ ALTER TABLE ONLY public.m2glossary_categories
 
 
 --
--- Name: m2glosentr_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2glossary_entries m2glosentr_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2glossary_entries
@@ -43872,7 +41039,7 @@ ALTER TABLE ONLY public.m2glossary_entries
 
 
 --
--- Name: m2glosentrcate_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2glossary_entries_categories m2glosentrcate_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2glossary_entries_categories
@@ -43880,7 +41047,7 @@ ALTER TABLE ONLY public.m2glossary_entries_categories
 
 
 --
--- Name: m2glosform_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2glossary_formats m2glosform_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2glossary_formats
@@ -43888,7 +41055,7 @@ ALTER TABLE ONLY public.m2glossary_formats
 
 
 --
--- Name: m2gradarea_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2grading_areas m2gradarea_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2grading_areas
@@ -43896,7 +41063,7 @@ ALTER TABLE ONLY public.m2grading_areas
 
 
 --
--- Name: m2gradcate_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2grade_categories m2gradcate_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2grade_categories
@@ -43904,7 +41071,7 @@ ALTER TABLE ONLY public.m2grade_categories
 
 
 --
--- Name: m2gradcatehist_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2grade_categories_history m2gradcatehist_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2grade_categories_history
@@ -43912,7 +41079,7 @@ ALTER TABLE ONLY public.m2grade_categories_history
 
 
 --
--- Name: m2graddefi_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2grading_definitions m2graddefi_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2grading_definitions
@@ -43920,7 +41087,7 @@ ALTER TABLE ONLY public.m2grading_definitions
 
 
 --
--- Name: m2gradgrad_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2grade_grades m2gradgrad_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2grade_grades
@@ -43928,7 +41095,7 @@ ALTER TABLE ONLY public.m2grade_grades
 
 
 --
--- Name: m2gradgradhist_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2grade_grades_history m2gradgradhist_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2grade_grades_history
@@ -43936,7 +41103,7 @@ ALTER TABLE ONLY public.m2grade_grades_history
 
 
 --
--- Name: m2gradguidcomm_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2gradingform_guide_comments m2gradguidcomm_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2gradingform_guide_comments
@@ -43944,7 +41111,7 @@ ALTER TABLE ONLY public.m2gradingform_guide_comments
 
 
 --
--- Name: m2gradguidcrit_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2gradingform_guide_criteria m2gradguidcrit_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2gradingform_guide_criteria
@@ -43952,7 +41119,7 @@ ALTER TABLE ONLY public.m2gradingform_guide_criteria
 
 
 --
--- Name: m2gradguidfill_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2gradingform_guide_fillings m2gradguidfill_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2gradingform_guide_fillings
@@ -43960,7 +41127,7 @@ ALTER TABLE ONLY public.m2gradingform_guide_fillings
 
 
 --
--- Name: m2gradimponewi_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2grade_import_newitem m2gradimponewi_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2grade_import_newitem
@@ -43968,7 +41135,7 @@ ALTER TABLE ONLY public.m2grade_import_newitem
 
 
 --
--- Name: m2gradimpovalu_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2grade_import_values m2gradimpovalu_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2grade_import_values
@@ -43976,7 +41143,7 @@ ALTER TABLE ONLY public.m2grade_import_values
 
 
 --
--- Name: m2gradinst_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2grading_instances m2gradinst_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2grading_instances
@@ -43984,7 +41151,7 @@ ALTER TABLE ONLY public.m2grading_instances
 
 
 --
--- Name: m2graditem_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2grade_items m2graditem_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2grade_items
@@ -43992,7 +41159,7 @@ ALTER TABLE ONLY public.m2grade_items
 
 
 --
--- Name: m2graditemhist_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2grade_items_history m2graditemhist_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2grade_items_history
@@ -44000,7 +41167,7 @@ ALTER TABLE ONLY public.m2grade_items_history
 
 
 --
--- Name: m2gradlett_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2grade_letters m2gradlett_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2grade_letters
@@ -44008,7 +41175,7 @@ ALTER TABLE ONLY public.m2grade_letters
 
 
 --
--- Name: m2gradoutc_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2grade_outcomes m2gradoutc_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2grade_outcomes
@@ -44016,7 +41183,7 @@ ALTER TABLE ONLY public.m2grade_outcomes
 
 
 --
--- Name: m2gradoutccour_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2grade_outcomes_courses m2gradoutccour_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2grade_outcomes_courses
@@ -44024,7 +41191,7 @@ ALTER TABLE ONLY public.m2grade_outcomes_courses
 
 
 --
--- Name: m2gradoutchist_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2grade_outcomes_history m2gradoutchist_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2grade_outcomes_history
@@ -44032,7 +41199,7 @@ ALTER TABLE ONLY public.m2grade_outcomes_history
 
 
 --
--- Name: m2gradrubrcrit_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2gradingform_rubric_criteria m2gradrubrcrit_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2gradingform_rubric_criteria
@@ -44040,7 +41207,7 @@ ALTER TABLE ONLY public.m2gradingform_rubric_criteria
 
 
 --
--- Name: m2gradrubrfill_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2gradingform_rubric_fillings m2gradrubrfill_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2gradingform_rubric_fillings
@@ -44048,7 +41215,7 @@ ALTER TABLE ONLY public.m2gradingform_rubric_fillings
 
 
 --
--- Name: m2gradrubrleve_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2gradingform_rubric_levels m2gradrubrleve_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2gradingform_rubric_levels
@@ -44056,7 +41223,7 @@ ALTER TABLE ONLY public.m2gradingform_rubric_levels
 
 
 --
--- Name: m2gradsett_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2grade_settings m2gradsett_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2grade_settings
@@ -44064,7 +41231,7 @@ ALTER TABLE ONLY public.m2grade_settings
 
 
 --
--- Name: m2grou_id3_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2groupings m2grou_id3_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2groupings
@@ -44072,7 +41239,7 @@ ALTER TABLE ONLY public.m2groupings
 
 
 --
--- Name: m2grou_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2groups m2grou_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2groups
@@ -44080,7 +41247,7 @@ ALTER TABLE ONLY public.m2groups
 
 
 --
--- Name: m2grougrou_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2groupings_groups m2grougrou_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2groupings_groups
@@ -44088,7 +41255,7 @@ ALTER TABLE ONLY public.m2groupings_groups
 
 
 --
--- Name: m2groumemb_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2groups_members m2groumemb_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2groups_members
@@ -44096,7 +41263,7 @@ ALTER TABLE ONLY public.m2groups_members
 
 
 --
--- Name: m2hotp_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2hotpot m2hotp_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2hotpot
@@ -44104,7 +41271,7 @@ ALTER TABLE ONLY public.m2hotpot
 
 
 --
--- Name: m2hotpatte_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2hotpot_attempts m2hotpatte_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2hotpot_attempts
@@ -44112,7 +41279,7 @@ ALTER TABLE ONLY public.m2hotpot_attempts
 
 
 --
--- Name: m2hotpcach_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2hotpot_cache m2hotpcach_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2hotpot_cache
@@ -44120,7 +41287,7 @@ ALTER TABLE ONLY public.m2hotpot_cache
 
 
 --
--- Name: m2hotpdeta_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2hotpot_details m2hotpdeta_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2hotpot_details
@@ -44128,7 +41295,7 @@ ALTER TABLE ONLY public.m2hotpot_details
 
 
 --
--- Name: m2hotpques_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2hotpot_questions m2hotpques_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2hotpot_questions
@@ -44136,7 +41303,7 @@ ALTER TABLE ONLY public.m2hotpot_questions
 
 
 --
--- Name: m2hotpresp_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2hotpot_responses m2hotpresp_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2hotpot_responses
@@ -44144,7 +41311,7 @@ ALTER TABLE ONLY public.m2hotpot_responses
 
 
 --
--- Name: m2hotpstri_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2hotpot_strings m2hotpstri_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2hotpot_strings
@@ -44152,7 +41319,7 @@ ALTER TABLE ONLY public.m2hotpot_strings
 
 
 --
--- Name: m2hvp_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2hvp m2hvp_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2hvp
@@ -44160,7 +41327,7 @@ ALTER TABLE ONLY public.m2hvp
 
 
 --
--- Name: m2hvpauth_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2hvp_auth m2hvpauth_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2hvp_auth
@@ -44168,7 +41335,7 @@ ALTER TABLE ONLY public.m2hvp_auth
 
 
 --
--- Name: m2hvpcontlibr_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2hvp_contents_libraries m2hvpcontlibr_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2hvp_contents_libraries
@@ -44176,7 +41343,7 @@ ALTER TABLE ONLY public.m2hvp_contents_libraries
 
 
 --
--- Name: m2hvpcontuserdata_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2hvp_content_user_data m2hvpcontuserdata_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2hvp_content_user_data
@@ -44184,7 +41351,7 @@ ALTER TABLE ONLY public.m2hvp_content_user_data
 
 
 --
--- Name: m2hvpcoun_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2hvp_counters m2hvpcoun_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2hvp_counters
@@ -44192,7 +41359,7 @@ ALTER TABLE ONLY public.m2hvp_counters
 
 
 --
--- Name: m2hvpeven_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2hvp_events m2hvpeven_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2hvp_events
@@ -44200,7 +41367,7 @@ ALTER TABLE ONLY public.m2hvp_events
 
 
 --
--- Name: m2hvplibr_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2hvp_libraries m2hvplibr_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2hvp_libraries
@@ -44208,7 +41375,7 @@ ALTER TABLE ONLY public.m2hvp_libraries
 
 
 --
--- Name: m2hvplibrcach_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2hvp_libraries_cachedassets m2hvplibrcach_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2hvp_libraries_cachedassets
@@ -44216,7 +41383,7 @@ ALTER TABLE ONLY public.m2hvp_libraries_cachedassets
 
 
 --
--- Name: m2hvplibrhubcach_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2hvp_libraries_hub_cache m2hvplibrhubcach_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2hvp_libraries_hub_cache
@@ -44224,7 +41391,7 @@ ALTER TABLE ONLY public.m2hvp_libraries_hub_cache
 
 
 --
--- Name: m2hvplibrlang_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2hvp_libraries_languages m2hvplibrlang_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2hvp_libraries_languages
@@ -44232,7 +41399,7 @@ ALTER TABLE ONLY public.m2hvp_libraries_languages
 
 
 --
--- Name: m2hvplibrlibr_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2hvp_libraries_libraries m2hvplibrlibr_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2hvp_libraries_libraries
@@ -44240,7 +41407,7 @@ ALTER TABLE ONLY public.m2hvp_libraries_libraries
 
 
 --
--- Name: m2hvptmpf_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2hvp_tmpfiles m2hvptmpf_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2hvp_tmpfiles
@@ -44248,7 +41415,7 @@ ALTER TABLE ONLY public.m2hvp_tmpfiles
 
 
 --
--- Name: m2hvpxapiresu_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2hvp_xapi_results m2hvpxapiresu_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2hvp_xapi_results
@@ -44256,7 +41423,7 @@ ALTER TABLE ONLY public.m2hvp_xapi_results
 
 
 --
--- Name: m2imsc_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2imscp m2imsc_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2imscp
@@ -44264,7 +41431,7 @@ ALTER TABLE ONLY public.m2imscp
 
 
 --
--- Name: m2jcli_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2jclic m2jcli_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2jclic
@@ -44272,7 +41439,7 @@ ALTER TABLE ONLY public.m2jclic
 
 
 --
--- Name: m2jcliacti_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2jclic_activities m2jcliacti_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2jclic_activities
@@ -44280,7 +41447,7 @@ ALTER TABLE ONLY public.m2jclic_activities
 
 
 --
--- Name: m2jcligrou_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2jclic_groups m2jcligrou_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2jclic_groups
@@ -44288,7 +41455,7 @@ ALTER TABLE ONLY public.m2jclic_groups
 
 
 --
--- Name: m2jclisess_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2jclic_sessions m2jclisess_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2jclic_sessions
@@ -44296,7 +41463,7 @@ ALTER TABLE ONLY public.m2jclic_sessions
 
 
 --
--- Name: m2jclisett_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2jclic_settings m2jclisett_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2jclic_settings
@@ -44304,7 +41471,7 @@ ALTER TABLE ONLY public.m2jclic_settings
 
 
 --
--- Name: m2jcliuser_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2jclic_users m2jcliuser_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2jclic_users
@@ -44312,7 +41479,7 @@ ALTER TABLE ONLY public.m2jclic_users
 
 
 --
--- Name: m2jour_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2journal m2jour_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2journal
@@ -44320,7 +41487,7 @@ ALTER TABLE ONLY public.m2journal
 
 
 --
--- Name: m2jourentr_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2journal_entries m2jourentr_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2journal_entries
@@ -44328,7 +41495,7 @@ ALTER TABLE ONLY public.m2journal_entries
 
 
 --
--- Name: m2labe_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2label m2labe_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2label
@@ -44336,7 +41503,7 @@ ALTER TABLE ONLY public.m2label
 
 
 --
--- Name: m2less_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2lesson m2less_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2lesson
@@ -44344,7 +41511,7 @@ ALTER TABLE ONLY public.m2lesson
 
 
 --
--- Name: m2lessansw_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2lesson_answers m2lessansw_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2lesson_answers
@@ -44352,7 +41519,7 @@ ALTER TABLE ONLY public.m2lesson_answers
 
 
 --
--- Name: m2lessatte_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2lesson_attempts m2lessatte_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2lesson_attempts
@@ -44360,7 +41527,7 @@ ALTER TABLE ONLY public.m2lesson_attempts
 
 
 --
--- Name: m2lessbran_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2lesson_branch m2lessbran_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2lesson_branch
@@ -44368,7 +41535,7 @@ ALTER TABLE ONLY public.m2lesson_branch
 
 
 --
--- Name: m2lessgrad_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2lesson_grades m2lessgrad_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2lesson_grades
@@ -44376,7 +41543,7 @@ ALTER TABLE ONLY public.m2lesson_grades
 
 
 --
--- Name: m2lessover_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2lesson_overrides m2lessover_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2lesson_overrides
@@ -44384,7 +41551,7 @@ ALTER TABLE ONLY public.m2lesson_overrides
 
 
 --
--- Name: m2lesspage_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2lesson_pages m2lesspage_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2lesson_pages
@@ -44392,7 +41559,7 @@ ALTER TABLE ONLY public.m2lesson_pages
 
 
 --
--- Name: m2lesstime_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2lesson_timer m2lesstime_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2lesson_timer
@@ -44400,7 +41567,7 @@ ALTER TABLE ONLY public.m2lesson_timer
 
 
 --
--- Name: m2lice_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2license m2lice_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2license
@@ -44408,7 +41575,7 @@ ALTER TABLE ONLY public.m2license
 
 
 --
--- Name: m2lockdb_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2lock_db m2lockdb_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2lock_db
@@ -44416,7 +41583,7 @@ ALTER TABLE ONLY public.m2lock_db
 
 
 --
--- Name: m2log_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2log m2log_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2log
@@ -44424,7 +41591,7 @@ ALTER TABLE ONLY public.m2log
 
 
 --
--- Name: m2logdisp_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2log_display m2logdisp_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2log_display
@@ -44432,7 +41599,7 @@ ALTER TABLE ONLY public.m2log_display
 
 
 --
--- Name: m2logquer_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2log_queries m2logquer_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2log_queries
@@ -44440,7 +41607,7 @@ ALTER TABLE ONLY public.m2log_queries
 
 
 --
--- Name: m2logsstanlog_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2logstore_standard_log m2logsstanlog_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2logstore_standard_log
@@ -44448,7 +41615,7 @@ ALTER TABLE ONLY public.m2logstore_standard_log
 
 
 --
--- Name: m2lti_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2lti m2lti_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2lti
@@ -44456,7 +41623,7 @@ ALTER TABLE ONLY public.m2lti
 
 
 --
--- Name: m2ltisgrad_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2ltiservice_gradebookservices m2ltisgrad_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2ltiservice_gradebookservices
@@ -44464,7 +41631,7 @@ ALTER TABLE ONLY public.m2ltiservice_gradebookservices
 
 
 --
--- Name: m2ltisubm_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2lti_submission m2ltisubm_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2lti_submission
@@ -44472,7 +41639,7 @@ ALTER TABLE ONLY public.m2lti_submission
 
 
 --
--- Name: m2ltitoolprox_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2lti_tool_proxies m2ltitoolprox_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2lti_tool_proxies
@@ -44480,7 +41647,7 @@ ALTER TABLE ONLY public.m2lti_tool_proxies
 
 
 --
--- Name: m2ltitoolsett_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2lti_tool_settings m2ltitoolsett_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2lti_tool_settings
@@ -44488,7 +41655,7 @@ ALTER TABLE ONLY public.m2lti_tool_settings
 
 
 --
--- Name: m2ltitype_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2lti_types m2ltitype_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2lti_types
@@ -44496,7 +41663,7 @@ ALTER TABLE ONLY public.m2lti_types
 
 
 --
--- Name: m2ltitypeconf_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2lti_types_config m2ltitypeconf_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2lti_types_config
@@ -44504,7 +41671,7 @@ ALTER TABLE ONLY public.m2lti_types_config
 
 
 --
--- Name: m2mess_id3_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2messages m2mess_id3_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2messages
@@ -44512,7 +41679,7 @@ ALTER TABLE ONLY public.m2messages
 
 
 --
--- Name: m2mess_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2message m2mess_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2message
@@ -44520,7 +41687,7 @@ ALTER TABLE ONLY public.m2message
 
 
 --
--- Name: m2messairndevi_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2message_airnotifier_devices m2messairndevi_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2message_airnotifier_devices
@@ -44528,7 +41695,7 @@ ALTER TABLE ONLY public.m2message_airnotifier_devices
 
 
 --
--- Name: m2messcont_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2message_contacts m2messcont_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2message_contacts
@@ -44536,7 +41703,7 @@ ALTER TABLE ONLY public.m2message_contacts
 
 
 --
--- Name: m2messcontrequ_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2message_contact_requests m2messcontrequ_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2message_contact_requests
@@ -44544,7 +41711,7 @@ ALTER TABLE ONLY public.m2message_contact_requests
 
 
 --
--- Name: m2messconv_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2message_conversations m2messconv_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2message_conversations
@@ -44552,7 +41719,7 @@ ALTER TABLE ONLY public.m2message_conversations
 
 
 --
--- Name: m2messconvmemb_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2message_conversation_members m2messconvmemb_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2message_conversation_members
@@ -44560,7 +41727,7 @@ ALTER TABLE ONLY public.m2message_conversation_members
 
 
 --
--- Name: m2messdata_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2messageinbound_datakeys m2messdata_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2messageinbound_datakeys
@@ -44568,7 +41735,7 @@ ALTER TABLE ONLY public.m2messageinbound_datakeys
 
 
 --
--- Name: m2messhand_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2messageinbound_handlers m2messhand_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2messageinbound_handlers
@@ -44576,7 +41743,7 @@ ALTER TABLE ONLY public.m2messageinbound_handlers
 
 
 --
--- Name: m2messmess_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2messageinbound_messagelist m2messmess_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2messageinbound_messagelist
@@ -44584,7 +41751,7 @@ ALTER TABLE ONLY public.m2messageinbound_messagelist
 
 
 --
--- Name: m2messpopu_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2message_popup m2messpopu_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2message_popup
@@ -44592,7 +41759,7 @@ ALTER TABLE ONLY public.m2message_popup
 
 
 --
--- Name: m2messpopunoti_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2message_popup_notifications m2messpopunoti_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2message_popup_notifications
@@ -44600,7 +41767,7 @@ ALTER TABLE ONLY public.m2message_popup_notifications
 
 
 --
--- Name: m2messproc_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2message_processors m2messproc_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2message_processors
@@ -44608,7 +41775,7 @@ ALTER TABLE ONLY public.m2message_processors
 
 
 --
--- Name: m2messprov_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2message_providers m2messprov_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2message_providers
@@ -44616,7 +41783,7 @@ ALTER TABLE ONLY public.m2message_providers
 
 
 --
--- Name: m2messread_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2message_read m2messread_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2message_read
@@ -44624,7 +41791,7 @@ ALTER TABLE ONLY public.m2message_read
 
 
 --
--- Name: m2messuseracti_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2message_user_actions m2messuseracti_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2message_user_actions
@@ -44632,7 +41799,7 @@ ALTER TABLE ONLY public.m2message_user_actions
 
 
 --
--- Name: m2messuserbloc_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2message_users_blocked m2messuserbloc_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2message_users_blocked
@@ -44640,7 +41807,7 @@ ALTER TABLE ONLY public.m2message_users_blocked
 
 
 --
--- Name: m2mnetappl_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2mnet_application m2mnetappl_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2mnet_application
@@ -44648,7 +41815,7 @@ ALTER TABLE ONLY public.m2mnet_application
 
 
 --
--- Name: m2mnetenrocour_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2mnetservice_enrol_courses m2mnetenrocour_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2mnetservice_enrol_courses
@@ -44656,7 +41823,7 @@ ALTER TABLE ONLY public.m2mnetservice_enrol_courses
 
 
 --
--- Name: m2mnetenroenro_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2mnetservice_enrol_enrolments m2mnetenroenro_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2mnetservice_enrol_enrolments
@@ -44664,7 +41831,7 @@ ALTER TABLE ONLY public.m2mnetservice_enrol_enrolments
 
 
 --
--- Name: m2mnethost_id3_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2mnet_host2service m2mnethost_id3_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2mnet_host2service
@@ -44672,7 +41839,7 @@ ALTER TABLE ONLY public.m2mnet_host2service
 
 
 --
--- Name: m2mnethost_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2mnet_host m2mnethost_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2mnet_host
@@ -44680,7 +41847,7 @@ ALTER TABLE ONLY public.m2mnet_host
 
 
 --
--- Name: m2mnetlog_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2mnet_log m2mnetlog_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2mnet_log
@@ -44688,7 +41855,7 @@ ALTER TABLE ONLY public.m2mnet_log
 
 
 --
--- Name: m2mnetremorpc_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2mnet_remote_rpc m2mnetremorpc_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2mnet_remote_rpc
@@ -44696,7 +41863,7 @@ ALTER TABLE ONLY public.m2mnet_remote_rpc
 
 
 --
--- Name: m2mnetremoserv_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2mnet_remote_service2rpc m2mnetremoserv_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2mnet_remote_service2rpc
@@ -44704,7 +41871,7 @@ ALTER TABLE ONLY public.m2mnet_remote_service2rpc
 
 
 --
--- Name: m2mnetrpc_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2mnet_rpc m2mnetrpc_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2mnet_rpc
@@ -44712,7 +41879,7 @@ ALTER TABLE ONLY public.m2mnet_rpc
 
 
 --
--- Name: m2mnetserv_id3_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2mnet_service2rpc m2mnetserv_id3_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2mnet_service2rpc
@@ -44720,7 +41887,7 @@ ALTER TABLE ONLY public.m2mnet_service2rpc
 
 
 --
--- Name: m2mnetserv_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2mnet_service m2mnetserv_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2mnet_service
@@ -44728,7 +41895,7 @@ ALTER TABLE ONLY public.m2mnet_service
 
 
 --
--- Name: m2mnetsess_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2mnet_session m2mnetsess_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2mnet_session
@@ -44736,7 +41903,7 @@ ALTER TABLE ONLY public.m2mnet_session
 
 
 --
--- Name: m2mnetssoaccecont_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2mnet_sso_access_control m2mnetssoaccecont_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2mnet_sso_access_control
@@ -44744,7 +41911,7 @@ ALTER TABLE ONLY public.m2mnet_sso_access_control
 
 
 --
--- Name: m2modu_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2modules m2modu_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2modules
@@ -44752,7 +41919,7 @@ ALTER TABLE ONLY public.m2modules
 
 
 --
--- Name: m2mypage_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2my_pages m2mypage_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2my_pages
@@ -44760,7 +41927,7 @@ ALTER TABLE ONLY public.m2my_pages
 
 
 --
--- Name: m2noti_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2notifications m2noti_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2notifications
@@ -44768,7 +41935,7 @@ ALTER TABLE ONLY public.m2notifications
 
 
 --
--- Name: m2oautaccetoke_id2_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2oauth_access_tokens m2oautaccetoke_id2_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2oauth_access_tokens
@@ -44776,7 +41943,7 @@ ALTER TABLE ONLY public.m2oauth_access_tokens
 
 
 --
--- Name: m2oautaccetoke_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2oauth2_access_token m2oautaccetoke_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2oauth2_access_token
@@ -44784,7 +41951,7 @@ ALTER TABLE ONLY public.m2oauth2_access_token
 
 
 --
--- Name: m2oautauthcode_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2oauth_authorization_codes m2oautauthcode_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2oauth_authorization_codes
@@ -44792,7 +41959,7 @@ ALTER TABLE ONLY public.m2oauth_authorization_codes
 
 
 --
--- Name: m2oautclie_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2oauth_clients m2oautclie_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2oauth_clients
@@ -44800,7 +41967,7 @@ ALTER TABLE ONLY public.m2oauth_clients
 
 
 --
--- Name: m2oautendp_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2oauth2_endpoint m2oautendp_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2oauth2_endpoint
@@ -44808,7 +41975,7 @@ ALTER TABLE ONLY public.m2oauth2_endpoint
 
 
 --
--- Name: m2oautissu_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2oauth2_issuer m2oautissu_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2oauth2_issuer
@@ -44816,7 +41983,7 @@ ALTER TABLE ONLY public.m2oauth2_issuer
 
 
 --
--- Name: m2oautjwt_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2oauth_jwt m2oautjwt_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2oauth_jwt
@@ -44824,7 +41991,7 @@ ALTER TABLE ONLY public.m2oauth_jwt
 
 
 --
--- Name: m2oautpublkeys_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2oauth_public_keys m2oautpublkeys_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2oauth_public_keys
@@ -44832,7 +41999,7 @@ ALTER TABLE ONLY public.m2oauth_public_keys
 
 
 --
--- Name: m2oautrefrtoke_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2oauth_refresh_tokens m2oautrefrtoke_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2oauth_refresh_tokens
@@ -44840,7 +42007,7 @@ ALTER TABLE ONLY public.m2oauth_refresh_tokens
 
 
 --
--- Name: m2oautscop_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2oauth_scopes m2oautscop_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2oauth_scopes
@@ -44848,7 +42015,7 @@ ALTER TABLE ONLY public.m2oauth_scopes
 
 
 --
--- Name: m2oautsystacco_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2oauth2_system_account m2oautsystacco_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2oauth2_system_account
@@ -44856,7 +42023,7 @@ ALTER TABLE ONLY public.m2oauth2_system_account
 
 
 --
--- Name: m2oautuserauthscop_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2oauth_user_auth_scopes m2oautuserauthscop_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2oauth_user_auth_scopes
@@ -44864,7 +42031,7 @@ ALTER TABLE ONLY public.m2oauth_user_auth_scopes
 
 
 --
--- Name: m2oautuserfielmapp_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2oauth2_user_field_mapping m2oautuserfielmapp_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2oauth2_user_field_mapping
@@ -44872,7 +42039,7 @@ ALTER TABLE ONLY public.m2oauth2_user_field_mapping
 
 
 --
--- Name: m2page_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2page m2page_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2page
@@ -44880,7 +42047,7 @@ ALTER TABLE ONLY public.m2page
 
 
 --
--- Name: m2portinst_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2portfolio_instance m2portinst_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2portfolio_instance
@@ -44888,7 +42055,7 @@ ALTER TABLE ONLY public.m2portfolio_instance
 
 
 --
--- Name: m2portinstconf_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2portfolio_instance_config m2portinstconf_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2portfolio_instance_config
@@ -44896,7 +42063,7 @@ ALTER TABLE ONLY public.m2portfolio_instance_config
 
 
 --
--- Name: m2portinstuser_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2portfolio_instance_user m2portinstuser_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2portfolio_instance_user
@@ -44904,7 +42071,7 @@ ALTER TABLE ONLY public.m2portfolio_instance_user
 
 
 --
--- Name: m2portlog_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2portfolio_log m2portlog_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2portfolio_log
@@ -44912,7 +42079,7 @@ ALTER TABLE ONLY public.m2portfolio_log
 
 
 --
--- Name: m2portmahaqueu_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2portfolio_mahara_queue m2portmahaqueu_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2portfolio_mahara_queue
@@ -44920,7 +42087,7 @@ ALTER TABLE ONLY public.m2portfolio_mahara_queue
 
 
 --
--- Name: m2porttemp_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2portfolio_tempdata m2porttemp_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2portfolio_tempdata
@@ -44928,7 +42095,7 @@ ALTER TABLE ONLY public.m2portfolio_tempdata
 
 
 --
--- Name: m2post_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2post m2post_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2post
@@ -44936,7 +42103,7 @@ ALTER TABLE ONLY public.m2post
 
 
 --
--- Name: m2prof_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2profiling m2prof_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2profiling
@@ -44944,7 +42111,7 @@ ALTER TABLE ONLY public.m2profiling
 
 
 --
--- Name: m2qtypddim_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2qtype_ddimageortext m2qtypddim_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2qtype_ddimageortext
@@ -44952,7 +42119,7 @@ ALTER TABLE ONLY public.m2qtype_ddimageortext
 
 
 --
--- Name: m2qtypddimdrag_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2qtype_ddimageortext_drags m2qtypddimdrag_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2qtype_ddimageortext_drags
@@ -44960,7 +42127,7 @@ ALTER TABLE ONLY public.m2qtype_ddimageortext_drags
 
 
 --
--- Name: m2qtypddimdrop_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2qtype_ddimageortext_drops m2qtypddimdrop_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2qtype_ddimageortext_drops
@@ -44968,7 +42135,7 @@ ALTER TABLE ONLY public.m2qtype_ddimageortext_drops
 
 
 --
--- Name: m2qtypddma_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2qtype_ddmarker m2qtypddma_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2qtype_ddmarker
@@ -44976,7 +42143,7 @@ ALTER TABLE ONLY public.m2qtype_ddmarker
 
 
 --
--- Name: m2qtypddmadrag_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2qtype_ddmarker_drags m2qtypddmadrag_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2qtype_ddmarker_drags
@@ -44984,7 +42151,7 @@ ALTER TABLE ONLY public.m2qtype_ddmarker_drags
 
 
 --
--- Name: m2qtypddmadrop_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2qtype_ddmarker_drops m2qtypddmadrop_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2qtype_ddmarker_drops
@@ -44992,7 +42159,7 @@ ALTER TABLE ONLY public.m2qtype_ddmarker_drops
 
 
 --
--- Name: m2qtypessaback_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2qtype_essaywiris_backup m2qtypessaback_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2qtype_essaywiris_backup
@@ -45000,7 +42167,7 @@ ALTER TABLE ONLY public.m2qtype_essaywiris_backup
 
 
 --
--- Name: m2qtypessaopti_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2qtype_essay_options m2qtypessaopti_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2qtype_essay_options
@@ -45008,7 +42175,7 @@ ALTER TABLE ONLY public.m2qtype_essay_options
 
 
 --
--- Name: m2qtypmatcopti_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2qtype_match_options m2qtypmatcopti_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2qtype_match_options
@@ -45016,7 +42183,7 @@ ALTER TABLE ONLY public.m2qtype_match_options
 
 
 --
--- Name: m2qtypmatcsubq_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2qtype_match_subquestions m2qtypmatcsubq_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2qtype_match_subquestions
@@ -45024,7 +42191,7 @@ ALTER TABLE ONLY public.m2qtype_match_subquestions
 
 
 --
--- Name: m2qtypmultopti_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2qtype_multichoice_options m2qtypmultopti_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2qtype_multichoice_options
@@ -45032,7 +42199,7 @@ ALTER TABLE ONLY public.m2qtype_multichoice_options
 
 
 --
--- Name: m2qtypordeopti_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2qtype_ordering_options m2qtypordeopti_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2qtype_ordering_options
@@ -45040,7 +42207,7 @@ ALTER TABLE ONLY public.m2qtype_ordering_options
 
 
 --
--- Name: m2qtyprandopti_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2qtype_randomsamatch_options m2qtyprandopti_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2qtype_randomsamatch_options
@@ -45048,7 +42215,7 @@ ALTER TABLE ONLY public.m2qtype_randomsamatch_options
 
 
 --
--- Name: m2qtypshoropti_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2qtype_shortanswer_options m2qtypshoropti_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2qtype_shortanswer_options
@@ -45056,7 +42223,7 @@ ALTER TABLE ONLY public.m2qtype_shortanswer_options
 
 
 --
--- Name: m2qtypwq_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2qtype_wq m2qtypwq_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2qtype_wq
@@ -45064,7 +42231,7 @@ ALTER TABLE ONLY public.m2qtype_wq
 
 
 --
--- Name: m2qtypwqvari_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2qtype_wq_variables m2qtypwqvari_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2qtype_wq_variables
@@ -45072,7 +42239,7 @@ ALTER TABLE ONLY public.m2qtype_wq_variables
 
 
 --
--- Name: m2ques_id2_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2questionnaire m2ques_id2_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2questionnaire
@@ -45080,7 +42247,7 @@ ALTER TABLE ONLY public.m2questionnaire
 
 
 --
--- Name: m2ques_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2question m2ques_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2question
@@ -45088,7 +42255,7 @@ ALTER TABLE ONLY public.m2question
 
 
 --
--- Name: m2quesansw_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2question_answers m2quesansw_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2question_answers
@@ -45096,7 +42263,7 @@ ALTER TABLE ONLY public.m2question_answers
 
 
 --
--- Name: m2quesatte_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2question_attempts m2quesatte_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2question_attempts
@@ -45104,7 +42271,7 @@ ALTER TABLE ONLY public.m2question_attempts
 
 
 --
--- Name: m2quesattestep_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2question_attempt_steps m2quesattestep_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2question_attempt_steps
@@ -45112,7 +42279,7 @@ ALTER TABLE ONLY public.m2question_attempt_steps
 
 
 --
--- Name: m2quesattestepdata_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2question_attempt_step_data m2quesattestepdata_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2question_attempt_step_data
@@ -45120,7 +42287,7 @@ ALTER TABLE ONLY public.m2question_attempt_step_data
 
 
 --
--- Name: m2quescalc_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2question_calculated m2quescalc_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2question_calculated
@@ -45128,7 +42295,7 @@ ALTER TABLE ONLY public.m2question_calculated
 
 
 --
--- Name: m2quescalcopti_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2question_calculated_options m2quescalcopti_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2question_calculated_options
@@ -45136,7 +42303,7 @@ ALTER TABLE ONLY public.m2question_calculated_options
 
 
 --
--- Name: m2quescate_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2question_categories m2quescate_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2question_categories
@@ -45144,7 +42311,7 @@ ALTER TABLE ONLY public.m2question_categories
 
 
 --
--- Name: m2quesdata_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2question_datasets m2quesdata_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2question_datasets
@@ -45152,7 +42319,7 @@ ALTER TABLE ONLY public.m2question_datasets
 
 
 --
--- Name: m2quesdatadefi_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2question_dataset_definitions m2quesdatadefi_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2question_dataset_definitions
@@ -45160,7 +42327,7 @@ ALTER TABLE ONLY public.m2question_dataset_definitions
 
 
 --
--- Name: m2quesdataitem_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2question_dataset_items m2quesdataitem_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2question_dataset_items
@@ -45168,7 +42335,7 @@ ALTER TABLE ONLY public.m2question_dataset_items
 
 
 --
--- Name: m2quesddwt_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2question_ddwtos m2quesddwt_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2question_ddwtos
@@ -45176,7 +42343,7 @@ ALTER TABLE ONLY public.m2question_ddwtos
 
 
 --
--- Name: m2quesdepe_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2questionnaire_dependency m2quesdepe_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2questionnaire_dependency
@@ -45184,7 +42351,7 @@ ALTER TABLE ONLY public.m2questionnaire_dependency
 
 
 --
--- Name: m2quesfbsect_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2questionnaire_fb_sections m2quesfbsect_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2questionnaire_fb_sections
@@ -45192,7 +42359,7 @@ ALTER TABLE ONLY public.m2questionnaire_fb_sections
 
 
 --
--- Name: m2quesfeed_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2questionnaire_feedback m2quesfeed_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2questionnaire_feedback
@@ -45200,7 +42367,7 @@ ALTER TABLE ONLY public.m2questionnaire_feedback
 
 
 --
--- Name: m2quesgaps_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2question_gapselect m2quesgaps_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2question_gapselect
@@ -45208,7 +42375,7 @@ ALTER TABLE ONLY public.m2question_gapselect
 
 
 --
--- Name: m2queshint_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2question_hints m2queshint_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2question_hints
@@ -45216,7 +42383,7 @@ ALTER TABLE ONLY public.m2question_hints
 
 
 --
--- Name: m2quesmult_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2question_multianswer m2quesmult_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2question_multianswer
@@ -45224,7 +42391,7 @@ ALTER TABLE ONLY public.m2question_multianswer
 
 
 --
--- Name: m2quesnume_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2question_numerical m2quesnume_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2question_numerical
@@ -45232,7 +42399,7 @@ ALTER TABLE ONLY public.m2question_numerical
 
 
 --
--- Name: m2quesnumeopti_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2question_numerical_options m2quesnumeopti_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2question_numerical_options
@@ -45240,7 +42407,7 @@ ALTER TABLE ONLY public.m2question_numerical_options
 
 
 --
--- Name: m2quesnumeunit_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2question_numerical_units m2quesnumeunit_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2question_numerical_units
@@ -45248,7 +42415,7 @@ ALTER TABLE ONLY public.m2question_numerical_units
 
 
 --
--- Name: m2quesques_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2questionnaire_question m2quesques_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2questionnaire_question
@@ -45256,7 +42423,7 @@ ALTER TABLE ONLY public.m2questionnaire_question
 
 
 --
--- Name: m2quesqueschoi_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2questionnaire_quest_choice m2quesqueschoi_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2questionnaire_quest_choice
@@ -45264,7 +42431,7 @@ ALTER TABLE ONLY public.m2questionnaire_quest_choice
 
 
 --
--- Name: m2quesquestype_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2questionnaire_question_type m2quesquestype_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2questionnaire_question_type
@@ -45272,7 +42439,7 @@ ALTER TABLE ONLY public.m2questionnaire_question_type
 
 
 --
--- Name: m2quesresp_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2questionnaire_response m2quesresp_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2questionnaire_response
@@ -45280,7 +42447,7 @@ ALTER TABLE ONLY public.m2questionnaire_response
 
 
 --
--- Name: m2quesrespanal_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2question_response_analysis m2quesrespanal_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2question_response_analysis
@@ -45288,7 +42455,7 @@ ALTER TABLE ONLY public.m2question_response_analysis
 
 
 --
--- Name: m2quesrespbool_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2questionnaire_response_bool m2quesrespbool_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2questionnaire_response_bool
@@ -45296,7 +42463,7 @@ ALTER TABLE ONLY public.m2questionnaire_response_bool
 
 
 --
--- Name: m2quesrespcoun_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2question_response_count m2quesrespcoun_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2question_response_count
@@ -45304,7 +42471,7 @@ ALTER TABLE ONLY public.m2question_response_count
 
 
 --
--- Name: m2quesrespdate_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2questionnaire_response_date m2quesrespdate_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2questionnaire_response_date
@@ -45312,7 +42479,7 @@ ALTER TABLE ONLY public.m2questionnaire_response_date
 
 
 --
--- Name: m2quesrespmult_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2questionnaire_resp_multiple m2quesrespmult_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2questionnaire_resp_multiple
@@ -45320,7 +42487,7 @@ ALTER TABLE ONLY public.m2questionnaire_resp_multiple
 
 
 --
--- Name: m2quesrespothe_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2questionnaire_response_other m2quesrespothe_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2questionnaire_response_other
@@ -45328,7 +42495,7 @@ ALTER TABLE ONLY public.m2questionnaire_response_other
 
 
 --
--- Name: m2quesresprank_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2questionnaire_response_rank m2quesresprank_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2questionnaire_response_rank
@@ -45336,7 +42503,7 @@ ALTER TABLE ONLY public.m2questionnaire_response_rank
 
 
 --
--- Name: m2quesrespsing_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2questionnaire_resp_single m2quesrespsing_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2questionnaire_resp_single
@@ -45344,7 +42511,7 @@ ALTER TABLE ONLY public.m2questionnaire_resp_single
 
 
 --
--- Name: m2quesresptext_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2questionnaire_response_text m2quesresptext_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2questionnaire_response_text
@@ -45352,7 +42519,7 @@ ALTER TABLE ONLY public.m2questionnaire_response_text
 
 
 --
--- Name: m2quesstat_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2question_statistics m2quesstat_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2question_statistics
@@ -45360,7 +42527,7 @@ ALTER TABLE ONLY public.m2question_statistics
 
 
 --
--- Name: m2quessurv_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2questionnaire_survey m2quessurv_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2questionnaire_survey
@@ -45368,7 +42535,7 @@ ALTER TABLE ONLY public.m2questionnaire_survey
 
 
 --
--- Name: m2questrue_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2question_truefalse m2questrue_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2question_truefalse
@@ -45376,7 +42543,7 @@ ALTER TABLE ONLY public.m2question_truefalse
 
 
 --
--- Name: m2quesusag_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2question_usages m2quesusag_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2question_usages
@@ -45384,7 +42551,7 @@ ALTER TABLE ONLY public.m2question_usages
 
 
 --
--- Name: m2quiz_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2quiz m2quiz_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2quiz
@@ -45392,7 +42559,7 @@ ALTER TABLE ONLY public.m2quiz
 
 
 --
--- Name: m2quizatte_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2quiz_attempts m2quizatte_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2quiz_attempts
@@ -45400,7 +42567,7 @@ ALTER TABLE ONLY public.m2quiz_attempts
 
 
 --
--- Name: m2quizfeed_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2quiz_feedback m2quizfeed_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2quiz_feedback
@@ -45408,7 +42575,7 @@ ALTER TABLE ONLY public.m2quiz_feedback
 
 
 --
--- Name: m2quizgrad_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2quiz_grades m2quizgrad_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2quiz_grades
@@ -45416,7 +42583,7 @@ ALTER TABLE ONLY public.m2quiz_grades
 
 
 --
--- Name: m2quizover_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2quiz_overrides m2quizover_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2quiz_overrides
@@ -45424,7 +42591,7 @@ ALTER TABLE ONLY public.m2quiz_overrides
 
 
 --
--- Name: m2quizoverregr_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2quiz_overview_regrades m2quizoverregr_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2quiz_overview_regrades
@@ -45432,7 +42599,7 @@ ALTER TABLE ONLY public.m2quiz_overview_regrades
 
 
 --
--- Name: m2quizrepo_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2quiz_reports m2quizrepo_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2quiz_reports
@@ -45440,7 +42607,7 @@ ALTER TABLE ONLY public.m2quiz_reports
 
 
 --
--- Name: m2quizsect_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2quiz_sections m2quizsect_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2quiz_sections
@@ -45448,7 +42615,7 @@ ALTER TABLE ONLY public.m2quiz_sections
 
 
 --
--- Name: m2quizslot_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2quiz_slots m2quizslot_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2quiz_slots
@@ -45456,7 +42623,7 @@ ALTER TABLE ONLY public.m2quiz_slots
 
 
 --
--- Name: m2quizslottags_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2quiz_slot_tags m2quizslottags_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2quiz_slot_tags
@@ -45464,7 +42631,7 @@ ALTER TABLE ONLY public.m2quiz_slot_tags
 
 
 --
--- Name: m2quizstat_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2quiz_statistics m2quizstat_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2quiz_statistics
@@ -45472,7 +42639,7 @@ ALTER TABLE ONLY public.m2quiz_statistics
 
 
 --
--- Name: m2qv_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2qv m2qv_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2qv
@@ -45480,7 +42647,7 @@ ALTER TABLE ONLY public.m2qv
 
 
 --
--- Name: m2qvassi_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2qv_assignments m2qvassi_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2qv_assignments
@@ -45488,7 +42655,7 @@ ALTER TABLE ONLY public.m2qv_assignments
 
 
 --
--- Name: m2qvmess_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2qv_messages m2qvmess_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2qv_messages
@@ -45496,7 +42663,7 @@ ALTER TABLE ONLY public.m2qv_messages
 
 
 --
--- Name: m2qvmessread_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2qv_messages_read m2qvmessread_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2qv_messages_read
@@ -45504,7 +42671,7 @@ ALTER TABLE ONLY public.m2qv_messages_read
 
 
 --
--- Name: m2qvsect_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2qv_sections m2qvsect_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2qv_sections
@@ -45512,7 +42679,7 @@ ALTER TABLE ONLY public.m2qv_sections
 
 
 --
--- Name: m2rati_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2rating m2rati_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2rating
@@ -45520,7 +42687,7 @@ ALTER TABLE ONLY public.m2rating
 
 
 --
--- Name: m2rcombook_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2rcommon_books m2rcombook_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2rcommon_books
@@ -45528,7 +42695,7 @@ ALTER TABLE ONLY public.m2rcommon_books
 
 
 --
--- Name: m2rcombookacti_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2rcommon_books_activities m2rcombookacti_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2rcommon_books_activities
@@ -45536,7 +42703,7 @@ ALTER TABLE ONLY public.m2rcommon_books_activities
 
 
 --
--- Name: m2rcombookunit_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2rcommon_books_units m2rcombookunit_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2rcommon_books_units
@@ -45544,7 +42711,7 @@ ALTER TABLE ONLY public.m2rcommon_books_units
 
 
 --
--- Name: m2rcomerrolog_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2rcommon_errors_log m2rcomerrolog_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2rcommon_errors_log
@@ -45552,7 +42719,7 @@ ALTER TABLE ONLY public.m2rcommon_errors_log
 
 
 --
--- Name: m2rcomleve_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2rcommon_level m2rcomleve_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2rcommon_level
@@ -45560,7 +42727,7 @@ ALTER TABLE ONLY public.m2rcommon_level
 
 
 --
--- Name: m2rcompubl_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2rcommon_publisher m2rcompubl_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2rcommon_publisher
@@ -45568,7 +42735,7 @@ ALTER TABLE ONLY public.m2rcommon_publisher
 
 
 --
--- Name: m2rcomusercred_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2rcommon_user_credentials m2rcomusercred_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2rcommon_user_credentials
@@ -45576,7 +42743,7 @@ ALTER TABLE ONLY public.m2rcommon_user_credentials
 
 
 --
--- Name: m2rcon_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2rcontent m2rcon_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2rcontent
@@ -45584,7 +42751,7 @@ ALTER TABLE ONLY public.m2rcontent
 
 
 --
--- Name: m2rcongrad_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2rcontent_grades m2rcongrad_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2rcontent_grades
@@ -45592,7 +42759,7 @@ ALTER TABLE ONLY public.m2rcontent_grades
 
 
 --
--- Name: m2rcongraddeta_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2rcontent_grades_details m2rcongraddeta_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2rcontent_grades_details
@@ -45600,7 +42767,7 @@ ALTER TABLE ONLY public.m2rcontent_grades_details
 
 
 --
--- Name: m2rcontraccred_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2rcontent_track_credentials m2rcontraccred_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2rcontent_track_credentials
@@ -45608,7 +42775,7 @@ ALTER TABLE ONLY public.m2rcontent_track_credentials
 
 
 --
--- Name: m2regihubs_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2registration_hubs m2regihubs_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2registration_hubs
@@ -45616,7 +42783,7 @@ ALTER TABLE ONLY public.m2registration_hubs
 
 
 --
--- Name: m2repo_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2repository m2repo_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2repository
@@ -45624,7 +42791,7 @@ ALTER TABLE ONLY public.m2repository
 
 
 --
--- Name: m2repoinst_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2repository_instances m2repoinst_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2repository_instances
@@ -45632,7 +42799,7 @@ ALTER TABLE ONLY public.m2repository_instances
 
 
 --
--- Name: m2repoinstconf_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2repository_instance_config m2repoinstconf_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2repository_instance_config
@@ -45640,7 +42807,7 @@ ALTER TABLE ONLY public.m2repository_instance_config
 
 
 --
--- Name: m2repoonedacce_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2repository_onedrive_access m2repoonedacce_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2repository_onedrive_access
@@ -45648,7 +42815,7 @@ ALTER TABLE ONLY public.m2repository_onedrive_access
 
 
 --
--- Name: m2reso_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2resource m2reso_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2resource
@@ -45656,7 +42823,7 @@ ALTER TABLE ONLY public.m2resource
 
 
 --
--- Name: m2resoold_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2resource_old m2resoold_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2resource_old
@@ -45664,7 +42831,7 @@ ALTER TABLE ONLY public.m2resource_old
 
 
 --
--- Name: m2role_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2role m2role_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2role
@@ -45672,7 +42839,7 @@ ALTER TABLE ONLY public.m2role
 
 
 --
--- Name: m2rolealloassi_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2role_allow_assign m2rolealloassi_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2role_allow_assign
@@ -45680,7 +42847,7 @@ ALTER TABLE ONLY public.m2role_allow_assign
 
 
 --
--- Name: m2rolealloover_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2role_allow_override m2rolealloover_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2role_allow_override
@@ -45688,7 +42855,7 @@ ALTER TABLE ONLY public.m2role_allow_override
 
 
 --
--- Name: m2rolealloswit_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2role_allow_switch m2rolealloswit_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2role_allow_switch
@@ -45696,7 +42863,7 @@ ALTER TABLE ONLY public.m2role_allow_switch
 
 
 --
--- Name: m2rolealloview_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2role_allow_view m2rolealloview_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2role_allow_view
@@ -45704,7 +42871,7 @@ ALTER TABLE ONLY public.m2role_allow_view
 
 
 --
--- Name: m2roleassi_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2role_assignments m2roleassi_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2role_assignments
@@ -45712,7 +42879,7 @@ ALTER TABLE ONLY public.m2role_assignments
 
 
 --
--- Name: m2rolecapa_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2role_capabilities m2rolecapa_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2role_capabilities
@@ -45720,7 +42887,7 @@ ALTER TABLE ONLY public.m2role_capabilities
 
 
 --
--- Name: m2rolecontleve_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2role_context_levels m2rolecontleve_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2role_context_levels
@@ -45728,7 +42895,7 @@ ALTER TABLE ONLY public.m2role_context_levels
 
 
 --
--- Name: m2rolename_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2role_names m2rolename_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2role_names
@@ -45736,7 +42903,7 @@ ALTER TABLE ONLY public.m2role_names
 
 
 --
--- Name: m2rolesort_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2role_sortorder m2rolesort_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2role_sortorder
@@ -45744,7 +42911,7 @@ ALTER TABLE ONLY public.m2role_sortorder
 
 
 --
--- Name: m2scal_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2scale m2scal_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2scale
@@ -45752,7 +42919,7 @@ ALTER TABLE ONLY public.m2scale
 
 
 --
--- Name: m2scalhist_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2scale_history m2scalhist_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2scale_history
@@ -45760,7 +42927,7 @@ ALTER TABLE ONLY public.m2scale_history
 
 
 --
--- Name: m2scor_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2scorm m2scor_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2scorm
@@ -45768,7 +42935,7 @@ ALTER TABLE ONLY public.m2scorm
 
 
 --
--- Name: m2scoraiccsess_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2scorm_aicc_session m2scoraiccsess_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2scorm_aicc_session
@@ -45776,7 +42943,7 @@ ALTER TABLE ONLY public.m2scorm_aicc_session
 
 
 --
--- Name: m2scorscoe_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2scorm_scoes m2scorscoe_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2scorm_scoes
@@ -45784,7 +42951,7 @@ ALTER TABLE ONLY public.m2scorm_scoes
 
 
 --
--- Name: m2scorscoedata_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2scorm_scoes_data m2scorscoedata_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2scorm_scoes_data
@@ -45792,7 +42959,7 @@ ALTER TABLE ONLY public.m2scorm_scoes_data
 
 
 --
--- Name: m2scorscoetrac_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2scorm_scoes_track m2scorscoetrac_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2scorm_scoes_track
@@ -45800,7 +42967,7 @@ ALTER TABLE ONLY public.m2scorm_scoes_track
 
 
 --
--- Name: m2scorseqmapi_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2scorm_seq_mapinfo m2scorseqmapi_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2scorm_seq_mapinfo
@@ -45808,7 +42975,7 @@ ALTER TABLE ONLY public.m2scorm_seq_mapinfo
 
 
 --
--- Name: m2scorseqobje_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2scorm_seq_objective m2scorseqobje_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2scorm_seq_objective
@@ -45816,7 +42983,7 @@ ALTER TABLE ONLY public.m2scorm_seq_objective
 
 
 --
--- Name: m2scorseqroll_id3_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2scorm_seq_rolluprulecond m2scorseqroll_id3_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2scorm_seq_rolluprulecond
@@ -45824,7 +42991,7 @@ ALTER TABLE ONLY public.m2scorm_seq_rolluprulecond
 
 
 --
--- Name: m2scorseqroll_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2scorm_seq_rolluprule m2scorseqroll_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2scorm_seq_rolluprule
@@ -45832,7 +42999,7 @@ ALTER TABLE ONLY public.m2scorm_seq_rolluprule
 
 
 --
--- Name: m2scorseqrule_id3_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2scorm_seq_rulecond m2scorseqrule_id3_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2scorm_seq_rulecond
@@ -45840,7 +43007,7 @@ ALTER TABLE ONLY public.m2scorm_seq_rulecond
 
 
 --
--- Name: m2scorseqrule_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2scorm_seq_ruleconds m2scorseqrule_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2scorm_seq_ruleconds
@@ -45848,7 +43015,7 @@ ALTER TABLE ONLY public.m2scorm_seq_ruleconds
 
 
 --
--- Name: m2searinderequ_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2search_index_requests m2searinderequ_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2search_index_requests
@@ -45856,7 +43023,7 @@ ALTER TABLE ONLY public.m2search_index_requests
 
 
 --
--- Name: m2searsimpinde_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2search_simpledb_index m2searsimpinde_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2search_simpledb_index
@@ -45864,7 +43031,7 @@ ALTER TABLE ONLY public.m2search_simpledb_index
 
 
 --
--- Name: m2sess_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2sessions m2sess_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2sessions
@@ -45872,7 +43039,7 @@ ALTER TABLE ONLY public.m2sessions
 
 
 --
--- Name: m2statdail_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2stats_daily m2statdail_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2stats_daily
@@ -45880,7 +43047,7 @@ ALTER TABLE ONLY public.m2stats_daily
 
 
 --
--- Name: m2statmont_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2stats_monthly m2statmont_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2stats_monthly
@@ -45888,7 +43055,7 @@ ALTER TABLE ONLY public.m2stats_monthly
 
 
 --
--- Name: m2statuserdail_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2stats_user_daily m2statuserdail_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2stats_user_daily
@@ -45896,7 +43063,7 @@ ALTER TABLE ONLY public.m2stats_user_daily
 
 
 --
--- Name: m2statusermont_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2stats_user_monthly m2statusermont_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2stats_user_monthly
@@ -45904,7 +43071,7 @@ ALTER TABLE ONLY public.m2stats_user_monthly
 
 
 --
--- Name: m2statuserweek_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2stats_user_weekly m2statuserweek_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2stats_user_weekly
@@ -45912,7 +43079,7 @@ ALTER TABLE ONLY public.m2stats_user_weekly
 
 
 --
--- Name: m2statweek_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2stats_weekly m2statweek_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2stats_weekly
@@ -45920,7 +43087,7 @@ ALTER TABLE ONLY public.m2stats_weekly
 
 
 --
--- Name: m2surv_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2survey m2surv_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2survey
@@ -45928,7 +43095,7 @@ ALTER TABLE ONLY public.m2survey
 
 
 --
--- Name: m2survanal_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2survey_analysis m2survanal_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2survey_analysis
@@ -45936,7 +43103,7 @@ ALTER TABLE ONLY public.m2survey_analysis
 
 
 --
--- Name: m2survansw_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2survey_answers m2survansw_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2survey_answers
@@ -45944,7 +43111,7 @@ ALTER TABLE ONLY public.m2survey_answers
 
 
 --
--- Name: m2survques_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2survey_questions m2survques_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2survey_questions
@@ -45952,7 +43119,7 @@ ALTER TABLE ONLY public.m2survey_questions
 
 
 --
--- Name: m2tag_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2tag m2tag_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2tag
@@ -45960,7 +43127,7 @@ ALTER TABLE ONLY public.m2tag
 
 
 --
--- Name: m2tagarea_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2tag_area m2tagarea_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2tag_area
@@ -45968,7 +43135,7 @@ ALTER TABLE ONLY public.m2tag_area
 
 
 --
--- Name: m2tagcoll_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2tag_coll m2tagcoll_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2tag_coll
@@ -45976,7 +43143,7 @@ ALTER TABLE ONLY public.m2tag_coll
 
 
 --
--- Name: m2tagcorr_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2tag_correlation m2tagcorr_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2tag_correlation
@@ -45984,7 +43151,7 @@ ALTER TABLE ONLY public.m2tag_correlation
 
 
 --
--- Name: m2taginst_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2tag_instance m2taginst_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2tag_instance
@@ -45992,7 +43159,7 @@ ALTER TABLE ONLY public.m2tag_instance
 
 
 --
--- Name: m2taskadho_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2task_adhoc m2taskadho_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2task_adhoc
@@ -46000,7 +43167,7 @@ ALTER TABLE ONLY public.m2task_adhoc
 
 
 --
--- Name: m2tasksche_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2task_scheduled m2tasksche_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2task_scheduled
@@ -46008,7 +43175,7 @@ ALTER TABLE ONLY public.m2task_scheduled
 
 
 --
--- Name: m2toolcoho_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2tool_cohortroles m2toolcoho_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2tool_cohortroles
@@ -46016,7 +43183,7 @@ ALTER TABLE ONLY public.m2tool_cohortroles
 
 
 --
--- Name: m2toolcust_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2tool_customlang m2toolcust_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2tool_customlang
@@ -46024,7 +43191,7 @@ ALTER TABLE ONLY public.m2tool_customlang
 
 
 --
--- Name: m2toolcustcomp_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2tool_customlang_components m2toolcustcomp_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2tool_customlang_components
@@ -46032,7 +43199,7 @@ ALTER TABLE ONLY public.m2tool_customlang_components
 
 
 --
--- Name: m2tooldatacate_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2tool_dataprivacy_category m2tooldatacate_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2tool_dataprivacy_category
@@ -46040,7 +43207,7 @@ ALTER TABLE ONLY public.m2tool_dataprivacy_category
 
 
 --
--- Name: m2tooldatactxe_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2tool_dataprivacy_ctxexpired m2tooldatactxe_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2tool_dataprivacy_ctxexpired
@@ -46048,7 +43215,7 @@ ALTER TABLE ONLY public.m2tool_dataprivacy_ctxexpired
 
 
 --
--- Name: m2tooldatactxi_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2tool_dataprivacy_ctxinstance m2tooldatactxi_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2tool_dataprivacy_ctxinstance
@@ -46056,7 +43223,7 @@ ALTER TABLE ONLY public.m2tool_dataprivacy_ctxinstance
 
 
 --
--- Name: m2tooldatactxl_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2tool_dataprivacy_ctxlevel m2tooldatactxl_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2tool_dataprivacy_ctxlevel
@@ -46064,7 +43231,7 @@ ALTER TABLE ONLY public.m2tool_dataprivacy_ctxlevel
 
 
 --
--- Name: m2tooldatapurp_id3_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2tool_dataprivacy_purposerole m2tooldatapurp_id3_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2tool_dataprivacy_purposerole
@@ -46072,7 +43239,7 @@ ALTER TABLE ONLY public.m2tool_dataprivacy_purposerole
 
 
 --
--- Name: m2tooldatapurp_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2tool_dataprivacy_purpose m2tooldatapurp_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2tool_dataprivacy_purpose
@@ -46080,7 +43247,7 @@ ALTER TABLE ONLY public.m2tool_dataprivacy_purpose
 
 
 --
--- Name: m2tooldatarequ_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2tool_dataprivacy_request m2tooldatarequ_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2tool_dataprivacy_request
@@ -46088,7 +43255,7 @@ ALTER TABLE ONLY public.m2tool_dataprivacy_request
 
 
 --
--- Name: m2toolmonieven_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2tool_monitor_events m2toolmonieven_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2tool_monitor_events
@@ -46096,7 +43263,7 @@ ALTER TABLE ONLY public.m2tool_monitor_events
 
 
 --
--- Name: m2toolmonihist_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2tool_monitor_history m2toolmonihist_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2tool_monitor_history
@@ -46104,7 +43271,7 @@ ALTER TABLE ONLY public.m2tool_monitor_history
 
 
 --
--- Name: m2toolmonirule_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2tool_monitor_rules m2toolmonirule_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2tool_monitor_rules
@@ -46112,7 +43279,7 @@ ALTER TABLE ONLY public.m2tool_monitor_rules
 
 
 --
--- Name: m2toolmonisubs_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2tool_monitor_subscriptions m2toolmonisubs_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2tool_monitor_subscriptions
@@ -46120,7 +43287,7 @@ ALTER TABLE ONLY public.m2tool_monitor_subscriptions
 
 
 --
--- Name: m2toolpoli_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2tool_policy m2toolpoli_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2tool_policy
@@ -46128,7 +43295,7 @@ ALTER TABLE ONLY public.m2tool_policy
 
 
 --
--- Name: m2toolpoliacce_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2tool_policy_acceptances m2toolpoliacce_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2tool_policy_acceptances
@@ -46136,7 +43303,7 @@ ALTER TABLE ONLY public.m2tool_policy_acceptances
 
 
 --
--- Name: m2toolpolivers_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2tool_policy_versions m2toolpolivers_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2tool_policy_versions
@@ -46144,7 +43311,7 @@ ALTER TABLE ONLY public.m2tool_policy_versions
 
 
 --
--- Name: m2toolrecycate_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2tool_recyclebin_category m2toolrecycate_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2tool_recyclebin_category
@@ -46152,7 +43319,7 @@ ALTER TABLE ONLY public.m2tool_recyclebin_category
 
 
 --
--- Name: m2toolrecycour_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2tool_recyclebin_course m2toolrecycour_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2tool_recyclebin_course
@@ -46160,7 +43327,7 @@ ALTER TABLE ONLY public.m2tool_recyclebin_course
 
 
 --
--- Name: m2tooluserstep_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2tool_usertours_steps m2tooluserstep_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2tool_usertours_steps
@@ -46168,7 +43335,7 @@ ALTER TABLE ONLY public.m2tool_usertours_steps
 
 
 --
--- Name: m2toolusertour_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2tool_usertours_tours m2toolusertour_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2tool_usertours_tours
@@ -46176,7 +43343,7 @@ ALTER TABLE ONLY public.m2tool_usertours_tours
 
 
 --
--- Name: m2upgrlog_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2upgrade_log m2upgrlog_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2upgrade_log
@@ -46184,7 +43351,7 @@ ALTER TABLE ONLY public.m2upgrade_log
 
 
 --
--- Name: m2url_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2url m2url_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2url
@@ -46192,7 +43359,7 @@ ALTER TABLE ONLY public.m2url
 
 
 --
--- Name: m2user_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2user m2user_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2user
@@ -46200,7 +43367,7 @@ ALTER TABLE ONLY public.m2user
 
 
 --
--- Name: m2userdevi_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2user_devices m2userdevi_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2user_devices
@@ -46208,7 +43375,7 @@ ALTER TABLE ONLY public.m2user_devices
 
 
 --
--- Name: m2userenro_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2user_enrolments m2userenro_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2user_enrolments
@@ -46216,7 +43383,7 @@ ALTER TABLE ONLY public.m2user_enrolments
 
 
 --
--- Name: m2userinfocate_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2user_info_category m2userinfocate_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2user_info_category
@@ -46224,7 +43391,7 @@ ALTER TABLE ONLY public.m2user_info_category
 
 
 --
--- Name: m2userinfodata_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2user_info_data m2userinfodata_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2user_info_data
@@ -46232,7 +43399,7 @@ ALTER TABLE ONLY public.m2user_info_data
 
 
 --
--- Name: m2userinfofiel_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2user_info_field m2userinfofiel_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2user_info_field
@@ -46240,7 +43407,7 @@ ALTER TABLE ONLY public.m2user_info_field
 
 
 --
--- Name: m2userlast_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2user_lastaccess m2userlast_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2user_lastaccess
@@ -46248,7 +43415,7 @@ ALTER TABLE ONLY public.m2user_lastaccess
 
 
 --
--- Name: m2userpasshist_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2user_password_history m2userpasshist_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2user_password_history
@@ -46256,7 +43423,7 @@ ALTER TABLE ONLY public.m2user_password_history
 
 
 --
--- Name: m2userpassrese_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2user_password_resets m2userpassrese_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2user_password_resets
@@ -46264,7 +43431,7 @@ ALTER TABLE ONLY public.m2user_password_resets
 
 
 --
--- Name: m2userpref_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2user_preferences m2userpref_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2user_preferences
@@ -46272,7 +43439,7 @@ ALTER TABLE ONLY public.m2user_preferences
 
 
 --
--- Name: m2userprivkey_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2user_private_key m2userprivkey_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2user_private_key
@@ -46280,7 +43447,7 @@ ALTER TABLE ONLY public.m2user_private_key
 
 
 --
--- Name: m2wiki_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2wiki m2wiki_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2wiki
@@ -46288,7 +43455,7 @@ ALTER TABLE ONLY public.m2wiki
 
 
 --
--- Name: m2wikilink_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2wiki_links m2wikilink_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2wiki_links
@@ -46296,7 +43463,7 @@ ALTER TABLE ONLY public.m2wiki_links
 
 
 --
--- Name: m2wikilock_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2wiki_locks m2wikilock_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2wiki_locks
@@ -46304,7 +43471,7 @@ ALTER TABLE ONLY public.m2wiki_locks
 
 
 --
--- Name: m2wikipage_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2wiki_pages m2wikipage_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2wiki_pages
@@ -46312,7 +43479,7 @@ ALTER TABLE ONLY public.m2wiki_pages
 
 
 --
--- Name: m2wikisubw_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2wiki_subwikis m2wikisubw_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2wiki_subwikis
@@ -46320,7 +43487,7 @@ ALTER TABLE ONLY public.m2wiki_subwikis
 
 
 --
--- Name: m2wikisyno_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2wiki_synonyms m2wikisyno_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2wiki_synonyms
@@ -46328,7 +43495,7 @@ ALTER TABLE ONLY public.m2wiki_synonyms
 
 
 --
--- Name: m2wikivers_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2wiki_versions m2wikivers_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2wiki_versions
@@ -46336,7 +43503,7 @@ ALTER TABLE ONLY public.m2wiki_versions
 
 
 --
--- Name: m2work_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2workshop m2work_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2workshop
@@ -46344,7 +43511,7 @@ ALTER TABLE ONLY public.m2workshop
 
 
 --
--- Name: m2workaccu_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2workshopform_accumulative m2workaccu_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2workshopform_accumulative
@@ -46352,7 +43519,7 @@ ALTER TABLE ONLY public.m2workshopform_accumulative
 
 
 --
--- Name: m2workaggr_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2workshop_aggregations m2workaggr_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2workshop_aggregations
@@ -46360,7 +43527,7 @@ ALTER TABLE ONLY public.m2workshop_aggregations
 
 
 --
--- Name: m2workasse_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2workshop_assessments m2workasse_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2workshop_assessments
@@ -46368,7 +43535,7 @@ ALTER TABLE ONLY public.m2workshop_assessments
 
 
 --
--- Name: m2workbestsett_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2workshopeval_best_settings m2workbestsett_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2workshopeval_best_settings
@@ -46376,7 +43543,7 @@ ALTER TABLE ONLY public.m2workshopeval_best_settings
 
 
 --
--- Name: m2workcomm_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2workshopform_comments m2workcomm_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2workshopform_comments
@@ -46384,7 +43551,7 @@ ALTER TABLE ONLY public.m2workshopform_comments
 
 
 --
--- Name: m2workgrad_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2workshop_grades m2workgrad_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2workshop_grades
@@ -46392,7 +43559,7 @@ ALTER TABLE ONLY public.m2workshop_grades
 
 
 --
--- Name: m2worknume_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2workshopform_numerrors m2worknume_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2workshopform_numerrors
@@ -46400,7 +43567,7 @@ ALTER TABLE ONLY public.m2workshopform_numerrors
 
 
 --
--- Name: m2worknumemap_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2workshopform_numerrors_map m2worknumemap_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2workshopform_numerrors_map
@@ -46408,7 +43575,7 @@ ALTER TABLE ONLY public.m2workshopform_numerrors_map
 
 
 --
--- Name: m2workrubr_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2workshopform_rubric m2workrubr_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2workshopform_rubric
@@ -46416,7 +43583,7 @@ ALTER TABLE ONLY public.m2workshopform_rubric
 
 
 --
--- Name: m2workrubrconf_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2workshopform_rubric_config m2workrubrconf_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2workshopform_rubric_config
@@ -46424,7 +43591,7 @@ ALTER TABLE ONLY public.m2workshopform_rubric_config
 
 
 --
--- Name: m2workrubrleve_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2workshopform_rubric_levels m2workrubrleve_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2workshopform_rubric_levels
@@ -46432,7 +43599,7 @@ ALTER TABLE ONLY public.m2workshopform_rubric_levels
 
 
 --
--- Name: m2worksche_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2workshopallocation_scheduled m2worksche_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2workshopallocation_scheduled
@@ -46440,7 +43607,7 @@ ALTER TABLE ONLY public.m2workshopallocation_scheduled
 
 
 --
--- Name: m2worksubm_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: m2workshop_submissions m2worksubm_id_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.m2workshop_submissions
