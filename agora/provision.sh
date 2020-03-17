@@ -26,7 +26,6 @@ mkdir_777 $datadir/localmuc
 
 sudo cp $wwwdir/config/.htaccess-dist $wwwdir/config/.htaccess
 sudo cp $wwwdir/config/env-config-dist.php $wwwdir/config/env-config.php
-sudo cp $wwwdir/config/config-restricted-dist.php $wwwdir/config/config-restricted.php
 sudo cp $wwwdir/config/sync-config-dist.sh $wwwdir/config/sync-config.sh
 chmod +x $wwwdir/config/sync.sh $wwwdir/config/sync-config.sh
 htpasswd -nbB xtecadmin $pass > $wwwdir/config/.htpasswd
