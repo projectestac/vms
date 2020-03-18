@@ -7,6 +7,7 @@ echo 'Provision Àgora'
 rootdir=/dades
 wwwdir=$rootdir/html
 datadir=$rootdir/data
+localdatadir=$rootdir/localdata
 git=/git/agora
 passmd5=$(printf '%s' "$pass" | md5sum | cut -d ' ' -f 1)
 
@@ -21,8 +22,8 @@ mkdir_777 $datadir
 sudo cp -R $git/data/* $datadir
 chown_777 $datadir
 
-mkdir_777 $datadir/syncdata
-mkdir_777 $datadir/localmuc
+mkdir_777 $localdatadir/syncdata
+mkdir_777 $localdatadir/localmuc
 
 sudo cp $wwwdir/config/.htaccess-dist $wwwdir/config/.htaccess
 sudo cp $wwwdir/config/env-config-dist.php $wwwdir/config/env-config.php
