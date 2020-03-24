@@ -3,32 +3,30 @@
 ## Requirements
 
 
-* You need to have [Vagrant] and the official [VirtualBox] installed.
+* You need to have [Vagrant](https://www.vagrantup.com/downloads.html) and the official [VirtualBox](https://www.virtualbox.org/wiki/Downloads) installed.
 * [vagrant-hosts] vagrant plugin. It will be installed the first time you run vm script.
 
     `vagrant plugin install vagrant-hosts`
     
 * The host machine probably needs at least 4 GB of RAM.
-* As Oracle 11g XE is only available for 64-bit machines at the moment, the host machine needs to
-  have a 64-bit architecture.
 * You may need to [enable virtualization] manually.
 
 ## Installation
 
-* Check out this project:
+* Clone this project:
 
         git clone https://github.com/projectestac/vms.git
 
-* In order to use agora and odissea projects, you will need to download [Oracle Database 11g Express Edition] and [Oracle Instant Client] - Basic and Devel - for Linux x64.
-  Place all downloaded files (`oracle-xe-11.2.0-1.0.x86_64.rpm.zip`, `oracle-instantclient12.1-basic-12.1.0.2.0-1.x86_64.rpm` and `oracle-instantclient12.1-devel-12.1.0.2.0-1.x86_64.rpm`)
-  in the directory `provision/oracle` of this project.
+* Change to the AWS branch
+
+        git checkout -b aws origin/aws
 
 * Please note that building the VM involves downloading an Ubuntu
-  [base box](http://docs.vagrantup.com/v2/boxes.html) which is ~400MB in size.
+  [base box](https://www.vagrantup.com/docs/boxes.html) which is ~400MB in size.
 
 ## Vm Manages usage
 
-In the root directory there is an script called vm. You may use this script to manage the VM's in order to get updates.
+In the vms directory there is an script called vm. You may use this script to manage the VM's in order to get updates:
 
 `./vm`
 
@@ -48,29 +46,14 @@ You may also want to use vagrant standard commands:
 
 ## Hostnames and IP
 
-You must change your /etc/hosts to access successfully to all the VM's:
+You must add the following line to your /etc/hosts in order to get access to the VM:
 
- * For PHP 5.4 (with WIP-php54 branch):
- 192.168.33.2 agora agora-virtual.xtec.cat agora-virtual-se.xtec.cat agora-virtual-projectes.xtec.cat dossier-virtual.xtec.cat sinapsi-virtual.xtec.cat
- * For PHP 5.6 (with mphp56 branch):
- 192.168.33.4 agora agora-virtual.xtec.cat agora-virtual-se.xtec.cat agora-virtual-projectes.xtec.cat dossier-virtual.xtec.cat sinapsi-virtual.xtec.cat
-* For PHP 7.0 (with master branch):
- 192.168.33.4 agora agora-virtual.xtec.cat agora-virtual-se.xtec.cat agora-virtual-projectes.xtec.cat dossier-virtual.xtec.cat sinapsi-virtual.xtec.cat
+    192.168.33.5 agora-aws.xtec.cat agora-aws-se.xtec.cat agora-aws-projectes.xtec.cat
 
-
-Oracle installation based in [vagrant-oracle-xe]
 
 [Vagrant]: http://www.vagrantup.com/
 
 [VirtualBox]: https://www.virtualbox.org/
-
-[Oracle Database 11g Express Edition]: http://www.oracle.com/technetwork/database/database-technologies/express-edition/downloads/index.html
-
-[Oracle Instant Client]: http://www.oracle.com/technetwork/topics/linuxx86-64soft-092277.html
-
-[Oracle Database 11g EE Documentation]: http://docs.oracle.com/cd/E17781_01/index.htm
-
-[vagrant-oracle-xe]: https://github.com/codescape/vagrant-oracle-xe
 
 [vbguest]: https://github.com/dotless-de/vagrant-vbguest
 
