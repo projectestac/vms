@@ -36,10 +36,10 @@ if [ -f "$wwwdir/wordpress/.htaccess" ]; then sudo chmod 666 $wwwdir/wordpress/.
 sudo cp $wwwdir/wordpress/.htaccess-dist $wwwdir/wordpress/.htaccess
 chmod -x-w $wwwdir/wordpress/.htaccess
 
-/vms/agora/create_moodle.sh usu1 $rootdir
-/vms/agora/create_moodle.sh usu2 $rootdir
-/vms/agora/create_moodle.sh usu3 $rootdir
-/vms/agora/create_moodle.sh usu4 $rootdir
+/vms/agora/create_moodle.sh usu1 usu1 $rootdir pri
+/vms/agora/create_moodle.sh usu2 usu2 $rootdir sec
+/vms/agora/create_moodle.sh usu3 usu3 $rootdir pri
+/vms/agora/create_moodle.sh usu4 usu4 $rootdir sec
 
 /vms/agora/create_nodes.sh usu1 usu1 $rootdir pri usu6
 /vms/agora/create_nodes.sh usu2 usu2 $rootdir sec usu7
