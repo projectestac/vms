@@ -7,7 +7,7 @@ sudo apt-get update &> /dev/null
 sudo apt-get autoremove -qq  &> /dev/null
 
 echo 'Install base packages'
-sudo apt-get install -qq gcc-multilib texlive ghostscript imagemagick vsftpd unzip &> /dev/null
+sudo apt-get install -qq gcc-multilib texlive ghostscript unzip imagemagick unoconv aspell aspell-ca aspell-es graphviz vsftpd &> /dev/null
 
 echo 'Log permissions'
 sudo chmod -R 777 /var/log
@@ -21,8 +21,7 @@ sudo locale-gen es_ES.UTF-8 &> /dev/null
 sudo update-locale LANG=ca_ES.utf8
 
 echo 'Set Timezone'
-sudo echo "Europe/Madrid" | sudo tee /etc/timezone  &> /dev/null
-sudo dpkg-reconfigure -f noninteractive tzdata &> /dev/null
+sudo timedatectl set-timezone Europe/Madrid
 
 echo 'Increase swapsize'
 
