@@ -8,25 +8,22 @@ rootdir=/dades/agora
 wwwdir=$rootdir/html
 datadir=$rootdir/data
 git=/git/agora
+passmd5=$(printf '%s' "$pass" | md5sum | cut -d ' ' -f 1)
 
-#  Portal
+# Portal
 create_mysql_db "adminagora"
 cat $git/sql/adminagora.sql | sudo mysql -uroot -p$pass adminagora
 
 chmod 444 $wwwdir/portal/config/config.php
 
-#Data docs
+# Data docs
 mkdir_777 $datadir
 sudo cp -R $git/data/* $datadir
 chown_777 $datadir
 
 mkdir_777 $rootdir/syncdata
-mkdir_777 $rootdir/syncdata/temp
-
 mkdir_777 $rootdir/adminInfo
-
 mkdir_777 $rootdir/cache_ins
-chown_777 $wwwdir/moodle2/local/agora/muc
 
 sudo cp $wwwdir/config/.htaccess-dist $wwwdir/config/.htaccess
 sudo cp $wwwdir/config/config-dist.php $wwwdir/config/config.php
@@ -37,6 +34,11 @@ chmod +x $wwwdir/config/sync.sh $wwwdir/config/sync-config.sh
 sudo cp $wwwdir/.htaccess-dist $wwwdir/.htaccess
 sudo cp $wwwdir/wordpress/.htaccess-dist $wwwdir/wordpress/.htaccess
 chmod -x-w $wwwdir/wordpress/.htaccess
+
+# Set passwords
+sudo sed -i "s/\['userpwd'\] * = ''/\['userpwd'\] = '$pass'/" $wwwdir/config/env-config.php
+sudo sed -i "s/\['opcache'\]\['password'\] * = ''/\['opcache'\]\['password'\] = '$pass'/" $wwwdir/config/config-restricted.php
+sudo sed -i "s/\['xtecadmin'\]\['password'\] * = ''/\['xtecadmin'\]\['password'\] = '$passmd5'/" $wwwdir/config/config-restricted.php
 
 execute_in_oracle "@/dades/agora/html/moodle2/lib/dml/oci_native_moodle_package.sql"
 
@@ -70,4 +72,3 @@ sudo cp -R /git/agora/sql/master*.sql $datadir/portaldata/data/nodes
 mkdir_777 $datadir/moodledata/usu1/repository
 mkdir_777 $datadir/moodledata/usu1/repository/files
 sudo cp -R /git/agora/sql/master*.zip $datadir/moodledata/usu1/repository/files
-
