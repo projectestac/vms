@@ -31,6 +31,7 @@ sudo cp $wwwdir/config/env-config-dist.php $wwwdir/config/env-config.php
 sudo cp $wwwdir/config/config-restricted-dist.php $wwwdir/config/config-restricted.php
 sudo cp $wwwdir/config/sync-config-dist.sh $wwwdir/config/sync-config.sh
 chmod +x $wwwdir/config/sync.sh $wwwdir/config/sync-config.sh
+htpasswd -nbB xtecadmin $pass > $wwwdir/config/.htpasswd
 sudo cp $wwwdir/.htaccess-dist $wwwdir/.htaccess
 sudo cp $wwwdir/wordpress/.htaccess-dist $wwwdir/wordpress/.htaccess
 chmod -x-w $wwwdir/wordpress/.htaccess
