@@ -34,7 +34,7 @@ sudo cp $wwwdir/.htaccess-dist $wwwdir/.htaccess
 # Update wordpress/.htaccess if it exists (vagrant up using existing code)
 if [ -f "$wwwdir/wordpress/.htaccess" ]; then sudo chmod 666 $wwwdir/wordpress/.htaccess; fi
 sudo cp $wwwdir/wordpress/.htaccess-dist $wwwdir/wordpress/.htaccess
-chmod -x-w $wwwdir/wordpress/.htaccess
+chmod 444 $wwwdir/wordpress/.htaccess
 
 /vms/agora/create_moodle.sh usu1 usu1 $rootdir pri
 /vms/agora/create_moodle.sh usu2 usu2 $rootdir sec
