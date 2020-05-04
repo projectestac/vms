@@ -66,7 +66,6 @@ echo "opcache.max_accelerated_files=4000" | sudo tee -a /etc/php/7.3/mods-availa
 # 0 for development, 60 for production
 echo "opcache.revalidate_freq=0" | sudo tee -a /etc/php/7.3/mods-available/opcache.ini
 echo "opcache.interned_strings_buffer=8" | sudo tee -a /etc/php/7.3/mods-available/opcache.ini
-echo "opcache.fast_shutdown=1" | sudo tee -a /etc/php/7.3/mods-available/opcache.ini
 echo "opcache.enable_cli=1" | sudo tee -a /etc/php/7.3/mods-available/opcache.ini
 echo "; Required for Moodle" | sudo tee -a /etc/php/7.3/mods-available/opcache.ini
 echo "opcache.use_cwd = 1" | sudo tee -a /etc/php/7.3/mods-available/opcache.ini

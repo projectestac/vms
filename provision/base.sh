@@ -4,10 +4,10 @@
 echo 'Update packages'
 
 sudo apt-get update &> /dev/null
-sudo apt-get autoremove -qq  &> /dev/null
+sudo apt-get autoremove -qq &> /dev/null
 
 echo 'Install base packages'
-sudo apt-get install -qq gcc-multilib texlive ghostscript unzip imagemagick unoconv aspell aspell-ca aspell-es graphviz vsftpd &> /dev/null
+sudo apt-get install -qq gcc-multilib texlive ghostscript unzip imagemagick unoconv aspell aspell-ca aspell-es graphviz &> /dev/null
 
 echo 'Log permissions'
 sudo chmod -R 777 /var/log
@@ -17,14 +17,12 @@ sudo locale-gen ca_ES &> /dev/null
 sudo locale-gen ca_ES.UTF-8 &> /dev/null
 sudo locale-gen es_ES &> /dev/null
 sudo locale-gen es_ES.UTF-8 &> /dev/null
-#sudo dpkg-reconfigure locales &> /dev/null
 sudo update-locale LANG=ca_ES.utf8
 
 echo 'Set Timezone'
 sudo timedatectl set-timezone Europe/Madrid
 
 echo 'Increase swapsize'
-
 # size of swapfile in megabytes
 swapsize=2000
 
