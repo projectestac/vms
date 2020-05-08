@@ -33,7 +33,7 @@ Vagrant.configure(2) do |config|
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
-  config.vm.network "private_network", ip: "192.168.33.4"
+  config.vm.network "private_network", ip: "192.168.33.3"
 
   # Create a public network, which generally matched to bridged network.
   # Bridged networks make the machine appear as another physical device on
@@ -44,33 +44,33 @@ Vagrant.configure(2) do |config|
   # the path on the host to the actual folder. The second argument is
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
-  config.vm.synced_folder "../agora", "/git/agora"
-  config.vm.synced_folder "../agora/html", "/dades/agora/html"
+  #config.vm.synced_folder "../agora", "/git/agora"
+  #config.vm.synced_folder "../agora/html", "/dades/agora/html"
 
-  #config.vm.synced_folder "../alexandria", "/git/alexandria"
-  #config.vm.synced_folder "../alexandria/html/web", "/dades/alexandria/html"
+  config.vm.synced_folder "../alexandria", "/git/alexandria"
+  config.vm.synced_folder "../alexandria/html/web", "/dades/alexandria/html"
 
   #config.vm.synced_folder "../prestatgeria", "/git/prestatgeria"
   #config.vm.synced_folder "../prestatgeria/html", "/dades/prestatgeria/html"
 
-  config.vm.synced_folder "../xtecblocs", "/git/xtecblocs"
-  config.vm.synced_folder "../xtecblocs/src", "/dades/blocs/src"
+  #config.vm.synced_folder "../xtecblocs", "/git/xtecblocs"
+  #config.vm.synced_folder "../xtecblocs/src", "/dades/blocs/src"
 
-  config.vm.synced_folder "../odissea", "/git/odissea"
-  config.vm.synced_folder "../odissea/html", "/dades/odissea/html"
+  #config.vm.synced_folder "../odissea", "/git/odissea"
+  #config.vm.synced_folder "../odissea/html", "/dades/odissea/html"
 
-  config.vm.synced_folder "../marsupial-mps", "/git/mps"
-  config.vm.synced_folder "../marsupial-mps/src", "/dades/mps/src"
+  #config.vm.synced_folder "../marsupial-mps", "/git/mps"
+  #config.vm.synced_folder "../marsupial-mps/src", "/dades/mps/src"
 
   #config.vm.synced_folder "../moodlemobile2", "/dades/moodlemobile2"
 
   config.vm.synced_folder ".", "/vms", mount_options: ["dmode=775,fmode=775"]
 
-  config.vm.synced_folder "../dossier", "/git/dossier"
-  config.vm.synced_folder "../dossier/html", "/dades/dossier/html"
+#  config.vm.synced_folder "../dossier", "/git/dossier"
+#  config.vm.synced_folder "../dossier/html", "/dades/dossier/html"
 
-  config.vm.synced_folder "../sinapsi", "/git/sinapsi"
-  config.vm.synced_folder "../sinapsi", "/dades/sinapsi"
+#  config.vm.synced_folder "../sinapsi", "/git/sinapsi"
+#  config.vm.synced_folder "../sinapsi", "/dades/sinapsi"
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
@@ -85,7 +85,7 @@ Vagrant.configure(2) do |config|
     vb.customize ["modifyvm", :id,
                   "--name", "agora-php70",
                   # Oracle claims to need 512MB of memory available minimum
-                  "--memory", "2048",
+                  "--memory", "1024",
                   # Enable DNS behind NAT
                   "--natdnshostresolver1", "on"]
     vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
