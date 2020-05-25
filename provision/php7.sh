@@ -9,14 +9,15 @@ sudo apt-get update &> /dev/null
 
 sudo apt-get install -qq apache2 php7.3 php7.3-curl php7.3-tidy php7.3-gd php7.3-xml php7.3-xmlrpc php7.3-intl php7.3-cli php-pear php7.3-dev php7.3-ldap libapache2-mod-php7.3 php-codesniffer php7.3-mbstring php7.3-pgsql php7.3-mysql php-gettext php7.3-zip php7.3-soap php7.3-tokenizer &> /dev/null
 
-sudo mkdir /etc/apache2/sites-agora
-sudo cp -R /vms/provision/conf/* /etc/apache2/sites-agora
+sudo mkdir /etc/apache2/alexandria
+sudo cp -R /vms/provision/conf/* /etc/apache2/alexandria
 
-echo "Include sites-agora/" | sudo tee -a /etc/apache2/apache2.conf
+echo "Include alexandria/" | sudo tee -a /etc/apache2/apache2.conf
 echo "Mutex flock" | sudo tee -a /etc/apache2/apache2.conf
+echo "ServerTokens Full" | sudo tee -a /etc/apache2/apache2.conf
 
 sudo rm /etc/apache2/sites-enabled/*.conf
-sudo ln -s /etc/apache2/sites-agora/agora.conf /etc/apache2/sites-enabled/agora.conf
+sudo ln -s /etc/apache2/alexandria/alexandria.conf /etc/apache2/sites-enabled/alexandria.conf
 
 echo "ServerName localhost" | sudo tee /etc/apache2/conf-available/fqdn.conf
 
