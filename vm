@@ -32,7 +32,7 @@ if [ -z "$(vagrant plugin list | grep vagrant-hosts)" ]; then
     vagrant plugin install vagrant-hosts
 fi
 
-clone_project alexandria WIP-moodle-38
+clone_project alexandria master
 #clone_project_git moodlemobile2 https://github.com/moodlehq/moodlemobile2.git
 
 vagrant box update
