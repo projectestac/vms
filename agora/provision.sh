@@ -25,6 +25,9 @@ chown_777 $datadir
 mkdir_777 $localdatadir/syncdata
 mkdir_777 $localdatadir/localmuc
 
+# Program local crons
+sudo cp $git/crons/moodle_webserver /etc/cron.d/
+
 sudo cp $wwwdir/config/.htaccess-dist $wwwdir/config/.htaccess
 sudo cp $wwwdir/config/env-config-dist.php $wwwdir/config/env-config.php
 sudo cp $wwwdir/config/sync-config-dist.sh $wwwdir/config/sync-config.sh
