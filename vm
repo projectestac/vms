@@ -4,17 +4,22 @@
 
 function clone_project {
     project=$1
+    branch=$2
     giturl=git@github.com:projectestac/$project.git
-    clone_project_git $project $giturl
+    clone_project_git $project $giturl $branch
 }
 
 function clone_project_git {
     project=$1
     giturl=$2
+    branch=$3
     homedir=`pwd`
     if [ ! -d "$homedir/../$project" ]; then
         echo "Project $project not found, cloning..."
         git clone $giturl $homedir/../$project
+        pushd "$homedir/../$project"
+        git checkout -b $branch origin/$branch
+        popd
         pushd $homedir/../$project
         git submodule update --recursive --init
         popd
@@ -29,7 +34,7 @@ fi
 
 #clone_project agora
 #clone_project odissea
-clone_project alexandria
+clone_project alexandria MOODLE_31_STABLE
 #clone_project xtecblocs
 #clone_project prestatgeria
 #clone_project marsupial-mps
