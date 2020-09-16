@@ -34,6 +34,11 @@ sudo cp $wwwdir/config/sync-config-dist.sh $wwwdir/config/sync-config.sh
 chmod +x $wwwdir/config/sync.sh $wwwdir/config/sync-config.sh
 htpasswd -nbB xtecadmin $pass > $wwwdir/config/.htpasswd
 sudo cp $wwwdir/.htaccess-dist $wwwdir/.htaccess
+
+# Set password
+sudo sed -i "s/\['userpwd'\] = ''/\['userpwd'\] = 'agora'/" $wwwdir/config/env-config.php
+sudo sed -i "s/\['password'\] = ''/\['password'\] = '6142bfd56a583d891f0b1dcdbb2a9ef8'/" $wwwdir/config/env-config.php
+
 # Update wordpress/.htaccess if it exists (vagrant up using existing code)
 if [ -f "$wwwdir/wordpress/.htaccess" ]; then sudo chmod 666 $wwwdir/wordpress/.htaccess; fi
 sudo cp $wwwdir/wordpress/.htaccess-dist $wwwdir/wordpress/.htaccess
