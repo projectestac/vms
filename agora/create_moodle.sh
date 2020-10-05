@@ -18,7 +18,7 @@ psql -U $usu -h localhost -d $usu -1 -f /vms/agora/$template.sql &> /dev/null
 
 mkdir_777 $datadir/moodledata/$usu
 pushd $datadir/moodledata/$usu
-sudo tar xfzp /vms/agora/$template.tgz
+sudo unzip /vms/agora/$template.zip
 popd
 chmod -R 777 $datadir/moodledata/$usu
 
