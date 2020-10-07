@@ -71,7 +71,7 @@ mkdir_777 $datadir/portaldata/pnTemp/Theme_cache
 mkdir_777 $datadir/portaldata/data
 mkdir_777 $datadir/portaldata/data/nodes
 mkdir_777 $datadir/portaldata/data/moodle2
-sudo cp -R /git/agora/sql/master*.sql $datadir/portaldata/data/nodes
+sudo cp /git/agora/sql/master*.sql $datadir/portaldata/data/nodes
+sudo cp /git/agora/sql/master*.zip $datadir/portaldata/data/nodes
 mkdir_777 $datadir/moodledata/usu1/repository
 mkdir_777 $datadir/moodledata/usu1/repository/files
-sudo cp -R /git/agora/sql/master*.zip $datadir/moodledata/usu1/repository/files
