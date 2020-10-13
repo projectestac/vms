@@ -14,9 +14,39 @@ sudo chmod -R 777 /var/log
 
 echo 'Install locales'
 sudo locale-gen ca_ES &> /dev/null
-sudo locale-gen ca_ES.UTF-8 &> /dev/null
+sudo locale-gen ca_ES.utf8 &> /dev/null
 sudo locale-gen es_ES &> /dev/null
-sudo locale-gen es_ES.UTF-8 &> /dev/null
+sudo locale-gen es_ES.utf8 &> /dev/null
+sudo locale-gen fr_FR &> /dev/null
+sudo locale-gen fr_FR.utf8 &> /dev/null
+sudo locale-gen eu_ES &> /dev/null
+sudo locale-gen eu_ES.utf8 &> /dev/null
+sudo locale-gen gl_ES &> /dev/null
+sudo locale-gen gl_ES.utf8 &> /dev/null
+sudo locale-gen it_IT &> /dev/null
+sudo locale-gen it_IT.utf8 &> /dev/null
+sudo locale-gen nl_NL &> /dev/null
+sudo locale-gen nl_NL.utf8 &> /dev/null
+sudo locale-gen pt_PT &> /dev/null
+sudo locale-gen pt_PT.utf8 &> /dev/null
+sudo locale-gen sv_SE &> /dev/null
+sudo locale-gen sv_SE.utf8 &> /dev/null
+sudo locale-gen el_GR &> /dev/null
+sudo locale-gen el_GR.utf8 &> /dev/null
+sudo locale-gen ru_RU &> /dev/null
+sudo locale-gen ru_RU.utf8 &> /dev/null
+sudo locale-gen ur_IN &> /dev/null
+sudo locale-gen ur_IN.utf8 &> /dev/null
+sudo locale-gen ar_MA &> /dev/null
+sudo locale-gen ar_MA.utf8 &> /dev/null
+sudo locale-gen ko_KR &> /dev/null
+sudo locale-gen ko_KR.utf8 &> /dev/null
+sudo locale-gen ja_JP &> /dev/null
+sudo locale-gen ja_JP.utf8 &> /dev/null
+sudo locale-gen zh_CN &> /dev/null
+sudo locale-gen zh_CN.utf8 &> /dev/null
+
+# Set default locale
 sudo update-locale LANG=ca_ES.utf8
 
 echo 'Set Timezone'
