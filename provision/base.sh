@@ -1,6 +1,5 @@
 #!/bin/bash
 
-#http://serverfault.com/questions/500764/dpkg-reconfigure-unable-to-re-open-stdin-no-file-or-directory
 echo 'Update packages'
 
 sudo apt-get update &> /dev/null
@@ -15,6 +14,8 @@ sudo chmod -R 777 /var/log
 echo 'Install locales'
 sudo locale-gen ca_ES &> /dev/null
 sudo locale-gen ca_ES.utf8 &> /dev/null
+sudo locale-gen de_DE &> /dev/null
+sudo locale-gen de_DE.utf8 &> /dev/null
 sudo locale-gen es_ES &> /dev/null
 sudo locale-gen es_ES.utf8 &> /dev/null
 sudo locale-gen fr_FR &> /dev/null

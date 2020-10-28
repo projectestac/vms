@@ -32,8 +32,11 @@ if [ -z "$(vagrant plugin list | grep vagrant-hosts)" ]; then
     vagrant plugin install vagrant-hosts
 fi
 
-clone_project agora aws
-#clone_project_git moodlemobile2 https://github.com/moodlehq/moodlemobile2.git
+if [ -z "$(vagrant plugin list | grep vagrant-disksize)" ]; then
+    vagrant plugin install vagrant-disksize
+fi
+
+clone_project odissea aws
 
 vagrant box update
 
