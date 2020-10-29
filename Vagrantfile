@@ -13,7 +13,6 @@ Vagrant.configure(2) do |config|
 
   config.vm.synced_folder "../alexandria", "/git/alexandria"
   config.vm.synced_folder "../alexandria/html", "/dades/html"
-  #config.vm.synced_folder "../moodlemobile2", "/dades/moodlemobile2"
   config.vm.synced_folder ".", "/vms", mount_options: ["dmode=775,fmode=775"]
 
   config.vm.provider "virtualbox" do |vb|
@@ -23,10 +22,6 @@ Vagrant.configure(2) do |config|
                   "--natdnshostresolver1", "on",
                   "--natdnsproxy1", "on"]
   end
-
-  #config.push.define "atlas" do |push|
-  #  push.app = "projectestac/agora"
-  #end
 
   config.vm.provision :shell, path: "provision.sh"
 
