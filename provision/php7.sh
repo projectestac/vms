@@ -5,17 +5,17 @@ echo 'Install PHP 7.3'
 sudo add-apt-repository ppa:ondrej/php &> /dev/null
 sudo apt-get update &> /dev/null
 
-sudo apt-get install -qq apache2 php7.3 php7.3-curl php7.3-tidy php7.3-gd php7.3-xml php7.3-xmlrpc php7.3-intl php7.3-cli php-pear php7.3-dev php7.3-ldap libapache2-mod-php7.3 php-codesniffer php7.3-mbstring php7.3-pgsql php7.3-mysql php-gettext php7.3-zip php7.3-soap php7.3-tokenizer &> /dev/null
+sudo apt-get install -qq apache2 php7.3 php7.3-curl php7.3-tidy php7.3-gd php7.3-xml php7.3-xmlrpc php7.3-intl php7.3-cli php-pear php7.3-dev libapache2-mod-php7.3 php-codesniffer php7.3-mbstring php7.3-mysql php-gettext php7.3-zip php7.3-soap php7.3-tokenizer composer &> /dev/null
 
-sudo mkdir /etc/apache2/odissea
-sudo cp -R /vms/provision/conf/* /etc/apache2/odissea
+sudo mkdir /etc/apache2/sinapsi
+sudo cp -R /vms/provision/conf/* /etc/apache2/sinapsi
 
-echo "Include odissea/" | sudo tee -a /etc/apache2/apache2.conf
+echo "Include sinapsi/" | sudo tee -a /etc/apache2/apache2.conf
 echo "Mutex flock" | sudo tee -a /etc/apache2/apache2.conf
 echo "ServerTokens Full" | sudo tee -a /etc/apache2/apache2.conf
 
 sudo rm /etc/apache2/sites-enabled/*.conf
-sudo ln -s /etc/apache2/odissea/odissea.conf /etc/apache2/sites-enabled/odissea.conf
+sudo ln -s /etc/apache2/sinapsi/sinapsi.conf /etc/apache2/sites-enabled/sinapsi.conf
 
 echo "ServerName localhost" | sudo tee /etc/apache2/conf-available/fqdn.conf
 
@@ -66,14 +66,6 @@ echo "opcache.max_accelerated_files=4000" | sudo tee -a /etc/php/7.3/mods-availa
 echo "opcache.revalidate_freq=0" | sudo tee -a /etc/php/7.3/mods-available/opcache.ini
 echo "opcache.interned_strings_buffer=8" | sudo tee -a /etc/php/7.3/mods-available/opcache.ini
 echo "opcache.enable_cli=1" | sudo tee -a /etc/php/7.3/mods-available/opcache.ini
-echo "; Required for Moodle" | sudo tee -a /etc/php/7.3/mods-available/opcache.ini
-echo "opcache.use_cwd = 1" | sudo tee -a /etc/php/7.3/mods-available/opcache.ini
-echo "opcache.validate_timestamps = 1" | sudo tee -a /etc/php/7.3/mods-available/opcache.ini
-echo "opcache.save_comments = 1" | sudo tee -a /etc/php/7.3/mods-available/opcache.ini
-echo "opcache.enable_file_override = 0" | sudo tee -a /etc/php/7.3/mods-available/opcache.ini
-
-echo 'Install memcached and redis'
-sudo apt-get install -qq php7.3-memcached php-redis memcached redis-server &> /dev/null
 
 echo 'Install XDebug'
 sudo apt-get install -qq php7.3-xdebug &> /dev/null
