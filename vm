@@ -36,7 +36,7 @@ if [ -z "$(vagrant plugin list | grep vagrant-disksize)" ]; then
     vagrant plugin install vagrant-disksize
 fi
 
-clone_project odissea aws
+clone_project sinapsi devel
 
 vagrant box update
 
