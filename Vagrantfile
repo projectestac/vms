@@ -11,13 +11,13 @@ Vagrant.configure(2) do |config|
 
   config.vm.network "private_network", ip: "192.168.33.8"
 
-  config.vm.synced_folder "../sinapsi", "/git/sinapsi"
-  #config.vm.synced_folder "../sinapsi/html", "/dades/src"
+  config.vm.synced_folder "../sinapsi", "/dades/html"
   config.vm.synced_folder ".", "/vms", mount_options: ["dmode=775,fmode=775"]
 
   config.vm.provider "virtualbox" do |vb|
     vb.customize ["modifyvm", :id,
                   "--name", "sinapsi",
+                  "--cpus", "2",
                   "--memory", "800",
                   "--natdnshostresolver1", "on",
                   "--natdnsproxy1", "on"]
