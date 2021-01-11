@@ -10,8 +10,8 @@ source "/vms/provision/functions.sh"
 pushd /git/sinapsi/
 curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 sudo apt-get install -y nodejs
-sudo npm i -g @angular/cli@8.2
-sudo apt install python2 build-essential
+sudo npm i -g @angular/cli@8.3
+sudo apt install python2.7 build-essential
 pushd backend
 composer update
 popd

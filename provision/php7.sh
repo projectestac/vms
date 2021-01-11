@@ -5,7 +5,7 @@ echo 'Install PHP 7.3'
 sudo add-apt-repository ppa:ondrej/php &> /dev/null
 sudo apt-get update &> /dev/null
 
-sudo apt-get install -qq apache2 php7.3 php7.3-xml php7.3-cli libapache2-mod-php7.3 php7.3-mbstring php7.3-mysql php7.3-tokenizer composer &> /dev/null
+sudo apt-get install -qq apache2 php7.3 libapache2-mod-php7.3 php7.3-xml php7.3-cli php7.3-mbstring php7.3-mysql php7.3-tokenizer php7.3-zip composer &> /dev/null
 
 sudo mkdir /etc/apache2/sinapsi
 sudo cp -R /vms/provision/conf/* /etc/apache2/sinapsi

@@ -6,7 +6,7 @@ sudo apt-get update &> /dev/null
 sudo apt-get autoremove -qq &> /dev/null
 
 echo 'Install base packages'
-sudo apt-get install -qq make &> /dev/null
+sudo apt-get install -qq g++ make &> /dev/null
 
 echo 'Log permissions'
 sudo chmod -R 777 /var/log

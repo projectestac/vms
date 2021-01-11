@@ -18,7 +18,7 @@ Vagrant.configure(2) do |config|
   config.vm.provider "virtualbox" do |vb|
     vb.customize ["modifyvm", :id,
                   "--name", "sinapsi",
-                  "--memory", "800",
+                  "--memory", "2000",
                   "--natdnshostresolver1", "on",
                   "--natdnsproxy1", "on"]
   end
