@@ -5,7 +5,7 @@ echo 'Install PHP 7.3'
 sudo add-apt-repository ppa:ondrej/php &> /dev/null
 sudo apt-get update &> /dev/null
 
-sudo apt-get install -qq apache2 php7.3 libapache2-mod-php7.3 php7.3-xml php7.3-cli php7.3-mbstring php7.3-mysql php7.3-tokenizer php7.3-zip composer &> /dev/null
+sudo apt-get install -qq apache2 php7.3 libapache2-mod-php7.3 php7.3-xml php7.3-cli php7.3-mbstring php7.3-mysql php7.3-tokenizer php7.3-zip php7.3-curl &> /dev/null
 
 sudo mkdir /etc/apache2/sinapsi
 sudo cp -R /vms/provision/conf/* /etc/apache2/sinapsi
@@ -69,7 +69,6 @@ echo "opcache.enable_cli=1" | sudo tee -a /etc/php/7.3/mods-available/opcache.in
 
 echo 'Install XDebug'
 sudo apt-get install -qq php7.3-xdebug &> /dev/null
-
 echo "xdebug.mode=debug" | sudo tee -a /etc/php/7.3/apache2/conf.d/20-xdebug.ini
 echo "xdebug.idekey=\"vagrant\"" | sudo tee -a /etc/php/7.3/apache2/conf.d/20-xdebug.ini
 echo "xdebug.start_with_request=no" | sudo tee -a /etc/php/7.3/apache2/conf.d/20-xdebug.ini
@@ -77,3 +76,21 @@ echo "xdebug.client_port=9003" | sudo tee -a /etc/php/7.3/apache2/conf.d/20-xdeb
 echo "xdebug.client_host=10.0.2.15 " | sudo tee -a /etc/php/7.3/apache2/conf.d/20-xdebug.ini
 
 sudo service apache2 restart
+
+echo 'Install Composer'
+EXPECTED_CHECKSUM="$(php -r 'copy("https://composer.github.io/installer.sig", "php://stdout");')"
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+ACTUAL_CHECKSUM="$(php -r "echo hash_file('sha384', 'composer-setup.php');")"
+
+if [ "$EXPECTED_CHECKSUM" != "$ACTUAL_CHECKSUM" ]
+then
+    >&2 echo 'ERROR: Invalid installer checksum'
+    rm composer-setup.php
+    exit 1
+fi
+
+php composer-setup.php --quiet
+sudo mv composer.phar /usr/local/bin/composer
+RESULT=$?
+rm composer-setup.php
+exit $RESULT
