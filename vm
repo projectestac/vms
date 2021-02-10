@@ -36,8 +36,7 @@ if ! vagrant plugin list | grep -q vagrant-disksize; then
     vagrant plugin install vagrant-disksize
 fi
 
-clone_project sinapsi devel
-mkdir -p ../build
+clone_project sinapsi master
 
 vagrant box update
 
