@@ -7,7 +7,9 @@ source "/vms/provision/functions.sh"
 /vms/provision/mysql.sh $pass sinapsi
 
 sudo cp /vms/provision/conf/.env /dades/html/
+sudo mkdir -p /dades/html/storage/framework/sessions
+sudo chmod -R 777 /dades/html/storage/
 
-mysql_import_db sinapsi /git/sinapsi/database/sinapsi-dev.sql
+mysql_import_db sinapsi /dades/html/database/sinapsi-dev.sql
 
 sudo service apache2 restart
