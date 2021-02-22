@@ -14,6 +14,7 @@ sudo cp -R /vms/provision/conf/* /etc/apache2/sites-agora
 
 echo "Include sites-agora/" | sudo tee -a /etc/apache2/apache2.conf
 echo "Mutex flock" | sudo tee -a /etc/apache2/apache2.conf
+echo "AddType application/wasm .wasm" | sudo tee -a /etc/apache2/apache2.conf
 
 sudo rm /etc/apache2/sites-enabled/*.conf
 sudo ln -s /etc/apache2/sites-agora/agora.conf /etc/apache2/sites-enabled/agora.conf
