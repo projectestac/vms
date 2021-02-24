@@ -12,7 +12,7 @@ Vagrant.configure(2) do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
-  config.vm.box = "ubuntu/trusty64"
+  config.vm.box = "ubuntu/xenial64"
 
   #config.vm.hostname = "agora"
   config.vm.provision :shell, inline: "hostnamectl set-hostname agora"
@@ -44,33 +44,11 @@ Vagrant.configure(2) do |config|
   # the path on the host to the actual folder. The second argument is
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
-  config.vm.synced_folder "../agora", "/git/agora"
-  config.vm.synced_folder "../agora/html", "/dades/agora/html"
 
-  #config.vm.synced_folder "../alexandria", "/git/alexandria"
-  #config.vm.synced_folder "../alexandria/html/web", "/dades/alexandria/html"
-
-  #config.vm.synced_folder "../prestatgeria", "/git/prestatgeria"
-  #config.vm.synced_folder "../prestatgeria/html", "/dades/prestatgeria/html"
-
-  config.vm.synced_folder "../xtecblocs", "/git/xtecblocs"
-  config.vm.synced_folder "../xtecblocs/src", "/dades/blocs/src"
-
-  config.vm.synced_folder "../odissea", "/git/odissea"
-  config.vm.synced_folder "../odissea/html", "/dades/odissea/html"
-
-  config.vm.synced_folder "../marsupial-mps", "/git/mps"
-  config.vm.synced_folder "../marsupial-mps/src", "/dades/mps/src"
-
-  #config.vm.synced_folder "../moodlemobile2", "/dades/moodlemobile2"
+  config.vm.synced_folder "../prestatgeria", "/git/prestatgeria"
+  config.vm.synced_folder "../prestatgeria/html", "/dades/prestatgeria/html"
 
   config.vm.synced_folder ".", "/vms", mount_options: ["dmode=775,fmode=775"]
-
-  config.vm.synced_folder "../dossier", "/git/dossier"
-  config.vm.synced_folder "../dossier/html", "/dades/dossier/html"
-
-  config.vm.synced_folder "../sinapsi", "/git/sinapsi"
-  config.vm.synced_folder "../sinapsi", "/dades/sinapsi"
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
@@ -85,7 +63,7 @@ Vagrant.configure(2) do |config|
     vb.customize ["modifyvm", :id,
                   "--name", "agora-php56",
                   # Oracle claims to need 512MB of memory available minimum
-                  "--memory", "1024",
+                  "--memory", "800",
                   # Enable DNS behind NAT
                   "--natdnshostresolver1", "on"]
     vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
@@ -98,9 +76,6 @@ Vagrant.configure(2) do |config|
   # Define a Vagrant Push strategy for pushing to Atlas. Other push strategies
   # such as FTP and Heroku are also available. See the documentation at
   # https://docs.vagrantup.com/v2/push/atlas.html for more information.
-  #config.push.define "atlas" do |push|
-  #  push.app = "projectestac/agora"
-  #end
 
   # Enable provisioning with a shell script. Additional provisioners such as
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the

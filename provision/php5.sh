@@ -88,16 +88,13 @@ echo "opcache.enable_file_override = 0" | sudo tee -a /etc/php/5.6/mods-availabl
 
 #sudo ln -s /etc/php/5.6/mods-available/opcache.ini /etc/php/5.6/apache2/conf.d/20-opcache.ini
 
-echo 'Install memcache'
-sudo apt-get install -y php5.6-memcache memcached
-
 sudo service apache2 restart
 
 echo 'Install XDebug'
 
 sudo apt-get install -y php5.6-xdebug  &> /dev/null
 
-echo "xdebug.default_enable=1" | sudo tee -a /etc/php/5.6/apache2/conf.d/20-xdebug.ini
+echo "xdebug.default_enable=0" | sudo tee -a /etc/php/5.6/apache2/conf.d/20-xdebug.ini
 echo "xdebug.idekey=\"vagrant\"" | sudo tee -a /etc/php/5.6/apache2/conf.d/20-xdebug.ini
 echo "xdebug.remote_enable=1" | sudo tee -a /etc/php/5.6/apache2/conf.d/20-xdebug.ini
 echo "xdebug.remote_autostart=0" | sudo tee -a /etc/php/5.6/apache2/conf.d/20-xdebug.ini

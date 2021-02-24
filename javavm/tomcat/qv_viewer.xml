@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Context
-    path="/qv_viewer"
-    reloadable="true"
-    docBase="/dades/qv/qv_viewer/web"
-    workDir="/dades/qv/qv_viewer/work" />

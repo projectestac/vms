@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Context path="/qv_web"
-        docBase="/dades/qv/qv_web"
-        antiResourceLocking="false" privileged="true" />
