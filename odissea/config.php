@@ -16,6 +16,7 @@ $CFG->dboptions = [
     'dbpersist' => 0,
     'dbsocket' => 0,
     'dbport' => 5432,
+    'fetchbuffersize' => 0,
 ];
 
 $CFG->wwwroot = 'https://odissea-aws.xtec.cat';
@@ -23,8 +24,18 @@ $CFG->dataroot = '/dades/data/odisseadata';
 $CFG->admin = 'admin';
 
 $CFG->passwordsaltmain = 'abcdefghijklmnopqrstuvwxyz';
+
+// Application cache
 $CFG->memcache_servers = '127.0.0.1';
 $CFG->redis_servers = '127.0.0.1';
+
+// Redis for application lock
+$CFG->local_redislock_redis_server = '127.0.0.1';
+
+// Redis for sessions
+$CFG->session_redis_host = '127.0.0.1';
+$CFG->session_redis_port = 6379;  // Optional.
+
 
 // E-mail
 $CFG->smtphosts = '';
