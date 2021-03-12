@@ -75,15 +75,15 @@ echo "opcache.enable_file_override = 0" | sudo tee -a /etc/php/7.3/mods-availabl
 echo 'Install memcached and redis'
 sudo apt-get install -qq php7.3-memcached php-redis memcached redis-server &> /dev/null
 
-echo 'Install XDebug'
-sudo apt-get install -qq php7.3-xdebug &> /dev/null
+#echo 'Install XDebug'
+#sudo apt-get install -qq php7.3-xdebug &> /dev/null
 
-echo "xdebug.default_enable=1" | sudo tee -a /etc/php/7.3/apache2/conf.d/20-xdebug.ini
-echo "xdebug.idekey=\"vagrant\"" | sudo tee -a /etc/php/7.3/apache2/conf.d/20-xdebug.ini
-echo "xdebug.remote_enable=1" | sudo tee -a /etc/php/7.3/apache2/conf.d/20-xdebug.ini
-echo "xdebug.remote_autostart=0" | sudo tee -a /etc/php/7.3/apache2/conf.d/20-xdebug.ini
-echo "xdebug.remote_port=9000" | sudo tee -a /etc/php/7.3/apache2/conf.d/20-xdebug.ini
-echo "xdebug.remote_handler=dbgp" | sudo tee -a /etc/php/7.3/apache2/conf.d/20-xdebug.ini
-echo "xdebug.remote_host=10.0.2.2 " | sudo tee -a /etc/php/7.3/apache2/conf.d/20-xdebug.ini
+#echo "xdebug.default_enable=1" | sudo tee -a /etc/php/7.3/apache2/conf.d/20-xdebug.ini
+#echo "xdebug.idekey=\"vagrant\"" | sudo tee -a /etc/php/7.3/apache2/conf.d/20-xdebug.ini
+#echo "xdebug.remote_enable=1" | sudo tee -a /etc/php/7.3/apache2/conf.d/20-xdebug.ini
+#echo "xdebug.remote_autostart=0" | sudo tee -a /etc/php/7.3/apache2/conf.d/20-xdebug.ini
+#echo "xdebug.remote_port=9000" | sudo tee -a /etc/php/7.3/apache2/conf.d/20-xdebug.ini
+#echo "xdebug.remote_handler=dbgp" | sudo tee -a /etc/php/7.3/apache2/conf.d/20-xdebug.ini
+#echo "xdebug.remote_host=10.0.2.2 " | sudo tee -a /etc/php/7.3/apache2/conf.d/20-xdebug.ini
 
 sudo service apache2 restart
