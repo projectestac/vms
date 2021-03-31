@@ -23,6 +23,8 @@ Vagrant.configure(2) do |config|
                   "--natdnsproxy1", "on"]
   end
 
+  config.disksize.size = '15GB'
+
   config.vm.provision :shell, path: "provision.sh"
 
 end

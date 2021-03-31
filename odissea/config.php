@@ -14,9 +14,9 @@ $CFG->prefix = 'm2';
 
 $CFG->dboptions = [
     'dbpersist' => 0,
+    'fetchbuffersize' => 0,
     'dbsocket' => 0,
     'dbport' => 5432,
-    'fetchbuffersize' => 0,
 ];
 
 $CFG->wwwroot = 'https://odissea-aws.xtec.cat';
