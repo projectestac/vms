@@ -28,7 +28,7 @@ Vagrant.configure(2) do |config|
   #  push.app = "projectestac/agora"
   #end
 
-  config.disksize.size = '15GB'
+  # config.disksize.size = '15GB'
 
   config.vm.provision :shell, path: "provision.sh"
 
