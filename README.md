@@ -8,7 +8,7 @@
 
     `vagrant plugin install vagrant-hosts`
     
-* The host machine probably needs at least 4 GB of RAM.
+* The host machine probably needs at least 8 GB of RAM.
 * You may need to [enable virtualization] manually.
 
 ## Installation
@@ -17,22 +17,17 @@
 
         git clone https://github.com/projectestac/vms.git
 
-* Change to the AWS branch
+* Enter the repository and launch the install script:
 
-        git checkout -b aws origin/aws
+        cd vms
+        ./vm
 
 * Please note that building the VM involves downloading an Ubuntu
   [base box](https://www.vagrantup.com/docs/boxes.html) which is ~400MB in size.
 
-## Vm Manages usage
+## VM usage
 
-In the vms directory there is an script called vm. You may use this script to manage the VM's in order to get updates:
-
-`./vm`
-
-This will start the VM getting and executing the latest updates. This should take a few minutes.
-
-You may also want to use vagrant standard commands:
+Always launch the Virtual Machine using the script **./vm**. It updates the vms project and downloads updates of the base image. You may also want to use vagrant standard commands:
 
 * **vagrant up** to start the VM.
 
@@ -48,15 +43,13 @@ You may also want to use vagrant standard commands:
 
 You must add the following line to your /etc/hosts in order to get access to the VM:
 
-    192.168.33.5 agora-aws.xtec.cat agora-aws-se.xtec.cat agora-aws-projectes.xtec.cat agora-aws-nodes.xtec.cat
+    192.168.33.5 agora-aws.xtec.cat agora-aws-se.xtec.cat agora-aws-projectes.xtec.cat agora-aws-nodes.xtec.cat agora-aws-eoi.xtec.cat
 
 
-[Vagrant]: http://www.vagrantup.com/
+## Useful links
 
-[VirtualBox]: https://www.virtualbox.org/
-
-[vbguest]: https://github.com/dotless-de/vagrant-vbguest
-
-[enable virtualization]: http://www.sysprobs.com/disable-enable-virtualization-technology-bios
-
-[vagrant-hosts]: https://github.com/adrienthebo/vagrant-hosts
+    Vagrant: https://www.vagrantup.com/
+    VirtualBox: https://www.virtualbox.org/
+    vagrant-hosts: https://github.com/oscar-stack/vagrant-hosts
+    vbguest: https://github.com/dotless-de/vagrant-vbguest
+    enable virtualization: https://www.sysprobs.com/disable-enable-virtualization-technology-bios
