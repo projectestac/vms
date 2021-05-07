@@ -22,4 +22,4 @@ sudo unzip -q /vms/agora/$template.zip
 popd
 chmod -R 777 $datadir/moodledata/$usu
 
-sudo -E php /dades/html/moodle2/local/agora/scripts/cli.php -s=script_enable_service --ccentre=$nompropi --password=6142bfd56a583d891f0b1dcdbb2a9ef8 --clientName="$usu VM dev" --clientCode=$usu --clientAddress=Test --clientCity=ciutat --clientDNS=$nompropi
+sudo -E php /dades/html/moodle2/local/agora/scripts/cli.php -s=script_enable_service --ccentre=$nompropi --password=6142bfd56a583d891f0b1dcdbb2a9ef8 --xtecadminPassword=6142bfd56a583d891f0b1dcdbb2a9ef8 --clientName="$usu VM dev" --clientCode=$usu --clientAddress=Test --clientCity=ciutat --clientDNS=$nompropi
