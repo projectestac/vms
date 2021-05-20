@@ -33,7 +33,7 @@ sudo sed -i '$ a\date.timezone = "Europe/Madrid"' /etc/php/7.3/apache2/php.ini
 sudo sed -i "s/memory_limit = .*/memory_limit = 256M/" /etc/php/7.3/apache2/php.ini
 sudo sed -i "s/post_max_size = .*/post_max_size = 100M/" /etc/php/7.3/apache2/php.ini
 sudo sed -i "s/upload_max_filesize = .*/upload_max_filesize = 100M/" /etc/php/7.3/apache2/php.ini
-sudo sed -i "s/;max_input_vars = .*/max_input_vars = 4000/" /etc/php/7.3/apache2/php.ini
+sudo sed -i "s/;max_input_vars = .*/max_input_vars = 5000/" /etc/php/7.3/apache2/php.ini
 sudo sed -i "s/allow_url_fopen = .*/allow_url_fopen = On/" /etc/php/7.3/apache2/php.ini
 sudo sed -i "s/max_execution_time = .*/max_execution_time = 600/" /etc/php/7.3/apache2/php.ini
 sudo sed -i "s/error_reporting = .*/error_reporting = E_ALL/" /etc/php/7.3/apache2/php.ini
@@ -43,7 +43,7 @@ sudo sed -i "s/;error_log = php_errors.log/error_log = \/var\/log\/apache2\/php_
 
 sudo sed -i '$ a\date.timezone = "Europe/Madrid"' /etc/php/7.3/cli/php.ini
 sudo sed -i "s/memory_limit = .*/memory_limit = 256M/" /etc/php/7.3/cli/php.ini
-sudo sed -i "s/max_input_vars = .*/max_input_vars = 2000/" /etc/php/7.3/cli/php.ini
+sudo sed -i "s/max_input_vars = .*/max_input_vars = 5000/" /etc/php/7.3/cli/php.ini
 sudo sed -i "s/allow_url_fopen = .*/allow_url_fopen = On/" /etc/php/7.3/cli/php.ini
 sudo sed -i "s/error_reporting = .*/error_reporting = E_ALL/" /etc/php/7.3/cli/php.ini
 sudo sed -i "s/display_errors = .*/display_errors = On/" /etc/php/7.3/cli/php.ini
