@@ -7,7 +7,7 @@ sudo apt-get update &> /dev/null
 sudo apt-get autoremove -qq &> /dev/null
 
 echo 'Install base packages'
-sudo apt-get install -qq gcc-multilib texlive ghostscript unzip imagemagick unoconv aspell aspell-ca aspell-es graphviz &> /dev/null
+sudo apt-get install -qq gcc-multilib texlive ghostscript poppler-utils unzip imagemagick unoconv aspell aspell-ca aspell-es graphviz &> /dev/null
 
 echo 'Log permissions'
 sudo chmod -R 777 /var/log
