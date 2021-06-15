@@ -9,11 +9,10 @@ wwwdir=$rootdir/html
 datadir=$rootdir/data
 localdatadir=$rootdir/localdata
 git=/git/agora
-passmd5=$(printf '%s' "$pass" | md5sum | cut -d ' ' -f 1)
 
 # Portal
 create_mysql_db "adminagora"
-cat $git/sql/adminagora.sql | sudo mysql -uroot -p$pass adminagora &> /dev/null
+cat "$git/sql/adminagora.sql" | sudo mysql -uroot -p"$pass" adminagora &> /dev/null
 
 chmod 444 $wwwdir/portal/config/config.php
 
@@ -27,23 +26,25 @@ mkdir_777 $localdatadir/localmuc
 
 # Program local crons
 sudo cp $git/crons/moodle_webserver /etc/cron.d/
+sudo sed -i "s/www-data/apache/" /etc/cron.d/moodle_webserver
 
 sudo cp $wwwdir/config/.htaccess-dist $wwwdir/config/.htaccess
 sudo cp $wwwdir/config/env-config-dist.php $wwwdir/config/env-config.php
 sudo cp $wwwdir/config/sync-config-dist.sh $wwwdir/config/sync-config.sh
 chmod +x $wwwdir/config/sync.sh $wwwdir/config/sync-config.sh
-htpasswd -nbB xtecadmin $pass > $wwwdir/config/.htpasswd
+htpasswd -nbB xtecadmin "$pass" > $wwwdir/config/.htpasswd
 sudo cp $wwwdir/.htaccess-dist $wwwdir/.htaccess
 
 # Set password
-sudo sed -i "s/\['userpwd'\] = ''/\['userpwd'\] = 'agora'/" $wwwdir/config/env-config.php
-sudo sed -i "s/\['password'\] = ''/\['password'\] = '6142bfd56a583d891f0b1dcdbb2a9ef8'/" $wwwdir/config/env-config.php
+sudo sed -i "s/\['userpwd'\] = ''/\['userpwd'\] = '$pass'/" $wwwdir/config/env-config.php
+sudo sed -i "s/\['password'\] = ''/\['password'\] = '$passmd5'/" $wwwdir/config/env-config.php
 
 # Update wordpress/.htaccess if it exists (vagrant up using existing code)
 if [ -f "$wwwdir/wordpress/.htaccess" ]; then sudo chmod 666 $wwwdir/wordpress/.htaccess; fi
 sudo cp $wwwdir/wordpress/.htaccess-dist $wwwdir/wordpress/.htaccess
 chmod 444 $wwwdir/wordpress/.htaccess
 
+# Create the sites
 /vms/agora/create_moodle.sh usu1 usu1 $rootdir pri
 /vms/agora/create_moodle.sh usu2 usu2 $rootdir sec
 /vms/agora/create_moodle.sh usu3 usu3 $rootdir pri

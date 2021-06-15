@@ -2,13 +2,29 @@
 
 pass=$1
 
-echo 'Install PostgreSQL'
+echo 'Installing PostgreSQL...'
 
-sudo apt-get install -qq postgresql postgresql-contrib &> /dev/null
+# Add repository
+sudo amazon-linux-extras install -y postgresql10 &> /dev/null
 
-sudo sed -i "s/#listen_addresses = 'localhost'/listen_addresses = '*'/g" /etc/postgresql/10/main/postgresql.conf
-sudo echo "host   all all 0.0.0.0/0   md5" >> /etc/postgresql/10/main/pg_hba.conf
+# Install packages
+sudo yum install -y postgresql-server postgresql-devel &> /dev/null
 
-sudo service postgresql restart
+# Initialize postgres
+sudo /usr/bin/postgresql-setup --initdb &> /dev/null
 
+# Load on start up
+sudo systemctl enable postgresql &> /dev/null
+
+# Start service now
+sudo systemctl start postgresql &> /dev/null
+
+# Allow remote connection
+sudo sed -i "s/#listen_addresses = 'localhost'/listen_addresses = '*'/g" /var/lib/pgsql/data/postgresql.conf
+sudo sed -i "s#127.0.0.1/32            ident#0.0.0.0/0               trust#g" /var/lib/pgsql/data/pg_hba.conf
+#echo "host   all all 0.0.0.0/0   md5" | sudo tee --append /var/lib/pgsql/data/pg_hba.conf &> /dev/null
+
+sudo service postgresql restart &> /dev/null
+
+# Change master password
 sudo -u postgres psql -c "ALTER USER postgres WITH PASSWORD '$pass';" &> /dev/null

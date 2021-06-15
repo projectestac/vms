@@ -1,6 +1,7 @@
 #!/bin/bash
 
 pass=agora
+passmd5=$(printf '%s' "$pass" | md5sum | cut -d ' ' -f 1)
 
 function mysql_import_db {
     dbname=$1
@@ -22,7 +23,7 @@ function mkdir_777 {
 function chown_777 {
     folder=$1
 
-    sudo chown -R vagrant:www-data $folder
+    sudo chown -R vagrant:apache $folder
     sudo chmod -R 777 $folder
 }
 

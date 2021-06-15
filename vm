@@ -28,7 +28,7 @@ function clone_project_git {
     fi
 }
 
-git pull origin master
+git pull origin agora-aws-linux2
 
 if ! vagrant plugin list | grep -q vagrant-hosts; then
     vagrant plugin install vagrant-hosts

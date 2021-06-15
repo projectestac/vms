@@ -1,90 +1,108 @@
 #!/bin/bash
 
-#wwwdir=/vms/web
+echo 'Enabling PHP 7.3 repository...'
+sudo amazon-linux-extras enable php7.3 &> /dev/null
 
-echo 'Install PHP 7.3'
+echo 'Disabling docker repository...'
+sudo amazon-linux-extras disable docker &> /dev/null
 
-sudo add-apt-repository ppa:ondrej/php &> /dev/null
-sudo apt-get update &> /dev/null
+echo 'Installing unoconv...'
+sudo amazon-linux-extras enable libreoffice -y &> /dev/null
 
-sudo apt-get install -qq apache2 libapache2-mod-xsendfile php7.3 php7.3-curl php7.3-tidy php7.3-gd php7.3-xml php7.3-xmlrpc php7.3-intl php7.3-cli php-pear php7.3-dev php7.3-ldap libapache2-mod-php7.3 php-codesniffer php7.3-mbstring php7.3-pgsql php7.3-mysql php-gettext php7.3-zip php7.3-soap php7.3-tokenizer php7.3-imagick &> /dev/null
+echo 'Installing Apache and PHP...'
+sudo yum install -y httpd php php-{opcache,curl,tidy,gd,xml,xmlrpc,intl,pear,mbstring,pgsql,gettext,zip,soap,redis,tokenize} &> /dev/null
 
-sudo mkdir /etc/apache2/sites-agora
-sudo cp -R /vms/provision/conf/* /etc/apache2/sites-agora
+echo 'Configuring Apache and PHP...'
+sudo cp /vms/provision/conf/agora.conf /etc/httpd/conf/
+sudo mv /etc/httpd/conf/httpd.conf /etc/httpd/conf/httpd.conf.bak
+sudo cp /vms/provision/conf/httpd.conf /etc/httpd/conf/
 
-echo "Include sites-agora/" | sudo tee -a /etc/apache2/apache2.conf
-echo "Mutex flock" | sudo tee -a /etc/apache2/apache2.conf
-echo "AddType application/wasm .wasm" | sudo tee -a /etc/apache2/apache2.conf
+sudo mv /etc/httpd/conf.d/autoindex.conf /etc/httpd/conf.d/autoindex.conf.bak
+sudo mv /etc/httpd/conf.d/userdir.conf /etc/httpd/conf.d/userdir.conf.bak
+sudo mv /etc/httpd/conf.d/welcome.conf /etc/httpd/conf.d/welcome.conf.bak
+sudo mv /etc/httpd/conf.modules.d/00-dav.conf /etc/httpd/conf.modules.d/00-dav.conf.bak
+sudo mv /etc/httpd/conf.modules.d/00-lua.conf /etc/httpd/conf.modules.d/00-lua.conf.bak
+sudo mv /etc/httpd/conf.modules.d/00-proxy.conf /etc/httpd/conf.modules.d/00-proxy.conf.bak
+sudo mv /etc/httpd/conf.modules.d/10-proxy_h2.conf /etc/httpd/conf.modules.d/10-proxy_h2.conf.bak
 
-sudo rm /etc/apache2/sites-enabled/*.conf
-sudo ln -s /etc/apache2/sites-agora/agora.conf /etc/apache2/sites-enabled/agora.conf
+sudo sed -i "s@LoadModule access_compat_module modules/mod_access_compat.so@#LoadModule access_compat_module modules/mod_access_compat.so@" /etc/httpd/conf.modules.d/00-base.conf
+sudo sed -i "s@LoadModule actions_module modules/mod_actions.so@#LoadModule actions_module modules/mod_actions.so@" /etc/httpd/conf.modules.d/00-base.conf
+sudo sed -i "s@LoadModule allowmethods_module modules/mod_allowmethods.so@#LoadModule allowmethods_module modules/mod_allowmethods.so@" /etc/httpd/conf.modules.d/00-base.conf
+sudo sed -i "s@LoadModule auth_digest_module modules/mod_auth_digest.so@#LoadModule auth_digest_module modules/mod_auth_digest.so@" /etc/httpd/conf.modules.d/00-base.conf
+sudo sed -i "s@LoadModule authn_anon_module modules/mod_authn_anon.so@#LoadModule authn_anon_module modules/mod_authn_anon.so@" /etc/httpd/conf.modules.d/00-base.conf
+sudo sed -i "s@LoadModule authn_dbd_module modules/mod_authn_dbd.so@#LoadModule authn_dbd_module modules/mod_authn_dbd.so@" /etc/httpd/conf.modules.d/00-base.conf
+sudo sed -i "s@LoadModule authn_dbm_module modules/mod_authn_dbm.so@#LoadModule authn_dbm_module modules/mod_authn_dbm.so@" /etc/httpd/conf.modules.d/00-base.conf
+sudo sed -i "s@LoadModule authn_socache_module modules/mod_authn_socache.so@#LoadModule authn_socache_module modules/mod_authn_socache.so@" /etc/httpd/conf.modules.d/00-base.conf
+sudo sed -i "s@LoadModule authz_dbd_module modules/mod_authz_dbd.so@#LoadModule authz_dbd_module modules/mod_authz_dbd.so@" /etc/httpd/conf.modules.d/00-base.conf
+sudo sed -i "s@LoadModule authz_dbm_module modules/mod_authz_dbm.so@#LoadModule authz_dbm_module modules/mod_authz_dbm.so@" /etc/httpd/conf.modules.d/00-base.conf
+sudo sed -i "s@LoadModule authz_groupfile_module modules/mod_authz_groupfile.so@#LoadModule authz_groupfile_module modules/mod_authz_groupfile.so@" /etc/httpd/conf.modules.d/00-base.conf
+sudo sed -i "s@LoadModule authz_host_module modules/mod_authz_host.so@#LoadModule authz_host_module modules/mod_authz_host.so@" /etc/httpd/conf.modules.d/00-base.conf
+sudo sed -i "s@LoadModule authz_owner_module modules/mod_authz_owner.so@#LoadModule authz_owner_module modules/mod_authz_owner.so@" /etc/httpd/conf.modules.d/00-base.conf
+sudo sed -i "s@LoadModule autoindex_module modules/mod_autoindex.so@#LoadModule autoindex_module modules/mod_autoindex.so@" /etc/httpd/conf.modules.d/00-base.conf
+sudo sed -i "s@LoadModule cache_socache_module modules/mod_cache_socache.so@#LoadModule cache_socache_module modules/mod_cache_socache.so@" /etc/httpd/conf.modules.d/00-base.conf
+sudo sed -i "s@LoadModule data_module modules/mod_data.so@#LoadModule data_module modules/mod_data.so@" /etc/httpd/conf.modules.d/00-base.conf
+sudo sed -i "s@LoadModule dbd_module modules/mod_dbd.so@#LoadModule dbd_module modules/mod_dbd.so@" /etc/httpd/conf.modules.d/00-base.conf
+sudo sed -i "s@LoadModule info_module modules/mod_info.so@#LoadModule info_module modules/mod_info.so@" /etc/httpd/conf.modules.d/00-base.conf
+sudo sed -i "s@LoadModule macro_module modules/mod_macro.so@#LoadModule macro_module modules/mod_macro.so@" /etc/httpd/conf.modules.d/00-base.conf
+sudo sed -i "s@LoadModule slotmem_plain_module modules/mod_slotmem_plain.so@#LoadModule slotmem_plain_module modules/mod_slotmem_plain.so@" /etc/httpd/conf.modules.d/00-base.conf
+sudo sed -i "s@LoadModule slotmem_shm_module modules/mod_slotmem_shm.so@#LoadModule slotmem_shm_module modules/mod_slotmem_shm.so@" /etc/httpd/conf.modules.d/00-base.conf
+sudo sed -i "s@LoadModule socache_dbm_module modules/mod_socache_dbm.so@#LoadModule socache_dbm_module modules/mod_socache_dbm.so@" /etc/httpd/conf.modules.d/00-base.conf
+sudo sed -i "s@LoadModule substitute_module modules/mod_substitute.so@#LoadModule substitute_module modules/mod_substitute.so@" /etc/httpd/conf.modules.d/00-base.conf
+sudo sed -i "s@LoadModule suexec_module modules/mod_suexec.so@#LoadModule suexec_module modules/mod_suexec.so@" /etc/httpd/conf.modules.d/00-base.conf
+sudo sed -i "s@LoadModule unique_id_module modules/mod_unique_id.so@#LoadModule unique_id_module modules/mod_unique_id.so@" /etc/httpd/conf.modules.d/00-base.conf
+sudo sed -i "s@LoadModule userdir_module modules/mod_userdir.so@#LoadModule userdir_module modules/mod_userdir.so@" /etc/httpd/conf.modules.d/00-base.conf
 
-echo "ServerName localhost" | sudo tee /etc/apache2/conf-available/fqdn.conf
+echo 'Configuring fake certificate...'
+sudo systemctl enable httpd > /dev/null 2>&1
+sudo systemctl start httpd > /dev/null 2>&1
+sudo yum install -y mod_ssl > /dev/null 2>&1
+pushd /etc/pki/tls/certs/ > /dev/null || exit
+sudo ./make-dummy-cert localhost.crt > /dev/null 2>&1
+sudo cp localhost.crt ../private/localhost.key > /dev/null
+popd > /dev/null || exit
 
-sudo a2enconf fqdn
-sudo a2enmod ssl
-sudo a2enmod rewrite
-sudo a2ensite default-ssl
+# PHP Configuration
+sudo sed -i '$ a\date.timezone = "Europe/Madrid"' /etc/php.ini
+sudo sed -i "s/memory_limit = .*/memory_limit = 2048M/" /etc/php.ini
+sudo sed -i "s/post_max_size = .*/post_max_size = 25M/" /etc/php.ini
+sudo sed -i "s/upload_max_filesize = .*/upload_max_filesize = 25M/" /etc/php.ini
+sudo sed -i "s/; max_input_vars = .*/max_input_vars = 6000/" /etc/php.ini
+sudo sed -i "s/allow_url_fopen = .*/allow_url_fopen = On/" /etc/php.ini
+sudo sed -i "s/max_execution_time = .*/max_execution_time = 600/" /etc/php.ini
+sudo sed -i "$ a\disable_functions = pcntl_alarm,pcntl_fork,pcntl_waitpid,pcntl_wait,pcntl_wifexited,pcntl_wifstopped,pcntl_wifsignaled,pcntl_wifcontinued,pcntl_wexitstatus,pcntl_wtermsig,pcntl_wstopsig,pcntl_signal,pcntl_signal_get_handler,pcntl_signal_dispatch,pcntl_get_last_error,pcntl_strerror,pcntl_sigprocmask,pcntl_sigwaitinfo,pcntl_sigtimedwait,pcntl_exec,pcntl_getpriority,pcntl_setpriority,pcntl_async_signals," /etc/php.ini
 
-sudo service apache2 start
+# CLI will be different from web
+sudo cp /etc/php.ini /etc/php-cli.ini
+sudo sed -i "s/max_execution_time = .*/max_execution_time = 0/" /etc/php.ini
 
-#PHP Configuration
-sudo sed -i '$ a\date.timezone = "Europe/Madrid"' /etc/php/7.3/apache2/php.ini
-sudo sed -i "s/memory_limit = .*/memory_limit = 256M/" /etc/php/7.3/apache2/php.ini
-sudo sed -i "s/post_max_size = .*/post_max_size = 100M/" /etc/php/7.3/apache2/php.ini
-sudo sed -i "s/upload_max_filesize = .*/upload_max_filesize = 100M/" /etc/php/7.3/apache2/php.ini
-sudo sed -i "s/;max_input_vars = .*/max_input_vars = 5000/" /etc/php/7.3/apache2/php.ini
-sudo sed -i "s/allow_url_fopen = .*/allow_url_fopen = On/" /etc/php/7.3/apache2/php.ini
-sudo sed -i "s/max_execution_time = .*/max_execution_time = 600/" /etc/php/7.3/apache2/php.ini
-sudo sed -i "s/error_reporting = .*/error_reporting = E_ALL/" /etc/php/7.3/apache2/php.ini
-sudo sed -i "s/display_errors = .*/display_errors = On/" /etc/php/7.3/apache2/php.ini
-sudo sed -i "s/display_startup_errors = .*/display_startup_errors = On/" /etc/php/7.3/apache2/php.ini
-sudo sed -i "s/;error_log = php_errors.log/error_log = \/var\/log\/apache2\/php_errors.log/" /etc/php/7.3/apache2/php.ini
-
-sudo sed -i '$ a\date.timezone = "Europe/Madrid"' /etc/php/7.3/cli/php.ini
-sudo sed -i "s/memory_limit = .*/memory_limit = 256M/" /etc/php/7.3/cli/php.ini
-sudo sed -i "s/max_input_vars = .*/max_input_vars = 5000/" /etc/php/7.3/cli/php.ini
-sudo sed -i "s/allow_url_fopen = .*/allow_url_fopen = On/" /etc/php/7.3/cli/php.ini
-sudo sed -i "s/error_reporting = .*/error_reporting = E_ALL/" /etc/php/7.3/cli/php.ini
-sudo sed -i "s/display_errors = .*/display_errors = On/" /etc/php/7.3/cli/php.ini
-sudo sed -i "s/display_startup_errors = .*/display_startup_errors = On/" /etc/php/7.3/cli/php.ini
-sudo sed -i "s/;error_log = php_errors.log/error_log = \/var\/log\/apache2\/php_errors.log/" /etc/php/7.3/cli/php.ini
-
-# Log
-sudo sed -i "s/create 640.*/create 777 vagrant vagrant/" /etc/logrotate.d/apache2
-sudo chmod -R 777 /var/log/apache2/
-sudo chown -R vagrant:vagrant /var/log/apache2/
-
-# Make Vagrant execute apache
-sudo sed -i "s/export APACHE_RUN_USER=.*/export APACHE_RUN_USER=vagrant/" /etc/apache2/envvars
-sudo chown -R vagrant /var/lock/apache2
-sudo adduser vagrant www-data
-
-# Configure opcache
-echo "opcache.enable=1" | sudo tee -a /etc/php/7.3/mods-available/opcache.ini
-echo "opcache.memory_consumption=256" | sudo tee -a /etc/php/7.3/mods-available/opcache.ini
-echo "opcache.max_accelerated_files=4000" | sudo tee -a /etc/php/7.3/mods-available/opcache.ini
+# OPCache configuration
+sudo sed -i "s/;opcache.enable_cli=.*/opcache.enable_cli=1/" /etc/php.d/10-opcache.ini
+sudo sed -i "s/opcache.memory_consumption=.*/opcache.memory_consumption=256/" /etc/php.d/10-opcache.ini
+sudo sed -i "s/opcache.interned_strings_buffer=.*/opcache.interned_strings_buffer=8/" /etc/php.d/10-opcache.ini
+sudo sed -i "s/opcache.max_accelerated_files=.*/opcache.max_accelerated_files=10000/" /etc/php.d/10-opcache.ini
+sudo sed -i "s/;opcache.use_cwd=.*/opcache.use_cwd=1/" /etc/php.d/10-opcache.ini
+sudo sed -i "s/;opcache.validate_timestamps=.*/opcache.validate_timestamps=1/" /etc/php.d/10-opcache.ini
 # 0 for development, 60 for production
-echo "opcache.revalidate_freq=0" | sudo tee -a /etc/php/7.3/mods-available/opcache.ini
-echo "opcache.interned_strings_buffer=8" | sudo tee -a /etc/php/7.3/mods-available/opcache.ini
-echo "opcache.enable_cli=1" | sudo tee -a /etc/php/7.3/mods-available/opcache.ini
-echo "; Required for Moodle" | sudo tee -a /etc/php/7.3/mods-available/opcache.ini
-echo "opcache.use_cwd = 1" | sudo tee -a /etc/php/7.3/mods-available/opcache.ini
-echo "opcache.validate_timestamps = 1" | sudo tee -a /etc/php/7.3/mods-available/opcache.ini
-echo "opcache.save_comments = 1" | sudo tee -a /etc/php/7.3/mods-available/opcache.ini
-echo "opcache.enable_file_override = 0" | sudo tee -a /etc/php/7.3/mods-available/opcache.ini
+sudo sed -i "s/;opcache.revalidate_freq=.*/opcache.revalidate_freq=0/" /etc/php.d/10-opcache.ini
+sudo sed -i "s/;opcache.enable_file_override=.*/opcache.enable_file_override=0/" /etc/php.d/10-opcache.ini
 
-echo 'Install memcached and redis'
-sudo apt-get install -qq php7.3-memcached php7.3-redis memcached redis-server &> /dev/null
+# Log configuration
+sudo ln -s /var/log/httpd /var/log/apache2
+sudo chmod -R 777 /var/log/apache2/
 
-#echo 'Install XDebug'
-#sudo apt-get install -qq php7.3-xdebug &> /dev/null
+echo 'Installing memcached and redis...'
+sudo amazon-linux-extras enable redis6 > /dev/null 2>&1
+sudo yum install -y memcached redis php-memcached > /dev/null 2>&1
+sudo systemctl enable memcached.service > /dev/null 2>&1
+sudo systemctl enable redis > /dev/null 2>&1
+sudo systemctl start memcached.service > /dev/null 2>&1
+sudo systemctl start redis > /dev/null 2>&1
 
-#echo "xdebug.mode=debug" | sudo tee -a /etc/php/7.3/apache2/conf.d/20-xdebug.ini
-#echo "xdebug.idekey=\"vagrant\"" | sudo tee -a /etc/php/7.3/apache2/conf.d/20-xdebug.ini
-#echo "xdebug.cli_color=0" | sudo tee -a /etc/php/7.3/apache2/conf.d/20-xdebug.ini
-#echo "xdebug.start_with_request=no" | sudo tee -a /etc/php/7.3/apache2/conf.d/20-xdebug.ini
-#echo "xdebug.client_port=9003" | sudo tee -a /etc/php/7.3/apache2/conf.d/20-xdebug.ini
-#echo "xdebug.client_host=10.0.2.15 " | sudo tee -a /etc/php/7.3/apache2/conf.d/20-xdebug.ini
+echo 'Configuring mod_xsendfile...'
+pushd /tmp/ &> /dev/null || exit
+wget https://tn123.org/mod_xsendfile/mod_xsendfile.c &> /dev/null
+sudo yum install gcc httpd-devel -y &> /dev/null
+sudo apxs -cia mod_xsendfile.c &> /dev/null
+popd &> /dev/null || exit
 
-sudo service apache2 restart
+sudo service httpd start > /dev/null 2>&1

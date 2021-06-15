@@ -1,10 +1,7 @@
-
 Vagrant.configure(2) do |config|
 
-  config.vm.box = "ubuntu/bionic64"
-
+  config.vm.box = "gbailey/amzn2"
   config.vm.provision :shell, inline: "hostnamectl set-hostname agora"
-
   config.vm.provision :hosts do |provisioner|
     provisioner.add_host '127.0.0.1', ["agora-aws.xtec.cat"]
   end
@@ -18,15 +15,12 @@ Vagrant.configure(2) do |config|
 
   config.vm.provider "virtualbox" do |vb|
     vb.customize ["modifyvm", :id,
-                  "--name", "agora",
+                  "--name", "agora-aws-linux2",
+                  "--cpus", "2",
                   "--memory", "1000",
                   "--natdnshostresolver1", "on",
                   "--natdnsproxy1", "on"]
   end
-
-  #config.push.define "atlas" do |push|
-  #  push.app = "projectestac/agora"
-  #end
 
   # config.disksize.size = '15GB'
 
