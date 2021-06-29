@@ -10,7 +10,7 @@ echo 'Installing unoconv...'
 sudo amazon-linux-extras enable libreoffice -y &> /dev/null
 
 echo 'Installing Apache and PHP...'
-sudo yum install -y httpd php php-{opcache,curl,tidy,gd,xml,xmlrpc,intl,pear,mbstring,pgsql,gettext,zip,soap,redis,tokenize} &> /dev/null
+sudo yum install -y httpd php php-{opcache,curl,tidy,gd,xml,xmlrpc,intl,pear,mbstring,gettext,zip,soap,sodium,redis,tokenize} &> /dev/null
 
 echo 'Configuring Apache and PHP...'
 sudo cp /vms/provision/conf/agora.conf /etc/httpd/conf/

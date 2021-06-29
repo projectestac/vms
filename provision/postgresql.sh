@@ -8,7 +8,7 @@ echo 'Installing PostgreSQL...'
 sudo amazon-linux-extras install -y postgresql10 &> /dev/null
 
 # Install packages
-sudo yum install -y postgresql-server postgresql-devel &> /dev/null
+sudo yum install -y postgresql-server postgresql-devel php-pgsql &> /dev/null
 
 # Initialize postgres
 sudo /usr/bin/postgresql-setup --initdb &> /dev/null
@@ -18,6 +18,10 @@ sudo systemctl enable postgresql &> /dev/null
 
 # Start service now
 sudo systemctl start postgresql &> /dev/null
+
+# Restart Apache
+sudo systemctl restart httpd > /dev/null 2>&1
+
 
 # Allow remote connection
 sudo sed -i "s/#listen_addresses = 'localhost'/listen_addresses = '*'/g" /var/lib/pgsql/data/postgresql.conf
