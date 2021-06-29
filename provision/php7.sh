@@ -23,6 +23,7 @@ sudo mv /etc/httpd/conf.d/welcome.conf /etc/httpd/conf.d/welcome.conf.bak
 sudo mv /etc/httpd/conf.modules.d/00-dav.conf /etc/httpd/conf.modules.d/00-dav.conf.bak
 sudo mv /etc/httpd/conf.modules.d/00-lua.conf /etc/httpd/conf.modules.d/00-lua.conf.bak
 sudo mv /etc/httpd/conf.modules.d/00-proxy.conf /etc/httpd/conf.modules.d/00-proxy.conf.bak
+sudo mv /etc/httpd/conf.modules.d/10-h2.conf /etc/httpd/conf.modules.d/10-h2.conf.bak
 sudo mv /etc/httpd/conf.modules.d/10-proxy_h2.conf /etc/httpd/conf.modules.d/10-proxy_h2.conf.bak
 
 sudo sed -i "s@LoadModule access_compat_module modules/mod_access_compat.so@#LoadModule access_compat_module modules/mod_access_compat.so@" /etc/httpd/conf.modules.d/00-base.conf
