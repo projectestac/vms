@@ -18,7 +18,7 @@ export PGPASSWORD=$pass
 psql -U postgres -h localhost -c "CREATE USER $dbuser WITH ENCRYPTED PASSWORD '$pass';" &> /dev/null
 psql -U postgres -h localhost -c "ALTER ROLE $dbuser Superuser;" &> /dev/null
 psql -U postgres -h localhost -c "CREATE DATABASE $dbuser OWNER $dbuser LC_COLLATE ='ca_ES.UTF-8' LC_CTYPE = 'ca_ES.UTF-8' TEMPLATE template0;" &> /dev/null
-psql -U $dbuser -h localhost -d $dbuser -1 -f $git/dump/alexandria-38-pg.sql &> /dev/null
+psql -U $dbuser -h localhost -d $dbuser -1 -f $git/dump/alexandria-pg.sql &> /dev/null
 
 mkdir_777 $datadir
 mkdir_777 $localdatadir
