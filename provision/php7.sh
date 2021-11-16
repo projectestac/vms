@@ -21,7 +21,7 @@ echo "ServerName localhost" | sudo tee /etc/apache2/conf-available/fqdn.conf
 
 sudo a2enconf fqdn
 sudo a2enmod ssl
-sudo a2enmod rewrite
+#sudo a2enmod rewrite
 sudo a2ensite default-ssl
 
 sudo service apache2 start
