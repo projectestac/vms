@@ -5,30 +5,33 @@
 function clone_project {
     project=$1
     branch=$2
-    giturl=git@github.com:projectestac/$project.git
-    clone_project_git "$project" "$giturl" "$branch"
+    dir=$3
+    giturl=git@github.com:IOC/$project.git
+    clone_project_git "$project" "$giturl" "$branch" "$dir"
 }
 
 function clone_project_git {
     project=$1
     giturl=$2
     branch=$3
+    dir=$4
     homedir=$(pwd)
-    if [ ! -d "$homedir/../$project" ]; then
-        echo "Project $project not found, cloning..."
-        git clone "$giturl" "$homedir/../$project"
-        if [[ $branch -ne 'master' ]]; then
-            pushd "$homedir/../$project" || return
+    if [ ! -d "$homedir/../$dir" ]; then
+        echo "Project $project not found, cloning branch $branch in directory $dir..."
+        git clone "$giturl" "$homedir/../$dir"
+        if [[ $branch != 'master' ]]; then
+            pushd "$homedir/../$dir" || return
             git checkout -b "$branch" "origin/$branch"
             popd || return
         fi
-        pushd "$homedir/../$project" || return
+        pushd "$homedir/../$dir" || return
         git submodule update --recursive --init
         popd || return
     fi
 }
 
-git pull origin master
+# vms branch
+git pull origin ioc-moodle
 
 if ! vagrant plugin list | grep -q vagrant-hosts; then
     vagrant plugin install vagrant-hosts
@@ -38,8 +41,9 @@ if ! vagrant plugin list | grep -q vagrant-disksize; then
     vagrant plugin install vagrant-disksize
 fi
 
-clone_project agora master
-#clone_project_git moodlemobile2 https://github.com/moodlehq/moodlemobile2.git
+# Moodle branch
+clone_project moodle35 fmo moodle35
+clone_project moodle35 master moodle310
 
 vagrant box update
 

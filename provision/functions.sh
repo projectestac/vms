@@ -6,7 +6,7 @@ function mysql_import_db {
     dbname=$1
     sql=$2
 
-    echo "Importing DB  $dbname..."
+    echo "Importing DB $dbname..."
     create_mysql_db $dbname
     cat $sql | sudo mysql -uroot -p$pass $dbname &> /dev/null
     echo 'Done'
