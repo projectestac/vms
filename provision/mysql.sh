@@ -4,6 +4,7 @@ pass=$1
 
 echo 'Installing MySQL...'
 sudo rpm -Uvh https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm &> /dev/null
+sudo rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql-2022 &> /dev/null
 sudo yum install -y mysql-community-server php-mysqli &> /dev/null
 sudo systemctl enable mysqld &> /dev/null
 sudo systemctl start mysqld &> /dev/null
