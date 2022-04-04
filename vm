@@ -17,7 +17,7 @@ function clone_project_git {
     if [ ! -d "$homedir/../$project" ]; then
         echo "Project $project not found, cloning..."
         git clone "$giturl" "$homedir/../$project"
-        if [[ $branch -ne 'master' ]]; then
+        if [[ "$branch" != "master" ]]; then
             pushd "$homedir/../$project" || return
             git checkout -b "$branch" "origin/$branch"
             popd || return
