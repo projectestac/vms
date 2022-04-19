@@ -1,7 +1,7 @@
 
 Vagrant.configure(2) do |config|
 
-  config.vm.box = "ubuntu/bionic64"
+  config.vm.box = "ubuntu/focal64"
 
   config.vm.provision :shell, inline: "hostnamectl set-hostname ioc"
 
@@ -11,10 +11,8 @@ Vagrant.configure(2) do |config|
 
   config.vm.network "private_network", ip: "192.168.33.10"
 
-  config.vm.synced_folder "../moodle35", "/git/moodle35"
-  config.vm.synced_folder "../moodle310", "/git/moodle310"
-  config.vm.synced_folder "../moodle35", "/dades/html/moodle35"
-  config.vm.synced_folder "../moodle310", "/dades/html/moodle310"
+  config.vm.synced_folder "../moodle", "/git/moodle"
+  config.vm.synced_folder "../moodle", "/dades/html"
   config.vm.synced_folder ".", "/vms", mount_options: ["dmode=775,fmode=775"]
 
   config.vm.provider "virtualbox" do |vb|

@@ -45,6 +45,7 @@ sudo locale-gen ja_JP &> /dev/null
 sudo locale-gen ja_JP.utf8 &> /dev/null
 sudo locale-gen zh_CN &> /dev/null
 sudo locale-gen zh_CN.utf8 &> /dev/null
+sudo locale-gen en &> /dev/null
 
 # Set default locale
 sudo update-locale LANG=ca_ES.utf8

@@ -19,7 +19,7 @@ function clone_project_git {
     if [ ! -d "$homedir/../$dir" ]; then
         echo "Project $project not found, cloning branch $branch in directory $dir..."
         git clone "$giturl" "$homedir/../$dir"
-        if [[ $branch != 'master' ]]; then
+        if [[ "$branch" != "master" ]]; then
             pushd "$homedir/../$dir" || return
             git checkout -b "$branch" "origin/$branch"
             popd || return
@@ -42,8 +42,7 @@ if ! vagrant plugin list | grep -q vagrant-disksize; then
 fi
 
 # Moodle branch
-clone_project moodle35 fmo moodle35
-clone_project moodle35 master moodle310
+clone_project moodle35 master moodle
 
 vagrant box update
 
