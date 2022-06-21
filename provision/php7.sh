@@ -73,7 +73,7 @@ echo "opcache.save_comments = 1" | sudo tee -a /etc/php/7.4/mods-available/opcac
 echo "opcache.enable_file_override = 0" | sudo tee -a /etc/php/7.4/mods-available/opcache.ini
 
 echo 'Install memcached and redis'
-sudo apt-get install -qq php7.4-memcached php-redis memcached redis-server &> /dev/null
+sudo apt-get install -qq php7.4-memcached php7.4-redis memcached redis-server &> /dev/null
 
 #echo 'Install XDebug'
 #sudo apt-get install -qq php7.4-xdebug &> /dev/null
