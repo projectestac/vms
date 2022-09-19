@@ -1,7 +1,7 @@
 #!/bin/bash
 
-echo 'Enabling PHP 7.3 repository...'
-sudo amazon-linux-extras enable php7.3 &> /dev/null
+echo 'Enabling PHP 7.4 repository...'
+sudo amazon-linux-extras enable php7.4 &> /dev/null
 
 echo 'Disabling docker repository...'
 sudo amazon-linux-extras disable docker &> /dev/null
@@ -10,7 +10,10 @@ echo 'Installing unoconv...'
 sudo amazon-linux-extras enable libreoffice -y &> /dev/null
 
 echo 'Installing Apache and PHP...'
-sudo yum install -y httpd php php-{opcache,curl,tidy,gd,xml,xmlrpc,intl,pear,mbstring,gettext,zip,soap,sodium,redis,tokenize} &> /dev/null
+sudo yum install -y httpd php php-{opcache,curl,gd,xml,xmlrpc,intl,pear,mbstring,gettext,zip,soap,sodium,redis}
+
+echo 'Setting apache to start up on system boot...'
+sudo chkconfig httpd on
 
 echo 'Configuring Apache and PHP...'
 sudo cp /vms/provision/conf/agora.conf /etc/httpd/conf/
@@ -91,6 +94,13 @@ sudo sed -i "s/;opcache.enable_file_override=.*/opcache.enable_file_override=0/"
 sudo ln -s /var/log/httpd /var/log/apache2
 sudo chmod -R 777 /var/log/apache2/
 
+# Install extension php-imagick. There is no package in the repository, so it must be done manually.
+echo 'Installing php-imagick...'
+sudo yum -y install php-devel gcc ImageMagick-devel > /dev/null
+sudo bash -c "yes '' | pecl install -f imagick" > /dev/null
+sudo bash -c "echo 'extension=imagick.so' > /etc/php.d/30-imagick.ini"
+sudo yum remove -y php-devel gcc ImageMagick-devel > /dev/null
+
 echo 'Installing memcached and redis...'
 sudo amazon-linux-extras enable redis6 > /dev/null 2>&1
 sudo yum install -y memcached redis php-memcached > /dev/null 2>&1
@@ -98,12 +108,5 @@ sudo systemctl enable memcached.service > /dev/null 2>&1
 sudo systemctl enable redis > /dev/null 2>&1
 sudo systemctl start memcached.service > /dev/null 2>&1
 sudo systemctl start redis > /dev/null 2>&1
-
-echo 'Configuring mod_xsendfile...'
-pushd /tmp/ &> /dev/null || exit
-wget https://tn123.org/mod_xsendfile/mod_xsendfile.c &> /dev/null
-sudo yum install gcc httpd-devel -y &> /dev/null
-sudo apxs -cia mod_xsendfile.c &> /dev/null
-popd &> /dev/null || exit
 
 sudo service httpd start > /dev/null 2>&1
