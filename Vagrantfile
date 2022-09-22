@@ -1,9 +1,11 @@
 
 Vagrant.configure(2) do |config|
 
-  config.vm.box = "ubuntu/bionic64"
+  config.vm.box = "ubuntu/focal64"
 
   config.vm.provision :shell, inline: "hostnamectl set-hostname alexandria"
+
+  config.vm.boot_timeout = 500
 
   config.vm.provision :hosts do |provisioner|
     provisioner.add_host '127.0.0.1', ["alexandria-aws.xtec.cat"]

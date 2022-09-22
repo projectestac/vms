@@ -5,7 +5,7 @@ echo 'Install PHP 7.4'
 sudo add-apt-repository ppa:ondrej/php &> /dev/null
 sudo apt-get update &> /dev/null
 
-sudo apt-get install -qq apache2 php7.4 php7.4-curl php7.4-tidy php7.4-gd php7.4-xml php7.4-xmlrpc php7.4-intl php7.4-cli php-pear php7.4-dev libapache2-mod-php7.4 php-codesniffer php7.4-mbstring php7.4-pgsql php7.4-mysql php7.4-gettext php7.4-zip php7.4-soap php7.4-tokenizer &> /dev/null
+sudo apt-get install -qq apache2 php7.4 php7.4-curl php7.4-tidy php7.4-gd php7.4-xml php7.4-xmlrpc php7.4-intl php7.4-cli php-pear php7.4-dev libapache2-mod-php7.4 php-codesniffer php7.4-mbstring php7.4-pgsql php7.4-gettext php7.4-zip php7.4-soap php-sodium php7.4-tokenizer &> /dev/null
 
 sudo mkdir /etc/apache2/alexandria
 sudo cp -R /vms/provision/conf/* /etc/apache2/alexandria
@@ -21,7 +21,6 @@ echo "ServerName localhost" | sudo tee /etc/apache2/conf-available/fqdn.conf
 
 sudo a2enconf fqdn
 sudo a2enmod ssl
-sudo a2enmod rewrite
 sudo a2ensite default-ssl
 
 sudo service apache2 start
@@ -31,7 +30,7 @@ sudo sed -i '$ a\date.timezone = "Europe/Madrid"' /etc/php/7.4/apache2/php.ini
 sudo sed -i "s/memory_limit = .*/memory_limit = 512M/" /etc/php/7.4/apache2/php.ini
 sudo sed -i "s/post_max_size = .*/post_max_size = 100M/" /etc/php/7.4/apache2/php.ini
 sudo sed -i "s/upload_max_filesize = .*/upload_max_filesize = 200M/" /etc/php/7.4/apache2/php.ini
-sudo sed -i "s/;max_input_vars = .*/max_input_vars = 5000/" /etc/php/7.4/apache2/php.ini
+sudo sed -i "s/;max_input_vars = .*/max_input_vars = 6000/" /etc/php/7.4/apache2/php.ini
 sudo sed -i "s/allow_url_fopen = .*/allow_url_fopen = On/" /etc/php/7.4/apache2/php.ini
 sudo sed -i "s/max_execution_time = .*/max_execution_time = 600/" /etc/php/7.4/apache2/php.ini
 sudo sed -i "s/error_reporting = .*/error_reporting = E_ALL/" /etc/php/7.4/apache2/php.ini
@@ -41,7 +40,7 @@ sudo sed -i "s/;error_log = php_errors.log/error_log = \/var\/log\/apache2\/php_
 
 sudo sed -i '$ a\date.timezone = "Europe/Madrid"' /etc/php/7.4/cli/php.ini
 sudo sed -i "s/memory_limit = .*/memory_limit = 512/" /etc/php/7.4/cli/php.ini
-sudo sed -i "s/max_input_vars = .*/max_input_vars = 5000/" /etc/php/7.4/cli/php.ini
+sudo sed -i "s/;max_input_vars = .*/max_input_vars = 6000/" /etc/php/7.4/cli/php.ini
 sudo sed -i "s/allow_url_fopen = .*/allow_url_fopen = On/" /etc/php/7.4/cli/php.ini
 sudo sed -i "s/error_reporting = .*/error_reporting = E_ALL/" /etc/php/7.4/cli/php.ini
 sudo sed -i "s/display_errors = .*/display_errors = On/" /etc/php/7.4/cli/php.ini
