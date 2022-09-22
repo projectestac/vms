@@ -14,6 +14,7 @@ $CFG->prefix = 'mdl_';
 
 $CFG->dboptions = [
     'dbpersist' => 0,
+    'fetchbuffersize' => 0,
     'dbsocket' => 0,
     'dbport' => 5432,
 ];
@@ -38,6 +39,6 @@ $CFG->noreplyaddress = '';
 // $CFG->debug = (E_ALL | E_STRICT);   // === DEBUG_DEVELOPER - NOT FOR PRODUCTION SERVERS!
 // $CFG->debugdisplay = 1;             // NOT FOR PRODUCTION SERVERS!
 
-require_once(dirname(__FILE__) . '/local/agora/lib.php');
-require_once(dirname(__FILE__) . '/settings.php');
-require_once(dirname(__FILE__) . '/lib/setup.php');
+require_once(__DIR__ . '/local/agora/lib.php');
+require_once(__DIR__ . '/settings.php');
+require_once(__DIR__ . '/lib/setup.php');
