@@ -10,10 +10,10 @@ echo 'Installing unoconv...'
 sudo amazon-linux-extras enable libreoffice -y &> /dev/null
 
 echo 'Installing Apache and PHP...'
-sudo yum install -y httpd php php-{opcache,curl,gd,xml,xmlrpc,intl,pear,mbstring,gettext,zip,soap,sodium,redis}
+sudo yum install -y httpd php php-{opcache,curl,gd,xml,xmlrpc,intl,pear,mbstring,gettext,zip,soap,sodium,redis} &> /dev/null
 
 echo 'Setting apache to start up on system boot...'
-sudo chkconfig httpd on
+sudo systemctl enable httpd.service
 
 echo 'Configuring Apache and PHP...'
 sudo cp /vms/provision/conf/agora.conf /etc/httpd/conf/
@@ -66,6 +66,7 @@ sudo cp localhost.crt ../private/localhost.key > /dev/null
 popd > /dev/null || exit
 
 # PHP Configuration
+echo 'Configuring PHP...'
 sudo sed -i '$ a\date.timezone = "Europe/Madrid"' /etc/php.ini
 sudo sed -i "s/memory_limit = .*/memory_limit = 2048M/" /etc/php.ini
 sudo sed -i "s/post_max_size = .*/post_max_size = 25M/" /etc/php.ini
@@ -80,6 +81,7 @@ sudo cp /etc/php.ini /etc/php-cli.ini
 sudo sed -i "s/max_execution_time = .*/max_execution_time = 0/" /etc/php.ini
 
 # OPCache configuration
+echo 'Configuring OPCache...'
 sudo sed -i "s/;opcache.enable_cli=.*/opcache.enable_cli=1/" /etc/php.d/10-opcache.ini
 sudo sed -i "s/opcache.memory_consumption=.*/opcache.memory_consumption=256/" /etc/php.d/10-opcache.ini
 sudo sed -i "s/opcache.interned_strings_buffer=.*/opcache.interned_strings_buffer=8/" /etc/php.d/10-opcache.ini
