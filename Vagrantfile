@@ -11,9 +11,12 @@ Vagrant.configure(2) do |config|
 
   config.vm.network "private_network", ip: "192.168.33.5"
 
+  config.vm.network "forwarded_port", guest: 3306, host: 3306
+  config.vm.network "forwarded_port", guest: 5432, host: 5432
+  config.vm.network "forwarded_port", guest: 9003, host: 9003
+
   config.vm.synced_folder "../agora", "/git/agora"
   config.vm.synced_folder "../agora/html", "/dades/html"
-  #config.vm.synced_folder "../moodlemobile2", "/dades/moodlemobile2"
   config.vm.synced_folder ".", "/vms", mount_options: ["dmode=775,fmode=775"]
 
   config.vm.provider "virtualbox" do |vb|
@@ -23,10 +26,6 @@ Vagrant.configure(2) do |config|
                   "--natdnshostresolver1", "on",
                   "--natdnsproxy1", "on"]
   end
-
-  #config.push.define "atlas" do |push|
-  #  push.app = "projectestac/agora"
-  #end
 
   # config.disksize.size = '15GB'
 

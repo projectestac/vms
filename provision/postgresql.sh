@@ -2,7 +2,7 @@
 
 pass=$1
 
-echo 'Install PostgreSQL'
+echo 'Installing PostgreSQL...'
 
 sudo apt-get install -qq postgresql postgresql-contrib &> /dev/null
 

@@ -1,13 +1,11 @@
 #!/bin/bash
 
-#wwwdir=/vms/web
-
-echo 'Install PHP 7.3'
+echo 'Installing PHP 7.3...'
 
 sudo add-apt-repository ppa:ondrej/php &> /dev/null
 sudo apt-get update &> /dev/null
 
-sudo apt-get install -qq apache2 libapache2-mod-xsendfile php7.3 php7.3-curl php7.3-tidy php7.3-gd php7.3-xml php7.3-xmlrpc php7.3-intl php7.3-cli php-pear php7.3-dev php7.3-ldap libapache2-mod-php7.3 php-codesniffer php7.3-mbstring php7.3-pgsql php7.3-mysql php-gettext php7.3-zip php7.3-soap php-sodium php7.3-tokenizer php7.3-imagick &> /dev/null
+sudo apt-get install -qq apache2 php7.3 php7.3-curl php7.3-tidy php7.3-gd php7.3-xml php7.3-xmlrpc php7.3-intl php7.3-cli php-pear php7.3-dev libapache2-mod-php7.3 php-codesniffer php7.3-mbstring php7.3-pgsql php7.3-mysql php7.3-gettext php7.3-zip php7.3-soap php-sodium php7.3-tokenizer php7.3-imagick &> /dev/null
 
 sudo mkdir /etc/apache2/sites-agora
 sudo cp -R /vms/provision/conf/* /etc/apache2/sites-agora
@@ -74,10 +72,10 @@ echo "opcache.validate_timestamps = 1" | sudo tee -a /etc/php/7.3/mods-available
 echo "opcache.save_comments = 1" | sudo tee -a /etc/php/7.3/mods-available/opcache.ini
 echo "opcache.enable_file_override = 0" | sudo tee -a /etc/php/7.3/mods-available/opcache.ini
 
-echo 'Install memcached and redis'
+echo 'Installing memcached and redis...'
 sudo apt-get install -qq php7.3-memcached php7.3-redis memcached redis-server &> /dev/null
 
-#echo 'Install XDebug'
+#echo 'Installing XDebug...'
 #sudo apt-get install -qq php7.3-xdebug &> /dev/null
 
 #echo "xdebug.mode=debug" | sudo tee -a /etc/php/7.3/apache2/conf.d/20-xdebug.ini
