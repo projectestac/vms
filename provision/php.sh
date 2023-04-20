@@ -1,7 +1,7 @@
 #!/bin/bash
 
-echo 'Enabling PHP 8.0 repository...'
-sudo amazon-linux-extras enable php8.0 &> /dev/null
+echo 'Enabling PHP 8.1 repository...'
+sudo amazon-linux-extras enable php8.1 &> /dev/null
 
 echo 'Disabling docker repository...'
 sudo amazon-linux-extras disable docker &> /dev/null
@@ -98,13 +98,13 @@ sudo chmod -R 777 /var/log/apache2/
 
 # Install extension php-imagick. There is no package in the repository, so it must be done manually.
 echo 'Installing php-imagick, php-igbinary and php-redis...'
-sudo yum -y install php-devel gcc ImageMagick-devel > /dev/null
+sudo yum install -y php-devel gcc ImageMagick-devel > /dev/null
 sudo /usr/bin/bash -c "yes '' | pecl install -f imagick" > /dev/null
 sudo /usr/bin/bash -c "'' | pecl install -f igbinary" > /dev/null
-sudo bash -c "yes '' '' | pecl install -f redis" > /dev/null
-sudo bash -c "echo 'extension=imagick.so' > /etc/php.d/30-imagick.ini"
-sudo bash -c "echo 'extension=igbinary.so' > /etc/php.d/30-igbinary.ini"
-sudo bash -c "echo 'extension=redis.so' > /etc/php.d/40-redis.ini"
+sudo /usr/bin/bash -c "yes '' '' | pecl install -f redis" > /dev/null
+sudo /usr/bin/bash -c "echo 'extension=imagick.so' > /etc/php.d/30-imagick.ini"
+sudo /usr/bin/bash -c "echo 'extension=igbinary.so' > /etc/php.d/30-igbinary.ini"
+sudo /usr/bin/bash -c "echo 'extension=redis.so' > /etc/php.d/40-redis.ini"
 sudo yum remove -y php-devel gcc ImageMagick-devel > /dev/null
 
 echo 'Installing memcached and redis...'
