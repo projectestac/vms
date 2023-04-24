@@ -13,7 +13,7 @@ echo 'Installing Apache and PHP...'
 sudo yum install -y httpd php php-{opcache,curl,gd,xml,intl,pear,mbstring,gettext,zip,soap,sodium} &> /dev/null
 
 echo 'Setting apache to start up on system boot...'
-sudo systemctl enable httpd.service
+sudo systemctl enable httpd.service &> /dev/null
 
 echo 'Configuring Apache and PHP...'
 sudo cp /vms/provision/conf/agora.conf /etc/httpd/conf/
@@ -100,7 +100,7 @@ sudo chmod -R 777 /var/log/apache2/
 echo 'Installing php-imagick, php-igbinary and php-redis...'
 sudo yum install -y php-devel gcc ImageMagick-devel > /dev/null
 sudo /usr/bin/bash -c "yes '' | pecl install -f imagick" > /dev/null
-sudo /usr/bin/bash -c "'' | pecl install -f igbinary" > /dev/null
+sudo /usr/bin/bash -c "pecl install -f igbinary" > /dev/null
 sudo /usr/bin/bash -c "yes '' '' | pecl install -f redis" > /dev/null
 sudo /usr/bin/bash -c "echo 'extension=imagick.so' > /etc/php.d/30-imagick.ini"
 sudo /usr/bin/bash -c "echo 'extension=igbinary.so' > /etc/php.d/30-igbinary.ini"
