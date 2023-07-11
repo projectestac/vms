@@ -5,7 +5,7 @@ pass=$1
 echo 'Installing PostgreSQL...'
 
 # Add repository
-sudo amazon-linux-extras install -y postgresql13 &> /dev/null
+sudo amazon-linux-extras install -y postgresql14 &> /dev/null
 
 # Install packages
 sudo yum install -y postgresql-server postgresql-devel php-pgsql &> /dev/null
