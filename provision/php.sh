@@ -6,12 +6,12 @@ sudo amazon-linux-extras enable php8.1 &> /dev/null
 echo 'Disabling docker repository...'
 sudo amazon-linux-extras disable docker &> /dev/null
 
-echo 'Installing unoconv...'
-sudo amazon-linux-extras enable libreoffice &> /dev/null
-python -m pip install unoconv &> /dev/null
-sudo python -m pip install unoconv &> /dev/null
-sudo yum install -y libreoffice &> /dev/null
-sudo chmod 777 /usr/share/httpd/ &> /dev/null
+#echo 'Installing unoconv...'
+#sudo amazon-linux-extras enable libreoffice &> /dev/null
+#python -m pip install unoconv &> /dev/null
+#sudo python -m pip install unoconv &> /dev/null
+#sudo yum install -y libreoffice &> /dev/null
+#sudo chmod 777 /usr/share/httpd/ &> /dev/null
 
 echo 'Installing Apache and PHP...'
 sudo yum install -y httpd php php-{opcache,curl,gd,xml,intl,pear,mbstring,gettext,zip,soap,sodium} &> /dev/null

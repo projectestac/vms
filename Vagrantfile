@@ -10,12 +10,11 @@ Vagrant.configure(2) do |config|
 
   config.vm.synced_folder "../agora", "/git/agora"
   config.vm.synced_folder "../agora/html", "/dades/html"
-  #config.vm.synced_folder "../moodlemobile2", "/dades/moodlemobile2"
   config.vm.synced_folder ".", "/vms", mount_options: ["dmode=775,fmode=775"]
 
   config.vm.provider "virtualbox" do |vb|
     vb.customize ["modifyvm", :id,
-                  "--name", "agora-aws-linux2",
+                  "--name", "agora-aws-linux2-new-portal",
                   "--cpus", "2",
                   "--memory", "1000",
                   "--natdnshostresolver1", "on",

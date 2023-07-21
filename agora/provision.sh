@@ -10,16 +10,32 @@ datadir=$rootdir/data
 localdatadir=$rootdir/localdata
 git=/git/agora
 
-# Portal
+# Zikula-based Portal
 create_mysql_db "adminagora"
 cat "$git/sql/adminagora.sql" | sudo mysql -uroot -p"$pass" adminagora &> /dev/null
 
-chmod 444 $wwwdir/portal/config/config.php
+chmod 444 $wwwdir/portal_zk/config/config.php
+
+# Laravel-based Portal
+create_mysql_db "portal"
+
+cp $wwwdir/portal/.env.example $wwwdir/portal/.env
+sudo sed -i "s/DB_PASSWORD=/DB_PASSWORD=agora/" $wwwdir/portal/.env
+
+pushd $wwwdir/portal > /dev/null || exit
+sudo /usr/bin/bash -c "php artisan key:generate" &> /dev/null
+sudo /usr/bin/bash -c "php artisan migrate:fresh --seed" &> /dev/null
+sudo /usr/bin/bash -c "php artisan optimize:clear" &> /dev/null
+sudo /usr/bin/bash -c "php artisan config:cache" &> /dev/null
+popd > /dev/null || exit
 
 # Data docs
 mkdir_777 $datadir
 sudo cp -R $git/data/* $datadir
 chown_777 $datadir
+
+# Temporal directory for uploading large files.
+mkdir_777 $datadir/portaldata/tmp
 
 mkdir_777 $localdatadir/syncdata
 mkdir_777 $localdatadir/localmuc
@@ -45,15 +61,15 @@ sudo cp $wwwdir/wordpress/.htaccess-dist $wwwdir/wordpress/.htaccess
 chmod 444 $wwwdir/wordpress/.htaccess
 
 # Create the sites
-/vms/agora/create_moodle.sh usu1 usu1 $rootdir pri
-/vms/agora/create_moodle.sh usu2 usu2 $rootdir sec
-/vms/agora/create_moodle.sh usu3 usu3 $rootdir pri
-/vms/agora/create_moodle.sh usu4 usu4 $rootdir sec
+/vms/agora/create_moodle.sh usu1 centre-1 $rootdir pri
+/vms/agora/create_moodle.sh usu2 centre-2 $rootdir sec
+/vms/agora/create_moodle.sh usu3 centre-3 $rootdir pri
+/vms/agora/create_moodle.sh usu4 centre-4 $rootdir sec
 
-/vms/agora/create_nodes.sh usu1 usu1 $rootdir pri usu6
-/vms/agora/create_nodes.sh usu2 usu2 $rootdir sec usu7
-/vms/agora/create_nodes.sh usu3 usu3 $rootdir cfa usu8
-/vms/agora/create_nodes.sh usu4 usu4 $rootdir eoi usu9
+/vms/agora/create_nodes.sh usu1 centre-1 $rootdir pri usu6
+/vms/agora/create_nodes.sh usu2 centre-2 $rootdir sec usu7
+/vms/agora/create_nodes.sh usu3 centre-3 $rootdir cfa usu8
+/vms/agora/create_nodes.sh usu4 centre-4 $rootdir eoi usu9
 /vms/agora/create_nodes.sh usu5 centre-5 $rootdir zer usu10
 /vms/agora/create_nodes.sh usu6 centre-6 $rootdir creda usu11
 /vms/agora/create_nodes.sh usu7 centre-7 $rootdir cda usu4
