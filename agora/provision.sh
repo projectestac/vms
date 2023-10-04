@@ -10,12 +10,6 @@ datadir=$rootdir/data
 localdatadir=$rootdir/localdata
 git=/git/agora
 
-# Zikula-based Portal
-create_mysql_db "adminagora"
-cat "$git/sql/adminagora.sql" | sudo mysql -uroot -p"$pass" adminagora &> /dev/null
-
-chmod 444 $wwwdir/portal_zk/config/config.php
-
 # Laravel-based Portal
 create_mysql_db "portal"
 
@@ -81,14 +75,15 @@ cp /vms/web/index.php /$wwwdir
 
 # Finish installing portal
 mkdir_777 $datadir/portaldata
-mkdir_777 $datadir/portaldata/pnTemp
-mkdir_777 $datadir/portaldata/pnTemp/purifierCache
-mkdir_777 $datadir/portaldata/pnTemp/view_cache
-mkdir_777 $datadir/portaldata/pnTemp/Theme_cache
 mkdir_777 $datadir/portaldata/data
 mkdir_777 $datadir/portaldata/data/nodes
+sudo cp /git/agora/dump/masternodes*.sql $datadir/portaldata/data/nodes
+sudo cp /git/agora/dump/masternodes*.zip $datadir/portaldata/data/nodes
+mkdir_777 $datadir/portaldata/data/moodle
+sudo cp /git/agora/dump/mastermoodle*.sql $datadir/portaldata/data/moodle
+sudo cp /git/agora/dump/mastermoodle*.zip $datadir/portaldata/data/moodle
 mkdir_777 $datadir/portaldata/data/moodle2
-sudo cp /git/agora/sql/master*.sql $datadir/portaldata/data/nodes
-sudo cp /git/agora/sql/master*.zip $datadir/portaldata/data/nodes
-mkdir_777 $datadir/moodledata/usu1/repository
 mkdir_777 $datadir/moodledata/usu1/repository/files
+mkdir_777 $datadir/moodledata/usu2/repository/files
+mkdir_777 $datadir/moodledata/usu3/repository/files
+mkdir_777 $datadir/moodledata/usu4/repository/files

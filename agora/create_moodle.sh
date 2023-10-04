@@ -13,11 +13,11 @@ export PGPASSWORD=$pass
 psql -U postgres -h localhost -c "CREATE USER $usu WITH ENCRYPTED PASSWORD '$pass';" &> /dev/null
 psql -U postgres -h localhost -c "ALTER ROLE $usu Superuser;" &> /dev/null
 psql -U postgres -h localhost -c "CREATE DATABASE $usu OWNER $usu LC_COLLATE ='ca_ES.UTF-8' LC_CTYPE = 'ca_ES.UTF-8' TEMPLATE template0;" &> /dev/null
-psql -U "$usu" -h localhost -d "$usu" -1 -f "/vms/agora/$template.sql" &> /dev/null
+psql -U "$usu" -h localhost -d "$usu" -1 -f "/git/agora/dump/$template.sql" &> /dev/null
 
 mkdir_777 "$datadir/moodledata/$usu"
 pushd "$datadir/moodledata/$usu" > /dev/null || exit
-sudo unzip -q "/vms/agora/$template.zip"
+sudo unzip -q "/git/agora/dump/$template.zip"
 popd > /dev/null || exit
 chmod -R 777 "$datadir/moodledata/$usu"
 
