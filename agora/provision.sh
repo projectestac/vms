@@ -83,3 +83,6 @@ sudo cp /git/agora/dump/mastermoodle*.sql $datadir/portaldata/data/moodle
 sudo cp /git/agora/dump/mastermoodle*.zip $datadir/portaldata/data/moodle
 mkdir_777 $datadir/portaldata/data/moodle2
 mkdir_777 $datadir/moodledata/usu1/repository/files
+mkdir_777 $datadir/moodledata/usu2/repository/files
+mkdir_777 $datadir/moodledata/usu3/repository/files
+mkdir_777 $datadir/moodledata/usu4/repository/files

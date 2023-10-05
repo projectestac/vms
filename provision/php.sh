@@ -85,4 +85,10 @@ sudo apt-get install -qq php8.1-memcached php-redis memcached redis-server &> /d
 #echo "xdebug.client_port=9003" | sudo tee -a /etc/php/8.1/apache2/conf.d/20-xdebug.ini
 #echo "xdebug.client_host=10.0.2.15 " | sudo tee -a /etc/php/8.1/apache2/conf.d/20-xdebug.ini
 
+echo 'Installing and configuring supervisor...'
+sudo apt-get install -qq supervisor &> /dev/null
+sudo cp /vms/provision/conf/portal_cron.conf /etc/supervisor/conf.d/portal_cron.conf
+sudo systemctl enable supervisor &> /dev/null
+sudo systemctl start supervisor &> /dev/null
+
 sudo service apache2 restart
