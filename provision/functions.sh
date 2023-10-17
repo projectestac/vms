@@ -1,6 +1,7 @@
 #!/bin/bash
 
 pass=agora
+passmd5=$(printf '%s' "$pass" | md5sum | cut -d ' ' -f 1)
 
 function mysql_import_db {
     dbname=$1

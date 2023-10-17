@@ -8,7 +8,7 @@ sudo apt-get update &> /dev/null
 sudo apt-get install -qq apache2 php7.4 php7.4-curl php7.4-tidy php7.4-gd php7.4-xml php7.4-xmlrpc php7.4-intl php7.4-cli php-pear php7.4-dev php7.4-ldap libapache2-mod-php7.4 php-codesniffer php7.4-mbstring php7.4-pgsql php7.4-mysql php7.4-gettext php7.4-zip php7.4-soap php7.4-tokenizer &> /dev/null
 
 sudo mkdir /etc/apache2/sites-agora
-sudo cp -R /vms/provision/conf/* /etc/apache2/sites-agora
+sudo cp -R /vms/provision/conf/agora.conf /etc/apache2/sites-agora/agora.conf
 
 echo "Include sites-agora/" | sudo tee -a /etc/apache2/apache2.conf
 echo "Mutex flock" | sudo tee -a /etc/apache2/apache2.conf
@@ -31,7 +31,7 @@ sudo sed -i '$ a\date.timezone = "Europe/Madrid"' /etc/php/7.4/apache2/php.ini
 sudo sed -i "s/memory_limit = .*/memory_limit = 256M/" /etc/php/7.4/apache2/php.ini
 sudo sed -i "s/post_max_size = .*/post_max_size = 100M/" /etc/php/7.4/apache2/php.ini
 sudo sed -i "s/upload_max_filesize = .*/upload_max_filesize = 100M/" /etc/php/7.4/apache2/php.ini
-sudo sed -i "s/;max_input_vars = .*/max_input_vars = 4000/" /etc/php/7.4/apache2/php.ini
+sudo sed -i "s/;max_input_vars = .*/max_input_vars = 5000/" /etc/php/7.4/apache2/php.ini
 sudo sed -i "s/allow_url_fopen = .*/allow_url_fopen = On/" /etc/php/7.4/apache2/php.ini
 sudo sed -i "s/max_execution_time = .*/max_execution_time = 600/" /etc/php/7.4/apache2/php.ini
 sudo sed -i "s/error_reporting = .*/error_reporting = E_ALL/" /etc/php/7.4/apache2/php.ini
@@ -84,5 +84,11 @@ sudo apt-get install -qq php7.4-memcached php-redis memcached redis-server &> /d
 #echo "xdebug.start_with_request=no" | sudo tee -a /etc/php/7.4/apache2/conf.d/20-xdebug.ini
 #echo "xdebug.client_port=9003" | sudo tee -a /etc/php/7.4/apache2/conf.d/20-xdebug.ini
 #echo "xdebug.client_host=10.0.2.15 " | sudo tee -a /etc/php/7.4/apache2/conf.d/20-xdebug.ini
+
+echo 'Installing and configuring supervisor...'
+sudo apt-get install -qq supervisor &> /dev/null
+sudo cp /vms/provision/conf/portal_cron.conf /etc/supervisor/conf.d/portal_cron.conf
+sudo systemctl enable supervisor &> /dev/null
+sudo systemctl start supervisor &> /dev/null
 
 sudo service apache2 restart

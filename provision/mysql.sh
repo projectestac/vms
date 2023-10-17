@@ -1,7 +1,6 @@
 #!/bin/bash
 
 pass=$1
-dbname=$2
 
 echo 'Installing MySQL...'
 
@@ -12,9 +11,6 @@ sudo apt-get install -qq mysql-server-8.0 &> /dev/null
 
 sudo sed -i 's/127.0.0.1/0.0.0.0/g' /etc/mysql/mysql.conf.d/mysqld.cnf
 sudo sed -i 's/\[mysqld\]/\[mysqld\]\nwait_timeout = 100\nmax_connections=500/g' /etc/mysql/mysql.conf.d/mysqld.cnf
-
-# Needed for PHP 7.3. Can be removed with PHP 7.4 and higher.
-mysql -u root -p$pass -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '$pass';" &> /dev/null
 
 # Download phpMyAdmin from the web instead of using system package to avoid dependencies issues.
 echo 'Installing phpMyAdmin...'

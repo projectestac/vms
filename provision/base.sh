@@ -1,18 +1,13 @@
 #!/bin/bash
 
-#http://serverfault.com/questions/500764/dpkg-reconfigure-unable-to-re-open-stdin-no-file-or-directory
-echo 'Update packages'
-
+echo 'Updating packages...'
 sudo apt-get update &> /dev/null
 sudo apt-get autoremove -qq &> /dev/null
 
-echo 'Install base packages'
+echo 'Installing base packages...'
 sudo apt-get install -qq gcc-multilib texlive ghostscript poppler-utils unzip imagemagick unoconv aspell aspell-ca aspell-es graphviz &> /dev/null
 
-echo 'Log permissions'
-sudo chmod -R 777 /var/log
-
-echo 'Install locales'
+echo 'Installing locales...'
 sudo locale-gen ca_ES &> /dev/null
 sudo locale-gen ca_ES.utf8 &> /dev/null
 sudo locale-gen es_ES &> /dev/null
@@ -46,22 +41,25 @@ sudo locale-gen ja_JP.utf8 &> /dev/null
 sudo locale-gen zh_CN &> /dev/null
 sudo locale-gen zh_CN.utf8 &> /dev/null
 
-# Set default locale
+echo 'Setting locale...'
 sudo update-locale LANG=ca_ES.utf8
 
-echo 'Set Timezone'
+echo 'Setting system timezone...'
 sudo timedatectl set-timezone Europe/Madrid
 
-echo 'Increase swapsize'
-# size of swapfile in megabytes
+echo 'Setting log permissions...'
+sudo chmod -R 777 /var/log
+
+echo 'Setting swapsize...'
+# Size of swapfile in megabytes
 swapsize=2000
 
-# does the swap file already exist?
+# Does the swap file already exist?
 grep -q "swapfile" /etc/fstab
 
-# if not then create it
+# If not, then create it
 if [ $? -ne 0 ]; then
-  echo 'swapfile not found. Adding swapfile.'
+  echo 'swapfile not found. Adding swapfile...'
   fallocate -l ${swapsize}M /swapfile
   chmod 600 /swapfile
   mkswap /swapfile
