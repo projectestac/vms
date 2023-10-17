@@ -13,15 +13,11 @@ git=/git/agora
 # Laravel-based Portal
 create_mysql_db "portal"
 
+# Laravel-based Portal requires PHP 8.1. In order to have a populated database, we import a dump.
+cat $git/dump/portal.sql | sudo mysql -uroot -p$pass portal &> /dev/null
+
 cp $wwwdir/portal/.env.example $wwwdir/portal/.env
 sudo sed -i "s/DB_PASSWORD=/DB_PASSWORD=agora/" $wwwdir/portal/.env
-
-pushd $wwwdir/portal > /dev/null || exit
-sudo /usr/bin/bash -c "php artisan key:generate" &> /dev/null
-sudo /usr/bin/bash -c "php artisan migrate:fresh --seed" &> /dev/null
-sudo /usr/bin/bash -c "php artisan optimize:clear" &> /dev/null
-sudo /usr/bin/bash -c "php artisan config:cache" &> /dev/null
-popd > /dev/null || exit
 
 # Data docs
 mkdir_777 $datadir
