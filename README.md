@@ -7,7 +7,7 @@
 * [vagrant-hosts] vagrant plugin. It will be installed the first time you run vm script.
 
     `vagrant plugin install vagrant-hosts`
-    
+
 * The host machine probably needs at least 8 GB of RAM.
 * You may need to [enable virtualization] manually.
 
@@ -43,7 +43,7 @@ Always launch the Virtual Machine using the script **./vm**. It updates the vms 
 
 You must add the following line to your /etc/hosts in order to get access to the VM:
 
-    192.168.33.5 agora-aws.xtec.cat agora-aws-se.xtec.cat agora-aws-projectes.xtec.cat agora-aws-nodes.xtec.cat agora-aws-eoi.xtec.cat
+    192.168.56.5 agora-aws.xtec.cat agora-aws-se.xtec.cat agora-aws-projectes.xtec.cat agora-aws-nodes.xtec.cat agora-aws-eoi.xtec.cat
 
 
 ## Useful links

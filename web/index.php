@@ -46,22 +46,22 @@
     <legend><img alt="Àgora" src="img/agora.gif"/></legend>
 
     <img src="img/moodle.png" alt="Moodle"/>
-    <a href="/usu1/moodle/">[usu1]</a>
-    <a href="/usu2/moodle/">[usu2]</a>
-    <a href="/usu3/moodle/">[usu3]</a>
-    <a href="/usu4/moodle/">[usu4]</a>
+    <a href="/centre-1/moodle/">[Client 1]</a>
+    <a href="/centre-2/moodle/">[Client 2]</a>
+    <a href="/centre-3/moodle/">[Client 3]</a>
+    <a href="/centre-4/moodle/">[Client 4]</a>
     <br/>
 
     <img src="img/nodes.png" alt="Nodes"/>
-    <a href="/usu1/">[usu1]</a>
-    <a href="/usu2/">[usu2]</a>
-    <a href="/usu3/">[usu3]</a>
-    <a href="/usu4/">[usu4]</a>
-    <a href="/usu5/">[usu5]</a>
-    <a href="/usu6/">[usu6]</a>
-    <a href="/usu7/">[usu7]</a>
-    <a href="/usu8/">[usu8]</a>
-    <a href="/usu9/">[usu9]</a>
+    <a href="/centre-1/">[Client 1]</a>
+    <a href="/centre-2/">[Client 2]</a>
+    <a href="/centre-3/">[Client 3]</a>
+    <a href="/centre-4/">[Client 4]</a>
+    <a href="/centre-5/">[Client 5]</a>
+    <a href="/centre-6/">[Client 6]</a>
+    <a href="/centre-7/">[Client 7]</a>
+    <a href="/centre-8/">[Client 8]</a>
+    <a href="/centre-9/">[Client 9]</a>
     <br/>
     <br/>
 

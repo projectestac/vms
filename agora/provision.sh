@@ -10,16 +10,22 @@ datadir=$rootdir/data
 localdatadir=$rootdir/localdata
 git=/git/agora
 
-# Portal
-create_mysql_db "adminagora"
-cat "$git/sql/adminagora.sql" | sudo mysql -uroot -p"$pass" adminagora &> /dev/null
+# Laravel-based Portal
+create_mysql_db "portal"
 
-chmod 444 $wwwdir/portal/config/config.php
+# Laravel-based Portal requires PHP 8.1. In order to have a populated database, we import a dump.
+cat $git/dump/portal.sql | sudo mysql -uroot -p$pass portal &> /dev/null
+
+cp $wwwdir/portal/.env.example $wwwdir/portal/.env
+sudo sed -i "s/DB_PASSWORD=/DB_PASSWORD=agora/" $wwwdir/portal/.env
 
 # Data docs
 mkdir_777 $datadir
 sudo cp -R $git/data/* $datadir
 chown_777 $datadir
+
+# Temporal directory for uploading large files.
+mkdir_777 $datadir/portaldata/tmp
 
 mkdir_777 $localdatadir/syncdata
 mkdir_777 $localdatadir/localmuc
@@ -45,15 +51,15 @@ sudo cp $wwwdir/wordpress/.htaccess-dist $wwwdir/wordpress/.htaccess
 chmod 444 $wwwdir/wordpress/.htaccess
 
 # Create the sites
-/vms/agora/create_moodle.sh usu1 usu1 $rootdir pri
-/vms/agora/create_moodle.sh usu2 usu2 $rootdir sec
-/vms/agora/create_moodle.sh usu3 usu3 $rootdir pri
-/vms/agora/create_moodle.sh usu4 usu4 $rootdir sec
+/vms/agora/create_moodle.sh usu1 centre-1 $rootdir pri
+/vms/agora/create_moodle.sh usu2 centre-2 $rootdir sec
+/vms/agora/create_moodle.sh usu3 centre-3 $rootdir pri
+/vms/agora/create_moodle.sh usu4 centre-4 $rootdir sec
 
-/vms/agora/create_nodes.sh usu1 usu1 $rootdir pri usu6
-/vms/agora/create_nodes.sh usu2 usu2 $rootdir sec usu7
-/vms/agora/create_nodes.sh usu3 usu3 $rootdir cfa usu8
-/vms/agora/create_nodes.sh usu4 usu4 $rootdir eoi usu9
+/vms/agora/create_nodes.sh usu1 centre-1 $rootdir pri usu6
+/vms/agora/create_nodes.sh usu2 centre-2 $rootdir sec usu7
+/vms/agora/create_nodes.sh usu3 centre-3 $rootdir cfa usu8
+/vms/agora/create_nodes.sh usu4 centre-4 $rootdir eoi usu9
 /vms/agora/create_nodes.sh usu5 centre-5 $rootdir zer usu10
 /vms/agora/create_nodes.sh usu6 centre-6 $rootdir creda usu11
 /vms/agora/create_nodes.sh usu7 centre-7 $rootdir cda usu4
@@ -65,14 +71,12 @@ cp /vms/web/index.php /$wwwdir
 
 # Finish installing portal
 mkdir_777 $datadir/portaldata
-mkdir_777 $datadir/portaldata/pnTemp
-mkdir_777 $datadir/portaldata/pnTemp/purifierCache
-mkdir_777 $datadir/portaldata/pnTemp/view_cache
-mkdir_777 $datadir/portaldata/pnTemp/Theme_cache
 mkdir_777 $datadir/portaldata/data
 mkdir_777 $datadir/portaldata/data/nodes
+sudo cp /git/agora/dump/masternodes*.sql $datadir/portaldata/data/nodes
+sudo cp /git/agora/dump/masternodes*.zip $datadir/portaldata/data/nodes
+mkdir_777 $datadir/portaldata/data/moodle
+sudo cp /git/agora/dump/mastermoodle*.sql $datadir/portaldata/data/moodle
+sudo cp /git/agora/dump/mastermoodle*.zip $datadir/portaldata/data/moodle
 mkdir_777 $datadir/portaldata/data/moodle2
-sudo cp /git/agora/sql/master*.sql $datadir/portaldata/data/nodes
-sudo cp /git/agora/sql/master*.zip $datadir/portaldata/data/nodes
-mkdir_777 $datadir/moodledata/usu1/repository
 mkdir_777 $datadir/moodledata/usu1/repository/files

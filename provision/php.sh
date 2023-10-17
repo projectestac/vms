@@ -7,13 +7,16 @@ echo 'Disabling docker repository...'
 sudo amazon-linux-extras disable docker &> /dev/null
 
 echo 'Installing unoconv...'
-sudo amazon-linux-extras enable libreoffice -y &> /dev/null
+sudo amazon-linux-extras enable libreoffice &> /dev/null
+sudo python -m pip install unoconv &> /dev/null
+sudo yum install -y libreoffice &> /dev/null
+sudo chmod 777 /usr/share/httpd/ &> /dev/null
 
 echo 'Installing Apache and PHP...'
 sudo yum install -y httpd php php-{opcache,curl,gd,xml,xmlrpc,intl,pear,mbstring,gettext,zip,soap,sodium,redis} &> /dev/null
 
 echo 'Setting apache to start up on system boot...'
-sudo systemctl enable httpd.service
+sudo systemctl enable httpd.service &> /dev/null
 
 echo 'Configuring Apache and PHP...'
 sudo cp /vms/provision/conf/agora.conf /etc/httpd/conf/
@@ -74,11 +77,11 @@ sudo sed -i "s/upload_max_filesize = .*/upload_max_filesize = 25M/" /etc/php.ini
 sudo sed -i "s/; max_input_vars = .*/max_input_vars = 6000/" /etc/php.ini
 sudo sed -i "s/allow_url_fopen = .*/allow_url_fopen = On/" /etc/php.ini
 sudo sed -i "s/max_execution_time = .*/max_execution_time = 600/" /etc/php.ini
-sudo sed -i "$ a\disable_functions = pcntl_alarm,pcntl_fork,pcntl_waitpid,pcntl_wait,pcntl_wifexited,pcntl_wifstopped,pcntl_wifsignaled,pcntl_wifcontinued,pcntl_wexitstatus,pcntl_wtermsig,pcntl_wstopsig,pcntl_signal,pcntl_signal_get_handler,pcntl_signal_dispatch,pcntl_get_last_error,pcntl_strerror,pcntl_sigprocmask,pcntl_sigwaitinfo,pcntl_sigtimedwait,pcntl_exec,pcntl_getpriority,pcntl_setpriority,pcntl_async_signals," /etc/php.ini
 
 # CLI will be different from web
 sudo cp /etc/php.ini /etc/php-cli.ini
 sudo sed -i "s/max_execution_time = .*/max_execution_time = 0/" /etc/php.ini
+sudo sed -i "s/max_input_time = .*/max_input_time = 0/" /etc/php-cli.ini
 
 # OPCache configuration
 echo 'Configuring OPCache...'
@@ -98,10 +101,10 @@ sudo chmod -R 777 /var/log/apache2/
 
 # Install extension php-imagick. There is no package in the repository, so it must be done manually.
 echo 'Installing php-imagick...'
-sudo yum -y install php-devel gcc ImageMagick-devel > /dev/null
-sudo bash -c "yes '' | pecl install -f imagick" > /dev/null
+sudo yum -y install php-devel gcc ImageMagick-devel > /dev/null 2>&1
+sudo bash -c "yes '' | pecl install -f imagick" > /dev/null 2>&1
 sudo bash -c "echo 'extension=imagick.so' > /etc/php.d/30-imagick.ini"
-sudo yum remove -y php-devel gcc ImageMagick-devel > /dev/null
+sudo yum remove -y php-devel gcc ImageMagick-devel > /dev/null 2>&1
 
 echo 'Installing memcached and redis...'
 sudo amazon-linux-extras enable redis6 > /dev/null 2>&1
@@ -112,3 +115,11 @@ sudo systemctl start memcached.service > /dev/null 2>&1
 sudo systemctl start redis > /dev/null 2>&1
 
 sudo service httpd start > /dev/null 2>&1
+
+echo 'Installing and configuring supervisor...'
+sudo amazon-linux-extras enable epel > /dev/null 2>&1
+sudo yum install -y epel-release > /dev/null 2>&1
+sudo yum install -y supervisor > /dev/null 2>&1
+sudo cp /vms/provision/conf/portal_cron.ini /etc/supervisord.d/portal_cron.ini
+sudo systemctl enable supervisord.service > /dev/null 2>&1
+sudo systemctl start supervisord.service > /dev/null 2>&1
