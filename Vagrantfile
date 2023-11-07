@@ -2,16 +2,14 @@
 Vagrant.configure(2) do |config|
 
   config.vm.box = "ubuntu/jammy64"
-
   config.vm.provision :shell, inline: "hostnamectl set-hostname agora"
-
   config.vm.boot_timeout = 500
 
   config.vm.provision :hosts do |provisioner|
     provisioner.add_host '127.0.0.1', ["odissea-aws.xtec.cat"]
   end
 
-  config.vm.network "private_network", ip: "192.168.33.7"
+  config.vm.network "private_network", ip: "192.168.56.7"
 
   config.vm.synced_folder "../odissea", "/git/odissea"
   config.vm.synced_folder "../odissea/html", "/dades/html"
@@ -24,8 +22,6 @@ Vagrant.configure(2) do |config|
                   "--natdnshostresolver1", "on",
                   "--natdnsproxy1", "on"]
   end
-
-  config.disksize.size = '15GB'
 
   config.vm.provision :shell, path: "provision.sh"
 
