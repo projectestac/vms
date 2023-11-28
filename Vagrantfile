@@ -9,7 +9,7 @@ Vagrant.configure(2) do |config|
     provisioner.add_host '127.0.0.1', ["ioc-aws.xtec.cat"]
   end
 
-  config.vm.network "private_network", ip: "192.168.33.10"
+  config.vm.network "private_network", ip: "192.168.56.10"
 
   config.vm.synced_folder "../moodle", "/git/moodle"
   config.vm.synced_folder "../moodle", "/dades/html"

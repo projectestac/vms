@@ -6,7 +6,7 @@ function clone_project {
     project=$1
     branch=$2
     dir=$3
-    giturl=git@github.com:IOC/$project.git
+    giturl=https://github.com/IOC/$project.git
     clone_project_git "$project" "$giturl" "$branch" "$dir"
 }
 
@@ -42,7 +42,7 @@ if ! vagrant plugin list | grep -q vagrant-disksize; then
 fi
 
 # Moodle branch
-clone_project moodle35 master moodle
+clone_project campus41 main moodle
 
 vagrant box update
 
