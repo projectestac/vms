@@ -3,24 +3,24 @@
 pass=$1
 
 echo 'Installing MySQL...'
-sudo rpm -Uvh https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm &> /dev/null
-sudo rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql-2022 &> /dev/null
+sudo rpm -Uvh https://dev.mysql.com/get/mysql80-community-release-el7-5.noarch.rpm&> /dev/null
+sudo rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql-2023 &> /dev/null
 sudo yum install -y mysql-community-server php-mysqli &> /dev/null
 sudo systemctl enable mysqld &> /dev/null
 sudo systemctl start mysqld &> /dev/null
 sudo systemctl restart httpd &> /dev/null
 
 # Get the temporary password created during installation
-temp_pass=$(sudo grep 'temporary password' /var/log/mysqld.log | awk '{print $11}')
+temp_pass=$(sudo grep 'temporary password' /var/log/mysqld.log | awk '{print $13}')
 
 # Execute ALTER USER because is required to remove the password policy
-mysql --connect-expired-password -u root -p"$temp_pass" -e "ALTER USER 'root'@'localhost' IDENTIFIED BY '$temp_pass'" &> /dev/null
+mysql --connect-expired-password -u root -p"$temp_pass" -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '$temp_pass'" &> /dev/null
 
 # Remove password policy to be able to set an insecure password for development
-mysql --connect-expired-password -u root -p"$temp_pass" -e "uninstall plugin validate_password" &> /dev/null
+mysql --connect-expired-password -u root -p"$temp_pass" -e "UNINSTALL COMPONENT 'file://component_validate_password'" &> /dev/null
 
 # Set the insecure password
-mysql --connect-expired-password -u root -p"$temp_pass" -e "SET PASSWORD = PASSWORD('$pass')" &> /dev/null
+mysql --connect-expired-password -u root -p"$temp_pass" -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '$pass'" &> /dev/null
 
 # Allow remote connection
 mysql --connect-expired-password -u root -p"$pass" mysql -e "UPDATE user SET Host = '%' WHERE user.Host = 'localhost' AND user.User = 'root'" &> /dev/null
