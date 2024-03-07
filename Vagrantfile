@@ -2,16 +2,14 @@
 Vagrant.configure(2) do |config|
 
   config.vm.box = "ubuntu/jammy64"
-
   config.vm.provision :shell, inline: "hostnamectl set-hostname alexandria"
-
   config.vm.boot_timeout = 500
 
   config.vm.provision :hosts do |provisioner|
     provisioner.add_host '127.0.0.1', ["alexandria-aws.xtec.cat"]
   end
 
-  config.vm.network "private_network", ip: "192.168.33.6"
+  config.vm.network "private_network", ip: "192.168.56.6"
 
   config.vm.synced_folder "../alexandria", "/git/alexandria"
   config.vm.synced_folder "../alexandria/html", "/dades/html"

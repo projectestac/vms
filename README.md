@@ -48,7 +48,7 @@ You may also want to use vagrant standard commands:
 
 You must add the following line to your /etc/hosts in order to get access to the VM:
 
-    192.168.33.5 agora-aws.xtec.cat agora-aws-se.xtec.cat agora-aws-projectes.xtec.cat agora-aws-nodes.xtec.cat
+    192.168.56.6 alexandria-aws.xtec.cat
 
 
 [Vagrant]: http://www.vagrantup.com/
