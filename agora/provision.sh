@@ -20,7 +20,6 @@ pushd $wwwdir/portal > /dev/null || exit
 sudo /usr/bin/bash -c "php artisan key:generate" &> /dev/null
 sudo /usr/bin/bash -c "php artisan migrate:fresh --seed" &> /dev/null
 sudo /usr/bin/bash -c "php artisan optimize:clear" &> /dev/null
-sudo /usr/bin/bash -c "php artisan config:cache" &> /dev/null
 popd > /dev/null || exit
 
 # Data docs
