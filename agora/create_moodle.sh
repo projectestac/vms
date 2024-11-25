@@ -7,6 +7,7 @@ nompropi=$2
 rootdir=$3
 template=mastermoodle$4
 datadir=$rootdir/data
+passbcrypt=$(htpasswd -bnBC 10 "" $pass | tr -d ':\n')
 
 export PGPASSWORD=$pass
 
@@ -24,8 +25,8 @@ chmod -R 777 "$datadir/moodledata/$usu"
 sudo -E php /dades/html/moodle2/local/agora/scripts/cli.php \
                 -s=script_enable_service \
                 --ccentre="$nompropi" \
-                --password="$passmd5" \
-                --xtecadminPassword="$passmd5" \
+                --password="$passbcrypt" \
+                --xtecadminPassword="$passbcrypt" \
                 --clientName="$usu VM dev" \
                 --clientCode="$usu" \
                 --clientAddress=Address \
