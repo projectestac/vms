@@ -9,6 +9,7 @@ wwwdir=$rootdir/html
 datadir=$rootdir/data
 localdatadir=$rootdir/localdata
 git=/git/agora
+passbcrypt=$(htpasswd -bnBC 10 "" $pass | tr -d ':\n')
 
 # Laravel-based Portal
 create_mysql_db "portal"
@@ -46,7 +47,7 @@ sudo cp $wwwdir/.htaccess-dist $wwwdir/.htaccess
 
 # Set password
 sudo sed -i "s/\['userpwd'\] = ''/\['userpwd'\] = '$pass'/" $wwwdir/config/env-config.php
-sudo sed -i "s/\['password'\] = ''/\['password'\] = '$passmd5'/" $wwwdir/config/env-config.php
+sudo sed -i "s#\['password'\] = ''#\['password'\] = '$passbcrypt'#" $wwwdir/config/env-config.php
 
 # Update wordpress/.htaccess if it exists (vagrant up using existing code)
 if [ -f "$wwwdir/wordpress/.htaccess" ]; then sudo chmod 666 $wwwdir/wordpress/.htaccess; fi

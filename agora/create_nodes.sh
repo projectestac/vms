@@ -8,6 +8,7 @@ rootdir=$3
 template=master$4
 dump=masternodes$4
 datadir=$rootdir/data/wpdata
+passbcrypt=$(htpasswd -bnBC 10 "" $pass | tr -d ':\n')
 
 mysql_import_db "$usu" "/git/agora/dump/$dump.sql"
 
@@ -21,8 +22,8 @@ popd > /dev/null || exit
 sudo -E php /dades/html/wordpress/wp-includes/xtec/scripts/cli.php \
                 -s=script_enable_service \
                 --ccentre="$nompropi" \
-                --password="$passmd5" \
-                --xtecadminPassword="$passmd5" \
+                --password="$passbcrypt" \
+                --xtecadminPassword="$passbcrypt" \
                 --clientName="$usu VM dev" \
                 --clientCode="$usu" \
                 --clientAddress=Address \
