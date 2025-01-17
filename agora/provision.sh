@@ -59,15 +59,15 @@ chmod 444 $wwwdir/wordpress/.htaccess
 /vms/agora/create_moodle.sh usu3 centre-3 $rootdir pri
 /vms/agora/create_moodle.sh usu4 centre-4 $rootdir sec
 
-/vms/agora/create_nodes.sh usu1 centre-1 $rootdir pri usu6
-/vms/agora/create_nodes.sh usu2 centre-2 $rootdir sec usu7
-/vms/agora/create_nodes.sh usu3 centre-3 $rootdir cfa usu8
-/vms/agora/create_nodes.sh usu4 centre-4 $rootdir eoi usu9
-/vms/agora/create_nodes.sh usu5 centre-5 $rootdir zer usu10
-/vms/agora/create_nodes.sh usu6 centre-6 $rootdir creda usu11
-/vms/agora/create_nodes.sh usu7 centre-7 $rootdir cda usu4
-/vms/agora/create_nodes.sh usu8 centre-8 $rootdir ssee usu5
-/vms/agora/create_nodes.sh usu9 centre-9 $rootdir pro usu3
+/vms/agora/create_nodes.sh usu1 centre-1 $rootdir pri usu12 nodes-pre.educaciodigital.cat
+/vms/agora/create_nodes.sh usu2 centre-2 $rootdir sec usu13 nodes-pre.educaciodigital.cat
+/vms/agora/create_nodes.sh usu3 centre-3 $rootdir cfa usu8 pwc-int.educacio.intranet/agora
+/vms/agora/create_nodes.sh usu4 centre-4 $rootdir eoi usu9 pwc-int.educacio.intranet/agora
+/vms/agora/create_nodes.sh usu5 centre-5 $rootdir zer usu10 pwc-int.educacio.intranet/agora
+/vms/agora/create_nodes.sh usu6 centre-6 $rootdir creda usu11 pwc-int.educacio.intranet/agora
+/vms/agora/create_nodes.sh usu7 centre-7 $rootdir cda usu4 pwc-int.educacio.intranet/agora
+/vms/agora/create_nodes.sh usu8 centre-8 $rootdir ssee usu5 pwc-int.educacio.intranet/agora
+/vms/agora/create_nodes.sh usu9 centre-9 $rootdir pro usu3 pwc-int.educacio.intranet/agora
 
 # Copy index file
 cp /vms/web/index.php /$wwwdir
