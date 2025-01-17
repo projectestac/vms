@@ -7,8 +7,11 @@ nompropi=$2
 rootdir=$3
 template=master$4
 dump=masternodes$4
+domain=$6
 datadir=$rootdir/data/wpdata
 passbcrypt=$(htpasswd -bnBC 10 "" $pass | tr -d ':\n')
+
+# set -x
 
 mysql_import_db "$usu" "/git/agora/dump/$dump.sql"
 
@@ -30,5 +33,7 @@ sudo -E php /dades/html/wordpress/wp-includes/xtec/scripts/cli.php \
                 --clientCity=City \
                 --clientDNS="$nompropi" \
                 --clientPC=00000 \
-                --origin_url="://pwc-int.educacio.intranet/agora/$template/" \
+                --origin_url="://$domain/$template/" \
                 --origin_bd="$5"
+
+# set +x
