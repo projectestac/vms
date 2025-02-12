@@ -68,7 +68,7 @@ chmod 444 $wwwdir/wordpress/.htaccess
 /vms/agora/create_nodes.sh usu6 centre-6 $rootdir creda usu11 pwc-int.educacio.intranet/agora
 /vms/agora/create_nodes.sh usu7 centre-7 $rootdir cda usu4 pwc-int.educacio.intranet/agora
 /vms/agora/create_nodes.sh usu8 centre-8 $rootdir ssee usu5 pwc-int.educacio.intranet/agora
-/vms/agora/create_nodes.sh usu9 centre-9 $rootdir pro usu3 pwc-int.educacio.intranet/agora
+/vms/agora/create_nodes.sh usu9 centre-9 $rootdir pro usu19 projectes-pre.educaciodigital.cat
 
 # Copy index file
 cp /vms/web/index.php /$wwwdir
