@@ -34,21 +34,20 @@ $CFG->local_redislock_redis_server = '127.0.0.1';
 
 // Redis for sessions
 $CFG->session_redis_host = '127.0.0.1';
-$CFG->session_redis_port = 6379;  // Optional.
-
+$CFG->session_redis_port = 6379;
 
 // E-mail
 $CFG->smtphosts = '';
 $CFG->smtpuser = '';
 $CFG->smtppass = '';
 $CFG->noreplyaddress = '';
- 
+
 // Uncomment to debug
 // @error_reporting(E_ALL | E_STRICT); // NOT FOR PRODUCTION SERVERS!
 // @ini_set('display_errors', '1');    // NOT FOR PRODUCTION SERVERS!
 // $CFG->debug = (E_ALL | E_STRICT);   // === DEBUG_DEVELOPER - NOT FOR PRODUCTION SERVERS!
 // $CFG->debugdisplay = 1;             // NOT FOR PRODUCTION SERVERS!
 
-require_once(dirname(__FILE__) . '/local/agora/lib.php');
-require_once(dirname(__FILE__) . '/settings.php');
-require_once(dirname(__FILE__) . '/lib/setup.php');
+require_once __DIR__ . '/local/agora/lib.php';
+require_once __DIR__ . '/settings.php';
+require_once __DIR__ . '/lib/setup.php';
