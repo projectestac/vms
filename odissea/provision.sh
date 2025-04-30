@@ -25,7 +25,7 @@ mkdir_777 $localdatadir
 
 sudo cp /vms/odissea/config.php $wwwdir/config.php
 
-pushd $datadir
+pushd $datadir || exit
 sudo tar xfzp $git/dump/odisseadata.tar.gz
 sudo chmod -R 777 .
-popd
+popd || exit
