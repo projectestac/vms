@@ -2,7 +2,7 @@
 
 source "/vms/provision/functions.sh"
 
-echo 'Installing Àgora...'
+echo 'Provision Àgora'
 
 rootdir=/dades
 wwwdir=$rootdir/html
