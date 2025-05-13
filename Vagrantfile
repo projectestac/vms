@@ -18,7 +18,7 @@ Vagrant.configure(2) do |config|
 
   config.vm.provider "virtualbox" do |vb|
     vb.customize ["modifyvm", :id,
-                  "--name", "agora-ubuntu-php82",
+                  "--name", "agora-ubuntu-php83",
                   "--cpus", "4",
                   "--memory", "1000",
                   "--natdnshostresolver1", "on",
