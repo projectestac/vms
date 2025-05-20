@@ -1,10 +1,13 @@
 #!/bin/bash
 
 echo 'Updating packages...'
-sudo yum update -y &> /dev/null
+sudo dnf update -y > /dev/null 2>&1
+
+echo 'Upgrading system...'
+sudo dnf upgrade -y > /dev/null 2>&1
 
 echo 'Installing base packages...'
-sudo yum install -y texlive ghostscript poppler-utils unzip ImageMagick aspell graphviz git python3 telnet &> /dev/null
+sudo dnf install -y texlive ghostscript poppler-utils unzip ImageMagick aspell graphviz git python3 python3-pip telnet > /dev/null 2>&1
 
 echo 'Setting locale...'
 sudo localectl set-locale LANG=ca_ES.utf8

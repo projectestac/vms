@@ -22,14 +22,13 @@ function mkdir_777 {
 function chown_777 {
     folder=$1
 
-    sudo chown -R vagrant:apache $folder
+    sudo chown -R apache:apache $folder
     sudo chmod -R 777 $folder
 }
 
 function execute_in_mysql {
     sudo mysql -uroot -p$pass -e "$1" &> /dev/null
 }
-
 
 function create_mysql_db {
     dbname=$1

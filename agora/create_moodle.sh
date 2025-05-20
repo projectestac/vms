@@ -6,7 +6,7 @@ usu=$1
 nompropi=$2
 rootdir=$3
 template=mastermoodle$4
-datadir=$rootdir/data
+datadir=$rootdir/data/moodledata
 passbcrypt=$(htpasswd -bnBC 10 "" $pass | tr -d ':\n')
 
 export PGPASSWORD=$pass
@@ -16,11 +16,11 @@ psql -U postgres -h localhost -c "ALTER ROLE $usu Superuser;" &> /dev/null
 psql -U postgres -h localhost -c "CREATE DATABASE $usu OWNER $usu LC_COLLATE ='ca_ES.UTF-8' LC_CTYPE = 'ca_ES.UTF-8' TEMPLATE template0;" &> /dev/null
 psql -U "$usu" -h localhost -d "$usu" -1 -f "/git/agora/dump/$template.sql" &> /dev/null
 
-mkdir_777 "$datadir/moodledata/$usu"
-pushd "$datadir/moodledata/$usu" > /dev/null || exit
+mkdir_777 "$datadir/$usu"
+pushd "$datadir/$usu" > /dev/null || exit
 sudo unzip -q "/git/agora/dump/$template.zip"
 popd > /dev/null || exit
-chmod -R 777 "$datadir/moodledata/$usu"
+chown_777 "$datadir/$usu"
 
 sudo -E php /dades/html/moodle2/local/agora/scripts/cli.php \
                 -s=script_enable_service \

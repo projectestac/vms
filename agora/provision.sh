@@ -21,22 +21,23 @@ pushd $wwwdir/portal > /dev/null || exit
 sudo /usr/bin/bash -c "php artisan key:generate" &> /dev/null
 sudo /usr/bin/bash -c "php artisan migrate:fresh --seed" &> /dev/null
 sudo /usr/bin/bash -c "php artisan optimize:clear" &> /dev/null
+sudo /usr/bin/bash -c "php artisan config:cache" &> /dev/null
 popd > /dev/null || exit
+
+# App cache directory must be writable
+chown_777 $wwwdir/portal/bootstrap/cache
+chown_777 $wwwdir/portal/storage
 
 # Data docs
 mkdir_777 $datadir
 sudo cp -R $git/data/* $datadir
 chown_777 $datadir
 
-# Temporal directory for uploading large files.
+# Temporary directory for uploading large files.
 mkdir_777 $datadir/portaldata/tmp
 
 mkdir_777 $localdatadir/syncdata
 mkdir_777 $localdatadir/localmuc
-
-# Program local crons
-sudo cp $git/crons/moodle_webserver /etc/cron.d/
-sudo sed -i "s/www-data/apache/" /etc/cron.d/moodle_webserver
 
 sudo cp $wwwdir/config/.htaccess-dist $wwwdir/config/.htaccess
 sudo cp $wwwdir/config/env-config-dist.php $wwwdir/config/env-config.php
@@ -73,10 +74,8 @@ chmod 444 $wwwdir/wordpress/.htaccess
 # Copy index file
 cp /vms/web/index.php /$wwwdir
 
-# Finish installing portal
-mkdir_777 $datadir/portaldata
-mkdir_777 $datadir/portaldata/data
-mkdir_777 $datadir/portaldata/data/nodes
+# Configure directories for application data files
+mkdir_777 $datadir/portaldata/data/nodes # Creates "portaldata/data/nodes/"
 sudo cp /git/agora/dump/masternodes*.sql $datadir/portaldata/data/nodes
 sudo cp /git/agora/dump/masternodes*.zip $datadir/portaldata/data/nodes
 mkdir_777 $datadir/portaldata/data/moodle
@@ -87,3 +86,10 @@ mkdir_777 $datadir/moodledata/usu1/repository/files
 mkdir_777 $datadir/moodledata/usu2/repository/files
 mkdir_777 $datadir/moodledata/usu3/repository/files
 mkdir_777 $datadir/moodledata/usu4/repository/files
+
+# Move storage directory to data directory
+#sudo mv $wwwdir/portal/storage $datadir/portaldata/
+#ln -s $datadir/portaldata/storage $wwwdir/portal/storage
+
+# Recursively set permissions for the data directory
+chown_777 $datadir/portaldata

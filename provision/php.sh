@@ -1,34 +1,35 @@
 #!/bin/bash
 
-echo 'Enabling PHP 8.1 repository...'
-sudo amazon-linux-extras enable php8.1 &> /dev/null
+echo 'Installing PHP 8.3 and extra packages (including apache)...'
+sudo dnf install php php-{gd,intl,pear,zip,soap} -y > /dev/null 2>&1
 
-echo 'Disabling docker repository...'
-sudo amazon-linux-extras disable docker &> /dev/null
+echo 'Installing LibreOffice...'
+wget https://download.documentfoundation.org/libreoffice/stable/25.2.3/rpm/x86_64/LibreOffice_25.2.3_Linux_x86-64_rpm.tar.gz > /dev/null 2>&1
+tar -zxvf LibreOffice_25.2.3_Linux_x86-64_rpm.tar.gz > /dev/null 2>&1
+pushd LibreOffice_25.2.3.2_Linux_x86-64_rpm/RPMS/ > /dev/null || exit
+sudo dnf install ./*.rpm -y > /dev/null 2>&1
+popd > /dev/null || exit
+sudo rm -rf LibreOffice_* > /dev/null 2>&1
 
 echo 'Installing unoconv...'
-sudo amazon-linux-extras enable libreoffice &> /dev/null
-sudo python -m pip install unoconv &> /dev/null
-sudo yum install -y libreoffice &> /dev/null
-sudo chmod 777 /usr/share/httpd/ &> /dev/null
+sudo curl -o /usr/local/bin/unoconv https://raw.githubusercontent.com/dagwieers/unoconv/master/unoconv > /dev/null 2>&1
+sudo chmod +x /usr/local/bin/unoconv > /dev/null 2>&1
+sudo ln -s /usr/bin/python3 /usr/bin/python > /dev/null 2>&1
+sudo dnf install libxcrypt-compat -y > /dev/null 2>&1
 
-echo 'Installing Apache and PHP...'
-sudo yum install -y httpd php php-{opcache,curl,gd,xml,intl,pear,mbstring,gettext,zip,soap,sodium} &> /dev/null
-
-echo 'Setting apache to start up on system boot...'
-sudo systemctl enable httpd.service &> /dev/null
-
-echo 'Configuring Apache and PHP...'
+echo 'Configuring Apache...'
 sudo cp /vms/provision/conf/agora.conf /etc/httpd/conf/
 sudo mv /etc/httpd/conf/httpd.conf /etc/httpd/conf/httpd.conf.bak
 sudo cp /vms/provision/conf/httpd.conf /etc/httpd/conf/
+sudo sed -i "s/;listen.owner = .*/listen.owner = apache/" /etc/php-fpm.d/www.conf
+sudo sed -i "s/;listen.group = .*/listen.group = apache/" /etc/php-fpm.d/www.conf
+sudo sed -i "s/;listen.mode = .*/listen.mode = 0660/" /etc/php-fpm.d/www.conf
 
 sudo mv /etc/httpd/conf.d/autoindex.conf /etc/httpd/conf.d/autoindex.conf.bak
 sudo mv /etc/httpd/conf.d/userdir.conf /etc/httpd/conf.d/userdir.conf.bak
 sudo mv /etc/httpd/conf.d/welcome.conf /etc/httpd/conf.d/welcome.conf.bak
 sudo mv /etc/httpd/conf.modules.d/00-dav.conf /etc/httpd/conf.modules.d/00-dav.conf.bak
 sudo mv /etc/httpd/conf.modules.d/00-lua.conf /etc/httpd/conf.modules.d/00-lua.conf.bak
-sudo mv /etc/httpd/conf.modules.d/00-proxy.conf /etc/httpd/conf.modules.d/00-proxy.conf.bak
 sudo mv /etc/httpd/conf.modules.d/10-h2.conf /etc/httpd/conf.modules.d/10-h2.conf.bak
 sudo mv /etc/httpd/conf.modules.d/10-proxy_h2.conf /etc/httpd/conf.modules.d/10-proxy_h2.conf.bak
 
@@ -52,7 +53,6 @@ sudo sed -i "s@LoadModule dbd_module modules/mod_dbd.so@#LoadModule dbd_module m
 sudo sed -i "s@LoadModule info_module modules/mod_info.so@#LoadModule info_module modules/mod_info.so@" /etc/httpd/conf.modules.d/00-base.conf
 sudo sed -i "s@LoadModule macro_module modules/mod_macro.so@#LoadModule macro_module modules/mod_macro.so@" /etc/httpd/conf.modules.d/00-base.conf
 sudo sed -i "s@LoadModule slotmem_plain_module modules/mod_slotmem_plain.so@#LoadModule slotmem_plain_module modules/mod_slotmem_plain.so@" /etc/httpd/conf.modules.d/00-base.conf
-sudo sed -i "s@LoadModule slotmem_shm_module modules/mod_slotmem_shm.so@#LoadModule slotmem_shm_module modules/mod_slotmem_shm.so@" /etc/httpd/conf.modules.d/00-base.conf
 sudo sed -i "s@LoadModule socache_dbm_module modules/mod_socache_dbm.so@#LoadModule socache_dbm_module modules/mod_socache_dbm.so@" /etc/httpd/conf.modules.d/00-base.conf
 sudo sed -i "s@LoadModule substitute_module modules/mod_substitute.so@#LoadModule substitute_module modules/mod_substitute.so@" /etc/httpd/conf.modules.d/00-base.conf
 sudo sed -i "s@LoadModule suexec_module modules/mod_suexec.so@#LoadModule suexec_module modules/mod_suexec.so@" /etc/httpd/conf.modules.d/00-base.conf
@@ -60,12 +60,10 @@ sudo sed -i "s@LoadModule unique_id_module modules/mod_unique_id.so@#LoadModule 
 sudo sed -i "s@LoadModule userdir_module modules/mod_userdir.so@#LoadModule userdir_module modules/mod_userdir.so@" /etc/httpd/conf.modules.d/00-base.conf
 
 echo 'Configuring fake certificate...'
-sudo systemctl enable httpd > /dev/null 2>&1
-sudo systemctl start httpd > /dev/null 2>&1
-sudo yum install -y mod_ssl > /dev/null 2>&1
-pushd /etc/pki/tls/certs/ > /dev/null || exit
-sudo ./make-dummy-cert localhost.crt > /dev/null 2>&1
-sudo cp localhost.crt ../private/localhost.key > /dev/null
+sudo dnf install -y mod_ssl > /dev/null 2>&1
+pushd /etc/pki/tls/certs/ > /dev/null 2>&1 || exit
+sudo make-dummy-cert localhost.crt > /dev/null 2>&1
+sudo cp localhost.crt ../private/localhost.key > /dev/null 2>&1
 popd > /dev/null || exit
 
 # PHP Configuration
@@ -74,19 +72,19 @@ sudo sed -i '$ a\date.timezone = "Europe/Madrid"' /etc/php.ini
 sudo sed -i "s/memory_limit = .*/memory_limit = 2048M/" /etc/php.ini
 sudo sed -i "s/post_max_size = .*/post_max_size = 25M/" /etc/php.ini
 sudo sed -i "s/upload_max_filesize = .*/upload_max_filesize = 25M/" /etc/php.ini
-sudo sed -i "s/; max_input_vars = .*/max_input_vars = 6000/" /etc/php.ini
+sudo sed -i "s/;max_input_vars = .*/max_input_vars = 6000/" /etc/php.ini
 sudo sed -i "s/allow_url_fopen = .*/allow_url_fopen = On/" /etc/php.ini
 sudo sed -i "s/max_execution_time = .*/max_execution_time = 600/" /etc/php.ini
 
 # CLI will be different from web
 sudo cp /etc/php.ini /etc/php-cli.ini
-sudo sed -i "s/max_execution_time = .*/max_execution_time = 0/" /etc/php.ini
+sudo sed -i "s/max_execution_time = .*/max_execution_time = 0/" /etc/php-cli.ini
 sudo sed -i "s/max_input_time = .*/max_input_time = 0/" /etc/php-cli.ini
 
 # OPCache configuration
 echo 'Configuring OPCache...'
 sudo sed -i "s/;opcache.enable_cli=.*/opcache.enable_cli=1/" /etc/php.d/10-opcache.ini
-sudo sed -i "s/opcache.memory_consumption=.*/opcache.memory_consumption=256/" /etc/php.d/10-opcache.ini
+sudo sed -i "s/;opcache.memory_consumption=.*/opcache.memory_consumption=256/" /etc/php.d/10-opcache.ini
 sudo sed -i "s/opcache.interned_strings_buffer=.*/opcache.interned_strings_buffer=8/" /etc/php.d/10-opcache.ini
 sudo sed -i "s/opcache.max_accelerated_files=.*/opcache.max_accelerated_files=10000/" /etc/php.d/10-opcache.ini
 sudo sed -i "s/;opcache.use_cwd=.*/opcache.use_cwd=1/" /etc/php.d/10-opcache.ini
@@ -101,29 +99,18 @@ sudo chmod -R 777 /var/log/apache2/
 
 # Install extension php-imagick. There is no package in the repository, so it must be done manually.
 echo 'Installing php-imagick, php-igbinary and php-redis...'
-sudo yum install -y php-devel gcc ImageMagick-devel > /dev/null
-sudo /usr/bin/bash -c "yes '' | pecl install -f imagick" > /dev/null
-sudo /usr/bin/bash -c "pecl install -f igbinary" > /dev/null
-sudo /usr/bin/bash -c "yes '' '' | pecl install -f redis" > /dev/null
+sudo dnf install -y php-devel gcc ImageMagick-devel > /dev/null 2>&1
+sudo /usr/bin/bash -c "yes '' | pecl install -f imagick" > /dev/null 2>&1
+sudo /usr/bin/bash -c "pecl install -f igbinary" > /dev/null 2>&1
+sudo /usr/bin/bash -c "yes '' '' | pecl install -f redis" > /dev/null 2>&1
 sudo /usr/bin/bash -c "echo 'extension=imagick.so' > /etc/php.d/30-imagick.ini"
 sudo /usr/bin/bash -c "echo 'extension=igbinary.so' > /etc/php.d/30-igbinary.ini"
 sudo /usr/bin/bash -c "echo 'extension=redis.so' > /etc/php.d/40-redis.ini"
-sudo yum remove -y php-devel gcc ImageMagick-devel > /dev/null
+sudo dnf remove -y php-devel gcc ImageMagick-devel > /dev/null 2>&1
 
-echo 'Installing memcached and redis...'
-sudo amazon-linux-extras enable redis6 > /dev/null 2>&1
-sudo yum install -y memcached redis php-memcached > /dev/null 2>&1
-sudo systemctl enable memcached.service > /dev/null 2>&1
-sudo systemctl enable redis > /dev/null 2>&1
-sudo systemctl start memcached.service > /dev/null 2>&1
-sudo systemctl start redis > /dev/null 2>&1
-
-sudo service httpd start > /dev/null 2>&1
-
-echo 'Installing and configuring supervisor...'
-sudo amazon-linux-extras enable epel > /dev/null 2>&1
-sudo yum install -y epel-release > /dev/null 2>&1
-sudo yum install -y supervisor > /dev/null 2>&1
-sudo cp /vms/provision/conf/portal_cron.ini /etc/supervisord.d/portal_cron.ini
-sudo systemctl enable supervisord.service > /dev/null 2>&1
-sudo systemctl start supervisord.service > /dev/null 2>&1
+echo 'Setting apache to start up on system boot...'
+sudo systemctl daemon-reload
+sudo systemctl enable httpd > /dev/null 2>&1
+sudo systemctl enable php-fpm > /dev/null 2>&1
+sudo systemctl start httpd
+sudo systemctl start php-fpm
