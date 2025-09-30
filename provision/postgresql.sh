@@ -1,7 +1,7 @@
 #!/bin/bash
 
 pass=$1
-PG_VERSION=15
+PG_VERSION=16
 
 echo "PostgreSQL: Installing version $PG_VERSION..."
 sudo dnf install -y postgresql${PG_VERSION}-server postgresql${PG_VERSION} php-pgsql > /dev/null 2>&1
