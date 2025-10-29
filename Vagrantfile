@@ -1,7 +1,7 @@
 
 Vagrant.configure(2) do |config|
 
-  config.vm.box = "ubuntu/jammy64"
+  config.vm.box = "gbailey/al2023"
   config.vm.provision :shell, inline: "hostnamectl set-hostname agora"
   config.vm.boot_timeout = 500
 
@@ -17,7 +17,7 @@ Vagrant.configure(2) do |config|
 
   config.vm.provider "virtualbox" do |vb|
     vb.customize ["modifyvm", :id,
-                  "--name", "odissea",
+                  "--name", "Odissea - PHP 8.3",
                   "--memory", "1000",
                   "--natdnshostresolver1", "on",
                   "--natdnsproxy1", "on"]

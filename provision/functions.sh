@@ -10,6 +10,6 @@ function mkdir_777 {
 function chown_777 {
     folder=$1
 
-    sudo chown -R vagrant:www-data "$folder"
+    sudo chown -R apache:apache "$folder"
     sudo chmod -R 777 "$folder"
 }

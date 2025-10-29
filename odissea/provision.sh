@@ -10,8 +10,6 @@ datadir=$rootdir/data
 localdatadir=$rootdir/localdata
 git=/git/odissea
 dbuser=odissea
-dbname=odissea
-pass=agora
 
 export PGPASSWORD=$pass
 
@@ -25,7 +23,7 @@ mkdir_777 $localdatadir
 
 sudo cp /vms/odissea/config.php $wwwdir/config.php
 
-pushd $datadir || exit
+pushd $datadir > /dev/null || exit
 sudo tar xfzp $git/dump/odisseadata.tar.gz
 sudo chmod -R 777 .
-popd || exit
+popd > /dev/null || exit
