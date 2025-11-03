@@ -1,12 +1,14 @@
 #!/bin/bash
 
 echo 'Installing PHP 8.3 and extra packages (including apache)...'
-sudo dnf install php php-{gd,intl,pear,zip,soap} -y > /dev/null 2>&1
+sudo dnf install php8.3 php8.3-{gd,intl,zip,soap} -y > /dev/null 2>&1
 
 echo 'Installing LibreOffice...'
-wget https://download.documentfoundation.org/libreoffice/stable/25.8.1/rpm/x86_64/LibreOffice_25.8.1_Linux_x86-64_rpm.tar.gz > /dev/null 2>&1
-tar -zxvf LibreOffice_25.8.1_Linux_x86-64_rpm.tar.gz > /dev/null 2>&1
-pushd LibreOffice_25.8.1.1_Linux_x86-64_rpm/RPMS/ > /dev/null || exit
+LO_VERSION="25.8.2"
+LO_REVISION="${LO_VERSION}.2"
+wget https://download.documentfoundation.org/libreoffice/stable/${LO_VERSION}/rpm/x86_64/LibreOffice_${LO_VERSION}_Linux_x86-64_rpm.tar.gz > /dev/null 2>&1
+tar -zxvf LibreOffice_${LO_VERSION}_Linux_x86-64_rpm.tar.gz > /dev/null 2>&1
+pushd LibreOffice_${LO_REVISION}_Linux_x86-64_rpm/RPMS/ > /dev/null || exit
 sudo dnf install ./*.rpm -y > /dev/null 2>&1
 popd > /dev/null || exit
 sudo rm -rf LibreOffice_* > /dev/null 2>&1
@@ -80,8 +82,8 @@ popd > /dev/null || exit
 echo 'Configuring PHP...'
 sudo sed -i '$ a\date.timezone = "Europe/Madrid"' /etc/php.ini
 sudo sed -i "s/memory_limit = .*/memory_limit = 2048M/" /etc/php.ini
-sudo sed -i "s/post_max_size = .*/post_max_size = 25M/" /etc/php.ini
-sudo sed -i "s/upload_max_filesize = .*/upload_max_filesize = 25M/" /etc/php.ini
+sudo sed -i "s/post_max_size = .*/post_max_size = 200M/" /etc/php.ini
+sudo sed -i "s/upload_max_filesize = .*/upload_max_filesize = 200M/" /etc/php.ini
 sudo sed -i "s/;max_input_vars = .*/max_input_vars = 6000/" /etc/php.ini
 sudo sed -i "s/allow_url_fopen = .*/allow_url_fopen = On/" /etc/php.ini
 sudo sed -i "s/max_execution_time = .*/max_execution_time = 600/" /etc/php.ini
@@ -95,7 +97,7 @@ sudo sed -i "s/max_input_time = .*/max_input_time = 0/" /etc/php-cli.ini
 echo 'Configuring OPCache...'
 sudo sed -i "s/;opcache.enable_cli=.*/opcache.enable_cli=1/" /etc/php.d/10-opcache.ini
 sudo sed -i "s/;opcache.memory_consumption=.*/opcache.memory_consumption=256/" /etc/php.d/10-opcache.ini
-sudo sed -i "s/opcache.interned_strings_buffer=.*/opcache.interned_strings_buffer=8/" /etc/php.d/10-opcache.ini
+sudo sed -i "s/opcache.interned_strings_buffer=.*/opcache.interned_strings_buffer=16/" /etc/php.d/10-opcache.ini
 sudo sed -i "s/opcache.max_accelerated_files=.*/opcache.max_accelerated_files=10000/" /etc/php.d/10-opcache.ini
 sudo sed -i "s/;opcache.use_cwd=.*/opcache.use_cwd=1/" /etc/php.d/10-opcache.ini
 sudo sed -i "s/;opcache.validate_timestamps=.*/opcache.validate_timestamps=1/" /etc/php.d/10-opcache.ini
@@ -109,14 +111,14 @@ sudo chmod -R 777 /var/log/apache2/
 
 # Install extension php-imagick. There is no package in the repository, so it must be done manually.
 echo 'Installing php-imagick, php-igbinary and php-redis...'
-sudo dnf install -y php-devel gcc ImageMagick-devel > /dev/null 2>&1
+sudo dnf install -y php-devel php-pear ImageMagick-devel gcc make > /dev/null 2>&1
 sudo /usr/bin/bash -c "yes '' | pecl install -f imagick" > /dev/null 2>&1
 sudo /usr/bin/bash -c "pecl install -f igbinary" > /dev/null 2>&1
-sudo /usr/bin/bash -c "yes '' '' | pecl install -f redis" > /dev/null 2>&1
+sudo /usr/bin/bash -c "printf \"yes\n\n\" | pecl install -f redis" > /dev/null 2>&1
 sudo /usr/bin/bash -c "echo 'extension=imagick.so' > /etc/php.d/30-imagick.ini"
 sudo /usr/bin/bash -c "echo 'extension=igbinary.so' > /etc/php.d/30-igbinary.ini"
 sudo /usr/bin/bash -c "echo 'extension=redis.so' > /etc/php.d/40-redis.ini"
-sudo dnf remove -y php-devel gcc ImageMagick-devel > /dev/null 2>&1
+sudo dnf remove -y php-devel php-pear ImageMagick-devel gcc make > /dev/null 2>&1
 
 echo 'Setting apache to start up on system boot...'
 sudo systemctl daemon-reload
