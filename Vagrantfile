@@ -9,7 +9,7 @@ Vagrant.configure(2) do |config|
   config.vm.network "private_network", ip: "192.168.56.5"
 
   config.vm.synced_folder "../agora", "/git/agora"
-  config.vm.synced_folder "../agora/html", "/dades/html", mount_options: ["dmode=777", "fmode=666"]
+  config.vm.synced_folder "../agora/html", "/dades/html", mount_options: ["dmode=777", "fmode=766"]
   config.vm.synced_folder ".", "/vms"
 
 #  config.vm.network "forwarded_port", guest: 3306, host: 3306
