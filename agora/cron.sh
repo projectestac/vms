@@ -2,7 +2,7 @@
 
 SCRIPT="/dades/html/config/sync.sh"
 TIMER_NAME="agora_cron"
-EXEC_USER="apache"
+EXEC_USER="vagrant"
 INTERVAL="10min"
 
 SERVICE_FILE="/etc/systemd/system/${TIMER_NAME}.service"
@@ -36,6 +36,7 @@ sudo tee "$TIMER_FILE" > /dev/null <<EOF
 Description=Execute $TIMER_NAME every ten minutes
 
 [Timer]
+OnBootSec=2min
 OnUnitActiveSec=$INTERVAL
 Persistent=true
 
