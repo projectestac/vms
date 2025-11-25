@@ -121,7 +121,16 @@ sudo /usr/bin/bash -c "printf \"yes\n\n\" | pecl install -f redis" > /dev/null 2
 sudo /usr/bin/bash -c "echo 'extension=imagick.so' > /etc/php.d/30-imagick.ini"
 sudo /usr/bin/bash -c "echo 'extension=igbinary.so' > /etc/php.d/30-igbinary.ini"
 sudo /usr/bin/bash -c "echo 'extension=redis.so' > /etc/php.d/40-redis.ini"
-sudo dnf remove -y php-devel php-pear ImageMagick-devel gcc make > /dev/null 2>&1
+
+# Install ssh2 extension
+echo 'Installing php-ssh2 extension...'
+sudo dnf install -y libssh2 libssh2-devel > /dev/null 2>&1
+sudo /usr/bin/bash -c "'' | pecl install -f ssh2" > /dev/null 2>&1
+sudo /usr/bin/bash -c "echo 'extension=ssh2.so' > /etc/php.d/50-ssh2.ini"
+
+# Clean up development packages
+echo 'Cleaning up development packages...'
+sudo dnf remove -y libssh2-devel php-devel php-pear gcc make ImageMagick-devel gcc make > /dev/null 2>&1
 
 echo 'Setting apache to start up on system boot...'
 sudo systemctl daemon-reload
