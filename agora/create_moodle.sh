@@ -32,3 +32,5 @@ sudo -E php /dades/html/moodle2/local/agora/scripts/cli.php \
                 --clientAddress=Address \
                 --clientCity=City \
                 --clientDNS="$nompropi"
+
+printf "\n\n"

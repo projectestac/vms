@@ -33,3 +33,5 @@ sudo -E php /dades/html/wordpress/wp-includes/xtec/scripts/cli.php \
                 --clientPC=00000 \
                 --origin_url="://$domain/$template/" \
                 --origin_bd="$5"
+
+printf "\n\n"

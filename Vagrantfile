@@ -20,7 +20,7 @@ Vagrant.configure(2) do |config|
     vb.customize ["modifyvm", :id,
                   "--name", "agora-awslinux2023-php83",
                   "--cpus", "4",
-                  "--memory", "1000",
+                  "--memory", "2000",
                   "--natdnshostresolver1", "on",
                   "--natdnsproxy1", "on"]
   end
