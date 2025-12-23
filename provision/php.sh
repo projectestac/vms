@@ -31,12 +31,14 @@ sudo systemctl enable --now libreoffice-headless > /dev/null 2>&1
 
 echo 'Configuring Apache...'
 sudo cp /vms/provision/conf/agora.conf /etc/httpd/conf/
+sudo cp /vms/provision/conf/phpmyadmin.conf /etc/httpd/conf/
 sudo mv /etc/httpd/conf/httpd.conf /etc/httpd/conf/httpd.conf.bak
 sudo cp /vms/provision/conf/httpd.conf /etc/httpd/conf/
 sudo sed -i "s/;listen.owner = .*/listen.owner = apache/" /etc/php-fpm.d/www.conf
 sudo sed -i "s/;listen.group = .*/listen.group = apache/" /etc/php-fpm.d/www.conf
 sudo sed -i "s/;listen.mode = .*/listen.mode = 0660/" /etc/php-fpm.d/www.conf
 
+sudo mv /etc/httpd/conf.d/php.conf /etc/httpd/conf.d/php.conf.back
 sudo mv /etc/httpd/conf.d/autoindex.conf /etc/httpd/conf.d/autoindex.conf.bak
 sudo mv /etc/httpd/conf.d/userdir.conf /etc/httpd/conf.d/userdir.conf.bak
 sudo mv /etc/httpd/conf.d/welcome.conf /etc/httpd/conf.d/welcome.conf.bak

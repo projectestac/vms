@@ -45,13 +45,12 @@ sudo systemctl restart mysqld
 echo "MySQL installed and running."
 
 echo 'phpMyAdmin: Installing...'
-pushd /dades/html/config &> /dev/null || exit
-wget https://www.phpmyadmin.net/downloads/phpMyAdmin-latest-all-languages.tar.gz &> /dev/null
-sudo rm -rf phpmyadmin &> /dev/null
-mkdir phpmyadmin && tar -xvzf phpMyAdmin-latest-all-languages.tar.gz -C phpmyadmin --strip-components 1 &> /dev/null
-rm phpMyAdmin-latest-all-languages.tar.gz &> /dev/null
+pushd /opt/ &> /dev/null || exit
+sudo wget https://www.phpmyadmin.net/downloads/phpMyAdmin-latest-all-languages.tar.gz &> /dev/null
+sudo mkdir phpmyadmin && sudo tar -xvzf phpMyAdmin-latest-all-languages.tar.gz -C phpmyadmin --strip-components=1 &> /dev/null
+sudo rm phpMyAdmin-latest-all-languages.tar.gz &> /dev/null
 
-echo 'phpMyAdmin configuring...'
-cp phpmyadmin/config.sample.inc.php phpmyadmin/config.inc.php
+echo 'phpMyAdmin: Configuring...'
+sudo cp phpmyadmin/config.sample.inc.php phpmyadmin/config.inc.php
 sudo sed -i "s/.*\['auth_type'\].*/\$cfg['Servers'][\$i]['auth_type'] = 'config';\n\$cfg['Servers'][\$i]['user'] = 'root';\n\$cfg['Servers'][\$i]['password'] = 'agora';/" phpmyadmin/config.inc.php
 popd &> /dev/null || exit
