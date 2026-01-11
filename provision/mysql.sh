@@ -22,7 +22,7 @@ rm phpMyAdmin-latest-all-languages.tar.gz &> /dev/null
 
 # Configure phpMyAdmin
 cp phpmyadmin/config.sample.inc.php phpmyadmin/config.inc.php
-sudo sed -i "s/.*\['auth_type'\].*/\$cfg['Servers'][\$i]['auth_type'] = 'config';\n\$cfg['Servers'][\$i]['user'] = 'root';\n\$cfg['Servers'][\$i]['password'] = 'agora';/" phpmyadmin/config.inc.php
+sudo sed -i "s/.*\['auth_type'\].*/\$cfg['Servers'][\$i]['auth_type'] = 'config';\n\$cfg['Servers'][\$i]['user'] = 'root';\n\$cfg['Servers'][\$i]['password'] = '$pass';/" phpmyadmin/config.inc.php
 popd &> /dev/null || exit
 
 sudo service mysql restart
