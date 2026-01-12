@@ -82,11 +82,9 @@
     <legend>Gestió</legend>
     <a href="/config/phpsysinfo/">[phpSysInfo]</a>
     <br/>
-    <a href="/config/phpmemcached/">[phpMemCached]</a>
-    <br/>
     <a href="/config/phpredisadmin/">[phpRedisAdmin]</a>
     <br/>
-    <a href="/config/phpmyadmin/">[phpMyAdmin]</a>
+    <a href="/phpmyadmin/">[phpMyAdmin]</a>
     <br/>
 </fieldset>
 
