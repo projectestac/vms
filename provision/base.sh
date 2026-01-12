@@ -1,6 +1,6 @@
 #!/bin/bash
 
-EXIFTOOL_VERSION="13.44"
+EXIFTOOL_VERSION="13.45"
 
 echo 'Updating packages...'
 sudo dnf update -y > /dev/null 2>&1
