@@ -5,7 +5,7 @@
 function clone_project {
     project=$1
     branch=$2
-    giturl=git@github.com:projectestac/$project.git
+    giturl=https://github.com/projectestac/$project.git
     clone_project_git "$project" "$giturl" "$branch"
 }
 
@@ -38,7 +38,7 @@ if ! vagrant plugin list | grep -q vagrant-disksize; then
     vagrant plugin install vagrant-disksize
 fi
 
-clone_project "odissea" "WIP-moodle-4.5"
+clone_project "odissea" "master"
 
 vagrant box update
 
