@@ -17,8 +17,9 @@ Vagrant.configure(2) do |config|
 
   config.vm.provider "virtualbox" do |vb|
     vb.customize ["modifyvm", :id,
-                  "--name", "Odissea - PHP 8.3",
-                  "--memory", "1000",
+                  "--name", "odissea-awslinux2023-php83",
+                  "--cpus", "2",
+                  "--memory", "2000",
                   "--natdnshostresolver1", "on",
                   "--natdnsproxy1", "on"]
   end
