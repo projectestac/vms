@@ -4,7 +4,7 @@ echo 'Installing PHP 8.3 and extra packages (including apache)...'
 sudo dnf install php8.3 php8.3-{gd,intl,zip,soap} -y > /dev/null 2>&1
 
 echo 'Installing LibreOffice...'
-LO_VERSION="25.8.4"
+LO_VERSION="26.2.4"
 LO_REVISION="${LO_VERSION}.2"
 wget https://download.documentfoundation.org/libreoffice/stable/${LO_VERSION}/rpm/x86_64/LibreOffice_${LO_VERSION}_Linux_x86-64_rpm.tar.gz > /dev/null 2>&1
 tar -zxvf LibreOffice_${LO_VERSION}_Linux_x86-64_rpm.tar.gz > /dev/null 2>&1
