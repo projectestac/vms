@@ -4,7 +4,7 @@ echo 'Installing PHP 8.3 and extra packages (including apache)...'
 sudo dnf install php8.3 php8.3-{gd,intl,zip,soap} -y > /dev/null 2>&1
 
 echo 'Installing LibreOffice...'
-LO_VERSION="25.8.4"
+LO_VERSION="26.2.3"
 LO_REVISION="${LO_VERSION}.2"
 wget https://download.documentfoundation.org/libreoffice/stable/${LO_VERSION}/rpm/x86_64/LibreOffice_${LO_VERSION}_Linux_x86-64_rpm.tar.gz > /dev/null 2>&1
 tar -zxvf LibreOffice_${LO_VERSION}_Linux_x86-64_rpm.tar.gz > /dev/null 2>&1
@@ -100,7 +100,7 @@ sudo sed -i "s/max_input_time = .*/max_input_time = 0/" /etc/php-cli.ini
 echo 'Configuring OPCache...'
 sudo sed -i "s/;opcache.enable_cli=.*/opcache.enable_cli=1/" /etc/php.d/10-opcache.ini
 sudo sed -i "s/;opcache.memory_consumption=.*/opcache.memory_consumption=256/" /etc/php.d/10-opcache.ini
-sudo sed -i "s/opcache.interned_strings_buffer=.*/opcache.interned_strings_buffer=16/" /etc/php.d/10-opcache.ini
+sudo sed -i "s/opcache.interned_strings_buffer=.*/opcache.interned_strings_buffer=64/" /etc/php.d/10-opcache.ini
 sudo sed -i "s/opcache.max_accelerated_files=.*/opcache.max_accelerated_files=10000/" /etc/php.d/10-opcache.ini
 sudo sed -i "s/;opcache.use_cwd=.*/opcache.use_cwd=1/" /etc/php.d/10-opcache.ini
 sudo sed -i "s/;opcache.validate_timestamps=.*/opcache.validate_timestamps=1/" /etc/php.d/10-opcache.ini
