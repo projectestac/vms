@@ -7,15 +7,23 @@ echo 'Install PHP 7.0'
 sudo apt-get update &> /dev/null
 sudo apt-get install -qq apache2 php7.0 php7.0-curl php7.0-tidy php7.0-gd php7.0-xml php7.0-xmlrpc php7.0-intl php7.0-cli php-pear php7.0-dev php7.0-ldap libapache2-mod-php7.0 php-codesniffer php7.0-mbstring php7.0-mysql php7.0-gettext php7.0-zip php7.0-soap &> /dev/null
 
-sudo mkdir /etc/apache2/sites-agora
-sudo cp -R /vms/provision/php/* /etc/apache2/sites-agora
+sudo cp -R /vms/provision/php/* /etc/apache2/sites-available
 
-echo "Include sites-agora/" | sudo tee -a /etc/apache2/apache2.conf
 echo "ServerName localhost" | sudo tee /etc/apache2/conf-available/fqdn.conf
+
+# Fixes error: Apache crashes on first request.
+sudo sed -i '$ a\Mutex posixsem default' /etc/apache2/apache2.conf
+
+# Change document root.
+sudo sed -i 's#DocumentRoot /var/www/html#DocumentRoot /dades/blocs/src#g' /etc/apache2/sites-available/000-default.conf
+sudo sed -i 's#DocumentRoot /var/www/html#DocumentRoot /dades/blocs/src#g' /etc/apache2/sites-available/default-ssl.conf
 
 sudo a2enconf fqdn
 sudo a2enmod ssl
 sudo a2enmod rewrite
+
+sudo a2dissite 000-default
+sudo a2ensite xtecblocs
 sudo a2ensite default-ssl
 
 #PHP Configuration
