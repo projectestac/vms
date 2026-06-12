@@ -15,15 +15,15 @@ echo "ServerName localhost" | sudo tee /etc/apache2/conf-available/fqdn.conf
 sudo sed -i '$ a\Mutex posixsem default' /etc/apache2/apache2.conf
 
 # Change document root.
-sudo sed -i 's#DocumentRoot /var/www/html#DocumentRoot /dades/blocs/src#g' /etc/apache2/sites-available/000-default.conf
-sudo sed -i 's#DocumentRoot /var/www/html#DocumentRoot /dades/blocs/src#g' /etc/apache2/sites-available/default-ssl.conf
+sudo sed -i 's#DocumentRoot /var/www/html#DocumentRoot /dades/dossier/html#g' /etc/apache2/sites-available/000-default.conf
+sudo sed -i 's#DocumentRoot /var/www/html#DocumentRoot /dades/dossier/html#g' /etc/apache2/sites-available/default-ssl.conf
 
 sudo a2enconf fqdn
 sudo a2enmod ssl
 sudo a2enmod rewrite
 
 sudo a2dissite 000-default
-sudo a2ensite xtecblocs
+sudo a2ensite dossier
 sudo a2ensite default-ssl
 
 #PHP Configuration

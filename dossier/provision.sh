@@ -2,17 +2,20 @@
 
 source "/vms/provision/functions.sh"
 
-echo 'Provision XTECBlocs'
+echo 'Provision Dossier'
 
-rootdir=/dades/blocs
-wwwdir=$rootdir/src
+rootdir=/dades/dossier
+wwwdir=$rootdir/html
 
-mkdir_777 $rootdir/blogs.dir
+sudo chmod -R 664 $wwwdir
+
+mkdir_777 $rootdir/uploads
 mkdir_777 $rootdir/cache
 
-sudo rm -Rf $wwwdir/wp-content/blogs.dir
-sudo ln -s $rootdir/blogs.dir $wwwdir/wp-content/blogs.dir
-sudo chmod -R 777 $wwwdir/wp-content/blogs.dir
+sudo rm -Rf $wwwdir/wp-content/uploads
+sudo ln -s $rootdir/uploads $wwwdir/wp-content/uploads
+sudo unzip /git/dossier/sql/files.zip -d $rootdir/uploads/
+sudo chmod -R 777 $wwwdir/wp-content/uploads
 
 sudo rm -Rf $wwwdir/wp-content/cache
 sudo ln -s $rootdir/cache $wwwdir/wp-content/cache
@@ -27,8 +30,7 @@ sudo chmod 664 $wwwdir/wp-config.php
 sudo cp $wwwdir/wp-content/wp-cache-config-dist.php $wwwdir/wp-content/wp-cache-config.php
 sudo chmod 777 $wwwdir/wp-content/wp-cache-config.php
 
-/vms/xtecblocs/create_bloc.sh global
-/vms/xtecblocs/create_bloc.sh 0
-/vms/xtecblocs/create_bloc.sh 1
-/vms/xtecblocs/create_bloc.sh 2
-
+/vms/dossier/import_db.sh global
+/vms/dossier/import_db.sh 0
+/vms/dossier/import_db.sh 1
+/vms/dossier/import_db.sh 2

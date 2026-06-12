@@ -27,7 +27,7 @@ if [ -z "$(vagrant plugin list | grep vagrant-hosts)" ]; then
     vagrant plugin install vagrant-hosts
 fi
 
-clone_project xtecblocs
+clone_project dossier
 
 vagrant box update
 

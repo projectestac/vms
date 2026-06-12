@@ -5,6 +5,6 @@ source "/vms/provision/functions.sh"
 /vms/provision/base.sh
 /vms/provision/php7.sh
 /vms/provision/mysql.sh $pass
-/vms/xtecblocs/provision.sh
+/vms/dossier/provision.sh
 
 sudo service apache2 restart
