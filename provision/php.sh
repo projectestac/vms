@@ -4,7 +4,7 @@ echo 'Installing PHP 8.3 and extra packages (including apache)...'
 sudo dnf install php8.3 php8.3-{gd,intl,zip,soap} -y > /dev/null 2>&1
 
 echo 'Installing LibreOffice...'
-LO_VERSION="26.2.3"
+LO_VERSION="26.2.4"
 LO_REVISION="${LO_VERSION}.2"
 wget https://download.documentfoundation.org/libreoffice/stable/${LO_VERSION}/rpm/x86_64/LibreOffice_${LO_VERSION}_Linux_x86-64_rpm.tar.gz > /dev/null 2>&1
 tar -zxvf LibreOffice_${LO_VERSION}_Linux_x86-64_rpm.tar.gz > /dev/null 2>&1
@@ -37,6 +37,7 @@ sudo sed -i "s/;listen.owner = .*/listen.owner = apache/" /etc/php-fpm.d/www.con
 sudo sed -i "s/;listen.group = .*/listen.group = apache/" /etc/php-fpm.d/www.conf
 sudo sed -i "s/;listen.mode = .*/listen.mode = 0660/" /etc/php-fpm.d/www.conf
 
+sudo mv /etc/httpd/conf.d/php.conf /etc/httpd/conf.d/php.conf.back
 sudo mv /etc/httpd/conf.d/autoindex.conf /etc/httpd/conf.d/autoindex.conf.bak
 sudo mv /etc/httpd/conf.d/userdir.conf /etc/httpd/conf.d/userdir.conf.bak
 sudo mv /etc/httpd/conf.d/welcome.conf /etc/httpd/conf.d/welcome.conf.bak
@@ -80,12 +81,13 @@ popd > /dev/null || exit
 
 # PHP Configuration
 sudo sed -i '$ a\date.timezone = "Europe/Madrid"' /etc/php.ini
-sudo sed -i "s/memory_limit = .*/memory_limit = 512M/" /etc/php.ini
+sudo sed -i "s/memory_limit = .*/memory_limit = 2048M/" /etc/php.ini
 sudo sed -i "s/post_max_size = .*/post_max_size = 200M/" /etc/php.ini
 sudo sed -i "s/upload_max_filesize = .*/upload_max_filesize = 200M/" /etc/php.ini
 sudo sed -i "s/;max_input_vars = .*/max_input_vars = 6000/" /etc/php.ini
 sudo sed -i "s/allow_url_fopen = .*/allow_url_fopen = On/" /etc/php.ini
 sudo sed -i "s/max_execution_time = .*/max_execution_time = 600/" /etc/php.ini
+
 sudo sed -i "s/error_reporting = .*/error_reporting = E_ALL/" /etc/php.ini
 sudo sed -i "s/display_errors = .*/display_errors = On/" /etc/php.ini
 sudo sed -i "s/display_startup_errors = .*/display_startup_errors = On/" /etc/php.ini
