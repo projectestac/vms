@@ -1,7 +1,5 @@
 #!/bin/bash
 
-EXIFTOOL_VERSION="13.59"
-
 echo 'Updating packages...'
 sudo dnf update -y > /dev/null 2>&1
 
@@ -10,15 +8,6 @@ sudo dnf upgrade -y > /dev/null 2>&1
 
 echo 'Installing base packages...'
 sudo dnf install -y texlive ghostscript texlive-dvisvgm poppler-utils unzip ImageMagick aspell graphviz git python3 python3-pip telnet > /dev/null 2>&1
-
-echo 'Installing exiftool...'
-wget "https://sourceforge.net/projects/exiftool/files/Image-ExifTool-${EXIFTOOL_VERSION}.tar.gz/download" -O Image-ExifTool.tar.gz > /dev/null 2>&1
-tar -zxf Image-ExifTool.tar.gz > /dev/null 2>&1
-pushd Image-ExifTool-${EXIFTOOL_VERSION}/ > /dev/null || exit
-perl Makefile.PL > /dev/null
-sudo make install > /dev/null
-popd > /dev/null || exit
-rm -rf Image-ExifTool.tar.gz Image-ExifTool-${EXIFTOOL_VERSION}/
 
 echo 'Setting locale...'
 sudo localectl set-locale LANG=ca_ES.utf8

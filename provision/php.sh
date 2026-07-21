@@ -1,36 +1,10 @@
 #!/bin/bash
 
-echo 'Installing PHP 8.3 and extra packages (including apache)...'
-sudo dnf install php8.3 php8.3-{gd,intl,zip,soap} -y > /dev/null 2>&1
-
-echo 'Installing LibreOffice...'
-LO_VERSION="26.2.4"
-LO_REVISION="${LO_VERSION}.2"
-wget https://download.documentfoundation.org/libreoffice/stable/${LO_VERSION}/rpm/x86_64/LibreOffice_${LO_VERSION}_Linux_x86-64_rpm.tar.gz > /dev/null 2>&1
-tar -zxvf LibreOffice_${LO_VERSION}_Linux_x86-64_rpm.tar.gz > /dev/null 2>&1
-pushd LibreOffice_${LO_REVISION}_Linux_x86-64_rpm/RPMS/ > /dev/null || exit
-sudo dnf install ./*.rpm -y > /dev/null 2>&1
-popd > /dev/null || exit
-sudo rm -rf LibreOffice_* > /dev/null 2>&1
-
-echo 'Installing unoconv...'
-sudo curl -o /usr/bin/unoconv https://raw.githubusercontent.com/dagwieers/unoconv/master/unoconv > /dev/null 2>&1
-sudo chmod +x /usr/bin/unoconv > /dev/null 2>&1
-sudo ln -s /usr/bin/python3 /usr/bin/python > /dev/null 2>&1
-sudo dnf install libxcrypt-compat -y > /dev/null 2>&1
-
-echo 'Configuring LibreOffice headless service...'
-sudo mkdir -p /home/apache
-sudo chown apache:apache /home/apache
-sudo usermod -d /home/apache apache
-sudo dnf install cairo libXinerama libXext libSM libICE libXrender libX11 libX11-xcb-1.8.10-2.amzn2023.0.1.x86_64 -y > /dev/null 2>&1
-sudo cp /vms/provision/conf/libreoffice-headless.service /etc/systemd/system/libreoffice-headless.service
-sudo chmod 755 /etc/systemd/system/libreoffice-headless.service
-sudo systemctl daemon-reload > /dev/null 2>&1
-sudo systemctl enable --now libreoffice-headless > /dev/null 2>&1
+echo 'Installing PHP 8.5 and extra packages (including apache)...'
+sudo dnf install php8.5 php8.5-{gd,intl,zip,soap} -y > /dev/null 2>&1
 
 echo 'Configuring Apache...'
-sudo cp /vms/provision/conf/agora.conf /etc/httpd/conf/
+sudo cp /vms/provision/conf/xtecblocs.conf /etc/httpd/conf/
 sudo cp /vms/provision/conf/phpmyadmin.conf /etc/httpd/conf/
 sudo mv /etc/httpd/conf/httpd.conf /etc/httpd/conf/httpd.conf.bak
 sudo cp /vms/provision/conf/httpd.conf /etc/httpd/conf/
