@@ -6,8 +6,8 @@ sudo dnf install php8.3 php8.3-{gd,intl,zip,soap} -y > /dev/null 2>&1
 echo 'Installing LibreOffice...'
 LO_VERSION="26.2.4"
 LO_REVISION="${LO_VERSION}.2"
-wget https://download.documentfoundation.org/libreoffice/stable/${LO_VERSION}/rpm/x86_64/LibreOffice_${LO_VERSION}_Linux_x86-64_rpm.tar.gz > /dev/null 2>&1
-tar -zxvf LibreOffice_${LO_VERSION}_Linux_x86-64_rpm.tar.gz > /dev/null 2>&1
+wget https://downloadarchive.documentfoundation.org/libreoffice/old/${LO_REVISION}/rpm/x86_64/LibreOffice_${LO_REVISION}_Linux_x86-64_rpm.tar.gz > /dev/null 2>&1
+tar -zxvf LibreOffice_${LO_REVISION}_Linux_x86-64_rpm.tar.gz > /dev/null 2>&1
 pushd LibreOffice_${LO_REVISION}_Linux_x86-64_rpm/RPMS/ > /dev/null || exit
 sudo dnf install ./*.rpm -y > /dev/null 2>&1
 popd > /dev/null || exit
