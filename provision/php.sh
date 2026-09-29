@@ -16,6 +16,10 @@ sudo rm -rf LibreOffice_* > /dev/null 2>&1
 echo 'Installing unoconv...'
 sudo curl -o /usr/bin/unoconv https://raw.githubusercontent.com/dagwieers/unoconv/master/unoconv > /dev/null 2>&1
 sudo chmod +x /usr/bin/unoconv > /dev/null 2>&1
+# unoconv re-runs itself with the Python bundled with LibreOffice (3.12+), which no longer includes distutils
+sudo sed -i "s/^from distutils.version import LooseVersion$/try:\n    from distutils.version import LooseVersion\nexcept ImportError:\n    def LooseVersion(v): return tuple(int(x) for x in __import__('re').findall(r'\\\\d+', v))/" /usr/bin/unoconv
+# unohelper.absolutize was removed in LibreOffice 26, but uno.absolutize is still available
+sudo sed -i "s/unohelper\.absolutize(/uno.absolutize(/g" /usr/bin/unoconv
 sudo ln -s /usr/bin/python3 /usr/bin/python > /dev/null 2>&1
 sudo dnf install libxcrypt-compat -y > /dev/null 2>&1
 
@@ -25,6 +29,7 @@ sudo chown apache:apache /home/apache
 sudo usermod -d /home/apache apache
 sudo dnf install cairo libXinerama libXext libSM libICE libXrender libX11 libX11-xcb-1.8.10-2.amzn2023.0.1.x86_64 -y > /dev/null 2>&1
 sudo cp /vms/provision/conf/libreoffice-headless.service /etc/systemd/system/libreoffice-headless.service
+sudo sed -i "s@/opt/libreoffice[0-9.]*/@/opt/libreoffice${LO_VERSION%.*}/@" /etc/systemd/system/libreoffice-headless.service
 sudo chmod 755 /etc/systemd/system/libreoffice-headless.service
 sudo systemctl daemon-reload > /dev/null 2>&1
 sudo systemctl enable --now libreoffice-headless > /dev/null 2>&1
