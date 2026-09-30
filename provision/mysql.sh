@@ -7,7 +7,7 @@ sudo dnf install -y https://dev.mysql.com/get/mysql80-community-release-el9-1.no
 
 echo "MySQL: Installing server..."
 sudo rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql-2023 > /dev/null 2>&1
-sudo dnf install -y mysql-community-server php-mysqli > /dev/null 2>&1
+sudo dnf install -y mysql-community-server > /dev/null 2>&1
 
 echo "MySQL: Configuring..."
 
@@ -31,11 +31,9 @@ mysql --connect-expired-password -u root -p"$temp_pass" -e "ALTER USER 'root'@'l
 
 # Allow remote connection
 mysql --connect-expired-password -u root -p"$pass" mysql -e "UPDATE user SET Host = '%' WHERE user.Host = 'localhost' AND user.User = 'root'" > /dev/null 2>&1
-sudo sed -i '$ a\bind-address = 0.0.0.0' /etc/php.ini
-sudo systemctl restart php-fpm
 
 # Set some configuration parameters
-sudo sed -i 's/\[mysqld\]/\[mysqld\]\nwait_timeout = 100\nmax_connections=500/g' /etc/my.cnf
+sudo sed -i 's/\[mysqld\]/\[mysqld\]\nbind-address = 0.0.0.0\nwait_timeout = 100\nmax_connections=500/g' /etc/my.cnf
 
 echo "MySQL: Activating and initializing as a service..."
 sudo systemctl daemon-reload

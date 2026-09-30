@@ -43,7 +43,7 @@ Always launch the Virtual Machine using the script **./vm**. It updates the vms 
 
 You must add the following line to your /etc/hosts in order to get access to the VM:
 
-    192.168.56.5 agora-aws.xtec.cat agora-aws-se.xtec.cat agora-aws-projectes.xtec.cat agora-aws-nodes.xtec.cat agora-aws-eoi.xtec.cat
+    192.168.56.23 blocs-aws.xtec.cat
 
 
 ## Useful links
