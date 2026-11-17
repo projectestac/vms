@@ -1,7 +1,7 @@
 #!/bin/bash
 
-echo 'Installing PHP 8.3 and extra packages (including apache)...'
-sudo dnf install php8.3 php8.3-{gd,intl,zip,soap} -y > /dev/null 2>&1
+echo 'Installing PHP 8.5 and extra packages (including apache)...'
+sudo dnf install php8.5 php8.5-{gd,intl,zip,soap,mbstring,xml} -y > /dev/null 2>&1
 
 echo 'Installing LibreOffice...'
 LO_VERSION="26.2.4"
@@ -117,14 +117,14 @@ sudo chmod -R 777 /var/log/apache2/
 
 # Install extension php-imagick. There is no package in the repository, so it must be done manually.
 echo 'Installing php-imagick, php-igbinary and php-redis...'
-sudo dnf install -y php-devel php-pear ImageMagick-devel gcc make > /dev/null 2>&1
+sudo dnf install -y php8.5-devel php-pear ImageMagick-devel gcc make > /dev/null 2>&1
 sudo /usr/bin/bash -c "yes '' | pecl install -f imagick" > /dev/null 2>&1
 sudo /usr/bin/bash -c "pecl install -f igbinary" > /dev/null 2>&1
 sudo /usr/bin/bash -c "printf \"yes\n\n\" | pecl install -f redis" > /dev/null 2>&1
 sudo /usr/bin/bash -c "echo 'extension=imagick.so' > /etc/php.d/30-imagick.ini"
 sudo /usr/bin/bash -c "echo 'extension=igbinary.so' > /etc/php.d/30-igbinary.ini"
 sudo /usr/bin/bash -c "echo 'extension=redis.so' > /etc/php.d/40-redis.ini"
-sudo dnf remove -y php-devel php-pear ImageMagick-devel gcc make > /dev/null 2>&1
+sudo dnf remove -y php8.5-devel php-pear ImageMagick-devel gcc make > /dev/null 2>&1
 
 echo 'Setting apache to start up on system boot...'
 sudo systemctl daemon-reload

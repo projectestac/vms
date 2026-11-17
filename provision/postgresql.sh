@@ -4,7 +4,7 @@ pass=$1
 PG_VERSION=16
 
 echo "PostgreSQL: Installing version $PG_VERSION..."
-sudo dnf install -y postgresql${PG_VERSION}-server postgresql${PG_VERSION} php-pgsql > /dev/null 2>&1
+sudo dnf install -y postgresql${PG_VERSION}-server postgresql${PG_VERSION} php8.5-pgsql > /dev/null 2>&1
 
 echo "PostgreSQL: Initializing database..."
 sudo /usr/bin/postgresql-setup --initdb > /dev/null 2>&1

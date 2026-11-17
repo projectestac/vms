@@ -7,7 +7,7 @@ sudo dnf install -y https://dev.mysql.com/get/mysql80-community-release-el9-1.no
 
 echo "MySQL: Installing server..."
 sudo rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql-2023 > /dev/null 2>&1
-sudo dnf install -y mysql-community-server php-mysqli > /dev/null 2>&1
+sudo dnf install -y mysql-community-server php8.5-mysqlnd > /dev/null 2>&1
 
 echo "MySQL: Configuring..."
 
